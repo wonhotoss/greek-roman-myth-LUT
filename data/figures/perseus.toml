@@ -1,0 +1,257 @@
+# era 4 — 첫 영웅들. 페르세우스 이야기에 나오는 인물들.
+# 고르곤의 계보를 위해 폰토스 계열(포르키스·케토)도 여기 둔다.
+
+[[figure]]
+id = "akrisios"
+name_ko = "아크리시오스"
+name_grc = "Akrisios"
+kind = "human"
+era = 4
+home = "argos"
+oneliner = "손자에게 죽는다는 말을 듣고 딸을 갇히게 한 아르고스의 왕."
+body = """
+페르세우스의 외할아버지다.
+아들이 없어 델포이에 물었더니, 아들은 없고 딸의 아들이 너를 죽인다는 대답이 왔다.
+그래서 딸 다나에를 청동 방에 갇히게 했다.
+그래도 손자가 태어나자 딸과 아기를 상자에 넣어 바다에 띄웠다.
+"""
+sources = ["apollodorus.library 2.4.1"]
+
+[[figure]]
+id = "danae"
+name_ko = "다나에"
+name_grc = "Danae"
+kind = "human"
+era = 4
+parents = ["akrisios"]
+oneliner = "청동 방에 갇혔던 아르고스의 공주. 페르세우스의 어머니다."
+body = """
+아버지가 앞일이 무서워 딸을 땅 아래 청동 방에 갇히게 했다.
+그래도 아기가 태어났고, 아버지는 딸과 아기를 나무 상자에 넣어 바다에 띄웠다.
+상자는 세리포스 섬에 닿았고, 어부 딕티스가 건져 주었다.
+그 섬에서 아들을 키웠다.
+"""
+sensitivity = "soften"
+sources = ["apollodorus.library 2.4.1-2.4.2"]
+
+[[figure]]
+id = "perseus"
+name_ko = "페르세우스"
+name_grc = "Perseus"
+kind = "hero"
+era = 4
+parents = ["zeus", "danae"]
+spouses = ["andromeda"]
+home = "mycenae"
+oneliner = "메두사의 목을 베어 온 영웅. 신들에게 도구를 빌려 이겼다."
+body = """
+제우스와 다나에의 아들이다.
+섬의 왕이 어머니를 괄롭히려고, 페르세우스에게 메두사의 목을 가져오라는 일을 시켰다.
+아테나와 헤르메스가 도구를 빌려 주었고, 페르세우스는 메두사를 이겼다.
+돌아오는 길에 바위에 묶인 안드로메다를 구해 아내로 맞았다.
+"""
+fun = "페르세우스는 헤라클레스보다 앞 세대다. 헤라클레스의 조상이 페르세우스다."
+sources = ["apollodorus.library 2.4.1-2.4.5"]
+
+[[figure]]
+id = "diktys"
+name_ko = "딕티스"
+name_grc = "Diktys"
+kind = "human"
+era = 4
+home = "seriphos"
+oneliner = "바다에서 상자를 건져 올린 세리포스의 어부."
+body = """
+그물에 걸린 나무 상자를 열어 다나에와 아기를 꺼내 주었다.
+두 사람을 집에 들여 함께 살게 했다.
+왕 폴리덱테스의 동생이다.
+페르세우스가 돌아온 뒤 이 섬의 왕이 된다.
+"""
+sources = ["apollodorus.library 2.4.1-2.4.3"]
+
+[[figure]]
+id = "polydektes"
+name_ko = "폴리덱테스"
+name_grc = "Polydektes"
+kind = "human"
+era = 4
+home = "seriphos"
+oneliner = "페르세우스를 메두사에게 보낸 세리포스의 왕."
+body = """
+다나에를 억지로 아내로 삼으려 했다.
+다 자란 아들 페르세우스가 막고 있어서 뜻대로 되지 않았다.
+그래서 잔치를 열고, 선물로 메두사의 목을 가져오라고 시켰다.
+살아 돌아오지 못할 일이라고 생각한 것이다.
+"""
+sensitivity = "soften"
+sources = ["apollodorus.library 2.4.2"]
+
+[[figure]]
+id = "graiai"
+name_ko = "그라이아이"
+name_grc = "Graiai"
+aka = ["세 노파", "그라이아"]
+kind = "group"
+era = 4
+parents = ["phorkys", "keto"]
+oneliner = "눈 하나와 이 하나를 셋이 돌려 쓰는 노파 자매."
+body = """
+고르곤의 언니들이다.
+눈알 하나와 이 하나를 셋이서 번갈아 쓴다.
+님프들이 사는 곳을 아는 것은 이들뿐이었다.
+페르세우스가 돌려 쓰는 눈을 잡아채고서야 길을 알려 주었다.
+"""
+sources = ["hesiod.theogony 270-273", "apollodorus.library 2.4.2"]
+
+[[figure]]
+id = "phorkys"
+name_ko = "포르키스"
+name_grc = "Phorkys"
+kind = "primordial"
+era = 0
+parents = ["pontos", "gaia"]
+spouses = ["keto"]
+oneliner = "바다의 늙은 신. 고르곤의 아버지다."
+body = """
+폰토스와 가이아의 아들이다.
+누이 케토와 함께 바다의 괴물들을 낳았다.
+포세이돈보다 오래된 바다의 신이다.
+"""
+sources = ["hesiod.theogony 233-239", "hesiod.theogony 270-276"]
+
+[[figure]]
+id = "keto"
+name_ko = "케토"
+name_grc = "Keto"
+kind = "primordial"
+era = 0
+parents = ["pontos", "gaia"]
+spouses = ["phorkys"]
+oneliner = "바다 괴물들의 어머니."
+body = """
+이름은 바다 괴물이라는 뜻이다.
+고르곤 세 자매와 그라이아이 세 자매를 낳았다.
+"""
+sources = ["hesiod.theogony 233-239", "hesiod.theogony 270-276"]
+
+[[figure]]
+id = "gorgones"
+name_ko = "고르곤 세 자매"
+name_grc = "Gorgones"
+aka = ["고르고", "고르곤"]
+kind = "group"
+era = 4
+parents = ["phorkys", "keto"]
+home = "gorgon-land"
+oneliner = "머리카락이 뱀인 세 자매. 둘은 죽지 않고 하나만 죽는다."
+body = """
+스테노, 에우리알레, 메두사 세 자매다.
+세상의 서쪽 끝에 산다.
+앞의 둘은 죽지 않는 몸이고, 메두사만 죽는 몸이었다.
+그래서 페르세우스가 노린 것은 메두사다.
+"""
+sources = ["hesiod.theogony 274-276", "apollodorus.library 2.4.2"]
+
+[[figure]]
+id = "medousa"
+name_ko = "메두사"
+name_grc = "Medousa"
+aka = ["메두샤"]
+kind = "monster"
+era = 4
+parents = ["phorkys", "keto"]
+home = "gorgon-land"
+oneliner = "눈을 마주친 것을 돌로 만드는 괴물. 고르곤 셋 가운데 죽는 몸이었다."
+body = """
+머리카락이 뱀이고, 눈을 마주치면 사람이든 짐승이든 돌이 된다.
+세 자매 가운데 유일하게 죽을 수 있는 몸이었다.
+페르세우스는 방패에 비친 모습만 보면서 목을 베었다.
+목이 잘린 뒤에도 그 눈은 힘이 남아 있었다.
+"""
+fun = "잘린 목에서 날개 달린 말 페가수스가 뛰어나왔다."
+sources = ["hesiod.theogony 274-286", "apollodorus.library 2.4.2-2.4.3"]
+
+[[figure]]
+id = "pegasos"
+name_ko = "페가수스"
+name_grc = "Pegasos"
+aka = ["페가소스"]
+kind = "monster"
+era = 4
+parents = ["poseidon", "medousa"]
+oneliner = "메두사의 목에서 튀어나온 날개 달린 말."
+body = """
+메두사의 목이 잘리는 순간 그 자리에서 뛰어나왔다.
+날개가 있어 하늘을 달린다.
+아무도 태우지 않으려 했지만, 뒤에 벨레로폰이 아테나의 도움으로 올라탄다.
+"""
+sources = ["hesiod.theogony 280-286", "apollodorus.library 2.3.2"]
+
+[[figure]]
+id = "andromeda"
+name_ko = "안드로메다"
+name_grc = "Andromeda"
+kind = "human"
+era = 4
+parents = ["kepheus", "kassiopeia"]
+spouses = ["perseus"]
+home = "aithiopia"
+oneliner = "바다괴물에게 바쳐질 뻔했다가 페르세우스에게 구해진 공주."
+body = """
+어머니가 한 자랑 때문에 나라에 바다괴물이 왔다.
+신의 말을 물으니 공주를 바쳐야 한다고 했다.
+안드로메다는 바닷가 바위에 묶였다.
+지나가던 페르세우스가 괴물을 물리치고 안드로메다를 데려갔다.
+"""
+fun = "안드로메다, 페르세우스, 케페우스, 카시오페이아는 모두 별자리 이름이 되어 지금도 가을 하늘에 나란히 있다."
+sources = ["apollodorus.library 2.4.3", "ovid.metamorphoses 4.663-4.764"]
+
+[[figure]]
+id = "kepheus"
+name_ko = "케페우스"
+name_grc = "Kepheus"
+kind = "human"
+era = 4
+spouses = ["kassiopeia"]
+home = "aithiopia"
+oneliner = "안드로메다의 아버지. 딸을 바치라는 말을 들은 왕."
+body = """
+에티오피아라고 불린 나라의 왕이다.
+아내의 자랑 때문에 나라가 벌을 받았다.
+딸을 바치는 것 말고는 방법이 없다는 말을 듣고 그대로 했다.
+"""
+sources = ["apollodorus.library 2.4.3"]
+
+[[figure]]
+id = "kassiopeia"
+name_ko = "카시오페이아"
+name_grc = "Kassiopeia"
+kind = "human"
+era = 4
+spouses = ["kepheus"]
+home = "aithiopia"
+oneliner = "자기가 바다의 님프들보다 예쁘다고 자랑한 왕비."
+body = """
+안드로메다의 어머니다.
+자기 아름다움이 바다의 님프들보다 낫다고 말했다.
+포세이돈이 그 말을 듣고 바다괴물을 보냈다.
+그 벌을 대신 받은 것이 딸 안드로메다다.
+"""
+sources = ["apollodorus.library 2.4.3"]
+
+[[figure]]
+id = "ketos"
+name_ko = "케토스"
+name_grc = "Ketos"
+aka = ["바다괴물"]
+kind = "monster"
+era = 4
+home = "aithiopia"
+oneliner = "포세이돈이 보낸 바다괴물."
+body = """
+케페우스의 나라 바닷가에 나타나 사람과 짐승을 물어 갔다.
+안드로메다를 먹으러 오는 순간 페르세우스가 나타났다.
+페르세우스가 메두사의 목을 보여 돌로 만들었다고도 하고, 칼로 이겼다고도 한다.
+"""
+note = "케토(Keto)와 이름이 비슷하지만 다른 존재. 원전에서 이 괴물은 이름 없이 kētos(바다괴물)로만 불린다."
+sources = ["apollodorus.library 2.4.3", "ovid.metamorphoses 4.689-4.734"]

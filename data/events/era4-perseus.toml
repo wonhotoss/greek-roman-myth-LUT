@@ -1,0 +1,217 @@
+# era 4 — 첫 영웅들. 페르세우스의 여행 전체.
+# 이 서사는 arc = "perseus-journey" 로 묶인다. 순서는 arcs.toml 에 있다.
+
+[[event]]
+id = "akrisios-oracle"
+name_ko = "아크리시오스가 신의 말을 듣다"
+era = 4
+seq = 10
+span = "moment"
+place = "delphi"
+cast = [
+  { figure = "akrisios", role = "주인공" },
+  { figure = "danae", role = "피해" },
+]
+oneliner = "딸의 아들이 너를 죽인다는 대답이 왔다."
+body = """
+아르고스의 왕 아크리시오스는 아들이 없었다.
+어떻게 아들을 얻는지 델포이에 물었다.
+아들은 얻지 못하고, 딸의 아들이 너를 죽일 것이라는 대답이 왔다.
+왕은 딸 다나에를 땅 아래 청동 방에 갇히게 했다.
+"""
+sources = ["apollodorus.library 2.4.1"]
+
+[[event]]
+id = "danae-set-adrift"
+name_ko = "다나에와 아기가 바다에 띄워지다"
+era = 4
+seq = 20
+span = "days"
+places = ["argos", "seriphos"]
+cast = [
+  { figure = "danae", role = "피해" },
+  { figure = "perseus", role = "피해" },
+  { figure = "akrisios", role = "상대" },
+  { figure = "zeus", role = "등장" },
+  { figure = "diktys", role = "도움" },
+]
+oneliner = "왕은 딸과 손자를 상자에 넣어 바다에 띄웠고, 어부가 건졌다."
+body = """
+갇힌 다나에에게 아기가 태어났다. 제우스의 아들 페르세우스다.
+아크리시오스는 딸과 아기를 나무 상자에 넣어 바다에 띄웠다.
+상자는 세리포스 섬까지 떠갔다.
+어부 딕티스가 그물로 건져 두 사람을 집에 들였고, 페르세우스는 그 섬에서 자랐다.
+"""
+sensitivity = "soften"
+caused_by = ["akrisios-oracle"]
+sources = ["apollodorus.library 2.4.1"]
+
+[[event]]
+id = "polydektes-demands"
+name_ko = "왕이 메두사의 목을 요구하다"
+era = 4
+seq = 30
+span = "moment"
+place = "seriphos"
+cast = [
+  { figure = "polydektes", role = "상대" },
+  { figure = "perseus", role = "주인공" },
+  { figure = "danae", role = "피해" },
+]
+oneliner = "섬의 왕이 살아 돌아올 수 없는 일을 시켰다."
+body = """
+섬의 왕 폴리덱테스는 다나에를 억지로 아내로 삼으려 했다.
+다 자란 페르세우스가 막고 있어 뜻대로 되지 않았다.
+왕은 잔치를 열고 손님마다 선물을 가져오게 했다.
+페르세우스에게는 메두사의 목을 가져오라고 했다. 돌아오지 못할 일이었다.
+"""
+sensitivity = "soften"
+caused_by = ["danae-set-adrift"]
+sources = ["apollodorus.library 2.4.2"]
+
+[[event]]
+id = "graiai-road"
+name_ko = "그라이아이에게서 길을 알아내다"
+era = 4
+seq = 40
+span = "days"
+cast = [
+  { figure = "perseus", role = "주인공" },
+  { figure = "graiai", role = "상대" },
+  { figure = "athena", role = "도움" },
+  { figure = "hermes", role = "도움" },
+]
+oneliner = "눈 하나를 돌려 쓰는 세 노파를 찾아가 길을 물었다."
+body = """
+아테나와 헤르메스가 페르세우스에게 길을 알려 줄 이들을 가르쳐 주었다.
+그라이아이 세 자매는 눈알 하나를 번갈아 쓰고 있었다.
+페르세우스는 눈이 손에서 손으로 넘어가는 사이에 그것을 잡아챘다.
+자매들은 어쩔 수 없이 님프들이 있는 곳을 알려 주었다.
+"""
+fun = "님프들에게서 얻은 것이 세 가지다. 날개 달린 신발, 안 보이게 되는 투구, 목을 담을 자루."
+caused_by = ["polydektes-demands"]
+sources = ["apollodorus.library 2.4.2"]
+
+[[event]]
+id = "medusa-slain"
+name_ko = "메두사의 목을 베다"
+era = 4
+seq = 50
+span = "moment"
+after = ["graiai-road"]
+place = "gorgon-land"
+cast = [
+  { figure = "perseus", role = "주인공" },
+  { figure = "medousa", role = "상대" },
+  { figure = "gorgones", role = "상대" },
+  { figure = "athena", role = "도움" },
+  { figure = "hermes", role = "도움" },
+  { figure = "pegasos", role = "등장" },
+]
+oneliner = "눈을 마주치지 않고 이겼다. 목에서 페가수스가 나왔다."
+body = """
+페르세우스는 세상의 서쪽 끝에 있는 고르곤의 땅으로 갔다.
+세 자매가 잠든 사이, 눈을 마주치지 않으려고 방패에 비친 모습만 보면서 메두사의 목을 베었다.
+목이 잘리자 그 자리에서 날개 달린 말 페가수스가 뛰어나왔다.
+남은 두 자매가 깨어 쫓아왔지만, 안 보이게 되는 투구를 쓰고 달아났다.
+"""
+fun = "페르세우스가 이긴 방법은 힘이 아니라 거울이다. 아테나가 돕는 영웅은 늘 이렇게 이긴다."
+caused_by = ["graiai-road"]
+sources = ["apollodorus.library 2.4.2-2.4.3"]
+
+[[event]]
+id = "andromeda-rescued"
+name_ko = "안드로메다를 구하다"
+era = 4
+seq = 60
+span = "moment"
+place = "aithiopia"
+cast = [
+  { figure = "perseus", role = "주인공" },
+  { figure = "andromeda", role = "피해" },
+  { figure = "ketos", role = "상대" },
+  { figure = "kassiopeia", role = "등장" },
+  { figure = "kepheus", role = "등장" },
+  { figure = "poseidon", role = "상대" },
+]
+oneliner = "바위에 묶인 공주를 보고 바다괴물을 물리쳤다."
+body = """
+돌아오는 길에 페르세우스는 바닷가 바위에 묶인 안드로메다를 보았다.
+어머니 카시오페이아의 자랑 때문에 포세이돈이 바다괴물을 보낸 것이었다.
+페르세우스는 괴물을 물리치고 안드로메다를 풀어 주었다.
+두 사람은 함께 그리스로 갔다.
+"""
+fun = "안드로메다, 페르세우스, 카시오페이아, 케페우스는 모두 별자리가 되었다. 가을 밤하늘에 네 별자리가 나란히 있다."
+caused_by = ["medusa-slain"]
+sources = ["apollodorus.library 2.4.3", "ovid.metamorphoses 4.663-4.764"]
+
+[[event]]
+id = "return-to-seriphos"
+name_ko = "세리포스로 돌아오다"
+era = 4
+seq = 70
+span = "moment"
+after = ["andromeda-rescued"]
+place = "seriphos"
+cast = [
+  { figure = "perseus", role = "주인공" },
+  { figure = "polydektes", role = "상대" },
+  { figure = "danae", role = "도움" },
+  { figure = "diktys", role = "도움" },
+  { figure = "athena", role = "도움" },
+]
+oneliner = "왕이 시킨 선물을 정말로 가져왔다."
+body = """
+페르세우스는 메두사의 목을 들고 섬으로 돌아왔다.
+왕은 그것을 가져올 줄 몰랐다.
+페르세우스가 목을 꺼내 보이자 왕은 돌이 되었다.
+페르세우스는 딕티스를 섬의 왕으로 세우고, 목은 아테나에게 주었다.
+"""
+fun = "아테나는 그 목을 자기 방패 아이기스에 붙였다. 그래서 아테나의 방패에는 메두사의 얼굴이 있다."
+caused_by = ["andromeda-rescued"]
+sources = ["apollodorus.library 2.4.3"]
+
+[[event]]
+id = "akrisios-dies"
+name_ko = "신의 말이 그대로 되다"
+era = 4
+seq = 80
+span = "moment"
+after = ["return-to-seriphos"]
+place = "larissa"
+cast = [
+  { figure = "perseus", role = "주인공" },
+  { figure = "akrisios", role = "피해" },
+]
+oneliner = "피하려고 애쓴 일이 우연히 일어났다."
+body = """
+아크리시오스는 손자가 돌아온다는 말을 듣고 라리사로 피했다.
+페르세우스는 그곳에서 열린 운동 경기에 나가 원반을 던졌다.
+원반이 빗나가 구경하던 아크리시오스에게 맞았고, 아크리시오스는 죽었다.
+아무도 그럴 마음이 없었는데 델포이의 말은 그대로 되었다.
+"""
+fun = "그리스 신화에서 신의 말을 피하려고 한 일은 언제나 그 말이 이루어지는 원인이 된다."
+caused_by = ["return-to-seriphos", "akrisios-oracle"]
+sources = ["apollodorus.library 2.4.4"]
+
+[[event]]
+id = "mycenae-founded"
+name_ko = "페르세우스가 미케네를 세우다"
+era = 4
+seq = 90
+span = "years"
+after = ["akrisios-dies"]
+place = "mycenae"
+cast = [
+  { figure = "perseus", role = "주인공" },
+  { figure = "andromeda", role = "주인공" },
+]
+oneliner = "아르고스를 다른 이에게 주고 새 성을 세웠다."
+body = """
+페르세우스는 자기가 죽게 만든 사람의 나라를 물려받고 싶지 않았다.
+그래서 아르고스를 다른 사람에게 넘기고 미케네에 새 성을 세웠다.
+안드로메다와 함께 여기서 다스렸고, 자식이 여럿이었다.
+그 자손 가운데 뒷날 헤라클레스가 나온다.
+"""
+caused_by = ["akrisios-dies"]
+sources = ["apollodorus.library 2.4.4", "pausanias.greece 2.15-2.16"]

@@ -1,0 +1,319 @@
+# era 0~2 — 세상이 생기고, 왕이 세 번 바뀌고, 올림포스가 세워진다.
+# seq 는 10 간격. 나중에 사이에 끼워 넣을 자리를 남겨 둔다.
+
+[[event]]
+id = "beginning"
+name_ko = "세상의 시작"
+era = 0
+seq = 10
+span = "years"
+cast = [
+  { figure = "chaos", role = "등장" },
+  { figure = "gaia", role = "주인공" },
+  { figure = "tartaros", role = "등장" },
+  { figure = "eros-primordial", role = "등장" },
+]
+oneliner = "카오스에서 땅과 가장 깊은 곳과 끌어당기는 힘이 나왔다."
+body = """
+맨 처음에는 카오스만 있었다.
+다음에 넓은 가슴의 가이아가 나왔고, 땅 아래 가장 깊은 타르타로스가 나왔다.
+가장 아름다운 에로스도 이때 나왔다.
+카오스에서는 어둠과 밤도 나왔다.
+"""
+sources = ["hesiod.theogony 116-138"]
+
+[[event]]
+id = "ouranos-imprisons"
+name_ko = "우라노스가 자식을 가두다"
+era = 0
+seq = 20
+span = "age"
+place = "tartaros-place"
+cast = [
+  { figure = "ouranos", role = "주인공" },
+  { figure = "gaia", role = "피해" },
+  { figure = "kyklopes", role = "피해" },
+  { figure = "hekatoncheires", role = "피해" },
+]
+oneliner = "첫 임금 우라노스가 힘센 자식들을 땅속에 가두었다."
+body = """
+가이아와 우라노스는 티탄 열둘과 키클롭스 셋, 백 손 거인 셋을 낳았다.
+우라노스는 힘센 자식들이 무서워 땅속 깊은 곳에 가두어 버렸다.
+가이아는 자식이 갇힌 것을 견딜 수 없었다.
+그래서 티탄들을 불러 아버지를 어떻게 할지 의논했다.
+"""
+caused_by = ["beginning"]
+sources = ["hesiod.theogony 154-182", "apollodorus.library 1.1.1-1.1.4"]
+
+[[event]]
+id = "kronos-takes-throne"
+name_ko = "크로노스가 왕좌를 빼앗다"
+era = 1
+seq = 10
+span = "moment"
+cast = [
+  { figure = "kronos", role = "주인공" },
+  { figure = "ouranos", role = "상대" },
+  { figure = "gaia", role = "도움" },
+]
+oneliner = "티탄 막내 크로노스가 아버지를 쳐서 임금 자리를 차지했다."
+body = """
+가이아가 티탄들에게 아버지를 막아 달라고 했다.
+형들은 모두 무서워했고, 막내 크로노스만 나섰다.
+크로노스는 아버지 우라노스를 쳐서 왕좌를 빼앗았다.
+그러고는 갇혀 있던 형제들을 다시 가두었다. 어머니가 바란 것과 달랐다.
+"""
+caused_by = ["ouranos-imprisons"]
+sensitivity = "soften"
+note = "원전의 거세는 쓰지 않는다. 아프로디테 탄생과의 연결도 여기서 끊고, 아프로디테 항목에서 바다 거품만 남긴다."
+sources = ["hesiod.theogony 154-182", "apollodorus.library 1.1.4-1.1.5"]
+
+[[event]]
+id = "kronos-swallows"
+name_ko = "크로노스가 자식을 삼키다"
+era = 1
+seq = 20
+span = "years"
+cast = [
+  { figure = "kronos", role = "주인공" },
+  { figure = "rhea", role = "피해" },
+  { figure = "hestia", role = "피해" },
+  { figure = "demeter", role = "피해" },
+  { figure = "hera", role = "피해" },
+  { figure = "hades", role = "피해" },
+  { figure = "poseidon", role = "피해" },
+]
+oneliner = "자식에게 자리를 빼앗긴다는 말을 듣고, 태어난 아이를 삼켰다."
+body = """
+크로노스는 자기도 아들에게 자리를 빼앗긴다는 말을 들었다.
+아버지에게 한 일이 자기에게 돌아올 것이 무서웠다.
+그래서 레아가 아이를 낳으면 태어나는 대로 통째로 삼켰다.
+헤스티아, 데메테르, 헤라, 하데스, 포세이돈이 차례로 삼켜졌다.
+"""
+caused_by = ["kronos-takes-throne"]
+sources = ["hesiod.theogony 453-467", "apollodorus.library 1.1.5"]
+
+[[event]]
+id = "zeus-hidden"
+name_ko = "제우스가 크레타에 숨다"
+era = 1
+seq = 30
+span = "years"
+place = "crete"
+cast = [
+  { figure = "rhea", role = "주인공" },
+  { figure = "zeus", role = "주인공" },
+  { figure = "kronos", role = "상대" },
+  { figure = "gaia", role = "도움" },
+]
+oneliner = "레아가 막내를 몰래 낳고, 크로노스에게는 돌을 싸서 주었다."
+body = """
+여섯째를 낳을 때가 되자 레아는 부모에게 도와 달라고 했다.
+가이아는 레아를 크레타로 데려가 아기를 몰래 낳게 했다.
+레아는 돌을 천에 싸서 크로노스에게 주었고, 크로노스는 그것을 삼켰다.
+아기 제우스는 크레타의 굴에서 님프들 손에 자랐다.
+"""
+caused_by = ["kronos-swallows"]
+sources = ["hesiod.theogony 468-491", "apollodorus.library 1.1.6-1.1.7"]
+
+[[event]]
+id = "zeus-frees-siblings"
+name_ko = "제우스가 형과 누나를 되찾다"
+era = 1
+seq = 40
+span = "moment"
+after = ["kronos-swallows", "zeus-hidden"]
+cast = [
+  { figure = "zeus", role = "주인공" },
+  { figure = "kronos", role = "상대" },
+  { figure = "metis", role = "도움" },
+]
+oneliner = "다 자란 제우스가 크로노스에게 삼킨 것을 모두 토하게 했다."
+body = """
+다 자란 제우스는 메티스에게 방법을 물었다.
+메티스가 알려 준 대로 하자 크로노스는 삼킨 것을 모두 토했다.
+가장 먼저 삼킨 헤스티아가 가장 나중에 나왔다.
+돌도 함께 나왔고, 그 돌은 델포이에 놓였다.
+"""
+caused_by = ["zeus-hidden"]
+sources = ["hesiod.theogony 492-500", "apollodorus.library 1.2.1"]
+
+[[event]]
+id = "titanomachy"
+name_ko = "티타노마키아"
+aka = ["티탄 전쟁", "티탄과의 싸움"]
+era = 1
+seq = 50
+span = "years"
+after = ["ouranos-imprisons", "zeus-frees-siblings"]
+place = "tartaros-place"
+cast = [
+  { figure = "zeus", role = "주인공" },
+  { figure = "kronos", role = "상대" },
+  { figure = "kyklopes", role = "도움" },
+  { figure = "hekatoncheires", role = "도움" },
+  { figure = "atlas", role = "상대" },
+  { figure = "prometheus", role = "도움" },
+]
+oneliner = "제우스 편과 티탄 편이 열 해를 싸웠다."
+body = """
+제우스는 먼저 땅속에 갇혀 있던 키클롭스와 백 손 거인을 풀어 주었다.
+키클롭스는 고맙다며 제우스에게 번개를 만들어 주었다.
+백 손 거인들은 한 번에 바위를 삼백 개씩 던졌다.
+열 해를 싸운 끝에 티탄들이 졌고, 타르타로스에 갇혔다.
+"""
+fun = "제우스가 이긴 결정적인 이유는 힘이 아니라 편을 늘린 것이다. 아버지가 가둔 쪽을 풀어 주었다."
+caused_by = ["zeus-frees-siblings"]
+sources = ["hesiod.theogony 617-735", "apollodorus.library 1.2.1"]
+
+[[event]]
+id = "division-of-world"
+name_ko = "세계를 셋으로 나누다"
+era = 2
+seq = 10
+span = "moment"
+cast = [
+  { figure = "zeus", role = "주인공" },
+  { figure = "poseidon", role = "주인공" },
+  { figure = "hades", role = "주인공" },
+]
+oneliner = "세 형제가 제비를 뽑아 하늘, 바다, 저승을 나누어 맡았다."
+body = """
+싸움이 끝나고 세 형제가 세상을 나누기로 했다.
+힘으로 정하지 않고 제비를 뽑았다.
+제우스는 하늘, 포세이돈은 바다, 하데스는 죽은 이들의 나라를 얻었다.
+땅과 올림포스는 셋이 함께 쓰기로 했다.
+"""
+fun = "제비뽑기였으니, 제우스가 저승을 맡을 수도 있었다."
+caused_by = ["titanomachy"]
+sources = ["homer.iliad 15.187-193", "apollodorus.library 1.2.1"]
+
+[[event]]
+id = "athena-born"
+name_ko = "아테나가 제우스의 머리에서 태어나다"
+era = 2
+seq = 20
+span = "moment"
+place = "olympus-home"
+cast = [
+  { figure = "athena", role = "주인공" },
+  { figure = "zeus", role = "주인공" },
+  { figure = "metis", role = "피해" },
+  { figure = "hephaistos", role = "도움" },
+]
+oneliner = "제우스의 머리를 열자 갑옷을 입은 아테나가 뛰어나왔다."
+body = """
+제우스는 메티스의 아이가 자기 자리를 빼앗을 것이라는 말을 들었다.
+아버지와 할아버지가 겪은 일이 또 오는 것이 무서웠다.
+그래서 메티스를 삼켰는데, 얼마 뒤 머리가 몹시 아팠다.
+헤파이스토스가 도끼로 머리를 열자 갑옷을 입은 아테나가 뛰어나왔다.
+"""
+sensitivity = "soften"
+fun = "우라노스, 크로노스, 제우스 셋 다 자식을 무서워했다. 신화는 같은 이야기를 세 번 반복한다."
+caused_by = ["division-of-world"]
+sources = ["hesiod.theogony 886-900", "apollodorus.library 1.3.6"]
+
+[[event]]
+id = "gigantomachy"
+name_ko = "기간토마키아"
+aka = ["거인들과의 싸움"]
+era = 2
+seq = 30
+span = "days"
+place = "pallene"
+cast = [
+  { figure = "gigantes", role = "상대" },
+  { figure = "gaia", role = "상대" },
+  { figure = "zeus", role = "주인공" },
+  { figure = "athena", role = "주인공" },
+]
+oneliner = "가이아가 낳은 거인들이 올림포스로 올라왔다."
+body = """
+티탄들이 갇힌 것에 화가 난 가이아가 거인 무리를 낳았다.
+이 거인들은 신의 손으로는 죽일 수 없게 되어 있었다.
+그래서 신들은 사람을 하나 데려와야 했고, 그 사람이 헤라클레스다.
+산을 뽑아 던지는 싸움 끝에 신들이 이겼다.
+"""
+caused_by = ["titanomachy"]
+note = "헤라클레스는 era 5 인물이므로 cast 에 넣지 않는다. 시대를 건너뛰는 참여는 body 에서만 언급한다."
+sources = ["apollodorus.library 1.6.1-1.6.2"]
+
+[[event.variants]]
+source = "apollodorus.library 1.6.1"
+text = "거인들이 태어난 곳을 아폴로도로스는 플레그라이라고도 하고 팔레네라고도 적었다."
+
+[[event]]
+id = "typhonomachy"
+name_ko = "티폰과의 싸움"
+era = 2
+seq = 40
+span = "days"
+after = ["gigantomachy"]
+place = "tartaros-place"
+cast = [
+  { figure = "typhon", role = "상대" },
+  { figure = "zeus", role = "주인공" },
+  { figure = "gaia", role = "상대" },
+]
+oneliner = "제우스가 가장 큰 괴물과 단둘이 싸웠다."
+body = """
+가이아가 마지막으로 낳은 것이 티폰이다.
+산보다 크고 어깨에서 뱀 백 마리가 자라 있었다.
+다른 신들은 모두 도망쳤고, 제우스만 남아 번개로 싸웠다.
+제우스가 이겨 티폰을 타르타로스에 던졌다.
+"""
+fun = "제우스가 혼자 싸운 상대는 티폰뿐이다."
+caused_by = ["gigantomachy"]
+sources = ["hesiod.theogony 820-880", "apollodorus.library 1.6.3"]
+
+[[event]]
+id = "athens-contest"
+name_ko = "아테네를 두고 겨루다"
+era = 2
+seq = 50
+span = "moment"
+place = "athens"
+cast = [
+  { figure = "athena", role = "주인공" },
+  { figure = "poseidon", role = "상대" },
+  { figure = "kekrops", role = "도움" },
+]
+oneliner = "아테나와 포세이돈이 도시 하나를 두고 선물로 겨루었다."
+body = """
+두 신이 같은 도시를 갖고 싶어 했다.
+싸우지 않고, 더 좋은 선물을 주는 쪽이 갖기로 했다.
+포세이돈이 바위를 쳐서 샘을 냈지만 물이 짰다.
+아테나는 올리브 나무를 냈고, 첫 왕 케크롭스가 그것을 보았다고 말했다.
+열두 신이 그 말을 듣고 도시를 아테나에게 주었다.
+"""
+fun = "올리브는 열매를 먹고 기름을 내고 나무도 쓸 수 있다. 소금물보다 쓸모가 많았다."
+note = "판정한 것은 사람이 아니라 열두 신이다(아폴로도로스 3.14.1). 케크롭스는 증인이다 — 널리 퍼진 '사람들이 골랐다'는 원전에 없다."
+sources = ["apollodorus.library 3.14.1", "pausanias.greece 1.24"]
+
+[[event]]
+id = "persephone-taken"
+name_ko = "페르세포네가 저승으로 가다"
+era = 2
+seq = 60
+span = "age"
+open = true
+places = ["hades-realm", "eleusis"]
+cast = [
+  { figure = "persephone", role = "피해" },
+  { figure = "hades", role = "주인공" },
+  { figure = "demeter", role = "주인공" },
+  { figure = "zeus", role = "도움" },
+]
+oneliner = "하데스가 페르세포네를 데려가고, 데메테르가 세상을 멈추었다."
+body = """
+꽃을 따던 페르세포네를 하데스가 붙잡아 저승으로 데려갔다.
+데메테르는 딸을 찾아 온 세상을 헤맸고, 그동안 아무것도 자라지 않았다.
+제우스가 딸을 돌려보내라고 했지만, 페르세포네는 이미 저승의 석류 씨를 먹었다.
+그래서 한 해의 얼마는 저승에, 얼마는 어머니와 있게 되었다. 그것이 계절이다.
+"""
+sensitivity = "soften"
+sources = ["apollodorus.library 1.5.1-1.5.3"]
+
+[[event.variants]]
+source = "hyginus.fabulae 146"
+text = "히기누스는 데메테르가 딸을 찾을 때 헬리오스에게 물어 알아냈다고 한다. 높은 데서 세상을 다 보는 신이기 때문이다."

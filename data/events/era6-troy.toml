@@ -1,0 +1,1224 @@
+# era 6 — 트로이 전쟁 전체. 뿌리인 탄탈로스 가문(era 4 seq 300~399)과 전쟁 전의 일(era 5 seq 1100~1199)도 여기 둔다.
+# 묶음: tantalos-house / road-to-troy / wrath-of-achilleus / fall-of-troy (스크래치 arcs/TRO.toml)
+# 다른 에이전트 소유라 참조만 하는 id: lemnos, kastor, polydeukes, mt-pelion(THE) · ithake, penelope(ODY) · cheiron, herakles-sacks-troy(HER)
+# 히기누스 82·92·93·96·98·107·108 은 코퍼스의 파일이 55번에서 끊겨 있어 인용하지 않았다. 102·103·155 는 있다.
+
+# ---------- era 4 : 탄탈로스 가문 ----------
+
+[[event]]
+id = "tantalos-feast"
+name_ko = "탄탈로스가 신들을 속이다"
+era = 4
+seq = 300
+span = "moment"
+cast = [
+  { figure = "tantalos", role = "주인공" },
+  { figure = "pelops", role = "피해" },
+  { figure = "zeus", role = "상대" },
+  { figure = "poseidon", role = "도움" },
+]
+oneliner = "탄탈로스가 신들을 시험하려고 끔찍한 음식을 내놓았다."
+body = """
+탄탈로스는 신들과 한 식탁에 앉을 만큼 가까웠다.
+그런데 신들의 비밀을 떠들고 암브로시아를 훔쳐 냈다.
+잔치를 열어 신들을 시험하려고 해서는 안 될 끔찍한 음식을 내놓았다.
+그 잔치에서 아들 펠롭스가 죽었는데, 신들이 다시 살려 냈다.
+살아난 펠롭스는 더 아름다워져 포세이돈이 아꼈다.
+"""
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 4권 3장 「영원한 굶주림의 벌」. 식인 상세는 쓰지 않는다. 장소는 원전에 없다."
+sources = ["apollodorus.library E.2.1", "apollodorus.library E.2.3", "ovid.metamorphoses 6.401-411"]
+
+[[event]]
+id = "tantalos-punished"
+name_ko = "탄탈로스가 저승에서 벌을 받다"
+era = 4
+seq = 310
+span = "age"
+open = true
+place = "hades-realm"
+cast = [
+  { figure = "tantalos", role = "피해" },
+  { figure = "zeus", role = "상대" },
+]
+oneliner = "탄탈로스는 저승에서 물과 열매를 눈앞에 두고 영원히 굶는다."
+body = """
+신들은 탄탈로스를 저승으로 보냈다.
+턱까지 물이 차는 못에 서 있는데, 마시려 하면 물이 말랐다.
+머리 위에 열매가 열렸는데, 손을 뻗으면 바람이 가지를 올려 버렸다.
+머리 위에는 큰 돌이 매달려 언제 떨어질지 몰랐다.
+이 벌은 끝나지 않는다.
+"""
+fun = "오디세우스가 저승에 갔을 때 이 모습을 보았다. 시시포스가 바위를 밀어 올리는 것도 그 옆에서 보았다."
+caused_by = ["tantalos-feast"]
+note = "참고: 처음 읽는 그리스 로마 신화 4권 3장 「영원한 굶주림의 벌」"
+sources = ["apollodorus.library E.2.1", "homer.odyssey 11.582-592"]
+
+[[event]]
+id = "pelops-chariot-race"
+name_ko = "펠롭스와 히포다메이아의 전차 경주"
+era = 4
+seq = 320
+span = "days"
+place = "pisa"
+cast = [
+  { figure = "pelops", role = "주인공" },
+  { figure = "hippodameia", role = "도움" },
+  { figure = "oinomaos", role = "상대" },
+  { figure = "myrtilos", role = "도움" },
+  { figure = "poseidon", role = "도움" },
+]
+oneliner = "펠롭스가 바퀴 쐐기를 뺀 전차와 경주해 이겼다."
+body = """
+피사의 왕 오이노마오스는 딸의 구혼자와 전차 경주를 해서 지면 죽였다.
+펠롭스가 포세이돈이 준 전차를 타고 구혼하러 왔다.
+히포다메이아는 펠롭스가 마음에 들어 마부 미르틸로스를 설득했다.
+미르틸로스는 왕의 전차 바퀴에 쐐기를 끼우지 않았다.
+경주 중에 바퀴가 빠져 왕이 죽었고, 펠롭스가 히포다메이아를 얻었다.
+"""
+fun = "펠롭스는 나중에 미르틸로스를 바다에 던졌다. 미르틸로스는 떨어지면서 펠롭스의 집안을 저주했다."
+variants = [
+  { source = "apollodorus.library E.2.7", text = "오이노마오스가 전차에서 떨어져 죽은 것이 아니라 펠롭스의 손에 죽었다는 이야기도 있다." },
+]
+caused_by = ["tantalos-feast"]
+sources = ["apollodorus.library E.2.4-E.2.9", "pausanias.greece 5.10"]
+
+# ---------- era 5 : 전쟁의 뿌리 ----------
+
+[[event]]
+id = "atreus-thyestes-feud"
+name_ko = "아트레우스와 티에스테스가 왕자리를 다투다"
+era = 5
+seq = 1100
+span = "season"
+place = "mycenae"
+cast = [
+  { figure = "atreus", role = "주인공" },
+  { figure = "thyestes", role = "상대" },
+  { figure = "zeus", role = "도움" },
+  { figure = "hermes", role = "도움" },
+]
+oneliner = "형제가 미케네의 왕자리를 다투었고, 해가 거꾸로 졌다."
+body = """
+미케네 사람들이 펠롭스의 아들을 왕으로 삼으라는 신의 말을 들었다.
+불려 온 티에스테스는 황금 양을 가진 쪽이 왕이 되자고 했다.
+아트레우스가 좋다고 했는데, 양은 몰래 티에스테스의 손에 가 있었다.
+제우스는 해가 거꾸로 지면 아트레우스가 왕이 되자고 하라고 했다.
+해가 동쪽으로 졌고, 아트레우스는 왕이 되어 동생을 쫓아냈다.
+"""
+sensitivity = "soften"
+note = "그 뒤의 잔치(E.2.13)와 아이기스토스의 출생(E.2.14)은 쓰지 않는다."
+sources = ["apollodorus.library E.2.10-E.2.12"]
+
+[[event]]
+id = "leda-swan"
+name_ko = "레다와 백조, 헬레네가 태어나다"
+era = 5
+seq = 1110
+span = "moment"
+place = "sparta"
+cast = [
+  { figure = "zeus", role = "주인공" },
+  { figure = "leda", role = "피해" },
+  { figure = "tyndareos", role = "등장" },
+  { figure = "helene", role = "등장" },
+  { figure = "klytaimnestra", role = "등장" },
+  { figure = "polydeukes", role = "등장" },
+  { figure = "kastor", role = "등장" },
+]
+oneliner = "제우스가 백조가 되어 레다에게 다가갔고, 헬레네가 태어났다."
+body = """
+제우스가 백조로 모습을 바꾸어 스파르타의 왕비 레다에게 다가갔다.
+레다는 아이 넷을 낳았다.
+폴리데우케스와 헬레네는 제우스의 아이였다.
+카스토르와 클리타임네스트라는 틴다레오스의 아이였다.
+네 아이는 스파르타에서 함께 자랐다.
+"""
+variants = [
+  { source = "apollodorus.library 3.10.7", text = "헬레네는 제우스와 네메시스의 딸이라는 이야기도 있다. 네메시스가 낳은 알을 목동이 레다에게 가져왔고, 그 알에서 헬레네가 나왔다." },
+]
+sensitivity = "soften"
+sources = ["apollodorus.library 3.10.7"]
+
+[[event]]
+id = "peleus-thetis-wedding"
+name_ko = "펠레우스와 테티스의 결혼 잔치"
+era = 5
+seq = 1120
+span = "days"
+place = "mt-pelion"
+cast = [
+  { figure = "peleus", role = "주인공" },
+  { figure = "thetis", role = "주인공" },
+  { figure = "zeus", role = "등장" },
+  { figure = "poseidon", role = "도움" },
+  { figure = "themis", role = "등장" },
+  { figure = "cheiron", role = "도움" },
+  { figure = "hera", role = "등장" },
+  { figure = "apollon", role = "등장" },
+]
+oneliner = "신들이 모두 와서 사람 펠레우스와 님프 테티스의 결혼을 축하했다."
+body = """
+제우스와 포세이돈이 테티스를 두고 다투었다.
+그런데 테티스가 낳을 아들이 아버지보다 강해진다는 테미스의 말이 있었다.
+두 신은 물러났고, 제우스는 테티스를 사람 펠레우스와 결혼하게 했다.
+펠레우스는 케이론이 알려 준 대로 모습을 바꾸는 테티스를 놓지 않았다.
+펠리온 산에서 신들이 모두 와 잔치를 하고 노래를 불렀다.
+"""
+fun = "결혼 선물로 케이론은 물푸레나무 창을, 포세이돈은 죽지 않는 말 두 마리를 주었다. 아킬레우스가 트로이에서 그 창과 말을 썼다."
+variants = [
+  { source = "apollodorus.library 3.13.5", text = "테티스가 헤라의 손에 자라서 제우스를 거절했고, 화가 난 제우스가 그녀를 사람과 결혼시켰다는 이야기도 있다." },
+]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 1장 「황금 사과의 주인」. '에리스만 초대받지 못했다'(히기누스 92)는 코퍼스에 없어 쓰지 않았다. 사과는 paris-judgment 에서 E.3.2 대로 쓴다."
+sources = ["apollodorus.library 3.13.5", "homer.iliad 24.59-63", "homer.iliad 18.84-85", "homer.iliad 16.140-144"]
+
+[[event]]
+id = "achilleus-childhood"
+name_ko = "테티스가 아기를 불에 넣다"
+era = 5
+seq = 1130
+span = "years"
+places = ["phthia", "mt-pelion"]
+cast = [
+  { figure = "thetis", role = "주인공" },
+  { figure = "peleus", role = "주인공" },
+  { figure = "achilleus", role = "피해" },
+  { figure = "cheiron", role = "도움" },
+]
+oneliner = "테티스가 아기를 죽지 않는 몸으로 만들려 했고, 케이론이 아이를 키웠다."
+body = """
+테티스는 아기를 죽지 않는 몸으로 만들고 싶었다.
+밤마다 아기를 불에 넣고, 낮에는 암브로시아를 발라 주었다.
+펠레우스가 소리를 지르자 테티스는 아기를 두고 바다로 돌아갔다.
+펠레우스는 아기를 케이론에게 맡겼다.
+케이론이 아킬레우스라는 이름을 지어 주었다.
+"""
+fun = "케이론은 아이에게 사자와 멧돼지의 속살과 곰의 골수를 먹였다."
+caused_by = ["peleus-thetis-wedding"]
+after = ["peleus-thetis-wedding"]
+sources = ["apollodorus.library 3.13.6"]
+
+[[event]]
+id = "paris-born"
+name_ko = "파리스가 태어나 이데 산에 버려지다"
+era = 5
+seq = 1140
+span = "years"
+places = ["troy", "mt-ida-troad"]
+cast = [
+  { figure = "hekabe", role = "주인공" },
+  { figure = "priamos", role = "주인공" },
+  { figure = "paris", role = "피해" },
+]
+oneliner = "헤카베가 불 꿈을 꾸었고, 태어난 아기는 이데 산에 버려졌다."
+body = """
+헤카베는 둘째를 가졌을 때 불붙은 나무토막을 낳는 꿈을 꾸었다.
+꿈을 푸는 사람이 이 아이가 나라를 망하게 한다고 했다.
+프리아모스는 아기가 태어나자 종에게 주어 이데 산에 버리게 했다.
+곰이 닷새 동안 아기에게 젖을 주었다.
+종 아겔라오스가 아기를 데려와 아들로 키우며 파리스라 불렀다.
+"""
+fun = "자라서 도둑을 잘 막아 '지키는 사람'이라는 뜻의 알렉산드로스라는 이름도 얻었다. 얼마 뒤 부모를 찾았다."
+after = ["herakles-sacks-troy"]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 1장 「파리스의 탄생」. 프리아모스는 헤라클레스가 트로이를 무너뜨린 뒤 왕이 되었다(3.12.5) — HER 의 herakles-sacks-troy 를 after 로 잡는다."
+sources = ["apollodorus.library 3.12.5"]
+
+[[event]]
+id = "kassandra-apollon"
+name_ko = "아폴론이 카산드라에게 앞일을 보는 힘을 주다"
+era = 5
+seq = 1150
+span = "moment"
+place = "troy"
+cast = [
+  { figure = "kassandra", role = "주인공" },
+  { figure = "apollon", role = "상대" },
+]
+oneliner = "아폴론이 카산드라에게 앞일을 보는 힘을 주고, 믿음을 빼앗았다."
+body = """
+아폴론이 프리아모스의 딸 카산드라를 좋아했다.
+마음을 얻으려고 앞일을 보는 법을 가르쳐 주겠다고 했다.
+카산드라는 다 배우고 나서 아폴론을 거절했다.
+아폴론은 그 힘에서 사람을 설득하는 힘을 빼앗았다.
+그 뒤로 카산드라가 하는 말은 다 맞았지만 아무도 믿지 않았다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 2권 4장 「예언자 카산드라」. 히기누스 93 은 코퍼스에 없다."
+sources = ["apollodorus.library 3.12.5", "virgil.aeneid 2.246-247"]
+
+[[event]]
+id = "helene-suitors"
+name_ko = "헬레네의 구혼자들과 틴다레오스의 맹세"
+era = 5
+seq = 1160
+span = "season"
+place = "sparta"
+cast = [
+  { figure = "tyndareos", role = "주인공" },
+  { figure = "helene", role = "등장" },
+  { figure = "odysseus", role = "도움" },
+  { figure = "menelaos", role = "주인공" },
+  { figure = "agamemnon", role = "등장" },
+  { figure = "klytaimnestra", role = "등장" },
+  { figure = "penelope", role = "등장" },
+  { figure = "diomedes", role = "등장" },
+  { figure = "aias", role = "등장" },
+  { figure = "patroklos", role = "등장" },
+  { figure = "philoktetes", role = "등장" },
+  { figure = "protesilaos", role = "등장" },
+]
+oneliner = "그리스의 왕들이 헬레네에게 구혼했고, 모두 맹세를 했다."
+body = """
+헬레네가 자라자 왕들이 몰려왔고, 틴다레오스는 다툼이 날까 걱정했다.
+오디세우스가 꾀를 내어 구혼자 모두에게 맹세를 받게 했다.
+신랑이 억울한 일을 당하면 다 함께 돕겠다는 맹세였다.
+틴다레오스는 메넬라오스를 골랐고, 오디세우스는 페넬로페를 얻었다.
+아가멤논은 헬레네의 자매 클리타임네스트라와 결혼했다.
+"""
+fun = "구혼자 명단에는 오디세우스, 디오메데스, 아이아스, 파트로클로스, 필록테테스도 있었다. 뒷날 트로이로 가는 사람들이 다 있다."
+caused_by = ["leda-swan"]
+sources = ["apollodorus.library 3.10.8-3.10.9", "apollodorus.library E.2.16"]
+
+# ---------- era 6 : 트로이로 가는 길 ----------
+
+[[event]]
+id = "paris-judgment"
+name_ko = "파리스의 심판"
+era = 6
+seq = 10
+span = "moment"
+place = "mt-ida-troad"
+cast = [
+  { figure = "paris", role = "주인공" },
+  { figure = "aphrodite", role = "도움" },
+  { figure = "hera", role = "상대" },
+  { figure = "athena", role = "상대" },
+  { figure = "hermes", role = "도움" },
+  { figure = "zeus", role = "등장" },
+  { figure = "eris", role = "등장" },
+]
+oneliner = "파리스가 세 여신 가운데 아프로디테를 가장 아름답다고 했다."
+body = """
+에리스가 가장 아름다운 여신에게 주는 상이라며 사과를 던졌다.
+헤라, 아테나, 아프로디테가 서로 자기 것이라고 다투었다.
+제우스는 헤르메스에게 세 여신을 이데 산의 파리스에게 데려가라고 했다.
+헤라는 온 세상의 왕자리를, 아테나는 싸움에서 이기는 힘을 약속했다.
+아프로디테는 헬레네를 약속했고, 파리스는 아프로디테를 골랐다.
+"""
+fun = "헤라와 아테나는 이 일을 잊지 않았다. 열 해 동안 트로이를 미워한 이유가 이것이다."
+caused_by = ["peleus-thetis-wedding"]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 1장 「황금 사과의 주인」. 히기누스 92 는 코퍼스에 없다."
+sources = ["apollodorus.library E.3.2", "homer.iliad 24.25-30"]
+
+[[event]]
+id = "helene-taken"
+name_ko = "파리스가 헬레네를 데려가다"
+era = 6
+seq = 20
+span = "days"
+places = ["sparta", "troy"]
+cast = [
+  { figure = "paris", role = "주인공" },
+  { figure = "helene", role = "피해" },
+  { figure = "menelaos", role = "피해" },
+  { figure = "aphrodite", role = "도움" },
+  { figure = "hera", role = "상대" },
+]
+oneliner = "파리스가 스파르타의 손님으로 와서 헬레네를 데리고 떠났다."
+body = """
+파리스는 배를 지어 스파르타로 갔다.
+메넬라오스는 아홉 날 동안 손님으로 잘 대접했다.
+열째 날 메넬라오스가 할아버지의 장례로 크레타에 갔다.
+파리스는 그 사이에 헬레네를 데리고 밤에 배를 타고 떠났다.
+헤라가 큰 바람을 보내 배를 멀리 돌게 했지만, 결국 트로이에 닿았다.
+"""
+variants = [
+  { source = "apollodorus.library E.3.5", text = "헤르메스가 헬레네를 이집트에 숨기고, 파리스는 구름으로 만든 헬레네를 트로이에 데려갔다는 이야기도 있다." },
+]
+sensitivity = "soften"
+caused_by = ["paris-judgment"]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 1장 「파리스와 헬레네」"
+sources = ["apollodorus.library E.3.3-E.3.5", "homer.iliad 3.443-446"]
+
+[[event]]
+id = "greeks-muster"
+name_ko = "그리스의 왕들이 모이고, 오디세우스가 미친 척하다"
+era = 6
+seq = 30
+span = "season"
+places = ["mycenae", "ithake"]
+cast = [
+  { figure = "menelaos", role = "주인공" },
+  { figure = "agamemnon", role = "주인공" },
+  { figure = "odysseus", role = "등장" },
+  { figure = "palamedes", role = "도움" },
+  { figure = "penelope", role = "등장" },
+  { figure = "nestor", role = "등장" },
+  { figure = "diomedes", role = "등장" },
+  { figure = "aias", role = "등장" },
+  { figure = "idomeneus", role = "등장" },
+]
+oneliner = "메넬라오스가 형을 찾아가고, 왕들이 맹세대로 모였다."
+body = """
+메넬라오스는 미케네의 아가멤논을 찾아가 군대를 모아 달라고 했다.
+아가멤논은 왕들에게 사람을 보내 옛 맹세를 떠올리게 했다.
+많은 왕이 나섰지만 오디세우스는 가고 싶지 않아 미친 척했다.
+팔라메데스가 아기 텔레마코스에게 칼을 들자 오디세우스가 놀라 막았다.
+거짓이 드러났고, 오디세우스도 전쟁에 가게 되었다.
+"""
+fun = "아폴로도로스는 배가 천십삼 척, 지휘관이 마흔셋이라고 적었다. 아가멤논이 백 척으로 가장 많았다."
+caused_by = ["helene-taken", "helene-suitors"]
+after = ["helene-taken"]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 2장 「그리스의 군사들」. 텔레마코스는 ODY 소유(era 7) 인물이라 이름만 부른다."
+sources = ["apollodorus.library E.3.6-E.3.7", "apollodorus.library E.3.11-E.3.14"]
+
+[[event]]
+id = "achilleus-skyros"
+name_ko = "스키로스에 숨은 아킬레우스"
+era = 6
+seq = 40
+span = "days"
+place = "skyros"
+cast = [
+  { figure = "achilleus", role = "주인공" },
+  { figure = "thetis", role = "도움" },
+  { figure = "odysseus", role = "상대" },
+  { figure = "kalchas", role = "등장" },
+  { figure = "neoptolemos", role = "등장" },
+]
+oneliner = "테티스가 숨긴 아킬레우스를 오디세우스가 나팔 소리로 찾아냈다."
+body = """
+칼카스가 아킬레우스가 없으면 트로이를 얻지 못한다고 했다.
+테티스는 아들이 전쟁에 가면 죽는다는 것을 알았다.
+그래서 여자 옷을 입혀 스키로스의 리코메데스 왕에게 맡겼다.
+그곳에서 왕의 딸과 사이에 아들 네옵톨레모스가 태어났다.
+오디세우스가 찾아와 나팔 소리로 아킬레우스를 찾아냈다.
+"""
+fun = "아폴로도로스는 아킬레우스가 열다섯 살에 함대를 이끌었다고 적었다."
+caused_by = ["greeks-muster"]
+after = ["achilleus-childhood"]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 2장. 히기누스 96 은 코퍼스에 없다. 리코메데스·데이다메이아는 등록부에 없어 이름만."
+sources = ["apollodorus.library 3.13.8", "apollodorus.library E.3.16", "pausanias.greece 1.22"]
+
+[[event]]
+id = "aulis-omen"
+name_ko = "아울리스의 뱀과 칼카스의 말"
+era = 6
+seq = 50
+span = "days"
+place = "aulis"
+cast = [
+  { figure = "kalchas", role = "주인공" },
+  { figure = "agamemnon", role = "등장" },
+  { figure = "odysseus", role = "등장" },
+  { figure = "achilleus", role = "등장" },
+  { figure = "zeus", role = "도움" },
+  { figure = "apollon", role = "등장" },
+]
+oneliner = "아울리스에서 뱀이 참새 아홉 마리를 삼켰고, 칼카스가 열 해를 말했다."
+body = """
+그리스의 배들이 아울리스에 모였다.
+아폴론에게 제사를 드리는데 제단 옆에서 뱀이 나왔다.
+뱀은 둥지의 새끼 여덟 마리와 어미까지 아홉을 삼키고 돌이 되었다.
+칼카스는 이것이 제우스가 보낸 표시라고 했다.
+트로이는 아홉 해를 버티고 열 해째에 무너진다는 뜻이었다.
+"""
+fun = "아홉 해째에 군사들이 집에 가고 싶어 하자 오디세우스가 이 일을 다시 말해 붙잡았다."
+caused_by = ["greeks-muster"]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 2장 「칼카스의 예언」"
+sources = ["apollodorus.library E.3.15", "homer.iliad 2.299-332"]
+
+[[event]]
+id = "iphigeneia-aulis"
+name_ko = "아울리스의 이피게네이아"
+era = 6
+seq = 60
+span = "moment"
+place = "aulis"
+cast = [
+  { figure = "agamemnon", role = "주인공" },
+  { figure = "iphigeneia", role = "피해" },
+  { figure = "artemis", role = "상대" },
+  { figure = "kalchas", role = "도움" },
+  { figure = "klytaimnestra", role = "피해" },
+  { figure = "odysseus", role = "도움" },
+  { figure = "achilleus", role = "등장" },
+]
+oneliner = "바람이 멎었고, 제단의 이피게네이아 자리에 사슴이 놓였다."
+body = """
+바람이 멎어 배가 못 떴고, 칼카스는 아르테미스가 화났다고 했다.
+아가멤논이 사슴을 잡고 아르테미스보다 잘 쏜다고 자랑했기 때문이다.
+칼카스는 아가멤논의 가장 예쁜 딸을 바쳐야 한다고 했다.
+아가멤논은 딸을 아킬레우스와 결혼시킨다고 속여 불러왔다.
+제단 앞에서 아르테미스가 딸을 멀리 데려가고 그 자리에 사슴을 두었다.
+"""
+variants = [
+  { source = "apollodorus.library E.3.22", text = "아르테미스가 이피게네이아를 죽지 않는 몸으로 만들었다는 이야기도 있다." },
+  { source = "apollodorus.library E.3.21", text = "아르테미스가 화난 또 하나의 까닭은 아트레우스가 황금 양을 바치지 않은 것이라고도 한다." },
+]
+sensitivity = "soften"
+caused_by = ["aulis-omen"]
+after = ["aulis-omen"]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 2장. E.3.22 의 사슴 판본을 주 서술로. 히기누스 98 은 코퍼스에 없다. 미시아 회항과 8년(E.3.17-3.20)은 책에 없어 생략."
+sources = ["apollodorus.library E.3.21-E.3.22", "ovid.metamorphoses 12.24-38"]
+
+[[event]]
+id = "tenedos-philoktetes"
+name_ko = "테네도스, 그리고 렘노스에 남겨진 필록테테스"
+era = 6
+seq = 70
+span = "days"
+places = ["tenedos", "lemnos"]
+cast = [
+  { figure = "philoktetes", role = "피해" },
+  { figure = "achilleus", role = "주인공" },
+  { figure = "thetis", role = "도움" },
+  { figure = "odysseus", role = "등장" },
+  { figure = "agamemnon", role = "등장" },
+  { figure = "apollon", role = "등장" },
+]
+oneliner = "테네도스에서 필록테테스가 뱀에 물렸고, 렘노스에 홀로 남겨졌다."
+body = """
+배들이 아울리스를 떠나 트로이 앞바다의 테네도스에 들렀다.
+테네스가 돌을 던져 막자, 아킬레우스가 테티스의 말림에도 그를 죽였다.
+아폴론에게 제사를 드릴 때 물뱀이 필록테테스를 물었다.
+상처가 낫지 않고 냄새가 심했다.
+오디세우스가 그를 헤라클레스의 활과 함께 렘노스에 두고 떠났다.
+"""
+fun = "필록테테스는 렘노스에서 그 활로 새를 잡아 먹으며 아홉 해를 홀로 살았다."
+after = ["iphigeneia-aulis"]
+sources = ["apollodorus.library E.3.23", "apollodorus.library E.3.26-E.3.27", "homer.iliad 2.716-728", "hyginus.fabulae 102"]
+
+[[event]]
+id = "troy-landing-nine-years"
+name_ko = "프로테실라오스의 죽음과 아홉 해의 싸움"
+era = 6
+seq = 80
+span = "years"
+place = "troy"
+cast = [
+  { figure = "protesilaos", role = "피해" },
+  { figure = "hektor", role = "상대" },
+  { figure = "achilleus", role = "주인공" },
+  { figure = "odysseus", role = "등장" },
+  { figure = "menelaos", role = "등장" },
+  { figure = "thetis", role = "도움" },
+  { figure = "briseis", role = "피해" },
+  { figure = "chryseis", role = "피해" },
+  { figure = "aineias", role = "등장" },
+  { figure = "sarpedon", role = "등장" },
+]
+oneliner = "프로테실라오스가 맨 먼저 죽고, 그리스군은 아홉 해를 싸웠다."
+body = """
+헬레네를 돌려 달라는 사절을 트로이가 거절했다.
+맨 먼저 땅에 내린 프로테실라오스가 헥토르의 손에 죽었다.
+그리스군은 트로이를 둘러싸고 아홉 해 동안 이웃 도시들을 무너뜨렸다.
+브리세이스와 크리세이스는 그때 붙잡혀 왔다.
+아홉 해가 지나자 이웃 나라들이 트로이를 도우러 왔다.
+"""
+fun = "아킬레우스는 배로 열두 도시, 걸어서 열한 도시를 무너뜨렸다고 스스로 말했다."
+after = ["tenedos-philoktetes"]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 2장 「9년의 시간」. 트로일로스의 죽음(E.3.32)은 쓰지 않는다."
+sources = ["apollodorus.library E.3.28-E.3.34", "homer.iliad 2.695-710", "homer.iliad 9.328-329", "homer.iliad 1.366-369", "homer.iliad 2.688-694", "hyginus.fabulae 103"]
+
+# ---------- era 6 : 아킬레우스의 분노 (일리아스) ----------
+
+[[event]]
+id = "chryses-plague"
+name_ko = "크리세이스와 역병"
+era = 6
+seq = 90
+span = "days"
+place = "troy"
+cast = [
+  { figure = "chryses", role = "주인공" },
+  { figure = "agamemnon", role = "상대" },
+  { figure = "chryseis", role = "피해" },
+  { figure = "apollon", role = "도움" },
+  { figure = "kalchas", role = "도움" },
+  { figure = "achilleus", role = "등장" },
+]
+oneliner = "아가멤논이 사제의 딸을 돌려주지 않아 아폴론이 역병을 보냈다."
+body = """
+아폴론의 사제 크리세스가 몸값을 들고 딸을 찾으러 왔다.
+다른 사람들은 돌려주자고 했지만 아가멤논이 거칠게 내쫓았다.
+크리세스가 아폴론에게 기도했고, 아폴론이 화살로 역병을 쏘았다.
+아홉 날 동안 사람과 짐승이 죽어 갔다.
+칼카스가 크리세이스를 아버지에게 돌려보내야 끝난다고 말했다.
+"""
+fun = "아폴론의 화살이 먼저 노새와 개를 맞히고, 그다음 사람을 맞혔다."
+caused_by = ["troy-landing-nine-years"]
+after = ["troy-landing-nine-years"]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 3장 「노예 크리세이스」, 4장 「전염병」"
+sources = ["homer.iliad 1.8-52", "homer.iliad 1.53-100", "apollodorus.library E.4.1"]
+
+[[event]]
+id = "achilleus-agamemnon-quarrel"
+name_ko = "아킬레우스와 아가멤논의 다툼"
+era = 6
+seq = 100
+span = "moment"
+place = "troy"
+cast = [
+  { figure = "achilleus", role = "주인공" },
+  { figure = "agamemnon", role = "상대" },
+  { figure = "briseis", role = "피해" },
+  { figure = "chryseis", role = "피해" },
+  { figure = "nestor", role = "도움" },
+  { figure = "athena", role = "도움" },
+  { figure = "patroklos", role = "등장" },
+  { figure = "odysseus", role = "등장" },
+]
+oneliner = "아가멤논이 브리세이스를 빼앗았고, 아킬레우스가 싸움에서 손을 뗐다."
+body = """
+아가멤논은 크리세이스를 돌려보내는 대신 다른 상을 달라고 했다.
+아킬레우스가 나무라자, 아가멤논은 그의 브리세이스를 빼앗겠다고 했다.
+아킬레우스가 칼을 뽑으려는 순간 아테나가 내려와 붙잡았다.
+네스토르가 둘을 말렸지만 소용이 없었다.
+브리세이스가 끌려갔고, 아킬레우스는 다시는 싸우지 않겠다고 했다.
+"""
+fun = "오디세우스가 크리세이스를 배에 태워 아버지에게 데려다 주었다. 크리세스는 기도로 역병을 멈추었다."
+sensitivity = "soften"
+caused_by = ["chryses-plague"]
+after = ["chryses-plague"]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 4장 「아킬레우스의 분노」"
+sources = ["homer.iliad 1.101-348", "homer.iliad 1.430-474", "apollodorus.library E.4.1"]
+
+[[event]]
+id = "thetis-pleads-zeus"
+name_ko = "테티스의 애원"
+era = 6
+seq = 110
+span = "days"
+places = ["troy", "olympus-home"]
+cast = [
+  { figure = "thetis", role = "주인공" },
+  { figure = "achilleus", role = "도움" },
+  { figure = "zeus", role = "상대" },
+  { figure = "hera", role = "상대" },
+]
+oneliner = "테티스가 제우스에게 트로이군을 이기게 해 달라고 부탁했다."
+body = """
+아킬레우스는 바닷가에서 울며 어머니를 불렀다.
+테티스가 바다에서 나와 아들의 말을 들었다.
+아킬레우스는 아가멤논이 자기 없이 지는 꼴을 보게 해 달라고 했다.
+테티스는 열두 날 뒤 올림포스에 올라가 제우스의 무릎을 잡고 부탁했다.
+제우스는 머리를 끄덕여 약속했고, 헤라가 그것을 보고 화를 냈다.
+"""
+fun = "제우스가 머리를 끄덕이면 올림포스가 흔들렸다. 제우스의 약속은 되돌릴 수 없다."
+caused_by = ["achilleus-agamemnon-quarrel"]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 4장 「테티스의 애원」"
+sources = ["homer.iliad 1.348-430", "homer.iliad 1.493-530"]
+
+[[event]]
+id = "agamemnon-dream"
+name_ko = "아가멤논의 꿈"
+era = 6
+seq = 120
+span = "moment"
+place = "troy"
+cast = [
+  { figure = "zeus", role = "주인공" },
+  { figure = "agamemnon", role = "피해" },
+  { figure = "nestor", role = "등장" },
+  { figure = "odysseus", role = "등장" },
+]
+oneliner = "제우스가 거짓 꿈을 보내 아가멤논에게 지금 트로이를 치라고 했다."
+body = """
+제우스는 테티스와 한 약속을 어떻게 지킬지 생각했다.
+거짓 꿈을 만들어 아가멤논에게 보냈다.
+꿈은 네스토르의 모습으로 나타나 오늘 트로이를 치면 이긴다고 했다.
+아가멤논은 그 말을 믿고 군대를 일으켰다.
+아가멤논이 시험하려고 집에 가자고 하자, 군사들이 진짜로 배로 달려갔다.
+"""
+fun = "오디세우스가 달려가는 군사들을 되돌렸다. 그때 아울리스의 뱀 이야기를 다시 꺼냈다."
+caused_by = ["thetis-pleads-zeus"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 1장 「아가멤논의 꿈」"
+sources = ["homer.iliad 2.1-83", "homer.iliad 2.109-154", "homer.iliad 2.278-332"]
+
+[[event]]
+id = "paris-menelaos-duel"
+name_ko = "파리스와 메넬라오스의 대결"
+era = 6
+seq = 130
+span = "moment"
+place = "troy"
+cast = [
+  { figure = "menelaos", role = "주인공" },
+  { figure = "paris", role = "상대" },
+  { figure = "aphrodite", role = "도움" },
+  { figure = "hektor", role = "등장" },
+  { figure = "helene", role = "등장" },
+  { figure = "priamos", role = "등장" },
+  { figure = "agamemnon", role = "등장" },
+  { figure = "athena", role = "등장" },
+]
+oneliner = "파리스와 메넬라오스가 둘만 싸웠고, 아프로디테가 끼어들었다."
+body = """
+파리스가 나섰다가 메넬라오스를 보고 숨자 헥토르가 나무랐다.
+파리스는 둘이서만 싸우고, 이기는 쪽이 헬레네를 갖자고 했다.
+메넬라오스가 이겨 파리스의 투구를 잡아끌었다.
+아프로디테가 끈을 끊고 파리스를 안개로 감싸 데려갔다.
+그 뒤 트로이 편 판다로스가 메넬라오스에게 화살을 쏘아 약속이 깨졌다.
+"""
+fun = "헬레네는 성벽 위에서 늙은 프리아모스 옆에 앉아 그리스 장수들의 이름을 하나하나 알려 주었다."
+caused_by = ["agamemnon-dream"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 1장 「파리스와 메넬라오스」. 판다로스는 등록부에 없어 이름만."
+sources = ["homer.iliad 3.15-120", "homer.iliad 3.161-244", "homer.iliad 3.324-382", "homer.iliad 4.85-147", "apollodorus.library E.4.1"]
+
+[[event]]
+id = "diomedes-day"
+name_ko = "첫째 날, 디오메데스가 신들을 다치게 하다"
+era = 6
+seq = 140
+span = "days"
+place = "troy"
+cast = [
+  { figure = "diomedes", role = "주인공" },
+  { figure = "athena", role = "도움" },
+  { figure = "aphrodite", role = "피해" },
+  { figure = "aineias", role = "피해" },
+  { figure = "apollon", role = "도움" },
+  { figure = "ares", role = "피해" },
+  { figure = "hektor", role = "등장" },
+]
+oneliner = "디오메데스가 아테나의 힘으로 아이네이아스와 아프로디테를 다치게 했다."
+body = """
+다시 싸움이 시작되자 아테나가 디오메데스에게 신을 알아보는 눈을 주었다.
+디오메데스는 큰 돌로 아이네이아스를 쳤다.
+감싸러 온 아프로디테의 손도 창으로 찔렀다.
+아폴론이 아이네이아스를 구해 냈다.
+디오메데스는 아테나와 함께 아레스까지 찔러 올림포스로 쫓아 보냈다.
+"""
+fun = "적장 글라우코스와 마주친 디오메데스는 할아버지들이 친구였다는 것을 알고 싸우지 않고 갑옷을 바꾸었다."
+caused_by = ["paris-menelaos-duel"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 2장 「첫째 날」. 글라우코스는 등록부에 없어 이름만."
+sources = ["homer.iliad 5.1-8", "homer.iliad 5.297-351", "homer.iliad 5.432-453", "homer.iliad 5.846-909", "homer.iliad 6.119-236", "apollodorus.library E.4.2"]
+
+[[event]]
+id = "hektor-andromache"
+name_ko = "헥토르와 안드로마케의 작별"
+era = 6
+seq = 150
+span = "moment"
+place = "troy"
+cast = [
+  { figure = "hektor", role = "주인공" },
+  { figure = "andromache", role = "주인공" },
+  { figure = "astyanax", role = "등장" },
+  { figure = "paris", role = "등장" },
+  { figure = "helene", role = "등장" },
+  { figure = "hekabe", role = "등장" },
+]
+oneliner = "헥토르가 성문 앞에서 아내와 아기에게 작별 인사를 했다."
+body = """
+헥토르는 잠시 성 안으로 들어가 어머니와 파리스를 만났다.
+안드로마케는 집에 없고 성벽 위에서 아기를 안고 울고 있었다.
+스카이아 성문 앞에서 두 사람이 마주쳤다.
+안드로마케는 아버지도 오빠들도 다 잃었으니 나가지 말라고 했다.
+헥토르는 부끄러워 남을 수 없다며, 투구를 벗고 아기를 안아 주었다.
+"""
+fun = "헥토르는 아들이 자라서 아버지보다 훨씬 낫다는 말을 듣게 해 달라고 기도했다."
+caused_by = ["diomedes-day"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 2장"
+sources = ["homer.iliad 6.237-368", "homer.iliad 6.390-502"]
+
+[[event]]
+id = "hektor-aias-duel"
+name_ko = "헥토르와 아이아스의 대결"
+era = 6
+seq = 160
+span = "moment"
+place = "troy"
+cast = [
+  { figure = "hektor", role = "주인공" },
+  { figure = "aias", role = "상대" },
+  { figure = "helenos", role = "도움" },
+  { figure = "nestor", role = "도움" },
+  { figure = "agamemnon", role = "등장" },
+  { figure = "apollon", role = "등장" },
+  { figure = "athena", role = "등장" },
+]
+oneliner = "헥토르가 둘만의 싸움을 청했고, 아이아스가 나섰다."
+body = """
+헬레노스가 신들의 뜻을 듣고 형 헥토르에게 둘만의 싸움을 청하라고 했다.
+그리스 장수들이 겁을 내자 네스토르가 부끄럽다고 나무랐다.
+아홉 사람이 나섰고, 제비를 뽑아 아이아스가 되었다.
+두 사람은 창과 큰 돌을 던지고 칼을 뽑았지만 승패가 나지 않았다.
+밤이 되어 전령들이 둘을 떼어 놓았고, 서로 칼과 띠를 선물로 바꾸었다.
+"""
+fun = "이날 밤 그리스군은 배 앞에 도랑을 파고 높은 성벽을 쌓았다."
+after = ["hektor-andromache"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 2장 「헥토르 VS 아이아스」"
+sources = ["homer.iliad 7.37-312", "homer.iliad 7.433-441", "apollodorus.library E.4.2-E.4.3"]
+
+[[event]]
+id = "trojans-push-to-wall"
+name_ko = "둘째 날, 트로이군이 그리스군을 성벽 안으로 몰다"
+era = 6
+seq = 170
+span = "days"
+place = "troy"
+cast = [
+  { figure = "hektor", role = "주인공" },
+  { figure = "zeus", role = "도움" },
+  { figure = "agamemnon", role = "피해" },
+  { figure = "diomedes", role = "피해" },
+  { figure = "nestor", role = "피해" },
+  { figure = "aias", role = "피해" },
+  { figure = "hera", role = "등장" },
+  { figure = "athena", role = "등장" },
+]
+oneliner = "제우스가 신들을 막고, 트로이군이 그리스군을 성벽 안으로 몰아넣었다."
+body = """
+제우스는 신들이 어느 쪽도 돕지 못하게 막았다.
+황금 저울에 두 군대의 운명을 달자 그리스 쪽이 내려갔다.
+네스토르의 말이 화살을 맞아 넘어졌고, 디오메데스가 달려가 구했다.
+헥토르가 몰아치자 그리스군은 새로 쌓은 성벽 안으로 쫓겨 들어갔다.
+트로이군은 그 밤을 들판에서 불을 피우고 지냈다.
+"""
+fun = "그날 밤 트로이군의 불이 천 개였고, 불 하나마다 쉰 사람이 앉아 있었다고 한다."
+after = ["hektor-aias-duel"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 2장 「둘째 날」"
+sources = ["homer.iliad 8.1-27", "homer.iliad 8.66-77", "homer.iliad 8.78-129", "homer.iliad 8.335-349", "homer.iliad 8.553-565", "apollodorus.library E.4.3"]
+
+[[event]]
+id = "embassy-to-achilleus"
+name_ko = "아킬레우스에게 사절이 가다"
+era = 6
+seq = 180
+span = "moment"
+place = "troy"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "aias", role = "주인공" },
+  { figure = "achilleus", role = "상대" },
+  { figure = "agamemnon", role = "등장" },
+  { figure = "nestor", role = "도움" },
+  { figure = "patroklos", role = "등장" },
+  { figure = "briseis", role = "등장" },
+]
+oneliner = "사절이 아킬레우스를 찾아갔지만 아킬레우스는 돌아오지 않겠다고 했다."
+body = """
+아가멤논은 브리세이스와 많은 선물을 돌려주겠다고 했다.
+오디세우스, 아이아스, 늙은 포이닉스가 아킬레우스의 막사로 갔다.
+아킬레우스는 그들을 잘 맞았지만 선물도 말도 다 거절했다.
+어머니가 알려 준 두 길을 말했다.
+집에 가면 오래 살고, 남으면 일찍 죽지만 이름이 남는다는 것이다.
+"""
+fun = "아킬레우스는 배들에 불이 붙어 자기 막사까지 오면 그때 싸우겠다고 아이아스에게 말했다."
+caused_by = ["trojans-push-to-wall"]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 4장 「아킬레우스의 운명」. 포이닉스는 등록부에 없어 이름만."
+sources = ["homer.iliad 9.162-668", "homer.iliad 9.410-416", "apollodorus.library E.4.3"]
+
+[[event]]
+id = "hektor-breaks-wall"
+name_ko = "트로이군의 공세, 헥토르가 성문을 부수다"
+era = 6
+seq = 190
+span = "days"
+place = "troy"
+cast = [
+  { figure = "hektor", role = "주인공" },
+  { figure = "sarpedon", role = "도움" },
+  { figure = "zeus", role = "도움" },
+  { figure = "agamemnon", role = "피해" },
+  { figure = "diomedes", role = "피해" },
+  { figure = "odysseus", role = "피해" },
+  { figure = "aias", role = "도움" },
+  { figure = "poseidon", role = "도움" },
+  { figure = "hera", role = "등장" },
+  { figure = "nestor", role = "등장" },
+  { figure = "patroklos", role = "등장" },
+]
+oneliner = "헥토르가 큰 돌로 성문을 부수고 그리스 배에 불을 놓았다."
+body = """
+다음 싸움에서 아가멤논, 디오메데스, 오디세우스가 차례로 다쳤다.
+사르페돈이 성벽을 무너뜨렸고, 헥토르가 큰 돌로 성문을 부수었다.
+포세이돈이 몰래 그리스군을 돕고, 헤라는 제우스를 잠들게 했다.
+제우스가 깨어나 다시 트로이군을 밀어주자 헥토르가 배까지 닿았다.
+아이아스가 배 위에서 막았지만 프로테실라오스의 배에 불이 붙었다.
+"""
+fun = "헥토르가 던진 돌은 지금 사람 둘이서도 못 들 크기였다고 호메로스가 적었다."
+after = ["embassy-to-achilleus"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 3장 「트로이군의 공세」. 돌론의 밤(10권, E.4.4)은 쓰지 않는다."
+sources = ["homer.iliad 11.248-283", "homer.iliad 11.369-400", "homer.iliad 11.434-488", "homer.iliad 12.290-471", "homer.iliad 14.153-360", "homer.iliad 15.220-280", "homer.iliad 15.704-746", "homer.iliad 16.112-124", "apollodorus.library E.4.5"]
+
+[[event]]
+id = "patroklos-dies"
+name_ko = "파트로클로스의 죽음"
+era = 6
+seq = 200
+span = "moment"
+place = "troy"
+cast = [
+  { figure = "patroklos", role = "주인공" },
+  { figure = "achilleus", role = "도움" },
+  { figure = "hektor", role = "상대" },
+  { figure = "sarpedon", role = "피해" },
+  { figure = "apollon", role = "상대" },
+  { figure = "zeus", role = "등장" },
+]
+oneliner = "아킬레우스의 갑옷을 입고 나간 파트로클로스가 헥토르에게 죽었다."
+body = """
+파트로클로스는 울면서 아킬레우스에게 갑옷과 군사를 빌려 달라고 했다.
+아킬레우스는 배만 지키고 성까지 쫓아가지는 말라고 했다.
+트로이군은 아킬레우스인 줄 알고 달아났고, 그는 사르페돈을 죽였다.
+그는 성벽까지 쫓아갔고, 아폴론이 뒤에서 그를 쳐 갑옷을 떨어뜨렸다.
+에우포르보스가 창으로 찔렀고, 헥토르가 그를 죽였다.
+"""
+fun = "죽어 가는 파트로클로스는 헥토르에게 너도 곧 아킬레우스의 손에 죽는다고 말했다."
+caused_by = ["hektor-breaks-wall"]
+after = ["hektor-breaks-wall"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 3장 「파트로클로스의 죽음」. 에우포르보스는 등록부에 없어 이름만."
+sources = ["homer.iliad 16.1-100", "homer.iliad 16.419-507", "homer.iliad 16.777-867", "apollodorus.library E.4.6"]
+
+[[event]]
+id = "new-armour"
+name_ko = "헤파이스토스의 새 갑옷"
+era = 6
+seq = 210
+span = "days"
+places = ["troy", "olympus-home"]
+cast = [
+  { figure = "achilleus", role = "주인공" },
+  { figure = "thetis", role = "도움" },
+  { figure = "hephaistos", role = "도움" },
+  { figure = "patroklos", role = "피해" },
+  { figure = "aias", role = "도움" },
+  { figure = "menelaos", role = "도움" },
+  { figure = "hektor", role = "상대" },
+]
+oneliner = "헤파이스토스가 하룻밤에 아킬레우스의 새 갑옷과 방패를 만들었다."
+body = """
+아이아스와 메넬라오스가 파트로클로스의 시신을 겨우 지켜 냈다.
+그러나 아킬레우스의 갑옷은 헥토르가 가져갔다.
+아킬레우스는 소식을 듣고 땅에 엎드려 울었다.
+테티스가 헤파이스토스에게 가서 새 갑옷을 만들어 달라고 했다.
+헤파이스토스는 하룻밤에 방패, 갑옷, 투구, 정강이받이를 만들었다.
+"""
+fun = "방패에는 땅과 하늘과 바다, 해와 달과 별, 그리고 두 도시 사람들의 삶이 다 새겨져 있었다."
+caused_by = ["patroklos-dies"]
+after = ["patroklos-dies"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 3장. 아가멤논과의 화해(19권)는 hektor-dies 에 한 줄."
+sources = ["homer.iliad 17.122-125", "homer.iliad 17.715-761", "homer.iliad 18.1-147", "homer.iliad 18.369-617", "apollodorus.library E.4.7"]
+
+[[event]]
+id = "hektor-dies"
+name_ko = "헥토르의 죽음"
+era = 6
+seq = 220
+span = "moment"
+place = "troy"
+cast = [
+  { figure = "achilleus", role = "주인공" },
+  { figure = "hektor", role = "피해" },
+  { figure = "athena", role = "도움" },
+  { figure = "apollon", role = "도움" },
+  { figure = "deiphobos", role = "등장" },
+  { figure = "priamos", role = "등장" },
+  { figure = "hekabe", role = "등장" },
+  { figure = "andromache", role = "등장" },
+  { figure = "agamemnon", role = "등장" },
+  { figure = "briseis", role = "등장" },
+]
+oneliner = "아킬레우스가 성문 앞에서 헥토르를 죽였다."
+body = """
+아킬레우스는 아가멤논과 화해하고 다시 싸움에 나갔다.
+트로이군을 강까지 몰아 많이 죽였고, 강의 신까지 그에게 덤벼들었다.
+헥토르만 성문 밖에 남았고, 부모가 성벽에서 들어오라고 외쳤다.
+아테나가 데이포보스의 모습으로 나타나 달아나던 헥토르를 멈추게 했다.
+아킬레우스는 창으로 헥토르를 죽이고, 시신을 돌려주지 않고 끌고 갔다.
+"""
+fun = "헥토르는 성을 세 바퀴 돌며 달아났다. 신들이 올림포스에서 그 모습을 내려다보았다."
+sensitivity = "soften"
+caused_by = ["new-armour", "patroklos-dies"]
+after = ["new-armour"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 3장 「분노의 전투」. 시신 훼손은 '돌려주지 않았다'까지."
+sources = ["homer.iliad 19.1-275", "homer.iliad 21.211-384", "homer.iliad 22.25-92", "homer.iliad 22.131-404", "apollodorus.library E.4.7"]
+
+[[event]]
+id = "priamos-ransoms-hektor"
+name_ko = "프리아모스가 아들을 찾아오다"
+era = 6
+seq = 230
+span = "days"
+place = "troy"
+cast = [
+  { figure = "priamos", role = "주인공" },
+  { figure = "achilleus", role = "상대" },
+  { figure = "hermes", role = "도움" },
+  { figure = "zeus", role = "도움" },
+  { figure = "thetis", role = "도움" },
+  { figure = "hekabe", role = "등장" },
+  { figure = "andromache", role = "등장" },
+  { figure = "helene", role = "등장" },
+  { figure = "patroklos", role = "등장" },
+]
+oneliner = "프리아모스가 홀로 아킬레우스를 찾아가 아들의 시신을 돌려받았다."
+body = """
+장례를 치른 뒤에도 아킬레우스는 헥토르의 시신을 돌려주지 않았다.
+제우스가 테티스를 시켜 아들을 달래고, 프리아모스에게는 가라고 했다.
+헤르메스가 늙은 왕을 밤에 그리스 진영까지 데려다 주었다.
+프리아모스가 아킬레우스의 손을 잡고 부탁하자 둘은 함께 울었다.
+아킬레우스는 시신을 돌려주고 장례 동안 열하루 싸움을 멈추기로 했다.
+"""
+fun = "아킬레우스는 자기 아버지 펠레우스를 생각하며 울었고, 프리아모스는 아들을 생각하며 울었다."
+caused_by = ["hektor-dies"]
+after = ["hektor-dies"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 3장. 파트로클로스의 장례와 경기(23권)는 sources 에만."
+sources = ["homer.iliad 23.1-257", "homer.iliad 24.1-140", "homer.iliad 24.334-467", "homer.iliad 24.468-676", "apollodorus.library E.4.7"]
+
+# ---------- era 6 : 트로이의 마지막 ----------
+
+[[event]]
+id = "penthesileia-memnon"
+name_ko = "펜테실레이아와 멤논이 트로이를 돕다"
+era = 6
+seq = 240
+span = "season"
+place = "troy"
+cast = [
+  { figure = "achilleus", role = "주인공" },
+  { figure = "penthesileia", role = "상대" },
+  { figure = "memnon", role = "상대" },
+  { figure = "priamos", role = "등장" },
+  { figure = "nestor", role = "피해" },
+  { figure = "eos", role = "등장" },
+]
+oneliner = "펜테실레이아와 멤논이 차례로 트로이를 돕다 아킬레우스에게 죽었다."
+body = """
+헥토르가 죽은 뒤 아마존의 여왕 펜테실레이아가 트로이를 도우러 왔다.
+많은 그리스 사람을 죽였지만 아킬레우스와 맞붙어 죽었다.
+아킬레우스는 죽은 그녀를 보고 마음이 아팠다.
+그다음 새벽의 여신의 아들 멤논이 에티오피아 군대를 이끌고 왔다.
+멤논은 네스토르의 아들 안틸로코스를 죽였고, 아킬레우스가 멤논을 죽였다.
+"""
+fun = "멤논의 장작불에서 새들이 생겨나 서로 싸웠다고 오비디우스가 적었다."
+after = ["priamos-ransoms-hektor"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 4장 「영웅들의 죽음」. 안틸로코스는 등록부에 없어 이름만."
+sources = ["apollodorus.library E.5.1", "apollodorus.library E.5.3", "homer.odyssey 4.187-188", "ovid.metamorphoses 13.576-622", "virgil.aeneid 1.489-493"]
+
+[[event]]
+id = "achilleus-dies"
+name_ko = "아킬레우스의 죽음"
+era = 6
+seq = 250
+span = "days"
+place = "troy"
+cast = [
+  { figure = "achilleus", role = "피해" },
+  { figure = "paris", role = "상대" },
+  { figure = "apollon", role = "상대" },
+  { figure = "aias", role = "도움" },
+  { figure = "odysseus", role = "도움" },
+  { figure = "thetis", role = "등장" },
+  { figure = "agamemnon", role = "등장" },
+]
+oneliner = "파리스와 아폴론의 화살이 아킬레우스의 발목을 맞혔다."
+body = """
+아킬레우스가 트로이군을 성문까지 쫓았다.
+스카이아 성문에서 아폴론이 이끈 파리스의 화살이 발목에 맞았다.
+아이아스가 시신을 안고 나오고 오디세우스가 뒤를 막았다.
+테티스와 바다의 님프들이 올라와 열이레 동안 울었다.
+뼈는 파트로클로스의 뼈와 한 항아리에 넣었다.
+"""
+fun = "헥토르가 죽으면서 이미 파리스와 아폴론이 너를 성문에서 죽인다고 말했었다."
+caused_by = ["penthesileia-memnon"]
+after = ["penthesileia-memnon"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 4장 「영웅들의 죽음」. 히기누스 107 은 코퍼스에 없다."
+sources = ["apollodorus.library E.5.3-E.5.5", "homer.iliad 22.358-360", "homer.odyssey 24.36-97", "ovid.metamorphoses 12.580-628"]
+
+[[event]]
+id = "aias-dies"
+name_ko = "아이아스와 무구 다툼"
+era = 6
+seq = 260
+span = "days"
+place = "troy"
+cast = [
+  { figure = "aias", role = "주인공" },
+  { figure = "odysseus", role = "상대" },
+  { figure = "athena", role = "상대" },
+  { figure = "agamemnon", role = "등장" },
+  { figure = "menelaos", role = "등장" },
+]
+oneliner = "아킬레우스의 갑옷을 두고 다투다 진 아이아스가 스스로 목숨을 끊었다."
+body = """
+아킬레우스의 갑옷을 가장 뛰어난 사람에게 주기로 했다.
+아이아스와 오디세우스가 나섰고, 오디세우스가 골라졌다.
+아이아스는 너무 분해서 밤에 군대를 치려 했다.
+아테나가 정신을 흐리게 해 소와 양 떼를 사람으로 알고 죽이게 했다.
+정신이 돌아온 아이아스는 스스로 목숨을 끊었다.
+"""
+fun = "아이아스의 피에서 붉은 꽃이 피었다. 꽃잎에는 그의 이름 첫 글자이자 슬픈 울음소리인 '아이'가 적혀 있다."
+sensitivity = "soften"
+caused_by = ["achilleus-dies"]
+after = ["achilleus-dies"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 4장. 저승의 아이아스는 오디세우스에게 끝까지 말을 하지 않았다(오디세이아 11.543-564)."
+sources = ["apollodorus.library E.5.6-E.5.7", "ovid.metamorphoses 13.1-398", "homer.odyssey 11.543-564"]
+
+[[event]]
+id = "paris-dies"
+name_ko = "필록테테스가 돌아오고 파리스가 죽다"
+era = 6
+seq = 270
+span = "days"
+places = ["lemnos", "troy"]
+cast = [
+  { figure = "philoktetes", role = "주인공" },
+  { figure = "paris", role = "피해" },
+  { figure = "odysseus", role = "도움" },
+  { figure = "diomedes", role = "도움" },
+  { figure = "kalchas", role = "도움" },
+  { figure = "helene", role = "등장" },
+]
+oneliner = "헤라클레스의 활이 돌아왔고, 필록테테스가 파리스를 쏘았다."
+body = """
+열 해가 되어도 성이 무너지지 않아 그리스군은 지쳤다.
+칼카스가 헤라클레스의 활과 화살이 없으면 트로이를 못 얻는다고 했다.
+오디세우스와 디오메데스가 렘노스로 가서 필록테테스를 데려왔다.
+의사 포달레이리오스가 상처를 고쳐 주었다.
+필록테테스가 파리스를 화살로 쏘았고, 파리스는 죽었다.
+"""
+fun = "파리스는 화살에 맞고 첫 아내 오이노네에게 갔다. 오이노네만 고칠 수 있었는데, 화가 나서 고쳐 주지 않았다."
+caused_by = ["tenedos-philoktetes", "achilleus-dies"]
+after = ["aias-dies"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 4장. 오이노네·포달레이리오스는 등록부에 없어 이름만. 오이노네의 죽음(3.12.6)은 쓰지 않는다."
+sources = ["apollodorus.library E.5.8", "apollodorus.library 3.12.6", "hyginus.fabulae 102"]
+
+[[event]]
+id = "helenos-conditions"
+name_ko = "헬레노스의 말, 네옵톨레모스와 팔라디온"
+era = 6
+seq = 280
+span = "season"
+places = ["mt-ida-troad", "skyros", "troy"]
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "helenos", role = "피해" },
+  { figure = "kalchas", role = "도움" },
+  { figure = "neoptolemos", role = "도움" },
+  { figure = "diomedes", role = "도움" },
+  { figure = "helene", role = "도움" },
+  { figure = "deiphobos", role = "등장" },
+  { figure = "athena", role = "등장" },
+]
+oneliner = "붙잡힌 헬레노스가 트로이가 무너질 세 가지 조건을 말했다."
+body = """
+파리스가 죽은 뒤 헬레노스는 데이포보스와 다투고 이데 산으로 갔다.
+오디세우스가 그를 붙잡아 트로이를 얻는 방법을 말하게 했다.
+펠롭스의 뼈, 네옵톨레모스, 그리고 팔라디온을 훔치는 것, 세 가지였다.
+그리스군은 뼈를 가져오고, 스키로스에서 네옵톨레모스를 데려왔다.
+오디세우스가 거지로 꾸미고 들어가 헬레네의 도움으로 팔라디온을 훔쳤다.
+"""
+fun = "팔라디온은 하늘에서 떨어진 아테나의 나무 조각상이다. 이것이 성 안에 있는 동안은 트로이를 얻을 수 없었다."
+caused_by = ["paris-dies"]
+after = ["paris-dies"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 4장 「오디세우스의 계획」. 펠롭스는 era 4 인물이라 cast 에 넣지 않고 이름만."
+sources = ["apollodorus.library E.5.9-E.5.13", "apollodorus.library 3.12.3", "homer.odyssey 11.506-537"]
+
+[[event]]
+id = "wooden-horse-built"
+name_ko = "트로이 목마를 만들다"
+era = 6
+seq = 290
+span = "days"
+places = ["troy", "tenedos"]
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "athena", role = "도움" },
+  { figure = "sinon", role = "도움" },
+  { figure = "neoptolemos", role = "등장" },
+  { figure = "menelaos", role = "등장" },
+  { figure = "diomedes", role = "등장" },
+  { figure = "agamemnon", role = "등장" },
+]
+oneliner = "오디세우스의 꾀로 속이 빈 큰 나무 말을 만들고, 배들은 떠난 척했다."
+body = """
+오디세우스의 말대로 에페이오스가 이데 산의 나무로 큰 말을 만들었다.
+말의 속은 비었고 옆구리에 문이 있었다.
+가장 용감한 장수들이 안에 들어갔고, 오디세우스가 이들을 이끌었다.
+말에는 아테나에게 바치는 선물이라고 새겼다.
+나머지는 막사를 태우고 테네도스 뒤에 숨었고, 시논만 남았다.
+"""
+fun = "안에 들어간 사람 수는 쉰이라고도 하고, 어떤 시인은 삼천이라고도 했다."
+caused_by = ["helenos-conditions"]
+after = ["helenos-conditions"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 4장 「트로이 목마」. 에페이오스는 등록부에 없어 이름만. 히기누스 108 은 코퍼스에 없다."
+sources = ["apollodorus.library E.5.14-E.5.15", "homer.odyssey 8.492-495", "virgil.aeneid 2.13-39"]
+
+[[event]]
+id = "horse-into-troy"
+name_ko = "라오코온과 시논, 목마가 성 안으로"
+era = 6
+seq = 300
+span = "days"
+place = "troy"
+cast = [
+  { figure = "sinon", role = "주인공" },
+  { figure = "laokoon", role = "피해" },
+  { figure = "kassandra", role = "도움" },
+  { figure = "priamos", role = "등장" },
+  { figure = "apollon", role = "등장" },
+  { figure = "athena", role = "등장" },
+]
+oneliner = "트로이 사람들이 카산드라와 라오코온의 말을 듣지 않고 목마를 끌어들였다."
+body = """
+아침에 트로이 사람들은 그리스군이 떠난 것을 보고 기뻐했다.
+붙잡힌 시논이 이것은 아테나의 선물이라고 거짓말을 했다.
+카산드라가 안에 군사가 있다고 했고, 라오코온이 창을 던졌다.
+그때 바다에서 뱀 두 마리가 나와 라오코온과 두 아들을 죽였다.
+사람들은 신의 뜻이라 여겨 성벽을 헐고 말을 끌어들인 뒤 잔치를 벌였다.
+"""
+fun = "목마를 끌고 갈 때 네 번이나 안에서 무기 소리가 났지만 아무도 마음에 두지 않았다고 베르길리우스가 적었다."
+variants = [
+  { source = "apollodorus.library E.5.17", text = "어떤 사람은 말을 태우자고, 어떤 사람은 벼랑에서 떨어뜨리자고 했다. 하지만 대부분이 신에게 바친 것이라 두자고 했다." },
+]
+sensitivity = "soften"
+caused_by = ["wooden-horse-built"]
+after = ["wooden-horse-built"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 4장. 뱀은 아폴로도로스에서는 아폴론이 보냈고, 베르길리우스에서는 아테나 신전으로 갔다."
+sources = ["apollodorus.library E.5.16-E.5.18", "virgil.aeneid 2.40-249", "homer.odyssey 8.500-513"]
+
+[[event]]
+id = "troy-falls"
+name_ko = "트로이가 무너지다"
+era = 6
+seq = 310
+span = "days"
+place = "troy"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "menelaos", role = "주인공" },
+  { figure = "neoptolemos", role = "주인공" },
+  { figure = "sinon", role = "도움" },
+  { figure = "helene", role = "등장" },
+  { figure = "priamos", role = "피해" },
+  { figure = "deiphobos", role = "피해" },
+  { figure = "hekabe", role = "피해" },
+  { figure = "kassandra", role = "피해" },
+  { figure = "andromache", role = "피해" },
+  { figure = "astyanax", role = "피해" },
+  { figure = "kreousa", role = "피해" },
+  { figure = "aineias", role = "등장" },
+  { figure = "anchises", role = "등장" },
+  { figure = "aias-oileus", role = "상대" },
+  { figure = "agamemnon", role = "등장" },
+  { figure = "athena", role = "등장" },
+]
+oneliner = "밤에 목마가 열렸고, 트로이는 불탔다."
+body = """
+밤이 되자 시논이 아킬레우스의 무덤 위에서 불을 올렸다.
+배들이 돌아오고, 말 안의 장수들이 내려와 성문을 열었다.
+네옵톨레모스는 프리아모스를, 메넬라오스는 데이포보스를 죽였다.
+도시가 불탔고, 많은 사람이 붙잡혀 갔다.
+헥토르의 아기는 살지 못했고, 아이네이아스는 빠져나갔다.
+"""
+variants = [
+  { source = "apollodorus.library E.5.19", text = "헬레네가 목마를 돌며 아내들의 목소리를 흉내 내 장수들을 불렀고, 오디세우스가 대답하려는 안티클로스의 입을 막았다는 이야기가 있다." },
+]
+sensitivity = "soften"
+caused_by = ["horse-into-troy"]
+after = ["horse-into-troy", "hektor-dies", "achilleus-dies", "paris-dies", "helenos-conditions"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 4장 「트로이 목마」. 아이네이아스의 탈출은 AEN 이 aineias-leaves-troy(after = troy-falls)로 쓴다. 폴릭세네(E.5.23)와 오일레우스의 아이아스가 카산드라에게 한 일(E.5.22)은 쓰지 않는다."
+sources = ["apollodorus.library E.5.19-E.5.23", "virgil.aeneid 2.250-558", "homer.odyssey 8.514-520", "homer.odyssey 4.271-289"]

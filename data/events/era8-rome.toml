@@ -1,0 +1,733 @@
+# era 8 — 로마가 세워지다. 알바 롱가에서 로물루스·누마까지.
+# era 5 seq 1200: 헤라클레스와 카쿠스(로마가 세워지기 오래 전의 그 언덕).
+# era 7 seq 1000~1010: 피쿠스와 카넨스(키르케).
+# era 8 seq 10~250: alba-longa-founded(공유) ~ egeria-fountain. rome-founded(공유) 는 seq 100.
+# 묶음: alba-to-rome / romulus-reign / numa-peace (스크래치 arcs/ROM.toml).
+# 주 원전: 리비우스 로마사 1권(장 번호는 파일의 `N. ` 표시로 확인), 오비디우스 14~15권, 아이네이스 1·6·7·8권.
+
+# ---------- era 5: 로마가 세워지기 오래 전 ----------
+
+[[event]]
+id = "herakles-and-kakos"
+name_ko = "헤라클레스가 카쿠스를 물리치다"
+era = 5
+seq = 1200
+span = "days"
+place = "rome"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "kakos", role = "상대" },
+  { figure = "evandros", role = "도움" },
+]
+oneliner = "훔쳐 간 소가 울어서 도둑이 들켰다."
+body = """
+헤라클레스는 게리온의 소를 몰고 티베리스 강가를 지났다.
+로마가 세워지기 오래 전의 그 언덕이다.
+잠든 사이 카쿠스가 소들의 꼬리를 잡아 뒤로 끌어 굴에 숨겼다.
+발자국이 반대로 나 있어 찾을 수 없었는데, 굴 안의 소가 울었다.
+헤라클레스는 카쿠스를 죽이고 소를 되찾았다.
+"""
+fun = "그 땅의 왕 에반드로스가 헤라클레스를 알아보고 제단을 세웠다. 로마 사람들은 그 뒤로 여기서 헤라클레스에게 제사를 드렸다."
+variants = [
+  { source = "livy.rome 1.7", text = "리비우스는 카쿠스를 괴물이 아니라 힘센 목동이라고 적었다. 헤라클레스는 몽둥이로 카쿠스를 쳤다." },
+]
+sources = ["virgil.aeneid 8.185-275", "livy.rome 1.7"]
+
+# ---------- era 7: 피쿠스와 카넨스 ----------
+
+[[event]]
+id = "picus-woodpecker"
+name_ko = "키르케가 피쿠스를 딱따구리로 바꾸다"
+era = 7
+seq = 1000
+span = "moment"
+cast = [
+  { figure = "picus", role = "피해" },
+  { figure = "kirke", role = "상대" },
+  { figure = "kanens", role = "등장" },
+]
+oneliner = "사랑을 거절당한 키르케가 젊은 왕을 새로 만들었다."
+body = """
+피쿠스가 들에서 멧돼지를 쫓고 있을 때 키르케가 그를 보았다.
+키르케는 가짜 멧돼지를 만들어 피쿠스를 깊은 숲으로 끌어들였다.
+사랑을 고백했지만 피쿠스는 아내 카넨스만 사랑한다고 했다.
+키르케가 지팡이로 세 번 치자 피쿠스는 딱따구리가 되었다.
+뒤따라온 신하들도 여러 짐승으로 바뀌었다.
+"""
+fun = "자주색 옷은 깃털 빛이 되고 금 브로치는 목의 금빛 털이 되었다. 딱따구리가 나무를 쪼는 것은 화가 나서라고 오비디우스는 적었다."
+note = "장소는 라우렌툼의 들과 라티움의 숲. 라우렌툼은 등록부에 없어 장소를 붙이지 않았다."
+sources = ["ovid.metamorphoses 14.320-396", "virgil.aeneid 7.187-191"]
+
+[[event]]
+id = "kanens-fades"
+name_ko = "카넨스가 울다가 사라지다"
+era = 7
+seq = 1010
+span = "days"
+place = "tiber"
+cast = [
+  { figure = "kanens", role = "주인공" },
+  { figure = "picus", role = "등장" },
+]
+oneliner = "남편을 찾아 엿새를 헤매다 노래처럼 공기 속에 흩어졌다."
+body = """
+밤이 되어도 피쿠스가 돌아오지 않았다.
+카넨스는 라티움의 들과 언덕을 엿새 밤낮 먹지도 자지도 않고 헤매었다.
+마지막에 티베리스 강가에 쓰러져 울면서 노래했다.
+슬픔에 몸이 녹아 공기 속으로 사라졌다.
+그 자리는 지금도 카넨스라고 불린다고 오비디우스는 적었다.
+"""
+caused_by = ["picus-woodpecker"]
+sources = ["ovid.metamorphoses 14.397-434"]
+
+# ---------- era 8: 알바 롱가 ----------
+
+[[event]]
+id = "alba-longa-founded"
+name_ko = "아스카니오스가 알바 롱가를 세우다"
+era = 8
+seq = 10
+span = "years"
+after = ["lavinium-founded"]
+place = "alba-longa"
+cast = [
+  { figure = "askanios", role = "주인공" },
+  { figure = "lavinia", role = "등장" },
+]
+oneliner = "라비니움이 좁아져 아스카니오스가 새 도시를 세웠다."
+body = """
+아이네이아스의 아들 아스카니오스가 자라서 왕이 되었다.
+라비니움에 사람이 너무 많아졌다.
+그 도시를 라비니아에게 남기고 알바 산 아래에 새 도시를 세웠다.
+언덕 등을 따라 길게 뻗은 도시라 알바 롱가, '긴 알바'라고 불렀다.
+라비니움이 세워진 지 서른 해쯤 뒤의 일이다.
+"""
+fun = "베르길리우스는 알바의 왕들이 삼백 해 동안 이어질 것이라고 적었다."
+sources = ["livy.rome 1.3", "virgil.aeneid 1.267-271", "ovid.metamorphoses 14.609"]
+
+[[event]]
+id = "alban-kings"
+name_ko = "알바의 왕들이 여러 대를 잇다"
+era = 8
+seq = 20
+span = "age"
+after = ["alba-longa-founded"]
+place = "alba-longa"
+cast = [
+  { figure = "silvius", role = "주인공" },
+  { figure = "procas", role = "등장" },
+]
+oneliner = "실비우스에서 프로카스까지 알바 롱가에 왕이 여러 대 이어졌다."
+body = """
+아스카니오스 다음에는 숲에서 태어난 실비우스가 왕이 되었다.
+그 뒤 알바의 왕들은 모두 실비우스라는 이름을 함께 썼다.
+티베리누스 왕은 강을 건너다 빠져 죽었고, 그 강이 티베리스가 되었다.
+로물루스 실비우스라는 왕은 번개에 맞아 죽었다.
+프로카스 왕에게는 누미토르와 아물리우스, 두 아들이 있었다.
+"""
+fun = "티베리스 강의 옛 이름은 알불라였다. 알바의 왕 티베리누스가 빠져 죽은 뒤 이름이 바뀌었다."
+sources = ["livy.rome 1.3", "ovid.metamorphoses 14.609-622", "virgil.aeneid 6.760-770"]
+
+[[event]]
+id = "vertumnus-and-pomona"
+name_ko = "베르툼누스가 포모나의 마음을 얻다"
+era = 8
+seq = 25
+span = "days"
+within = "alban-kings"
+place = "alba-longa"
+cast = [
+  { figure = "vertumnus", role = "주인공" },
+  { figure = "pomona", role = "상대" },
+]
+oneliner = "모습을 바꾸는 신이 할머니가 되어 님프에게 결혼을 권했다."
+body = """
+포모나는 담 안 정원에서 과일나무만 돌보며 살았다.
+베르툼누스는 농부, 군인, 낚시꾼으로 변해 정원에 들어갔다.
+마지막에는 할머니 모습으로 포모나 옆에 앉았다.
+포도나무가 느릅나무에 기대어 자라는 것을 가리키며 결혼을 권했다.
+젊은 모습으로 돌아오자 포모나도 베르툼누스를 사랑하게 되었다.
+"""
+fun = "할머니가 된 베르툼누스가 들려준 이야기가 아낙사레테다. 사랑을 거절한 아낙사레테는 창가에서 돌이 되었다."
+note = "참고: 처음 읽는 그리스 로마 신화 10권 1장 「베르툼누스와 포모나」. 오비디우스가 프로카스 왕 때라고 적어 알바 왕들의 시대 안(within)에 둔다. 이야기 자체에는 앞뒤 사건이 없다. 장소는 오비디우스가 '라티움', '알바의 산들'이라 해서 알바 롱가에 붙였다."
+sources = ["ovid.metamorphoses 14.623-771"]
+
+[[event]]
+id = "amulius-seizes-throne"
+name_ko = "아물리우스가 형의 나라를 빼앗다"
+era = 8
+seq = 30
+span = "years"
+after = ["alban-kings"]
+place = "alba-longa"
+cast = [
+  { figure = "amulius", role = "주인공" },
+  { figure = "numitor", role = "피해" },
+  { figure = "rhea-silvia", role = "피해" },
+  { figure = "procas", role = "등장" },
+]
+oneliner = "작은아들이 형을 쫓아내고, 형의 딸을 베스타의 처녀로 만들었다."
+body = """
+프로카스는 맏아들 누미토르에게 나라를 남겼다.
+그런데 작은아들 아물리우스가 형을 쫓아내고 왕이 되었다.
+형의 아들들은 죽였다.
+형의 딸 레아 실비아는 베스타의 처녀로 만들었다.
+베스타는 헤스티아의 로마 이름이고, 그 처녀들은 결혼하지 못했다.
+"""
+sensitivity = "soften"
+sources = ["livy.rome 1.3", "ovid.metamorphoses 14.772"]
+
+[[event]]
+id = "twins-born"
+name_ko = "레아 실비아가 마르스의 쌍둥이를 낳다"
+era = 8
+seq = 40
+span = "moment"
+place = "alba-longa"
+cast = [
+  { figure = "rhea-silvia", role = "주인공" },
+  { figure = "ares", role = "등장" },
+  { figure = "romulus", role = "등장" },
+  { figure = "remus", role = "등장" },
+  { figure = "amulius", role = "상대" },
+]
+oneliner = "베스타의 처녀가 쌍둥이를 낳았고, 아버지는 마르스라고 했다."
+body = """
+레아 실비아가 쌍둥이 아들을 낳았다.
+아버지는 아레스라고 말했다.
+로마에서는 아레스를 마르스라고 불렀다.
+아물리우스는 레아 실비아를 감옥에 가두었다.
+그리고 아기들을 강물에 던져 버리라고 명령했다.
+"""
+fun = "베르길리우스는 이 쌍둥이의 어머니를 일리아라고 부른다. 트로이(일리온)의 피를 이었다는 뜻이다."
+variants = [
+  { source = "livy.rome 1.4", text = "리비우스는 레아 실비아가 정말 그렇게 믿었을 수도 있고, 신이 아버지라고 하면 더 떳떳해 보여서 그렇게 말했을 수도 있다고 적었다." },
+]
+sensitivity = "soften"
+caused_by = ["amulius-seizes-throne"]
+sources = ["livy.rome 1.4", "virgil.aeneid 1.273-274", "ovid.metamorphoses 14.805-816"]
+
+[[event]]
+id = "twins-exposed"
+name_ko = "버려진 쌍둥이를 암늑대가 살리다"
+era = 8
+seq = 50
+span = "days"
+places = ["tiber", "rome"]
+cast = [
+  { figure = "romulus", role = "피해" },
+  { figure = "remus", role = "피해" },
+  { figure = "faustulus", role = "도움" },
+  { figure = "acca-larentia", role = "도움" },
+  { figure = "amulius", role = "상대" },
+]
+oneliner = "강물이 아기들을 언덕 아래에 내려놓았고, 늑대가 젖을 먹였다."
+body = """
+왕의 사람들은 아기들을 바구니에 담아 넘친 티베리스 강물에 띄웠다.
+물이 빠지자 바구니는 팔라티노 언덕 아래 마른 땅에 남았다.
+목마른 암늑대가 울음소리를 듣고 와서 아기들에게 젖을 먹였다.
+왕의 목동 파우스툴루스가 늑대가 아기들을 핥는 것을 보았다.
+파우스툴루스는 아기들을 집으로 데려가 아내 라렌티아와 함께 키웠다.
+"""
+fun = "리비우스는 그 자리에 무화과나무가 서 있었다고 적었다. 로마 사람들은 그 나무를 루미날리스라고 불렀다."
+variants = [
+  { source = "livy.rome 1.4", text = "목동들이 라렌티아를 '암늑대'라는 별명으로 불렀고, 그래서 늑대 이야기가 생겼다고도 한다." },
+]
+caused_by = ["twins-born"]
+sources = ["livy.rome 1.4", "virgil.aeneid 1.275", "virgil.aeneid 8.630-634"]
+
+[[event]]
+id = "remus-captured"
+name_ko = "레무스가 잡혀 누미토르 앞에 서다"
+era = 8
+seq = 60
+span = "days"
+places = ["rome", "alba-longa"]
+cast = [
+  { figure = "remus", role = "피해" },
+  { figure = "romulus", role = "주인공" },
+  { figure = "numitor", role = "도움" },
+  { figure = "faustulus", role = "도움" },
+  { figure = "amulius", role = "상대" },
+]
+oneliner = "도둑들에게 잡힌 레무스를 보고 할아버지가 손자를 알아보았다."
+body = """
+쌍둥이는 목동으로 자라 사냥을 하고 도둑을 잡았다.
+도둑들이 앙갚음하려고 축제 날 형제를 덮쳐 레무스를 잡아 갔다.
+도둑들은 레무스를 아물리우스 왕에게 넘겼고, 왕은 누미토르에게 보냈다.
+누미토르는 젊은이의 나이와 얼굴을 보고 손자가 아닐까 생각했다.
+그때 파우스툴루스도 로물루스에게 태어난 이야기를 모두 말했다.
+"""
+fun = "그 축제는 팔라티노 언덕에서 열린 루페르칼리아였다. 젊은이들이 뛰어다니며 노는 날이었다."
+caused_by = ["twins-exposed"]
+sources = ["livy.rome 1.5"]
+
+[[event]]
+id = "amulius-slain"
+name_ko = "아물리우스가 죽고 누미토르가 왕이 되다"
+era = 8
+seq = 70
+span = "moment"
+place = "alba-longa"
+cast = [
+  { figure = "romulus", role = "주인공" },
+  { figure = "remus", role = "주인공" },
+  { figure = "amulius", role = "피해" },
+  { figure = "numitor", role = "도움" },
+]
+oneliner = "쌍둥이가 왕을 죽이고, 할아버지에게 나라를 돌려주었다."
+body = """
+로물루스는 목동들을 여러 길로 나누어 왕궁으로 보냈다.
+레무스도 누미토르의 집에서 사람들을 데리고 왔다.
+형제는 아물리우스를 죽였다.
+누미토르는 사람들을 모아 동생이 한 일과 손자들의 이야기를 밝혔다.
+사람들이 소리쳐 누미토르를 알바의 왕으로 세웠다.
+"""
+caused_by = ["remus-captured"]
+sources = ["livy.rome 1.5-1.6", "ovid.metamorphoses 14.772-774"]
+
+# ---------- era 8: 로마 건국 ----------
+
+[[event]]
+id = "augury-of-brothers"
+name_ko = "새를 보고 누가 도시를 세울지 정하기로 하다"
+era = 8
+seq = 80
+span = "moment"
+place = "rome"
+cast = [
+  { figure = "romulus", role = "주인공" },
+  { figure = "remus", role = "주인공" },
+]
+oneliner = "레무스는 독수리 여섯을 먼저 보고, 로물루스는 열둘을 보았다."
+body = """
+형제는 자기들이 자란 곳에 새 도시를 세우기로 했다.
+쌍둥이라 누가 형인지 정할 수 없었다.
+그래서 신들이 보내는 새를 보고 누가 왕이 될지 정하기로 했다.
+로물루스는 팔라티노 언덕에, 레무스는 아벤티노 언덕에 섰다.
+레무스에게 독수리 여섯이 먼저 왔고, 로물루스에게는 뒤에 열둘이 왔다.
+"""
+fun = "먼저 본 쪽이 이긴 것인가, 많이 본 쪽이 이긴 것인가. 리비우스도 답을 적지 않았다."
+caused_by = ["amulius-slain"]
+sources = ["livy.rome 1.6-1.7"]
+
+[[event]]
+id = "remus-dies"
+name_ko = "로물루스가 레무스를 죽이다"
+era = 8
+seq = 90
+span = "moment"
+place = "rome"
+cast = [
+  { figure = "romulus", role = "상대" },
+  { figure = "remus", role = "피해" },
+]
+oneliner = "새를 두고 다투다가 형제 가운데 하나가 죽었다."
+body = """
+두 쪽 사람들이 서로 자기 왕이 이겼다고 했다.
+말다툼이 싸움이 되었다.
+레무스가 형을 놀리려고 새로 쌓은 담을 뛰어넘었다.
+화가 난 로물루스가 동생을 죽였다.
+그리고 "내 담을 넘는 자는 누구든 이렇게 된다"고 말했다.
+"""
+variants = [
+  { source = "livy.rome 1.7", text = "다른 이야기에서는 레무스가 사람들 사이의 싸움 속에서 맞아 죽었다고 한다. 리비우스는 담을 넘은 이야기가 더 널리 알려졌다고 적었다." },
+]
+sensitivity = "soften"
+caused_by = ["augury-of-brothers"]
+sources = ["livy.rome 1.7"]
+
+[[event]]
+id = "rome-founded"
+name_ko = "로물루스가 로마를 세우다"
+era = 8
+seq = 100
+span = "season"
+after = ["remus-dies"]
+place = "rome"
+cast = [
+  { figure = "romulus", role = "주인공" },
+]
+oneliner = "팔라티노 언덕에 담을 쌓고, 도시에 자기 이름을 붙였다."
+body = """
+로물루스 혼자 왕이 되었다.
+도시는 세운 사람의 이름을 따서 로마라고 불렀다.
+로물루스는 먼저 자기가 자란 팔라티노 언덕에 담을 쌓았다.
+신들에게는 알바의 방식으로 제사를 드렸다.
+헤라클레스에게만 에반드로스가 정한 그리스 방식으로 제사를 드렸다.
+"""
+fun = "오비디우스는 로마의 담이 팔레스 축제 날에 세워졌다고 적었다. 팔레스는 목동들의 신이다."
+caused_by = ["augury-of-brothers"]
+sources = ["livy.rome 1.7", "ovid.metamorphoses 14.774-775", "virgil.aeneid 1.276-277"]
+
+# ---------- era 8: 로물루스의 다스림 ----------
+
+[[event]]
+id = "asylum-and-senate"
+name_ko = "피난처를 열고 원로원을 만들다"
+era = 8
+seq = 110
+span = "years"
+place = "rome"
+cast = [
+  { figure = "romulus", role = "주인공" },
+]
+oneliner = "쫓겨난 사람이든 노예든 로마에 오면 받아 주었다."
+body = """
+새 도시는 컸지만 사람이 적었다.
+로물루스는 두 숲 사이에 피난처를 열었다.
+이웃 나라에서 자유인이든 노예든 새 삶을 바라는 사람들이 몰려왔다.
+로마의 힘은 여기서 처음 커졌다.
+백 명의 '아버지들'을 뽑아 왕을 돕는 모임, 원로원을 만들었다.
+"""
+fun = "원로원 사람들을 '아버지들(파트레스)'이라 불렀다. 그 자손이 로마의 귀족 파트리키다."
+caused_by = ["rome-founded"]
+sources = ["livy.rome 1.8", "virgil.aeneid 8.342-343"]
+
+[[event]]
+id = "sabine-women-taken"
+name_ko = "로마가 사비니 여인들을 억지로 데려가다"
+era = 8
+seq = 120
+span = "moment"
+place = "rome"
+cast = [
+  { figure = "romulus", role = "주인공" },
+  { figure = "sabinae", role = "피해" },
+]
+oneliner = "이웃들이 딸을 주지 않자, 축제에 초대해 여인들을 붙잡았다."
+body = """
+로마에는 여자가 적어서 다음 세대가 없을 판이었다.
+로물루스가 이웃 나라에 결혼을 청했지만 모두 거절했다.
+그래서 포세이돈(로마에서는 넵투누스)의 축제를 열고 이웃들을 초대했다.
+사비니 사람들도 아내와 아이들을 데리고 왔다.
+모두 구경에 빠졌을 때 로마 젊은이들이 여인들을 억지로 데려갔다.
+"""
+sensitivity = "soften"
+caused_by = ["asylum-and-senate"]
+sources = ["livy.rome 1.9", "virgil.aeneid 8.635-636"]
+
+[[event]]
+id = "caenina-wars"
+name_ko = "이웃 도시들이 하나씩 쳐들어오다"
+era = 8
+seq = 130
+span = "season"
+place = "rome"
+cast = [
+  { figure = "romulus", role = "주인공" },
+  { figure = "hersilia", role = "도움" },
+  { figure = "titus-tatius", role = "등장" },
+  { figure = "zeus", role = "등장" },
+]
+oneliner = "딸을 잃은 도시들이 차례로 싸움을 걸었고, 차례로 졌다."
+body = """
+여인들의 아버지들이 사비니의 왕 타티우스에게 몰려갔다.
+타티우스가 머뭇거리자 카이니나 사람들이 먼저 로마로 쳐들어왔다.
+로물루스가 그들을 이기고, 죽인 왕의 무기를 제우스에게 바쳤다.
+안템나이와 크루스투메리움도 잇달아 졌다.
+헤르실리아가 청해서 진 도시의 사람들을 로마 시민으로 받았다.
+"""
+fun = "로물루스가 그 무기를 바친 자리에 세운 것이 로마의 첫 신전이다. 제우스를 로마에서는 유피테르라고 불렀다."
+caused_by = ["sabine-women-taken"]
+sources = ["livy.rome 1.10-1.11"]
+
+[[event]]
+id = "tarpeia-betrays"
+name_ko = "타르페이아가 성채의 문을 열다"
+era = 8
+seq = 140
+span = "moment"
+after = ["caenina-wars"]
+place = "rome"
+cast = [
+  { figure = "tarpeia", role = "피해" },
+  { figure = "titus-tatius", role = "상대" },
+]
+oneliner = "금을 바란 처녀가 사비니 군사를 성 안에 들였다."
+body = """
+마지막에 가장 강한 사비니가 왔다.
+타티우스는 성채를 지키는 타르페이우스의 딸에게 금을 약속했다.
+타르페이아는 물을 뜨러 나갔다가 사비니 군사들을 성채 안으로 들였다.
+군사들은 약속과 다르게 방패를 던져 타르페이아를 덮었다.
+타르페이아는 그 아래에서 죽었다.
+"""
+fun = "카피톨리노 언덕의 한쪽 바위는 그 뒤로 '타르페이아의 바위'라고 불렸다."
+variants = [
+  { source = "livy.rome 1.11", text = "사비니 사람들이 왼팔에 낀 금팔찌를 달라고 했는데, 군사들이 왼팔에 든 방패를 던졌다는 이야기도 있다." },
+]
+sensitivity = "soften"
+caused_by = ["sabine-women-taken"]
+sources = ["livy.rome 1.11", "ovid.metamorphoses 14.776-777", "virgil.aeneid 8.347"]
+
+[[event]]
+id = "ianus-hot-spring"
+name_ko = "야누스의 샘이 뜨거워져 사비니를 막다"
+era = 8
+seq = 150
+span = "moment"
+place = "rome"
+cast = [
+  { figure = "ianus", role = "도움" },
+  { figure = "aphrodite", role = "도움" },
+  { figure = "hera", role = "상대" },
+  { figure = "titus-tatius", role = "상대" },
+  { figure = "romulus", role = "등장" },
+]
+oneliner = "헤라가 열어 준 문을 아프로디테가 끓는 샘물로 막았다."
+body = """
+성채를 차지한 사비니 군사들이 밤에 로마의 문으로 몰래 다가왔다.
+로물루스가 잠가 둔 문을 헤라가 소리 없이 열어 주었다.
+아프로디테가 그것을 보았지만 다른 신이 한 일을 되돌릴 수는 없었다.
+그래서 야누스 신전 곁 차가운 샘의 님프들에게 도움을 청했다.
+님프들이 샘 아래에 불과 황을 넣어, 물이 끓어 넘쳐 문을 막았다.
+"""
+fun = "로마에서는 헤라를 유노, 아프로디테를 베누스라고 불렀다. 헤라는 트로이 사람들의 자손인 로마와도 맞섰다."
+caused_by = ["tarpeia-betrays"]
+sources = ["ovid.metamorphoses 14.775-804"]
+
+[[event]]
+id = "battle-in-the-valley"
+name_ko = "언덕 사이 골짜기에서 싸우다"
+era = 8
+seq = 160
+span = "days"
+after = ["ianus-hot-spring"]
+place = "rome"
+cast = [
+  { figure = "romulus", role = "주인공" },
+  { figure = "titus-tatius", role = "상대" },
+  { figure = "zeus", role = "도움" },
+]
+oneliner = "로마군이 밀리자 로물루스가 제우스에게 멈춰 달라고 빌었다."
+body = """
+다음 날 두 군대가 팔라티노와 카피톨리노 언덕 사이에서 맞붙었다.
+로마 쪽 대장 호스투스가 쓰러지자 로마군이 팔라티노의 옛 문까지 밀렸다.
+로물루스가 하늘을 향해 제우스에게 로마군을 멈춰 세워 달라고 빌었다.
+로마군이 멈추어 다시 싸웠다.
+사비니 대장 메티우스 쿠르티우스는 말과 함께 늪에 빠졌다가 달아났다.
+"""
+fun = "로물루스는 그 자리에 '멈추게 하는 유피테르' 신전을 약속했다. 그 늪은 쿠르티우스의 호수라고 불렸다."
+caused_by = ["tarpeia-betrays"]
+sources = ["livy.rome 1.12", "livy.rome 1.13"]
+
+[[event]]
+id = "sabine-women-stop-war"
+name_ko = "사비니 여인들이 싸움을 멈추다"
+era = 8
+seq = 170
+span = "moment"
+place = "rome"
+cast = [
+  { figure = "sabinae", role = "주인공" },
+  { figure = "romulus", role = "등장" },
+  { figure = "titus-tatius", role = "등장" },
+  { figure = "hersilia", role = "도움" },
+]
+oneliner = "여인들이 두 군대 사이로 뛰어들었고, 두 민족이 하나가 되었다."
+body = """
+사비니 여인들이 머리를 풀고 날아드는 무기 사이로 뛰어들었다.
+아버지와 남편이 서로 죽이는 것을 볼 수 없다고 했다.
+두 군대가 조용해지고 싸움이 멈추었다.
+두 왕은 평화를 맺고 두 민족을 하나로 합쳤다.
+로물루스와 타티우스가 함께 로마를 다스렸다.
+"""
+fun = "로마 사람들은 그 뒤로 자기들을 퀴리테스라고도 불렀다. 사비니의 도시 쿠레스에서 온 이름이다."
+caused_by = ["battle-in-the-valley"]
+sources = ["livy.rome 1.13", "ovid.metamorphoses 14.799-804", "virgil.aeneid 8.637-641"]
+
+[[event]]
+id = "tatius-dies"
+name_ko = "티투스 타티우스가 라비니움에서 죽다"
+era = 8
+seq = 180
+span = "moment"
+after = ["sabine-women-stop-war"]
+place = "lavinium"
+cast = [
+  { figure = "titus-tatius", role = "피해" },
+  { figure = "romulus", role = "등장" },
+]
+oneliner = "함께 다스리던 두 왕 가운데 하나가 소란 속에 죽었다."
+body = """
+두 왕은 몇 해 동안 사이좋게 함께 다스렸다.
+그런데 타티우스의 친척들이 라우렌툼에서 온 사절들을 때렸다.
+타티우스는 그들을 벌하지 않았다.
+타티우스가 제사를 드리러 라비니움에 갔을 때 소란이 일어나 죽었다.
+로물루스는 전쟁을 하지 않고 라비니움과 약속을 다시 맺었다.
+"""
+sources = ["livy.rome 1.14"]
+
+[[event]]
+id = "romulus-vanishes"
+name_ko = "로물루스가 폭풍 속에 사라져 신이 되다"
+era = 8
+seq = 190
+span = "moment"
+after = ["tatius-dies"]
+place = "rome"
+cast = [
+  { figure = "romulus", role = "주인공" },
+  { figure = "ares", role = "도움" },
+  { figure = "zeus", role = "도움" },
+  { figure = "proculus-iulius", role = "등장" },
+]
+oneliner = "군대를 살피던 왕이 구름에 싸여 사라졌다."
+body = """
+로물루스가 카프라 호수 곁 들판에서 군대를 살피고 있었다.
+갑자기 폭풍이 일고 번개가 쳤다.
+짙은 구름이 왕을 감쌌고, 구름이 걷히자 자리가 비어 있었다.
+사람들은 로물루스가 신이 되었다고 믿고 퀴리누스라고 불렀다.
+오비디우스는 아레스가 아들을 마차에 태워 하늘로 데려갔다고 적었다.
+"""
+fun = "퀴리누스는 로마에서 마르스와 함께 모신 신의 이름이다. 로마의 한 언덕도 퀴리누스의 언덕이라 불렸다."
+variants = [
+  { source = "livy.rome 1.16", text = "원로원의 아버지들이 왕을 죽였다고 속삭이는 사람들도 있었다고 리비우스는 적었다. 그때 프로쿨루스 율리우스가 나서서, 로물루스가 하늘에서 내려와 자기에게 말했다고 했다." },
+]
+sensitivity = "soften"
+sources = ["livy.rome 1.16", "ovid.metamorphoses 14.805-828", "virgil.aeneid 1.292"]
+
+[[event]]
+id = "hersilia-becomes-hora"
+name_ko = "헤르실리아가 남편을 따라 신이 되다"
+era = 8
+seq = 200
+span = "moment"
+place = "rome"
+cast = [
+  { figure = "hersilia", role = "주인공" },
+  { figure = "hera", role = "도움" },
+  { figure = "romulus", role = "등장" },
+]
+oneliner = "울고 있는 아내를 이리스가 퀴리누스의 언덕으로 데려갔다."
+body = """
+헤르실리아는 남편을 잃었다고 울고 있었다.
+헤라가 이리스를 보내 퀴리누스의 언덕 숲으로 오라고 했다.
+헤르실리아가 이리스와 함께 언덕에 오르자 하늘에서 별이 떨어졌다.
+별의 불이 헤르실리아의 머리카락에 붙어 함께 하늘로 올라갔다.
+로물루스가 아내를 맞아 호라라는 새 이름을 주었다.
+"""
+fun = "오비디우스는 이 여신을 오라(호라)라고 적었다. 로마에서는 헤라를 유노라고 불렀다."
+note = "이리스(무지개의 여신)는 등록부에 없어 이름만 부른다."
+caused_by = ["romulus-vanishes"]
+sources = ["ovid.metamorphoses 14.829-851"]
+
+# ---------- era 8: 누마 ----------
+
+[[event]]
+id = "numa-chosen"
+name_ko = "누마가 로마의 왕으로 뽑히다"
+era = 8
+seq = 210
+span = "days"
+after = ["romulus-vanishes", "hersilia-becomes-hora"]
+places = ["cures", "rome"]
+cast = [
+  { figure = "numa", role = "주인공" },
+]
+oneliner = "한 해 동안 왕 없이 지낸 로마가 사비니의 어진 사람을 불러왔다."
+body = """
+로물루스가 사라진 뒤 원로원 사람들이 닷새씩 돌아가며 다스렸다.
+한 해가 지나고 사람들은 왕을 원했다.
+쿠레스에 사는 누마는 바르고 신을 잘 아는 사람으로 이름나 있었다.
+원로원은 사비니 사람이 왕이 되는 것을 꺼렸지만 누마를 뽑았다.
+누마는 성채에 앉아 새를 보고 제우스의 뜻을 물은 뒤에야 왕이 되었다.
+"""
+fun = "왕이 없던 그 한 해를 '인테르레그눔'이라 불렀다. 왕과 왕 사이라는 뜻이다."
+sources = ["livy.rome 1.17-1.18", "ovid.metamorphoses 15.1-4", "virgil.aeneid 6.808-812"]
+
+[[event]]
+id = "ianus-temple-and-calendar"
+name_ko = "누마가 야누스 신전을 세우고 달력을 고치다"
+era = 8
+seq = 220
+span = "years"
+place = "rome"
+cast = [
+  { figure = "numa", role = "주인공" },
+  { figure = "ianus", role = "등장" },
+]
+oneliner = "야누스 신전의 문을 닫고, 한 해를 열두 달로 나누었다."
+body = """
+누마는 싸움으로 세워진 도시를 법과 신으로 다스리려 했다.
+먼저 야누스의 신전을 세웠다.
+문이 열려 있으면 전쟁 중, 닫혀 있으면 평화라는 뜻이었다.
+누마는 이웃들과 약속을 맺고 문을 닫았다.
+그리고 달의 움직임에 맞추어 한 해를 열두 달로 나누었다.
+"""
+fun = "누마 뒤로 이 문이 닫힌 것은 리비우스 때까지 두 번뿐이었다. 로마는 거의 늘 전쟁 중이었다는 뜻이다."
+caused_by = ["numa-chosen"]
+sources = ["livy.rome 1.19", "virgil.aeneid 7.607-615", "virgil.aeneid 1.293-294"]
+
+[[event]]
+id = "vestal-virgins"
+name_ko = "누마가 사제들과 베스타의 처녀들을 두다"
+era = 8
+seq = 230
+span = "years"
+place = "rome"
+cast = [
+  { figure = "numa", role = "주인공" },
+  { figure = "hestia", role = "등장" },
+  { figure = "ares", role = "등장" },
+  { figure = "zeus", role = "등장" },
+]
+oneliner = "신마다 섬기는 사람을 정하고, 베스타의 불을 지키는 처녀들을 두었다."
+body = """
+누마는 제우스, 아레스, 퀴리누스를 섬기는 사제를 따로 두었다.
+사제는 신에게 제사를 드리는 일을 맡은 사람이다.
+헤스티아(로마에서는 베스타)를 섬기는 처녀들도 뽑았다.
+이 일은 알바 롱가에서 온 것이다.
+처녀들은 결혼하지 않고 신전의 불을 지켰다.
+"""
+fun = "아레스(로마에서는 마르스)를 위해 열두 명의 살리이를 두었다. 하늘에서 떨어진 방패를 들고 춤추며 도시를 돌았다."
+caused_by = ["numa-chosen"]
+sources = ["livy.rome 1.20", "virgil.aeneid 1.292"]
+
+[[event]]
+id = "numa-and-egeria"
+name_ko = "누마가 밤마다 에게리아를 만나다"
+era = 8
+seq = 240
+span = "years"
+place = "rome"
+cast = [
+  { figure = "numa", role = "주인공" },
+  { figure = "egeria", role = "도움" },
+]
+oneliner = "왕은 숲의 샘에서 님프를 만나 신들의 뜻을 배운다고 했다."
+body = """
+누마는 밤마다 여신 에게리아를 만난다고 말했다.
+에게리아가 알려 준 대로 제사를 정하고 사제를 세운다고 했다.
+어두운 굴에서 샘이 흘러나오는 숲이 있었다.
+누마는 자주 혼자 그곳에 가서 아내 에게리아를 만났다고 했다.
+리비우스는 사람들이 신을 두려워하게 하려고 누마가 꾸민 일이라고 적었다.
+"""
+fun = "누마는 그 숲을 무사(뮤즈) 여신들에게 바쳤다. 에게리아를 만난 곳이기 때문이다."
+caused_by = ["numa-chosen"]
+sources = ["livy.rome 1.19", "livy.rome 1.21", "ovid.metamorphoses 15.482-484"]
+
+[[event]]
+id = "egeria-fountain"
+name_ko = "에게리아의 눈물이 샘이 되다"
+era = 8
+seq = 250
+span = "days"
+after = ["numa-and-egeria", "ianus-temple-and-calendar", "vestal-virgins"]
+place = "aricia"
+cast = [
+  { figure = "egeria", role = "주인공" },
+  { figure = "numa", role = "피해" },
+  { figure = "hippolytos", role = "도움" },
+  { figure = "artemis", role = "도움" },
+]
+oneliner = "누마가 죽자 님프는 숲에서 울다가 물이 되었다."
+body = """
+누마는 마흔세 해를 다스리고 늙어서 죽었다.
+로마 사람들 모두가 슬퍼했다.
+에게리아는 도시를 떠나 아리키아 골짜기 아르테미스의 숲에 숨어 울었다.
+그 숲에 살던 히폴리토스가 자기 이야기로 달랬지만 소용없었다.
+아르테미스가 우는 에게리아를 시원한 샘으로 바꾸었다.
+"""
+fun = "히폴리토스는 죽은 뒤 아르테미스가 되살려 이 숲에 숨겨 두었다. 이름도 비르비우스로 바꾸었다. 로마에서는 아르테미스를 디아나라고 불렀다."
+sources = ["ovid.metamorphoses 15.479-551", "livy.rome 1.21"]

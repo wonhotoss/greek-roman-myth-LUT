@@ -1,0 +1,971 @@
+# era 7 — 돌아오는 길. 아가멤논의 죽음과 오레스테스, 오디세우스의 떠돌이와 귀환, 텔레마코스의 여정 (ODY).
+# seq 는 시작 순서다. 호메로스가 순서를 말하는 대로 놓았다:
+#   100~110 아가멤논의 죽음 · 200~330 떠돌이(키코네스~칼립소) · 335 페넬로페의 꾀(칼립소의 해 안)
+#   340~350 오레스테스(아이기스토스가 왕이 된 여덟째 해 — 오디세우스가 칼립소에게 붙잡혀 있는 동안, 오디세이아 3.303-310)
+#   355~390 신들의 회의~텔레마코스의 여정~뗏목~파이아케스~이타케 도착 · 500~580 귀환
+# 브리프의 400~499 구간은 비워 두었다. 오레스테스의 복수를 400 뒤에 두면 오디세우스의 귀환 뒤가 되어 호메로스와 어긋난다.
+# 묶음: 스크래치 arcs/ODY.toml (oresteia / odysseus-wanderings / telemachos-journey / odysseus-homecoming)
+# 참조만 하는 다른 에이전트의 id: odysseus agamemnon klytaimnestra menelaos helene nestor achilleus kassandra iphigeneia(TRO) teiresias(THE) troy-falls(TRO)
+
+# ============ 아가멤논의 죽음 ============
+
+[[event]]
+id = "agamemnon-murdered"
+name_ko = "아가멤논이 죽다"
+era = 7
+seq = 100
+span = "moment"
+after = ["troy-falls"]
+place = "mycenae"
+cast = [
+  { figure = "agamemnon", role = "피해" },
+  { figure = "klytaimnestra", role = "상대" },
+  { figure = "aigisthos", role = "상대" },
+  { figure = "kassandra", role = "피해" },
+]
+oneliner = "열 해 만에 돌아온 왕을 아내와 아이기스토스가 죽였다."
+body = """
+트로이를 무너뜨린 아가멤논이 카산드라를 데리고 미케네로 돌아왔다.
+아내 클리타임네스트라는 그동안 아이기스토스와 함께 살고 있었다.
+두 사람은 돌아온 아가멤논을 죽였다.
+카산드라도 그때 함께 죽었다.
+아이기스토스가 미케네의 왕이 되었다.
+"""
+fun = "파우사니아스는 미케네에서 아가멤논의 무덤을 보았다고 적었다. 그런데 스파르타 근처 아미클라이 사람들도 자기 마을에 그 무덤이 있다고 했다."
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 2권 4장 「예언자 카산드라」(끝부분). 죽인 방법(옷·잔치)은 쓰지 않았다."
+sources = ["apollodorus.library E.6.23", "homer.odyssey 4.524-537", "homer.odyssey 11.405-434", "pausanias.greece 2.16", "pausanias.greece 3.19"]
+
+[[event]]
+id = "orestes-sent-away"
+name_ko = "오레스테스가 멀리 보내지다"
+era = 7
+seq = 110
+span = "years"
+caused_by = ["agamemnon-murdered"]
+place = "mycenae"
+cast = [
+  { figure = "elektra", role = "주인공" },
+  { figure = "orestes", role = "피해" },
+  { figure = "pylades", role = "도움" },
+  { figure = "aigisthos", role = "상대" },
+]
+oneliner = "누이가 어린 동생을 몰래 빼내 먼 나라로 보냈다."
+body = """
+아가멤논이 죽던 때 오레스테스는 어린아이였다.
+누이 엘렉트라가 동생을 몰래 빼내어 포키스의 스트로피오스 왕에게 보냈다.
+왕은 자기 아들 필라데스와 함께 오레스테스를 키웠다.
+그동안 아이기스토스는 미케네에서 일곱 해를 왕으로 지냈다.
+"""
+note = "포키스는 장소 항목이 없어 출발지 미케네만 적었다. 스트로피오스는 등록부에 없어 이름만 불렀다."
+sources = ["apollodorus.library E.6.24", "homer.odyssey 3.303-306"]
+
+# ============ 오디세우스의 떠돌이 ============
+
+[[event]]
+id = "kikones-maron"
+name_ko = "키코네스의 마을과 마론의 포도주"
+era = 7
+seq = 200
+span = "days"
+after = ["troy-falls"]
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "maron", role = "도움" },
+]
+oneliner = "트로이를 떠난 첫 싸움에서 오디세우스가 진한 포도주를 얻었다."
+body = """
+오디세우스는 배 열두 척으로 트로이를 떠났다.
+가장 먼저 키코네스의 마을 이스마로스를 쳤다.
+아폴론을 모시는 마론과 식구만은 살려 주었고, 마론은 진한 포도주를 선물했다.
+다음 날 안쪽 땅의 키코네스가 몰려와 배마다 여섯 사람씩 죽었다.
+남은 사람들은 서둘러 바다로 나갔다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 13권 1장 「마론의 포도주」. 이스마로스는 장소 항목이 없어 place 를 비웠다."
+sources = ["homer.odyssey 9.39-61", "homer.odyssey 9.196-215", "apollodorus.library E.7.2"]
+
+[[event]]
+id = "lotophagoi-visit"
+name_ko = "로토파고이의 땅에 닿다"
+era = 7
+seq = 210
+span = "days"
+after = ["kikones-maron"]
+place = "lotophagoi-land"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "lotophagoi", role = "상대" },
+]
+oneliner = "동료들이 열매를 먹고 돌아갈 길을 잊었다."
+body = """
+말레아 곶을 돌다 거센 바람에 아홉 날을 밀려갔다.
+닿은 곳은 로토스 열매를 먹는 사람들의 땅이었다.
+오디세우스가 보낸 동료 셋이 그 열매를 얻어먹었다.
+셋은 집을 잊고 그곳에 남고 싶어 울었다.
+오디세우스는 셋을 억지로 배에 묶고 서둘러 떠났다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 13권 1장 「연꽃에 숨겨진 비밀」."
+sources = ["homer.odyssey 9.62-104", "apollodorus.library E.7.3"]
+
+[[event]]
+id = "polyphemos-cave"
+name_ko = "폴리페모스의 동굴에 갇히다"
+era = 7
+seq = 220
+span = "days"
+after = ["lotophagoi-visit"]
+place = "kyklopes-land"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "polyphemos", role = "상대" },
+]
+oneliner = "동굴 주인이 돌아와 문을 바위로 막고 동료들을 잡아먹었다."
+body = """
+오디세우스는 동료 열둘과 마론의 포도주를 들고 큰 동굴에 들어갔다.
+주인 폴리페모스가 양을 몰고 돌아와 큰 바위로 문을 막았다.
+그리고 낯선 사람들을 보자 동료들을 잡아먹었다.
+문을 막은 바위는 사람 스물이 밀어도 움직이지 않았다.
+오디세우스는 거인을 죽이면 나갈 수 없다는 것을 알고 꾀를 생각했다.
+"""
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 13권 2장 「동굴의 주인」."
+sources = ["homer.odyssey 9.216-344", "apollodorus.library E.7.4-E.7.5"]
+
+[[event]]
+id = "polyphemos-escape"
+name_ko = "거인을 속이고 빠져나오다"
+era = 7
+seq = 230
+span = "days"
+caused_by = ["polyphemos-cave"]
+place = "kyklopes-land"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "polyphemos", role = "상대" },
+  { figure = "poseidon", role = "등장" },
+]
+oneliner = "포도주와 '아무도 아니다'라는 이름, 그리고 양의 배 밑."
+body = """
+오디세우스는 거인에게 포도주를 먹이고 이름은 '아무도 아니다'라고 했다.
+거인이 잠들자 달군 나무 말뚝으로 그 눈을 못 보게 만들었다.
+거인이 소리치자 다른 거인들이 왔지만 "아무도 아니다"라는 말에 돌아갔다.
+아침에 동료들은 양의 배 밑에 매달려 동굴을 빠져나왔다.
+배 위에서 오디세우스가 이름을 밝히자 거인은 아버지 포세이돈에게 복수를 빌었다.
+"""
+fun = "이 일로 포세이돈이 오디세우스를 미워하게 되었다. 그 뒤 열 해 동안 집에 못 간 까닭이 여기서 시작된다."
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 13권 2장 「거인을 속인 지혜」."
+sources = ["homer.odyssey 9.345-566", "apollodorus.library E.7.6-E.7.9"]
+
+[[event]]
+id = "aiolos-winds"
+name_ko = "아이올로스의 바람 주머니"
+era = 7
+seq = 240
+span = "season"
+after = ["polyphemos-escape"]
+place = "aiolia"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "aiolos-anemon", role = "도움" },
+]
+oneliner = "집이 보이는 데까지 갔다가 주머니가 열려 되돌아왔다."
+body = """
+아이올로스는 한 달 동안 오디세우스를 대접하고 트로이 이야기를 들었다.
+떠날 때 궂은 바람을 모두 가죽 주머니에 담아 배에 묶어 주고 서풍만 불게 했다.
+아홉 날을 달려 이타케의 불빛이 보이는 데서 오디세우스가 잠들었다.
+동료들이 주머니에 금이 든 줄 알고 열자 바람이 쏟아져 배를 되돌려 보냈다.
+다시 찾아간 오디세우스를 아이올로스는 신들이 미워하는 사람이라며 쫓아냈다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 13권 2장 「바람의 신 아이올로스」."
+sources = ["homer.odyssey 10.1-79", "apollodorus.library E.7.10-E.7.11"]
+
+[[event]]
+id = "laistrygones-attack"
+name_ko = "라이스트리고네스에게 배를 잃다"
+era = 7
+seq = 250
+span = "days"
+after = ["aiolos-winds"]
+place = "laistrygonia"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "laistrygones", role = "상대" },
+]
+oneliner = "배 열두 척 가운데 열한 척이 여기서 부서졌다."
+body = """
+엿새를 저어 라이스트리고네스의 땅에 닿았다.
+동료들은 좁은 항구 안에 배를 넣었고, 오디세우스만 밖에 배를 대었다.
+소식을 살피러 간 사람들을 왕 안티파테스가 붙잡아 하나를 잡아먹었다.
+거인들이 몰려와 바위를 던져 항구 안의 배를 모두 부수고 사람들을 잡아갔다.
+오디세우스는 밧줄을 칼로 끊고 배 한 척만으로 달아났다.
+"""
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 13권 2장 「또 다른 거인들의 섬」. 안티파테스는 등록부에 없어 이름만."
+sources = ["homer.odyssey 10.80-132", "apollodorus.library E.7.12-E.7.13"]
+
+[[event]]
+id = "kirke-pigs"
+name_ko = "키르케가 동료들을 돼지로 바꾸다"
+era = 7
+seq = 260
+span = "days"
+after = ["laistrygones-attack"]
+place = "aiaia"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "kirke", role = "상대" },
+  { figure = "hermes", role = "도움" },
+]
+oneliner = "약을 탄 음식을 먹은 동료들이 돼지가 되었다."
+body = """
+남은 배 한 척이 키르케의 섬에 닿았다.
+에우릴로코스가 이끈 동료 스물둘이 숲속 돌집에 들어갔다.
+키르케는 약을 탄 음식을 먹이고 지팡이로 쳐서 그들을 돼지로 바꾸었다.
+밖에서 지켜본 에우릴로코스만 달아나 오디세우스에게 알렸다.
+헤르메스가 길에서 오디세우스를 만나 약초를 주고 어떻게 할지 가르쳐 주었다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 13권 3장 「신비한 물약」. 에우릴로코스는 등록부에 없어 이름만 불렀다."
+sources = ["homer.odyssey 10.133-306", "apollodorus.library E.7.14-E.7.16"]
+
+[[event]]
+id = "kirke-year"
+name_ko = "키르케의 섬에서 한 해를 머물다"
+era = 7
+seq = 270
+span = "years"
+after = ["kirke-pigs"]
+place = "aiaia"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "kirke", role = "도움" },
+  { figure = "elpenor", role = "피해" },
+]
+oneliner = "동료들이 사람으로 돌아오고, 오디세우스는 한 해를 머물렀다."
+body = """
+오디세우스는 약초 덕분에 키르케의 약에 걸리지 않았다.
+칼을 빼 들자 키르케는 놀라 동료들을 다시 사람으로 되돌렸다.
+오디세우스와 동료들은 그 섬에서 한 해를 머물렀다.
+떠나기로 하자 키르케는 먼저 죽은 사람들의 땅에서 테이레시아스에게 물으라고 했다.
+떠나는 날 아침, 가장 어린 엘페노르가 지붕에서 떨어져 죽었다.
+"""
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 13권 3장 「키르케와 오디세우스」. 한 해라 span 은 years 로 두었다(season 과 years 사이 등급이 없다)."
+sources = ["homer.odyssey 10.307-574", "apollodorus.library E.7.16-E.7.17"]
+
+[[event]]
+id = "land-of-the-dead"
+name_ko = "죽은 사람들의 땅에 가다"
+era = 7
+seq = 280
+span = "days"
+after = ["kirke-year"]
+place = "hades-realm"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "teiresias", role = "도움" },
+  { figure = "antikleia", role = "등장" },
+  { figure = "elpenor", role = "등장" },
+  { figure = "agamemnon", role = "등장" },
+  { figure = "achilleus", role = "등장" },
+]
+oneliner = "살아 있는 채로 저승 문 앞에 가서 앞일을 물었다."
+body = """
+오디세우스는 세상 끝 오케아노스 건너로 배를 저어 갔다.
+구덩이를 파고 양을 바치자 죽은 사람들의 혼이 몰려왔다.
+테이레시아스는 헬리오스의 소를 건드리지 말라고 미리 알려 주었다.
+어머니 안티클레이아, 아가멤논, 아킬레우스의 혼도 차례로 만났다.
+아킬레우스는 죽은 자들의 왕보다 살아 있는 종이 낫다고 했다.
+"""
+fun = "테이레시아스는 오디세우스의 죽음도 말해 주었다. 바다에서 오는 부드러운 죽음이 늙은 뒤에 온다고."
+note = "참고: 처음 읽는 그리스 로마 신화 13권 4장 「죽은 자들의 땅」. 테이레시아스는 THE 소유 참조."
+sources = ["homer.odyssey 11.1-640", "apollodorus.library E.7.17"]
+
+[[event]]
+id = "seirenes-song"
+name_ko = "세이레네스의 노래를 듣다"
+era = 7
+seq = 290
+span = "moment"
+after = ["land-of-the-dead"]
+place = "seirenes-island"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "seirenes", role = "상대" },
+  { figure = "kirke", role = "도움" },
+]
+oneliner = "귀를 막은 동료들이 노를 젓고, 오디세우스만 묶인 채 노래를 들었다."
+body = """
+키르케의 섬으로 돌아와 엘페노르를 묻고 다시 떠났다.
+키르케가 가르쳐 준 대로 오디세우스는 밀랍을 녹여 동료들의 귀를 막았다.
+자기는 돛대에 묶이고, 풀어 달라고 해도 더 단단히 묶으라고 했다.
+세이레네스가 노래하자 오디세우스는 눈짓으로 풀어 달라고 했다.
+동료들은 더 세게 묶고 노를 저어 섬을 지나갔다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 13권 4장 「무시무시한 괴물들」, 6권 2장 「세이렌」."
+sources = ["homer.odyssey 12.1-54", "homer.odyssey 12.165-200", "apollodorus.library E.7.18-E.7.19"]
+
+[[event]]
+id = "skylla-charybdis"
+name_ko = "스킬라와 카리브디스 사이를 지나다"
+era = 7
+seq = 300
+span = "moment"
+after = ["seirenes-song"]
+place = "skylla-strait"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "skylla", role = "상대" },
+  { figure = "charybdis", role = "상대" },
+]
+oneliner = "소용돌이를 피해 바위 쪽으로 붙었고, 스킬라가 여섯을 잡아갔다."
+body = """
+좁은 물길 한쪽에는 소용돌이 카리브디스, 다른 쪽에는 괴물 스킬라가 있었다.
+키르케는 배를 다 잃는 것보다 여섯을 잃는 쪽이 낫다고 미리 말해 주었다.
+동료들은 카리브디스가 물을 뿜는 것을 보며 두려움에 노를 놓쳤다.
+그때 스킬라가 목을 뻗어 가장 힘센 동료 여섯을 잡아갔다.
+오디세우스는 그것이 여행에서 본 가장 슬픈 장면이었다고 했다.
+"""
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 6권 2장 「스킬라」「카리브디스」."
+sources = ["homer.odyssey 12.55-126", "homer.odyssey 12.201-259", "apollodorus.library E.7.20-E.7.21"]
+
+[[event]]
+id = "thrinakia-cattle"
+name_ko = "헬리오스의 소를 잡아먹다"
+era = 7
+seq = 310
+span = "season"
+after = ["skylla-charybdis"]
+place = "thrinakia"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "helios", role = "상대" },
+  { figure = "zeus", role = "상대" },
+]
+oneliner = "굶주린 동료들이 하지 말라던 일을 했다."
+body = """
+오디세우스는 헬리오스의 섬에 내리지 말자고 했지만 동료들이 지쳐 있었다.
+동료들은 소를 건드리지 않겠다고 맹세하고 내렸다.
+그런데 남풍이 한 달을 불어 배가 떠나지 못했고 먹을 것이 다 떨어졌다.
+오디세우스가 기도하러 간 사이 에우릴로코스가 동료들을 이끌고 소를 잡았다.
+헬리오스가 제우스에게 벌을 내려 달라고 했다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 14권 1장 「헬리오스의 분노」. 에우릴로코스는 등록부에 없어 이름만."
+sources = ["homer.odyssey 12.127-141", "homer.odyssey 12.260-373", "apollodorus.library E.7.22"]
+
+[[event]]
+id = "ship-destroyed"
+name_ko = "배가 부서지다"
+era = 7
+seq = 320
+span = "days"
+caused_by = ["thrinakia-cattle"]
+places = ["thrinakia", "skylla-strait", "ogygia"]
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "zeus", role = "상대" },
+  { figure = "charybdis", role = "상대" },
+  { figure = "helios", role = "등장" },
+]
+oneliner = "제우스의 벼락에 배가 부서지고 오디세우스만 남았다."
+body = """
+바다로 나가자 제우스가 검은 구름과 벼락을 보냈다.
+돛대가 넘어지고 배가 부서져 동료들이 모두 바다에 빠져 죽었다.
+오디세우스는 돛대와 배 밑판을 묶어 타고 밤새 떠다녔다.
+아침에 카리브디스로 다시 흘러가 무화과나무에 매달려 버텼다.
+아홉 날을 더 떠다닌 끝에 칼립소의 섬 오기기아에 닿았다.
+"""
+sources = ["homer.odyssey 12.374-453", "apollodorus.library E.7.22-E.7.23"]
+
+[[event]]
+id = "kalypso-years"
+name_ko = "오기기아의 칼립소"
+era = 7
+seq = 330
+span = "years"
+after = ["ship-destroyed"]
+place = "ogygia"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "kalypso", role = "상대" },
+]
+oneliner = "칼립소가 오디세우스를 일곱 해 동안 보내 주지 않았다."
+body = """
+칼립소는 바다에 떠내려온 오디세우스를 건져 살려 주었다.
+죽지 않는 몸으로 만들어 주겠다며 함께 살자고 했다.
+오디세우스는 집에 가고 싶어 날마다 바닷가 바위에 앉아 울었다.
+그렇게 일곱 해가 지났다.
+"""
+sensitivity = "soften"
+variants = [
+  { source = "apollodorus.library E.7.24", text = "아폴로도로스는 오디세우스가 칼립소의 섬에서 다섯 해를 머물렀다고 한다." },
+]
+note = "참고: 처음 읽는 그리스 로마 신화 14권 1장 「오기기아섬의 칼립소」."
+sources = ["homer.odyssey 5.13-15", "homer.odyssey 5.149-158", "homer.odyssey 7.244-266", "homer.odyssey 12.447-453", "apollodorus.library E.7.24"]
+
+# ============ 그동안 이타케와 미케네에서 ============
+
+[[event]]
+id = "penelope-web-trick"
+name_ko = "페넬로페의 베짜기 꾀"
+era = 7
+seq = 335
+span = "years"
+caused_by = ["kalypso-years"]
+within = "kalypso-years"
+place = "ithake"
+cast = [
+  { figure = "penelope", role = "주인공" },
+  { figure = "antinoos", role = "상대" },
+  { figure = "eurymachos", role = "상대" },
+  { figure = "telemachos", role = "등장" },
+  { figure = "laertes", role = "등장" },
+]
+oneliner = "낮에 짠 옷감을 밤마다 풀어 세 해를 끌었다."
+body = """
+오디세우스가 죽었다고 여긴 젊은 귀족들이 페넬로페와 결혼하려고 몰려왔다.
+백 명이 넘는 구혼자들이 날마다 집에서 잔치를 벌여 재산을 먹어 없앴다.
+페넬로페는 시아버지에게 죽으면 입힐 옷을 다 짜면 고르겠다고 했다.
+그러고는 낮에 짠 것을 밤에 몰래 풀어 세 해를 끌었다.
+네 해째에 하녀 하나가 이를 알려 구혼자들에게 들켰다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 14권 2장 「지혜로운 페넬로페」. 텔레마코스의 여정 세 해 전에 시작된 일이라 칼립소의 해 안(within)에 두었다."
+sources = ["homer.odyssey 2.85-128", "homer.odyssey 19.137-161", "homer.odyssey 24.125-150", "apollodorus.library E.7.26-E.7.31"]
+
+[[event]]
+id = "orestes-revenge"
+name_ko = "오레스테스의 복수"
+era = 7
+seq = 340
+span = "moment"
+after = ["orestes-sent-away"]
+places = ["delphi", "mycenae"]
+cast = [
+  { figure = "orestes", role = "주인공" },
+  { figure = "pylades", role = "도움" },
+  { figure = "apollon", role = "도움" },
+  { figure = "aigisthos", role = "피해" },
+  { figure = "klytaimnestra", role = "피해" },
+  { figure = "elektra", role = "등장" },
+]
+oneliner = "여덟째 해에 아들이 돌아와 아버지의 원수를 갚았다."
+body = """
+다 자란 오레스테스는 델포이에 가서 원수를 갚아야 하는지 물었다.
+신은 그렇게 하라고 했다.
+오레스테스는 필라데스와 함께 몰래 미케네로 들어갔다.
+아이기스토스를 죽였고, 어머니 클리타임네스트라도 죽였다.
+호메로스는 아이기스토스가 왕이 된 여덟째 해의 일이라고 한다.
+"""
+sensitivity = "soften"
+variants = [
+  { source = "homer.odyssey 3.303-310", text = "호메로스는 오레스테스가 아이기스토스를 죽였다고만 하고, 어머니를 죽였다고는 말하지 않는다. 어머니와 아이기스토스의 장례를 함께 치렀다고만 한다." },
+]
+note = "seq 340: 오디세우스가 칼립소에게 붙잡혀 있던 동안의 일이다(오디세이아 3.303-310, 1.298-300). 방법은 쓰지 않았다."
+sources = ["apollodorus.library E.6.25", "homer.odyssey 1.298-300", "homer.odyssey 3.303-310", "pausanias.greece 2.16"]
+
+[[event]]
+id = "orestes-trial"
+name_ko = "에리니에스의 추격과 아테네의 재판"
+era = 7
+seq = 345
+span = "season"
+caused_by = ["orestes-revenge"]
+places = ["mycenae", "athens"]
+cast = [
+  { figure = "orestes", role = "주인공" },
+  { figure = "erinyes", role = "상대" },
+  { figure = "pylades", role = "도움" },
+  { figure = "athena", role = "등장" },
+]
+oneliner = "어머니를 죽인 사람을 여신들이 쫓았고, 재판은 표가 같았다."
+body = """
+어머니를 죽인 오레스테스를 에리니에스가 쫓아다녔다.
+오레스테스는 미쳐서 헤매다 아테네로 갔다.
+아레스의 언덕이라는 곳에서 재판이 열렸다.
+잘했다는 표와 잘못했다는 표가 똑같이 나와 오레스테스는 풀려났다.
+풀려난 오레스테스는 그 자리에 아테나의 제단을 세웠다.
+"""
+fun = "그 언덕에는 재판받는 사람과 고발한 사람이 서는 하얀 돌 두 개가 있었다. 파우사니아스는 돌 이름이 '무자비'와 '뻔뻔함'이라고 적었다."
+sensitivity = "soften"
+note = "재판을 건 사람은 이설(에리니에스·틴다레오스·에리고네). 아테나가 표를 던졌다는 것은 아이스킬로스 이야기라 우리 원전에 없어 쓰지 않았다. 파우사니아스 1.28 의 아테나 제단만 적었다."
+sources = ["apollodorus.library E.6.25", "pausanias.greece 1.28"]
+
+[[event]]
+id = "orestes-tauris"
+name_ko = "타우리스에서 누이 이피게네이아를 찾다"
+era = 7
+seq = 350
+span = "season"
+after = ["orestes-trial"]
+places = ["delphi", "athens"]
+cast = [
+  { figure = "orestes", role = "주인공" },
+  { figure = "pylades", role = "도움" },
+  { figure = "iphigeneia", role = "도움" },
+  { figure = "artemis", role = "등장" },
+]
+oneliner = "먼 북쪽 나라에서 죽었다고 여겼던 누이를 만났다."
+body = """
+재판이 끝나도 오레스테스의 병은 낫지 않았다.
+델포이는 타우리스 땅의 아르테미스 나무 신상을 가져오면 낫는다고 했다.
+그 나라는 낯선 사람을 붙잡아 죽이는 곳이었고, 두 친구도 붙잡혔다.
+여신을 모시는 여자 앞에 끌려갔는데, 그 여자가 누이 이피게네이아였다.
+셋은 신상을 가지고 달아났고, 신상은 아테네로 왔다.
+"""
+fun = "파우사니아스는 이피게네이아가 아테네 근처 브라우론에 신상을 두고 갔다고 적었다. 그곳에는 지금도 아르테미스 신전 터가 있다."
+sensitivity = "soften"
+note = "타우리스(크림 반도)는 장소 항목을 만들지 않아 출발지 델포이와 도착지 아테네만 적었다. 이피게네이아는 TRO 소유(아울리스의 사슴 대체 판본). 오레스테스가 헤르미오네와 결혼한 것(E.6.28)은 인물 항목에만."
+sources = ["apollodorus.library E.6.26-E.6.27", "pausanias.greece 1.33"]
+
+# ============ 신들의 회의에서 이타케 도착까지 ============
+
+[[event]]
+id = "gods-council-hermes"
+name_ko = "신들의 회의와 헤르메스"
+era = 7
+seq = 355
+span = "days"
+caused_by = ["kalypso-years", "polyphemos-escape"]
+within = "kalypso-years"
+places = ["olympus-home", "ogygia"]
+cast = [
+  { figure = "athena", role = "주인공" },
+  { figure = "zeus", role = "도움" },
+  { figure = "hermes", role = "도움" },
+  { figure = "kalypso", role = "상대" },
+  { figure = "poseidon", role = "상대" },
+  { figure = "odysseus", role = "피해" },
+]
+oneliner = "포세이돈이 없는 사이 아테나가 오디세우스를 풀어 달라고 했다."
+body = """
+포세이돈이 멀리 에티오피아에 간 사이 신들이 올림포스에 모였다.
+아테나는 오디세우스가 칼립소의 섬에 붙잡혀 있다고 제우스에게 호소했다.
+제우스는 헤르메스를 오기기아로 보냈다.
+헤르메스가 제우스의 뜻을 전하자 칼립소는 화가 났지만 따를 수밖에 없었다.
+아테나는 그 사이 이타케로 가서 텔레마코스를 찾았다.
+"""
+sources = ["homer.odyssey 1.22-95", "homer.odyssey 5.1-148"]
+
+[[event]]
+id = "athena-visits-telemachos"
+name_ko = "아테나가 텔레마코스를 찾아오다"
+era = 7
+seq = 360
+span = "days"
+caused_by = ["gods-council-hermes"]
+within = "kalypso-years"
+place = "ithake"
+cast = [
+  { figure = "telemachos", role = "주인공" },
+  { figure = "athena", role = "도움" },
+  { figure = "mentor", role = "도움" },
+  { figure = "eurykleia", role = "도움" },
+  { figure = "antinoos", role = "상대" },
+  { figure = "eurymachos", role = "상대" },
+  { figure = "penelope", role = "등장" },
+  { figure = "phemios", role = "등장" },
+]
+oneliner = "낯선 손님이 아버지가 살아 있다고, 찾으러 가라고 했다."
+body = """
+아테나는 멘테스라는 손님의 모습으로 오디세우스의 집에 왔다.
+텔레마코스에게 아버지는 살아 있으니 필로스와 스파르타로 소식을 찾아가라고 했다.
+텔레마코스는 처음으로 이타케 사람들을 모아 구혼자들에게 나가라고 했다.
+구혼자들은 비웃었지만, 아테나가 멘토르의 모습으로 배와 사람을 구해 주었다.
+에우리클레이아가 먹을 것을 싸 주었고, 텔레마코스는 밤에 몰래 떠났다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 14권 2장 「텔레마코스의 여정」. 멘테스는 등록부에 없어 이름만."
+sources = ["homer.odyssey 1.96-444", "homer.odyssey 2.1-434"]
+
+[[event]]
+id = "telemachos-at-pylos"
+name_ko = "필로스의 네스토르를 찾아가다"
+era = 7
+seq = 365
+span = "days"
+after = ["athena-visits-telemachos"]
+place = "pylos"
+cast = [
+  { figure = "telemachos", role = "주인공" },
+  { figure = "nestor", role = "도움" },
+  { figure = "athena", role = "도움" },
+]
+oneliner = "늙은 네스토르는 아가멤논 이야기는 해 주었지만 오디세우스 소식은 몰랐다."
+body = """
+텔레마코스가 필로스에 닿았을 때 네스토르는 바닷가에서 제사를 올리고 있었다.
+네스토르는 트로이에서 돌아오는 길에 왕들이 어떻게 흩어졌는지 이야기해 주었다.
+아가멤논이 죽고 오레스테스가 원수를 갚은 이야기도 들려주었다.
+그러나 오디세우스가 어디 있는지는 몰랐다.
+네스토르는 아들 페이시스트라토스와 수레를 내어 스파르타까지 보내 주었다.
+"""
+fun = "돌아오는 길에 텔레마코스는 네스토르의 집을 그냥 지나쳤다. 붙잡혀서 또 대접받으면 늦어질까 걱정해서다."
+note = "참고: 처음 읽는 그리스 로마 신화 14권 2장 「텔레마코스의 여정」. 페이시스트라토스는 등록부에 없어 이름만."
+sources = ["homer.odyssey 3.1-497", "homer.odyssey 15.182-221"]
+
+[[event]]
+id = "telemachos-at-sparta"
+name_ko = "스파르타의 메넬라오스와 헬레네"
+era = 7
+seq = 370
+span = "season"
+after = ["telemachos-at-pylos"]
+place = "sparta"
+cast = [
+  { figure = "telemachos", role = "주인공" },
+  { figure = "menelaos", role = "도움" },
+  { figure = "helene", role = "도움" },
+  { figure = "hermione", role = "등장" },
+]
+oneliner = "헬레네가 손님을 한눈에 알아보았고, 메넬라오스는 아버지가 살아 있다고 했다."
+body = """
+스파르타에는 헤르미오네의 결혼 잔치가 열리고 있었다.
+헬레네는 낯선 젊은이의 얼굴을 보고 오디세우스의 아들인 것을 알아보았다.
+메넬라오스는 이집트에서 바다의 노인 프로테우스에게 들은 말을 전했다.
+오디세우스는 칼립소의 섬에 붙잡혀 살아 있다는 것이었다.
+텔레마코스는 선물을 받았고, 아테나가 부르러 올 때까지 머물렀다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 14권 2장 「텔레마코스의 여정」. 프로테우스는 등록부에 없어 이름만(10권 1장은 이번 범위 밖). 메넬라오스가 여덟 해 만에 돌아온 것은 E.6.29."
+sources = ["homer.odyssey 4.1-624", "apollodorus.library E.6.29"]
+
+[[event]]
+id = "raft-and-storm"
+name_ko = "뗏목과 포세이돈의 바람"
+era = 7
+seq = 375
+span = "days"
+after = ["kalypso-years", "gods-council-hermes"]
+caused_by = ["polyphemos-escape"]
+places = ["ogygia", "scheria"]
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "poseidon", role = "상대" },
+  { figure = "athena", role = "도움" },
+  { figure = "kalypso", role = "도움" },
+]
+oneliner = "열여덟 날을 잘 가다가 포세이돈이 돌아와 뗏목을 부서뜨렸다."
+body = """
+칼립소가 준 도끼로 오디세우스는 나흘 동안 뗏목을 만들었다.
+열여덟 날 동안 순한 바람을 타고 파이아케스의 땅이 보이는 데까지 왔다.
+에티오피아에서 돌아오던 포세이돈이 그것을 보고 바람을 다 풀어 놓았다.
+뗏목이 부서지고, 바다의 여신 이노가 준 머릿수건을 두른 채 이틀을 헤엄쳤다.
+아테나가 강어귀를 찾게 도와주어 뭍에 올라 나뭇잎 속에서 잠들었다.
+"""
+note = "이노(레우코테아)는 카드모스의 딸이라 THE 쪽 이야기에도 나올 법해 만들지 않고 이름만 불렀다."
+sources = ["homer.odyssey 5.228-493", "apollodorus.library E.7.24"]
+
+[[event]]
+id = "nausikaa-meets"
+name_ko = "나우시카아가 오디세우스를 만나다"
+era = 7
+seq = 380
+span = "moment"
+after = ["raft-and-storm"]
+place = "scheria"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "nausikaa", role = "도움" },
+  { figure = "athena", role = "도움" },
+]
+oneliner = "공놀이하던 공주가 바닷가의 낯선 사람을 도왔다."
+body = """
+아테나가 꿈에 나타나 나우시카아를 강가로 빨래하러 보냈다.
+빨래를 마친 공주와 하녀들이 공놀이를 하다 공이 물에 빠져 소리를 질렀다.
+잎 속에서 자던 오디세우스가 나뭇가지로 몸을 가리고 나왔다.
+하녀들은 달아났지만 나우시카아는 남아 옷과 먹을 것을 주었다.
+그리고 성으로 가는 길과 어머니 아레테에게 부탁하는 법을 알려 주었다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 14권 1장 「파이아케스 왕국」."
+sources = ["homer.odyssey 6.1-331", "apollodorus.library E.7.25"]
+
+[[event]]
+id = "alkinoos-feast"
+name_ko = "알키노오스의 잔치와 오디세우스의 이야기"
+era = 7
+seq = 385
+span = "days"
+after = ["nausikaa-meets"]
+place = "scheria"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "alkinoos", role = "도움" },
+  { figure = "arete", role = "도움" },
+  { figure = "demodokos", role = "등장" },
+  { figure = "nausikaa", role = "등장" },
+]
+oneliner = "이름을 말하지 않던 손님이 트로이 노래를 듣고 울었다."
+body = """
+오디세우스는 아레테 왕비의 무릎을 붙잡고 집에 보내 달라고 청했다.
+알키노오스는 이름도 묻지 않고 잔치와 경기를 열어 주었다.
+눈먼 가객 데모도코스가 트로이 나무 말의 노래를 부르자 손님이 울었다.
+왕이 그제야 누구인지 묻자 오디세우스는 이름을 밝히고 떠돌이 이야기를 다 했다.
+키코네스에서 칼립소까지, 우리가 아는 이야기는 이 밤에 그가 한 이야기다.
+"""
+fun = "오디세이아 9~12권 전체가 이 잔치에서 오디세우스가 직접 한 이야기다."
+sources = ["homer.odyssey 7.1-347", "homer.odyssey 8.1-586", "homer.odyssey 9.1-38", "apollodorus.library E.7.25"]
+
+[[event]]
+id = "odysseus-lands-ithake"
+name_ko = "파이아케스의 배로 이타케에 닿다"
+era = 7
+seq = 390
+span = "days"
+after = ["alkinoos-feast"]
+places = ["scheria", "ithake"]
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "alkinoos", role = "도움" },
+  { figure = "athena", role = "도움" },
+  { figure = "poseidon", role = "상대" },
+]
+oneliner = "잠든 채 고향에 내려졌고, 아테나가 늙은 거지로 바꾸어 주었다."
+body = """
+파이아케스의 배는 밤새 달려 잠든 오디세우스를 이타케 항구에 내려 주었다.
+돌아가는 그 배를 포세이돈이 항구 앞에서 돌로 만들었다.
+깨어난 오디세우스는 안개 때문에 고향을 알아보지 못했다.
+젊은 양치기 모습으로 온 아테나가 여기가 이타케라고 알려 주었다.
+아테나는 오디세우스를 주름지고 머리 빠진 늙은 거지로 바꾸었다.
+"""
+sources = ["homer.odyssey 13.1-440", "apollodorus.library E.7.25"]
+
+# ============ 이타케 귀환 ============
+
+[[event]]
+id = "eumaios-hut"
+name_ko = "돼지치기 에우마이오스의 집"
+era = 7
+seq = 500
+span = "days"
+after = ["odysseus-lands-ithake"]
+place = "ithake"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "eumaios", role = "도움" },
+]
+oneliner = "거지 손님을 먹이고 재운 돼지치기는 주인이 죽었다고 믿고 있었다."
+body = """
+오디세우스는 아테나가 시킨 대로 먼저 돼지치기의 오두막으로 갔다.
+개들이 달려들자 에우마이오스가 돌을 던져 쫓고 손님을 안으로 들였다.
+에우마이오스는 낯선 거지를 먹이고 자기 외투를 덮어 재웠다.
+주인 이야기가 나오면 눈물을 흘리며 죽었을 거라고 했다.
+오디세우스는 자기가 누구인지 밝히지 않고 크레타 사람이라고 꾸며 말했다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 14권 1장 「돼지치기 에우마이오스」."
+sources = ["homer.odyssey 14.1-533", "apollodorus.library E.7.32"]
+
+[[event]]
+id = "telemachos-returns"
+name_ko = "텔레마코스가 돌아오다"
+era = 7
+seq = 510
+span = "days"
+after = ["telemachos-at-sparta"]
+places = ["sparta", "pylos", "ithake"]
+cast = [
+  { figure = "telemachos", role = "주인공" },
+  { figure = "athena", role = "도움" },
+  { figure = "menelaos", role = "등장" },
+  { figure = "helene", role = "등장" },
+  { figure = "antinoos", role = "상대" },
+]
+oneliner = "아테나가 서두르라고 했고, 구혼자들의 덫을 피해 섬에 닿았다."
+body = """
+아테나가 밤에 스파르타로 가서 텔레마코스에게 어서 돌아가라고 했다.
+메넬라오스와 헬레네가 선물을 주며 배웅했다.
+텔레마코스는 네스토르의 집에 들르지 않고 바로 배에 올랐다.
+구혼자들이 바다에 배를 숨겨 기다렸지만 아테나가 다른 길로 이끌었다.
+텔레마코스는 밤에 섬 뒤쪽에 내려 에우마이오스의 오두막으로 갔다.
+"""
+sources = ["homer.odyssey 15.1-300", "homer.odyssey 15.495-557", "homer.odyssey 4.842-847", "homer.odyssey 16.342-370"]
+
+[[event]]
+id = "father-and-son-meet"
+name_ko = "아버지와 아들이 만나다"
+era = 7
+seq = 520
+span = "moment"
+after = ["telemachos-returns"]
+within = "eumaios-hut"
+place = "ithake"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "telemachos", role = "주인공" },
+  { figure = "athena", role = "도움" },
+  { figure = "eumaios", role = "도움" },
+]
+oneliner = "스무 해 만에 만난 아버지를 아들은 신인 줄 알았다."
+body = """
+텔레마코스가 오두막에 들어오자 개들이 짖지 않고 꼬리를 쳤다.
+에우마이오스가 성에 소식을 전하러 간 사이 아테나가 오디세우스를 본모습으로 바꾸었다.
+텔레마코스는 신이 온 줄 알고 놀랐다.
+오디세우스가 아버지라고 말하자 두 사람은 껴안고 오래 울었다.
+그리고 구혼자들을 어떻게 할지 계획을 세웠다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 14권 3장 「두 사람의 계획」."
+sources = ["homer.odyssey 16.1-320", "apollodorus.library E.7.32"]
+
+[[event]]
+id = "argos-recognizes"
+name_ko = "개 아르고스가 주인을 알아보다"
+era = 7
+seq = 530
+span = "moment"
+after = ["eumaios-hut", "father-and-son-meet"]
+place = "ithake"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "argos-hound", role = "도움" },
+  { figure = "eumaios", role = "도움" },
+  { figure = "antinoos", role = "상대" },
+  { figure = "telemachos", role = "등장" },
+]
+oneliner = "거지 옷을 입은 주인을 아무도 못 알아봤지만, 개는 알아보았다."
+body = """
+오디세우스는 거지 모습으로 에우마이오스와 함께 성으로 갔다.
+길에서 염소치기 멜란티오스가 욕하고 발로 찼다.
+문 앞 똥 더미에 누워 있던 늙은 개 아르고스가 귀를 내리고 꼬리를 흔들었다.
+오디세우스는 몰래 눈물을 닦았고, 아르고스는 그 자리에서 죽었다.
+잔치 자리에서 안티노오스는 거지에게 발판을 던졌다.
+"""
+note = "멜란티오스는 등록부에 없어 이름만 불렀다."
+sources = ["homer.odyssey 17.166-327", "homer.odyssey 17.445-491", "apollodorus.library E.7.32"]
+
+[[event]]
+id = "eurykleia-scar"
+name_ko = "에우리클레이아가 흉터를 알아보다"
+era = 7
+seq = 540
+span = "moment"
+after = ["argos-recognizes"]
+place = "ithake"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "eurykleia", role = "도움" },
+  { figure = "athena", role = "도움" },
+  { figure = "penelope", role = "등장" },
+  { figure = "autolykos", role = "등장" },
+]
+oneliner = "늙은 유모가 발을 씻어 주다 무릎 위 흉터를 만졌다."
+body = """
+밤에 페넬로페가 거지를 불러 남편 소식을 물었다.
+오디세우스는 크레타에서 오디세우스를 만났다고 꾸며 말했다.
+페넬로페는 유모에게 손님의 발을 씻어 주라고 했다.
+에우리클레이아는 어릴 적 멧돼지에게 다친 흉터를 보고 주인을 알아보았다.
+오디세우스는 유모의 입을 막았고, 아테나는 페넬로페가 눈치채지 못하게 했다.
+"""
+fun = "그 흉터는 오디세우스가 어릴 때 외할아버지 아우톨리코스와 파르나소스 산에서 사냥하다 생긴 것이다."
+note = "참고: 처음 읽는 그리스 로마 신화 14권 3장 「간절한 기도」. 페넬로페가 활 시합을 정하는 것(19.570-581)도 이 밤이다."
+sources = ["homer.odyssey 19.53-604"]
+
+[[event]]
+id = "bow-contest"
+name_ko = "활 시합"
+era = 7
+seq = 550
+span = "moment"
+after = ["eurykleia-scar"]
+place = "ithake"
+cast = [
+  { figure = "penelope", role = "주인공" },
+  { figure = "odysseus", role = "주인공" },
+  { figure = "telemachos", role = "도움" },
+  { figure = "eumaios", role = "도움" },
+  { figure = "antinoos", role = "상대" },
+  { figure = "eurymachos", role = "상대" },
+]
+oneliner = "아무도 시위를 걸지 못한 활을 거지가 걸었다."
+body = """
+페넬로페는 오디세우스의 큰 활을 꺼내 왔다.
+시위를 걸고 도끼 열두 자루의 구멍을 화살로 꿰는 사람과 결혼하겠다고 했다.
+구혼자들은 아무도 시위를 걸지 못했다.
+거지가 활을 달라고 하자 모두 비웃었지만 텔레마코스가 주게 했다.
+오디세우스는 앉은 채로 시위를 걸고 화살로 도끼 구멍을 모두 꿰었다.
+"""
+fun = "이 활은 옛날 이피토스가 준 것이다. 오디세우스는 이 활을 트로이에 가져가지 않고 집에 두었다."
+note = "참고: 처음 읽는 그리스 로마 신화 14권 4장 「활의 주인」. 소치기 필로이티오스는 등록부에 없어 이름만."
+sources = ["homer.odyssey 21.1-434", "apollodorus.library E.7.33"]
+
+[[event]]
+id = "suitors-slain"
+name_ko = "구혼자들을 모두 죽이다"
+era = 7
+seq = 560
+span = "moment"
+caused_by = ["bow-contest"]
+place = "ithake"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "telemachos", role = "도움" },
+  { figure = "eumaios", role = "도움" },
+  { figure = "athena", role = "도움" },
+  { figure = "antinoos", role = "피해" },
+  { figure = "eurymachos", role = "피해" },
+  { figure = "phemios", role = "등장" },
+  { figure = "eurykleia", role = "등장" },
+]
+oneliner = "다음 화살은 안티노오스를 향했다."
+body = """
+오디세우스는 다음 화살을 잔을 들던 안티노오스에게 쏘았다.
+그리고 거지 옷을 벗고 자기가 누구인지 밝혔다.
+에우리마코스가 용서를 빌었지만 오디세우스는 받아 주지 않았다.
+텔레마코스와 에우마이오스, 소치기가 함께 싸웠고, 아테나가 거들었다.
+구혼자들은 모두 죽었고, 가객 페미오스만 텔레마코스의 말로 살았다.
+"""
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 14권 4장 「이타카의 왕」. 하녀들과 멜란티오스의 벌(22.435-477)은 쓰지 않았다."
+sources = ["homer.odyssey 22.1-501", "apollodorus.library E.7.33"]
+
+[[event]]
+id = "penelope-tests-bed"
+name_ko = "페넬로페의 시험 — 침대"
+era = 7
+seq = 570
+span = "moment"
+after = ["suitors-slain"]
+place = "ithake"
+cast = [
+  { figure = "penelope", role = "주인공" },
+  { figure = "odysseus", role = "주인공" },
+  { figure = "eurykleia", role = "도움" },
+  { figure = "athena", role = "도움" },
+  { figure = "telemachos", role = "등장" },
+]
+oneliner = "침대를 밖으로 옮기라는 말 한마디로 진짜인지 알아냈다."
+body = """
+에우리클레이아가 달려가 알렸지만 페넬로페는 믿지 않았다.
+누군가 속이러 온 것일지 몰라 한참 말없이 남편을 바라보았다.
+그리고 유모에게 남편이 만든 침대를 방 밖으로 옮겨 놓으라고 했다.
+오디세우스는 화를 내며 그 침대는 산 올리브나무 기둥이라 옮길 수 없다고 했다.
+그 말을 듣고 페넬로페는 남편인 것을 알고 달려가 껴안았다.
+"""
+fun = "아테나는 그 밤이 빨리 끝나지 않게 새벽을 붙잡아 두었다."
+note = "참고: 처음 읽는 그리스 로마 신화 14권 4장 「페넬로페의 질문」."
+sources = ["homer.odyssey 23.1-246"]
+
+[[event]]
+id = "odysseus-returns-home"
+name_ko = "오디세우스가 집으로 돌아오다"
+era = 7
+seq = 580
+span = "days"
+after = ["penelope-tests-bed"]
+place = "ithake"
+cast = [
+  { figure = "odysseus", role = "주인공" },
+  { figure = "laertes", role = "도움" },
+  { figure = "telemachos", role = "도움" },
+  { figure = "athena", role = "도움" },
+  { figure = "eupeithes", role = "상대" },
+  { figure = "mentor", role = "등장" },
+  { figure = "zeus", role = "등장" },
+]
+oneliner = "아버지와 만나고, 마지막 싸움은 아테나가 멈추게 했다."
+body = """
+오디세우스는 시골 밭으로 가서 늙은 아버지 라에르테스를 만났다.
+흉터와 어릴 적 받은 나무들을 말하자 아버지가 아들을 알아보았다.
+구혼자들의 아버지 에우페이테스가 사람들을 모아 쳐들어왔다.
+라에르테스의 창에 에우페이테스가 쓰러지고 제우스가 벼락을 던졌다.
+아테나가 멘토르의 모습으로 나서서 싸움을 멈추고 화해를 맺게 했다.
+"""
+fun = "아폴로도로스는 그 뒤 오디세우스가 테이레시아스의 말대로 포세이돈에게 제사를 올려 화를 풀었다고 적었다."
+note = "참고: 처음 읽는 그리스 로마 신화 14권 4장 「이타카의 왕」. 오디세우스의 마지막(E.7.34-40)은 이설이 많고 아이 수준에 맞지 않아 사건으로 만들지 않았다."
+sources = ["homer.odyssey 23.344-372", "homer.odyssey 24.205-548", "apollodorus.library E.7.33-E.7.34"]

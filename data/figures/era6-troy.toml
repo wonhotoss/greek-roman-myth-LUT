@@ -1,0 +1,1039 @@
+# era 6 — 트로이 전쟁. 그 뿌리인 탄탈로스 가문(era 4~5), 트로이 왕가, 레다와 헬레네, 펠레우스와 테티스도 여기 둔다.
+# 다른 에이전트 소유라 참조만 하는 id: laertes, antikleia, penelope, ithake, pylos(ODY) · lemnos, kastor, polydeukes, mt-pelion(THE) · herakles, cheiron(HER) · lykia(ATH)
+# 히기누스 82(탄탈로스)·92(파리스의 심판)·93(카산드라)은 코퍼스의 파일이 55번에서 끊겨 있어 인용하지 않았다.
+
+# ---------- 탄탈로스 가문 ----------
+
+[[figure]]
+id = "tantalos"
+name_ko = "탄탈로스"
+name_grc = "Tantalos"
+aka = ["탄탈루스"]
+kind = "human"
+era = 4
+parents = ["zeus"]
+oneliner = "신들을 속인 벌로 저승에서 영원히 굶고 목마른 왕."
+body = """
+제우스의 아들로, 신들과 한 식탁에서 먹을 만큼 가까웠다.
+그런데 신들의 비밀을 사람들에게 떠들었다.
+신들의 음식 암브로시아를 몰래 훔쳐 사람들에게 나누어 주었다.
+신들을 시험하려고 해서는 안 될 끔찍한 음식도 내놓았다.
+그 벌로 저승에서 물과 열매를 눈앞에 두고도 먹지 못한다.
+"""
+fun = "오디세우스가 저승에서 탄탈로스를 직접 보았다. 그 옆에서는 시시포스가 바위를 밀고 있었다."
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 4권 3장 「영원한 굶주림의 벌」. 펠롭스 잔치의 식인 상세는 쓰지 않는다."
+sources = ["apollodorus.library E.2.1", "apollodorus.library E.2.3", "homer.odyssey 11.582-592", "hyginus.fabulae 155"]
+
+[[figure]]
+id = "pelops"
+name_ko = "펠롭스"
+name_grc = "Pelops"
+kind = "human"
+era = 4
+parents = ["tantalos"]
+spouses = ["hippodameia"]
+home = "pisa"
+oneliner = "전차 경주로 아내와 나라를 얻은 탄탈로스의 아들."
+body = """
+아버지의 잔치에서 죽었는데, 신들이 다시 살려 냈다.
+살아난 뒤 전보다 더 아름다워져 포세이돈이 아꼈다.
+포세이돈은 바다 위를 달려도 축이 젖지 않는 날개 달린 전차를 주었다.
+그 전차로 오이노마오스와 경주해 이기고 히포다메이아를 아내로 맞았다.
+피사의 왕이 되었고, 다스린 땅 전체를 펠로폰네소스라 불렀다.
+"""
+fun = "펠롭스의 한쪽 어깨는 상아였다. 다시 살아날 때 신들이 그 자리를 상아로 채웠다고 오비디우스가 적었다."
+sensitivity = "soften"
+sources = ["apollodorus.library E.2.3-E.2.9", "ovid.metamorphoses 6.401-411", "pausanias.greece 5.10"]
+
+[[figure]]
+id = "hippodameia"
+name_ko = "히포다메이아"
+name_grc = "Hippodameia"
+kind = "human"
+era = 4
+parents = ["oinomaos"]
+spouses = ["pelops"]
+home = "pisa"
+oneliner = "전차 경주의 상으로 걸린 피사의 공주."
+body = """
+아버지 오이노마오스는 딸에게 구혼하는 사람과 전차 경주를 했다.
+져서 잡힌 사람은 죽였고, 그런 사람이 열둘이 넘었다.
+히포다메이아는 펠롭스를 보고 마음에 들어 그를 돕기로 했다.
+아버지의 마부 미르틸로스를 설득해 펠롭스 편에 서게 했다.
+경주가 끝나자 펠롭스의 아내가 되었다.
+"""
+sources = ["apollodorus.library E.2.4-E.2.8", "pausanias.greece 5.11"]
+
+[[figure]]
+id = "oinomaos"
+name_ko = "오이노마오스"
+name_grc = "Oinomaos"
+kind = "human"
+era = 4
+home = "pisa"
+oneliner = "딸의 구혼자들과 전차 경주를 해서 죽인 피사의 왕."
+body = """
+딸과 결혼한 사람이 자기를 죽인다는 말을 들었다고 한다.
+그래서 구혼자에게 딸을 전차에 태우고 달아나게 했다.
+자기는 아레스가 준 갑옷과 말로 뒤쫓아, 따라잡으면 죽였다.
+마부 미르틸로스가 바퀴의 쐐기를 빼 두어 경주에서 졌다.
+전차에서 떨어져 죽으면서 미르틸로스를 저주했다.
+"""
+sources = ["apollodorus.library E.2.4-E.2.7", "pausanias.greece 5.1"]
+
+[[figure]]
+id = "myrtilos"
+name_ko = "미르틸로스"
+name_grc = "Myrtilos"
+kind = "human"
+era = 4
+parents = ["hermes"]
+home = "pisa"
+oneliner = "주인의 전차 바퀴에서 쐐기를 뺀 마부."
+body = """
+헤르메스의 아들로, 오이노마오스의 전차를 몰았다.
+히포다메이아의 부탁을 받고 바퀴에 쐐기를 끼우지 않았다.
+경주 중에 바퀴가 빠져 오이노마오스가 죽었다.
+그 뒤 펠롭스와 길을 가다 히포다메이아에게 못된 짓을 하려 했다.
+펠롭스는 그를 바다에 던졌고, 그는 떨어지면서 펠롭스의 집안을 저주했다.
+"""
+fun = "그가 떨어진 바다를 지금도 미르토스 해라고 부른다."
+sensitivity = "soften"
+sources = ["apollodorus.library E.2.6-E.2.8", "pausanias.greece 5.10"]
+
+[[figure]]
+id = "atreus"
+name_ko = "아트레우스"
+name_grc = "Atreus"
+kind = "human"
+era = 5
+parents = ["pelops"]
+home = "mycenae"
+oneliner = "동생과 왕자리를 다툰 미케네의 왕, 아가멤논의 아버지."
+body = """
+미케네 사람들은 펠롭스의 아들을 왕으로 뽑으라는 신의 말을 들었다.
+아트레우스와 동생 티에스테스가 왕자리를 두고 다투었다.
+황금 양을 가진 쪽이 왕이 되자고 했는데, 양은 티에스테스 손에 있었다.
+제우스가 해를 동쪽으로 지게 해서 아트레우스 편을 들어 주었다.
+아트레우스는 왕이 되었고 동생을 쫓아냈다.
+"""
+fun = "이 집안의 지팡이는 헤르메스가 펠롭스에게 준 것이다. 아트레우스를 거쳐 아가멤논까지 내려갔다."
+sensitivity = "soften"
+note = "티에스테스의 잔치(E.2.13)는 쓰지 않는다."
+sources = ["apollodorus.library E.2.10-E.2.12", "homer.iliad 2.100-108"]
+
+[[figure]]
+id = "thyestes"
+name_ko = "티에스테스"
+name_grc = "Thyestes"
+kind = "human"
+era = 5
+parents = ["pelops"]
+oneliner = "형 아트레우스와 미케네를 다투다 쫓겨난 동생."
+body = """
+형 아트레우스와 미케네의 왕자리를 다투었다.
+황금 양을 내보여 왕이 되었지만, 해가 거꾸로 지자 자리를 잃었다.
+형은 그를 나라에서 쫓아냈다.
+두 형제는 그 뒤로도 서로에게 끔찍한 일을 저질렀다.
+뒷날 아들 아이기스토스가 아트레우스를 죽이고 아버지를 왕으로 세웠다.
+"""
+sensitivity = "soften"
+note = "잔치(E.2.13)와 아이기스토스의 출생(E.2.14)은 쓰지 않는다. 아이기스토스는 ODY 소유 인물이라 이름만 부른다."
+sources = ["apollodorus.library E.2.10-E.2.14"]
+
+[[figure]]
+id = "agamemnon"
+name_ko = "아가멤논"
+name_grc = "Agamemnon"
+kind = "human"
+era = 6
+parents = ["atreus"]
+spouses = ["klytaimnestra"]
+home = "mycenae"
+oneliner = "트로이로 간 그리스 군대 전체를 이끈 미케네의 왕."
+body = """
+동생 메넬라오스의 아내 헬레네를 되찾으러 그리스의 왕들을 모았다.
+가장 많은 배, 백 척을 이끌고 왔고 군대 전체를 지휘했다.
+아울리스에서는 바람을 얻으려고 딸 이피게네이아를 내놓아야 했다.
+트로이에서는 아킬레우스와 크게 다투어 군대를 위험에 빠뜨렸다.
+전쟁이 끝나고 집에 돌아간 뒤의 이야기는 따로 있다.
+"""
+fun = "아가멤논은 지팡이 하나로 왕들을 다스렸다. 그 지팡이는 헤파이스토스가 만들어 제우스에게 준 것이다."
+sensitivity = "soften"
+note = "집에 돌아간 뒤의 죽음은 ODY 가 agamemnon-murdered 로 쓴다."
+sources = ["apollodorus.library E.2.16", "apollodorus.library E.3.6", "apollodorus.library E.3.12", "apollodorus.library E.3.21-E.3.22", "homer.iliad 1.101-305", "homer.iliad 2.100-108"]
+
+[[figure]]
+id = "menelaos"
+name_ko = "메넬라오스"
+name_grc = "Menelaos"
+kind = "human"
+era = 6
+parents = ["atreus"]
+spouses = ["helene"]
+home = "sparta"
+oneliner = "아내 헬레네를 파리스에게 잃은 스파르타의 왕."
+body = """
+헬레네의 구혼자 가운데서 틴다레오스가 고른 사람이다.
+헬레네와 결혼하고 스파르타의 왕이 되었다.
+파리스가 손님으로 와 있을 때 크레타에 갔다가 아내를 잃었다.
+형 아가멤논을 찾아가 그리스 전체를 움직여 달라고 했다.
+트로이에서 파리스와 맞붙어 이겼지만, 아프로디테가 파리스를 빼내 갔다.
+"""
+sources = ["apollodorus.library 3.10.9", "apollodorus.library E.2.16", "apollodorus.library E.3.3", "apollodorus.library E.3.6", "homer.iliad 3.340-382", "apollodorus.library E.5.22"]
+
+[[figure]]
+id = "tyndareos"
+name_ko = "틴다레오스"
+name_grc = "Tyndareos"
+kind = "human"
+era = 5
+spouses = ["leda"]
+home = "sparta"
+oneliner = "헬레네의 구혼자 모두에게 맹세를 받아 낸 스파르타의 왕."
+body = """
+레다의 남편이고, 헬레네와 클리타임네스트라를 키웠다.
+헬레네에게 그리스의 왕들이 몰려와 구혼했다.
+한 사람을 고르면 나머지가 싸울까 걱정했다.
+오디세우스의 꾀를 따라 구혼자 모두에게 맹세를 받았다.
+신랑이 억울한 일을 당하면 다 함께 돕겠다는 맹세였다.
+"""
+fun = "이 맹세 때문에 그리스의 왕들이 나중에 모두 트로이로 가야 했다."
+sources = ["apollodorus.library 3.10.7-3.10.9", "apollodorus.library E.2.15-E.2.16"]
+
+[[figure]]
+id = "leda"
+name_ko = "레다"
+name_grc = "Leda"
+kind = "human"
+era = 5
+spouses = ["tyndareos"]
+home = "sparta"
+oneliner = "백조로 모습을 바꾼 제우스가 다가간 스파르타의 왕비."
+body = """
+틴다레오스의 아내다.
+제우스가 백조로 모습을 바꾸어 다가왔다.
+그래서 레다의 아이들 가운데 폴리데우케스와 헬레네는 제우스의 자식이다.
+카스토르와 클리타임네스트라는 틴다레오스의 자식이다.
+헬레네가 네메시스가 낳은 알에서 나왔다는 이야기도 있다.
+"""
+sensitivity = "soften"
+sources = ["apollodorus.library 3.10.7"]
+
+[[figure]]
+id = "helene"
+name_ko = "헬레네"
+name_grc = "Helene"
+name_la = "Helena"
+aka = ["헬렌", "헬레나", "트로이의 헬레네"]
+kind = "human"
+era = 6
+parents = ["zeus", "leda"]
+parents_variant = [
+  { source = "apollodorus.library 3.10.7", parents = ["tyndareos", "leda"], text = "헬레네를 틴다레오스의 딸이라고 하는 이야기도 있다." },
+]
+spouses = ["menelaos", "paris"]
+home = "sparta"
+oneliner = "가장 아름다운 여자. 그 때문에 트로이 전쟁이 일어났다."
+body = """
+제우스의 딸이고, 스파르타에서 자랐다.
+그리스의 왕들이 모두 구혼했고, 메넬라오스의 아내가 되었다.
+아프로디테가 파리스에게 약속한 선물이 헬레네였다.
+파리스를 따라 트로이로 갔고, 그 때문에 열 해의 전쟁이 났다.
+트로이가 무너진 뒤 메넬라오스가 다시 데려갔다.
+"""
+fun = "헬레네가 진짜로는 트로이에 가지 않았다는 이야기도 있다. 헤르메스가 헬레네를 이집트에 숨기고, 파리스는 구름으로 만든 헬레네를 데려갔다는 것이다."
+sensitivity = "soften"
+note = "네메시스의 알 이설(3.10.7)은 네메시스가 등록부에 없어 parents_variant 로 적지 않고 레다의 body 에 한 줄로 남긴다."
+sources = ["apollodorus.library 3.10.7-3.10.9", "apollodorus.library E.3.2-E.3.5", "homer.iliad 3.121-244", "homer.odyssey 4.271-289", "apollodorus.library E.5.22"]
+
+[[figure]]
+id = "klytaimnestra"
+name_ko = "클리타임네스트라"
+name_grc = "Klytaimnestra"
+aka = ["클뤼타임네스트라", "클리템네스트라"]
+kind = "human"
+era = 6
+parents = ["tyndareos", "leda"]
+spouses = ["agamemnon"]
+home = "mycenae"
+oneliner = "딸을 아울리스로 보내야 했던 아가멤논의 아내."
+body = """
+헬레네와 한집에서 자란 자매다.
+아가멤논과 결혼해 미케네의 왕비가 되었다.
+아가멤논은 딸을 아킬레우스와 결혼시키겠다고 속여 아울리스로 불렀다.
+클리타임네스트라는 그 말을 믿고 이피게네이아를 보냈다.
+남편이 트로이에서 돌아온 뒤의 이야기는 따로 있다.
+"""
+sensitivity = "soften"
+note = "아가멤논을 죽이는 일은 ODY 가 쓴다."
+sources = ["apollodorus.library 3.10.7", "apollodorus.library E.2.16", "apollodorus.library E.3.22"]
+
+[[figure]]
+id = "iphigeneia"
+name_ko = "이피게네이아"
+name_grc = "Iphigeneia"
+aka = ["이피게니아"]
+kind = "human"
+era = 6
+parents = ["agamemnon", "klytaimnestra"]
+home = "mycenae"
+oneliner = "아울리스의 제단에서 아르테미스가 사슴과 바꾸어 데려간 공주."
+body = """
+아가멤논의 딸이다.
+그리스 배들이 아울리스에서 바람을 얻지 못했다.
+칼카스가 아가멤논의 딸을 아르테미스에게 바쳐야 한다고 했다.
+아버지는 결혼시킨다고 속여 딸을 불러 제단 앞에 세웠다.
+그 순간 아르테미스가 제단에 사슴을 두고 이피게네이아를 멀리 데려갔다.
+"""
+fun = "아르테미스가 이피게네이아를 자기 신전지기로 삼았다고도 하고, 죽지 않는 몸으로 만들었다고도 한다."
+sensitivity = "soften"
+sources = ["apollodorus.library E.3.21-E.3.22", "ovid.metamorphoses 12.24-38"]
+
+# ---------- 트로이 왕가 ----------
+
+[[figure]]
+id = "laomedon"
+name_ko = "라오메돈"
+name_grc = "Laomedon"
+kind = "human"
+era = 5
+home = "troy"
+oneliner = "약속을 어겨 신들과 헤라클레스를 화나게 한 트로이의 왕."
+body = """
+프리아모스의 아버지다.
+포세이돈이 성벽을 쌓고 아폴론이 소를 쳤는데, 값을 주지 않았다.
+헤라클레스에게도 말을 주기로 하고 주지 않았다.
+헤라클레스가 와서 트로이를 무너뜨렸고, 라오메돈은 죽었다.
+그 뒤 아들 프리아모스가 왕이 되었다.
+"""
+note = "헤라클레스의 트로이 원정은 HER 이 herakles-sacks-troy 로 쓴다."
+sources = ["apollodorus.library 3.12.3", "apollodorus.library 3.12.5", "homer.iliad 5.638-651", "homer.iliad 21.441-457"]
+
+[[figure]]
+id = "priamos"
+name_ko = "프리아모스"
+name_grc = "Priamos"
+aka = ["프리암"]
+kind = "human"
+era = 6
+parents = ["laomedon"]
+spouses = ["hekabe"]
+home = "troy"
+oneliner = "아들 쉰 명을 둔 트로이의 늙은 왕."
+body = """
+헤라클레스가 트로이를 무너뜨린 뒤 왕이 되었다.
+헥토르, 파리스, 카산드라 등 많은 자식을 두었다.
+전쟁 동안 성벽 위에서 싸움을 지켜보았다.
+헥토르가 죽은 뒤 홀로 아킬레우스의 막사로 가서 아들의 시신을 찾아왔다.
+트로이가 무너지는 밤에 네옵톨레모스가 제단 앞에서 그를 죽였다.
+"""
+fun = "프리아모스는 아들이 쉰 명이라고 아킬레우스에게 말했다. 그중 열아홉이 헤카베가 낳은 아들이다."
+sensitivity = "soften"
+sources = ["apollodorus.library 3.12.5", "homer.iliad 24.468-676", "homer.iliad 24.493-497", "apollodorus.library E.5.21", "virgil.aeneid 2.506-558"]
+
+[[figure]]
+id = "hekabe"
+name_ko = "헤카베"
+name_grc = "Hekabe"
+name_la = "Hecuba"
+aka = ["헤쿠바"]
+kind = "human"
+era = 6
+spouses = ["priamos"]
+home = "troy"
+oneliner = "불붙은 나무토막을 낳는 꿈을 꾼 트로이의 왕비."
+body = """
+프리아모스의 아내로, 헥토르와 파리스와 카산드라의 어머니다.
+파리스를 가졌을 때 불붙은 나무토막을 낳는 꿈을 꾸었다.
+그 불이 도시 전체를 태우는 꿈이었다.
+헥토르가 아킬레우스와 싸우러 나갈 때 성벽에서 말렸지만 듣지 않았다.
+트로이가 무너진 뒤 붙잡혀 갔다.
+"""
+sensitivity = "soften"
+sources = ["apollodorus.library 3.12.5", "homer.iliad 22.79-89", "homer.iliad 24.193-227", "apollodorus.library E.5.23"]
+
+[[figure]]
+id = "hektor"
+name_ko = "헥토르"
+name_grc = "Hektor"
+aka = ["헥터"]
+kind = "hero"
+era = 6
+parents = ["priamos", "hekabe"]
+spouses = ["andromache"]
+home = "troy"
+oneliner = "트로이를 지킨 가장 뛰어난 장수, 아킬레우스에게 죽었다."
+body = """
+프리아모스의 맏아들로 트로이 군대를 이끌었다.
+아이아스와 하루 종일 싸워 승패를 못 내고 서로 선물을 주고 헤어졌다.
+그리스군의 성벽 문을 큰 돌로 부수고 배에 불을 놓았다.
+아킬레우스의 갑옷을 입은 파트로클로스를 죽였다.
+그 때문에 아킬레우스가 돌아왔고, 성문 앞에서 그와 싸워 죽었다.
+"""
+fun = "헥토르는 아들을 스카만드리오스라 불렀다. 그런데 트로이 사람들은 '도시의 주인'이라는 뜻으로 아스티아낙스라 불렀다."
+sources = ["homer.iliad 6.390-502", "homer.iliad 7.206-312", "homer.iliad 12.437-471", "homer.iliad 16.818-867", "homer.iliad 22.131-404", "apollodorus.library E.4.7"]
+
+[[figure]]
+id = "paris"
+name_ko = "파리스"
+name_grc = "Paris"
+aka = ["알렉산드로스", "알렉산더"]
+kind = "human"
+era = 6
+parents = ["priamos", "hekabe"]
+spouses = ["helene"]
+home = "troy"
+oneliner = "황금 사과를 아프로디테에게 주고 헬레네를 얻은 트로이의 왕자."
+body = """
+태어나기 전 어머니가 나쁜 꿈을 꾸어, 태어나자 이데 산에 버려졌다.
+곰이 닷새 동안 젖을 주었고, 종이 데려가 아들로 키웠다.
+도둑을 잘 막아 알렉산드로스라는 이름도 얻었다.
+세 여신 가운데 아프로디테를 골라, 헬레네를 얻으러 스파르타에 갔다.
+전쟁 끝에 아킬레우스를 죽였고, 자기도 필록테테스의 화살에 죽었다.
+"""
+fun = "파리스가 아킬레우스를 맞힌 곳은 발목이다. 아폴론이 화살을 이끌었다."
+note = "참고: 처음 읽는 그리스 로마 신화 11권 1장 「파리스의 탄생」. 오이노네(3.12.6)는 등록부에 없어 이름만 부른다."
+sources = ["apollodorus.library 3.12.5", "apollodorus.library E.3.2-E.3.4", "homer.iliad 3.15-75", "homer.iliad 3.340-382", "apollodorus.library E.5.3", "apollodorus.library E.5.8"]
+
+[[figure]]
+id = "kassandra"
+name_ko = "카산드라"
+name_grc = "Kassandra"
+aka = ["카싼드라"]
+kind = "human"
+era = 6
+parents = ["priamos", "hekabe"]
+home = "troy"
+oneliner = "앞일을 다 알았지만 아무도 믿어 주지 않은 트로이의 공주."
+body = """
+아폴론이 카산드라의 마음을 얻으려고 앞일을 보는 힘을 주었다.
+카산드라는 힘만 받고 아폴론을 거절했다.
+아폴론은 그 힘에서 사람을 설득하는 힘을 빼앗았다.
+그래서 목마 안에 군사가 있다고 말했지만 아무도 듣지 않았다.
+트로이가 무너진 뒤 아가멤논이 카산드라를 데려갔다.
+"""
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 2권 4장 「예언자 카산드라」. 오일레우스의 아이아스가 한 일(E.5.22)은 쓰지 않는다."
+sources = ["apollodorus.library 3.12.5", "apollodorus.library E.5.17", "apollodorus.library E.5.23", "virgil.aeneid 2.246-247"]
+
+[[figure]]
+id = "helenos"
+name_ko = "헬레노스"
+name_grc = "Helenos"
+kind = "human"
+era = 6
+parents = ["priamos", "hekabe"]
+home = "troy"
+oneliner = "트로이가 어떻게 무너질지 그리스군에 말해 준 트로이의 예언자."
+body = """
+카산드라와 같이 앞일을 보는 힘이 있었다.
+파리스가 죽은 뒤 헬레네를 두고 데이포보스와 다투다가 트로이를 떠났다.
+이데 산에 있다가 오디세우스에게 붙잡혔다.
+트로이를 얻는 데 필요한 세 가지를 말해야 했다.
+전쟁 뒤에는 안드로마케와 함께 새 나라에서 살았다.
+"""
+note = "전쟁 뒤의 부트로툼 이야기(아이네이스 3권)는 AEN 이 쓴다."
+sources = ["apollodorus.library 3.12.5", "homer.iliad 6.76", "homer.iliad 7.44-53", "apollodorus.library E.5.9-E.5.10", "virgil.aeneid 3.294-355"]
+
+[[figure]]
+id = "deiphobos"
+name_ko = "데이포보스"
+name_grc = "Deiphobos"
+kind = "human"
+era = 6
+parents = ["priamos", "hekabe"]
+home = "troy"
+oneliner = "헥토르가 가장 아낀 동생. 아테나가 그의 모습으로 헥토르를 속였다."
+body = """
+프리아모스의 아들로 헥토르가 형제 가운데 가장 아꼈다.
+아킬레우스와 싸울 때 아테나가 그의 모습으로 나타나 헥토르를 속였다.
+파리스가 죽은 뒤 헬레노스와 다투고 헬레네를 아내로 삼았다.
+목마 안의 헬레네가 아내들 목소리를 흉내 낼 때 옆에 있었다.
+트로이가 무너지는 밤에 메넬라오스가 그를 죽였다.
+"""
+sensitivity = "soften"
+sources = ["apollodorus.library 3.12.5", "homer.iliad 22.226-305", "apollodorus.library E.5.9", "homer.odyssey 4.271-289", "apollodorus.library E.5.22"]
+
+[[figure]]
+id = "andromache"
+name_ko = "안드로마케"
+name_grc = "Andromache"
+kind = "human"
+era = 6
+spouses = ["hektor"]
+home = "troy"
+oneliner = "성문 앞에서 남편 헥토르와 마지막으로 인사한 아내."
+body = """
+테베 왕 에에티온의 딸이고 헥토르의 아내다.
+아킬레우스가 친정 도시를 무너뜨려 아버지와 일곱 오빠를 잃었다.
+헥토르가 싸움터로 나가는 성문 앞에서 아기를 안고 남편을 붙잡았다.
+헥토르는 부끄러워서 남을 수 없다고 했다.
+트로이가 무너진 뒤 네옵톨레모스가 안드로마케를 데려갔다.
+"""
+sensitivity = "soften"
+sources = ["homer.iliad 6.390-502", "homer.iliad 22.437-515", "homer.iliad 24.723-745", "apollodorus.library E.5.23"]
+
+[[figure]]
+id = "astyanax"
+name_ko = "아스티아낙스"
+name_grc = "Astyanax"
+aka = ["스카만드리오스"]
+kind = "human"
+era = 6
+parents = ["hektor", "andromache"]
+home = "troy"
+oneliner = "트로이가 무너질 때 살지 못한 헥토르의 어린 아들."
+body = """
+헥토르와 안드로마케의 아기다.
+아버지는 스카만드리오스라 불렀고, 사람들은 아스티아낙스라 불렀다.
+'도시의 주인'이라는 뜻이다.
+번쩍이는 투구를 보고 울어서, 헥토르가 투구를 벗고 안아 주었다.
+트로이가 무너진 밤에 그리스군이 아이를 살려 두지 않았다.
+"""
+sensitivity = "soften"
+sources = ["homer.iliad 6.400-403", "homer.iliad 6.466-481", "homer.iliad 22.484-507", "apollodorus.library E.5.23"]
+
+[[figure]]
+id = "anchises"
+name_ko = "안키세스"
+name_grc = "Anchises"
+kind = "human"
+era = 6
+home = "mt-ida-troad"
+oneliner = "아프로디테가 사랑한 트로이의 왕족, 아이네이아스의 아버지."
+body = """
+트로이 왕가의 먼 친척으로 이데 산 근처에서 소를 쳤다.
+아프로디테가 그를 사랑해 이데 산에서 아이네이아스를 낳았다.
+전쟁 때는 나이가 많아 싸우지 않았다.
+트로이가 무너지는 밤에 아들이 그를 등에 업고 빠져나갔다.
+그리스군도 그 모습을 보고 길을 막지 않았다.
+"""
+sources = ["apollodorus.library 3.12.2", "hesiod.theogony 1008-1010", "homer.iliad 5.311-313", "apollodorus.library E.5.21", "virgil.aeneid 2.634-729"]
+
+[[figure]]
+id = "aineias"
+name_ko = "아이네이아스"
+name_grc = "Aineias"
+name_la = "Aeneas"
+aka = ["아이네아스", "에네아스"]
+kind = "hero"
+era = 6
+parents = ["anchises", "aphrodite"]
+spouses = ["kreousa"]
+home = "troy"
+oneliner = "트로이가 무너질 때 살아 나와 새 나라를 찾아간 트로이의 장수."
+body = """
+아프로디테의 아들로 트로이 편에서 싸웠다.
+디오메데스에게 크게 다칠 때 어머니 아프로디테가 감싸 주었다.
+아프로디테도 다치자 아폴론이 그를 안전한 곳으로 옮겼다.
+트로이가 무너지는 밤에 아버지 안키세스를 업고 빠져나갔다.
+그 뒤 바다를 떠돌며 새 나라를 찾은 이야기는 따로 있다.
+"""
+fun = "로마 사람들은 아이네이아스를 자기들의 조상이라고 믿었다."
+note = "탈출과 항해는 AEN 이 aineias-leaves-troy 로 쓴다."
+sources = ["apollodorus.library E.3.34", "apollodorus.library E.4.2", "homer.iliad 5.297-317", "homer.iliad 5.432-453", "apollodorus.library E.5.21", "virgil.aeneid 1.257-296", "virgil.aeneid 2.634-804"]
+
+[[figure]]
+id = "kreousa"
+name_ko = "크레우사"
+name_grc = "Kreousa"
+name_la = "Creusa"
+kind = "human"
+era = 6
+parents = ["priamos", "hekabe"]
+spouses = ["aineias"]
+home = "troy"
+oneliner = "트로이가 무너지는 밤에 사라진 아이네이아스의 아내."
+body = """
+프리아모스의 딸이고 아이네이아스의 아내다.
+아들 아스카니오스를 두었다.
+트로이가 불타는 밤에 남편과 아들의 뒤를 따라 도시를 빠져나갔다.
+그런데 길에서 사라져 다시 보이지 않았다.
+아이네이아스가 되돌아가 찾았지만 만나지 못했다.
+"""
+sensitivity = "soften"
+note = "askanios 는 AEN 소유라 이름만 부른다. 크레우사의 혼령 장면(아이네이스 2.771-795)은 AEN 의 사건에서 다룬다."
+sources = ["apollodorus.library 3.12.5", "virgil.aeneid 2.735-795"]
+
+# ---------- 트로이를 도우러 온 사람들 ----------
+
+[[figure]]
+id = "sarpedon"
+name_ko = "사르페돈"
+name_grc = "Sarpedon"
+kind = "hero"
+era = 6
+parents = ["zeus"]
+home = "lykia"
+oneliner = "제우스의 아들인데도 트로이 편에서 싸우다 죽은 리키아의 왕."
+body = """
+멀리 리키아에서 군대를 이끌고 트로이를 도우러 왔다.
+그리스군의 성벽을 맨 처음 무너뜨린 것이 사르페돈이다.
+파트로클로스와 싸우다 죽었다.
+제우스는 아들을 살리고 싶었지만 헤라가 말렸다.
+대신 잠과 죽음 형제를 보내 시신을 리키아로 옮기게 했다.
+"""
+fun = "제우스는 아들이 죽기 전에 피 같은 비를 땅에 내렸다."
+sources = ["apollodorus.library E.3.35", "homer.iliad 12.290-399", "homer.iliad 16.419-507", "homer.iliad 16.666-683", "apollodorus.library E.4.6"]
+
+[[figure]]
+id = "memnon"
+name_ko = "멤논"
+name_grc = "Memnon"
+kind = "hero"
+era = 6
+parents = ["eos"]
+home = "aithiopia"
+oneliner = "에티오피아 군대를 이끌고 트로이에 온 새벽의 여신의 아들."
+body = """
+새벽의 여신 에오스와 티토노스의 아들이다.
+아킬레우스가 죽기 얼마 전에 큰 군대를 이끌고 트로이에 왔다.
+많은 그리스 사람을 죽였고, 네스토르의 아들 안틸로코스도 죽였다.
+그러다 아킬레우스와 맞붙어 죽었다.
+어머니 에오스가 아들을 잃고 슬퍼했다.
+"""
+fun = "멤논의 장작불 재에서 새들이 생겨났다고 한다. 그 새들을 멤노니데스라 불렀다."
+sources = ["hesiod.theogony 984-985", "apollodorus.library 3.12.4", "apollodorus.library E.5.3", "homer.odyssey 4.187-188", "ovid.metamorphoses 13.576-622"]
+
+[[figure]]
+id = "penthesileia"
+name_ko = "펜테실레이아"
+name_grc = "Penthesileia"
+aka = ["펜테실레아"]
+kind = "hero"
+era = 6
+parents = ["ares"]
+oneliner = "트로이를 도우러 와 아킬레우스와 싸운 아마존의 여왕."
+body = """
+아레스의 딸이고 아마존 여전사들의 여왕이다.
+실수로 히폴리테를 죽인 뒤 프리아모스에게 와서 죄를 씻었다.
+헥토르가 죽은 뒤 트로이 편에서 싸워 많은 그리스 사람을 죽였다.
+아킬레우스와 맞붙어 죽었다.
+아킬레우스는 죽은 그녀를 보고 마음이 아팠다.
+"""
+note = "히폴리테는 HER 소유 인물이라 이름만 부른다."
+sources = ["apollodorus.library E.5.1", "virgil.aeneid 1.490-493"]
+
+[[figure]]
+id = "laokoon"
+name_ko = "라오코온"
+name_grc = "Laokoon"
+kind = "human"
+era = 6
+home = "troy"
+oneliner = "목마를 믿지 말라고 외치다 바다에서 온 뱀에게 죽은 트로이의 사제."
+body = """
+트로이 사람들이 목마를 성 안으로 끌어들이려 했다.
+라오코온은 그리스 사람의 선물을 믿지 말라고 외쳤다.
+창을 던져 목마의 옆구리를 맞히기까지 했다.
+그때 바다에서 큰 뱀 두 마리가 나와 라오코온과 두 아들을 죽였다.
+사람들은 신이 라오코온을 벌했다고 믿고 목마를 들여놓았다.
+"""
+sensitivity = "soften"
+sources = ["apollodorus.library E.5.17-E.5.18", "virgil.aeneid 2.40-56", "virgil.aeneid 2.199-233"]
+
+[[figure]]
+id = "sinon"
+name_ko = "시논"
+name_grc = "Sinon"
+kind = "human"
+era = 6
+oneliner = "거짓말로 트로이 사람들을 속여 목마를 들여놓게 한 그리스 사람."
+body = """
+그리스군이 떠난 척할 때 홀로 남았다.
+트로이 사람들에게 붙잡힌 척하며 거짓말을 했다.
+아테나에게 바친 선물이고, 성 안에 두면 트로이가 안전해진다고 했다.
+밤이 되자 아킬레우스의 무덤 위에서 불을 올려 배들을 불렀다.
+그리고 목마의 문을 열어 안의 군사들을 내보냈다.
+"""
+sources = ["apollodorus.library E.5.15", "apollodorus.library E.5.19", "virgil.aeneid 2.57-198", "virgil.aeneid 2.254-259"]
+
+# ---------- 그리스 진영 ----------
+
+[[figure]]
+id = "chryses"
+name_ko = "크리세스"
+name_grc = "Chryses"
+kind = "human"
+era = 6
+oneliner = "딸을 되찾으러 그리스군 진영에 온 아폴론의 사제."
+body = """
+크리세에서 아폴론을 모시는 사제다.
+딸 크리세이스가 아가멤논의 손에 들어가자 몸값을 들고 찾아왔다.
+아가멤논이 거칠게 내쫓았다.
+크리세스는 바닷가에서 아폴론에게 기도했다.
+아폴론이 그 기도를 듣고 그리스군에 역병을 보냈다.
+"""
+sources = ["homer.iliad 1.8-52", "homer.iliad 1.430-474"]
+
+[[figure]]
+id = "chryseis"
+name_ko = "크리세이스"
+name_grc = "Chryseis"
+aka = ["크뤼세이스"]
+kind = "human"
+era = 6
+parents = ["chryses"]
+oneliner = "역병 끝에 아버지에게 돌아간 사제의 딸."
+body = """
+아폴론의 사제 크리세스의 딸이다.
+그리스군이 테베를 무너뜨릴 때 붙잡혀 아가멤논에게 갔다.
+아버지가 몸값을 들고 왔지만 아가멤논은 돌려주지 않았다.
+아폴론이 역병을 보내자, 오디세우스가 배로 아버지에게 데려다 주었다.
+그 대신 아가멤논이 아킬레우스의 브리세이스를 빼앗았다.
+"""
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 11권 3장 「노예 크리세이스」"
+sources = ["homer.iliad 1.111-115", "homer.iliad 1.366-392", "homer.iliad 1.430-447", "apollodorus.library E.4.1"]
+
+[[figure]]
+id = "briseis"
+name_ko = "브리세이스"
+name_grc = "Briseis"
+kind = "human"
+era = 6
+oneliner = "아가멤논이 아킬레우스에게서 빼앗아 다툼을 부른 여자."
+body = """
+아킬레우스가 리르네소스를 무너뜨릴 때 붙잡아 왔다.
+아가멤논이 크리세이스를 돌려보내고, 그 대신 브리세이스를 데려갔다.
+아킬레우스는 그 일로 싸움에서 손을 뗐다.
+파트로클로스가 죽고 아킬레우스가 돌아온 뒤에야 다시 돌아왔다.
+브리세이스는 파트로클로스의 시신 앞에서 울었다.
+"""
+sensitivity = "soften"
+sources = ["homer.iliad 1.318-348", "homer.iliad 2.688-694", "homer.iliad 19.282-302", "apollodorus.library E.4.1", "apollodorus.library E.4.7"]
+
+[[figure]]
+id = "peleus"
+name_ko = "펠레우스"
+name_grc = "Peleus"
+kind = "hero"
+era = 5
+spouses = ["thetis"]
+home = "phthia"
+oneliner = "바다의 님프 테티스와 결혼한 아킬레우스의 아버지."
+body = """
+아이기나 섬에서 나와 프티아에 자리 잡았다.
+케이론이 알려 준 대로, 모습을 바꾸는 테티스를 놓지 않고 붙잡았다.
+펠리온 산에서 신들이 모두 와서 결혼 잔치를 했다.
+테티스가 밤마다 아기를 불에 넣는 것을 보고 소리를 질렀다.
+테티스가 떠나 버려 아기를 케이론에게 맡겨 키웠다.
+"""
+fun = "결혼 선물로 케이론은 물푸레나무 창을, 포세이돈은 죽지 않는 말 두 마리를 주었다. 나중에 아킬레우스가 둘 다 썼다."
+note = "부모 아이아코스는 등록부에 없어 비운다. 아르고호(THE argo-departs)와 텔라몬 관계는 참조만."
+sources = ["apollodorus.library 3.12.6", "apollodorus.library 3.13.5-3.13.6", "homer.iliad 16.140-144", "homer.iliad 24.59-63"]
+
+[[figure]]
+id = "thetis"
+name_ko = "테티스"
+name_grc = "Thetis"
+kind = "nymph"
+era = 1
+spouses = ["peleus"]
+oneliner = "아들 아킬레우스를 위해 제우스를 찾아간 바다의 님프."
+body = """
+바다의 노인 네레우스의 쉰 딸 가운데 하나다.
+헤라가 키웠고, 제우스가 사람 펠레우스와 결혼하게 했다.
+아들이 전쟁에 가면 죽는다는 것을 알아 스키로스에 숨겼다.
+아들이 모욕을 당하자 제우스에게 가서 트로이군을 이기게 해 달라고 했다.
+아들의 갑옷이 없어지자 헤파이스토스에게 가서 새 갑옷을 받아 왔다.
+"""
+fun = "호메로스는 테티스를 늘 '은빛 발의 테티스'라고 부른다."
+note = "부모 네레우스·도리스는 등록부에 없어 비운다. 테티스(Thetis)는 티탄 테티스(Tethys)와 다른 인물이다."
+sources = ["hesiod.theogony 240-264", "hesiod.theogony 1006-1007", "apollodorus.library 3.13.5-3.13.8", "homer.iliad 1.493-530", "homer.iliad 18.369-617", "homer.iliad 24.59-63"]
+
+[[figure]]
+id = "achilleus"
+name_ko = "아킬레우스"
+name_grc = "Achilleus"
+name_la = "Achilles"
+aka = ["아킬레스", "아킬리스"]
+kind = "hero"
+era = 6
+parents = ["peleus", "thetis"]
+home = "phthia"
+oneliner = "그리스군에서 가장 강한 영웅. 짧고 이름난 삶을 골랐다."
+body = """
+어릴 때부터 그가 없으면 트로이를 못 얻는다는 말이 있었다.
+아가멤논이 브리세이스를 빼앗자 싸움에서 손을 뗐다.
+남으면 일찍 죽고 이름이 남는다는 것을 알면서도 남았다.
+친구 파트로클로스가 죽자 새 갑옷을 입고 돌아가 헥토르를 죽였다.
+전쟁 끝에 파리스의 화살에 발목을 맞아 죽었다.
+"""
+fun = "아폴로도로스는 발목, 오비디우스는 발꿈치라고 적었다. 발꿈치 뒤의 굵은 힘줄을 지금도 아킬레스건이라고 부른다."
+note = "참고: 처음 읽는 그리스 로마 신화 11권 4장 「아킬레우스의 운명」"
+sources = ["apollodorus.library 3.13.6-3.13.8", "homer.iliad 1.318-348", "homer.iliad 9.410-416", "homer.iliad 22.131-404", "apollodorus.library E.5.3", "ovid.metamorphoses 12.580-628"]
+
+[[figure]]
+id = "patroklos"
+name_ko = "파트로클로스"
+name_grc = "Patroklos"
+kind = "hero"
+era = 6
+home = "phthia"
+oneliner = "아킬레우스의 갑옷을 입고 싸우다 죽은 가장 가까운 친구."
+body = """
+어릴 때 아버지와 함께 펠레우스의 집에 와서 아킬레우스와 자랐다.
+아킬레우스가 싸움에서 손을 떼자 그 옆에 남았다.
+그리스 배들이 불타자 아킬레우스의 갑옷을 빌려 입고 나갔다.
+트로이군은 아킬레우스인 줄 알고 달아났고, 사르페돈도 그의 손에 죽었다.
+아폴론이 그를 쳤고, 헥토르가 그를 죽였다.
+"""
+fun = "아킬레우스는 파트로클로스의 뼈와 자기 뼈를 한 항아리에 넣어 달라고 했다. 죽은 뒤에 그렇게 되었다."
+sources = ["apollodorus.library 3.13.8", "homer.iliad 16.1-100", "homer.iliad 16.777-867", "homer.iliad 23.82-92", "apollodorus.library E.4.6", "apollodorus.library E.5.5"]
+
+[[figure]]
+id = "neoptolemos"
+name_ko = "네옵톨레모스"
+name_grc = "Neoptolemos"
+aka = ["피로스", "퓌로스"]
+kind = "hero"
+era = 6
+parents = ["achilleus"]
+home = "skyros"
+oneliner = "아버지가 죽은 뒤 트로이에 온 아킬레우스의 아들."
+body = """
+아킬레우스가 스키로스에 숨어 있을 때 태어났다.
+어머니는 스키로스 왕의 딸 데이다메이아다.
+헬레노스가 그가 와야 트로이가 무너진다고 말했다.
+오디세우스가 데려왔고, 아버지의 갑옷을 받아 입고 싸웠다.
+목마 안에 들어갔고, 그 밤에 제단 앞에서 프리아모스를 죽였다.
+"""
+fun = "오디세우스는 목마 안에서 모두 떨고 울었지만 네옵톨레모스만 얼굴빛이 변하지 않았다고 말했다."
+sensitivity = "soften"
+sources = ["apollodorus.library 3.13.8", "apollodorus.library E.5.10-E.5.12", "apollodorus.library E.5.21", "homer.odyssey 11.505-537", "virgil.aeneid 2.469-558"]
+
+[[figure]]
+id = "odysseus"
+name_ko = "오디세우스"
+name_grc = "Odysseus"
+name_la = "Ulixes"
+aka = ["율리시스", "울릭세스", "오뒷세우스", "율리세스"]
+kind = "hero"
+era = 6
+parents = ["laertes", "antikleia"]
+spouses = ["penelope"]
+home = "ithake"
+oneliner = "목마를 생각해 낸 꾀 많은 이타케의 왕."
+body = """
+전쟁에 가지 않으려고 미친 척했지만 팔라메데스가 알아챘다.
+스키로스에 숨은 아킬레우스도 오디세우스가 찾아냈다.
+아킬레우스의 갑옷을 두고 아이아스와 다투어 이겼다.
+헬레노스를 붙잡고, 팔라디온을 훔치고, 목마를 생각해 냈다.
+전쟁 뒤 집으로 돌아가는 데 열 해가 더 걸린 이야기는 따로 있다.
+"""
+fun = "헬레네가 목마 밖에서 아내들의 목소리를 흉내 냈다. 오디세우스는 대답하려는 사람의 입을 막았다."
+note = "부모·아내·고향은 ODY 소유 id 참조. 돌아가는 길은 ODY 가 쓴다."
+sources = ["apollodorus.library 3.10.9", "apollodorus.library E.3.7", "apollodorus.library 3.13.8", "apollodorus.library E.5.6", "apollodorus.library E.5.9-E.5.15", "homer.iliad 9.225-306", "homer.odyssey 4.271-289"]
+
+[[figure]]
+id = "palamedes"
+name_ko = "팔라메데스"
+name_grc = "Palamedes"
+kind = "human"
+era = 6
+oneliner = "오디세우스의 꾀병을 알아챈 사람."
+body = """
+나우플리오스의 아들이다.
+오디세우스가 미친 척하자 그 앞에서 아기 텔레마코스에게 칼을 들었다.
+오디세우스가 놀라 아이를 구하려 하면서 거짓이 드러났다.
+오디세우스는 이 일을 잊지 않았다.
+뒷날 거짓 편지로 팔라메데스를 반역자로 몰았고, 팔라메데스는 죽었다.
+"""
+sensitivity = "soften"
+note = "텔레마코스는 ODY 소유(era 7) 인물이라 이름만 부른다. 돌에 맞아 죽은 것(E.3.8)은 '죽었다'까지."
+sources = ["apollodorus.library E.3.7-E.3.8"]
+
+[[figure]]
+id = "nestor"
+name_ko = "네스토르"
+name_grc = "Nestor"
+kind = "human"
+era = 6
+home = "pylos"
+oneliner = "말로 사람들을 다스린 그리스군의 가장 나이 많은 왕."
+body = """
+필로스의 왕으로 배 마흔 척을 이끌고 왔다.
+사람의 두 세대가 지나는 동안 왕이었고 셋째 세대를 다스리고 있었다.
+아킬레우스와 아가멤논이 다툴 때 둘 사이에 서서 말렸다.
+싸움에는 늙어 못 나갔지만 회의마다 먼저 말했다.
+아들 안틸로코스가 멤논의 손에 죽었다.
+"""
+fun = "네스토르는 회의 때마다 젊었을 때 자기가 얼마나 잘 싸웠는지 길게 이야기했다."
+sources = ["apollodorus.library E.3.12", "homer.iliad 1.247-284", "homer.iliad 2.336-368", "homer.iliad 11.655-803", "homer.odyssey 3.111-112", "homer.odyssey 4.187-188"]
+
+[[figure]]
+id = "diomedes"
+name_ko = "디오메데스"
+name_grc = "Diomedes"
+kind = "hero"
+era = 6
+home = "argos"
+oneliner = "아프로디테와 아레스를 창으로 찌른 아르고스의 장수."
+body = """
+아르고스에서 배 여든 척을 이끌고 왔다.
+아테나가 도와주어 사람은 물론 아프로디테와 아레스까지 창으로 찔렀다.
+적장 글라우코스와는 할아버지들이 친구였음을 알고 서로 갑옷을 바꾸었다.
+오디세우스와 함께 밤에 적진에 들어갔고, 팔라디온도 함께 훔쳤다.
+필록테테스를 데려올 때도 오디세우스와 같이 갔다.
+"""
+fun = "파트로클로스의 장례 경기에서 전차 경주에 이겼다."
+sources = ["apollodorus.library 3.10.8", "apollodorus.library E.3.12", "homer.iliad 5.311-351", "homer.iliad 5.846-863", "homer.iliad 6.119-236", "apollodorus.library E.4.2", "apollodorus.library E.4.4", "apollodorus.library E.5.8", "apollodorus.library E.5.13"]
+
+[[figure]]
+id = "aias"
+name_ko = "아이아스"
+name_grc = "Aias"
+name_la = "Aiax"
+aka = ["아약스", "큰 아이아스", "텔라몬의 아이아스"]
+kind = "hero"
+era = 6
+parents = ["telamon"]
+home = "salamis"
+oneliner = "탑 같은 방패를 든, 아킬레우스 다음으로 강한 장수."
+body = """
+살라미스에서 배 열두 척을 이끌고 왔다.
+헥토르와 하루 종일 맞붙어 승패를 못 냈고, 서로 선물을 나누었다.
+파트로클로스의 시신과 아킬레우스의 시신을 적에게서 지켜 냈다.
+아킬레우스의 갑옷을 오디세우스와 다투다가 졌다.
+아테나가 그의 정신을 흐리게 했고, 정신이 들자 스스로 목숨을 끊었다.
+"""
+fun = "아이아스의 피에서 꽃이 피었다고 한다. 꽃잎에 그의 이름 첫 글자 '아이'가 적혀 있다."
+sensitivity = "soften"
+sources = ["apollodorus.library 3.12.7", "apollodorus.library E.3.11", "homer.iliad 7.206-312", "homer.iliad 17.715-761", "apollodorus.library E.4.7", "apollodorus.library E.5.4-E.5.7", "ovid.metamorphoses 13.1-398", "homer.odyssey 11.543-564"]
+
+[[figure]]
+id = "aias-oileus"
+name_ko = "오일레우스의 아이아스"
+name_grc = "Aias Oileus"
+aka = ["작은 아이아스", "로크리스의 아이아스"]
+kind = "hero"
+era = 6
+oneliner = "큰 아이아스와 이름이 같아 작은 아이아스라 불린 장수."
+body = """
+로크리스에서 배 마흔 척을 이끌고 왔다.
+발이 빨랐고, 큰 아이아스와 자주 나란히 싸웠다.
+트로이가 무너진 밤에 아테나 신전에서 카산드라를 끌어냈다.
+아테나가 그 일로 크게 화가 났다.
+돌아가는 길에 바다에서 죽었다.
+"""
+sensitivity = "soften"
+note = "카산드라에게 한 일(E.5.22)은 '끌어냈다'까지. 죽음은 오디세이아 4.499-511(ODY 범위)이라 한 줄."
+sources = ["apollodorus.library 3.10.8", "apollodorus.library E.3.11", "homer.iliad 2.527-535", "homer.iliad 13.701-722", "apollodorus.library E.5.22-E.5.23", "homer.odyssey 4.499-511"]
+
+[[figure]]
+id = "telamon"
+name_ko = "텔라몬"
+name_grc = "Telamon"
+kind = "hero"
+era = 5
+home = "salamis"
+oneliner = "큰 아이아스의 아버지인 살라미스의 왕."
+body = """
+펠레우스의 형제로, 함께 아이기나 섬에서 쫓겨났다.
+살라미스로 가서 그곳의 왕이 되었다.
+헤라클레스가 트로이로 갈 때 함께 가서 라오메돈을 이겼다.
+그 상으로 라오메돈의 딸 헤시오네를 얻었고, 테우크로스가 태어났다.
+아들 아이아스는 헤라클레스가 기도해 준 뒤 태어났다.
+"""
+fun = "기도 뒤에 독수리가 나타나서 아들 이름을 아이아스라고 지었다. 그리스말로 독수리가 아이에토스다."
+note = "부모 아이아코스는 등록부에 없어 비운다. 아르고호(THE argo-departs)와 헤라클레스의 트로이 원정(HER herakles-sacks-troy)은 참조만."
+sources = ["apollodorus.library 3.12.6-3.12.7"]
+
+[[figure]]
+id = "idomeneus"
+name_ko = "이도메네우스"
+name_grc = "Idomeneus"
+kind = "hero"
+era = 6
+home = "crete"
+oneliner = "크레타에서 배 마흔 척을 이끌고 온 왕."
+body = """
+미노스의 손자로 크레타의 왕이었다.
+크레타에서 배 마흔 척을 이끌고 트로이에 왔다.
+머리가 반쯤 희었지만 앞장서서 싸웠다.
+그리스군이 밀릴 때 트로이 장수들을 여럿 죽였다.
+전쟁이 끝나고 무사히 크레타로 돌아갔다.
+"""
+note = "아버지 데우칼리온(미노스의 아들)은 홍수의 데우칼리온(deukalion)과 다른 사람이다. parents 를 비운다."
+sources = ["apollodorus.library E.3.13", "homer.iliad 2.645-652", "homer.iliad 13.210-539", "homer.odyssey 3.191-192"]
+
+[[figure]]
+id = "philoktetes"
+name_ko = "필록테테스"
+name_grc = "Philoktetes"
+aka = ["필로크테테스"]
+kind = "hero"
+era = 6
+oneliner = "헤라클레스의 활을 들고 렘노스에 홀로 남겨진 궁수."
+body = """
+헤라클레스의 활과 화살을 가지고 있었다.
+트로이로 가는 길에 물뱀에 물렸고, 상처가 아물지 않았다.
+냄새가 심해 오디세우스가 그를 렘노스 섬에 두고 떠났다.
+아홉 해 뒤, 그 활이 없으면 트로이를 못 얻는다는 말이 나왔다.
+오디세우스와 디오메데스가 데려왔고, 필록테테스가 파리스를 화살로 죽였다.
+"""
+fun = "헤라클레스는 죽을 때 자기 장작에 불을 붙여 준 포이아스에게 그 활을 주었다. 포이아스가 필록테테스의 아버지다."
+sources = ["apollodorus.library 3.10.8", "apollodorus.library E.3.14", "apollodorus.library E.3.27", "apollodorus.library E.5.8", "apollodorus.library 2.7.7", "homer.iliad 2.716-728", "hyginus.fabulae 102"]
+
+[[figure]]
+id = "kalchas"
+name_ko = "칼카스"
+name_grc = "Kalchas"
+kind = "human"
+era = 6
+oneliner = "새를 보고 앞일을 읽은 그리스군의 예언자."
+body = """
+새가 나는 것을 보고 앞일을 읽는 사람이었다.
+아울리스에서 뱀이 참새 아홉 마리를 잡아먹는 것을 보고 말했다.
+트로이는 열 해째에 무너진다는 것이었다.
+바람이 멎었을 때는 아가멤논의 딸을 바쳐야 한다고 했다.
+역병 때도, 전쟁 끝에도 그리스군은 칼카스의 말을 따랐다.
+"""
+fun = "칼카스는 자기보다 뛰어난 예언자를 만나면 죽는다는 말을 들었다. 전쟁 뒤 몹소스에게 지고 죽었다."
+note = "참고: 처음 읽는 그리스 로마 신화 11권 2장 「칼카스의 예언」"
+sources = ["apollodorus.library E.3.15", "apollodorus.library E.3.21", "apollodorus.library E.5.8-E.5.9", "homer.iliad 1.68-100", "homer.iliad 2.299-332", "apollodorus.library E.6.2-E.6.4"]
+
+[[figure]]
+id = "protesilaos"
+name_ko = "프로테실라오스"
+name_grc = "Protesilaos"
+kind = "hero"
+era = 6
+oneliner = "트로이 땅에 맨 먼저 발을 디뎠다가 맨 먼저 죽은 그리스 사람."
+body = """
+필라케에서 배 마흔 척을 이끌고 왔다.
+맨 먼저 땅에 내리는 사람이 맨 먼저 죽는다는 말이 있었다.
+프로테실라오스가 맨 먼저 배에서 뛰어내렸다.
+트로이 사람 여럿을 죽인 뒤 헥토르의 손에 죽었다.
+새로 지은 집과 아내를 고향에 두고 온 뒤였다.
+"""
+fun = "그의 배는 그 뒤로 열 해 동안 트로이 해변에 남았다. 헥토르가 배들에 불을 놓을 때 맨 먼저 불붙은 배가 이 배다."
+sources = ["apollodorus.library 3.10.8", "apollodorus.library E.3.14", "apollodorus.library E.3.29-E.3.30", "homer.iliad 2.695-710", "homer.iliad 15.704-706", "hyginus.fabulae 103"]
+
+# ---------- 신 ----------
+
+[[figure]]
+id = "eris"
+name_ko = "에리스"
+name_grc = "Eris"
+name_la = "Discordia"
+aka = ["불화의 여신", "디스코르디아", "다툼의 여신"]
+kind = "god"
+era = 0
+parents = ["nyx"]
+domains = ["다툼", "싸움"]
+symbols = ["황금 사과"]
+oneliner = "황금 사과 하나로 트로이 전쟁을 시작한 다툼의 여신."
+body = """
+밤의 여신 닉스의 딸이다.
+싸움, 다툼, 거짓말 같은 나쁜 것들을 낳았다.
+가장 아름다운 여신에게 주는 상이라며 사과를 던졌다.
+헤라, 아테나, 아프로디테가 그 사과를 두고 다투었다.
+싸움터에서는 사람들 사이를 다니며 싸움을 키웠다.
+"""
+fun = "헤시오도스는 에리스가 둘이라고 했다. 하나는 싸움을 일으키고, 하나는 사람이 부지런히 일하게 만든다."
+note = "'펠레우스와 테티스의 결혼 잔치에 초대받지 못했다'는 세부는 히기누스 92 에 있는데 코퍼스에 없어 쓰지 않았다. E.3.2 는 사과를 던진 것만 말한다."
+sources = ["hesiod.theogony 225-232", "hesiod.works 11-26", "apollodorus.library E.3.2", "homer.iliad 4.440-445", "homer.iliad 11.3-14"]

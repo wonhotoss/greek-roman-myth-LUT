@@ -1,0 +1,136 @@
+# era 4~5 — 아테네와 크레타 이야기의 실제 장소. 크노소스·낙소스·트로이젠·코린토스·리키아·시켈리아·마라톤.
+# 미로(라비린토스)는 따로 두지 않고 knossos 의 body 에서 말한다.
+
+[[place]]
+id = "knossos"
+name_ko = "크노소스"
+name_grc = "Knossos"
+aka = ["크노소스 궁전", "미궁", "라비린토스", "미로"]
+kind = "real"
+lat = 35.2979
+lon = 25.1632
+modern = "그리스 크레타 섬 이라클리오 근처 크노소스 유적"
+oneliner = "미노스 왕의 궁이 있던 크레타의 도시. 미로도 여기 있었다."
+body = """
+크레타 섬 북쪽에 있던 큰 도시로, 미노스가 여기서 다스렸다.
+다이달로스가 지은 미로 라비린토스도 여기 있었다.
+길이 수없이 굽이쳐서 들어간 사람은 나오는 길을 찾을 수 없었다.
+미노타우로스가 그 안에 갇혀 살았다.
+지금도 큰 궁전 터가 남아 있어 사람들이 보러 간다.
+"""
+note = "기존 crete 항목이 같은 좌표(크노소스)를 쓴다. 지도에서 점이 겹치므로 crete 의 좌표를 섬 가운데나 제우스의 굴(딕테)로 옮기기를 요청한다."
+sources = ["apollodorus.library 3.1.4", "apollodorus.library 3.15.8", "homer.odyssey 19.178-19.179", "homer.iliad 2.646", "pausanias.greece 1.27.10"]
+
+[[place]]
+id = "naxos"
+name_ko = "낙소스 섬"
+name_grc = "Naxos"
+aka = ["낙소스", "디아", "디아 섬"]
+kind = "real"
+lat = 37.1036
+lon = 25.3767
+modern = "그리스 낙소스 섬"
+oneliner = "테세우스와 아리아드네가 헤어진 섬."
+body = """
+에게해 가운데 있는 큰 섬이다. 옛 이름은 디아였다.
+크레타를 떠난 테세우스의 배가 밤에 여기 닿았다.
+디오니소스가 아리아드네를 보고 데려갔다.
+테세우스는 아리아드네 없이 아테네로 떠났다.
+"""
+sources = ["apollodorus.library E.1.9", "ovid.metamorphoses 8.174-8.182", "homer.odyssey 11.321-11.325"]
+
+[[place]]
+id = "troizen"
+name_ko = "트로이젠"
+name_grc = "Troizen"
+aka = ["트로이제나", "트로이젠"]
+kind = "real"
+lat = 37.5030
+lon = 23.3500
+modern = "그리스 트리지나"
+oneliner = "테세우스가 태어나 자란 곳. 바위 밑에 검이 있었다."
+body = """
+아테네 맞은편, 바다 건너 남쪽에 있는 작은 도시다.
+피테우스 왕이 두 마을을 합쳐 세웠다.
+아이게우스가 바위 밑에 검과 신발을 두고 간 곳이다.
+테세우스는 여기서 자라 그 바위를 밀어냈다.
+히폴리토스를 기리는 신전도 여기 있었다.
+"""
+sources = ["apollodorus.library 3.15.7", "apollodorus.library 3.16.1", "pausanias.greece 2.30.8-2.30.9", "pausanias.greece 2.32.1-2.32.7"]
+
+[[place]]
+id = "corinth"
+name_ko = "코린토스"
+name_grc = "Korinthos"
+aka = ["코린트", "고린도", "에피라"]
+kind = "real"
+lat = 37.9058
+lon = 22.8797
+modern = "그리스 아르하이아 코린토스"
+oneliner = "시시포스가 세운 도시. 벨레로폰과 페가수스의 고향이다."
+body = """
+그리스 본토와 펠로폰네소스를 잇는 좁은 땅 이스트모스에 있다.
+시시포스가 세웠고, 그때 이름은 에피라였다.
+벨레로폰이 여기서 자랐고, 아테나가 여기서 페가수스를 길들였다.
+테세우스는 이 근처에서 악당 시니스와 멧돼지 파이아를 없앴다.
+샘 페이레네의 물이 지금도 옛 도시 터에서 흘러나온다.
+"""
+sources = ["apollodorus.library 1.9.3", "homer.iliad 6.152-6.155", "pausanias.greece 2.1.1-2.1.4", "pausanias.greece 2.3.2-2.3.5", "pausanias.greece 2.4.1"]
+
+[[place]]
+id = "lykia"
+name_ko = "리키아"
+name_grc = "Lykia"
+aka = ["뤼키아", "크산토스"]
+kind = "real"
+lat = 36.3564
+lon = 29.3187
+modern = "튀르키예 크느크(옛 크산토스)"
+oneliner = "키마이라가 살던 나라. 벨레로폰이 편지를 들고 간 곳이다."
+body = """
+바다 건너 동쪽, 지금의 튀르키예 남쪽 바닷가에 있던 나라다.
+크산토스 강가에 이오바테스 왕의 궁이 있었다.
+키마이라가 이 땅을 불태우고 다녔다.
+벨레로폰은 여기서 키마이라를 이기고 왕의 딸과 결혼했다.
+그 후손들이 트로이 전쟁에 리키아 군대를 이끌고 나간다.
+"""
+note = "좌표는 크산토스 유적(호메로스가 이오바테스의 궁을 크산토스 강가에 둔다)."
+sources = ["homer.iliad 6.171-6.211", "homer.iliad 2.876-2.877", "apollodorus.library 2.3.1-2.3.2"]
+
+[[place]]
+id = "sikelia"
+name_ko = "시켈리아"
+name_grc = "Sikelia"
+aka = ["시칠리아", "시실리", "카미코스"]
+kind = "real"
+lat = 37.5994
+lon = 14.0154
+modern = "이탈리아 시칠리아 섬"
+oneliner = "날아서 달아난 다이달로스가 숨은 큰 섬. 미노스가 여기서 죽었다."
+body = """
+이탈리아 남쪽 끝에 있는 큰 섬이다. 그리스 사람들은 시켈리아라고 불렀다.
+다이달로스는 크레타에서 날아와 이 섬의 카미코스에 닿았다.
+코칼로스 왕이 그를 숨겨 주었다.
+미노스가 뒤쫓아 왔지만 이 섬에서 죽었다.
+"""
+note = "카미코스(파우사니아스는 이니코스)의 위치는 정해지지 않았다. 섬 전체를 가리키는 real 로 두고 좌표는 섬 가운데."
+sources = ["apollodorus.library E.1.13-E.1.15", "pausanias.greece 7.4.6"]
+
+[[place]]
+id = "marathon"
+name_ko = "마라톤"
+name_grc = "Marathon"
+aka = ["마라톤 들판", "마라토나스"]
+kind = "real"
+lat = 38.1531
+lon = 23.9631
+modern = "그리스 마라토나스"
+oneliner = "크레타의 황소가 사람들을 해치던 들판. 테세우스가 황소를 잡았다."
+body = """
+아테네 북동쪽 바닷가에 있는 넓은 들판이다.
+헤라클레스가 크레타에서 끌어온 황소가 풀려나 여기까지 왔다.
+황소는 사람들을 해쳤고, 미노스의 아들 안드로게오스도 여기서 죽었다.
+아이게우스가 테세우스를 이 황소에게 보냈고, 테세우스가 잡았다.
+"""
+fun = "아주 뒷날 이 들판에서 그리스와 페르시아의 큰 싸움이 있었다. 마라톤 달리기 이름이 여기서 왔다."
+sources = ["apollodorus.library 2.5.7", "apollodorus.library 3.15.7", "apollodorus.library E.1.5-E.1.6", "pausanias.greece 1.27.9-1.27.10", "pausanias.greece 1.32.3-1.32.4"]

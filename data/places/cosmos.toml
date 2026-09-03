@@ -1,0 +1,160 @@
+# 신화 속 세계. 실제로는 없다. 실지도에 찍지 않고 우주 도해에 놓는다.
+# cx/cy 는 도해 좌표(0~1). cy 가 작을수록 위(하늘), 클수록 아래(지하).
+# layer = edge 는 '세상의 끝' — 땅과 같은 높이지만 가장자리에 놓는다.
+
+[[place]]
+id = "olympus-home"
+name_ko = "신들의 집"
+name_grc = "Olympos"
+aka = ["올림포스 궁전", "신들의 궁전"]
+kind = "mythic"
+layer = "sky"
+cx = 0.5
+cy = 0.08
+oneliner = "올림포스 산 위, 구름 너머에 있다는 신들의 집."
+body = """
+열두 신이 여기 모여 살고 회의를 한다.
+헤파이스토스가 신들의 방을 하나하나 지어 주었다.
+비도 눈도 오지 않고 언제나 맑다고 한다.
+올림포스 산은 실제로 있지만, 이 집은 이야기 속에만 있다.
+"""
+sources = ["homer.odyssey 6.41-47", "homer.iliad 1.533-535"]
+
+[[place]]
+id = "okeanos-river"
+name_ko = "오케아노스"
+name_grc = "Okeanos"
+aka = ["세계를 감는 강"]
+kind = "mythic"
+layer = "edge"
+cx = 0.03
+cy = 0.52
+oneliner = "땅 전체를 둥글게 감고 흐르는 큰 강."
+body = """
+그리스 사람들은 땅이 둥근 판이고 그 바깥을 강이 감고 있다고 생각했다.
+그 강이 오케아노스다.
+해와 달은 이 강에서 떠올라 이 강으로 진다.
+강 이름과 같은 이름의 티탄이 이 강의 주인이다.
+"""
+sources = ["hesiod.theogony 337-345", "homer.iliad 18.606-607"]
+
+[[place]]
+id = "gorgon-land"
+name_ko = "고르곤의 땅"
+kind = "mythic"
+layer = "edge"
+cx = 0.10
+cy = 0.60
+oneliner = "세상의 서쪽 끝, 밤이 시작되는 곳에 있는 고르곤 세 자매의 집."
+body = """
+해가 지는 쪽 끝, 오케아노스 건너에 있다.
+메두사와 두 언니가 여기 살았다.
+가는 길을 아는 것은 그라이아이 세 노파뿐이었다.
+페르세우스는 날개 달린 신발을 신고 여기까지 갔다.
+"""
+sources = ["hesiod.theogony 274-276", "apollodorus.library 2.4.2"]
+
+[[place]]
+id = "hesperides-garden"
+name_ko = "헤스페리데스의 정원"
+kind = "mythic"
+layer = "edge"
+cx = 0.08
+cy = 0.40
+oneliner = "세상의 서쪽 끝에 있는 정원. 황금 사과가 열린다."
+body = """
+해가 지는 쪽에 있는 정원이다.
+헤스페리데스라는 자매들과 잠들지 않는 용이 황금 사과를 지킨다.
+아틀라스가 하늘을 받치고 서 있는 곳도 이 근처다.
+헤라클레스가 나중에 이 사과를 가지러 온다.
+"""
+sources = ["hesiod.theogony 215-216", "apollodorus.library 2.5.11"]
+
+[[place]]
+id = "aithiopia"
+name_ko = "에티오피아"
+name_grc = "Aithiopia"
+aka = ["케페우스의 나라"]
+kind = "mythic"
+layer = "edge"
+cx = 0.90
+cy = 0.62
+oneliner = "세상의 남쪽 끝에 있다고 여겨진 나라. 안드로메다의 고향이다."
+body = """
+그리스 사람들에게는 '아주 멀리 남쪽'이라는 뜻이었고, 어디인지 정해져 있지 않았다.
+케페우스 왕과 카시오페이아 왕비가 여기서 다스렸다.
+바다괴물이 나타나 안드로메다가 바위에 묶였던 곳이다.
+지금의 에티오피아와 같은 곳이라고 볼 수는 없다.
+"""
+note = "아폴로도로스는 에티오피아라 하고, 뒷시대 전승은 이오페(지금의 야파) 바위라고 한다. 실좌표를 주면 아이에게 거짓이 되므로 mythic/edge 로 둔다."
+sources = ["apollodorus.library 2.4.3", "ovid.metamorphoses 4.663-4.764"]
+
+[[place]]
+id = "styx-river"
+name_ko = "스틱스 강"
+name_grc = "Styx"
+kind = "mythic"
+layer = "underworld"
+cx = 0.50
+cy = 0.68
+oneliner = "산 사람의 세계와 죽은 사람의 세계를 가르는 강."
+body = """
+죽은 사람은 이 강을 건너야 저승에 들어간다.
+카론이라는 뱃사공이 배로 건네준다.
+신들도 이 강에 걸고 한 약속은 어길 수 없었다.
+"""
+sources = ["hesiod.theogony 775-806"]
+
+[[place]]
+id = "hades-realm"
+name_ko = "저승"
+name_grc = "Haides"
+aka = ["하데스의 나라", "죽은 이들의 나라"]
+kind = "mythic"
+layer = "underworld"
+cx = 0.50
+cy = 0.80
+oneliner = "죽은 사람들이 가는 땅속 나라. 하데스가 왕이다."
+body = """
+땅 아래 깊은 곳에 있다.
+문 앞을 머리 셋 달린 개 케르베로스가 지킨다.
+한번 들어가면 나올 수 없다.
+어둡지만 벌을 주는 곳은 아니다. 그냥 죽은 사람들이 사는 곳이다.
+"""
+fun = "'하데스'는 신의 이름이면서 그 나라의 이름이기도 하다."
+sources = ["homer.odyssey 11", "apollodorus.library 1.2.1"]
+
+[[place]]
+id = "elysion"
+name_ko = "엘리시온"
+name_grc = "Elysion"
+aka = ["엘리시온 들판"]
+kind = "mythic"
+layer = "underworld"
+cx = 0.76
+cy = 0.80
+oneliner = "저승 안에 있는 좋은 들판. 신들이 아끼는 사람만 간다."
+body = """
+저승의 한쪽에 햇빛이 드는 들판이 있다.
+싸움도 추위도 없고 언제나 바람이 부드럽다.
+아주 뛰어난 사람이나 신의 사랑을 받은 사람이 여기로 온다.
+"""
+sources = ["homer.odyssey 4.561-569", "hesiod.works 167-173"]
+
+[[place]]
+id = "tartaros-place"
+name_ko = "타르타로스"
+name_grc = "Tartaros"
+kind = "mythic"
+layer = "underworld"
+cx = 0.50
+cy = 0.95
+oneliner = "저승보다 더 아래, 가장 깊은 감옥."
+body = """
+땅에서 저승까지 떨어지는 만큼, 저승에서 또 그만큼 더 내려가야 있다.
+청동 담과 청동 문으로 둘러싸여 있다.
+티타노마키아에서 진 티탄들이 여기 갇혔다.
+티폰도 마지막에 여기 던져진다.
+"""
+fun = "헤시오도스는 '모루를 떨어뜨리면 아홉 날 아홉 밤을 떨어져 열흘째에 닿는다'고 적었다."
+sources = ["hesiod.theogony 720-819"]

@@ -1,0 +1,953 @@
+# era 5 — 큰 영웅들. 헤라클레스의 일생 전체.
+# seq 400~699: 탄생~케르베로스. seq 1000~1099: 에우리토스~신이 되다.
+# 묶음은 스크래치 arcs/HER.toml (herakles-early / herakles-labors / herakles-last).
+
+# ========== 탄생과 젊은 날 ==========
+
+[[event]]
+id = "amphitryon-to-thebes"
+name_ko = "암피트리온이 테베로 쫓겨 가다"
+era = 5
+seq = 400
+span = "season"
+places = ["mycenae", "thebes"]
+cast = [
+  { figure = "amphitryon", role = "주인공" },
+  { figure = "elektryon", role = "피해" },
+  { figure = "alkmene", role = "등장" },
+  { figure = "sthenelos", role = "상대" },
+  { figure = "kreon", role = "도움" },
+]
+oneliner = "실수로 왕을 죽게 한 암피트리온이 알크메네와 테베로 갔다."
+body = """
+미케네의 왕 엘렉트리온은 소를 돌려받다가 사고로 죽었다.
+암피트리온이 소에게 던진 몽둥이가 튀어 왕을 맞힌 것이다.
+스테넬로스는 그 일을 핑계로 암피트리온을 쫓아내고 왕이 되었다.
+암피트리온은 알크메네를 데리고 테베로 가서 크레온 왕의 손님이 되었다.
+알크메네는 오빠들의 원수를 갚아 주면 아내가 되겠다고 했다.
+"""
+sources = ["apollodorus.library 2.4.6"]
+
+[[event]]
+id = "zeus-visits-alkmene"
+name_ko = "제우스가 암피트리온의 모습으로 찾아오다"
+era = 5
+seq = 410
+span = "days"
+place = "thebes"
+cast = [
+  { figure = "zeus", role = "주인공" },
+  { figure = "alkmene", role = "피해" },
+  { figure = "amphitryon", role = "등장" },
+  { figure = "teiresias", role = "도움" },
+]
+oneliner = "암피트리온이 싸우러 간 사이 제우스가 그의 모습으로 알크메네를 찾아왔다."
+body = """
+암피트리온은 알크메네의 오빠들의 원수를 갚으러 섬으로 싸우러 갔다.
+그가 돌아오기 전날 밤, 제우스가 암피트리온의 모습으로 찾아왔다.
+제우스는 그 밤을 세 배로 길게 늘였다.
+다음 날 돌아온 암피트리온은 아내가 반기지 않아 이상하게 여겼다.
+앞을 보는 사람 테이레시아스가 무슨 일이 있었는지 알려 주었다.
+"""
+sensitivity = "soften"
+caused_by = ["amphitryon-to-thebes"]
+note = "참고: 처음 읽는 그리스 로마 신화 2권 1장 「영웅 헤라클레스의 어머니」"
+sources = ["apollodorus.library 2.4.8"]
+
+[[event]]
+id = "hera-delays-birth"
+name_ko = "헤라가 헤라클레스의 탄생을 늦추다"
+era = 5
+seq = 420
+span = "days"
+places = ["thebes", "mycenae"]
+cast = [
+  { figure = "hera", role = "주인공" },
+  { figure = "zeus", role = "상대" },
+  { figure = "alkmene", role = "피해" },
+  { figure = "eurystheus", role = "등장" },
+  { figure = "sthenelos", role = "등장" },
+]
+oneliner = "제우스의 맹세를 들은 헤라가 에우리스테우스를 먼저 태어나게 했다."
+body = """
+제우스는 오늘 태어나는 페르세우스의 자손이 왕이 된다고 맹세했다.
+헤라클레스를 두고 한 말이었다.
+헤라는 아기 낳기를 돕는 여신들을 붙잡아 알크메네를 막았다.
+그사이 미케네에서 에우리스테우스가 일곱 달 만에 먼저 태어났다.
+그래서 왕 자리는 에우리스테우스의 것이 되었다.
+"""
+fun = "오비디우스는 하녀 갈란티스가 여신을 속여 아기를 나오게 했다고 한다. 갈란티스는 그 벌로 족제비가 되었다."
+caused_by = ["zeus-visits-alkmene"]
+note = "참고: 처음 읽는 그리스 로마 신화 8권 1장 「헤라의 저주」"
+sources = ["homer.iliad 19.95-133", "apollodorus.library 2.4.5", "ovid.metamorphoses 9.273-323"]
+
+[[event]]
+id = "herakles-born"
+name_ko = "쌍둥이 헤라클레스와 이피클레스가 태어나다"
+era = 5
+seq = 430
+span = "moment"
+after = ["hera-delays-birth"]
+place = "thebes"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "alkmene", role = "주인공" },
+  { figure = "iphikles", role = "등장" },
+  { figure = "zeus", role = "등장" },
+  { figure = "amphitryon", role = "등장" },
+]
+oneliner = "알크메네가 아버지가 다른 쌍둥이를 낳았다."
+body = """
+알크메네가 테베에서 아들 둘을 낳았다.
+먼저 난 헤라클레스는 제우스의 아들이다.
+하룻밤 뒤에 난 이피클레스는 암피트리온의 아들이다.
+헤라클레스는 처음에 알키데스라고 불렸다.
+제우스는 이 아이가 미케네의 왕이 되기를 바랐지만 헤라가 막았다.
+"""
+caused_by = ["zeus-visits-alkmene"]
+note = "참고: 처음 읽는 그리스 로마 신화 8권 1장 「페르세우스의 후손」"
+sources = ["apollodorus.library 2.4.8", "apollodorus.library 2.4.12", "homer.iliad 19.98-99"]
+
+[[event]]
+id = "herakles-cradle-snakes"
+name_ko = "요람의 두 뱀"
+era = 5
+seq = 440
+span = "moment"
+place = "thebes"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "hera", role = "상대" },
+  { figure = "alkmene", role = "등장" },
+  { figure = "amphitryon", role = "등장" },
+  { figure = "iphikles", role = "등장" },
+]
+oneliner = "헤라가 보낸 큰 뱀 두 마리를 여덟 달 된 아기가 목 졸라 죽였다."
+body = """
+헤라클레스가 여덟 달이 되었을 때 헤라가 아기를 없애려 했다.
+큰 뱀 두 마리를 아기들의 침대로 보냈다.
+알크메네가 소리쳐 암피트리온을 불렀다.
+그사이 헤라클레스가 일어나 두 손으로 뱀을 하나씩 잡아 목 졸라 죽였다.
+"""
+caused_by = ["herakles-born"]
+sources = ["apollodorus.library 2.4.8"]
+
+[[event.variants]]
+source = "apollodorus.library 2.4.8"
+text = "옛 작가 페레키데스는 뱀을 넣은 것이 암피트리온이라고 한다. 어느 아이가 제 아들인지 알아보려는 것이었다. 이피클레스는 달아났고 헤라클레스는 버텼다."
+
+[[event]]
+id = "herakles-taught"
+name_ko = "헤라클레스가 자라며 배우다"
+era = 5
+seq = 450
+span = "years"
+after = ["herakles-cradle-snakes"]
+place = "thebes"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "amphitryon", role = "도움" },
+  { figure = "eurytos", role = "도움" },
+  { figure = "kastor", role = "도움" },
+  { figure = "autolykos", role = "도움" },
+]
+oneliner = "수레 몰기, 씨름, 활, 칼, 리라를 저마다 최고인 사람에게 배웠다."
+body = """
+암피트리온이 수레 몰기를 가르쳤다.
+씨름은 아우톨리코스, 활은 에우리토스, 칼은 카스토르에게 배웠다.
+리라는 오르페우스의 형제 리노스가 가르쳤다.
+키가 남보다 훨씬 컸고 눈에서 불빛이 번쩍였다.
+활도 창도 빗나가는 법이 없었다.
+"""
+fun = "몽둥이는 네메아에서 직접 잘라 만들었다. 칼은 헤르메스가, 활은 아폴론이 주었다."
+sources = ["apollodorus.library 2.4.9", "apollodorus.library 2.4.11"]
+
+[[event]]
+id = "herakles-weds-megara"
+name_ko = "테베를 지키고 메가라와 결혼하다"
+era = 5
+seq = 460
+span = "days"
+after = ["herakles-taught"]
+place = "thebes"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "megara", role = "등장" },
+  { figure = "kreon", role = "도움" },
+  { figure = "amphitryon", role = "피해" },
+  { figure = "athena", role = "도움" },
+  { figure = "iphikles", role = "등장" },
+]
+oneliner = "미니아이 사람들을 물리친 상으로 크레온 왕의 딸을 아내로 맞았다."
+body = """
+테베는 해마다 미니아이 사람들에게 소 백 마리를 바치고 있었다.
+헤라클레스는 아테나에게서 무기를 받아 테베 사람들을 이끌고 싸웠다.
+미니아이 왕 에르기노스가 죽고 테베는 자유로워졌다.
+이 싸움에서 암피트리온이 용감하게 싸우다 죽었다.
+크레온 왕은 상으로 큰딸 메가라를 헤라클레스의 아내로 주었다.
+"""
+sources = ["apollodorus.library 2.4.11"]
+
+[[event]]
+id = "herakles-madness"
+name_ko = "헤라가 헤라클레스를 미치게 하다"
+era = 5
+seq = 470
+span = "moment"
+place = "thebes"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "hera", role = "상대" },
+  { figure = "megara", role = "피해" },
+  { figure = "iphikles", role = "피해" },
+]
+oneliner = "헤라 때문에 미친 헤라클레스가 자기 아이들을 죽였다."
+body = """
+헤라는 헤라클레스가 잘되는 것을 견디지 못했다.
+그래서 그를 미치게 만들었다.
+헤라클레스는 정신을 잃은 채 메가라와 낳은 아이들을 죽였다.
+이피클레스의 아이 둘도 함께 죽었다.
+정신이 돌아온 헤라클레스는 스스로 테베를 떠났다.
+"""
+sensitivity = "soften"
+caused_by = ["herakles-weds-megara"]
+note = "참고: 처음 읽는 그리스 로마 신화 8권 1장 「헤라의 저주」. 불에 던졌다는 방법은 쓰지 않았다."
+sources = ["apollodorus.library 2.4.12"]
+
+[[event]]
+id = "herakles-delphi-oracle"
+name_ko = "델포이에서 열 가지 일을 받다"
+era = 5
+seq = 480
+span = "moment"
+place = "delphi"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "apollon", role = "등장" },
+  { figure = "eurystheus", role = "등장" },
+]
+oneliner = "에우리스테우스를 열두 해 섬기고 열 가지 일을 하라는 말을 들었다."
+body = """
+헤라클레스는 어디서 살아야 하는지 델포이에 물었다.
+아폴론의 말을 전하는 여자가 그를 처음으로 헤라클레스라고 불렀다.
+티린스에 살면서 에우리스테우스를 열두 해 동안 섬기라고 했다.
+왕이 시키는 열 가지 일을 다 하면 죽지 않는 몸이 된다고 했다.
+"""
+fun = "처음엔 열 가지였다. 왕이 둘을 세어 주지 않아 열두 가지가 되었다."
+caused_by = ["herakles-madness"]
+note = "참고: 처음 읽는 그리스 로마 신화 8권 2장 「열 가지의 임무」"
+sources = ["apollodorus.library 2.4.12"]
+
+# ========== 열두 가지 일 ==========
+
+[[event]]
+id = "nemean-lion-slain"
+name_ko = "네메아의 사자를 잡다"
+era = 5
+seq = 490
+span = "days"
+place = "nemea"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "nemean-lion", role = "상대" },
+  { figure = "eurystheus", role = "등장" },
+]
+oneliner = "화살이 들지 않는 사자를 두 팔로 목 졸라 이겼다."
+body = """
+에우리스테우스의 첫 명령은 네메아 사자의 가죽을 가져오는 것이었다.
+화살을 쏘았지만 가죽에 들지 않았다.
+사자가 입구가 둘인 굴로 들어가자 한쪽을 막고 다른 쪽으로 들어갔다.
+그리고 두 팔로 사자의 목을 졸라 죽였다.
+왕은 사자를 멘 헤라클레스를 보고 놀라 성문 안에 들이지 않았다.
+"""
+fun = "겁이 난 왕은 땅속에 청동 항아리를 묻고 그 안에 숨었다고 한다."
+caused_by = ["herakles-delphi-oracle"]
+sources = ["apollodorus.library 2.5.1", "hesiod.theogony 326-332", "pausanias.greece 2.15"]
+
+[[event]]
+id = "lernaean-hydra-slain"
+name_ko = "레르나의 히드라를 죽이다"
+era = 5
+seq = 500
+span = "moment"
+after = ["nemean-lion-slain"]
+place = "lerna"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "hydra", role = "상대" },
+  { figure = "iolaos", role = "도움" },
+  { figure = "hera", role = "상대" },
+  { figure = "eurystheus", role = "등장" },
+]
+oneliner = "머리를 부술수록 둘이 나는 뱀을 이올라오스가 불로 지져 이겼다."
+body = """
+둘째 일은 레르나 늪의 히드라를 죽이는 것이었다.
+머리를 부수면 둘이 새로 났고, 큰 게까지 나와 발을 물었다.
+조카 이올라오스가 불로 잘린 자리를 지져 머리가 나지 못하게 했다.
+헤라클레스는 죽지 않는 머리를 잘라 돌 밑에 묻고, 화살에 독을 발랐다.
+에우리스테우스는 도움을 받았다며 이 일을 세어 주지 않았다.
+"""
+fun = "헤라가 헤라클레스를 미워해서 이 히드라를 키웠다고 헤시오도스는 말한다."
+caused_by = ["herakles-delphi-oracle"]
+sources = ["apollodorus.library 2.5.2", "hesiod.theogony 313-318"]
+
+[[event]]
+id = "keryneian-hind"
+name_ko = "황금 뿔 암사슴을 산 채로 잡다"
+era = 5
+seq = 510
+span = "years"
+after = ["lernaean-hydra-slain"]
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "artemis", role = "상대" },
+  { figure = "apollon", role = "등장" },
+  { figure = "eurystheus", role = "등장" },
+]
+oneliner = "아르테미스의 사슴을 한 해 동안 쫓아 다치지 않게 잡았다."
+body = """
+셋째 일은 케리네이아의 암사슴을 산 채로 데려오는 것이었다.
+뿔이 금이고 아르테미스의 사슴이라 죽일 수도 다치게 할 수도 없었다.
+헤라클레스는 한 해 동안 사슴을 쫓았다.
+사슴이 라돈 강을 건너려 할 때 붙잡아 어깨에 메었다.
+아르테미스가 화를 냈지만, 왕이 시킨 일이라고 하자 놓아주었다.
+"""
+caused_by = ["herakles-delphi-oracle"]
+note = "장소는 오이노에·아르테미시온 산·라돈 강(아르카디아)이라 하나 등록부에 없어 비웠다."
+sources = ["apollodorus.library 2.5.3"]
+
+[[event]]
+id = "pholos-and-kentauroi"
+name_ko = "폴로스의 술독과 켄타우로스들의 싸움"
+era = 5
+seq = 520
+span = "days"
+after = ["keryneian-hind"]
+place = "mt-erymanthos"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "pholos", role = "도움" },
+  { figure = "kentauroi", role = "상대" },
+  { figure = "cheiron", role = "피해" },
+]
+oneliner = "술 냄새에 몰려온 켄타우로스들과 싸우다 케이론이 화살에 다쳤다."
+body = """
+멧돼지를 잡으러 가던 헤라클레스가 켄타우로스 폴로스의 굴에 들었다.
+헤라클레스가 술을 달라고 하자 폴로스는 켄타우로스 모두의 술독을 열었다.
+냄새를 맡은 켄타우로스들이 돌과 나무를 들고 몰려왔다.
+헤라클레스가 쏜 화살 하나가 죄 없는 케이론의 무릎에 박혔다.
+폴로스도 화살을 살펴보다 발에 떨어뜨려 죽었다.
+"""
+caused_by = ["herakles-delphi-oracle"]
+sources = ["apollodorus.library 2.5.4"]
+
+[[event]]
+id = "erymanthian-boar"
+name_ko = "에리만토스의 멧돼지를 잡다"
+era = 5
+seq = 530
+span = "days"
+after = ["pholos-and-kentauroi"]
+place = "mt-erymanthos"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "eurystheus", role = "등장" },
+]
+oneliner = "큰 멧돼지를 깊은 눈 속으로 몰아 산 채로 잡았다."
+body = """
+넷째 일은 에리만토스 산의 멧돼지를 산 채로 잡아 오는 것이었다.
+멧돼지는 산에서 내려와 프소피스 마을을 어지럽혔다.
+헤라클레스는 폴로스를 묻어 준 뒤 사냥에 나섰다.
+소리를 질러 멧돼지를 덤불에서 몰아내고 깊은 눈 속으로 몰았다.
+지친 멧돼지를 묶어 미케네로 가져갔다.
+"""
+fun = "올림피아 제우스 신전의 문 위에 이 사냥 장면이 새겨져 있었다."
+caused_by = ["herakles-delphi-oracle"]
+sources = ["apollodorus.library 2.5.4", "pausanias.greece 5.10"]
+
+[[event]]
+id = "augeias-stables"
+name_ko = "아우게이아스의 외양간을 하루에 치우다"
+era = 5
+seq = 540
+span = "moment"
+after = ["erymanthian-boar"]
+place = "elis"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "augeias", role = "상대" },
+  { figure = "eurystheus", role = "등장" },
+]
+oneliner = "강 두 줄기를 끌어와 산더미 같은 똥을 하루에 씻어 냈다."
+body = """
+다섯째 일은 아우게이아스 왕의 소똥을 하루에 치우는 것이었다.
+헤라클레스는 왕에게 소의 열에 하나를 주면 하루에 치우겠다고 했다.
+외양간 벽을 뚫고 알페이오스 강과 페네이오스 강을 끌어들였다.
+왕은 에우리스테우스가 시킨 일인 줄 알고 약속을 어겼다.
+에우리스테우스도 품삯을 받고 한 일이라며 세어 주지 않았다.
+"""
+caused_by = ["herakles-delphi-oracle"]
+sources = ["apollodorus.library 2.5.5", "pausanias.greece 5.1"]
+
+[[event]]
+id = "stymphalian-birds"
+name_ko = "스팀팔로스의 새를 쫓아내다"
+era = 5
+seq = 550
+span = "moment"
+after = ["augeias-stables"]
+place = "stymphalos"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "athena", role = "도움" },
+  { figure = "hephaistos", role = "도움" },
+]
+oneliner = "청동 딱따기 소리로 새를 날아오르게 하고 활로 쏘았다."
+body = """
+여섯째 일은 스팀팔로스 호수의 새들을 쫓아내는 것이었다.
+깊은 숲에 새가 셀 수 없이 모여 있어 어쩔 줄을 몰랐다.
+아테나가 헤파이스토스가 만든 청동 딱따기를 주었다.
+산 위에서 딱따기를 치자 새들이 놀라 날아올랐다.
+헤라클레스는 그 새들을 활로 쏘았다.
+"""
+caused_by = ["herakles-delphi-oracle"]
+sources = ["apollodorus.library 2.5.6"]
+
+[[event]]
+id = "cretan-bull-captured"
+name_ko = "크레타의 황소를 잡아 오다"
+era = 5
+seq = 560
+span = "days"
+after = ["stymphalian-birds"]
+place = "crete"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "cretan-bull", role = "상대" },
+  { figure = "minos", role = "등장" },
+  { figure = "eurystheus", role = "등장" },
+]
+oneliner = "미노스가 돕지 않아 혼자 황소를 잡아 미케네까지 끌고 왔다."
+body = """
+일곱째 일은 크레타의 황소를 데려오는 것이었다.
+포세이돈이 바다에서 보낸 황소인데, 미노스가 바치지 않아 사나워졌다.
+미노스 왕은 도와주지 않고 혼자 잡으라고 했다.
+헤라클레스는 황소를 잡아 에우리스테우스에게 보인 뒤 놓아주었다.
+황소는 아티카의 마라톤까지 가서 사람들을 괴롭혔다.
+"""
+fun = "마라톤의 이 황소를 뒷날 테세우스가 잡는다."
+caused_by = ["herakles-delphi-oracle"]
+sources = ["apollodorus.library 2.5.7", "apollodorus.library E.1.5"]
+
+[[event.variants]]
+source = "apollodorus.library 2.5.7"
+text = "이 황소가 에우로페를 태우고 바다를 건넌 황소라는 이야기도 있다."
+
+[[event]]
+id = "diomedes-mares"
+name_ko = "디오메데스의 사람 잡아먹는 말"
+era = 5
+seq = 570
+span = "days"
+after = ["cretan-bull-captured"]
+place = "thrake"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "diomedes-thrakios", role = "상대" },
+  { figure = "eurystheus", role = "등장" },
+]
+oneliner = "트라케까지 배로 가서 사람을 먹는 암말들을 끌고 왔다."
+body = """
+여덟째 일은 트라케 왕 디오메데스의 암말들을 데려오는 것이었다.
+그 말들은 사람을 잡아먹었다.
+헤라클레스는 친구들과 배를 타고 가서 말을 지키는 사람들을 물리쳤다.
+쫓아온 디오메데스와 싸워 그를 죽였다.
+왕은 말들을 놓아 보냈고, 말들은 올림포스 산에서 짐승에게 죽었다.
+"""
+caused_by = ["herakles-delphi-oracle"]
+sources = ["apollodorus.library 2.5.8", "ovid.metamorphoses 9.194-196"]
+
+[[event]]
+id = "hippolyte-belt"
+name_ko = "히폴리테의 띠"
+era = 5
+seq = 580
+span = "days"
+after = ["diomedes-mares"]
+place = "themiskyra"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "hippolyte", role = "피해" },
+  { figure = "amazones", role = "상대" },
+  { figure = "hera", role = "상대" },
+  { figure = "admete", role = "등장" },
+  { figure = "eurystheus", role = "등장" },
+]
+oneliner = "여왕은 띠를 주려 했지만 헤라의 소문 때문에 싸움이 났다."
+body = """
+아홉째 일은 아마조네스 여왕 히폴리테의 띠를 가져오는 것이었다.
+에우리스테우스의 딸 아드메테가 그 띠를 갖고 싶어 했다.
+히폴리테는 배로 찾아와 띠를 주겠다고 했다.
+그런데 헤라가 아마존으로 꾸미고 여왕이 잡혀간다는 소문을 퍼뜨렸다.
+무장한 아마조네스가 몰려왔고, 헤라클레스는 여왕을 죽이고 띠를 가져갔다.
+"""
+caused_by = ["herakles-delphi-oracle"]
+sources = ["apollodorus.library 2.5.9", "ovid.metamorphoses 9.188-189"]
+
+[[event]]
+id = "hesione-rescued"
+name_ko = "트로이에서 헤시오네를 구하다"
+era = 5
+seq = 590
+span = "moment"
+after = ["hippolyte-belt"]
+place = "troy"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "hesione", role = "피해" },
+  { figure = "laomedon", role = "상대" },
+  { figure = "poseidon", role = "등장" },
+  { figure = "apollon", role = "등장" },
+]
+oneliner = "바위에 묶인 트로이 공주를 구했지만 왕은 약속한 말을 주지 않았다."
+body = """
+띠를 가지고 돌아오는 길에 헤라클레스는 트로이에 들렀다.
+성벽을 쌓아 준 아폴론과 포세이돈에게 라오메돈 왕이 품삯을 주지 않았다.
+포세이돈이 바다 괴물을 보냈고, 공주 헤시오네가 바위에 묶였다.
+헤라클레스는 제우스가 준 말들을 받기로 하고 괴물을 죽였다.
+라오메돈이 약속을 어기자 헤라클레스는 다시 오겠다고 하고 떠났다.
+"""
+sources = ["apollodorus.library 2.5.9", "ovid.metamorphoses 11.194-215", "homer.iliad 5.638-651"]
+
+[[event]]
+id = "geryon-cattle"
+name_ko = "게리온의 붉은 소를 몰고 오다"
+era = 5
+seq = 600
+span = "season"
+after = ["hesione-rescued"]
+place = "erytheia"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "geryon", role = "상대" },
+  { figure = "orthros", role = "상대" },
+  { figure = "eurytion", role = "상대" },
+  { figure = "helios", role = "도움" },
+  { figure = "hera", role = "상대" },
+  { figure = "eurystheus", role = "등장" },
+]
+oneliner = "헬리오스의 황금 잔을 타고 서쪽 끝 섬에 가서 소를 몰아 왔다."
+body = """
+열째 일은 서쪽 끝 에리테이아 섬에서 게리온의 소를 가져오는 것이었다.
+더위에 화가 나 해를 향해 활을 겨누자 헬리오스가 황금 잔을 주었다.
+그 잔을 배처럼 타고 바다를 건너 섬에 닿았다.
+개 오르트로스와 목자 에우리티온, 쫓아온 게리온을 모두 이겼다.
+돌아오는 길에 헤라가 쇠파리를 보내 소를 흩어 놓아 오래 고생했다.
+"""
+fun = "가는 길에 유럽과 아프리카 사이 바다 어귀에 기둥 둘을 세웠다. 사람들은 이곳을 지금의 지브롤터 해협이라고 본다."
+caused_by = ["herakles-delphi-oracle"]
+sources = ["apollodorus.library 2.5.10", "hesiod.theogony 287-294"]
+
+[[event]]
+id = "antaios-wrestled"
+name_ko = "안타이오스와 씨름하다"
+era = 5
+seq = 610
+span = "moment"
+after = ["geryon-cattle"]
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "antaios", role = "상대" },
+]
+oneliner = "땅에 닿으면 힘이 세지는 거인을 들어 올려 이겼다."
+body = """
+열한째 일은 헤스페리데스의 황금 사과를 가져오는 것이었다.
+사과가 어디 있는지 몰라 바다의 노인 네레우스를 붙잡아 길을 알아냈다.
+리비아 땅에서 거인 안타이오스가 억지로 씨름을 시켰다.
+안타이오스는 땅에 닿을수록 힘이 세졌다.
+헤라클레스는 그를 높이 들어 올려 땅에서 떼어 놓고 이겼다.
+"""
+caused_by = ["herakles-delphi-oracle"]
+note = "장소는 리비아(북아프리카)라고만 하여 비웠다."
+sources = ["apollodorus.library 2.5.11", "ovid.metamorphoses 9.183-184"]
+
+[[event]]
+id = "prometheus-freed"
+name_ko = "프로메테우스가 풀려나다"
+era = 5
+seq = 620
+span = "moment"
+after = ["prometheus-punished", "antaios-wrestled"]
+place = "kaukasos"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "prometheus", role = "피해" },
+  { figure = "zeus", role = "등장" },
+  { figure = "cheiron", role = "등장" },
+]
+oneliner = "헤라클레스가 독수리를 쏘아 죽이고 프로메테우스의 사슬을 풀었다."
+body = """
+황금 사과를 찾아가는 길에 헤라클레스는 카우카소스 산에 닿았다.
+프로메테우스는 바위에 묶여 날마다 독수리에게 간을 먹히고 있었다.
+헤라클레스가 독수리를 활로 쏘아 죽이고 사슬을 풀었다.
+제우스도 아들의 이름이 더 높아지도록 이를 막지 않았다.
+화살에 다쳐 괴로워하던 케이론이 프로메테우스 대신 죽기로 했다.
+"""
+fun = "프로메테우스는 사과를 직접 따지 말고 아틀라스를 보내라고 일러 주었다."
+caused_by = ["herakles-delphi-oracle"]
+sources = ["apollodorus.library 2.5.11", "hesiod.theogony 521-534", "pausanias.greece 5.11"]
+
+[[event]]
+id = "hesperides-apples"
+name_ko = "헤스페리데스의 황금 사과"
+era = 5
+seq = 630
+span = "days"
+after = ["prometheus-freed"]
+place = "hesperides-garden"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "atlas", role = "도움" },
+  { figure = "hesperides", role = "등장" },
+  { figure = "ladon", role = "상대" },
+  { figure = "athena", role = "도움" },
+  { figure = "eurystheus", role = "등장" },
+]
+oneliner = "아틀라스 대신 하늘을 받치고 있는 동안 아틀라스가 사과를 따 왔다."
+body = """
+에우리스테우스는 히드라와 외양간을 세어 주지 않고 열한째 일을 시켰다.
+황금 사과는 세상 서쪽 끝, 아틀라스가 하늘을 받치고 선 곳에 있었다.
+헤라클레스가 하늘을 대신 받치고, 아틀라스가 사과 세 개를 따 왔다.
+아틀라스가 하늘을 다시 받으려 하지 않았다.
+헤라클레스는 머리에 받침을 대겠다고 속여 하늘을 되돌려 주었다.
+"""
+fun = "사과는 아무 데도 둘 수 없는 것이라 아테나가 정원에 되돌려 놓았다."
+caused_by = ["prometheus-freed", "lernaean-hydra-slain", "augeias-stables"]
+sources = ["apollodorus.library 2.5.11", "hesiod.theogony 215-216", "hesiod.theogony 517-520"]
+
+[[event.variants]]
+source = "apollodorus.library 2.5.11"
+text = "헤라클레스가 뱀 라돈을 죽이고 사과를 직접 땄다는 이야기도 있다."
+
+[[event]]
+id = "kerberos-fetched"
+name_ko = "케르베로스를 저승에서 끌고 오다"
+era = 5
+seq = 640
+span = "days"
+after = ["hesperides-apples"]
+places = ["eleusis", "hades-realm"]
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "kerberos", role = "상대" },
+  { figure = "hades", role = "상대" },
+  { figure = "persephone", role = "도움" },
+  { figure = "theseus", role = "피해" },
+  { figure = "peirithoos", role = "피해" },
+  { figure = "hermes", role = "도움" },
+  { figure = "athena", role = "도움" },
+  { figure = "eurystheus", role = "등장" },
+]
+oneliner = "저승의 개를 무기 없이 이겨 끌고 왔고, 테세우스도 풀어 주었다."
+body = """
+열두째 일은 저승의 문지기 개 케르베로스를 데려오는 것이었다.
+헤라클레스는 라코니아 타이나론에 있는 굴로 저승에 내려갔다.
+묶여 있던 테세우스는 일으켰지만 페이리토오스는 두고 와야 했다.
+하데스는 무기를 쓰지 않고 이기면 개를 데려가라고 했다.
+두 팔로 머리를 끌어안아 이겼고, 왕에게 보인 뒤 저승에 돌려 놓았다.
+"""
+fun = "오디세우스가 저승에서 헤라클레스의 그림자를 만났다. 헤라클레스 자신은 하늘에서 신들과 잔치를 하고 있었다."
+caused_by = ["herakles-delphi-oracle"]
+note = "참고: 처음 읽는 그리스 로마 신화 8권 2장 「끝나지 않은 여정」. 내려가기 전 엘레우시스에서 비밀 제사를 받았다(2.5.12)."
+sources = ["apollodorus.library 2.5.12", "homer.iliad 8.362-369", "homer.odyssey 11.601-627"]
+
+# ========== 마지막 ==========
+
+[[event]]
+id = "eurytos-archery-contest"
+name_ko = "에우리토스의 활쏘기 내기"
+era = 5
+seq = 1000
+span = "moment"
+after = ["kerberos-fetched"]
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "eurytos", role = "상대" },
+  { figure = "iole", role = "등장" },
+  { figure = "iphitos", role = "도움" },
+  { figure = "iolaos", role = "등장" },
+]
+oneliner = "헤라클레스가 이겼지만 에우리토스는 딸 이올레를 주지 않았다."
+body = """
+일을 모두 마친 헤라클레스는 메가라를 이올라오스에게 아내로 주었다.
+그리고 새 아내를 찾다가 오이칼리아 왕 에우리토스의 내기를 들었다.
+활쏘기로 왕과 아들들을 이기면 딸 이올레를 준다는 것이었다.
+헤라클레스가 이겼지만 왕은 자식을 또 죽일까 두렵다며 주지 않았다.
+아들 이피토스만이 약속을 지켜야 한다고 말했다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 8권 3장 「뜻하지 않은 사고」. 오이칼리아는 위치가 다투어져 장소를 비웠다."
+sources = ["apollodorus.library 2.6.1"]
+
+[[event]]
+id = "iphitos-killed"
+name_ko = "이피토스를 죽이고 델포이의 벌을 받다"
+era = 5
+seq = 1009
+span = "moment"
+place = "tiryns"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "iphitos", role = "피해" },
+  { figure = "eurytos", role = "등장" },
+  { figure = "apollon", role = "상대" },
+  { figure = "zeus", role = "등장" },
+]
+oneliner = "다시 미친 헤라클레스가 친구 이피토스를 죽였고, 벌로 종이 되어야 했다."
+body = """
+에우리토스는 헤라클레스가 소를 훔쳤다고 여겼지만 이피토스는 믿지 않았다.
+이피토스는 함께 소를 찾자며 티린스로 헤라클레스를 찾아왔다.
+그런데 헤라클레스가 다시 미쳐서 손님인 이피토스를 죽였다.
+그 죄로 병이 든 헤라클레스가 델포이에 묻자 처음엔 대답이 없었다.
+결국 세 해 동안 종으로 팔려 가라는 말을 받았다.
+"""
+fun = "대답이 없자 헤라클레스는 델포이의 세발솥을 들고 나왔다. 아폴론과 다투는 둘 사이에 제우스가 번개를 던져 말렸다."
+sensitivity = "soften"
+caused_by = ["eurytos-archery-contest"]
+sources = ["apollodorus.library 2.6.2", "homer.odyssey 21.22-30"]
+
+[[event]]
+id = "omphale-service"
+name_ko = "옴팔레의 종으로 일하다"
+era = 5
+seq = 1018
+span = "years"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "omphale", role = "상대" },
+  { figure = "hermes", role = "도움" },
+]
+oneliner = "헤르메스가 헤라클레스를 팔았고, 리디아의 여왕이 그를 샀다."
+body = """
+헤르메스가 헤라클레스를 종으로 팔았다.
+리디아의 여왕 옴팔레가 그를 사서 세 해 동안 부렸다.
+그동안에도 헤라클레스는 도둑 케르코페스를 잡아 묶었다.
+이 무렵 아르고호가 떠났고 칼리돈의 멧돼지 사냥이 있었다고 한다.
+테세우스가 길의 악당들을 없앤 것도 이때라고 아폴로도로스는 적었다.
+"""
+sensitivity = "soften"
+caused_by = ["iphitos-killed"]
+note = "리디아는 등록부에 없어 장소를 비웠다. 여자 옷을 입었다는 뒷시대 이야기는 원전에 없어 쓰지 않았다."
+sources = ["apollodorus.library 2.6.2-2.6.3"]
+
+[[event]]
+id = "herakles-sacks-troy"
+name_ko = "헤라클레스가 트로이를 무너뜨리다"
+era = 5
+seq = 1027
+span = "days"
+after = ["omphale-service"]
+place = "troy"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "laomedon", role = "상대" },
+  { figure = "telamon", role = "도움" },
+  { figure = "hesione", role = "피해" },
+]
+oneliner = "약속을 어긴 라오메돈을 벌하러 배 열여덟 척으로 트로이를 쳤다."
+body = """
+종살이가 끝나고 병도 나은 헤라클레스는 군대를 모아 트로이로 갔다.
+성벽을 가장 먼저 넘은 것은 텔라몬이었다.
+헤라클레스는 라오메돈과 아들들을 죽이고 성을 차지했다.
+포다르케스만 살아남았고, 헤시오네가 몸값을 내고 풀어 주었다.
+그가 뒷날 트로이의 왕 프리아모스다.
+"""
+fun = "먼저 들어간 텔라몬에게 헤라클레스가 화를 냈다. 텔라몬은 얼른 돌을 모으며 헤라클레스의 제단을 쌓는 거라고 했다."
+caused_by = ["hesione-rescued"]
+sources = ["apollodorus.library 2.6.4", "homer.iliad 5.638-651", "ovid.metamorphoses 11.213-215"]
+
+[[event.variants]]
+source = "homer.iliad 5.638-651"
+text = "호메로스는 배가 여섯 척뿐이었다고 한다."
+
+[[event]]
+id = "olympic-games-founded"
+name_ko = "아우게이아스를 벌하고 올림피아 경기를 열다"
+era = 5
+seq = 1036
+span = "days"
+after = ["herakles-sacks-troy"]
+place = "elis"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "augeias", role = "상대" },
+  { figure = "iolaos", role = "등장" },
+]
+oneliner = "약속을 어긴 엘리스의 왕을 물리치고 올림피아에서 경기를 열었다."
+body = """
+헤라클레스는 아르카디아 사람들을 모아 엘리스로 갔다.
+처음에는 병이 들어 물러났지만, 다시 와서 엘리스를 차지했다.
+약속을 어겼던 아우게이아스를 죽이고 그 아들 필레우스를 왕으로 세웠다.
+그리고 올림피아에서 제우스에게 바치는 경기를 열었다.
+파우사니아스는 이올라오스가 헤라클레스의 말을 빌려 타고 이겼다고 적었다.
+"""
+fun = "지금의 올림픽 경기 이름이 이 올림피아에서 왔다."
+caused_by = ["augeias-stables"]
+sources = ["apollodorus.library 2.7.2", "pausanias.greece 5.8"]
+
+[[event]]
+id = "deianeira-won"
+name_ko = "아켈로오스와 씨름해 데이아네이라를 얻다"
+era = 5
+seq = 1045
+span = "moment"
+after = ["olympic-games-founded"]
+place = "kalydon"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "akheloos", role = "상대" },
+  { figure = "deianeira", role = "등장" },
+  { figure = "oineus", role = "등장" },
+]
+oneliner = "강의 신이 황소로 변해 싸웠지만 헤라클레스가 뿔을 꺾고 이겼다."
+body = """
+헤라클레스는 칼리돈에 와서 오이네우스의 딸 데이아네이라를 아내로 청했다.
+강의 신 아켈로오스도 같은 마음이어서 둘이 씨름을 했다.
+아켈로오스는 뱀으로, 다시 황소로 모습을 바꾸었다.
+헤라클레스가 황소의 뿔 하나를 꺾자 아켈로오스가 졌다.
+그래서 헤라클레스가 데이아네이라와 결혼했다.
+"""
+fun = "님프들이 꺾인 뿔에 과일을 가득 채웠다. 사람들은 이것을 풍요의 뿔이라고 부른다."
+note = "참고: 처음 읽는 그리스 로마 신화 8권 3장 「데이아네이라와의 결혼」"
+sources = ["apollodorus.library 2.7.5", "ovid.metamorphoses 9.1-100"]
+
+[[event]]
+id = "nessos-slain"
+name_ko = "네소스가 데이아네이라를 붙잡아 가려 하다"
+era = 5
+seq = 1054
+span = "moment"
+place = "kalydon"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "nessos", role = "상대" },
+  { figure = "deianeira", role = "피해" },
+]
+oneliner = "강을 건네주던 켄타우로스가 아내를 붙잡아 가려 하자 헤라클레스가 쏘았다."
+body = """
+헤라클레스는 데이아네이라와 함께 칼리돈을 떠나 에우에노스 강에 왔다.
+켄타우로스 네소스가 돈을 받고 사람을 건네주고 있었다.
+헤라클레스는 혼자 건넜고, 아내는 네소스에게 맡겼다.
+네소스가 아내를 억지로 데려가려 하자 헤라클레스가 독 화살을 쏘았다.
+죽어 가던 네소스는 자기 피가 사랑의 약이라고 데이아네이라를 속였다.
+"""
+sensitivity = "soften"
+caused_by = ["deianeira-won"]
+note = "참고: 처음 읽는 그리스 로마 신화 8권 4장 「네소스의 복수」. 에우에노스 강은 칼리돈 옆을 흐르므로 장소를 칼리돈으로 둔다."
+sources = ["apollodorus.library 2.7.6", "ovid.metamorphoses 9.101-133"]
+
+[[event]]
+id = "oichalia-taken"
+name_ko = "오이칼리아를 무너뜨리고 이올레를 데려오다"
+era = 5
+seq = 1063
+span = "days"
+after = ["nessos-slain"]
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "eurytos", role = "피해" },
+  { figure = "iole", role = "피해" },
+]
+oneliner = "트라키스에서 군대를 모아 에우리토스를 죽이고 이올레를 데려왔다."
+body = """
+헤라클레스는 트라키스의 케익스 왕에게 가서 살았다.
+그리고 옛 약속을 어긴 에우리토스를 벌하려고 군대를 모았다.
+오이칼리아를 쳐서 에우리토스와 아들들을 죽이고 성을 빼앗았다.
+공주 이올레를 붙잡아 데려왔다.
+에우보이아의 케나이온 곶에 제우스의 제단을 쌓고 제사를 준비했다.
+"""
+caused_by = ["eurytos-archery-contest"]
+note = "오이칼리아는 위치가 다투어져 장소를 비웠다."
+sources = ["apollodorus.library 2.7.7", "ovid.metamorphoses 9.136-137"]
+
+[[event]]
+id = "poisoned-robe"
+name_ko = "데이아네이라의 옷"
+era = 5
+seq = 1072
+span = "moment"
+place = "trachis"
+cast = [
+  { figure = "deianeira", role = "주인공" },
+  { figure = "herakles", role = "피해" },
+  { figure = "lichas", role = "피해" },
+  { figure = "iole", role = "등장" },
+  { figure = "nessos", role = "상대" },
+]
+oneliner = "사랑의 약이라 믿고 바른 네소스의 피가 헤라클레스를 태웠다."
+body = """
+헤라클레스가 심부름꾼 리카스를 보내 제사에 입을 옷을 가져오게 했다.
+데이아네이라는 리카스에게서 이올레 이야기를 들었다.
+남편의 마음을 붙들려고 네소스의 피를 옷에 발라 보냈다.
+옷이 몸에서 따뜻해지자 히드라의 독이 헤라클레스를 태우기 시작했다.
+데이아네이라는 그 소식을 듣고 스스로 목숨을 끊었다.
+"""
+fun = "오비디우스는 바다에 던져진 리카스가 바위가 되었다고 한다."
+sensitivity = "soften"
+caused_by = ["nessos-slain", "oichalia-taken", "lernaean-hydra-slain"]
+note = "참고: 처음 읽는 그리스 로마 신화 8권 4장 「헤라클레스의 최후」. 옷이 살을 찢은 상세는 쓰지 않았다."
+sources = ["apollodorus.library 2.7.7", "ovid.metamorphoses 9.134-158", "ovid.metamorphoses 9.211-229"]
+
+[[event]]
+id = "herakles-pyre"
+name_ko = "오이타 산의 장작더미"
+era = 5
+seq = 1081
+span = "moment"
+place = "mt-oita"
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "philoktetes", role = "도움" },
+  { figure = "hyllos", role = "등장" },
+  { figure = "iole", role = "등장" },
+]
+oneliner = "헤라클레스가 스스로 장작 위에 올랐고, 필록테테스가 불을 붙였다."
+body = """
+헤라클레스는 아들 힐로스에게 다 자라면 이올레와 결혼하라고 일렀다.
+그리고 트라키스 땅의 오이타 산으로 올라가 장작을 쌓았다.
+그 위에 올라 불을 붙이라고 했지만 아무도 나서지 않았다.
+양을 찾으러 지나가던 포이아스의 아들 필록테테스가 불을 붙였다.
+헤라클레스는 고마워서 자기 활과 화살을 그에게 주었다.
+"""
+fun = "오비디우스는 이 활과 화살이 뒷날 트로이 땅으로 다시 간다고 적었다."
+caused_by = ["poisoned-robe"]
+sources = ["apollodorus.library 2.7.7", "ovid.metamorphoses 9.229-238"]
+
+[[event.variants]]
+source = "apollodorus.library 2.7.7"
+text = "아폴로도로스는 불을 붙인 사람이 필록테테스의 아버지 포이아스라고 한다."
+
+[[event]]
+id = "herakles-apotheosis"
+name_ko = "헤라클레스가 신이 되다"
+era = 5
+seq = 1090
+span = "moment"
+after = ["herakles-pyre"]
+places = ["mt-oita", "olympus-home"]
+cast = [
+  { figure = "herakles", role = "주인공" },
+  { figure = "zeus", role = "도움" },
+  { figure = "hera", role = "등장" },
+]
+oneliner = "불타는 장작 위에서 구름이 헤라클레스를 하늘로 데려갔다."
+body = """
+장작이 타는 동안 구름이 내려와 헤라클레스를 감쌌다.
+우레 소리와 함께 구름이 그를 하늘로 올려 보냈다.
+제우스는 죽는 몸은 불에 타고, 자기에게서 받은 부분은 남는다고 말했다.
+헤라클레스는 죽지 않는 몸이 되어 헤라와도 화해했다.
+헤라의 딸 헤베와 결혼했다.
+"""
+fun = "델포이의 말이 그대로 되었다. 일을 다 하면 죽지 않는 몸이 된다고 했었다."
+caused_by = ["herakles-pyre", "herakles-delphi-oracle"]
+note = "참고: 처음 읽는 그리스 로마 신화 8권 4장 「신이 된 영웅」. 헤베는 등록부에 없어 이름만 불렀다."
+sources = ["apollodorus.library 2.7.7", "ovid.metamorphoses 9.239-272", "homer.odyssey 11.601-604"]

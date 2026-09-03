@@ -1,0 +1,730 @@
+# era 4~5 — 테베 왕가(카드모스~안티고네)와 아르고호(이아손·메데이아), 오르페우스,
+# 디오스쿠로이, 칼리돈의 멧돼지에 나오는 인물들.
+# 집필: THE. 아폴로도로스 3.4.1~3.7.1 과 1.8.2~1.8.3 · 1.9.1 · 1.9.16~1.9.28 이 뼈대.
+
+# ── 테베를 세운 사람들 ────────────────────────────────────
+
+[[figure]]
+id = "kadmos"
+name_ko = "카드모스"
+name_grc = "Kadmos"
+name_la = "Cadmus"
+aka = ["카드무스", "캐드모스"]
+kind = "hero"
+era = 4
+spouses = ["harmonia"]
+home = "thebes"
+oneliner = "누이를 찾아 나섰다가 테베를 세운 페니키아의 왕자."
+body = """
+아버지가 누이 에우로페를 찾아오라며 집에서 내보냈다.
+찾지 못해 델포이에 묻자, 누이는 잊고 암소를 따라가라는 대답이 왔다.
+암소가 지쳐 누운 자리에 성을 세운 것이 테베다.
+샘을 지키던 용을 죽이고, 그 이빨을 땅에 심었다.
+"""
+fun = "그리스 사람들은 글자를 카드모스가 페니키아에서 가져왔다고 믿었다. 그래서 옛 그리스 글자를 '카드모스의 글자'라고 불렀다."
+note = "참고: 처음 읽는 그리스 로마 신화 9권 부록 「카드모스 가문의 계보」. 에우로페(ATH europa)는 이름만 부른다."
+sources = ["apollodorus.library 3.1.1", "apollodorus.library 3.4.1-3.4.2", "ovid.metamorphoses 3.1-130", "pausanias.greece 9.5", "pausanias.greece 9.12"]
+
+[[figure]]
+id = "harmonia"
+name_ko = "하르모니아"
+name_grc = "Harmonia"
+kind = "god"
+era = 4
+parents = ["ares", "aphrodite"]
+spouses = ["kadmos"]
+home = "thebes"
+oneliner = "신들이 모두 와서 결혼을 축하해 준 테베의 첫 왕비."
+body = """
+아레스와 아프로디테의 딸이다.
+제우스가 카드모스에게 아내로 주었다.
+결혼식 때 신들이 하늘을 비우고 내려와 노래를 불렀다.
+카드모스는 헤파이스토스가 만든 목걸이를 선물로 주었다.
+"""
+fun = "그 목걸이는 뒷날 폴리네이케스가 에리필레를 꾀는 데 쓰인다. 아름다운 선물이 사람들을 불행으로 데려간다."
+note = "이름은 '잘 맞음'이라는 뜻이다. 참고: 처음 읽는 그리스 로마 신화 9권 부록."
+sources = ["hesiod.theogony 933-937", "hesiod.theogony 975-978", "apollodorus.library 3.4.2", "pausanias.greece 9.12"]
+
+[[figure]]
+id = "aktaion"
+name_ko = "악타이온"
+name_grc = "Aktaion"
+name_la = "Actaeon"
+aka = ["악테온", "악타이온"]
+kind = "human"
+era = 5
+home = "thebes"
+oneliner = "사슴이 되어 자기 개들에게 죽은 사냥꾼."
+body = """
+카드모스의 외손자다. 케이론에게 사냥을 배웠다.
+사냥을 마치고 쉴 곳을 찾다가 아르테미스가 목욕하는 곳에 들어섰다.
+아르테미스는 그를 사슴으로 바꾸었다.
+데리고 다니던 개 오십 마리가 주인을 알아보지 못하고 덮쳤다.
+"""
+sensitivity = "soften"
+fun = "개들은 주인을 찾아 울며 돌아다녔다. 케이론이 악타이온의 모습을 만들어 보여 주자 그제야 그쳤다."
+note = "아폴로도로스 3.4.4 는 이설도 적는다 — 세멜레에게 구혼해 제우스가 노했다는 것(아쿠실라오스). 주 서술은 널리 퍼진 아르테미스 쪽. 케이론(HER cheiron)은 이름만 부른다."
+sources = ["apollodorus.library 3.4.4", "ovid.metamorphoses 3.138-252"]
+
+[[figure]]
+id = "teiresias"
+name_ko = "테이레시아스"
+name_grc = "Teiresias"
+name_la = "Tiresias"
+aka = ["티레시아스", "테레시아스"]
+kind = "human"
+era = 5
+home = "thebes"
+oneliner = "눈이 보이지 않는 대신 앞일을 아는 테베의 점쟁이."
+body = """
+눈이 보이지 않았다. 왜 그렇게 되었는지는 이야기가 여러 가지다.
+아테나가 눈을 감기고 대신 새들의 말을 알아듣게 해 주었다고도 한다.
+제우스와 헤라의 말다툼을 판정한 벌로 헤라가 눈을 감겼다고도 한다.
+테베 사람들은 큰일마다 이 사람에게 물었다.
+"""
+fun = "오디세우스도 저승에서 이 사람을 만나 집에 돌아가는 길을 듣는다. 죽은 뒤에도 앞일을 아는 유일한 사람이다."
+note = "참고: 처음 읽는 그리스 로마 신화 9권 2장. 눈이 보이지 않게 된 경위는 원전이 셋으로 갈려 body 에 '이야기가 여러 가지'로 남겼다. 아폴로도로스 3.6.7 이 셋을 다 적는다."
+sources = ["apollodorus.library 3.6.7", "homer.odyssey 11.90-151", "pausanias.greece 9.33"]
+
+[[figure]]
+id = "laios"
+name_ko = "라이오스"
+name_grc = "Laios"
+name_la = "Laius"
+aka = ["라이우스"]
+kind = "human"
+era = 5
+spouses = ["iokaste"]
+home = "thebes"
+oneliner = "아들을 낳지 말라는 말을 듣고도 아들을 얻은 테베의 왕."
+body = """
+아들이 아버지를 죽일 것이라는 말을 델포이에서 들었다.
+그래도 아들이 태어나자, 발목을 꿰어 하인에게 내다 버리게 했다.
+아기는 죽지 않고 코린토스에서 자랐다.
+좁은 길에서 마주친 젊은이와 다투다 죽었다. 그 젊은이가 그 아들이었다.
+"""
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 9권 2장 「불행한 예언」."
+sources = ["apollodorus.library 3.5.7"]
+
+[[figure]]
+id = "iokaste"
+name_ko = "이오카스테"
+name_grc = "Iokaste"
+name_la = "Iocasta"
+aka = ["요카스타", "에피카스테"]
+kind = "human"
+era = 5
+spouses = ["laios", "oidipous"]
+home = "thebes"
+oneliner = "라이오스의 왕비. 뒤에 자기 아들과 결혼하게 된 테베의 여왕."
+body = """
+메노이케우스의 딸이고 크레온의 누이다.
+남편 라이오스가 죽은 뒤, 스핑크스의 수수께끼를 푼 사람과 결혼했다.
+그 사람이 자기가 버린 아들이라는 것을 오래 몰랐다.
+진실이 밝혀지자 스스로 목숨을 끊었다.
+"""
+sensitivity = "soften"
+fun = "호메로스는 이 사람을 에피카스테라고 부른다. 이름 표기가 원전마다 다르다."
+note = "계보는 사실대로 둔다(브리프 §6). spouses 에 laios·oidipous 둘. 호메로스 11.271-280 이 '에피카스테'."
+sources = ["apollodorus.library 3.5.7-3.5.9", "homer.odyssey 11.271-280"]
+
+[[figure]]
+id = "oidipous"
+name_ko = "오이디푸스"
+name_grc = "Oidipous"
+name_la = "Oedipus"
+aka = ["오이디푸스 왕", "에디푸스", "오이디포스"]
+kind = "hero"
+era = 5
+parents = ["laios", "iokaste"]
+spouses = ["iokaste"]
+home = "thebes"
+oneliner = "스핑크스의 수수께끼를 푼 사람. 자기가 누구인지는 몰랐다."
+body = """
+갓난아기 때 버려져 코린토스 왕의 집에서 자랐다.
+부모가 누구인지 델포이에 묻자, 고향에 가지 말라고 했다.
+길에서 만난 나이 든 사람과 다투다 그를 죽였는데, 그가 아버지였다.
+수수께끼를 풀고 테베의 왕이 되었지만, 그 여왕이 자기 어머니였다.
+"""
+sensitivity = "soften"
+fun = "이름은 '부어오른 발'이라는 뜻이다. 아기 때 발목이 상해 있어서 그렇게 불렀다."
+note = "브리프 §6 대로 계보는 사실대로, body 는 '그 여왕이 자기 어머니였다' 까지. 눈은 사건 쪽에 '스스로 눈을 못 보게 했다'로만. 참고: 처음 읽는 그리스 로마 신화 9권 2장."
+sources = ["apollodorus.library 3.5.7-3.5.9", "homer.odyssey 11.271-280"]
+
+[[figure]]
+id = "sphinx"
+name_ko = "스핑크스"
+name_grc = "Sphinx"
+aka = ["스핑크스 여인", "스핀크스"]
+kind = "monster"
+era = 5
+parents = ["typhon", "echidna"]
+home = "thebes"
+oneliner = "수수께끼를 내고 못 푸는 사람을 잡아간 괴물."
+body = """
+얼굴은 여자, 몸과 발과 꼬리는 사자, 등에는 새의 날개가 있었다.
+무사들에게 배운 수수께끼 하나를 들고 테베 옆 산에 앉았다.
+"목소리는 하나인데 네 발, 두 발, 세 발로 걷는 것은 무엇이냐."
+답을 못 하는 사람을 잡아갔다.
+오이디푸스가 답을 맞히자 성벽에서 몸을 던졌다.
+"""
+fun = "답은 사람이다. 기어 다니는 아기는 네 발, 자란 사람은 두 발, 지팡이를 든 노인은 세 발이다."
+note = "참고: 처음 읽는 그리스 로마 신화 6권 2장 「스핑크스」, 9권 2장 「스핑크스의 수수께끼」. echidna 는 HER 소유 — 참조만. 이집트의 스핑크스와 달리 그리스의 스핑크스는 여자이고 날개가 있다."
+sources = ["apollodorus.library 3.5.8", "hesiod.theogony 306-332", "pausanias.greece 9.26"]
+
+[[figure]]
+id = "kreon"
+name_ko = "크레온"
+name_grc = "Kreon"
+name_la = "Creon"
+aka = ["크레온 왕"]
+kind = "human"
+era = 5
+home = "thebes"
+oneliner = "테베를 세 번 맡은 사람. 마지막에 안티고네를 벌한 왕."
+body = """
+이오카스테의 오빠다.
+라이오스가 죽은 뒤 나라를 맡았다.
+수수께끼를 푼 사람에게 왕자리를 주겠다고 알렸다.
+오이디푸스와 두 아들이 모두 사라진 뒤 다시 왕이 되었다.
+쳐들어온 사람들의 시신을 묻지 못하게 하고, 어긴 안티고네를 벌했다.
+"""
+sensitivity = "soften"
+note = "코린토스의 크레온(메데이아 이야기)과 이름이 같은 다른 사람이다 — 그쪽은 이름만 부른다."
+sources = ["apollodorus.library 3.5.8", "apollodorus.library 3.7.1"]
+
+[[figure]]
+id = "antigone"
+name_ko = "안티고네"
+name_grc = "Antigone"
+kind = "human"
+era = 5
+parents = ["oidipous", "iokaste"]
+home = "thebes"
+oneliner = "묻지 말라는 명령을 어기고 오빠를 묻은 딸."
+body = """
+오이디푸스의 딸이다.
+눈을 못 보게 된 아버지를 따라 테베를 떠나 끝까지 함께 있었다.
+아버지가 죽은 뒤 테베로 돌아왔다.
+크레온이 묻지 말라고 한 오빠의 시신을 몰래 묻었다.
+그 벌을 받았다.
+"""
+sensitivity = "soften"
+fun = "테베 사람들은 안티고네가 오빠를 끌고 간 자리를 '안티고네가 끌던 곳'이라고 불렀다. 시신이 무거워 들지 못하고 끌었다는 것이다."
+note = "파우사니아스 9.25 가 그 자리를 적는다. 참고: 처음 읽는 그리스 로마 신화 9권 부록."
+sources = ["apollodorus.library 3.5.9", "apollodorus.library 3.7.1", "pausanias.greece 9.25"]
+
+[[figure]]
+id = "ismene"
+name_ko = "이스메네"
+name_grc = "Ismene"
+kind = "human"
+era = 5
+parents = ["oidipous", "iokaste"]
+home = "thebes"
+oneliner = "안티고네의 동생. 테베에 남은 딸이다."
+body = """
+오이디푸스의 둘째 딸이다.
+언니 안티고네와 두 오빠가 있었다.
+원전은 이 사람에 대해 이름과 계보만 남겼다.
+"""
+note = "아폴로도로스 3.5.8 에 이름과 계보만 있다. 원전에 없는 것은 쓰지 않는다."
+sources = ["apollodorus.library 3.5.8"]
+
+[[figure]]
+id = "eteokles"
+name_ko = "에테오클레스"
+name_grc = "Eteokles"
+kind = "human"
+era = 5
+parents = ["oidipous", "iokaste"]
+home = "thebes"
+oneliner = "왕자리를 내주지 않아 형제와 싸운 테베의 왕."
+body = """
+오이디푸스의 아들이다.
+동생과 한 해씩 번갈아 다스리기로 약속했다.
+그런데 자기 차례가 끝나도 왕자리를 내주지 않았다.
+동생이 군대를 데려오자 일곱 문에 사람을 세워 막았다.
+마지막에 둘이 맞서 싸웠다.
+"""
+sensitivity = "soften"
+note = "누가 먼저 다스렸는지는 원전이 갈린다(아폴로도로스 3.6.1). 참고: 처음 읽는 그리스 로마 신화 9권 부록."
+sources = ["apollodorus.library 3.6.1", "apollodorus.library 3.6.6-3.6.8"]
+
+[[figure]]
+id = "polyneikes"
+name_ko = "폴리네이케스"
+name_grc = "Polyneikes"
+aka = ["폴리니케스"]
+kind = "human"
+era = 5
+parents = ["oidipous", "iokaste"]
+oneliner = "쫓겨나 군대를 데리고 자기 도시로 돌아온 형제."
+body = """
+오이디푸스의 아들이다.
+왕자리를 받지 못하고 테베에서 쫓겨났다.
+하르모니아의 목걸이를 들고 아르고스로 가, 왕의 사위가 되었다.
+일곱 장수의 군대를 얻어 테베로 돌아왔고, 형제와 맞서 싸웠다.
+"""
+sensitivity = "soften"
+note = "이름은 '싸움이 많은'이라는 뜻이다. 참고: 처음 읽는 그리스 로마 신화 9권 부록."
+sources = ["apollodorus.library 3.6.1", "apollodorus.library 3.6.6-3.6.8"]
+
+[[figure]]
+id = "adrastos"
+name_ko = "아드라스토스"
+name_grc = "Adrastos"
+aka = ["아드라스투스"]
+kind = "human"
+era = 5
+home = "argos"
+oneliner = "일곱 장수를 모아 테베로 간 아르고스의 왕. 혼자 살아 돌아왔다."
+body = """
+쫓겨나 온 폴리네이케스를 사위로 맞았다.
+그의 나라를 되찾아 주겠다고 약속했다.
+일곱 장수를 모아 테베를 쳤다.
+일곱 가운데 혼자 살아남았다. 말 아리온이 그를 태워 달아났다.
+"""
+note = "일곱 장수 명단은 아폴로도로스 3.6.3. 티데우스·카파네우스·암피아라오스 등 나머지는 이름만 부른다."
+sources = ["apollodorus.library 3.6.1", "apollodorus.library 3.6.3", "apollodorus.library 3.6.8"]
+
+[[figure]]
+id = "amphiaraos"
+name_ko = "암피아라오스"
+name_grc = "Amphiaraos"
+aka = ["암피아라우스"]
+kind = "human"
+era = 5
+home = "argos"
+oneliner = "질 것을 알면서 테베로 간 점쟁이 장수."
+body = """
+앞일을 아는 사람이었다.
+테베로 가면 아드라스토스만 살아 남는다는 것을 알았다.
+아내 에리필레가 목걸이를 받고 그를 설득해서, 어쩔 수 없이 갔다.
+싸움에서 달아나던 중에 제우스가 땅을 갈랐다.
+그는 수레와 함께 땅속으로 사라졌다.
+"""
+fun = "제우스는 그를 죽지 않는 몸으로 만들었다. 그리스 사람들은 뒷날 그 자리에 신전을 세우고 앞일을 물으러 갔다."
+note = "에리필레는 등록부에 없어 만들지 않고 이름만 부른다."
+sources = ["apollodorus.library 3.6.2", "apollodorus.library 3.6.8", "apollodorus.library 1.9.16"]
+
+# ── 아르고호 ────────────────────────────────────
+
+[[figure]]
+id = "phrixos"
+name_ko = "프릭소스"
+name_grc = "Phrixos"
+name_la = "Phrixus"
+aka = ["프리크소스", "프릭수스"]
+kind = "human"
+era = 4
+oneliner = "황금 양을 타고 콜키스까지 날아간 소년."
+body = """
+새어머니 이노가 꾸민 일로 제단에 오르게 되었다.
+어머니 네펠레가 황금 털을 가진 양을 보내 남매를 태워 하늘로 데려갔다.
+누이 헬레는 바다에 떨어졌다. 그 바다를 헬레스폰토스라고 부른다.
+콜키스에 닿아 양을 바치고, 털은 왕 아이에테스에게 주었다.
+"""
+sensitivity = "soften"
+fun = "황금 양털은 그때부터 아레스의 숲 참나무에 걸려 잠들지 않는 용이 지킨다. 아르고호가 찾으러 가는 것이 이 털이다."
+note = "이노·네펠레·헬레는 등록부에 없어 이름만 부른다. 참고: 처음 읽는 그리스 로마 신화 9권 3장."
+sources = ["apollodorus.library 1.9.1", "hyginus.fabulae 3"]
+
+[[figure]]
+id = "aison"
+name_ko = "아이손"
+name_grc = "Aison"
+name_la = "Aeson"
+aka = ["에손"]
+kind = "human"
+era = 5
+home = "iolkos"
+oneliner = "왕자리를 아우에게 빼앗긴 이아손의 아버지."
+body = """
+이올코스를 세운 크레테우스의 아들이다.
+왕자리는 아우 펠리아스가 차지했다.
+아들 이아손은 시골에서 자랐다.
+아들이 배를 타고 떠난 뒤 늙어 죽었다.
+"""
+sensitivity = "soften"
+note = "아폴로도로스 1.9.27 은 펠리아스가 아이손을 죽이려 했고 아이손이 스스로 목숨을 끊었다고 한다 — 상세는 쓰지 않고 '늙어 죽었다'로 두었다(오비디우스 7.159-163 은 늙어 죽어 가는 것으로 그린다)."
+sources = ["apollodorus.library 1.9.11", "apollodorus.library 1.9.16", "ovid.metamorphoses 7.159-293"]
+
+[[figure]]
+id = "pelias"
+name_ko = "펠리아스"
+name_grc = "Pelias"
+kind = "human"
+era = 5
+home = "iolkos"
+oneliner = "신발 한 짝만 신은 사람을 조심하라는 말을 들은 왕."
+body = """
+형에게서 이올코스의 왕자리를 빼앗아 다스렸다.
+신발 한 짝만 신은 사람을 조심하라는 말을 델포이에서 들었다.
+어느 날 신발 한 짝을 잃은 젊은이가 제사에 나타났다.
+그 젊은이에게 황금 양털을 가져오라고 시켰다. 돌아오지 못할 일이라고 생각한 것이다.
+"""
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 9권 3장 「왕이 될 아이」. 죽음은 사건 쪽에서 사실만."
+sources = ["apollodorus.library 1.9.8", "apollodorus.library 1.9.16", "apollodorus.library 1.9.27"]
+
+[[figure]]
+id = "iason"
+name_ko = "이아손"
+name_grc = "Iason"
+name_la = "Jason"
+aka = ["제이슨", "야손", "이아손 왕자"]
+kind = "hero"
+era = 5
+parents = ["aison"]
+spouses = ["medeia"]
+home = "iolkos"
+oneliner = "황금 양털을 가지러 그리스의 영웅들을 모은 사람."
+body = """
+왕자리를 빼앗긴 집에서 태어나 시골에서 자랐다.
+강을 건너다 신발 한 짝을 잃고 제사에 나타났다.
+펠리아스는 황금 양털을 가져오라고 시켰다.
+쉰 개의 노를 가진 배를 짓고 그리스에서 가장 뛰어난 사람들을 모았다.
+힘이 아니라 사람을 모아서, 메데이아의 도움으로 털을 얻었다.
+"""
+fun = "이아손은 혼자서 이긴 일이 거의 없다. 그리스 신화에서 가장 좋은 팀을 꾸린 영웅이다."
+note = "참고: 처음 읽는 그리스 로마 신화 9권 3장 「영웅들을 모은 이아손」. 어머니(폴리메데/알키메데)는 이름만 부른다."
+sources = ["apollodorus.library 1.9.16", "apollodorus.library 1.9.23", "apollodorus.library 1.9.27-1.9.28", "ovid.metamorphoses 7.1-158", "hesiod.theogony 993-1002"]
+
+[[figure]]
+id = "argonautai"
+name_ko = "아르고호 원정대"
+name_grc = "Argonautai"
+aka = ["아르고나우타이", "아르고 원정대", "아르고호 선원들"]
+kind = "group"
+era = 5
+oneliner = "쉰 개의 노를 나눠 잡은 그리스 최고의 뱃사람들."
+body = """
+황금 양털을 가지러 이아손과 함께 배를 탄 사람들이다.
+헤라클레스와 쌍둥이 카스토르·폴리데우케스가 탔다.
+펠레우스와 텔라몬, 오르페우스, 아탈란테도 있었다.
+키를 잡은 사람은 티피스, 배를 지은 사람은 아르고스다.
+넉 달 걸려 콜키스에 갔다 돌아왔다.
+"""
+fun = "배 이름은 지은 사람 아르고스에서 왔다. 뱃머리에는 도도나의 참나무를 깎아 붙였는데, 그 나무가 말을 했다."
+note = "명단 전체는 아폴로도로스 1.9.16. 티피스·아르고스·이드몬·부테스 등은 등록부에 없어 만들지 않고 이름만 부른다. 참고: 처음 읽는 그리스 로마 신화 9권 3장 「아르고호 원정대의 모험」."
+sources = ["apollodorus.library 1.9.16", "apollodorus.library 1.9.23", "apollodorus.library 1.9.26"]
+
+[[figure]]
+id = "hylas"
+name_ko = "힐라스"
+name_grc = "Hylas"
+kind = "human"
+era = 5
+oneliner = "물을 뜨러 갔다가 님프들에게 붙잡혀 사라진 소년."
+body = """
+헤라클레스가 데리고 다니던 소년이다.
+아르고호가 미시아 바닷가에 배를 댔을 때 물을 뜨러 샘으로 갔다.
+샘의 님프들이 붙잡아 데려갔다.
+헤라클레스가 찾아 헤매는 사이 배는 떠났고, 두 사람은 남겨졌다.
+"""
+sensitivity = "soften"
+note = "헤라클레스가 원정대에서 빠지는 까닭이 이 사건이다. 아폴로도로스 1.9.19 는 애초에 타지 않았다는 이설도 적는다. 함께 남은 폴리페모스(엘라토스의 아들)는 오디세이아의 외눈 거인과 다른 사람이라 이름만 부른다."
+sources = ["apollodorus.library 1.9.19"]
+
+[[figure]]
+id = "phineus"
+name_ko = "피네우스"
+name_grc = "Phineus"
+kind = "human"
+era = 5
+home = "thrake"
+oneliner = "밥을 못 먹게 된 눈먼 점쟁이. 아르고호에게 뱃길을 알려 주었다."
+body = """
+앞일을 아는 사람이었는데 눈이 보이지 않았다.
+신들이 하르피이아이를 보내, 밥상을 차리면 날아와 음식을 채 가게 했다.
+아르고호가 하르피이아이를 쫓아 주자, 앞으로 갈 뱃길을 알려 주었다.
+부딪치는 바위를 비둘기로 먼저 시험하라고 가르쳐 준 것이 이 사람이다.
+"""
+sensitivity = "soften"
+note = "눈이 보이지 않게 된 까닭은 아폴로도로스 1.9.21 이 넷을 적는다 — 앞일을 알려 주어서, 아들들 때문에, 포세이돈이 노해서 등. 갈리므로 'ㅇㅇ 때문'을 고르지 않았다. 참고: 처음 읽는 그리스 로마 신화 6권 2장 「하르피아이」."
+sources = ["apollodorus.library 1.9.21-1.9.22", "ovid.metamorphoses 7.1-4"]
+
+[[figure]]
+id = "harpyiai"
+name_ko = "하르피이아이"
+name_grc = "Harpyiai"
+name_la = "Harpyiae"
+aka = ["하르피아이", "하르피", "하피"]
+kind = "group"
+era = 1
+oneliner = "밥상의 음식을 채 가는 날개 달린 자매."
+body = """
+바람처럼 빠른 날개를 가진 자매다.
+이름은 아엘로(폭풍처럼 빠른)와 오키페테(빨리 나는)다.
+피네우스의 밥상에 날아와 음식을 채 가고 더럽혔다.
+북풍의 아들들이 하늘로 쫓아내자 다시 오지 않았다.
+"""
+fun = "이름 하르피이아는 '채 가는 것'이라는 뜻이다. 지금도 큰 매 한 종류를 하르피 독수리라고 부른다."
+note = "계보는 헤시오도스 265-269 — 타우마스와 오케아노스의 딸 엘렉트라. 둘 다 등록부에 없어 만들지 않고 parents 를 비웠다. 참고: 처음 읽는 그리스 로마 신화 6권 2장 「하르피아이」."
+sources = ["hesiod.theogony 265-269", "apollodorus.library 1.9.21", "apollodorus.library 1.2.6"]
+
+[[figure]]
+id = "aietes"
+name_ko = "아이에테스"
+name_grc = "Aietes"
+name_la = "Aeetes"
+aka = ["아이에테스 왕", "에에테스"]
+kind = "human"
+era = 5
+parents = ["helios"]
+home = "kolchis"
+oneliner = "황금 양털을 내주지 않으려 한 콜키스의 왕."
+body = """
+해의 신 헬리오스의 아들이다.
+황금 양털을 아레스의 숲에 걸고 용에게 지키게 했다.
+이아손이 털을 달라고 하자 할 일을 내놓았다.
+불을 뿜는 소 두 마리에 멍에를 씌우라는 것이었다.
+그 일을 해내도 털을 주지 않으려 하다가 딸에게 털을 잃었다.
+"""
+fun = "마녀 키르케가 이 사람의 누이다. 크레타의 왕비 파시파에도 그렇다. 헬리오스의 자식들이다."
+note = "키르케(ODY kirke)·파시파에(ATH pasiphae)는 이름만 부른다."
+sources = ["apollodorus.library 1.9.1", "apollodorus.library 1.9.23", "hesiod.theogony 956-962"]
+
+[[figure]]
+id = "medeia"
+name_ko = "메데이아"
+name_grc = "Medeia"
+name_la = "Medea"
+aka = ["메데아", "메디아"]
+kind = "human"
+era = 5
+parents = ["aietes"]
+spouses = ["iason"]
+home = "kolchis"
+oneliner = "약초를 다루는 콜키스의 공주. 이아손을 돕고 모든 것을 걸었다."
+body = """
+아이에테스의 딸이고, 약초와 주술을 아는 사람이었다.
+이아손을 도와 불을 뿜는 소를 이기게 했다.
+용을 잠들게 해 황금 양털을 건네주었다.
+아버지를 떠나 이아손과 함께 배를 탔다.
+이올코스에서도 코린토스에서도, 자기를 배신한 사람에게 그대로 갚았다.
+"""
+sensitivity = "soften"
+fun = "메데이아가 하늘을 나는 수레를 얻은 곳은 할아버지 헬리오스다. 해의 수레를 끄는 것이 날개 달린 용이다."
+note = "브리프 §6 — 자식을 죽인 것은 '죽였다' 사실만. 아테네에서의 일(아이게우스와의 결혼, 테세우스를 노림)은 ATH 가 쓴다. 참고: 처음 읽는 그리스 로마 신화 9권 3장·4장."
+sources = ["apollodorus.library 1.9.23-1.9.28", "ovid.metamorphoses 7.1-401", "hesiod.theogony 956-962", "pausanias.greece 2.3"]
+
+[[figure]]
+id = "apsyrtos"
+name_ko = "압시르토스"
+name_grc = "Apsyrtos"
+name_la = "Absyrtus"
+aka = ["압시르투스", "아프시르토스"]
+kind = "human"
+era = 5
+parents = ["aietes"]
+home = "kolchis"
+oneliner = "누이를 따라 배에 올랐다가 도망길에서 죽은 콜키스의 왕자."
+body = """
+아이에테스의 아들이고 메데이아의 동생이다.
+메데이아가 황금 양털을 들고 배에 오를 때 함께 따라갔다.
+아버지가 배를 쫓아오자, 메데이아가 동생을 죽였다.
+제우스는 그 일에 노해 아르고호에 큰 폭풍을 보냈다.
+"""
+sensitivity = "soften"
+note = "브리프 §6 — 사실만. 방법은 쓰지 않는다(아폴로도로스 1.9.24 의 상세는 옮기지 않음)."
+sources = ["apollodorus.library 1.9.23-1.9.24"]
+
+[[figure]]
+id = "talos"
+name_ko = "탈로스"
+name_grc = "Talos"
+aka = ["탈로스 청동 거인"]
+kind = "monster"
+era = 5
+home = "crete"
+oneliner = "크레타 섬을 하루 세 바퀴 돌며 지킨 청동 사람."
+body = """
+온몸이 청동이었다.
+목에서 발목까지 핏줄 하나가 뻗어 있고, 발목에 청동 못이 박혀 있었다.
+하루에 세 번 섬을 돌며, 배가 다가오면 돌을 던졌다.
+아르고호가 왔을 때도 그랬다가, 메데이아의 꾀에 걸렸다.
+"""
+fun = "헤파이스토스가 만들어 미노스에게 주었다고도 하고, 청동 종족의 마지막 한 사람이라고도 한다."
+note = "죽는 방식은 원전이 셋으로 갈린다(아폴로도로스 1.9.26): 약으로 미치게 했다 / 죽지 않게 해 주겠다며 못을 뺐다 / 포이아스가 발목을 쏘았다."
+sources = ["apollodorus.library 1.9.26"]
+
+[[figure]]
+id = "glauke"
+name_ko = "글라우케"
+name_grc = "Glauke"
+aka = ["글라우케 공주", "크레우사"]
+kind = "human"
+era = 5
+home = "corinth"
+oneliner = "이아손과 결혼하려 한 코린토스의 공주."
+body = """
+코린토스 왕의 딸이다.
+이아손이 메데이아를 떠나 이 사람과 결혼하려 했다.
+메데이아가 보낸 옷을 입고 죽었다.
+아버지도 딸을 구하려다 함께 죽었다.
+"""
+sensitivity = "soften"
+note = "오비디우스와 뒷날의 이야기는 크레우사라고도 부른다. 코린토스의 왕 크레온은 테베의 크레온과 다른 사람이어서 만들지 않고 이름만 부른다."
+sources = ["apollodorus.library 1.9.28", "ovid.metamorphoses 7.394-397"]
+
+# ── 오르페우스 ────────────────────────────────────
+
+[[figure]]
+id = "orpheus"
+name_ko = "오르페우스"
+name_grc = "Orpheus"
+aka = ["오르페오", "올페우스"]
+kind = "hero"
+era = 5
+parents_variant = [
+  { source = "apollodorus.library 1.3.2", parents = ["apollon"], text = "아폴로도로스는 오르페우스를 아폴론의 아들이라고도 한다." },
+]
+spouses = ["eurydike"]
+home = "thrake"
+oneliner = "노래로 돌과 나무를 움직인 사람. 저승까지 내려갔다."
+body = """
+누구보다 잘 노래하고 리라를 켰다.
+그 소리에 돌과 나무가 따라 움직이고 짐승들이 모여 앉았다.
+아르고호에서는 세이레네스의 노래를 자기 노래로 덮어 배를 지켰다.
+아내가 죽자 저승까지 내려가 데려오려 했다.
+"""
+fun = "저승에서 그 노래를 들은 벌받는 사람들이 잠깐 벌을 잊었다. 시시포스가 바위에 앉아 쉬었고, 익시온의 수레바퀴가 멈췄다."
+note = "아폴로도로스 1.3.2 은 어머니를 무사 칼리오페, 아버지를 오이아그로스 또는 아폴론이라 한다. 확정할 수 없어 parents 를 비우고 parents_variant 에 아폴론만 두었다(칼리오페·오이아그로스는 등록부에 없어 만들지 않고 이름만 부른다). 참고: 처음 읽는 그리스 로마 신화 4권 1장 「지하 세계로 간 오르페우스」."
+sources = ["apollodorus.library 1.3.2", "ovid.metamorphoses 10.1-85", "apollodorus.library 1.9.25", "pausanias.greece 9.30"]
+
+[[figure]]
+id = "eurydike"
+name_ko = "에우리디케"
+name_grc = "Eurydike"
+name_la = "Eurydice"
+aka = ["에우리디체", "유리디스"]
+kind = "nymph"
+era = 5
+spouses = ["orpheus"]
+home = "thrake"
+oneliner = "결혼한 날 뱀에게 물려 죽은 오르페우스의 아내."
+body = """
+오르페우스와 결혼한 날, 풀밭을 걷다가 뱀에게 발을 물렸다.
+그대로 죽어 저승으로 내려갔다.
+오르페우스의 노래를 들은 저승의 왕이 돌아가게 해 주었다.
+땅 위에 거의 다 왔을 때 오르페우스가 뒤를 돌아보았다.
+에우리디케는 다시 아래로 끌려갔다.
+"""
+fun = "두 번째로 사라질 때 에우리디케는 남편을 탓하지 않았다. 오비디우스는 '사랑받은 것을 어찌 탓하겠는가'라고 적었다."
+note = "참고: 처음 읽는 그리스 로마 신화 4권 1장 「돌이킬 수 없는 실수」."
+sources = ["apollodorus.library 1.3.2", "ovid.metamorphoses 10.1-85"]
+
+# ── 디오스쿠로이 ────────────────────────────────────
+
+[[figure]]
+id = "kastor"
+name_ko = "카스토르"
+name_grc = "Kastor"
+name_la = "Castor"
+aka = ["카스토르", "캐스터"]
+kind = "hero"
+era = 5
+parents = ["tyndareos", "leda"]
+parents_variant = [
+  { source = "apollodorus.library 3.10.7", parents = ["zeus", "leda"], text = "레다가 제우스의 아이도 함께 낳았다는 이야기도 있다." },
+]
+home = "sparta"
+oneliner = "말을 다루는 쌍둥이 형. 죽는 몸이었다."
+body = """
+말을 길들이고 싸우는 법을 익혔다.
+동생 폴리데우케스와 늘 함께 다녔다. 둘을 디오스쿠로이라고 부른다.
+아르고호를 탔고, 칼리돈의 멧돼지 사냥에도 갔다.
+소를 두고 다투다 이다스에게 죽었다.
+"""
+sensitivity = "soften"
+note = "tyndareos·leda 는 TRO 소유 — 참조만. parents_variant 의 근거는 아폴로도로스 3.10.7 — 레다가 한 밤에 제우스와 틴다레오스 둘의 아이를 가졌다고 한다. 참고: 처음 읽는 그리스 로마 신화 5권 「쌍둥이자리」."
+sources = ["apollodorus.library 3.10.7", "apollodorus.library 3.11.2", "homer.odyssey 11.298-304", "homeric.hymns dioscuri 1-5"]
+
+[[figure]]
+id = "polydeukes"
+name_ko = "폴리데우케스"
+name_grc = "Polydeukes"
+name_la = "Pollux"
+aka = ["폴룩스", "폴리듀케스"]
+kind = "hero"
+era = 5
+parents = ["tyndareos", "leda"]
+parents_variant = [
+  { source = "apollodorus.library 3.10.7", parents = ["zeus", "leda"], text = "레다가 제우스의 아이도 함께 낳았다는 이야기도 있다." },
+]
+home = "sparta"
+oneliner = "주먹싸움을 익힌 쌍둥이 동생. 죽지 않는 몸이었다."
+body = """
+주먹으로 싸우는 법을 익혔다.
+아르고호에서 사람을 때려 죽이던 아미코스를 이겼다.
+형 카스토르가 죽자 제우스가 하늘로 데려가려 했다.
+형이 죽어 있는데 혼자 죽지 않는 몸으로 있기를 마다했다.
+"""
+fun = "제우스는 둘이 하루씩 번갈아 살게 해 주었다. 하루는 신들과, 하루는 죽은 이들과 지낸다."
+note = "아미코스는 등록부에 없어 이름만 부른다. 참고: 처음 읽는 그리스 로마 신화 5권 「쌍둥이자리」."
+sources = ["apollodorus.library 1.9.20", "apollodorus.library 3.10.7", "apollodorus.library 3.11.2", "homer.odyssey 11.298-304", "homeric.hymns dioscuri 1-19"]
+
+# ── 칼리돈의 멧돼지 ────────────────────────────────────
+
+[[figure]]
+id = "meleagros"
+name_ko = "멜레아그로스"
+name_grc = "Meleagros"
+name_la = "Meleager"
+aka = ["멜레아그로스", "멜리거"]
+kind = "hero"
+era = 5
+parents = ["oineus"]
+home = "kalydon"
+oneliner = "칼리돈의 멧돼지를 잡은 사람. 목숨이 나무 막대에 걸려 있었다."
+body = """
+태어난 지 이레 되던 날 운명의 여신들이 와서 말했다.
+화덕에서 타고 있는 나무 막대가 다 타면 이 아이도 끝난다는 것이었다.
+어머니 알타이아가 그 막대를 꺼내 상자에 감추었다.
+멜레아그로스는 자라서 나라를 망가뜨린 멧돼지를 잡았다.
+가죽은 아탈란테에게 주었다.
+"""
+sensitivity = "soften"
+note = "oineus 는 HER 소유 — 참조만. 알타이아는 등록부에 없어 만들지 않고 이름만 부른다. 죽음은 사건 쪽에서 사실만."
+sources = ["apollodorus.library 1.8.2-1.8.3", "ovid.metamorphoses 8.260-546", "homer.iliad 9.529-599"]
+
+[[figure]]
+id = "atalante"
+name_ko = "아탈란테"
+name_grc = "Atalante"
+name_la = "Atalanta"
+aka = ["아탈란타", "아탈란테"]
+kind = "hero"
+era = 5
+oneliner = "멧돼지를 처음 맞힌 사냥꾼. 발이 누구보다 빨랐다."
+body = """
+아르카디아에서 온 사냥꾼이다.
+칼리돈에 모인 사람 가운데 여자는 이 사람뿐이었다.
+여자와 함께 사냥하기를 마다한 사람들도 있었다.
+멧돼지에게 처음 화살을 맞힌 사람이 아탈란테다.
+"""
+fun = "달리기로 아탈란테를 이긴 사람은 황금 사과 셋을 굴려 발을 멈추게 한 사람뿐이다."
+note = "달리기 이야기는 오비디우스 10.560-707 에 있다 — 여기서는 fun 한 줄만. 아버지(스코이네우스)는 이름만 부른다."
+sources = ["apollodorus.library 1.8.2", "apollodorus.library 1.9.16", "ovid.metamorphoses 8.317-444"]
+
+[[figure]]
+id = "kalydonian-boar"
+name_ko = "칼리돈의 멧돼지"
+name_grc = "Kalydonios Hys"
+aka = ["칼리돈 멧돼지", "칼리도니아 멧돼지"]
+kind = "monster"
+era = 5
+home = "kalydon"
+oneliner = "아르테미스가 보낸 아주 큰 멧돼지."
+body = """
+오이네우스가 첫 곡식을 바칠 때 아르테미스만 빼놓았다.
+아르테미스는 노해서 엄청나게 큰 멧돼지를 보냈다.
+밭을 갈지 못하게 짓밟고, 소와 사람을 덮쳤다.
+그리스에서 가장 뛰어난 사냥꾼들이 다 모여서야 잡았다.
+"""
+fun = "잡은 뒤에도 그 가죽 하나를 두고 사람들이 다투다 여럿이 죽었다. 멧돼지보다 가죽이 더 많은 사람을 데려갔다."
+note = "oineus 는 HER 소유 — 참조만."
+sources = ["apollodorus.library 1.8.2", "ovid.metamorphoses 8.260-328", "homer.iliad 9.533-546"]

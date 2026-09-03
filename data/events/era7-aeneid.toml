@@ -1,0 +1,713 @@
+# era 7 — 돌아오는 길. 트로이를 떠난 아이네이아스가 라비니움을 세우고 신이 되기까지.
+# seq 700~999 는 AEN 의 구간이다. troy-falls 는 TRO 가 만든다.
+# 신 이름은 그리스식(헤라·포세이돈·아프로디테·헤르메스·아르테미스). 로마명은 처음 한 번만 적었다.
+# 묶음: aineias-voyage(700~860), aineias-latium(870~950). 스크래치 arcs/AEN.toml.
+
+[[event]]
+id = "anchises-star-sign"
+name_ko = "하늘에서 별이 떨어지다"
+era = 7
+seq = 700
+span = "moment"
+place = "troy"
+cast = [
+  { figure = "anchises", role = "주인공" },
+  { figure = "aineias", role = "주인공" },
+  { figure = "askanios", role = "등장" },
+  { figure = "kreousa", role = "등장" },
+  { figure = "zeus", role = "도움" },
+]
+oneliner = "떠나지 않겠다던 안키세스가 별을 보고 마음을 바꾸었다."
+body = """
+트로이가 불타는 밤, 아이네이아스는 집으로 달려갔다.
+늙은 아버지 안키세스는 이 도시와 함께 죽겠다며 움직이지 않았다.
+그때 아스카니오스의 머리에 불꽃이 붙었는데, 머리카락은 타지 않았다.
+안키세스가 제우스에게 신호를 더 보여 달라고 빌었다.
+왼쪽에서 우렛소리가 나고, 별 하나가 이다 산 쪽으로 길게 떨어졌다.
+"""
+fun = "안키세스는 그 별을 보고서야 '따라가겠다'고 말했다. 별 하나가 긴 여행을 시작하게 했다."
+caused_by = ["troy-falls"]
+sources = ["virgil.aeneid 2.634-2.704"]
+note = "참고: 처음 읽는 그리스 로마 신화 15권 1장 「하늘에서 떨어진 별」. troy-falls 는 TRO 소유."
+
+[[event]]
+id = "aineias-leaves-troy"
+name_ko = "아이네이아스가 트로이를 떠나다"
+era = 7
+seq = 710
+span = "days"
+after = ["troy-falls"]
+places = ["troy", "mt-ida-troad"]
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "anchises", role = "도움" },
+  { figure = "askanios", role = "등장" },
+  { figure = "kreousa", role = "피해" },
+  { figure = "aphrodite", role = "도움" },
+]
+oneliner = "아버지를 업고 아들의 손을 잡고 나왔지만, 아내는 잃었다."
+body = """
+아이네이아스는 사자 가죽을 어깨에 걸치고 아버지 안키세스를 업었다.
+한 손으로는 아스카니오스의 손을 잡고, 크레우사는 뒤에 따랐다.
+어두운 길을 돌아 성문 밖에 닿았을 때 크레우사가 보이지 않았다.
+아이네이아스는 불타는 도시로 되돌아가 아내를 찾았다.
+그를 만나러 온 것은 크레우사의 그림자였다.
+"""
+fun = "크레우사의 그림자가 테베레 강가의 새 나라를 미리 말해 주었다. 여행의 끝을 처음부터 알려 준 것이다."
+caused_by = ["anchises-star-sign"]
+variants = [
+  { source = "apollodorus.library E.5.21", text = "그리스 사람들은 아버지를 업고 나오는 아이네이아스를 보고 그 마음을 갸륵하게 여겨 그냥 보내 주었다." },
+]
+sources = ["virgil.aeneid 2.705-2.804", "apollodorus.library E.5.21", "ovid.metamorphoses 13.623-13.627"]
+note = "참고: 처음 읽는 그리스 로마 신화 15권 1장 「트로이를 떠나다」. mt-ida-troad 는 TRO 소유."
+
+[[event]]
+id = "thrake-polydoros"
+name_ko = "트라케에서 폴리도로스의 무덤을 만나다"
+era = 7
+seq = 720
+span = "season"
+after = ["aineias-leaves-troy"]
+place = "thrake"
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "anchises", role = "도움" },
+]
+oneliner = "나무를 꺾자 피가 흘렀고, 땅속에서 목소리가 났다."
+body = """
+아이네이아스 일행은 배를 만들어 트라케에 닿아 도시를 짓기 시작했다.
+제단을 꾸미려고 나무를 꺾자 가지에서 피가 흘렀다.
+땅속에서 트로이의 왕자 폴리도로스의 목소리가 났다.
+트라케 왕이 그의 금을 노려 그를 죽이고 여기 묻은 것이었다.
+일행은 그의 무덤을 만들어 주고 그 땅을 떠났다.
+"""
+sources = ["virgil.aeneid 3.13-3.68", "ovid.metamorphoses 13.628-13.630"]
+note = "thrake 는 THE 소유. 폴리도로스(프리아모스의 아들)는 등록부에 없어 이름만."
+
+[[event]]
+id = "delos-oracle"
+name_ko = "델로스에서 아폴론의 말을 듣다"
+era = 7
+seq = 730
+span = "days"
+after = ["thrake-polydoros"]
+place = "delos"
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "apollon", role = "도움" },
+  { figure = "anchises", role = "도움" },
+]
+oneliner = "'옛 어머니의 땅을 찾으라'는 대답이 왔다. 어디인지는 말하지 않았다."
+body = """
+일행은 아폴론의 섬 델로스에 닿았다.
+왕이자 사제인 아니오스가 옛 친구 안키세스를 반겼다.
+아이네이아스가 신전에서 어디로 가야 하는지 물었다.
+땅이 흔들리고, '너희를 낳은 옛 어머니의 땅을 찾으라'는 소리가 났다.
+안키세스는 그 땅이 조상 테우크로스가 살던 크레타라고 생각했다.
+"""
+fun = "그 대답은 틀리지 않았다. 다만 안키세스가 잘못 알아들었다. 신의 말은 늘 이렇게 두 가지로 들린다."
+sources = ["virgil.aeneid 3.69-3.120", "ovid.metamorphoses 13.631-13.642"]
+note = "참고: 처음 읽는 그리스 로마 신화 15권 1장 「아폴론의 뜻」. 아니오스는 이름만."
+
+[[event]]
+id = "crete-plague"
+name_ko = "크레타에서 헛되이 도시를 짓다"
+era = 7
+seq = 740
+span = "season"
+after = ["delos-oracle"]
+caused_by = ["delos-oracle"]
+place = "crete"
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "anchises", role = "도움" },
+  { figure = "apollon", role = "도움" },
+]
+oneliner = "크레타에 도시를 세웠지만 병이 돌았고, 꿈이 진짜 길을 알려 주었다."
+body = """
+일행은 크레타에 내려 새 도시 페르가뭄을 짓기 시작했다.
+그런데 무서운 더위와 병이 와서 사람과 곡식이 함께 말라 죽었다.
+그날 밤, 트로이에서 가지고 온 조상신들의 상이 꿈에 나타났다.
+크레타가 아니라 서쪽의 이탈리아가 너희 조상의 땅이라고 했다.
+안키세스는 카산드라가 옛날에 그렇게 말했던 것을 떠올렸다.
+"""
+fun = "트로이의 조상 다르다노스는 이탈리아에서 왔다. 그래서 이탈리아가 '옛 어머니의 땅'이었다."
+sources = ["virgil.aeneid 3.121-3.191"]
+note = "참고: 처음 읽는 그리스 로마 신화 15권 1장 「옛 조상의 땅」. kassandra 는 TRO 소유라 이름만."
+
+[[event]]
+id = "strophades-harpies"
+name_ko = "하르피이아이의 저주"
+era = 7
+seq = 750
+span = "days"
+after = ["crete-plague"]
+place = "strophades"
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "harpyiai", role = "상대" },
+  { figure = "anchises", role = "도움" },
+  { figure = "misenos", role = "등장" },
+]
+oneliner = "잔치 음식을 빼앗긴 트로이 사람들이 괴물 새와 싸웠고, 저주를 들었다."
+body = """
+사흘 동안 폭풍에 밀린 배들이 스트로파데스 섬에 닿았다.
+들판의 소를 잡아 잔치를 벌이자 하르피이아이가 음식을 빼앗았다.
+미세노스가 나팔을 불고 모두 칼을 들었지만, 칼이 깃털에 튕겨 나왔다.
+하르피이아 켈라이노가 바위 위에서 말했다.
+너희는 이탈리아에 닿겠지만, 굶주려 식탁까지 씹어 먹게 될 것이다.
+"""
+fun = "그 저주는 뒷날 이루어진다. 라티움에서 일행은 빵 위에 음식을 얹어 먹고 빵까지 먹었다. 그 '식탁'이 빵이었다."
+sources = ["virgil.aeneid 3.209-3.269", "virgil.aeneid 7.107-7.134"]
+note = "참고: 처음 읽는 그리스 로마 신화 15권 2장 「하르피아이의 저주」. harpyiai(group) 는 THE 소유. 켈라이노는 이름만."
+
+[[event]]
+id = "buthrotum-helenos"
+name_ko = "부트로툼에서 헬레노스와 안드로마케를 만나다"
+era = 7
+seq = 760
+span = "days"
+after = ["strophades-harpies"]
+place = "buthrotum"
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "helenos", role = "도움" },
+  { figure = "andromache", role = "등장" },
+  { figure = "askanios", role = "등장" },
+  { figure = "anchises", role = "등장" },
+]
+oneliner = "트로이 사람들이 세운 작은 트로이에서 앞길을 들었다."
+body = """
+일행은 그리스 서쪽 바닷가의 부트로툼에 닿았다.
+프리아모스의 아들 헬레노스가 여기 왕이 되어 작은 트로이를 짓고 있었다.
+헥토르의 아내였던 안드로마케는 아이네이아스를 보고 놀라 쓰러졌다.
+헬레노스가 스킬라와 카리브디스를 피해 돌아가는 길을 알려 주었다.
+쿠마이에 가면 시빌레를 찾고, 헤라에게 늘 기도하라고도 했다.
+"""
+fun = "안드로마케는 떠나는 아스카니오스에게 자기가 짠 옷을 주었다. 죽은 아들 아스티아낙스를 떠올리며 준 것이다."
+sources = ["virgil.aeneid 3.294-3.505"]
+note = "helenos·andromache 는 TRO 소유. 아스티아낙스(TRO 의 astyanax)는 이름만. 스킬라·카리브디스는 ODY 소유라 이름만."
+
+[[event]]
+id = "kyklops-akhaimenides"
+name_ko = "키클롭스의 땅에서 아카이메니데스를 구하다"
+era = 7
+seq = 770
+span = "days"
+after = ["buthrotum-helenos"]
+place = "aitna"
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "akhaimenides", role = "피해" },
+  { figure = "polyphemos", role = "상대" },
+  { figure = "anchises", role = "도움" },
+  { figure = "palinouros", role = "도움" },
+]
+oneliner = "버려진 그리스 사람을 태우고 눈먼 거인 폴리페모스에게서 달아났다."
+body = """
+카리브디스의 소용돌이를 피한 배들이 불 뿜는 에트나 산 아래 닿았다.
+아침에 뼈만 남은 사람이 숲에서 뛰어나와 데려가 달라고 빌었다.
+오디세우스가 달아날 때 남겨진 부하 아카이메니데스였다.
+그때 눈먼 폴리페모스가 양 떼를 몰고 바닷가로 내려왔다.
+일행은 그 그리스 사람을 태우고 소리 없이 노를 저어 달아났다.
+"""
+fun = "폴리페모스의 고함에 다른 키클롭스들이 산에서 내려와 바닷가에 늘어섰다. 베르길리우스는 그들이 하늘에 닿는 삼나무 같았다고 썼다."
+sources = ["virgil.aeneid 3.554-3.691", "ovid.metamorphoses 14.160-14.222"]
+note = "참고: 처음 읽는 그리스 로마 신화 15권 2장 「거인의 섬」. polyphemos 는 ODY 소유. ODY 의 kyklopes-land 는 mythic 이고, 여기서는 베르길리우스가 말한 에트나(real)를 쓴다. odysseus 는 TRO 소유라 이름만."
+
+[[event]]
+id = "anchises-dies"
+name_ko = "안키세스가 시켈리아에서 죽다"
+era = 7
+seq = 780
+span = "moment"
+after = ["kyklops-akhaimenides"]
+place = "sikelia"
+cast = [
+  { figure = "anchises", role = "피해" },
+  { figure = "aineias", role = "주인공" },
+]
+oneliner = "긴 여행 끝에 아버지를 잃었다. 아무 신도 미리 말해 주지 않았다."
+body = """
+배들은 시켈리아 섬 남쪽 바닷가를 돌아 서쪽 끝 드레파눔에 닿았다.
+거기서 늙은 안키세스가 죽었다.
+헬레노스도 켈라이노도 이 일은 미리 말해 주지 않았다.
+아이네이아스에게는 여행에서 가장 큰 슬픔이었다.
+뒷날 그는 이 섬에 돌아와 아버지의 무덤에서 제사와 경기를 열었다.
+"""
+sources = ["virgil.aeneid 3.692-3.715", "virgil.aeneid 5.42-5.103"]
+note = "참고: 처음 읽는 그리스 로마 신화 15권 2장 「불행의 파도」. sikelia 는 ATH 소유. 드레파눔(지금의 트라파니)과 아케스테스 왕은 이름만."
+
+[[event]]
+id = "hera-storm"
+name_ko = "헤라가 폭풍을 일으키고 포세이돈이 바다를 잠재우다"
+era = 7
+seq = 790
+span = "days"
+after = ["anchises-dies"]
+places = ["sikelia", "carthage"]
+cast = [
+  { figure = "hera", role = "상대" },
+  { figure = "aiolos-anemon", role = "상대" },
+  { figure = "poseidon", role = "도움" },
+  { figure = "aineias", role = "주인공" },
+  { figure = "achates", role = "등장" },
+]
+oneliner = "트로이가 미운 헤라가 바람의 왕에게 폭풍을 부탁했다."
+body = """
+헤라는 트로이 사람들이 이탈리아에 닿는 것을 두고 볼 수 없었다.
+로마에서는 헤라를 유노라고 불렀다.
+헤라가 바람의 왕 아이올로스를 찾아가 바람을 풀어 달라고 했다.
+바람이 한꺼번에 몰아쳐 배들이 흩어지고 한 척은 가라앉았다.
+포세이돈이 바람들을 꾸짖어 쫓고 바다를 가라앉혔다.
+"""
+fun = "이 이야기는 아이네이스의 맨 처음이다. 베르길리우스는 폭풍에서 시작한다. 트로이의 마지막 밤은 아이네이아스가 디도에게 들려주는 이야기다."
+sources = ["virgil.aeneid 1.34-1.156"]
+note = "참고: 처음 읽는 그리스 로마 신화 15권 2장 「불행의 파도」. aiolos-anemon 은 ODY 소유. 포세이돈의 로마명 넵투누스는 여기서 쓰지 않았다(한 사건에 로마명 한 줄만)."
+
+[[event]]
+id = "carthage-dido-meets"
+name_ko = "카르타고에서 디도를 만나다"
+era = 7
+seq = 800
+span = "days"
+after = ["hera-storm"]
+caused_by = ["hera-storm"]
+place = "carthage"
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "dido", role = "주인공" },
+  { figure = "aphrodite", role = "도움" },
+  { figure = "achates", role = "도움" },
+  { figure = "askanios", role = "등장" },
+]
+oneliner = "도시를 짓던 여왕이 트로이 사람들을 맞았고, 아프로디테가 일을 꾸몄다."
+body = """
+아프로디테가 사냥꾼 모습으로 나타나 아들에게 이 땅을 알려 주었다.
+로마에서는 아프로디테를 베누스라고 불렀다.
+아이네이아스와 아카테스는 안개에 숨어 성벽을 쌓는 카르타고에 들어갔다.
+디도 여왕이 트로이 사람들을 맞았고, 아이네이아스가 안개에서 나왔다.
+아프로디테는 에로스를 아스카니오스 모습으로 바꾸어 여왕 품에 보냈다.
+"""
+fun = "그날 밤 잔치에서 디도가 트로이 이야기를 청했다. 아이네이스 2권과 3권은 아이네이아스가 이때 들려준 이야기다."
+sources = ["virgil.aeneid 1.305-1.756"]
+note = "참고: 처음 읽는 그리스 로마 신화 15권 3장 「여왕의 도시 카르타고」. 에로스(쿠피도)는 아프로디테의 아들로, 기존 eros-primordial 과 다른 존재라 cast 에 넣지 않고 이름만 부른다."
+
+[[event]]
+id = "dido-falls-in-love"
+name_ko = "디도가 사랑에 빠지다"
+era = 7
+seq = 810
+span = "season"
+caused_by = ["carthage-dido-meets"]
+place = "carthage"
+cast = [
+  { figure = "dido", role = "주인공" },
+  { figure = "aineias", role = "상대" },
+  { figure = "anna", role = "도움" },
+  { figure = "hera", role = "등장" },
+  { figure = "aphrodite", role = "등장" },
+]
+oneliner = "여왕은 도시 짓는 일도 잊고 손님만 생각했다."
+body = """
+디도는 죽은 남편 말고는 누구도 사랑하지 않겠다고 다짐했던 사람이다.
+그런데 아이네이아스가 자꾸 생각나 동생 안나에게 털어놓았다.
+헤라와 아프로디테가 서로 다른 속셈으로 손을 잡았다.
+사냥 날 폭풍이 와서 둘은 같은 굴에 숨었다.
+디도는 그것을 결혼이라 불렀다.
+"""
+fun = "헤라는 아이네이아스를 카르타고에 붙잡아 두려 했다. 아프로디테는 아들을 안전하게 하려 했다. 둘 다 디도는 생각하지 않았다."
+sources = ["virgil.aeneid 4.1-4.172"]
+note = "참고: 처음 읽는 그리스 로마 신화 15권 3장 「사랑에 빠진 디도」"
+
+[[event]]
+id = "aineias-leaves-carthage"
+name_ko = "헤르메스의 전갈, 아이네이아스가 카르타고를 떠나다"
+era = 7
+seq = 820
+span = "days"
+caused_by = ["dido-falls-in-love"]
+place = "carthage"
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "hermes", role = "도움" },
+  { figure = "zeus", role = "도움" },
+  { figure = "dido", role = "피해" },
+  { figure = "anna", role = "등장" },
+]
+oneliner = "제우스가 보낸 전갈 하나에 아이네이아스는 몰래 떠날 준비를 했다."
+body = """
+제우스가 카르타고 성벽을 쌓고 있는 아이네이아스를 내려다보았다.
+헤르메스를 보내 아들의 나라를 잊었느냐고 꾸짖게 했다.
+로마에서는 헤르메스를 메르쿠리우스라고 불렀다.
+아이네이아스는 몰래 떠날 준비를 했지만 디도가 먼저 알아챘다.
+디도가 울며 붙잡았지만, 그는 밤중에 밧줄을 끊고 바다로 나갔다.
+"""
+sources = ["virgil.aeneid 4.219-4.449", "virgil.aeneid 4.554-4.583"]
+note = "참고: 처음 읽는 그리스 로마 신화 15권 3장 「운명을 향해」. 이아르바스(디도에게 청혼했다가 거절당하고 제우스에게 기도한 이웃 왕, 4.196-218)는 등록부에 없어 이름만 부른다."
+
+[[event]]
+id = "dido-dies"
+name_ko = "디도가 죽다"
+era = 7
+seq = 830
+span = "moment"
+caused_by = ["aineias-leaves-carthage"]
+place = "carthage"
+cast = [
+  { figure = "dido", role = "피해" },
+  { figure = "anna", role = "등장" },
+  { figure = "hera", role = "등장" },
+]
+oneliner = "새벽에 빈 바다를 본 여왕은 스스로 목숨을 끊었다."
+body = """
+새벽에 디도는 성 위에서 배들이 떠난 빈 바다를 보았다.
+동생 안나에게는 제사를 준비한다고 말하고 장작을 높이 쌓게 했다.
+아이네이아스가 두고 간 물건들을 그 위에 올렸다.
+그리고 스스로 목숨을 끊었다.
+헤라가 이리스를 보내 그 마지막을 빨리 끝내 주었다.
+"""
+fun = "저승에서 아이네이아스가 디도를 다시 만난다. 디도는 아무 말도 하지 않고 돌아서서 첫 남편 곁으로 갔다."
+sensitivity = "soften"
+sources = ["virgil.aeneid 4.584-4.705", "ovid.metamorphoses 14.78-14.81", "virgil.aeneid 6.450-6.476"]
+note = "참고: 처음 읽는 그리스 로마 신화 15권 3장 「운명을 향해」. 방법(칼)은 쓰지 않는다. 죽기 전 자손의 복수를 빈 말(4.607-629)은 본문에서 뺐다. 이리스는 이름만."
+
+[[event]]
+id = "palinouros-falls"
+name_ko = "팔리누로스가 바다에 떨어지다"
+era = 7
+seq = 840
+span = "moment"
+after = ["aineias-leaves-carthage", "dido-dies"]
+places = ["sikelia", "cumae"]
+cast = [
+  { figure = "palinouros", role = "피해" },
+  { figure = "aineias", role = "주인공" },
+  { figure = "poseidon", role = "등장" },
+  { figure = "aphrodite", role = "등장" },
+]
+oneliner = "잠의 신이 뱃길잡이를 밀어 떨어뜨렸고, 아이네이아스가 직접 키를 잡았다."
+body = """
+배들은 시켈리아로 돌아가 안키세스의 무덤에 제사를 지낸 뒤 다시 떠났다.
+포세이돈은 아프로디테에게 한 사람만 잃고 나머지는 무사하리라 했다.
+밤에 잠의 신이 와서 쉬라고 했지만, 팔리누로스는 키를 놓지 않았다.
+잠의 신은 그를 억지로 잠들게 하고 키와 함께 바다로 밀어 떨어뜨렸다.
+아이네이아스가 뱃길잡이가 없어진 것을 알고 스스로 키를 잡았다.
+"""
+sources = ["virgil.aeneid 5.42-5.103", "virgil.aeneid 5.779-5.871"]
+note = "잠의 신(솜누스/힙노스)은 등록부에 없어 이름만. 5권의 경기와 배가 불탄 일(5.604-699)은 사건으로 만들지 않고 한 줄로만."
+
+[[event]]
+id = "sibylla-golden-bough"
+name_ko = "쿠마이의 시빌레와 황금 가지"
+era = 7
+seq = 850
+span = "days"
+after = ["palinouros-falls"]
+places = ["cumae", "avernus"]
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "sibylla-kymaia", role = "도움" },
+  { figure = "achates", role = "등장" },
+  { figure = "misenos", role = "피해" },
+  { figure = "aphrodite", role = "도움" },
+  { figure = "apollon", role = "등장" },
+]
+oneliner = "저승에 가려면 황금 가지를 꺾고 죽은 동료를 먼저 묻어야 했다."
+body = """
+배들이 쿠마이에 닿자 아이네이아스는 언덕 위 아폴론 신전으로 올라갔다.
+동굴에서 아폴론이 시빌레의 몸에 들어와 큰 싸움이 기다린다고 말했다.
+아이네이아스는 죽은 아버지를 만나러 저승에 가고 싶다고 했다.
+시빌레는 숲의 황금 가지를 꺾어 오고, 죽은 동료를 먼저 묻으라고 했다.
+미세노스를 묻고, 아프로디테의 비둘기 둘을 따라가 황금 가지를 찾았다.
+"""
+fun = "시빌레는 저승으로 내려가는 길은 쉽지만 되돌아오기가 어렵다고 말했다. 이 말은 지금도 자주 쓰인다."
+sources = ["virgil.aeneid 6.1-6.235"]
+note = "참고: 처음 읽는 그리스 로마 신화 15권 4장 「시빌레의 신전」. 신전 문의 다이달로스 조각(6.14-33)은 ATH 의 이야기라 뺐다."
+
+[[event]]
+id = "aineias-underworld"
+name_ko = "아이네이아스가 저승에 내려가다"
+era = 7
+seq = 860
+span = "days"
+after = ["sibylla-golden-bough"]
+caused_by = ["sibylla-golden-bough"]
+places = ["avernus", "hades-realm", "elysion"]
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "sibylla-kymaia", role = "도움" },
+  { figure = "anchises", role = "도움" },
+  { figure = "palinouros", role = "등장" },
+  { figure = "dido", role = "등장" },
+  { figure = "kerberos", role = "등장" },
+]
+oneliner = "산 채로 저승에 내려가 아버지에게서 앞날의 로마를 보았다."
+body = """
+아베르누스 호숫가 굴에서 시빌레와 아이네이아스가 어둠 속으로 들어갔다.
+팔리누로스를 만났고, 뱃사공 카론이 황금 가지를 보고 태워 주었다.
+슬픈 들판에서 디도를 보았지만, 디도는 말없이 돌아섰다.
+엘리시온에서 안키세스가 아직 태어나지 않은 자손들을 보여 주었다.
+그 가운데 로물루스가 있었고, 아이네이아스는 상아 문으로 나왔다.
+"""
+fun = "저승 문 앞에서 케르베로스가 짖었다. 시빌레가 꿀에 적신 빵을 던져 재웠다."
+sources = ["virgil.aeneid 6.236-6.901", "ovid.metamorphoses 14.116-14.121"]
+note = "참고: 처음 읽는 그리스 로마 신화 15권 4장 「엘리시온으로」. kerberos 는 HER 소유. 카론·데이포보스(TRO 가 만들 수 있음)·로물루스(ROM)·카이사르는 이름만. 상아 문(6.893-898)은 거짓 꿈이 나오는 문이다."
+
+[[event]]
+id = "latium-arrival"
+name_ko = "테베레 강에 닿아 라티누스를 만나다"
+era = 7
+seq = 870
+span = "days"
+after = ["aineias-underworld"]
+place = "tiber"
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "latinus", role = "도움" },
+  { figure = "lavinia", role = "등장" },
+  { figure = "askanios", role = "등장" },
+  { figure = "faunus", role = "등장" },
+]
+oneliner = "배들이 마침내 테베레 강으로 들어갔고, 늙은 왕이 딸을 주겠다고 했다."
+body = """
+배들은 바닷가를 따라 올라가 누런 테베레 강어귀로 들어갔다.
+일행은 얇은 빵을 식탁 삼아 음식을 얹어 먹고, 그 빵까지 먹었다.
+아스카니오스가 웃자 아버지는 하르피이아이의 저주가 이루어진 것을 알았다.
+라티누스 왕은 파우누스에게서 딸을 낯선 손님에게 주라는 말을 들었다.
+사절이 오자 왕은 땅을 내주며 라비니아를 아이네이아스의 아내로 정했다.
+"""
+fun = "아스카니오스는 '우리가 식탁까지 먹네!' 하고 웃었다. 이 한마디가 긴 여행의 끝을 알렸다."
+variants = [
+  { source = "livy.rome 1.1", text = "리비우스는 두 이야기를 전한다. 라티누스가 싸움에서 지고 화해했다는 것과, 싸우기 전에 만나 이야기하고 손을 잡았다는 것이다." },
+]
+sources = ["virgil.aeneid 7.25-7.36", "virgil.aeneid 7.45-7.106", "virgil.aeneid 7.107-7.134", "virgil.aeneid 7.148-7.285", "livy.rome 1.1"]
+note = "faunus 는 ROM 소유. 라티누스의 도시 라우렌툼은 위치가 다투어져 place 로 만들지 않고 강어귀(tiber)를 썼다. 유모 카이에타(7.1-4)는 이름만."
+
+[[event]]
+id = "hera-rouses-turnus"
+name_ko = "헤라가 투르누스를 일으켜 싸움이 시작되다"
+era = 7
+seq = 880
+span = "days"
+caused_by = ["latium-arrival"]
+places = ["ardea", "tiber"]
+cast = [
+  { figure = "hera", role = "상대" },
+  { figure = "erinyes", role = "상대" },
+  { figure = "turnus", role = "상대" },
+  { figure = "amata", role = "등장" },
+  { figure = "askanios", role = "등장" },
+  { figure = "latinus", role = "피해" },
+  { figure = "aineias", role = "주인공" },
+]
+oneliner = "화해가 다 되었는데 헤라가 복수의 여신을 보내 싸움을 만들었다."
+body = """
+헤라는 트로이 사람들이 땅을 얻자 저승의 복수의 여신 알렉토를 불렀다.
+알렉토는 왕비 아마타의 마음을 흔들어 딸을 숲으로 데리고 달아나게 했다.
+다음에는 잠든 투르누스의 가슴에 횃불을 던져 그를 깨웠다.
+끝으로 아스카니오스의 화살을 이끌어 길들인 사슴을 맞히게 했다.
+시골 사람들과 트로이 사람들이 싸워 사람이 죽었고, 왕은 말리지 못했다.
+"""
+fun = "알렉토가 이 일을 헤라에게 자랑했다. 헤라는 '이제 됐다, 너는 저승으로 돌아가라'고 했다."
+sources = ["virgil.aeneid 7.286-7.640"]
+note = "erinyes(group) 는 ODY 소유. 알렉토는 그 가운데 하나라 이름만 부르고 cast 는 erinyes 로 넣었다. 사슴을 기른 실비아와 티레우스는 이름만."
+
+[[event]]
+id = "evandros-pallas"
+name_ko = "에반드로스를 찾아가 로마가 될 언덕을 걷다"
+era = 7
+seq = 890
+span = "days"
+caused_by = ["hera-rouses-turnus"]
+places = ["tiber", "rome"]
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "evandros", role = "도움" },
+  { figure = "pallas", role = "도움" },
+  { figure = "achates", role = "등장" },
+]
+oneliner = "강의 신이 알려 준 대로 강을 거슬러 올라가 도움을 얻었다."
+body = """
+꿈에 강의 신 티베리누스가 강 위쪽의 에반드로스를 찾아가라고 했다.
+강물이 스스로 잠잠해져 배 두 척이 쉽게 거슬러 올라갔다.
+언덕 위 마을에서 에반드로스와 팔라스가 헤라클레스 잔치를 열고 있었다.
+에반드로스는 어릴 때 만난 안키세스를 기억하고 아이네이아스를 반겼다.
+함께 언덕을 걸은 뒤, 아들 팔라스와 말 탄 병사들을 딸려 보냈다.
+"""
+fun = "그 언덕들이 뒷날 로마가 된다. 베르길리우스는 그때는 흙집이던 곳이 지금은 대리석으로 섰다고 썼다."
+sources = ["virgil.aeneid 8.26-8.101", "virgil.aeneid 8.102-8.183", "virgil.aeneid 8.306-8.369", "virgil.aeneid 8.454-8.607"]
+note = "rome 은 ROM 소유. 헤라클레스와 카쿠스 이야기(8.184-279)는 ROM 이 쓴다. 강의 신 티베리누스는 이름만."
+
+[[event]]
+id = "nisos-euryalos"
+name_ko = "니소스와 에우리알로스의 밤"
+era = 7
+seq = 900
+span = "moment"
+after = ["evandros-pallas"]
+caused_by = ["hera-rouses-turnus"]
+place = "tiber"
+cast = [
+  { figure = "nisos", role = "주인공" },
+  { figure = "euryalos", role = "주인공" },
+  { figure = "turnus", role = "상대" },
+  { figure = "askanios", role = "등장" },
+]
+oneliner = "두 친구가 밤에 적진을 뚫고 아이네이아스를 부르러 갔다가 함께 죽었다."
+body = """
+아이네이아스가 없는 사이 투르누스가 트로이 진지를 둘러쌌다.
+문을 지키던 니소스가 밤에 적진을 뚫고 아이네이아스를 불러오겠다고 했다.
+어린 친구 에우리알로스가 자기도 가겠다고 우겼다.
+둘은 잠든 적을 죽였지만, 에우리알로스의 투구가 달빛에 번쩍였다.
+적의 기병이 에우리알로스를 죽였고, 니소스도 친구를 구하려다 죽었다.
+"""
+fun = "베르길리우스는 두 사람이 자기 노래 속에서 영원히 살 거라고 썼다."
+sources = ["virgil.aeneid 9.176-9.449"]
+note = "두 사람의 머리를 창에 꽂아 보인 장면(9.465-467)은 뺐다. 적장 볼켄스는 이름만."
+
+[[event]]
+id = "pallas-dies"
+name_ko = "투르누스가 팔라스를 죽이다"
+era = 7
+seq = 910
+span = "moment"
+caused_by = ["evandros-pallas"]
+after = ["nisos-euryalos"]
+place = "tiber"
+cast = [
+  { figure = "turnus", role = "상대" },
+  { figure = "pallas", role = "피해" },
+  { figure = "aineias", role = "주인공" },
+  { figure = "herakles", role = "등장" },
+  { figure = "zeus", role = "등장" },
+]
+oneliner = "첫 싸움에 나간 팔라스가 죽었고, 투르누스는 그 허리띠를 빼앗았다."
+body = """
+아이네이아스가 돌아오자 강어귀에서 큰 싸움이 벌어졌다.
+팔라스는 아르카디아 병사들을 이끌고 용감하게 싸웠다.
+투르누스가 팔라스와 단둘이 맞섰고, 팔라스는 헤라클레스에게 기도했다.
+헤라클레스는 울기만 했고, 제우스는 사람의 목숨은 짧다고 달랬다.
+투르누스의 창에 팔라스가 죽었고, 투르누스는 황금 허리띠를 벗겨 찼다.
+"""
+fun = "그 허리띠가 마지막 장면에서 투르누스의 목숨을 결정한다."
+sources = ["virgil.aeneid 10.362-10.509"]
+note = "herakles 는 HER 소유(이때는 이미 신). 시신을 짓밟은 장면(10.495)은 뺐다."
+
+[[event]]
+id = "kamilla-dies"
+name_ko = "여전사 카밀라가 죽다"
+era = 7
+seq = 920
+span = "moment"
+after = ["pallas-dies"]
+place = "tiber"
+cast = [
+  { figure = "kamilla", role = "주인공" },
+  { figure = "artemis", role = "도움" },
+  { figure = "turnus", role = "도움" },
+  { figure = "aineias", role = "상대" },
+]
+oneliner = "말 탄 군대를 이끈 카밀라가 황금 갑옷에 눈이 팔린 순간 창에 맞았다."
+body = """
+아르테미스는 카밀라가 싸움에 나가면 죽을 것을 알고 슬퍼했다.
+로마에서는 아르테미스를 디아나라고 불렀다.
+카밀라는 말 탄 여전사들을 이끌고 트로이 편 기병들과 싸웠다.
+황금 갑옷의 클로레우스를 쫓다가 아룬스가 몰래 던진 창에 맞아 죽었다.
+님프 오피스가 아룬스를 화살로 쏘았고, 카밀라를 잃은 군대는 달아났다.
+"""
+fun = "베르길리우스는 카밀라의 여전사들을 옛 아마존 사람들에 비유했다."
+sources = ["virgil.aeneid 11.532-11.596", "virgil.aeneid 11.648-11.724", "virgil.aeneid 11.768-11.867"]
+note = "아룬스·오피스·클로레우스·메타부스는 등록부에 없어 이름만. 아마존(HER 의 amazones)도 이름만."
+
+[[event]]
+id = "turnus-dies"
+name_ko = "아이네이아스가 투르누스를 이기다"
+era = 7
+seq = 930
+span = "moment"
+caused_by = ["pallas-dies"]
+after = ["kamilla-dies"]
+place = "tiber"
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "turnus", role = "상대" },
+  { figure = "latinus", role = "등장" },
+  { figure = "lavinia", role = "등장" },
+  { figure = "amata", role = "피해" },
+  { figure = "hera", role = "등장" },
+  { figure = "zeus", role = "등장" },
+]
+oneliner = "두 사람만 남아 싸웠고, 팔라스의 허리띠가 마지막을 정했다."
+body = """
+투르누스는 아이네이아스와 둘이서만 싸워 끝을 내겠다고 했다.
+왕비 아마타는 투르누스가 죽은 줄 잘못 알고 스스로 목숨을 끊었다.
+제우스가 헤라에게 그만하라고 했고, 헤라는 마침내 물러났다.
+아이네이아스의 창이 투르누스의 다리를 뚫었고, 투르누스는 목숨을 빌었다.
+아이네이아스는 망설였지만, 팔라스의 허리띠를 보고 투르누스를 죽였다.
+"""
+fun = "헤라는 물러나면서 조건을 걸었다. 트로이라는 이름은 사라지고 라틴 이름만 남는다는 것이다. 아이네이스는 투르누스의 죽음에서 끝난다."
+sensitivity = "soften"
+variants = [
+  { source = "livy.rome 1.2", text = "리비우스는 다르게 전한다. 아이네이아스가 라비니아와 결혼한 뒤에 투르누스가 싸움을 걸어왔고, 그 싸움에서 라티누스 왕이 죽었다." },
+]
+sources = ["virgil.aeneid 12.1-12.80", "virgil.aeneid 12.593-12.613", "virgil.aeneid 12.791-12.842", "virgil.aeneid 12.887-12.952", "livy.rome 1.2"]
+note = "처음 읽는 그리스 로마 신화 15권에는 없다(책은 6권 저승에서 끝난다). 아마타의 죽음은 방법 없이 사실만. 유투르나는 이름만."
+
+[[event]]
+id = "lavinium-founded"
+name_ko = "아이네이아스가 라비니움을 세우다"
+era = 7
+seq = 940
+span = "years"
+after = ["turnus-dies"]
+caused_by = ["latium-arrival"]
+place = "lavinium"
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "lavinia", role = "주인공" },
+  { figure = "latinus", role = "도움" },
+  { figure = "askanios", role = "등장" },
+]
+oneliner = "라비니아와 결혼하고, 아내의 이름을 붙인 도시를 세웠다."
+body = """
+라티누스는 집안의 신들 앞에서 딸 라비니아를 아이네이아스에게 주었다.
+트로이 사람들은 오랜 떠돌이 끝에 마침내 자기 도시를 지었다.
+아이네이아스는 그 도시에 아내의 이름을 붙여 라비니움이라 했다.
+크레우사의 그림자가 말한 '조용한 나라와 새 아내'가 이것이었다.
+트로이 사람과 이 땅 사람을 모두 '라틴 사람'이라 부르게 했다.
+"""
+fun = "'라틴'이라는 말이 여기서 나온다. 뒷날 로마 사람들이 쓴 말이 라틴어다."
+sources = ["livy.rome 1.1-1.2", "virgil.aeneid 2.780-2.784", "virgil.aeneid 12.190-12.194"]
+note = "처음 읽는 그리스 로마 신화에는 없다. ROM 의 alba-longa-founded 가 이 사건을 after 로 붙잡는다."
+
+[[event]]
+id = "aineias-becomes-god"
+name_ko = "아이네이아스가 죽어 신이 되다"
+era = 7
+seq = 950
+span = "moment"
+after = ["lavinium-founded"]
+place = "lavinium"
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "mezentius", role = "상대" },
+  { figure = "aphrodite", role = "도움" },
+  { figure = "zeus", role = "도움" },
+  { figure = "hera", role = "등장" },
+  { figure = "askanios", role = "등장" },
+]
+oneliner = "마지막 싸움 뒤 강가에 묻혔고, 사람들은 그를 신으로 모셨다."
+body = """
+에트루리아의 왕 메젠티우스가 루툴리 사람들과 함께 다시 싸움을 걸어왔다.
+아이네이아스는 이겼지만, 그것이 사람으로서 한 마지막 일이었다.
+사람들은 그를 누미키우스 강가에 묻고 '유피테르 인디게스'라 불렀다.
+오비디우스는 아프로디테가 제우스에게 청해 아들을 신으로 만들었다고 썼다.
+강의 신이 죽는 부분을 씻어 냈고, 어머니가 얼굴에 신의 음식을 발랐다.
+"""
+fun = "리비우스는 그를 사람 이름으로 부를지 신 이름으로 부를지 조심스러워했다."
+variants = [
+  { source = "ovid.metamorphoses 14.581-14.608", text = "헤라도 이때는 화를 풀고 고개를 끄덕였다. 강의 신 누미키우스가 죽는 부분을 씻어 바다로 보냈고, 남은 것이 신이 되었다." },
+]
+sources = ["livy.rome 1.2", "ovid.metamorphoses 14.581-14.608"]
+note = "리비우스는 '무덤'이라 쓰고 신 이름으로 불렀다고 한다. 오비디우스는 씻겨 신이 된다. 둘을 함께 적었다. 아스카니오스가 이어 다스리는 것은 ROM 의 era 8. 강의 신 누미키우스는 이름만."

@@ -1,0 +1,12 @@
+# Claude Code 로컬 설정
+.claude/settings.local.json
+
+# sources/ 와 build/ 는 일부러 커밋합니다.
+#   sources/ — 집필 근거인 공개 도메인 원전. 매번 다시 받지 않기 위해. 재현 절차는 README 에 있다
+#   build/   — 파이썬 없이 build/myth.html 하나만 열어도 되게 하려고
+
+*.log
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

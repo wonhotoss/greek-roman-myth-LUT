@@ -1,0 +1,126 @@
+# 원전 목록. 항목의 sources = ["<id> <위치>"] 형태로 이 id를 참조한다.
+# file 이 있는 것은 sources/ 에 원문(공개 도메인 번역)이 함께 커밋되어 있다.
+
+[[source]]
+id = "hesiod.theogony"
+author_ko = "헤시오도스"
+title_ko = "신들의 계보"
+title_orig = "Theogony"
+written = "기원전 700년쯤"
+file = "sources/hesiod-homerichymns-evelyn-white.txt"
+translator = "H. G. Evelyn-White (1914)"
+note = "위치 표기는 원문 행 번호. 파일 안 (ll. 116-138) 표시와 일치한다."
+
+[[source]]
+id = "hesiod.works"
+author_ko = "헤시오도스"
+title_ko = "일과 날"
+title_orig = "Works and Days"
+written = "기원전 700년쯤"
+file = "sources/hesiod-homerichymns-evelyn-white.txt"
+translator = "H. G. Evelyn-White (1914)"
+
+[[source]]
+id = "apollodorus.library"
+author_ko = "아폴로도로스"
+title_ko = "신화집"
+title_orig = "Bibliotheca"
+written = "기원후 1~2세기"
+file = "sources/apollodorus-library-1-frazer.txt"
+translator = "J. G. Frazer (1921)"
+note = "그리스 신화를 계보 순서로 정리한 가장 체계적인 고대 편람. 이 프로젝트의 뼈대. 위치는 [1.2.1] 식 절 번호."
+
+[[source]]
+id = "homer.iliad"
+author_ko = "호메로스"
+title_ko = "일리아스"
+title_orig = "Ilias"
+written = "기원전 8세기쯤"
+file = "sources/homer-iliad-butler.txt"
+translator = "Samuel Butler (1898)"
+
+[[source]]
+id = "homer.odyssey"
+author_ko = "호메로스"
+title_ko = "오디세이아"
+title_orig = "Odysseia"
+written = "기원전 8세기쯤"
+file = "sources/homer-odyssey-butler.txt"
+translator = "Samuel Butler (1900)"
+
+[[source]]
+id = "ovid.metamorphoses"
+author_ko = "오비디우스"
+title_ko = "변신 이야기"
+title_orig = "Metamorphoses"
+written = "기원후 8년"
+file = "sources/ovid-metamorphoses-1-7-more.txt"
+translator = "Brookes More (1922)"
+note = "8~15권은 sources/ovid-metamorphoses-8-15-more.txt"
+
+[[source]]
+id = "virgil.aeneid"
+author_ko = "베르길리우스"
+title_ko = "아이네이스"
+title_orig = "Aeneis"
+written = "기원전 19년"
+file = "sources/virgil-aeneid-dryden.txt"
+translator = "John Dryden (1697)"
+
+[[source]]
+id = "livy.rome"
+author_ko = "리비우스"
+title_ko = "로마사"
+title_orig = "Ab Urbe Condita"
+written = "기원전 27년쯤"
+file = "sources/livy-rome-1-8-roberts.txt"
+translator = "Canon Roberts (1912)"
+note = "1권이 로마 건국 신화. era 8의 주 출처."
+
+[[source]]
+id = "pausanias.greece"
+author_ko = "파우사니아스"
+title_ko = "그리스 안내기"
+title_orig = "Hellados Periegesis"
+written = "기원후 2세기"
+file = "sources/pausanias-greece-v1-frazer.txt"
+translator = "J. G. Frazer (1898)"
+note = "실제로 그리스를 걸어다니며 '이 이야기는 여기서 일어났다'를 기록했다. 장소 데이터의 주 출처."
+
+[[source]]
+id = "hyginus.fabulae"
+author_ko = "히기누스"
+title_ko = "이야기 모음"
+title_orig = "Fabulae"
+written = "기원후 1~2세기"
+file = "sources/hyginus-fabulae-1-grant.txt"
+translator = "Mary Grant (1960)"
+note = "다른 데 없는 이설을 많이 보존하고 있다. variants 의 주 출처."
+
+[[source]]
+id = "bulfinch"
+author_ko = "토머스 불핀치"
+title_ko = "그리스 로마 신화"
+title_orig = "The Age of Fable"
+written = "1855년"
+file = "sources/bulfinch-mythology.txt"
+translator = "원문 영어"
+note = "원전이 아니라 19세기 재화. 원전 근거로 쓰지 않는다. '아이 수준으로 어떻게 줄이는가'의 참고용."
+
+[[source]]
+id = "homeric.hymns"
+author_ko = "호메로스 찬가"
+title_ko = "호메로스 찬가"
+title_orig = "Homeric Hymns"
+written = "기원전 7~6세기쯤"
+file = "sources/hesiod-homerichymns-evelyn-white.txt"
+translator = "H. G. Evelyn-White (1914)"
+note = "헤시오도스와 같은 파일 뒤쪽. 위치 표기는 <찬가 이름> <행> — demeter 1-50, apollo, hermes, dionysus 식."
+
+[[source]]
+id = "aiseum.first-myth"
+author_ko = "최설희"
+title_ko = "처음 읽는 그리스 로마 신화 (전 15권)"
+title_orig = "처음 읽는 그리스 로마 신화"
+written = "2020~2025년, 미래엔아이세움"
+note = "범위와 순서의 중심 참고. 어린이용 현대 재화라 원전 근거로 쓰지 않고 sources 에 인용하지 않는다. 대응은 항목의 note 에 참고: N권 M장 으로 남긴다."

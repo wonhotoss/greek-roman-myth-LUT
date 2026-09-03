@@ -1,0 +1,668 @@
+# era 7 — 돌아오는 길. 오디세이아와 오레스테스 이야기에 나오는 인물들 (ODY).
+# 오디세우스·아가멤논·클리타임네스트라·메넬라오스·헬레네·네스토르·아킬레우스·티에스테스·카산드라는 TRO 소유,
+# 테이레시아스는 THE 소유라 여기서는 참조만 한다.
+# 히기누스 117~125 는 sources/ 의 파일에 들어 있지 않아 인용하지 않았다(201 아우톨리코스만 있다).
+
+# ---------- 오디세우스의 집안 ----------
+
+[[figure]]
+id = "laertes"
+name_ko = "라에르테스"
+name_grc = "Laertes"
+kind = "human"
+era = 5
+spouses = ["antikleia"]
+home = "ithake"
+oneliner = "오디세우스의 아버지. 늙어서 시골 밭에서 아들을 기다렸다."
+body = """
+아들이 트로이로 떠난 뒤 성을 나와 시골 밭에서 지냈다.
+아내가 죽고 아들 소식도 없어 슬픔 속에서 늙어 갔다.
+오디세우스가 돌아왔을 때 처음에는 알아보지 못했다.
+어릴 적 준 나무들을 아들이 하나하나 말하자 그제야 아들을 껴안았다.
+마지막 싸움에서는 아테나의 힘을 받아 창을 던져 적의 우두머리를 쓰러뜨렸다.
+"""
+fun = "젊었을 때는 아르고호에 탄 영웅 가운데 하나였다."
+sources = ["homer.odyssey 11.187-196", "homer.odyssey 24.205-360", "homer.odyssey 24.520-525", "apollodorus.library 1.9.16"]
+
+[[figure]]
+id = "antikleia"
+name_ko = "안티클레이아"
+name_grc = "Antikleia"
+kind = "human"
+era = 5
+parents = ["autolykos"]
+spouses = ["laertes"]
+home = "ithake"
+oneliner = "오디세우스의 어머니. 아들을 기다리다 그리움으로 죽었다."
+body = """
+아들이 떠난 뒤 오래 기다리다가 그리움 때문에 죽었다.
+오디세우스는 죽은 사람들의 땅에 가서야 어머니가 죽은 것을 알았다.
+어머니의 혼은 아들을 알아보고 집안 소식을 전해 주었다.
+오디세우스가 세 번 껴안으려 했지만, 혼은 그림자처럼 팔 사이로 빠져나갔다.
+"""
+sources = ["homer.odyssey 11.84-89", "homer.odyssey 11.152-224", "apollodorus.library E.7.17"]
+
+[[figure]]
+id = "autolykos"
+name_ko = "아우톨리코스"
+name_grc = "Autolykos"
+aka = ["아우톨리쿠스"]
+kind = "human"
+era = 5
+parents = ["hermes"]
+home = "parnassos"
+oneliner = "세상에서 가장 솜씨 좋은 도둑. 오디세우스의 외할아버지다."
+body = """
+헤르메스가 아들에게 도둑질 솜씨를 주었다.
+훔친 것의 모습을 바꿀 수 있어서 흰 것을 검게, 뿔 없는 것을 뿔 있게 만들었다.
+그래서 시시포스의 소를 훔쳐도 아무도 잡아내지 못했다.
+파르나소스 산 아래에 살았고, 아르고호에도 탔다.
+딸이 낳은 아기에게 오디세우스라는 이름을 지어 준 사람이 이 할아버지다.
+"""
+fun = "오디세우스라는 이름은 '미움을 산 사람'이라는 뜻이다. 할아버지가 자기 이야기를 담아 지었다."
+note = "참고: 처음 읽는 그리스 로마 신화 10권 3장 「최고의 도둑 아우톨리코스」. 어머니 키오네는 등록부에 없어 이름만 부르지 않았다. 시시포스는 ATH 소유(참조 안 함, 이름만)."
+sources = ["homer.odyssey 19.392-466", "hyginus.fabulae 201", "apollodorus.library 1.9.16"]
+
+[[figure]]
+id = "penelope"
+name_ko = "페넬로페"
+name_grc = "Penelope"
+name_la = "Penelopa"
+aka = ["페넬로페이아", "페넬로파", "페넬로피"]
+kind = "human"
+era = 6
+spouses = ["odysseus"]
+home = "ithake"
+oneliner = "스무 해 동안 남편을 기다린 이타케의 왕비. 꾀로 시간을 벌었다."
+body = """
+오디세우스가 떠난 뒤 스무 해를 기다렸다.
+구혼자들이 몰려오자 시아버지의 옷감을 다 짜면 결혼하겠다고 했다.
+그러고는 낮에 짠 것을 밤마다 몰래 풀어 세 해를 끌었다.
+마지막에는 활 시합을 열어 남편이 활을 잡게 만들었다.
+남편이 돌아온 뒤에도 침대 이야기로 진짜인지 시험해 보았다.
+"""
+fun = "죽은 아가멤논의 혼도 저승에서 페넬로페를 칭찬했다. 그 이름은 영원히 남을 거라고."
+note = "참고: 처음 읽는 그리스 로마 신화 14권 2장 「지혜로운 페넬로페」. 아버지 이카리오스는 등록부에 없어 계보에 넣지 않았다."
+sources = ["homer.odyssey 2.85-128", "homer.odyssey 19.137-161", "homer.odyssey 23.173-230", "homer.odyssey 24.192-202", "apollodorus.library E.7.31"]
+
+[[figure]]
+id = "telemachos"
+name_ko = "텔레마코스"
+name_grc = "Telemachos"
+name_la = "Telemachus"
+aka = ["텔레마쿠스", "텔레마커스"]
+kind = "hero"
+era = 7
+parents = ["odysseus", "penelope"]
+home = "ithake"
+oneliner = "아버지를 찾아 길을 떠난 오디세우스의 아들."
+body = """
+아버지가 트로이로 떠날 때 갓난아기였다.
+스무 살이 되었을 때 아테나가 찾아와 아버지 소식을 찾으러 가라고 했다.
+필로스의 네스토르와 스파르타의 메넬라오스를 찾아가 물었다.
+돌아와서는 거지 모습의 아버지와 만나 함께 계획을 세웠다.
+구혼자들과 싸울 때 아버지 곁에서 창을 들고 싸웠다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 14권 2장 「텔레마코스의 여정」."
+sources = ["homer.odyssey 1.96-324", "homer.odyssey 3.1-497", "homer.odyssey 4.1-624", "homer.odyssey 16.154-320", "homer.odyssey 22.91-125", "apollodorus.library E.7.32-E.7.33"]
+
+[[figure]]
+id = "eumaios"
+name_ko = "에우마이오스"
+name_grc = "Eumaios"
+aka = ["에우마이우스", "돼지치기 에우마이오스"]
+kind = "human"
+era = 7
+home = "ithake"
+oneliner = "오디세우스의 돼지치기. 거지 모습의 주인을 먼저 대접했다."
+body = """
+어릴 때 해적에게 팔려 와 라에르테스의 집에서 자랐다.
+주인이 없는 스무 해 동안 산속 오두막에서 돼지를 지켰다.
+거지 모습의 낯선 사람이 오자 누구인지 묻지 않고 먹이고 재웠다.
+그 거지가 주인인 것을 알고는 함께 구혼자들과 싸웠다.
+"""
+fun = "원래는 어느 섬의 왕자였다. 유모가 해적에게 데려가 팔았다고 스스로 이야기한다."
+note = "참고: 처음 읽는 그리스 로마 신화 14권 1장 「돼지치기 에우마이오스」."
+sources = ["homer.odyssey 14.1-533", "homer.odyssey 15.390-484", "homer.odyssey 21.188-244", "apollodorus.library E.7.32-E.7.33"]
+
+[[figure]]
+id = "eurykleia"
+name_ko = "에우리클레이아"
+name_grc = "Eurykleia"
+kind = "human"
+era = 7
+home = "ithake"
+oneliner = "오디세우스를 키운 늙은 유모. 발을 씻어 주다 흉터로 알아보았다."
+body = """
+오디세우스가 아기일 때부터 키운 유모다.
+텔레마코스도 이 유모의 손에서 자랐다.
+거지 손님의 발을 씻어 주다가 무릎 위 흉터를 보고 주인을 알아보았다.
+오디세우스가 손으로 입을 막고 아무에게도 말하지 말라고 했다.
+구혼자들이 죽은 뒤에야 페넬로페에게 달려가 알렸다.
+"""
+sources = ["homer.odyssey 1.428-435", "homer.odyssey 19.353-507", "homer.odyssey 23.1-84"]
+
+[[figure]]
+id = "argos-hound"
+name_ko = "아르고스"
+name_grc = "Argos"
+aka = ["개 아르고스", "오디세우스의 개"]
+kind = "monster"
+era = 7
+home = "ithake"
+oneliner = "스무 해를 기다려 주인을 알아본 오디세우스의 개."
+body = """
+오디세우스가 트로이로 떠나기 전에 기른 개다.
+주인이 없는 동안 아무도 돌보지 않아 똥 더미 위에 누워 있었다.
+거지 모습의 주인이 오자 귀를 내리고 꼬리를 흔들었다.
+오디세우스는 남이 보지 않게 눈물을 닦았다.
+아르고스는 주인을 알아본 바로 그때 죽었다.
+"""
+note = "짐승을 담는 kind 가 없어 monster 로 두었다. 스키마에 animal 같은 갈래가 생기면 바꿔야 한다. 장소 argos 와 겹치지 않게 id 를 argos-hound 로 했다."
+sources = ["homer.odyssey 17.290-327"]
+
+# ---------- 이타케의 구혼자들과 사람들 ----------
+
+[[figure]]
+id = "antinoos"
+name_ko = "안티노오스"
+name_grc = "Antinoos"
+aka = ["안티누스"]
+kind = "human"
+era = 7
+parents = ["eupeithes"]
+home = "ithake"
+oneliner = "구혼자들의 우두머리. 오디세우스의 첫 화살에 죽었다."
+body = """
+페넬로페에게 결혼하자고 몰려온 구혼자 가운데 가장 앞장선 사람이다.
+오디세우스의 집에서 날마다 잔치를 벌여 재산을 먹어 없앴다.
+텔레마코스를 몰래 죽이려는 계획도 세웠다.
+거지 모습의 오디세우스에게 발판을 던졌다.
+활 시합이 끝나고 잔을 들다가 첫 화살에 맞아 죽었다.
+"""
+sources = ["homer.odyssey 2.85-128", "homer.odyssey 4.660-674", "homer.odyssey 17.445-491", "homer.odyssey 22.8-21", "apollodorus.library E.7.30"]
+
+[[figure]]
+id = "eurymachos"
+name_ko = "에우리마코스"
+name_grc = "Eurymachos"
+aka = ["에우리마쿠스"]
+kind = "human"
+era = 7
+home = "ithake"
+oneliner = "말을 잘하던 구혼자. 안티노오스가 죽자 용서를 빌었다."
+body = """
+구혼자 가운데 안티노오스 다음으로 힘이 셌다.
+말을 부드럽게 해서 페넬로페와 텔레마코스를 안심시키려 했다.
+그러면서도 거지 모습의 오디세우스에게 발판을 던졌다.
+안티노오스가 죽자 모든 잘못을 그에게 돌리고 용서를 빌었다.
+오디세우스가 거절하자 칼을 빼 들고 달려들었다가 죽었다.
+"""
+sources = ["homer.odyssey 2.177-207", "homer.odyssey 18.346-404", "homer.odyssey 22.44-88"]
+
+[[figure]]
+id = "eupeithes"
+name_ko = "에우페이테스"
+name_grc = "Eupeithes"
+kind = "human"
+era = 7
+home = "ithake"
+oneliner = "안티노오스의 아버지. 아들의 원수를 갚으러 나섰다가 죽었다."
+body = """
+옛날 해적질을 하다 쫓길 때 오디세우스가 목숨을 구해 준 사람이다.
+그런데 아들 안티노오스가 오디세우스의 집에서 죽었다.
+이타케 사람들을 모아 오디세우스를 치러 나섰다.
+라에르테스가 던진 창에 맞아 죽었다.
+"""
+sources = ["homer.odyssey 16.418-433", "homer.odyssey 24.412-471", "homer.odyssey 24.520-525"]
+
+[[figure]]
+id = "mentor"
+name_ko = "멘토르"
+name_grc = "Mentor"
+kind = "human"
+era = 7
+home = "ithake"
+oneliner = "오디세우스의 오랜 친구. 아테나가 자주 그 모습을 빌렸다."
+body = """
+오디세우스가 떠날 때 집안을 돌봐 달라고 맡긴 친구다.
+회의에서 구혼자들을 꾸짖은 몇 안 되는 사람이었다.
+아테나는 텔레마코스를 도울 때 멘토르의 모습과 목소리를 빌렸다.
+구혼자들과의 싸움에도, 마지막 화해에도 멘토르의 모습으로 나타났다.
+"""
+fun = "지금 쓰는 '멘토'라는 말이 이 사람 이름에서 왔다."
+sources = ["homer.odyssey 2.224-241", "homer.odyssey 2.267-295", "homer.odyssey 22.205-240", "homer.odyssey 24.545-548"]
+
+[[figure]]
+id = "phemios"
+name_ko = "페미오스"
+name_grc = "Phemios"
+kind = "human"
+era = 7
+home = "ithake"
+oneliner = "오디세우스의 집에서 노래하는 사람. 구혼자들이 억지로 노래를 시켰다."
+body = """
+잔치에서 수금을 치며 노래하는 가객이다.
+구혼자들이 억지로 시켜 날마다 노래해야 했다.
+트로이에서 돌아오는 그리스 사람들의 노래를 부르자 페넬로페가 울었다.
+구혼자들이 죽을 때 오디세우스의 무릎을 붙잡고 살려 달라고 했다.
+텔레마코스가 잘못이 없다고 말해 주어 살았다.
+"""
+sources = ["homer.odyssey 1.153-155", "homer.odyssey 1.325-344", "homer.odyssey 22.330-380"]
+
+# ---------- 떠돌이 길에서 만난 이들 ----------
+
+[[figure]]
+id = "maron"
+name_ko = "마론"
+name_grc = "Maron"
+kind = "human"
+era = 7
+oneliner = "이스마로스에서 아폴론을 모시던 사람. 오디세우스에게 진한 포도주를 주었다."
+body = """
+키코네스의 마을 이스마로스에서 아폴론의 신전을 지키던 사람이다.
+오디세우스가 마을을 칠 때 마론과 그 식구만은 살려 주었다.
+마론은 고마워서 금과 은그릇, 아주 진한 포도주 열두 항아리를 주었다.
+그 포도주는 물을 스무 배 섞어도 향이 그대로였다.
+오디세우스는 이 포도주로 폴리페모스를 잠들게 했다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 13권 1장 「마론의 포도주」. 이스마로스는 장소 항목을 만들지 않았다."
+sources = ["homer.odyssey 9.196-215", "apollodorus.library E.7.2", "apollodorus.library E.7.4"]
+
+[[figure]]
+id = "lotophagoi"
+name_ko = "로토파고이"
+name_grc = "Lotophagoi"
+aka = ["연꽃 먹는 사람들", "로토스 먹는 사람들", "로터스 이터"]
+kind = "group"
+era = 7
+home = "lotophagoi-land"
+oneliner = "먹으면 집을 잊게 되는 열매를 먹고 사는 사람들."
+body = """
+로토스라는 꽃의 열매를 먹고 사는 사람들이다.
+낯선 사람을 해치지 않고 열매를 나누어 주었다.
+그 열매를 먹은 사람은 집도 돌아갈 길도 잊고 그곳에 남고 싶어했다.
+오디세우스는 열매를 먹은 동료들이 울며 매달리는데도 배에 묶어 끌고 왔다.
+"""
+fun = "책에서는 연꽃이라 부르지만, 호메로스는 그저 '꿀처럼 달콤한 꽃 열매'라고만 했다. 무엇인지는 아무도 모른다."
+note = "참고: 처음 읽는 그리스 로마 신화 13권 1장 「연꽃에 숨겨진 비밀」."
+sources = ["homer.odyssey 9.82-104", "apollodorus.library E.7.3"]
+
+[[figure]]
+id = "polyphemos"
+name_ko = "폴리페모스"
+name_grc = "Polyphemos"
+aka = ["폴리페무스", "외눈 거인"]
+kind = "monster"
+era = 7
+parents = ["poseidon"]
+home = "kyklopes-land"
+oneliner = "이마에 눈이 하나뿐인 거인. 오디세우스가 그 눈을 못 보게 만들었다."
+body = """
+포세이돈의 아들로, 이마 한가운데 눈이 하나뿐이다.
+양과 염소를 치며 바닷가 동굴에서 혼자 살았다.
+동굴에 들어온 오디세우스의 동료들을 잡아먹었다.
+오디세우스가 진한 포도주로 잠들게 한 뒤 그 눈을 못 보게 만들었다.
+폴리페모스는 아버지 포세이돈에게 오디세우스가 집에 가지 못하게 해 달라고 빌었다.
+"""
+fun = "점쟁이 텔레모스가 오디세우스에게 눈을 잃을 거라고 미리 말해 주었다. 폴리페모스는 크고 힘센 사람이 올 줄 알았는데, 조그만 사람이 와서 당했다."
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 13권 2장 「동굴의 주인」「거인을 속인 지혜」. 어머니 토오사(님프)는 등록부에 없어 계보에 넣지 않았다. 오비디우스 13.750-897 에는 갈라테이아를 사랑하는 폴리페모스 이야기가 있다."
+sources = ["homer.odyssey 1.68-75", "homer.odyssey 9.105-566", "apollodorus.library E.7.4-E.7.9", "ovid.metamorphoses 13.750-897"]
+
+[[figure]]
+id = "aiolos-anemon"
+name_ko = "아이올로스"
+name_grc = "Aiolos"
+aka = ["바람의 신 아이올로스", "아이올루스", "아에올루스"]
+kind = "god"
+era = 7
+domains = ["바람"]
+symbols = ["바람 주머니"]
+home = "aiolia"
+oneliner = "바람을 맡은 이. 오디세우스에게 바람을 담은 주머니를 주었다."
+body = """
+제우스가 바람을 잠재우고 풀어 놓는 일을 맡겼다.
+청동 벽으로 둘러싸인 떠다니는 섬에서 아들 여섯, 딸 여섯과 살았다.
+오디세우스를 한 달 동안 대접하고, 궂은 바람을 모두 가죽 주머니에 담아 주었다.
+동료들이 그 주머니를 열어 오디세우스가 다시 떠밀려 오자, 신들이 미워하는 사람이라며 쫓아냈다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 13권 2장 「바람의 신 아이올로스」. 헬렌의 아들 아이올로스와 구별하려고 id 를 aiolos-anemon(바람의 아이올로스)으로 했다. 호메로스는 신들이 아끼는 왕으로, 아폴로도로스는 제우스가 바람을 맡긴 이로 쓴다. 아버지 히포테스는 등록부에 없어 계보에 넣지 않았다."
+sources = ["homer.odyssey 10.1-79", "apollodorus.library E.7.10-E.7.11"]
+
+[[figure]]
+id = "laistrygones"
+name_ko = "라이스트리고네스"
+name_grc = "Laistrygones"
+aka = ["라이스트리곤", "라이스트리고네스 거인들"]
+kind = "group"
+era = 7
+home = "laistrygonia"
+oneliner = "사람을 잡아먹는 거인 무리. 오디세우스의 배 열한 척을 부수었다."
+body = """
+안티파테스 왕이 다스리는, 거인처럼 큰 무리다.
+오디세우스가 소식을 살피라고 보낸 동료 하나를 왕이 잡아먹었다.
+나머지가 달아나자 거인들이 몰려와 바위를 던져 배들을 부수었다.
+항구 안에 있던 배 열한 척이 모두 부서지고 사람들도 잡혀갔다.
+밖에 대어 둔 오디세우스의 배 한 척만 밧줄을 끊고 달아났다.
+"""
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 13권 2장 「또 다른 거인들의 섬」."
+sources = ["homer.odyssey 10.80-132", "apollodorus.library E.7.12-E.7.13"]
+
+[[figure]]
+id = "kirke"
+name_ko = "키르케"
+name_grc = "Kirke"
+name_la = "Circe"
+aka = ["서시", "키르체", "치르체", "서르시"]
+kind = "god"
+era = 7
+parents = ["helios"]
+domains = ["마법", "약초"]
+symbols = ["지팡이", "약잔"]
+home = "aiaia"
+oneliner = "사람을 짐승으로 바꾸는 약을 아는 헬리오스의 딸."
+body = """
+헬리오스의 딸로, 섬의 돌집에서 늑대와 사자를 길들여 살았다.
+약을 탄 음식을 먹인 뒤 지팡이로 쳐서 오디세우스의 동료들을 돼지로 바꾸었다.
+오디세우스는 헤르메스가 준 약초 덕분에 바뀌지 않았다.
+키르케는 동료들을 되돌려 주었고, 오디세우스는 그 섬에서 한 해를 머물렀다.
+떠날 때는 죽은 사람들의 땅으로 가는 길과 괴물을 피하는 법을 가르쳐 주었다.
+"""
+fun = "오비디우스는 괴물 스킬라가 원래 예쁜 님프였는데, 키르케가 질투해서 괴물로 바꾸었다고 썼다."
+note = "참고: 처음 읽는 그리스 로마 신화 13권 3장 「신비한 물약」「키르케와 오디세우스」. 어머니 페르세(오케아노스의 딸)는 등록부에 없어 계보에 넣지 않았다. 헤시오도스 1011-1016 은 키르케와 오디세우스의 아들로 아그리오스·라티노스를 든다(AEN 의 latinus 와 이설 관계)."
+sources = ["homer.odyssey 10.133-574", "homer.odyssey 12.16-141", "apollodorus.library E.7.14-E.7.19", "ovid.metamorphoses 14.1-74", "hesiod.theogony 1011-1016"]
+
+[[figure]]
+id = "seirenes"
+name_ko = "세이레네스"
+name_grc = "Seirenes"
+aka = ["세이렌", "사이렌", "세이렌 자매"]
+kind = "group"
+era = 7
+home = "seirenes-island"
+oneliner = "노래로 뱃사람을 끌어당겨 집에 돌아가지 못하게 하는 자매."
+body = """
+꽃이 핀 풀밭에 앉아 지나가는 배를 향해 노래한다.
+그 노래를 들은 사람은 다시는 집에 돌아가지 못했다.
+자매가 앉은 자리 둘레에는 죽은 사람들의 뼈가 쌓여 있었다.
+오디세우스는 동료들의 귀를 밀랍으로 막고 자기는 돛대에 묶여 노래를 들었다.
+"""
+fun = "호메로스는 모습을 말하지 않았다. 아폴로도로스는 허리 아래가 새라고 했다. 물고기 꼬리를 단 인어는 훨씬 뒷날의 그림이다."
+note = "참고: 처음 읽는 그리스 로마 신화 6권 2장 「세이렌」. 아폴로도로스는 아켈로오스와 무사 멜포메네의 딸이라 하는데 둘 다 등록부에 없어 계보에 넣지 않았다. E.7.19: 배가 지나가면 자기들이 죽는다는 말이 있었고 그대로 되었다."
+sources = ["homer.odyssey 12.39-54", "homer.odyssey 12.165-200", "apollodorus.library E.7.18-E.7.19"]
+
+[[figure]]
+id = "skylla"
+name_ko = "스킬라"
+name_grc = "Skylla"
+aka = ["스퀼라", "스킬레"]
+kind = "monster"
+era = 7
+home = "skylla-strait"
+oneliner = "머리가 여섯인 바위 굴의 괴물. 지나가는 배에서 사람을 잡아간다."
+body = """
+바다 위 높은 바위의 굴에 산다.
+발이 열둘, 목이 여섯, 머리마다 이가 세 줄이다.
+소리는 갓 태어난 강아지처럼 작지만, 목을 뻗어 배에서 사람을 잡아간다.
+오디세우스의 배가 지나갈 때 동료 여섯을 잡아먹었다.
+"""
+fun = "오비디우스는 스킬라가 원래 예쁜 님프였다고 썼다. 키르케가 샘에 약을 풀어 괴물로 바꾸었고, 뒤에는 바위가 되었다고 한다."
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 6권 2장 「스킬라」. 어머니 크라타이이스는 등록부에 없어 계보에 넣지 않았다."
+sources = ["homer.odyssey 12.73-100", "homer.odyssey 12.234-259", "apollodorus.library E.7.20-E.7.21", "ovid.metamorphoses 14.1-74"]
+
+[[figure]]
+id = "charybdis"
+name_ko = "카리브디스"
+name_grc = "Charybdis"
+aka = ["카립디스", "소용돌이 카리브디스"]
+kind = "monster"
+era = 7
+home = "skylla-strait"
+oneliner = "하루 세 번 바닷물을 들이마시고 뿜어내는 괴물."
+body = """
+스킬라 맞은편 낮은 바위 아래에 산다.
+하루에 세 번 바닷물을 들이마시고 세 번 뿜어낸다.
+들이마실 때는 바다 바닥의 검은 모래가 보이고, 뿜을 때는 물이 바위 꼭대기까지 튀었다.
+오디세우스는 이쪽을 피해 스킬라 쪽으로 붙어 지나갔다.
+배가 부서진 뒤 다시 떠내려왔을 때는 무화과나무에 매달려 버텼다.
+"""
+fun = "'스킬라와 카리브디스 사이'라는 말이 지금도 남아 있다. 이쪽도 저쪽도 위험해서 고를 수 없는 처지라는 뜻이다."
+note = "참고: 처음 읽는 그리스 로마 신화 6권 2장 「카리브디스」."
+sources = ["homer.odyssey 12.101-110", "homer.odyssey 12.234-243", "homer.odyssey 12.426-446", "apollodorus.library E.7.21", "apollodorus.library E.7.23"]
+
+[[figure]]
+id = "elpenor"
+name_ko = "엘페노르"
+name_grc = "Elpenor"
+kind = "human"
+era = 7
+oneliner = "키르케의 집 지붕에서 떨어져 죽은 오디세우스의 동료."
+body = """
+오디세우스의 동료 가운데 가장 어렸고, 싸움도 생각도 남보다 약했다.
+키르케의 집 지붕에서 잠들었다가 떠나는 소리에 놀라 깼다.
+사다리를 잊고 그냥 내려오다 떨어져 죽었다.
+죽은 사람들의 땅에서 오디세우스를 가장 먼저 맞은 혼이 엘페노르였다.
+자기를 묻어 달라고 부탁했고, 오디세우스는 돌아가 노를 세워 묻어 주었다.
+"""
+sources = ["homer.odyssey 10.552-560", "homer.odyssey 11.51-83", "homer.odyssey 12.8-15", "apollodorus.library E.7.17"]
+
+[[figure]]
+id = "kalypso"
+name_ko = "칼립소"
+name_grc = "Kalypso"
+aka = ["칼륍소", "오기기아의 칼립소"]
+kind = "nymph"
+era = 7
+parents = ["atlas"]
+home = "ogygia"
+oneliner = "바다 한가운데 섬에 사는 님프. 오디세우스를 일곱 해 동안 붙잡아 두었다."
+body = """
+아틀라스의 딸로, 오기기아 섬의 큰 굴에서 혼자 살았다.
+바다에 떠내려온 오디세우스를 건져 살려 주었다.
+죽지 않게 해 주겠다며 일곱 해 동안 보내 주지 않았다.
+오디세우스는 날마다 바닷가에 앉아 바다를 보며 울었다.
+제우스의 뜻이 전해지자 뗏목 만들 도구와 옷, 먹을 것을 주어 보냈다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 14권 1장 「오기기아섬의 칼립소」. 아폴로도로스 E.7.24 는 다섯 해라고 한다. 헤시오도스 1017-1018 은 칼립소와 오디세우스의 아들 나우시토오스·나우시노오스를 든다."
+sources = ["homer.odyssey 1.13-15", "homer.odyssey 5.55-268", "homer.odyssey 7.244-266", "apollodorus.library E.7.24", "hesiod.theogony 1017-1018"]
+
+# ---------- 파이아케스 사람들 ----------
+
+[[figure]]
+id = "nausikaa"
+name_ko = "나우시카아"
+name_grc = "Nausikaa"
+aka = ["나우시카", "나우시카에"]
+kind = "human"
+era = 7
+parents = ["alkinoos", "arete"]
+home = "scheria"
+oneliner = "바닷가에서 오디세우스를 발견하고 도운 파이아케스의 공주."
+body = """
+아테나가 꿈에 나타나 강가로 빨래를 하러 가라고 했다.
+빨래를 마치고 하녀들과 공놀이를 하다가 공이 물에 빠져 소리를 질렀다.
+그 소리에 나뭇잎 속에서 자던 오디세우스가 깨어 나왔다.
+하녀들은 모두 달아났지만 나우시카아만 남아 옷과 음식을 주었다.
+오디세우스에게 성으로 가는 길과 어머니에게 부탁하는 법을 가르쳐 주었다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 14권 1장 「파이아케스 왕국」."
+sources = ["homer.odyssey 6.1-331", "homer.odyssey 8.457-468", "apollodorus.library E.7.25"]
+
+[[figure]]
+id = "alkinoos"
+name_ko = "알키노오스"
+name_grc = "Alkinoos"
+aka = ["알키누스"]
+kind = "human"
+era = 7
+spouses = ["arete"]
+home = "scheria"
+oneliner = "낯선 손님에게 잔치를 열고 배를 내어 준 파이아케스의 왕."
+body = """
+파이아케스 사람들의 왕이다.
+누구인지 묻지 않고 낯선 손님에게 잔치와 경기를 열어 주었다.
+가객의 트로이 노래를 듣고 손님이 우는 것을 보고서야 이름을 물었다.
+오디세우스의 이야기를 다 듣고 선물을 가득 실은 배로 이타케까지 보내 주었다.
+"""
+fun = "파이아케스의 배에는 사공도 방향을 잡는 키도 없다. 배가 사람의 마음을 알아서 스스로 간다."
+sources = ["homer.odyssey 7.81-347", "homer.odyssey 8.1-586", "homer.odyssey 13.1-125", "apollodorus.library E.7.25"]
+
+[[figure]]
+id = "arete"
+name_ko = "아레테"
+name_grc = "Arete"
+kind = "human"
+era = 7
+spouses = ["alkinoos"]
+home = "scheria"
+oneliner = "파이아케스의 왕비. 오디세우스는 왕보다 먼저 이 왕비에게 부탁했다."
+body = """
+파이아케스 사람들이 신처럼 우러르는 왕비다.
+사람들 사이의 다툼도 왕비가 풀어 주었다.
+나우시카아는 오디세우스에게 왕보다 먼저 어머니에게 부탁하라고 했다.
+오디세우스는 왕비의 무릎을 붙잡고 집에 보내 달라고 청했다.
+왕비는 손님이 입은 옷이 자기가 지은 옷인 것을 알아보고 누구인지 물었다.
+"""
+sources = ["homer.odyssey 6.303-315", "homer.odyssey 7.53-77", "homer.odyssey 7.139-152", "homer.odyssey 7.233-239"]
+
+[[figure]]
+id = "demodokos"
+name_ko = "데모도코스"
+name_grc = "Demodokos"
+kind = "human"
+era = 7
+home = "scheria"
+oneliner = "파이아케스의 눈먼 가객. 그의 트로이 노래에 오디세우스가 울었다."
+body = """
+무사(노래의 여신)가 눈을 가져가고 대신 노래를 주었다.
+알키노오스의 잔치에서 수금을 치며 영웅들의 노래를 불렀다.
+오디세우스가 부탁하자 트로이의 나무 말 이야기를 노래했다.
+그 노래를 듣던 오디세우스가 얼굴을 가리고 울었다.
+그래서 왕이 이름을 물었고, 오디세우스의 긴 이야기가 시작되었다.
+"""
+sources = ["homer.odyssey 8.62-103", "homer.odyssey 8.471-586"]
+
+# ---------- 아가멤논의 집안 ----------
+
+[[figure]]
+id = "aigisthos"
+name_ko = "아이기스토스"
+name_grc = "Aigisthos"
+aka = ["아이기스투스", "에기스토스"]
+kind = "human"
+era = 7
+parents = ["thyestes"]
+home = "mycenae"
+oneliner = "아가멤논이 없는 동안 그 자리를 차지하고, 돌아온 아가멤논을 죽인 사람."
+body = """
+아가멤논이 트로이에 있는 동안 미케네에 남아 있었다.
+왕비 클리타임네스트라의 마음을 얻어 함께 살았다.
+전쟁에서 돌아온 아가멤논을 잔치에 불러 죽였다.
+그 뒤 일곱 해 동안 미케네의 왕으로 지냈다.
+여덟째 해에 아가멤논의 아들 오레스테스가 돌아와 아이기스토스를 죽였다.
+"""
+fun = "제우스가 헤르메스를 보내 미리 말렸다. 그렇게 하면 오레스테스가 갚으러 온다고. 아이기스토스는 듣지 않았다."
+sensitivity = "soften"
+sources = ["homer.odyssey 1.35-43", "homer.odyssey 3.263-310", "homer.odyssey 4.524-537", "homer.odyssey 11.405-434", "apollodorus.library E.6.23-E.6.25"]
+
+[[figure]]
+id = "orestes"
+name_ko = "오레스테스"
+name_grc = "Orestes"
+aka = ["오레스테즈"]
+kind = "hero"
+era = 7
+parents = ["agamemnon", "klytaimnestra"]
+spouses = ["hermione"]
+home = "mycenae"
+oneliner = "아버지의 원수를 갚고, 그 때문에 에리니에스에게 쫓긴 아가멤논의 아들."
+body = """
+아버지가 죽을 때 어린아이였다.
+누이 엘렉트라가 몰래 빼내어 포키스의 스트로피오스 왕에게 보냈다.
+자라서 델포이에 물은 뒤 친구 필라데스와 함께 몰래 미케네로 갔다.
+아이기스토스를 죽였고, 어머니도 죽였다.
+그 뒤 에리니에스에게 쫓기다 아테네의 재판에서 표가 같아 풀려났다.
+"""
+sensitivity = "soften"
+sources = ["apollodorus.library E.6.24-E.6.28", "homer.odyssey 1.29-43", "homer.odyssey 3.303-310", "pausanias.greece 1.28"]
+
+[[figure]]
+id = "elektra"
+name_ko = "엘렉트라"
+name_grc = "Elektra"
+aka = ["엘렉트라 공주"]
+kind = "human"
+era = 7
+parents = ["agamemnon", "klytaimnestra"]
+spouses = ["pylades"]
+home = "mycenae"
+oneliner = "어린 동생 오레스테스를 몰래 빼내어 살린 아가멤논의 딸."
+body = """
+아버지 아가멤논이 죽던 때, 어린 동생 오레스테스를 몰래 빼냈다.
+동생을 포키스의 스트로피오스 왕에게 보내 키우게 했다.
+오레스테스가 돌아와 원수를 갚은 뒤, 동생의 친구 필라데스와 결혼했다.
+파우사니아스는 미케네에서 엘렉트라의 무덤을 보았다고 적었다.
+"""
+note = "호메로스는 아가멤논의 딸로 엘렉트라를 부르지 않는다. 아폴로도로스와 파우사니아스만 인용한다."
+sources = ["apollodorus.library E.6.24", "apollodorus.library E.6.28", "pausanias.greece 2.16"]
+
+[[figure]]
+id = "pylades"
+name_ko = "필라데스"
+name_grc = "Pylades"
+kind = "human"
+era = 7
+spouses = ["elektra"]
+oneliner = "오레스테스와 함께 자라 어디든 함께 간 친구."
+body = """
+포키스의 왕 스트로피오스의 아들이다.
+아버지가 오레스테스를 맡아 키워서 둘은 형제처럼 자랐다.
+오레스테스가 미케네로 몰래 갈 때도, 먼 타우리스로 갈 때도 함께 갔다.
+뒤에 오레스테스의 누이 엘렉트라와 결혼했다.
+"""
+note = "아버지 스트로피오스는 등록부에 없어 계보에 넣지 않았다. 포키스는 장소 항목을 만들지 않았다."
+sources = ["apollodorus.library E.6.24-E.6.28", "pausanias.greece 2.16"]
+
+[[figure]]
+id = "hermione"
+name_ko = "헤르미오네"
+name_grc = "Hermione"
+kind = "human"
+era = 7
+parents = ["menelaos", "helene"]
+spouses = ["orestes"]
+home = "sparta"
+oneliner = "메넬라오스와 헬레네의 하나뿐인 딸."
+body = """
+헬레네가 낳은 하나뿐인 아이다.
+텔레마코스가 스파르타에 왔을 때 마침 결혼 잔치가 열리고 있었다.
+아버지가 트로이에서 약속한 대로 아킬레우스의 아들과 결혼하는 자리였다.
+아폴로도로스는 뒤에 오레스테스와 결혼했다고 적었다.
+"""
+note = "호메로스(4권)는 네오프톨레모스와, 아폴로도로스(E.6.28)는 오레스테스와 결혼했다고 한다. 두 이야기를 모두 적었다. 네오프톨레모스는 TRO 소유라 이름만 불렀다."
+sources = ["homer.odyssey 4.3-14", "apollodorus.library E.6.28"]
+
+[[figure]]
+id = "erinyes"
+name_ko = "에리니에스"
+name_grc = "Erinyes"
+name_la = "Furiae"
+aka = ["에리니스", "복수의 여신들", "푸리아이", "퓨리", "에우메니데스", "존엄한 여신들"]
+kind = "group"
+era = 0
+parents = ["gaia", "ouranos"]
+domains = ["복수", "맹세"]
+oneliner = "잘못한 사람을 끝까지 쫓아가는 여신들. 특히 부모를 해친 사람을 쫓는다."
+body = """
+우라노스가 다쳤을 때 흘린 피를 가이아가 받아 낳았다.
+잘못한 사람, 특히 부모를 해친 사람을 어디까지나 쫓아간다.
+어머니를 죽인 오레스테스를 아테네까지 쫓아갔다.
+아테네 사람들은 이름을 부르기가 두려워 '존엄한 여신들'이라고 불렀다.
+로마에서는 푸리아이라고 불렀다.
+"""
+fun = "머리에 뱀을 감은 무서운 모습으로 처음 그린 사람은 아이스킬로스라는 극작가다. 그 전 조각들은 무섭지 않았다고 파우사니아스가 적었다."
+note = "parents: 헤시오도스 183-187 — 우라노스의 피를 가이아가 받아 낳았다. 두 부모로 적되 '피에서 났다'는 사정은 body 에 두었다."
+sources = ["hesiod.theogony 183-187", "homer.odyssey 2.135-136", "apollodorus.library E.6.25", "pausanias.greece 1.28"]

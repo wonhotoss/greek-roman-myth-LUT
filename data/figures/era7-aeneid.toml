@@ -1,0 +1,356 @@
+# era 7 — 돌아오는 길. 아이네이아스의 여행과 라티움의 사람들.
+# aineias·anchises·kreousa·helenos·andromache 는 TRO 가, faunus 는 ROM 이 만든다. 여기서는 참조만 한다.
+# 이아르바스·카이에타·데이포보스·켈라이노·아룬스·오피스·메타부스·라우수스·아니오스·아케스테스는 이름만 부른다.
+
+[[figure]]
+id = "askanios"
+name_ko = "아스카니오스"
+name_grc = "Askanios"
+name_la = "Ascanius"
+aka = ["이울루스", "율루스", "아스카니우스", "율리우스 가문의 조상"]
+kind = "human"
+era = 7
+parents = ["aineias", "kreousa"]
+parents_variant = [
+  { source = "livy.rome 1.1", parents = ["aineias", "lavinia"], text = "리비우스는 아스카니오스의 어머니를 라비니아라고도 한다." },
+]
+home = "lavinium"
+oneliner = "아버지의 손을 잡고 트로이를 떠난 아이. 뒷날 알바 롱가를 세운다."
+body = """
+불타는 트로이에서 아버지 아이네이아스의 손을 잡고 걸어 나왔다.
+떠나기 전, 머리 위에 불꽃이 타올랐지만 머리카락은 타지 않았다.
+할아버지 안키세스는 그것을 좋은 신호로 보았다.
+라티움에서 사냥 중 길들인 사슴을 화살로 맞혀 싸움의 불씨가 되었다.
+아버지가 죽은 뒤 라비니움을 떠나 알바 롱가를 세웠다.
+"""
+fun = "다른 이름은 이울루스다. 로마의 카이사르 가문은 자기들이 이 아이의 자손이라고 했다."
+sources = ["virgil.aeneid 2.679-2.729", "virgil.aeneid 7.475-7.510", "virgil.aeneid 1.267-1.271", "livy.rome 1.3"]
+note = "리비우스 1.1 은 라비니아가 낳았다 하고, 1.3 에서는 어느 어머니인지 모르겠다고 적었다. 주 서술은 베르길리우스(크레우사). 알바 롱가 건국은 ROM 의 alba-longa-founded."
+
+[[figure]]
+id = "achates"
+name_ko = "아카테스"
+name_grc = "Achates"
+name_la = "Achates"
+aka = ["충직한 아카테스", "아카테스"]
+kind = "human"
+era = 7
+oneliner = "아이네이아스 곁을 늘 지킨 가장 믿음직한 친구."
+body = """
+아이네이아스가 가는 곳마다 함께 갔다.
+낯선 땅에 내리면 먼저 부싯돌로 불을 피우고 길을 살폈다.
+멀리 이탈리아 땅이 보였을 때 가장 먼저 소리쳐 알렸다.
+카르타고에서도, 시빌레의 동굴에서도 그 옆에 있었다.
+"""
+fun = "베르길리우스는 그를 부를 때마다 '충직한 아카테스'라고 썼다. 영어에서는 지금도 믿음직한 친구를 그렇게 부른다."
+sources = ["virgil.aeneid 1.174-1.179", "virgil.aeneid 1.305-1.313", "virgil.aeneid 3.523-3.524", "virgil.aeneid 6.156-6.159"]
+
+[[figure]]
+id = "palinouros"
+name_ko = "팔리누로스"
+name_grc = "Palinouros"
+name_la = "Palinurus"
+aka = ["팔리누루스"]
+kind = "human"
+era = 7
+oneliner = "아이네이아스의 배를 몰던 뱃길잡이. 잠에 빠져 바다에 떨어졌다."
+body = """
+아이네이아스의 배에서 키를 잡고 별을 보며 길을 찾았다.
+폭풍 속에서도 다른 배들이 그의 배를 따라 움직였다.
+이탈리아로 가는 마지막 밤, 잠의 신이 그를 바다에 떨어뜨렸다.
+사흘을 헤엄쳐 땅에 닿았지만 그곳 사람들이 그를 죽였다.
+저승에서 아이네이아스를 다시 만나 자기 이야기를 들려주었다.
+"""
+fun = "시빌레는 그가 죽은 곶에 그의 이름이 붙을 거라고 말했다. 지금도 이탈리아에 팔리누로 곶이 있다."
+sources = ["virgil.aeneid 3.201-3.204", "virgil.aeneid 3.513-3.520", "virgil.aeneid 5.833-5.871", "virgil.aeneid 6.337-6.383"]
+
+[[figure]]
+id = "sibylla-kymaia"
+name_ko = "쿠마이의 시빌레"
+name_grc = "Sibylla"
+name_la = "Sibylla Cumana"
+aka = ["시빌레", "시빌라", "데이포베", "쿠마이의 무녀", "쿠마이의 시빌라"]
+kind = "human"
+era = 7
+home = "cumae"
+oneliner = "아폴론의 말을 전하는 쿠마이의 여자. 아이네이아스를 저승으로 이끌었다."
+body = """
+쿠마이 언덕의 아폴론 신전 옆 동굴에 살았다.
+아폴론이 몸에 들어오면 목소리가 달라지고, 앞일을 말했다.
+헬레노스는 그가 나뭇잎에 글을 써서 앞일을 알린다고 했다.
+아이네이아스에게 황금 가지를 꺾어 오게 하고, 함께 저승으로 내려갔다.
+이름은 데이포베라고도 한다.
+"""
+fun = "오비디우스에 따르면 아폴론에게 모래알 수만큼 살게 해 달라고 빌었다. 젊음을 함께 빌지 않아서 몸은 점점 늙어 갔다."
+sources = ["virgil.aeneid 3.441-3.452", "virgil.aeneid 6.9-6.155", "ovid.metamorphoses 14.101-14.153"]
+
+[[figure]]
+id = "latinus"
+name_ko = "라티누스"
+name_la = "Latinus"
+aka = ["라티누스 왕"]
+kind = "human"
+era = 7
+parents = ["faunus"]
+spouses = ["amata"]
+oneliner = "라티움의 늙은 왕. 딸을 낯선 손님에게 주라는 말을 들었다."
+body = """
+라티움 사람들을 오래 조용히 다스렸다.
+아들들은 일찍 죽고 딸 라비니아만 남았다.
+아버지 파우누스가 딸을 이 땅 사람에게 주지 말라고 알려 주었다.
+그래서 트로이 사람들이 오자 아이네이아스를 사위로 맞으려 했다.
+투르누스와 사람들이 싸움을 원하자, 궁 안에 들어가 문을 닫았다.
+"""
+fun = "라티움 사람들을 '라틴 사람'이라 부른다. 라틴어라는 말이 여기서 왔다."
+sources = ["virgil.aeneid 7.45-7.106", "virgil.aeneid 7.192-7.285", "virgil.aeneid 7.572-7.600", "livy.rome 1.1-1.2"]
+note = "faunus 는 ROM 소유. 어머니 마리카(님프)는 이름만. 라티누스의 도시 라우렌툼은 정확한 위치를 몰라 place 로 만들지 않았다."
+
+[[figure]]
+id = "lavinia"
+name_ko = "라비니아"
+name_la = "Lavinia"
+kind = "human"
+era = 7
+parents = ["latinus", "amata"]
+spouses = ["aineias"]
+home = "lavinium"
+oneliner = "라티누스의 외동딸. 이 공주를 두고 싸움이 일어났다."
+body = """
+라티누스 왕의 하나 남은 자식이었다.
+제단 앞에 섰을 때 머리에 불이 붙었는데, 다치지 않았다.
+점쟁이는 그가 이름을 얻겠지만 큰 싸움도 함께 온다고 말했다.
+어머니는 투르누스를 사위로 원했고, 아버지는 아이네이아스를 골랐다.
+싸움이 끝난 뒤 아이네이아스와 결혼했고, 새 도시에 그 이름이 붙었다.
+"""
+sources = ["virgil.aeneid 7.52-7.80", "virgil.aeneid 12.64-12.69", "livy.rome 1.1"]
+note = "aineias 는 TRO 소유. TRO 의 aineias.spouses 에 lavinia 를 넣어 달라고 요청한다."
+
+[[figure]]
+id = "turnus"
+name_ko = "투르누스"
+name_la = "Turnus"
+aka = ["루툴리의 투르누스"]
+kind = "hero"
+era = 7
+home = "ardea"
+oneliner = "루툴리 사람들의 젊은 왕. 라비니아를 빼앗겼다고 여겨 싸웠다."
+body = """
+아르데아의 왕이었고, 라비니아와 결혼할 사이였다.
+라티누스가 마음을 바꾸자 헤라가 보낸 복수의 여신이 그를 흔들었다.
+군대를 모아 트로이 사람들과 싸웠고, 어린 팔라스를 죽였다.
+마지막에 아이네이아스와 단둘이 싸웠다.
+아이네이아스가 팔라스의 허리띠를 보고 그를 죽였다.
+"""
+fun = "그의 여동생 유투르나는 님프였다. 마지막 싸움에서 오빠의 마차를 몰며 아이네이아스를 피하게 했다."
+sources = ["virgil.aeneid 7.55-7.58", "virgil.aeneid 7.406-7.474", "virgil.aeneid 10.439-10.509", "virgil.aeneid 12.468-12.485", "virgil.aeneid 12.887-12.952", "livy.rome 1.2"]
+note = "아버지 다우누스, 여동생 유투르나는 이름만."
+
+[[figure]]
+id = "evandros"
+name_ko = "에반드로스"
+name_grc = "Euandros"
+name_la = "Evander"
+aka = ["에반데르", "에우안드로스", "에반더"]
+kind = "human"
+era = 7
+parents = ["hermes"]
+home = "rome"
+oneliner = "그리스에서 건너와 로마가 될 언덕에 마을을 세운 늙은 왕."
+body = """
+그리스 아르카디아에서 쫓겨나 이탈리아로 왔다.
+테베레 강가 언덕에 팔란테움이라는 작은 마을을 세웠다.
+어릴 때 안키세스를 만난 일을 기억하고 있어 아이네이아스를 반겼다.
+아들 팔라스와 말 탄 병사들을 아이네이아스에게 딸려 보냈다.
+어머니 카르멘타는 앞일을 아는 님프였다.
+"""
+fun = "그 작은 마을 자리가 뒷날 로마의 팔라티누스 언덕이 된다. 리비우스는 팔란테움에서 팔라티움이라는 이름이 왔다고 썼다."
+sources = ["virgil.aeneid 8.51-8.54", "virgil.aeneid 8.102-8.174", "virgil.aeneid 8.333-8.341", "virgil.aeneid 8.454-8.519", "virgil.aeneid 8.558-8.584", "livy.rome 1.5"]
+note = "rome 은 ROM 소유. 어머니 카르멘타(님프)는 이름만."
+
+[[figure]]
+id = "pallas"
+name_ko = "팔라스"
+name_grc = "Pallas"
+name_la = "Pallas"
+aka = ["팔라스 왕자", "에반드로스의 아들 팔라스"]
+kind = "hero"
+era = 7
+parents = ["evandros"]
+home = "rome"
+oneliner = "에반드로스의 젊은 아들. 첫 싸움에서 투르누스에게 죽었다."
+body = """
+낯선 배가 강을 올라오자 혼자 창을 들고 나가 누구냐고 물었다.
+아버지가 그를 아이네이아스에게 맡겨 싸움을 배우게 했다.
+첫 싸움에서 용감하게 싸웠지만 투르누스가 그를 죽였다.
+투르누스는 그의 황금 허리띠를 빼앗아 찼다.
+그 허리띠 때문에 마지막에 아이네이아스가 투르누스를 살려 주지 않았다.
+"""
+fun = "아테나의 다른 이름도 팔라스지만, 이 팔라스는 사람이다. 집안 조상의 이름을 물려받았다."
+sources = ["virgil.aeneid 8.102-8.125", "virgil.aeneid 8.514-8.519", "virgil.aeneid 10.439-10.509", "virgil.aeneid 12.940-12.952"]
+
+[[figure]]
+id = "kamilla"
+name_ko = "카밀라"
+name_la = "Camilla"
+aka = ["카밀라 여전사", "볼스키의 카밀라"]
+kind = "hero"
+era = 7
+oneliner = "볼스키 사람들을 이끈 여전사. 아르테미스가 아꼈다."
+body = """
+아기였을 때 아버지 메타부스가 창에 묶어 강 너머로 던져 살렸다.
+숲에서 자라며 활과 창을 먼저 배웠고, 아르테미스를 따랐다.
+투르누스 편에서 말 탄 병사들을 이끌고 싸웠다.
+황금 갑옷을 입은 적을 쫓다가 아룬스의 창에 맞아 죽었다.
+아르테미스의 님프 오피스가 아룬스를 화살로 쏘아 갚았다.
+"""
+fun = "베르길리우스는 카밀라가 곡식 위를 달려도 이삭이 꺾이지 않았다고 썼다."
+sources = ["virgil.aeneid 7.803-7.817", "virgil.aeneid 11.532-11.596", "virgil.aeneid 11.648-11.867"]
+note = "메타부스·아룬스·오피스·클로레우스는 이름만."
+
+[[figure]]
+id = "akhaimenides"
+name_ko = "아카이메니데스"
+name_grc = "Achaimenides"
+name_la = "Achaemenides"
+aka = ["아케메니데스", "아카이메니데스"]
+kind = "human"
+era = 7
+oneliner = "키클롭스의 땅에 버려졌다가 트로이 사람들이 구해 준 그리스 사람."
+body = """
+오디세우스의 부하였다.
+동료들이 폴리페모스의 굴에서 달아날 때 그만 남겨졌다.
+석 달 동안 숲에 숨어 열매와 풀뿌리를 먹고 살았다.
+트로이 배를 보고 달려 나와 적이라도 좋으니 데려가 달라고 빌었다.
+아이네이아스가 그를 배에 태웠고, 그는 뱃길을 알려 주었다.
+"""
+fun = "오비디우스에서는 뒷날 이탈리아에서 옛 동료 마카레우스를 다시 만난다."
+sources = ["virgil.aeneid 3.588-3.691", "ovid.metamorphoses 14.154-14.222"]
+note = "odysseus·polyphemos 는 TRO·ODY 소유. 마카레우스는 이름만."
+
+[[figure]]
+id = "dido"
+name_ko = "디도"
+name_la = "Dido"
+aka = ["엘리사", "엘리사 여왕", "디도 여왕", "카르타고의 여왕"]
+kind = "human"
+era = 7
+home = "carthage"
+oneliner = "바다를 건너와 카르타고를 세운 여왕. 아이네이아스를 사랑했다."
+body = """
+동쪽 도시 티로스의 공주였다.
+오빠 피그말리온이 남편을 죽이자, 사람들을 모아 배로 달아났다.
+아프리카 바닷가에 닿아 새 도시 카르타고를 세웠다.
+폭풍에 밀려온 아이네이아스를 맞아들였고, 그를 사랑하게 되었다.
+아이네이아스가 떠나자 스스로 목숨을 끊었다.
+"""
+fun = "죽기 전에 자기 자손이 트로이의 자손에게 복수하기를 빌었다. 카르타고는 뒷날 로마와 세 번 큰 전쟁을 한다."
+sensitivity = "soften"
+sources = ["virgil.aeneid 1.335-1.368", "virgil.aeneid 4.1-4.705", "ovid.metamorphoses 14.75-14.81"]
+note = "다른 이름 엘리사는 아이네이스 4.335, 4.610 등. 남편 시카이오스, 오빠 피그말리온은 이름만."
+
+[[figure]]
+id = "anna"
+name_ko = "안나"
+name_la = "Anna"
+aka = ["디도의 동생 안나"]
+kind = "human"
+era = 7
+home = "carthage"
+oneliner = "디도의 동생. 언니의 마음을 가장 먼저 들었다."
+body = """
+디도가 아이네이아스를 사랑하게 되었다고 처음 털어놓은 사람이다.
+언니에게 그 사랑을 막지 말라고 했다.
+아이네이아스가 떠나려 할 때 언니를 위해 붙잡아 보았지만 소용없었다.
+디도가 죽었을 때 가장 먼저 달려와 언니를 안았다.
+"""
+sources = ["virgil.aeneid 4.9-4.53", "virgil.aeneid 4.416-4.449", "virgil.aeneid 4.672-4.692"]
+
+[[figure]]
+id = "amata"
+name_ko = "아마타"
+name_la = "Amata"
+kind = "human"
+era = 7
+spouses = ["latinus"]
+oneliner = "라티누스의 왕비. 딸을 투르누스에게 주고 싶었다."
+body = """
+라비니아의 어머니다.
+사위로 투르누스를 원했고, 낯선 트로이 사람은 싫어했다.
+헤라가 보낸 복수의 여신이 그 마음에 불을 붙였다.
+딸을 숲으로 데려가 숨기고 여자들을 부추겨 싸움을 원하게 했다.
+투르누스가 죽었다고 잘못 알고 스스로 목숨을 끊었다.
+"""
+sensitivity = "soften"
+sources = ["virgil.aeneid 7.56-7.57", "virgil.aeneid 7.341-7.405", "virgil.aeneid 12.593-12.613"]
+
+[[figure]]
+id = "mezentius"
+name_ko = "메젠티우스"
+name_la = "Mezentius"
+aka = ["메젠티우스 왕", "에트루리아의 메젠티우스"]
+kind = "human"
+era = 7
+oneliner = "신을 무시한 에트루리아의 왕. 투르누스 편에서 싸웠다."
+body = """
+에트루리아 사람들의 왕이었는데, 너무 사납게 다스려 쫓겨났다.
+투르누스에게로 가서 트로이 사람들과 싸웠다.
+자기가 믿는 신은 오른팔과 창뿐이라고 말했다.
+아이네이아스가 그의 아들 라우수스를 죽였고, 그 다음에 그를 죽였다.
+"""
+fun = "리비우스는 조금 다르게 전한다. 메젠티우스와의 싸움이 아이네이아스의 마지막 일이었다고 한다."
+sources = ["virgil.aeneid 8.478-8.495", "virgil.aeneid 10.689-10.908", "livy.rome 1.2"]
+note = "아들 라우수스는 이름만. 메젠티우스가 스스로 목을 찌르는 마지막(10.907-908)은 '죽였다'로 줄였다."
+
+[[figure]]
+id = "misenos"
+name_ko = "미세노스"
+name_grc = "Misenos"
+name_la = "Misenus"
+aka = ["미세누스"]
+kind = "human"
+era = 7
+oneliner = "나팔을 불어 싸움을 알리던 사람. 쿠마이 바닷가에서 죽었다."
+body = """
+헥토르의 부하였다가 아이네이아스를 따랐다.
+나팔 소리로 병사들을 불러 모으는 일을 했다.
+스트로파데스에서 하르피이아이와 싸울 때 그가 나팔을 불었다.
+쿠마이 바닷가에서 바다 신들에게 나팔 솜씨를 겨루자고 하다가 죽었다.
+아이네이아스는 그를 묻고 무덤 위에 나팔과 노를 세웠다.
+"""
+fun = "그가 묻힌 곶은 지금도 미세노 곶이라고 불린다. 아버지는 바람의 왕 아이올로스라고 한다."
+sources = ["virgil.aeneid 3.239-3.240", "virgil.aeneid 6.162-6.235", "ovid.metamorphoses 14.103"]
+note = "트리톤이 물에 빠뜨려 죽였다(6.171-174). 본문은 '죽었다'까지."
+
+[[figure]]
+id = "nisos"
+name_ko = "니소스"
+name_grc = "Nisos"
+name_la = "Nisus"
+aka = ["니수스"]
+kind = "human"
+era = 7
+oneliner = "밤에 적진을 뚫고 아이네이아스를 부르러 간 트로이 병사."
+body = """
+트로이 진지의 문을 지키던 병사였다.
+어린 친구 에우리알로스와 늘 함께 다녔다.
+아이네이아스가 없을 때 밤에 적진을 지나 그를 불러오겠다고 나섰다.
+친구가 적에게 잡히자 숨지 않고 뛰어나가 함께 죽었다.
+"""
+sources = ["virgil.aeneid 9.176-9.449"]
+
+[[figure]]
+id = "euryalos"
+name_ko = "에우리알로스"
+name_grc = "Euryalos"
+name_la = "Euryalus"
+aka = ["에우리알루스"]
+kind = "human"
+era = 7
+oneliner = "니소스의 어린 친구. 함께 밤길을 나섰다가 죽었다."
+body = """
+트로이 군대에서 가장 어리고 얼굴이 고운 병사였다.
+니소스가 혼자 가려 하자 자기도 가겠다고 우겼다.
+어머니가 걱정할까 봐 떠나는 것을 알리지 말라고 부탁했다.
+적에게서 빼앗아 쓴 투구가 달빛에 번쩍여 잡혔다.
+"""
+sources = ["virgil.aeneid 9.176-9.449"]

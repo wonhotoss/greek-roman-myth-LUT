@@ -1,0 +1,650 @@
+# era 4~5 — 아테네와 크레타. 에우로페·미노스·미노타우로스·테세우스·다이달로스·벨레로폰·시시포스·익시온.
+# 뼈대는 아폴로도로스 3.1, 3.15~3.16, 에피토메 E.1, 2.3, 1.9.3. 살은 오비디우스·호메로스·파우사니아스.
+# 다른 에이전트 소유 id 를 참조만 한다: echidna·kentauroi·herakles·tiryns(HER), medeia(THE), pelops(TRO).
+
+# ---------- 크레타 ----------
+
+[[figure]]
+id = "europa"
+name_ko = "에우로페"
+name_grc = "Europe"
+name_la = "Europa"
+aka = ["에우로파", "유로파"]
+kind = "human"
+era = 4
+home = "crete"
+oneliner = "황소로 변한 제우스가 바다 건너 크레타로 데려간 공주."
+body = """
+페니키아 왕 아게노르의 딸이고, 카드모스의 누이다.
+바닷가에서 놀다가 눈처럼 흰 황소를 보았다.
+황소가 얌전해서 등에 올라탔는데, 그것이 제우스였다.
+황소는 바다를 건너 크레타까지 헤엄쳤다.
+에우로페는 그곳에서 미노스를 낳았다.
+"""
+fun = "아버지는 아들들에게 누이를 찾을 때까지 돌아오지 말라고 했다. 아들들은 못 찾았고, 저마다 다른 땅에 자리 잡았다."
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 6권 4장 「슬픈 운명의 미노타우로스」. 부모 아게노르·텔레파사는 등록부에 없어 이름만 부른다."
+sources = ["apollodorus.library 3.1.1", "ovid.metamorphoses 2.833-2.875", "homer.iliad 14.321-14.322"]
+
+[[figure]]
+id = "minos"
+name_ko = "미노스"
+name_grc = "Minos"
+aka = ["미노스 왕"]
+kind = "human"
+era = 4
+parents = ["zeus", "europa"]
+spouses = ["pasiphae"]
+home = "knossos"
+oneliner = "크레타의 왕. 포세이돈의 황소와 미로의 주인이다."
+body = """
+크레타의 왕이 되고 싶어 신들이 자기를 뽑았다고 말했다.
+포세이돈에게 바다에서 황소를 보내 달라고 빌어 그것을 증명했다.
+그 황소를 바치겠다는 약속을 어겨 포세이돈이 화를 냈다.
+법을 만들고 바다를 다스렸으며, 아테네에 조공을 물렸다.
+다이달로스를 쫓아 시켈리아까지 갔다가 그곳에서 죽었다.
+"""
+fun = "미노스는 죽은 뒤 저승에서 죽은 사람들을 재판하는 판관이 되었다. 오디세우스가 저승에서 그를 보았다."
+note = "참고: 처음 읽는 그리스 로마 신화 6권 4장 「슬픈 운명의 미노타우로스」"
+sources = ["apollodorus.library 3.1.2-3.1.4", "apollodorus.library 3.15.7-3.15.8", "apollodorus.library E.1.12-E.1.15", "homer.odyssey 11.568-11.571", "homer.odyssey 19.178-19.179"]
+
+[[figure]]
+id = "pasiphae"
+name_ko = "파시파에"
+name_grc = "Pasiphae"
+aka = ["파시파이"]
+kind = "human"
+era = 4
+parents = ["helios"]
+spouses = ["minos"]
+home = "knossos"
+oneliner = "미노스의 아내. 머리가 황소인 아이를 낳았다."
+body = """
+해의 신 헬리오스의 딸이다.
+포세이돈은 미노스에게 벌을 주려고 파시파에의 마음을 바꾸었다.
+파시파에는 바다에서 온 황소를 사랑하게 되었다.
+파시파에가 낳은 아이는 머리가 황소였다.
+아이의 이름은 아스테리오스, 사람들은 미노타우로스라고 불렀다.
+"""
+sensitivity = "soften"
+note = "원리(나무 암소)는 쓰지 않는다. 어머니 페르세이스는 등록부에 없어 parents 에 헬리오스만."
+sources = ["apollodorus.library 3.1.2-3.1.4"]
+
+[[figure]]
+id = "ariadne"
+name_ko = "아리아드네"
+name_grc = "Ariadne"
+aka = ["아리아드나", "아리아드네의 실"]
+kind = "human"
+era = 5
+parents = ["minos", "pasiphae"]
+spouses = ["dionysos"]
+home = "knossos"
+oneliner = "테세우스에게 실을 준 크레타의 공주."
+body = """
+크레타에 온 테세우스를 보고 도와주기로 마음먹었다.
+아테네로 데려가 아내로 삼겠다는 약속을 받았다.
+다이달로스에게 미로를 빠져나오는 방법을 물었다.
+테세우스에게 실뭉치를 주어 길을 잃지 않게 했다.
+함께 떠났지만 낙소스 섬에서 디오니소스가 데려갔다.
+"""
+fun = "디오니소스가 아리아드네의 관을 하늘에 던져 별자리가 되었다. 북쪽왕관자리다."
+note = "참고: 처음 읽는 그리스 로마 신화 9권 4장 「괴물 미노타우로스」"
+sources = ["apollodorus.library E.1.8-E.1.9", "ovid.metamorphoses 8.169-8.182", "homer.odyssey 11.321-11.325"]
+
+[[figure]]
+id = "phaidra"
+name_ko = "파이드라"
+name_grc = "Phaidra"
+name_la = "Phaedra"
+aka = ["페드라", "파이드라 왕비"]
+kind = "human"
+era = 5
+parents = ["minos", "pasiphae"]
+spouses = ["theseus"]
+home = "athens"
+oneliner = "테세우스의 아내. 거짓말로 히폴리토스를 죽게 했다."
+body = """
+아리아드네의 동생이다.
+테세우스와 결혼해 아들 둘을 낳았다.
+테세우스의 아들 히폴리토스를 미워하게 되어 거짓말을 했다.
+테세우스는 그 말을 믿고 아들을 저주했다.
+"""
+sensitivity = "soften"
+note = "E.1.18 의 사랑 고백·거짓 고발·자살은 쓰지 않는다. '거짓말을 했다' 까지."
+sources = ["apollodorus.library E.1.17-E.1.19"]
+
+[[figure]]
+id = "androgeos"
+name_ko = "안드로게오스"
+name_grc = "Androgeos"
+kind = "human"
+era = 5
+parents = ["minos", "pasiphae"]
+home = "knossos"
+oneliner = "아테네의 경기에서 모두 이기고 죽은 미노스의 아들."
+body = """
+아테네의 큰 잔치에서 열린 경기에 나가 모두 이겼다.
+아이게우스가 그를 마라톤의 황소와 싸우게 보냈다.
+안드로게오스는 황소에게 죽었다.
+미노스는 아들의 죽음을 갚으려고 아테네와 싸웠다.
+"""
+note = "이설: 테베의 경기에 가는 길에 시샘한 선수들이 죽였다(3.15.7). figure 에는 variants 필드가 없어 note 에 둔다."
+sources = ["apollodorus.library 3.15.7", "pausanias.greece 1.27.10"]
+
+[[figure]]
+id = "minotauros"
+name_ko = "미노타우로스"
+name_grc = "Minotauros"
+aka = ["미노타우루스", "아스테리오스", "미노스의 황소"]
+kind = "monster"
+era = 5
+parents = ["pasiphae"]
+home = "knossos"
+oneliner = "머리는 황소, 몸은 사람인 괴물. 미로 속에 갇혀 살았다."
+body = """
+파시파에가 낳은 아이다. 머리는 황소, 나머지는 사람이었다.
+미노스는 신의 말대로 다이달로스가 지은 미로에 가두었다.
+아테네에서 보낸 젊은이 열네 명이 그 먹이가 되었다.
+세 번째 조공 때 테세우스가 미로 끝에서 미노타우로스를 이겼다.
+"""
+fun = "미노타우로스는 '미노스의 황소'라는 뜻이다. 본래 이름은 아스테리오스였다."
+sensitivity = "soften"
+note = "parents 는 파시파에만. 아버지(포세이돈의 황소)는 원리를 쓰지 않으므로 계보에도 넣지 않는다. 참고: 6권 4장 「미로 속 미노타우로스」"
+sources = ["apollodorus.library 3.1.4", "apollodorus.library 3.15.8", "apollodorus.library E.1.7-E.1.9", "ovid.metamorphoses 8.152-8.176"]
+
+[[figure]]
+id = "cretan-bull"
+name_ko = "크레타의 황소"
+name_grc = "Tauros Kretaios"
+aka = ["포세이돈의 황소", "마라톤의 황소"]
+kind = "monster"
+era = 4
+home = "crete"
+oneliner = "포세이돈이 바다에서 보낸 황소. 뒤에 마라톤 들판을 휩쓴다."
+body = """
+미노스가 빌자 포세이돈이 바다 깊은 곳에서 올려 보냈다.
+미노스는 이 황소가 아까워 다른 소를 대신 바쳤다.
+포세이돈은 화가 나 황소를 사납게 만들었다.
+뒤에 헤라클레스가 이 황소를 잡아 그리스 땅으로 끌어갔다.
+풀려난 황소는 마라톤까지 가서 사람들을 해쳤고, 테세우스가 잡았다.
+"""
+note = "이설: 아쿠실라오스는 이 황소가 에우로페를 태우고 바다를 건넌 그 황소라고 했다(2.5.7). 헤라클레스의 일곱째 과업은 HER 가 쓴다."
+sources = ["apollodorus.library 3.1.3-3.1.4", "apollodorus.library 2.5.7", "apollodorus.library E.1.5-E.1.6", "pausanias.greece 1.27.9-1.27.10"]
+
+[[figure]]
+id = "daidalos"
+name_ko = "다이달로스"
+name_grc = "Daidalos"
+name_la = "Daedalus"
+aka = ["다이달루스", "데달로스", "다에달루스"]
+kind = "human"
+era = 5
+home = "athens"
+oneliner = "미로와 날개를 만든 아테네의 발명가."
+body = """
+무엇이든 만들 줄 아는 솜씨 좋은 사람이었다.
+아테네에서 조카를 죽게 한 죄로 재판을 받고 크레타로 달아났다.
+미노스를 위해 미노타우로스를 가둘 미로를 지었다.
+아리아드네에게 미로를 빠져나오는 방법을 알려 주었다.
+미노스가 미로에 가두자 날개를 만들어 아들과 함께 날아갔다.
+"""
+fun = "다이달로스는 아리아드네를 위해 춤추는 마당도 만들었다. 호메로스가 그렇게 적었다."
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 10권 4장 「천재 발명가 다이달로스」. 조카(탈로스/페르딕스)는 THE 의 talos(청동 거인)와 다른 인물이라 이름을 부르지 않는다."
+sources = ["apollodorus.library 3.1.4", "apollodorus.library 3.15.8", "apollodorus.library E.1.8-E.1.9", "apollodorus.library E.1.12-E.1.15", "ovid.metamorphoses 8.159-8.168", "ovid.metamorphoses 8.183-8.235", "pausanias.greece 7.4.5-7.4.6", "homer.iliad 18.590-18.592"]
+
+[[figure]]
+id = "ikaros"
+name_ko = "이카로스"
+name_grc = "Ikaros"
+name_la = "Icarus"
+aka = ["이카루스"]
+kind = "human"
+era = 5
+parents = ["daidalos"]
+home = "knossos"
+oneliner = "밀랍 날개로 너무 높이 날아 바다에 떨어진 소년."
+body = """
+아버지 다이달로스와 함께 미로에 갇혔다.
+아버지가 새 깃털을 밀랍으로 붙여 날개를 만들었다.
+너무 높이도, 너무 낮게도 날지 말라는 말을 들었다.
+날다가 신이 나서 해를 향해 자꾸 높이 올라갔다.
+밀랍이 녹아 날개가 떨어지고 이카로스는 바다에 빠졌다.
+"""
+fun = "이카로스가 떨어진 바다를 지금도 이카리아 해라고 부른다. 그 옆 섬은 이카리아 섬이다."
+note = "참고: 처음 읽는 그리스 로마 신화 10권 4장 「다이달로스와 이카로스」. 어머니 나우크라테는 등록부에 없어 parents 에 다이달로스만."
+sources = ["apollodorus.library E.1.12-E.1.13", "ovid.metamorphoses 8.183-8.235", "pausanias.greece 9.11.4-9.11.5"]
+
+[[figure]]
+id = "kokalos"
+name_ko = "코칼로스"
+name_grc = "Kokalos"
+aka = ["코칼루스"]
+kind = "human"
+era = 5
+home = "sikelia"
+oneliner = "다이달로스를 숨겨 준 시켈리아의 왕."
+body = """
+시켈리아 카미코스의 왕이다.
+크레타에서 날아온 다이달로스를 궁에 숨겨 주었다.
+미노스가 고둥에 실을 꿰는 사람을 찾자 다이달로스에게 시켰다.
+미노스가 다이달로스를 내놓으라 하자 잔치를 열어 맞았다.
+그의 딸들이 목욕하던 미노스를 죽였다.
+"""
+sensitivity = "soften"
+sources = ["apollodorus.library E.1.14-E.1.15", "pausanias.greece 7.4.6"]
+
+# ---------- 아테네 ----------
+
+[[figure]]
+id = "kekrops"
+name_ko = "케크롭스"
+name_grc = "Kekrops"
+aka = ["케크로프스"]
+kind = "human"
+era = 2
+home = "athens"
+oneliner = "아테네의 첫 왕. 몸의 반은 사람, 반은 뱀이었다."
+body = """
+땅에서 태어났다. 위는 사람이고 아래는 뱀이었다.
+아티카를 자기 이름을 따 케크로피아라고 불렀다.
+아테나가 올리브 나무를 심을 때 증인이 되어 주었다.
+그 증언으로 신들은 도시를 아테나의 것으로 정했다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 6권 3장 「케크롭스」. 기존 사건 athens-contest 의 cast 에 kekrops(등장) 를 넣어 주기를 요청한다 — 지금은 사건이 없는 인물이다."
+sources = ["apollodorus.library 3.14.1"]
+
+[[figure]]
+id = "aigeus"
+name_ko = "아이게우스"
+name_grc = "Aigeus"
+name_la = "Aegeus"
+aka = ["에게우스", "아이게우스 왕"]
+kind = "human"
+era = 5
+spouses = ["medeia"]
+home = "athens"
+oneliner = "테세우스의 아버지. 검은 돛을 보고 죽은 아테네의 왕."
+body = """
+아들이 없어 델포이에 가서 물었다.
+돌아오는 길에 트로이젠에서 아이트라를 만났다.
+바위 밑에 검과 신발을 숨겨 두고 아테네로 돌아갔다.
+자란 아들이 찾아왔을 때 검을 보고서야 알아보았다.
+크레타에서 돌아오는 배의 검은 돛을 보고 아들이 죽은 줄 알았다.
+"""
+sensitivity = "soften"
+note = "아버지 판디온은 등록부에 없어 parents 비움. spouses 의 medeia 는 THE 소유(E.1.5). 참고: 9권 4장 「메데이아의 계략」"
+sources = ["apollodorus.library 3.15.6-3.15.7", "apollodorus.library E.1.5-E.1.10", "pausanias.greece 1.22.5"]
+
+[[figure]]
+id = "pittheus"
+name_ko = "피테우스"
+name_grc = "Pittheus"
+kind = "human"
+era = 5
+parents = ["pelops"]
+home = "troizen"
+oneliner = "트로이젠을 세운 왕. 테세우스의 외할아버지다."
+body = """
+두 마을을 하나로 합쳐 형의 이름을 따 트로이젠이라 했다.
+아이게우스가 받은 신의 말을 알아듣고 딸 아이트라를 만나게 했다.
+손자 테세우스를 트로이젠에서 키웠다.
+사람들은 그가 말하는 법을 가르쳤다고 한다.
+"""
+sensitivity = "soften"
+note = "pelops 는 TRO 소유(era 4). 3.15.7 의 '취하게 해서' 는 쓰지 않는다."
+sources = ["apollodorus.library 3.15.7", "pausanias.greece 2.30.8-2.30.9", "pausanias.greece 2.31.3"]
+
+[[figure]]
+id = "aithra"
+name_ko = "아이트라"
+name_grc = "Aithra"
+name_la = "Aethra"
+aka = ["에트라"]
+kind = "human"
+era = 5
+parents = ["pittheus"]
+home = "troizen"
+oneliner = "테세우스의 어머니. 트로이젠의 공주다."
+body = """
+트로이젠 왕 피테우스의 딸이다.
+아이게우스가 남긴 아들을 트로이젠에서 키웠다.
+누구의 아들인지는 말하지 않았다.
+아들이 자라 바위를 밀 수 있게 되자 검과 신발을 찾게 했다.
+"""
+sources = ["apollodorus.library 3.15.7", "apollodorus.library 3.16.1", "pausanias.greece 1.27.7-1.27.8"]
+
+[[figure]]
+id = "theseus"
+name_ko = "테세우스"
+name_grc = "Theseus"
+name_la = "Theseus"
+aka = ["테제우스", "테세우스 왕"]
+kind = "hero"
+era = 5
+parents = ["aigeus", "aithra"]
+spouses = ["phaidra"]
+home = "athens"
+oneliner = "미노타우로스를 이기고 아테네의 왕이 된 영웅."
+body = """
+트로이젠에서 자라 바위를 밀고 아버지의 검을 꺼냈다.
+아테네로 가는 길에서 나쁜 짓을 하는 자들을 모두 없앴다.
+크레타의 미로에 들어가 미노타우로스를 맨손으로 이겼다.
+아테네의 왕이 되었고, 친구 페이리토오스와 함께 저승까지 갔다.
+"""
+fun = "미노스가 반지를 바다에 던졌다. 테세우스가 뛰어들어 반지와 황금 관을 가지고 나왔다고 한다."
+note = "참고: 처음 읽는 그리스 로마 신화 9권 4장 「크레타를 구한 테세우스」"
+sources = ["apollodorus.library 3.16.1-3.16.2", "apollodorus.library E.1.1-E.1.24", "pausanias.greece 1.17.2-1.17.3", "pausanias.greece 1.27.7-1.27.10"]
+
+[[figure.parents_variant]]
+source = "apollodorus.library 3.15.7"
+parents = ["poseidon", "aithra"]
+text = "같은 밤에 포세이돈도 아이트라를 찾았다고 한다. 그래서 테세우스를 포세이돈의 아들이라고도 부른다."
+
+[[figure]]
+id = "hippolytos"
+name_ko = "히폴리토스"
+name_grc = "Hippolytos"
+name_la = "Hippolytus"
+aka = ["히폴리투스"]
+kind = "hero"
+era = 5
+parents = ["theseus"]
+home = "troizen"
+oneliner = "테세우스의 아들. 새어머니의 거짓말 때문에 죽었다."
+body = """
+어머니는 아마조네스의 여전사 안티오페였다.
+말과 마차를 잘 다루었다.
+새어머니 파이드라가 히폴리토스에 대해 거짓말을 했다.
+아버지가 그 말을 믿고 포세이돈에게 아들을 벌해 달라고 빌었다.
+바닷가를 달리던 마차의 말들이 놀라 히폴리토스는 죽었다.
+"""
+fun = "트로이젠 사람들은 히폴리토스를 위해 신전을 세우고 해마다 제사를 지냈다."
+sensitivity = "soften"
+note = "어머니 안티오페(시모니데스는 히폴리테)는 HER 의 hippolyte 와 겹칠 수 있어 parents 에 넣지 않고 이름만 부른다."
+sources = ["apollodorus.library E.1.16-E.1.19", "pausanias.greece 2.32.1-2.32.4"]
+
+[[figure]]
+id = "peirithoos"
+name_ko = "페이리토오스"
+name_grc = "Peirithoos"
+name_la = "Pirithous"
+aka = ["피리토오스", "페이리투스", "피리투스"]
+kind = "hero"
+era = 5
+parents = ["ixion"]
+home = "larissa"
+oneliner = "테세우스의 가장 친한 친구. 저승에 갇혀 나오지 못했다."
+body = """
+테살리아의 라리사에서 온 영웅이다.
+결혼식에 켄타우로스들을 손님으로 불렀다가 큰 싸움이 났다.
+테세우스와 둘이 제우스의 딸을 아내로 삼자고 약속했다.
+페르세포네를 데려오려고 테세우스와 저승에 내려갔다.
+하데스가 앉힌 의자에 붙어 영원히 저승에 남았다.
+"""
+sources = ["apollodorus.library 1.8.2", "apollodorus.library E.1.21-E.1.24", "ovid.metamorphoses 12.210-12.535", "homer.odyssey 11.631"]
+
+[[figure.parents_variant]]
+source = "homer.iliad 14.317-14.318"
+parents = ["zeus"]
+text = "호메로스는 페이리토오스를 제우스와 익시온의 아내 디아의 아들이라고 한다."
+
+[[figure]]
+id = "ixion"
+name_ko = "익시온"
+name_grc = "Ixion"
+aka = ["익시온 왕"]
+kind = "human"
+era = 4
+home = "larissa"
+oneliner = "헤라를 탐내다가 영원히 돌아가는 바퀴에 묶인 왕."
+body = """
+제우스의 아내 헤라를 아내로 삼으려 했다.
+헤라가 이를 제우스에게 알렸다.
+제우스는 구름으로 헤라와 똑같은 모습을 만들어 익시온을 시험했다.
+익시온이 헤라를 얻었다고 자랑하자 제우스가 바퀴에 묶었다.
+그 바퀴는 바람을 타고 하늘을 끝없이 돌아간다.
+"""
+fun = "그 구름이 낳은 아이가 켄타우로스라고 아폴로도로스는 적었다. 켄타우로스들이 익시온의 아들 페이리토오스의 친척인 까닭이다."
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 4권 3장 「불타는 수레바퀴에 묶인 익시온」. 코퍼스의 원전(아폴로도로스·오비디우스)은 바퀴가 '불탄다'고 하지 않아 '불타는' 을 쓰지 않았다."
+sources = ["apollodorus.library E.1.20", "ovid.metamorphoses 4.461-4.463", "ovid.metamorphoses 10.41-10.44", "homer.iliad 14.317-14.318"]
+
+# ---------- 테세우스의 길에 나온 악당들 ----------
+
+[[figure]]
+id = "periphetes"
+name_ko = "페리페테스"
+name_grc = "Periphetes"
+aka = ["코리네테스", "몽둥이잡이"]
+kind = "human"
+era = 5
+parents = ["hephaistos"]
+oneliner = "쇠몽둥이로 길 가는 사람을 해친 에피다우로스의 악당."
+body = """
+헤파이스토스의 아들이다. 다리가 약해 쇠몽둥이를 들고 다녔다.
+에피다우로스 길목에서 그 몽둥이로 지나가는 사람들을 해쳤다.
+테세우스가 몽둥이를 빼앗아 그를 없앴다.
+그 뒤로 테세우스가 그 몽둥이를 들고 다녔다.
+"""
+note = "에피다우로스는 장소로 만들지 않았다(내 이야기에만 한 번). 어머니 안티클레이아는 등록부에 없다."
+sources = ["apollodorus.library 3.16.1", "pausanias.greece 2.1.4", "ovid.metamorphoses 7.436-7.437"]
+
+[[figure]]
+id = "sinis"
+name_ko = "시니스"
+name_grc = "Sinis"
+aka = ["피티오캄프테스", "소나무 굽히는 자"]
+kind = "human"
+era = 5
+home = "corinth"
+oneliner = "소나무를 구부려 사람을 해친 이스트모스의 악당."
+body = """
+코린토스의 이스트모스에 살았다.
+지나가는 사람에게 소나무를 구부리게 시켰다.
+힘이 모자라 놓치면 나무가 튕겨 올라 사람이 죽었다.
+테세우스가 같은 방법으로 시니스를 없앴다.
+"""
+sources = ["apollodorus.library 3.16.2", "pausanias.greece 2.1.3-2.1.4", "ovid.metamorphoses 7.440-7.442"]
+
+[[figure]]
+id = "phaia"
+name_ko = "파이아"
+name_grc = "Phaia"
+aka = ["크롬미온의 멧돼지", "파이아의 멧돼지"]
+kind = "monster"
+era = 5
+home = "corinth"
+oneliner = "크롬미온에 살던 사나운 멧돼지."
+body = """
+코린토스 근처 크롬미온 마을에 살았다.
+기른 할머니의 이름을 따서 파이아라고 불렸다.
+에키드나와 티폰의 자식이라고 말하는 사람도 있다.
+테세우스가 아테네로 가는 길에 이 멧돼지를 없앴다.
+"""
+sources = ["apollodorus.library E.1.1", "pausanias.greece 2.1.3", "ovid.metamorphoses 7.435"]
+
+[[figure.parents_variant]]
+source = "apollodorus.library E.1.1"
+parents = ["typhon", "echidna"]
+text = "어떤 사람들은 이 멧돼지가 에키드나와 티폰의 자식이라고 한다."
+
+[[figure]]
+id = "skiron"
+name_ko = "스키론"
+name_grc = "Skiron"
+aka = ["스케이론", "스퀴론"]
+kind = "human"
+era = 5
+oneliner = "절벽에서 발을 씻게 하고 바다로 차 버린 악당."
+body = """
+메가라 바닷가의 높은 바위에 살았다.
+지나가는 사람에게 자기 발을 씻게 했다.
+발을 씻는 사이에 발로 차서 바다로 떨어뜨렸다.
+바다에는 큰 거북이가 기다리고 있었다.
+테세우스가 그의 발을 잡아 바다로 던졌다.
+"""
+fun = "그 바위는 지금도 스키론의 바위라고 불린다."
+note = "메가라는 장소로 만들지 않았다(내 이야기에만)."
+sources = ["apollodorus.library E.1.2-E.1.3", "ovid.metamorphoses 7.443-7.447"]
+
+[[figure]]
+id = "kerkyon"
+name_ko = "케르키온"
+name_grc = "Kerkyon"
+aka = ["케르퀴온"]
+kind = "human"
+era = 5
+home = "eleusis"
+oneliner = "씨름으로 사람을 죽인 엘레우시스의 악당."
+body = """
+엘레우시스에서 지나가는 사람에게 씨름을 하자고 했다.
+씨름을 하면서 상대를 죽였다.
+포세이돈의 아들이라고 말하는 사람도 있다.
+테세우스가 그를 높이 들어 땅에 내리쳤다.
+"""
+sources = ["apollodorus.library E.1.3", "ovid.metamorphoses 7.439", "pausanias.greece 1.14.3"]
+
+[[figure]]
+id = "prokrustes"
+name_ko = "프로크루스테스"
+name_grc = "Prokroustes"
+aka = ["다마스테스", "폴리페몬", "프로크루테스"]
+kind = "human"
+era = 5
+oneliner = "침대 크기에 사람을 맞춘 길가의 악당."
+body = """
+케피소스 강가 길 옆에 살며 지나가는 사람을 손님으로 맞았다.
+작은 침대와 큰 침대가 있었다.
+키 작은 사람은 큰 침대에 눕혀 두드려 늘렸다.
+키 큰 사람은 작은 침대에 눕혀 몸을 잘라 맞추었다.
+테세우스가 그를 없앴다.
+"""
+sensitivity = "soften"
+note = "아폴로도로스는 다마스테스, 오비디우스는 프로크루스테스라 부른다. 케피소스 강은 오비디우스."
+sources = ["apollodorus.library E.1.4", "ovid.metamorphoses 7.438"]
+
+# ---------- 코린토스와 리키아 ----------
+
+[[figure]]
+id = "sisyphos"
+name_ko = "시시포스"
+name_grc = "Sisyphos"
+name_la = "Sisyphus"
+aka = ["시지프스", "시지푸스", "시시푸스"]
+kind = "human"
+era = 4
+home = "corinth"
+oneliner = "꾀 많은 코린토스의 왕. 저승에서 바위를 굴린다."
+body = """
+코린토스를 세운 왕으로, 사람 가운데 가장 꾀가 많았다.
+제우스가 강의 신 아소포스의 딸 아이기나를 몰래 데려갔다.
+시시포스는 그것을 보았고, 아소포스에게 알려 주었다.
+그 값으로 코린토스 언덕에 샘을 얻었다.
+제우스는 그 벌로 저승에서 끝없이 바위를 밀어 올리게 했다.
+"""
+fun = "바위는 꼭대기에 닿기 직전에 늘 다시 굴러 내려온다. 오디세우스가 저승에서 그 모습을 보았다."
+note = "참고: 처음 읽는 그리스 로마 신화 4권 2장 「시시포스」. 죽음의 신을 묶은 이야기·아우톨리코스 이야기는 코퍼스에 없어 뺀다."
+sources = ["apollodorus.library 1.9.3", "homer.odyssey 11.593-11.600", "homer.iliad 6.153-6.154", "pausanias.greece 2.5.1"]
+
+[[figure]]
+id = "glaukos-korinthios"
+name_ko = "글라우코스"
+name_grc = "Glaukos"
+aka = ["코린토스의 글라우코스"]
+kind = "human"
+era = 4
+parents = ["sisyphos"]
+home = "corinth"
+oneliner = "시시포스의 아들, 벨레로폰의 아버지."
+body = """
+코린토스의 왕 시시포스의 아들이다.
+벨레로폰의 아버지다.
+이스트모스의 경기에서 말들에게 죽었다고 한다.
+그 뒤 말들을 놀라게 하는 귀신이 되었다고 사람들은 믿었다.
+"""
+note = "바다의 신 글라우코스, 트로이의 글라우코스와 구별하기 위해 id 에 -korinthios."
+sources = ["apollodorus.library 1.9.3", "homer.iliad 6.154-6.155", "pausanias.greece 6.20.19"]
+
+[[figure]]
+id = "bellerophon"
+name_ko = "벨레로폰"
+name_grc = "Bellerophon"
+name_la = "Bellerophon"
+aka = ["벨레로폰테스", "벨레로포스"]
+kind = "hero"
+era = 4
+parents = ["glaukos-korinthios"]
+home = "corinth"
+oneliner = "페가수스를 타고 키마이라를 이긴 코린토스의 영웅."
+body = """
+아테나가 길들인 페가수스를 벨레로폰에게 주었다.
+프로이토스의 아내가 거짓말을 하자 왕은 편지를 들려 리키아로 보냈다.
+편지에는 이 사람을 죽이라고 적혀 있었다.
+리키아의 왕이 시킨 일들을 모두 해내고 키마이라도 이겼다.
+뒤에 신들의 미움을 받아 홀로 들판을 떠돌았다.
+"""
+fun = "코린토스에는 페가수스의 발굽에서 물이 흘러나오는 샘이 있었다. 그 위에 벨레로폰의 조각상이 있었다."
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 9권 1장 「벨레로폰」. 페가수스에서 떨어지는 판본(핀다로스·히기누스 57)은 코퍼스에서 확인 불가 — 호메로스 판본만."
+sources = ["apollodorus.library 2.3.1-2.3.2", "homer.iliad 6.152-6.202", "pausanias.greece 2.4.1", "pausanias.greece 2.3.5", "hesiod.theogony 325"]
+
+[[figure]]
+id = "chimaira"
+name_ko = "키마이라"
+name_grc = "Chimaira"
+name_la = "Chimaera"
+aka = ["키메라", "키마에라"]
+kind = "monster"
+era = 4
+parents = ["typhon", "echidna"]
+home = "lykia"
+oneliner = "머리 셋 달린 불 뿜는 괴물. 사자, 염소, 뱀이 한 몸이다."
+body = """
+앞은 사자, 뒤는 뱀, 가운데 등에서는 염소 머리가 솟았다.
+염소 머리로 불을 뿜었다.
+리키아의 땅을 태우고 가축을 잡아갔다.
+여럿이 덤벼도 이기지 못했는데, 벨레로폰이 하늘에서 화살로 쏘았다.
+"""
+fun = "호메로스는 키마이라가 사람이 아니라 신들의 핏줄이라고 적었다."
+note = "참고: 처음 읽는 그리스 로마 신화 6권 3장 「페가수스」. echidna 는 HER 소유."
+sources = ["hesiod.theogony 319-325", "apollodorus.library 2.3.1-2.3.2", "homer.iliad 6.179-6.183"]
+
+[[figure]]
+id = "iobates"
+name_ko = "이오바테스"
+name_grc = "Iobates"
+kind = "human"
+era = 4
+home = "lykia"
+oneliner = "벨레로폰에게 키마이라를 시킨 리키아의 왕."
+body = """
+프로이토스의 장인이다.
+벨레로폰을 아흐레 동안 잘 대접했다.
+열흘째에 편지를 열어 보고, 벨레로폰을 키마이라에게 보냈다.
+그 뒤에도 솔리모이족, 아마조네스와 싸우게 했다.
+벨레로폰이 모두 이기자 편지를 보여 주고 딸과 나라를 주었다.
+"""
+sources = ["apollodorus.library 2.3.1-2.3.2", "homer.iliad 6.171-6.195"]
+
+[[figure]]
+id = "proitos"
+name_ko = "프로이토스"
+name_grc = "Proitos"
+name_la = "Proetus"
+aka = ["프로이토스 왕", "프로에투스"]
+kind = "human"
+era = 4
+home = "tiryns"
+oneliner = "아크리시오스의 쌍둥이 형제. 벨레로폰을 리키아로 보냈다."
+body = """
+아크리시오스와 어머니 배 속에서부터 싸운 쌍둥이다.
+아르고스에서 쫓겨나 리키아로 갔고, 그곳 왕의 딸과 결혼했다.
+돌아와 키클롭스가 성벽을 쌓은 티린스를 차지했다.
+벨레로폰이 찾아오자 받아 주었지만, 아내의 거짓말을 믿었다.
+벨레로폰을 죽이라는 편지를 써서 리키아의 장인에게 보냈다.
+"""
+sensitivity = "soften"
+note = "아버지 아바스는 등록부에 없어 parents 비움. tiryns 는 HER 소유. 아내 스테네보이아(호메로스는 안테이아)는 등록부에 없어 이름을 부르지 않는다."
+sources = ["apollodorus.library 2.2.1", "apollodorus.library 2.3.1", "homer.iliad 6.157-6.170"]

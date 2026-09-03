@@ -1,0 +1,156 @@
+# era 6 — 트로이 전쟁과 그 뿌리에 나오는 곳. 전부 실제로 있는 곳이다.
+# troy, mycenae, argos, crete 는 이미 있다. lemnos(THE), ithake·pylos(ODY), lykia(ATH), mt-pelion(THE) 는 참조만.
+
+[[place]]
+id = "sparta"
+name_ko = "스파르타"
+name_grc = "Sparte"
+aka = ["라케다이몬", "스파르테"]
+kind = "real"
+lat = 37.0819
+lon = 22.4235
+modern = "그리스 스파르티"
+oneliner = "헬레네가 자란 곳. 파리스가 여기서 헬레네를 데려갔다."
+body = """
+펠로폰네소스 남쪽, 산으로 둘러싸인 골짜기에 있는 도시다.
+틴다레오스 왕이 다스렸고, 헬레네와 클리타임네스트라가 여기서 자랐다.
+그리스의 왕들이 헬레네에게 구혼하러 모두 여기로 왔다.
+메넬라오스가 왕이 된 뒤 파리스가 손님으로 와서 헬레네를 데려갔다.
+전쟁이 끝난 뒤 메넬라오스와 헬레네는 다시 여기서 살았다.
+"""
+fun = "파우사니아스는 스파르타에 메넬라오스의 집이라 불리는 곳이 있었다고 적었다."
+sources = ["apollodorus.library 3.10.8-3.10.9", "apollodorus.library E.3.3", "homer.odyssey 4.1-20", "pausanias.greece 3.14"]
+
+[[place]]
+id = "aulis"
+name_ko = "아울리스"
+name_grc = "Aulis"
+kind = "real"
+lat = 38.4077
+lon = 23.5908
+modern = "그리스 아블리다"
+oneliner = "그리스의 배 천 척이 모였던 항구. 이피게네이아의 일이 여기서 있었다."
+body = """
+그리스 가운데 보이오티아의 바닷가 마을이다.
+트로이로 가는 배들이 모두 여기 모였다.
+제단 옆 나무에서 뱀이 참새를 잡아먹는 것을 칼카스가 보았다.
+바람이 멎어 배가 뜨지 못했고, 아가멤논이 딸을 불러온 곳이다.
+뒷날 스파르타의 왕도 전쟁에 나가기 전 여기서 제사를 드렸다.
+"""
+fun = "아폴로도로스는 모인 배가 천십삼 척, 지휘관이 마흔셋이었다고 적었다."
+sources = ["apollodorus.library E.3.11", "apollodorus.library E.3.15", "apollodorus.library E.3.21-E.3.22", "homer.iliad 2.299-330", "pausanias.greece 3.9", "pausanias.greece 9.19"]
+
+[[place]]
+id = "mt-ida-troad"
+name_ko = "이데 산(트로이)"
+name_grc = "Ide"
+aka = ["이다 산", "트로이의 이데 산", "이데산"]
+kind = "real"
+lat = 39.7017
+lon = 26.8433
+modern = "튀르키예 카즈다이(카즈 산), 높이 1774m"
+oneliner = "트로이 남쪽의 큰 산. 파리스가 자라고 세 여신을 심판한 곳이다."
+body = """
+트로이 뒤편에 넓게 뻗은 산이다.
+아기 파리스가 여기 버려졌고, 곰이 젖을 주었다.
+헤르메스가 세 여신을 데려와 파리스에게 심판을 맡긴 곳도 여기다.
+아프로디테는 여기서 안키세스를 만나 아이네이아스를 낳았다.
+제우스가 이 산 꼭대기에 앉아 트로이의 싸움을 내려다보았다.
+"""
+fun = "크레타에도 이데 산이 있다. 아기 제우스가 숨겨진 산이다. 이름은 같지만 다른 산이다."
+sources = ["apollodorus.library 3.12.5", "apollodorus.library E.3.2", "hesiod.theogony 1008-1010", "homer.iliad 8.47-52"]
+
+[[place]]
+id = "skyros"
+name_ko = "스키로스 섬"
+name_grc = "Skyros"
+aka = ["스퀴로스"]
+kind = "real"
+lat = 38.9047
+lon = 24.5666
+modern = "그리스 스키로스 섬"
+oneliner = "테티스가 아킬레우스를 숨겨 둔 섬. 네옵톨레모스가 여기서 태어났다."
+body = """
+에게해 가운데에 있는 섬이다.
+리코메데스 왕이 다스렸다.
+테티스가 아들을 전쟁에서 빼내려고 여자 옷을 입혀 여기 맡겼다.
+아킬레우스는 여기서 왕의 딸과 사이에 네옵톨레모스를 얻었다.
+오디세우스가 두 번 와서 아킬레우스와 네옵톨레모스를 데려갔다.
+"""
+fun = "아테네 사람들은 테세우스가 이 섬에서 죽었다고 믿었다. 뒷날 그의 뼈를 아테네로 가져갔다."
+sources = ["apollodorus.library 3.13.8", "apollodorus.library E.5.11", "homer.odyssey 11.506-509", "pausanias.greece 1.17", "pausanias.greece 1.22"]
+
+[[place]]
+id = "phthia"
+name_ko = "프티아"
+name_grc = "Phthia"
+kind = "real"
+lat = 39.2969
+lon = 22.3831
+modern = "그리스 테살리아 파르살라 부근"
+oneliner = "펠레우스와 아킬레우스의 고향. 미르미돈 사람들의 땅이다."
+body = """
+그리스 북쪽 테살리아의 남쪽 땅이다.
+펠레우스가 여기로 와서 왕이 되었다.
+아킬레우스는 여기서 배 쉰 척을 이끌고 트로이로 갔다.
+아킬레우스가 늘 돌아가겠다고 말한 곳이 여기다.
+파트로클로스도 어릴 때 여기 와서 자랐다.
+"""
+note = "정확한 도시 자리는 모른다. 호메로스의 프티아는 스페르케이오스 강 골짜기와 오트리스 산 사이의 지역이다. 지역의 가운데인 파르살라 좌표를 둔다."
+sources = ["homer.iliad 1.155", "homer.iliad 2.681-685", "homer.iliad 9.395", "apollodorus.library 3.13.1", "apollodorus.library 3.13.8", "pausanias.greece 6.11"]
+
+[[place]]
+id = "tenedos"
+name_ko = "테네도스 섬"
+name_grc = "Tenedos"
+kind = "real"
+lat = 39.8353
+lon = 26.0722
+modern = "튀르키예 보즈자아다 섬"
+oneliner = "트로이 앞바다의 작은 섬. 그리스 배들이 목마를 두고 여기 숨었다."
+body = """
+트로이에서 바다로 조금 나가면 있는 작은 섬이다.
+그리스군이 트로이에 닿기 전에 먼저 여기 들렀다.
+여기서 필록테테스가 물뱀에 물렸다.
+전쟁 끝에는 그리스 배들이 떠난 척하고 이 섬 뒤에 숨었다.
+밤에 시논의 불빛을 보고 다시 트로이로 돌아왔다.
+"""
+sources = ["apollodorus.library E.3.23-E.3.27", "apollodorus.library E.5.14-E.5.19", "homer.iliad 1.37-38", "pausanias.greece 10.14", "virgil.aeneid 2.21-24"]
+
+[[place]]
+id = "pisa"
+name_ko = "피사"
+name_grc = "Pisa"
+aka = ["피사(엘리스)"]
+kind = "real"
+lat = 37.6383
+lon = 21.6300
+modern = "그리스 올림피아 부근"
+oneliner = "오이노마오스와 펠롭스가 전차 경주를 한 곳."
+body = """
+펠로폰네소스 서쪽, 알페이오스 강가에 있던 작은 나라다.
+오이노마오스 왕이 여기서 딸의 구혼자들과 전차 경주를 했다.
+펠롭스가 이겨 이 나라의 왕이 되었다.
+뒷날 이 근처 올림피아에서 큰 운동 경기가 열렸다.
+그 신전 지붕에 펠롭스와 오이노마오스의 경주가 새겨져 있었다.
+"""
+note = "이탈리아의 피사와 다른 곳이다. 올림피아 바로 옆이라 올림피아 좌표를 둔다."
+sources = ["apollodorus.library E.2.4", "apollodorus.library E.2.9", "pausanias.greece 5.1", "pausanias.greece 5.10"]
+
+[[place]]
+id = "salamis"
+name_ko = "살라미스 섬"
+name_grc = "Salamis"
+aka = ["살라미나"]
+kind = "real"
+lat = 37.9642
+lon = 23.4964
+modern = "그리스 살라미나 섬"
+oneliner = "텔라몬과 큰 아이아스의 섬. 아테네 바로 앞에 있다."
+body = """
+아테네 앞바다에 있는 섬이다.
+텔라몬이 아이기나에서 쫓겨나 여기로 와서 왕이 되었다.
+아들 아이아스가 여기서 배 열두 척을 이끌고 트로이로 갔다.
+파우사니아스가 갔을 때도 아이아스의 신전이 남아 있었다.
+"""
+sources = ["apollodorus.library 3.12.7", "homer.iliad 2.557-558", "pausanias.greece 1.35"]

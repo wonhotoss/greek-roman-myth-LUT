@@ -1,0 +1,219 @@
+# era 5 — 큰 영웅들. 헤라클레스의 일생에 나오는 곳.
+# 실제 곳은 유적 좌표. 에리테이아만 세상 끝(mythic/edge).
+
+[[place]]
+id = "tiryns"
+name_ko = "티린스"
+name_grc = "Tiryns"
+aka = ["티린토스"]
+kind = "real"
+lat = 37.5997
+lon = 22.7997
+modern = "그리스 티린스 유적(나플리오 근처)"
+oneliner = "헤라클레스가 에우리스테우스를 섬기며 살던 성."
+body = """
+미케네에서 남쪽으로 조금 내려가면 있는 오래된 성이다.
+델포이의 말대로 헤라클레스는 이 성에서 살며 열두 가지 일을 했다.
+돌을 크게 쌓은 성벽이 지금도 남아 있다.
+사람들은 이 벽을 키클롭스가 쌓았다고 믿었다.
+"""
+fun = "옛 시인들은 헤라클레스를 그냥 '티린스 사람'이라고 부르기도 했다."
+sources = ["apollodorus.library 2.4.12-2.5.1", "pausanias.greece 2.16", "pausanias.greece 2.25", "hesiod.theogony 290-292", "ovid.metamorphoses 9.268"]
+
+[[place]]
+id = "nemea"
+name_ko = "네메아"
+name_grc = "Nemea"
+kind = "real"
+lat = 37.8083
+lon = 22.7106
+modern = "그리스 아르카이아 네메아"
+oneliner = "가죽에 칼이 들지 않는 사자가 살던 골짜기."
+body = """
+미케네에서 서북쪽으로 가까운 골짜기다.
+헤라클레스의 첫 일이 이곳의 사자를 잡는 것이었다.
+산속에 사자가 살았다는 굴을 지금도 보여 준다고 파우사니아스가 적었다.
+여기서 제우스에게 바치는 큰 운동 경기가 열렸다.
+"""
+fun = "네메아의 경기는 그리스의 네 큰 경기 가운데 하나였다."
+sources = ["apollodorus.library 2.5.1", "pausanias.greece 2.15"]
+
+[[place]]
+id = "lerna"
+name_ko = "레르나"
+name_grc = "Lerna"
+kind = "real"
+lat = 37.5583
+lon = 22.7194
+modern = "그리스 밀리(아르고스 남쪽)"
+oneliner = "머리 아홉 달린 히드라가 살던 늪."
+body = """
+아르고스에서 바다 쪽으로 내려가면 나오는 물가다.
+샘이 많아 늪이 되었고, 히드라가 거기 살았다.
+헤라클레스는 히드라의 죽지 않는 머리를 이곳 길가에 묻고 돌을 올렸다.
+사람들은 이곳에 저승으로 내려가는 길이 있다고 믿었다.
+"""
+sources = ["apollodorus.library 2.5.2", "pausanias.greece 2.36-2.37"]
+
+[[place]]
+id = "mt-erymanthos"
+name_ko = "에리만토스 산"
+name_grc = "Erymanthos"
+aka = ["에리만토스"]
+kind = "real"
+lat = 37.9500
+lon = 21.8333
+modern = "그리스 올로노스 산(아카이아·엘리스 경계)"
+oneliner = "큰 멧돼지가 살던 아르카디아의 산."
+body = """
+아르카디아 서북쪽의 높은 산이다.
+여기서 내려온 멧돼지가 프소피스 마을을 어지럽혔다.
+헤라클레스는 멧돼지를 깊은 눈 속으로 몰아 산 채로 잡았다.
+산 이름과 같은 이름의 강이 여기서 시작해 알페이오스 강으로 흘러든다.
+"""
+sources = ["apollodorus.library 2.5.4", "pausanias.greece 8.24"]
+
+[[place]]
+id = "stymphalos"
+name_ko = "스팀팔로스"
+name_grc = "Stymphalos"
+aka = ["스팀팔로스 호수", "스팀팔리아"]
+kind = "real"
+lat = 37.8500
+lon = 22.4667
+modern = "그리스 스팀팔리아 호수"
+oneliner = "숲에 새가 떼로 모여 살던 아르카디아의 호수."
+body = """
+아르카디아의 깊은 숲에 둘러싸인 호수다.
+늑대를 피해 온 새들이 셀 수 없이 모여 살았다.
+헤라클레스는 아테나가 준 청동 딱따기를 쳐서 새들을 날아오르게 했다.
+호수의 물은 땅속으로 빠져 아르고스 쪽 강이 된다고 믿었다.
+"""
+sources = ["apollodorus.library 2.5.6", "pausanias.greece 8.4", "pausanias.greece 2.24"]
+
+[[place]]
+id = "elis"
+name_ko = "엘리스"
+name_grc = "Elis"
+kind = "real"
+lat = 37.8917
+lon = 21.3750
+modern = "그리스 일리다(펠로폰네소스 서쪽)"
+oneliner = "아우게이아스의 외양간이 있던 나라. 올림피아가 이 땅에 있다."
+body = """
+펠로폰네소스 서쪽의 넓은 땅이다.
+아우게이아스 왕의 소 떼가 많아 똥이 산처럼 쌓였다.
+헤라클레스는 알페이오스 강과 페네이오스 강을 끌어와 하루에 씻어 냈다.
+뒷날 헤라클레스는 왕을 물리친 뒤 올림피아에서 경기를 열었다.
+"""
+fun = "지금의 올림픽이 이 땅의 올림피아 경기에서 왔다."
+sources = ["apollodorus.library 2.5.5", "apollodorus.library 2.7.2", "pausanias.greece 5.1", "pausanias.greece 5.8"]
+
+[[place]]
+id = "erytheia"
+name_ko = "에리테이아"
+name_grc = "Erytheia"
+aka = ["에리티아", "에리테이아 섬"]
+kind = "mythic"
+layer = "edge"
+cx = 0.10
+cy = 0.50
+oneliner = "세상 서쪽 끝 바다 건너에 있던 게리온의 섬."
+body = """
+오케아노스 가까이 있는 붉은 섬이다.
+게리온이 붉은 소를 기르고 오르트로스가 지켰다.
+헤라클레스는 헬리오스가 준 황금 잔을 타고 바다를 건너갔다.
+아폴로도로스는 이 섬을 가디라라고도 불렀다.
+"""
+note = "헤시오도스는 오케아노스 건너 세상 끝이라 하고, 아폴로도로스는 가디라(지금의 스페인 카디스)라고 한다. 뒷시대 동일시라 mythic/edge 로 둔다."
+sources = ["hesiod.theogony 287-294", "apollodorus.library 2.5.10"]
+
+[[place]]
+id = "mt-oita"
+name_ko = "오이타 산"
+name_grc = "Oite"
+aka = ["오이테 산", "오이타"]
+kind = "real"
+lat = 38.8167
+lon = 22.2833
+modern = "그리스 이티 산(중부)"
+oneliner = "헤라클레스가 스스로 장작 위에 올라 불에 탄 산."
+body = """
+그리스 중부 트라키스 땅 위에 솟은 산이다.
+독 묻은 옷에 괴로워하던 헤라클레스가 여기 장작을 쌓았다.
+필록테테스가 불을 붙였고, 구름이 헤라클레스를 하늘로 데려갔다.
+이 산에 헤라클레스와 데이아네이라의 무덤이 있다고 전한다.
+"""
+sources = ["apollodorus.library 2.7.7", "ovid.metamorphoses 9.165", "ovid.metamorphoses 9.229-238", "pausanias.greece 2.23"]
+
+[[place]]
+id = "kalydon"
+name_ko = "칼리돈"
+name_grc = "Kalydon"
+kind = "real"
+lat = 38.3717
+lon = 21.5306
+modern = "그리스 에비노호리 근처(아이톨리아)"
+oneliner = "데이아네이라의 고향. 큰 멧돼지 사냥으로도 이름난 도시다."
+body = """
+그리스 서쪽 아이톨리아 땅의 도시다.
+오이네우스 왕이 다스렸고, 딸 데이아네이라가 여기 살았다.
+헤라클레스는 여기서 강의 신 아켈로오스와 씨름해 아내를 얻었다.
+이곳의 큰 멧돼지 사냥은 멜레아그로스의 이야기다.
+"""
+sources = ["apollodorus.library 2.7.5", "ovid.metamorphoses 9.1-10", "pausanias.greece 7.18"]
+
+[[place]]
+id = "kaukasos"
+name_ko = "카우카소스 산"
+name_grc = "Kaukasos"
+aka = ["카우카소스", "코카서스", "카프카스"]
+kind = "real"
+lat = 42.6969
+lon = 44.5199
+modern = "조지아·러시아 사이 카프카스 산맥(카즈베크 산)"
+oneliner = "프로메테우스가 묶여 있던 먼 동쪽의 산."
+body = """
+그리스에서 아주 먼 동쪽, 흑해 너머의 높은 산줄기다.
+제우스가 프로메테우스를 이 산의 바위에 묶었다.
+독수리가 날마다 와서 간을 먹었다.
+헤라클레스가 황금 사과를 찾아가는 길에 여기 와서 독수리를 쏘았다.
+"""
+note = "아폴로도로스 2.5.11 과 파우사니아스 5.11 이 카우카소스라 한다. 헤시오도스는 산 이름을 말하지 않는다. 산맥은 실제 있으므로 real 로 두고 좌표는 산맥 가운데의 카즈베크 산. 기존 사건 prometheus-punished 에 place 로 붙이기를 제안한다."
+sources = ["apollodorus.library 2.5.11", "pausanias.greece 5.11", "hesiod.theogony 521-534"]
+
+[[place]]
+id = "themiskyra"
+name_ko = "테미스키라"
+name_grc = "Themiskyra"
+kind = "real"
+lat = 41.2000
+lon = 36.9667
+modern = "튀르키예 삼순 주 테르메 근처"
+oneliner = "테르모돈 강가에 있던 아마조네스의 도시."
+body = """
+흑해 남쪽 바닷가, 테르모돈 강이 바다로 나가는 곳에 있었다.
+아마조네스의 여왕 히폴리테가 여기서 다스렸다.
+헤라클레스가 띠를 얻으려고 배를 타고 이 항구에 들어왔다.
+파우사니아스는 테세우스도 이 싸움에 함께 왔다는 이야기를 전한다.
+"""
+sources = ["apollodorus.library 2.5.9", "pausanias.greece 1.2"]
+
+[[place]]
+id = "trachis"
+name_ko = "트라키스"
+name_grc = "Trachis"
+aka = ["헤라클레이아 트라키니아"]
+kind = "real"
+lat = 38.7950
+lon = 22.4400
+modern = "그리스 이라클리아(테르모필레 근처)"
+oneliner = "헤라클레스가 마지막 몇 해를 보낸 오이타 산 아래 도시."
+body = """
+오이타 산 아래, 테르모필레 가까이에 있던 도시다.
+케익스 왕이 헤라클레스를 손님으로 맞았다.
+독 묻은 옷을 입은 헤라클레스가 배로 이곳에 실려 왔다.
+데이아네이라는 여기서 죽었다.
+헤라클레스가 신이 된 뒤 자식들은 여기서 아테네로 피했다.
+"""
+sources = ["apollodorus.library 2.7.6-2.8.1", "pausanias.greece 1.32", "pausanias.greece 2.23"]

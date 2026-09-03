@@ -1,0 +1,723 @@
+# era 4~5 — 아테네와 크레타의 사건. era 4 는 seq 100~190, era 5 는 seq 700~870.
+# era 4: 에우로페 → 미노스 → 포세이돈의 황소 / 시시포스 / 익시온 / 벨레로폰.
+# era 5: 미로 → 아이게우스와 트로이젠 → 테세우스의 길 → 크레타 → 아이게우스의 죽음 → 왕 → 다이달로스 → 페이리토오스 → 파이드라 → 저승.
+# 묶음은 스크래치 arcs/ATH.toml 에: europa-minos, theseus-journey, daidalos-ikaros, bellerophon-flight.
+
+# ===================== era 4 =====================
+
+[[event]]
+id = "europa-carried-to-crete"
+name_ko = "에우로페가 황소를 타고 크레타로 가다"
+era = 4
+seq = 100
+span = "days"
+place = "crete"
+cast = [
+  { figure = "zeus", role = "주인공" },
+  { figure = "europa", role = "피해" },
+]
+oneliner = "흰 황소가 공주를 태우고 바다를 건넜다."
+body = """
+제우스는 페니키아의 공주 에우로페를 보고 마음에 들었다.
+눈처럼 흰 황소로 모습을 바꾸어 바닷가로 갔다.
+황소가 얌전해서 에우로페는 꽃을 먹이고 등에 올라탔다.
+황소는 그대로 바다로 들어가 크레타까지 헤엄쳐 갔다.
+에우로페는 크레타에서 미노스와 형제들을 낳았다.
+"""
+fun = "아버지는 아들들에게 누이를 찾을 때까지 돌아오지 말라고 했다. 아들들은 못 찾았고, 저마다 다른 땅에 자리 잡았다."
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 6권 4장 「슬픈 운명의 미노타우로스」"
+sources = ["apollodorus.library 3.1.1", "ovid.metamorphoses 2.833-2.875"]
+
+[[event]]
+id = "minos-becomes-king"
+name_ko = "미노스가 크레타의 왕이 되다"
+era = 4
+seq = 110
+span = "moment"
+after = ["europa-carried-to-crete"]
+place = "knossos"
+cast = [
+  { figure = "minos", role = "주인공" },
+  { figure = "poseidon", role = "도움" },
+  { figure = "cretan-bull", role = "등장" },
+]
+oneliner = "바다에서 황소가 올라오자 사람들이 미노스를 왕으로 받아들였다."
+body = """
+크레타의 왕 아스테리오스가 자식 없이 죽었다.
+미노스는 왕이 되려 했지만 반대하는 사람들이 있었다.
+미노스는 신들이 자기를 뽑았고, 비는 것은 다 이루어진다고 말했다.
+포세이돈에게 바다에서 황소를 보내 달라고 빌고, 그것을 바치겠다고 했다.
+훌륭한 황소가 올라왔고, 미노스는 왕이 되었다.
+"""
+fun = "미노스는 처음으로 바다를 다스린 왕이라서 섬 대부분이 그의 것이 되었다."
+sources = ["apollodorus.library 3.1.2-3.1.3"]
+
+[[event]]
+id = "poseidon-bull-pasiphae"
+name_ko = "포세이돈의 황소와 파시파에"
+era = 4
+seq = 120
+span = "season"
+caused_by = ["minos-becomes-king"]
+place = "knossos"
+cast = [
+  { figure = "poseidon", role = "주인공" },
+  { figure = "minos", role = "상대" },
+  { figure = "pasiphae", role = "피해" },
+  { figure = "cretan-bull", role = "등장" },
+]
+oneliner = "약속을 어긴 미노스에게 포세이돈이 벌을 내렸다."
+body = """
+미노스는 바다에서 온 황소가 아까웠다.
+그 황소는 소 떼에 넣어 두고 다른 소를 바쳤다.
+포세이돈은 화가 나서 황소를 사납게 만들었다.
+그리고 왕비 파시파에가 그 황소를 사랑하게 만들었다.
+이 일 때문에 크레타에 머리가 황소인 아이가 태어나게 된다.
+"""
+sensitivity = "soften"
+note = "원리(다이달로스의 나무 암소)는 쓰지 않는다. 아이의 탄생은 era 5 의 minotauros-born-labyrinth 에서."
+sources = ["apollodorus.library 3.1.3-3.1.4"]
+
+[[event]]
+id = "sisyphos-punished"
+name_ko = "시시포스가 제우스의 비밀을 말하고 바위를 굴리다"
+era = 4
+seq = 130
+span = "age"
+open = true
+places = ["corinth", "hades-realm"]
+cast = [
+  { figure = "sisyphos", role = "주인공" },
+  { figure = "zeus", role = "상대" },
+]
+oneliner = "신의 비밀을 샘 하나와 바꾸었고, 값은 끝없는 바위였다."
+body = """
+제우스가 강의 신 아소포스의 딸 아이기나를 몰래 데려갔다.
+아소포스가 딸을 찾아다니자 시시포스가 본 것을 알려 주었다.
+대신 코린토스 언덕에 솟는 샘을 받았다.
+제우스는 시시포스가 죽은 뒤 저승에서 큰 바위를 밀어 올리게 했다.
+바위는 꼭대기에 닿기 직전에 늘 다시 굴러 내려온다.
+"""
+fun = "오디세우스가 저승에서 시시포스를 보았다. 땀이 흐르고 머리에서 김이 났다고 한다."
+note = "참고: 처음 읽는 그리스 로마 신화 4권 2장 「시시포스」(신을 속인 거짓말 / 바위를 굴리는 벌). 죽음의 신을 묶은 이야기는 코퍼스에 없다."
+sources = ["apollodorus.library 1.9.3", "pausanias.greece 2.5.1", "homer.odyssey 11.593-11.600"]
+
+[[event]]
+id = "ixion-wheel"
+name_ko = "익시온이 바퀴에 묶이다"
+era = 4
+seq = 140
+span = "age"
+open = true
+cast = [
+  { figure = "ixion", role = "주인공" },
+  { figure = "hera", role = "등장" },
+  { figure = "zeus", role = "상대" },
+]
+oneliner = "헤라를 탐낸 익시온은 하늘을 도는 바퀴에 묶였다."
+body = """
+익시온은 제우스의 아내 헤라를 탐냈다.
+헤라가 제우스에게 알렸다.
+제우스는 구름으로 헤라와 똑같은 모습을 만들어 익시온 곁에 두었다.
+익시온이 헤라를 얻었다고 자랑하자 제우스는 그를 바퀴에 묶었다.
+바퀴는 바람을 타고 하늘을 끝없이 돌아간다.
+"""
+fun = "오르페우스가 저승에서 노래하자 익시온의 바퀴가 멈추었다. 오비디우스가 그렇게 적었다."
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 4권 3장 「불타는 수레바퀴에 묶인 익시온」. 장소 없음 — 아폴로도로스가 어디서 일어났는지 말하지 않는다."
+sources = ["apollodorus.library E.1.20", "ovid.metamorphoses 4.461-4.463", "ovid.metamorphoses 10.41-10.44"]
+
+[[event]]
+id = "pegasos-tamed"
+name_ko = "아테나가 페가수스를 길들여 벨레로폰에게 주다"
+era = 4
+seq = 150
+span = "moment"
+place = "corinth"
+cast = [
+  { figure = "bellerophon", role = "주인공" },
+  { figure = "athena", role = "도움" },
+  { figure = "pegasos", role = "등장" },
+]
+oneliner = "아무도 못 타던 날개 달린 말에 굴레가 씌워졌다."
+body = """
+페가수스는 메두사의 목에서 나온 날개 달린 말이다.
+아테나가 직접 굴레를 씌워 길들였다.
+그리고 코린토스의 벨레로폰에게 주었다.
+코린토스 사람들은 '굴레 씌우는 아테나'의 신전을 세웠다.
+"""
+fun = "페가수스는 나중에 제우스의 집에 살면서 천둥과 번개를 나른다. 헤시오도스가 그렇게 적었다."
+note = "참고: 처음 읽는 그리스 로마 신화 9권 1장 「페가수스의 새 주인」, 6권 3장 「페가수스」"
+sources = ["pausanias.greece 2.4.1", "apollodorus.library 2.3.2", "hesiod.theogony 280-286"]
+
+[[event]]
+id = "proitos-sends-bellerophon"
+name_ko = "프로이토스가 벨레로폰을 리키아로 보내다"
+era = 4
+seq = 160
+span = "days"
+after = ["pegasos-tamed"]
+places = ["tiryns", "lykia"]
+cast = [
+  { figure = "bellerophon", role = "주인공" },
+  { figure = "proitos", role = "상대" },
+]
+oneliner = "왕의 아내가 거짓말을 했고, 왕은 편지 한 장을 들려 보냈다."
+body = """
+벨레로폰은 실수로 형제를 죽게 하고 코린토스를 떠났다.
+티린스의 왕 프로이토스가 그를 받아 주고 죄를 씻어 주었다.
+왕의 아내가 벨레로폰을 미워하게 되어 거짓말을 했다.
+왕은 화가 났지만 손님을 죽이지는 못했다.
+대신 이 사람을 죽이라고 적은 편지를 들려 리키아의 장인에게 보냈다.
+"""
+sensitivity = "soften"
+note = "스테네보이아의 사랑 고백과 거짓 고발은 '미워하게 되어 거짓말을 했다' 까지."
+sources = ["apollodorus.library 2.3.1", "homer.iliad 6.155-6.170"]
+
+[[event]]
+id = "iobates-tasks"
+name_ko = "이오바테스가 편지를 읽고 키마이라를 시키다"
+era = 4
+seq = 170
+span = "days"
+caused_by = ["proitos-sends-bellerophon"]
+place = "lykia"
+cast = [
+  { figure = "bellerophon", role = "주인공" },
+  { figure = "iobates", role = "상대" },
+]
+oneliner = "아흐레 동안 잘 대접하고, 열흘째에 편지를 열었다."
+body = """
+이오바테스 왕은 크산토스 강가에서 손님을 맞았다.
+아흐레 동안 잔치를 열고 소 아홉 마리를 잡았다.
+열흘째 아침에 편지를 받아 읽었다.
+왕은 벨레로폰을 직접 죽이지 않고 키마이라를 없애라고 시켰다.
+혼자서는 살아 돌아올 수 없다고 생각했다.
+"""
+sources = ["apollodorus.library 2.3.1", "homer.iliad 6.171-6.179"]
+
+[[event]]
+id = "chimaira-slain"
+name_ko = "벨레로폰이 키마이라를 이기다"
+era = 4
+seq = 180
+span = "moment"
+caused_by = ["iobates-tasks"]
+place = "lykia"
+cast = [
+  { figure = "bellerophon", role = "주인공" },
+  { figure = "chimaira", role = "상대" },
+  { figure = "pegasos", role = "도움" },
+  { figure = "iobates", role = "등장" },
+]
+oneliner = "하늘에서 활을 쏘아 불 뿜는 괴물을 이겼다."
+body = """
+벨레로폰은 페가수스에 올라 하늘 높이 날았다.
+키마이라의 불이 닿지 않는 곳에서 화살을 쏘아 맞혔다.
+이오바테스는 그 뒤에도 솔리모이족과 아마조네스와 싸우게 했다.
+가장 용감한 리키아 사람들을 숨겨 두고 덤비게도 했다.
+벨레로폰이 모두 이기자 왕은 편지를 보여 주고 딸과 나라를 주었다.
+"""
+fun = "벨레로폰은 솔리모이족과의 싸움이 가장 힘들었다고 말했다. 호메로스가 그렇게 전한다."
+note = "참고: 처음 읽는 그리스 로마 신화 9권 1장 「벨레로폰」. 아마조네스는 HER 소유(group) — cast 에 넣지 않고 이름만."
+sources = ["apollodorus.library 2.3.2", "homer.iliad 6.179-6.195", "hesiod.theogony 319-325"]
+
+[[event]]
+id = "bellerophon-end"
+name_ko = "벨레로폰이 신들의 미움을 받다"
+era = 4
+seq = 190
+span = "years"
+after = ["chimaira-slain"]
+cast = [
+  { figure = "bellerophon", role = "주인공" },
+  { figure = "pegasos", role = "등장" },
+]
+oneliner = "영웅은 홀로 들판을 떠돌고, 말은 제우스의 집으로 갔다."
+body = """
+벨레로폰은 리키아에서 왕의 딸과 결혼하고 아이 셋을 낳았다.
+그러다 모든 신들의 미움을 받게 되었다.
+호메로스는 그 까닭을 말하지 않는다.
+벨레로폰은 사람을 피해 알레이온 들판을 혼자 떠돌았다.
+페가수스는 땅을 떠나 제우스의 집에서 천둥과 번개를 나른다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 9권 1장 「추락한 영웅」. 페가수스를 타고 올림포스로 오르려다 떨어졌다는 판본(핀다로스·히기누스 57)은 코퍼스의 히기누스 txt 에 본문이 없어 확인 불가 → 호메로스 판본만 쓴다. 알레이온 들판은 위치 불명이라 장소 없음."
+sources = ["homer.iliad 6.196-6.202", "hesiod.theogony 284-286"]
+
+# ===================== era 5 =====================
+
+[[event]]
+id = "minotauros-born-labyrinth"
+name_ko = "미노타우로스가 태어나고 다이달로스가 미로를 짓다"
+era = 5
+seq = 700
+span = "years"
+caused_by = ["poseidon-bull-pasiphae"]
+place = "knossos"
+cast = [
+  { figure = "minos", role = "주인공" },
+  { figure = "daidalos", role = "도움" },
+  { figure = "minotauros", role = "등장" },
+  { figure = "pasiphae", role = "등장" },
+]
+oneliner = "머리가 황소인 아이를 가둘 집이 필요했다."
+body = """
+파시파에가 낳은 아이는 머리가 황소였다.
+이름은 아스테리오스였지만 사람들은 미노타우로스라고 불렀다.
+미노스는 신의 말을 따라 아이를 가두기로 했다.
+아테네에서 온 다이달로스가 미로를 지었다.
+길이 수없이 굽이쳐서 지은 사람도 입구를 겨우 찾았다.
+"""
+fun = "오비디우스는 미로를 이리저리 굽이치는 마이안드로스 강에 비유했다."
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 6권 4장 「미로 속 미노타우로스」, 10권 4장 「천재 발명가 다이달로스」"
+sources = ["apollodorus.library 3.1.4", "apollodorus.library 3.15.8", "ovid.metamorphoses 8.152-8.168"]
+
+[[event]]
+id = "aigeus-troizen"
+name_ko = "아이게우스가 트로이젠에 검과 신발을 숨기다"
+era = 5
+seq = 710
+span = "days"
+places = ["delphi", "troizen"]
+cast = [
+  { figure = "aigeus", role = "주인공" },
+  { figure = "aithra", role = "등장" },
+  { figure = "pittheus", role = "도움" },
+  { figure = "poseidon", role = "등장" },
+]
+oneliner = "아들을 얻으려 델포이에 물었고, 돌아오는 길에 아들이 생겼다."
+body = """
+아테네의 왕 아이게우스는 아들이 없어 델포이에 물었다.
+대답은 알아듣기 어려웠고, 돌아오는 길에 트로이젠에 머물렀다.
+트로이젠의 왕 피테우스가 그 뜻을 알아채고 딸 아이트라를 만나게 했다.
+아이게우스는 바위 밑에 검과 신발을 숨겨 두었다.
+아들이 태어나 바위를 밀 수 있게 되면 그것을 들려 보내라고 했다.
+"""
+fun = "델포이의 대답은 '아테네에 닿기 전에 술주머니 입을 풀지 마라'였다."
+sensitivity = "soften"
+note = "3.15.7 의 '취하게 해서'·'같은 밤 포세이돈' 은 쓰지 않는다. 포세이돈은 theseus 의 parents_variant 로."
+sources = ["apollodorus.library 3.15.6-3.15.7", "pausanias.greece 1.27.7-1.27.8"]
+
+[[event]]
+id = "androgeos-dies-tribute"
+name_ko = "안드로게오스가 죽고 아테네가 조공을 바치다"
+era = 5
+seq = 720
+span = "years"
+after = ["minotauros-born-labyrinth", "aigeus-troizen"]
+places = ["athens", "marathon", "knossos"]
+cast = [
+  { figure = "minos", role = "주인공" },
+  { figure = "androgeos", role = "피해" },
+  { figure = "aigeus", role = "상대" },
+  { figure = "cretan-bull", role = "상대" },
+  { figure = "minotauros", role = "등장" },
+]
+oneliner = "미노스의 아들이 죽자 아테네는 해마다 열네 명을 크레타로 보냈다."
+body = """
+미노스의 아들 안드로게오스가 아테네의 경기에 나가 모두 이겼다.
+아이게우스는 그를 마라톤의 황소와 싸우게 보냈고, 그는 죽었다.
+미노스는 배를 이끌고 와 아테네와 싸우며 제우스에게 벌을 빌었다.
+아테네에 굶주림과 병이 돌았다.
+아테네는 신의 말대로 해마다 소년 일곱과 소녀 일곱을 크레타로 보냈다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 6권 4장 「미로 속 미노타우로스」. 히아킨토스의 딸들을 바친 일(3.15.8)은 쓰지 않는다."
+sources = ["apollodorus.library 3.15.7-3.15.8", "pausanias.greece 1.27.10", "ovid.metamorphoses 7.456-7.460", "ovid.metamorphoses 8.169-8.171"]
+
+[[event.variants]]
+source = "apollodorus.library 3.15.7"
+text = "테베의 경기에 가는 길에 시샘한 선수들이 그를 죽였다고도 한다."
+
+[[event.variants]]
+source = "ovid.metamorphoses 8.169-8.171"
+text = "오비디우스는 조공을 해마다가 아니라 아홉 해마다 보냈다고 한다."
+
+[[event]]
+id = "theseus-lifts-rock"
+name_ko = "테세우스가 바위를 밀고 검을 꺼내다"
+era = 5
+seq = 730
+span = "moment"
+after = ["aigeus-troizen"]
+place = "troizen"
+cast = [
+  { figure = "theseus", role = "주인공" },
+  { figure = "aithra", role = "도움" },
+]
+oneliner = "다 자란 아들이 바위를 밀어내고 아버지의 검을 들었다."
+body = """
+아이트라는 아들 테세우스를 트로이젠에서 키웠다.
+테세우스가 자라자 아이트라는 바위가 있는 곳을 알려 주었다.
+테세우스는 바위를 밀어내고 검과 신발을 꺼냈다.
+그리고 걸어서 아테네로 떠났다.
+"""
+fun = "파우사니아스는 테세우스가 열여덟 살에 바위를 들었다고 적었다. 일곱 살에는 헤라클레스의 사자 가죽을 진짜로 알고 도끼로 덤볐다고 한다."
+note = "참고: 처음 읽는 그리스 로마 신화 9권 4장 「테세우스의 모험」"
+sources = ["apollodorus.library 3.16.1", "pausanias.greece 1.27.7-1.27.8"]
+
+[[event]]
+id = "theseus-road-isthmus"
+name_ko = "테세우스가 길의 악당들을 없애다 — 에피다우로스와 이스트모스"
+era = 5
+seq = 740
+span = "days"
+caused_by = ["theseus-lifts-rock"]
+places = ["troizen", "corinth"]
+cast = [
+  { figure = "theseus", role = "주인공" },
+  { figure = "periphetes", role = "상대" },
+  { figure = "sinis", role = "상대" },
+  { figure = "phaia", role = "상대" },
+]
+oneliner = "쇠몽둥이, 소나무, 멧돼지. 길의 첫 세 고비를 넘었다."
+body = """
+에피다우로스에서 쇠몽둥이를 든 페리페테스가 길을 막았다.
+테세우스는 몽둥이를 빼앗아 그를 없애고, 그 몽둥이를 들고 다녔다.
+이스트모스에서는 소나무를 구부려 사람을 해치던 시니스를 만났다.
+시니스가 하던 방법 그대로 시니스를 없앴다.
+크롬미온에서는 사나운 멧돼지 파이아를 잡았다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 9권 4장 「테세우스의 모험」"
+sources = ["apollodorus.library 3.16.1-3.16.2", "apollodorus.library E.1.1", "pausanias.greece 2.1.3-2.1.4", "ovid.metamorphoses 7.433-7.442"]
+
+[[event]]
+id = "theseus-road-attica"
+name_ko = "테세우스가 길의 악당들을 없애다 — 메가라에서 아테네까지"
+era = 5
+seq = 750
+span = "days"
+after = ["theseus-road-isthmus"]
+places = ["eleusis", "athens"]
+cast = [
+  { figure = "theseus", role = "주인공" },
+  { figure = "skiron", role = "상대" },
+  { figure = "kerkyon", role = "상대" },
+  { figure = "prokrustes", role = "상대" },
+]
+oneliner = "절벽의 스키론, 씨름꾼 케르키온, 침대의 프로크루스테스."
+body = """
+메가라 바닷가 절벽에서 스키론이 발을 씻으라고 했다.
+테세우스는 스키론의 발을 잡아 바다로 던졌다.
+엘레우시스에서는 씨름으로 사람을 죽이던 케르키온을 들어 내리쳤다.
+마지막으로 침대에 사람을 맞추던 프로크루스테스를 없앴다.
+길이 깨끗해졌고, 테세우스는 아테네에 들어갔다.
+"""
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 9권 4장 「테세우스의 모험」. 프로크루스테스의 상세는 figure 에만, 여기서는 '침대에 사람을 맞추던' 까지."
+sources = ["apollodorus.library E.1.2-E.1.4", "ovid.metamorphoses 7.438-7.447"]
+
+[[event]]
+id = "medeia-plot-marathon-bull"
+name_ko = "메데이아의 계략과 마라톤의 황소"
+era = 5
+seq = 760
+span = "days"
+after = ["theseus-road-attica"]
+places = ["athens", "marathon"]
+cast = [
+  { figure = "theseus", role = "주인공" },
+  { figure = "medeia", role = "상대" },
+  { figure = "aigeus", role = "등장" },
+  { figure = "cretan-bull", role = "상대" },
+]
+oneliner = "새 왕비는 낯선 젊은이가 누구인지 알았고, 왕은 몰랐다."
+body = """
+그때 아이게우스의 아내는 콜키스에서 온 메데이아였다.
+메데이아는 테세우스가 누구인지 알아채고 왕에게 위험한 자라고 속였다.
+아이게우스는 자기 아들인 줄 모르고 그를 마라톤의 황소에게 보냈다.
+테세우스는 황소를 잡았다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 9권 4장 「메데이아의 계략」. medeia 는 THE 소유."
+sources = ["apollodorus.library E.1.5-E.1.6", "ovid.metamorphoses 7.404-7.406", "pausanias.greece 1.27.10"]
+
+[[event.variants]]
+source = "pausanias.greece 1.27.10"
+text = "파우사니아스는 테세우스가 황소를 산 채로 끌고 갔다고 한다. 아크로폴리스에서 아테나에게 바쳤다."
+
+[[event]]
+id = "aigeus-recognizes-theseus"
+name_ko = "아이게우스가 검을 보고 아들을 알아보다"
+era = 5
+seq = 770
+span = "moment"
+caused_by = ["medeia-plot-marathon-bull"]
+place = "athens"
+cast = [
+  { figure = "aigeus", role = "주인공" },
+  { figure = "theseus", role = "주인공" },
+  { figure = "medeia", role = "상대" },
+]
+oneliner = "독이 든 잔이 입에 닿기 직전, 왕이 검을 보았다."
+body = """
+황소를 잡고 돌아온 테세우스에게 잔치가 열렸다.
+아이게우스는 메데이아가 준 독을 잔에 넣어 내밀었다.
+테세우스가 잔을 받는 순간 아버지에게 검을 내보였다.
+아이게우스는 검을 알아보고 잔을 쳐서 떨어뜨렸다.
+아들을 되찾은 왕은 메데이아를 아테네에서 쫓아냈다.
+"""
+fun = "오비디우스는 그 독을 케르베로스의 거품에서 자란 풀이라고 했다."
+note = "참고: 처음 읽는 그리스 로마 신화 9권 4장 「메데이아의 계략」"
+sources = ["apollodorus.library E.1.6", "ovid.metamorphoses 7.404-7.424"]
+
+[[event]]
+id = "black-sail-departure"
+name_ko = "검은 돛을 달고 크레타로 떠나다"
+era = 5
+seq = 780
+span = "days"
+after = ["aigeus-recognizes-theseus"]
+caused_by = ["androgeos-dies-tribute"]
+places = ["athens", "knossos"]
+cast = [
+  { figure = "theseus", role = "주인공" },
+  { figure = "aigeus", role = "등장" },
+]
+oneliner = "살아 돌아오면 흰 돛을 올리겠다고 약속했다."
+body = """
+세 번째 조공을 보낼 때가 되었다.
+테세우스는 열네 명 가운데 하나로 뽑혔다. 스스로 나섰다고도 한다.
+조공을 싣고 가는 배는 검은 돛을 달았다.
+아이게우스는 아들에게 살아 돌아오면 흰 돛으로 바꾸어 달라고 했다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 9권 4장 「괴물 미노타우로스」"
+sources = ["apollodorus.library E.1.7", "pausanias.greece 1.22.5"]
+
+[[event]]
+id = "minotauros-slain"
+name_ko = "아리아드네의 실과 미노타우로스"
+era = 5
+seq = 790
+span = "moment"
+caused_by = ["black-sail-departure"]
+place = "knossos"
+cast = [
+  { figure = "theseus", role = "주인공" },
+  { figure = "minotauros", role = "상대" },
+  { figure = "ariadne", role = "도움" },
+  { figure = "daidalos", role = "도움" },
+  { figure = "minos", role = "상대" },
+]
+oneliner = "실 한 뭉치가 미로에서 나오는 길이 되었다."
+body = """
+미노스의 딸 아리아드네가 테세우스를 도와주기로 했다.
+다이달로스에게 물어 실뭉치를 구했다.
+테세우스는 실 끝을 문에 묶고 풀면서 미로로 들어갔다.
+미로 가장 깊은 곳에서 미노타우로스를 만나 맨손으로 이겼다.
+실을 되감으면서 나와 아리아드네와 함께 밤에 배를 띄웠다.
+"""
+fun = "아폴로도로스는 테세우스가 칼이 아니라 주먹으로 이겼다고 적었다."
+note = "참고: 처음 읽는 그리스 로마 신화 9권 4장 「괴물 미노타우로스」, 6권 4장 「괴물을 물리친 테세우스」"
+sources = ["apollodorus.library E.1.8-E.1.9", "ovid.metamorphoses 8.169-8.176"]
+
+[[event]]
+id = "ariadne-naxos"
+name_ko = "낙소스에 남은 아리아드네"
+era = 5
+seq = 800
+span = "days"
+caused_by = ["minotauros-slain"]
+place = "naxos"
+cast = [
+  { figure = "ariadne", role = "피해" },
+  { figure = "theseus", role = "주인공" },
+  { figure = "dionysos", role = "상대" },
+]
+oneliner = "배는 밤에 낙소스에 닿았고, 아리아드네는 그 섬에 남았다."
+body = """
+크레타를 떠난 배는 밤에 낙소스 섬에 닿았다.
+디오니소스가 아리아드네를 보고 사랑하게 되었다.
+디오니소스는 아리아드네를 데려갔다.
+테세우스는 아리아드네를 잃은 슬픔에 잠긴 채 아테네로 떠났다.
+"""
+fun = "아리아드네의 관은 하늘의 북쪽왕관자리가 되었다."
+note = "주 서술은 아폴로도로스(디오니소스가 데려감). 오비디우스(버려둠)와 호메로스(아르테미스가 죽임)는 variants."
+sources = ["apollodorus.library E.1.9-E.1.10", "ovid.metamorphoses 8.174-8.182", "homer.odyssey 11.321-11.325"]
+
+[[event.variants]]
+source = "ovid.metamorphoses 8.174-8.182"
+text = "오비디우스는 테세우스가 아리아드네를 섬에 버려두고 떠났다고 한다. 디오니소스가 우는 아리아드네를 위로하고 관을 별자리로 만들었다."
+
+[[event.variants]]
+source = "homer.odyssey 11.321-11.325"
+text = "호메로스는 아르테미스가 디아 섬에서 아리아드네를 죽였다고 한다. 디오니소스가 그렇게 시켰다는 것이다."
+
+[[event]]
+id = "aigeus-dies"
+name_ko = "검은 돛과 아이게우스의 죽음"
+era = 5
+seq = 810
+span = "moment"
+caused_by = ["ariadne-naxos", "black-sail-departure"]
+place = "athens"
+cast = [
+  { figure = "aigeus", role = "피해" },
+  { figure = "theseus", role = "등장" },
+]
+oneliner = "돛을 바꾸는 것을 잊었다."
+body = """
+테세우스는 아리아드네를 잃은 슬픔에 흰 돛을 올리는 것을 잊었다.
+아이게우스는 아크로폴리스에서 바다를 보고 있었다.
+검은 돛이 보이자 아들이 죽은 줄 알았다.
+아이게우스는 스스로 목숨을 끊었다.
+"""
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 9권 4장 「괴물 미노타우로스」. '몸을 던졌다' 대신 '스스로 목숨을 끊었다' 까지."
+sources = ["apollodorus.library E.1.10", "pausanias.greece 1.22.5"]
+
+[[event]]
+id = "theseus-becomes-king"
+name_ko = "테세우스가 아테네의 왕이 되다"
+era = 5
+seq = 820
+span = "years"
+after = ["aigeus-dies"]
+place = "athens"
+cast = [
+  { figure = "theseus", role = "주인공" },
+]
+oneliner = "아버지의 자리를 물려받고 맞서는 자들을 모두 이겼다."
+body = """
+테세우스가 아테네의 왕이 되었다.
+아이게우스의 동생 팔라스의 아들 쉰 명이 왕 자리를 노렸다.
+테세우스는 그들과 싸워 이겼다.
+맞서는 사람이 더는 없었고, 아테네는 테세우스의 것이 되었다.
+"""
+fun = "아테네 사람들은 테세우스의 이야기를 아크로폴리스에 청동으로 새겨 두었다."
+sources = ["apollodorus.library E.1.11", "pausanias.greece 1.27.8"]
+
+[[event]]
+id = "daidalos-ikaros-wings"
+name_ko = "다이달로스와 이카로스가 날개로 날아가다"
+era = 5
+seq = 830
+span = "days"
+caused_by = ["minotauros-slain"]
+place = "knossos"
+cast = [
+  { figure = "daidalos", role = "주인공" },
+  { figure = "ikaros", role = "피해" },
+  { figure = "minos", role = "상대" },
+]
+oneliner = "미노스는 땅과 바다를 막았지만 하늘은 막지 못했다."
+body = """
+테세우스가 달아나자 미노스는 다이달로스와 이카로스를 미로에 가두었다.
+다이달로스는 새 깃털을 실과 밀랍으로 엮어 날개 두 벌을 만들었다.
+높이도 낮게도 날지 말고 가운데로만 날라고 일렀다.
+이카로스는 신이 나서 자꾸 높이 올랐다.
+해가 밀랍을 녹여 날개가 떨어지고, 이카로스는 바다에 빠졌다.
+"""
+fun = "다이달로스는 아들을 섬에 묻었다. 그 섬은 이카리아, 그 바다는 이카리아 해가 되었다."
+note = "참고: 처음 읽는 그리스 로마 신화 10권 4장 「다이달로스와 이카로스」"
+sources = ["apollodorus.library E.1.12-E.1.13", "ovid.metamorphoses 8.183-8.235"]
+
+[[event.variants]]
+source = "pausanias.greece 9.11.4-9.11.5"
+text = "파우사니아스는 두 사람이 날지 않고 처음 만든 돛배로 달아났다고 한다. 이카로스의 배가 뒤집혀 빠졌고, 헤라클레스가 시신을 찾아 묻어 주었다."
+
+[[event]]
+id = "daidalos-sikelia"
+name_ko = "시켈리아의 다이달로스와 미노스의 죽음"
+era = 5
+seq = 840
+span = "season"
+after = ["daidalos-ikaros-wings"]
+place = "sikelia"
+cast = [
+  { figure = "daidalos", role = "주인공" },
+  { figure = "minos", role = "상대" },
+  { figure = "kokalos", role = "도움" },
+]
+oneliner = "고둥에 실을 꿴 개미가 숨은 사람을 드러냈다."
+body = """
+다이달로스는 시켈리아의 카미코스에 닿아 코칼로스 왕의 궁에 숨었다.
+미노스는 고둥 하나를 들고 다니며 실을 꿰는 사람을 찾았다.
+코칼로스가 받은 고둥을 다이달로스가 개미에 실을 묶어 꿰어 냈다.
+미노스는 그것을 보고 다이달로스를 내놓으라고 했다.
+그러나 코칼로스의 딸들이 미노스를 죽였다.
+"""
+fun = "코칼로스의 딸들은 다이달로스의 솜씨를 너무 사랑해 그를 지켰다. 파우사니아스가 그렇게 적었다."
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 10권 4장 「자유를 되찾은 다이달로스」. 끓는 물 등 죽음의 상세는 쓰지 않는다."
+sources = ["apollodorus.library E.1.13-E.1.15", "pausanias.greece 7.4.6"]
+
+[[event]]
+id = "centaur-wedding"
+name_ko = "페이리토오스의 결혼식과 켄타우로스의 싸움"
+era = 5
+seq = 850
+span = "moment"
+after = ["theseus-becomes-king"]
+place = "larissa"
+cast = [
+  { figure = "peirithoos", role = "주인공" },
+  { figure = "theseus", role = "도움" },
+  { figure = "kentauroi", role = "상대" },
+]
+oneliner = "술을 처음 마신 켄타우로스들이 신부를 끌고 가려 했다."
+body = """
+테살리아의 페이리토오스가 히포다메이아와 결혼했다.
+신부의 친척인 켄타우로스들도 잔치에 불렀다.
+술을 마셔 본 적이 없는 켄타우로스들은 금세 취했다.
+신부가 들어오자 켄타우로스들이 신부를 붙잡아 끌고 가려 했다.
+페이리토오스와 테세우스가 무기를 들고 나서 켄타우로스들을 이겼다.
+"""
+fun = "테세우스는 페이리토오스를 '내 영혼의 더 나은 반쪽'이라 불렀다. 오비디우스가 그렇게 적었다."
+sensitivity = "soften"
+note = "kentauroi 는 HER 소유(group). 히포다메이아는 등록부에 없어 이름만."
+sources = ["apollodorus.library E.1.21", "ovid.metamorphoses 12.210-12.535", "ovid.metamorphoses 8.303-8.306"]
+
+[[event]]
+id = "phaidra-hippolytos"
+name_ko = "파이드라의 거짓말과 히폴리토스의 죽음"
+era = 5
+seq = 860
+span = "days"
+after = ["theseus-becomes-king"]
+place = "troizen"
+cast = [
+  { figure = "hippolytos", role = "피해" },
+  { figure = "phaidra", role = "상대" },
+  { figure = "theseus", role = "상대" },
+  { figure = "poseidon", role = "등장" },
+]
+oneliner = "새어머니가 거짓말을 해서 아버지가 아들을 저주했다."
+body = """
+테세우스는 미노스의 딸 파이드라를 두 번째 아내로 맞았다.
+파이드라는 테세우스의 아들 히폴리토스를 미워하게 되어 거짓말을 했다.
+테세우스는 그 말을 믿고 포세이돈에게 아들을 벌해 달라고 빌었다.
+히폴리토스가 바닷가에서 마차를 달릴 때 포세이돈이 황소를 보냈다.
+말들이 놀라 마차가 부서지고 히폴리토스는 죽었다.
+"""
+fun = "트로이젠 사람들은 히폴리토스가 하늘의 마차부 별자리가 되었다고 말했다."
+sensitivity = "soften"
+note = "E.1.18 의 사랑 고백·거짓 고발 내용·파이드라의 자살은 쓰지 않는다. 장소는 아폴로도로스가 말하지 않아 히폴리토스의 신전이 있는 트로이젠(파우사니아스 2.32.1)으로."
+sources = ["apollodorus.library E.1.17-E.1.19", "pausanias.greece 2.32.1"]
+
+[[event]]
+id = "theseus-hades"
+name_ko = "테세우스와 페이리토오스가 저승에 내려가 갇히다"
+era = 5
+seq = 870
+span = "years"
+after = ["centaur-wedding"]
+place = "hades-realm"
+cast = [
+  { figure = "theseus", role = "주인공" },
+  { figure = "peirithoos", role = "주인공" },
+  { figure = "hades", role = "상대" },
+  { figure = "persephone", role = "등장" },
+  { figure = "herakles", role = "도움" },
+]
+oneliner = "잔치인 줄 알고 앉은 의자에서 일어날 수 없었다."
+body = """
+두 친구는 제우스의 딸을 아내로 삼자고 약속했다.
+페이리토오스는 저승의 여왕 페르세포네를 골라, 둘은 저승으로 내려갔다.
+하데스는 잔치를 열어 주는 척하며 '잊음의 의자'에 앉게 했다.
+두 사람은 의자에 붙어 뱀에 감겼다.
+뒷날 헤라클레스가 테세우스만 데리고 올라갔다.
+"""
+fun = "오디세우스는 저승에서 테세우스와 페이리토오스를 보고 싶었다. 그러나 무서워서 그냥 돌아왔다."
+note = "헤라클레스가 풀어 준 일은 HER 의 케르베로스 사건이 다룬다. 헬레네 납치(E.1.23)는 쓰지 않는다. HER 의 케르베로스 사건 seq 가 870 보다 앞이면 시간축에서 구출이 하강보다 먼저가 된다 — 조정 필요."
+sources = ["apollodorus.library E.1.23-E.1.24", "homer.odyssey 11.631", "pausanias.greece 1.17.4"]

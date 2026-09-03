@@ -1,0 +1,118 @@
+# era 3 — 사람의 시대가 열리다.
+
+[[event]]
+id = "fire-stolen"
+name_ko = "프로메테우스가 불을 훔치다"
+era = 3
+seq = 10
+span = "moment"
+place = "olympus-home"
+cast = [
+  { figure = "prometheus", role = "주인공" },
+  { figure = "zeus", role = "상대" },
+]
+oneliner = "프로메테우스가 신들의 불을 몰래 가져와 사람에게 주었다."
+body = """
+제우스는 사람에게 불을 주지 않기로 했다.
+프로메테우스는 사람이 추위와 어둠 속에 있는 것을 보다 못했다.
+속이 빈 막대에 불을 숨겨 몰래 가져와 사람에게 주었다.
+사람은 불로 밥을 짓고 쇠를 다루기 시작했다.
+"""
+fun = "불이 있어야 요리도 도자기도 쇠도 만들 수 있다. 신화는 불 하나로 사람의 모든 기술을 설명한다."
+note = "장소는 훔친 곳(신들의 집)만 적는다. 불을 건네준 곳은 원전이 말하지 않는다."
+sources = ["hesiod.theogony 561-569", "hesiod.works 42-58", "apollodorus.library 1.7.1"]
+
+[[event]]
+id = "pandora-jar"
+name_ko = "판도라의 항아리"
+era = 3
+seq = 20
+span = "moment"
+after = ["fire-stolen"]
+cast = [
+  { figure = "pandora", role = "주인공" },
+  { figure = "zeus", role = "상대" },
+  { figure = "epimetheus", role = "등장" },
+  { figure = "hephaistos", role = "도움" },
+  { figure = "prometheus", role = "등장" },
+]
+oneliner = "열지 말라는 항아리를 열자 나쁜 것들이 세상으로 나왔다."
+body = """
+제우스는 불을 갚으려고 헤파이스토스에게 판도라를 만들게 했다.
+프로메테우스는 동생에게 제우스의 선물을 받지 말라고 했지만, 동생은 그 말을 잊었다.
+판도라는 열지 말라고 받은 항아리의 뚜껑을 열었다.
+병과 걱정과 슬픔이 쏟아져 나왔고, 뚜껑을 닫았을 때 안에는 희망만 남아 있었다.
+"""
+fun = "항아리를 상자로 잘못 옮긴 것은 500년쯤 전 사람이다. 원전에는 큰 항아리, 피토스라고 되어 있다."
+caused_by = ["fire-stolen"]
+sources = ["hesiod.works 59-105", "hesiod.theogony 570-593"]
+
+[[event]]
+id = "prometheus-punished"
+name_ko = "프로메테우스가 벌을 받다"
+era = 3
+seq = 30
+span = "age"
+place = "kaukasos"
+cast = [
+  { figure = "prometheus", role = "피해" },
+  { figure = "zeus", role = "상대" },
+]
+oneliner = "산에 묶인 프로메테우스에게 독수리가 매일 왔다."
+body = """
+제우스는 프로메테우스를 먼 산의 바위에 사슬로 묶었다.
+독수리가 날마다 와서 간을 먹었다.
+프로메테우스는 죽지 않는 몸이라 간이 밤새 다시 자랐다.
+그래서 벌이 끝나지 않았다.
+"""
+fun = "오랜 뒤 헤라클레스가 지나가다 독수리를 활로 쏘아 프로메테우스를 풀어 준다."
+caused_by = ["fire-stolen"]
+note = "끝은 era 5 의 prometheus-freed 가 after 로 붙잡는다. 그래서 open 을 떼었다 — 끝을 모르는 것이 아니라 헤라클레스가 끝낸다."
+sources = ["hesiod.theogony 521-534", "apollodorus.library 1.7.1", "apollodorus.library 2.5.11"]
+
+[[event]]
+id = "great-flood"
+name_ko = "큰 홍수"
+era = 3
+seq = 40
+span = "days"
+place = "parnassos"
+cast = [
+  { figure = "zeus", role = "주인공" },
+  { figure = "deukalion", role = "주인공" },
+  { figure = "pyrrha", role = "주인공" },
+  { figure = "prometheus", role = "도움" },
+]
+oneliner = "제우스가 비를 내려 세상을 덮었고, 두 사람만 살아남았다."
+body = """
+제우스는 사람들이 나빠졌다고 보고 온 세상에 비를 내렸다.
+프로메테우스가 아들 데우칼리온에게 미리 알려 주었다.
+데우칼리온은 큰 나무 상자를 만들어 아내 피라와 함께 탔다.
+아홉 날을 떠다닌 뒤 파르나소스 산에 닿았고, 남은 사람은 둘뿐이었다.
+"""
+caused_by = ["pandora-jar"]
+sources = ["apollodorus.library 1.7.2", "ovid.metamorphoses 1.253-1.347"]
+
+[[event]]
+id = "stones-to-people"
+name_ko = "돌에서 사람이 나다"
+era = 3
+seq = 50
+span = "days"
+after = ["great-flood"]
+place = "delphi"
+cast = [
+  { figure = "deukalion", role = "주인공" },
+  { figure = "pyrrha", role = "주인공" },
+  { figure = "themis", role = "도움" },
+]
+oneliner = "어깨 뒤로 던진 돌이 사람이 되었다."
+body = """
+둘만 남은 세상에서 데우칼리온과 피라는 신에게 어떻게 해야 하는지 물었다.
+어머니의 뼈를 어깨 뒤로 던지라는 대답이 왔다.
+두 사람은 어머니가 땅이고 뼈가 돌이라고 알아냈다.
+던진 돌은 땅에 닿자 사람이 되었다. 그래서 지금 사람들이 있다.
+"""
+fun = "이 이야기에서 사람은 돌에서 나왔다. 그리스 말로 사람(laos)과 돌(laas)의 소리가 비슷하다."
+caused_by = ["great-flood"]
+sources = ["apollodorus.library 1.7.2", "ovid.metamorphoses 1.348-1.415"]

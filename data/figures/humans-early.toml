@@ -1,0 +1,52 @@
+# era 3 — 사람의 시대가 열리다. 프로메테우스, 판도라, 큰 홍수.
+
+[[figure]]
+id = "pandora"
+name_ko = "판도라"
+name_grc = "Pandora"
+kind = "human"
+era = 3
+spouses = ["epimetheus"]
+oneliner = "신들이 만들어 사람들에게 보낸 첫 여자. 열지 말라는 항아리를 열었다."
+body = """
+프로메테우스가 불을 훔친 것을 갚으려고 제우스가 만들게 했다.
+헤파이스토스가 흙으로 모양을 만들고, 신들이 하나씩 선물을 얹었다.
+이름은 모든 신에게 선물을 받았다는 뜻이다.
+열지 말라고 받은 항아리를 열었고, 온갖 나쁜 것이 세상에 퍼졌다.
+"""
+fun = "판도라가 연 것은 상자가 아니라 큰 항아리다. 그리스 말로 피토스라고 한다. 상자로 잘못 옮겨진 것이 500년쯤 전이다."
+sources = ["hesiod.works 42-105", "hesiod.theogony 570-593"]
+
+[[figure]]
+id = "deukalion"
+name_ko = "데우칼리온"
+name_grc = "Deukalion"
+kind = "human"
+era = 3
+parents = ["prometheus"]
+spouses = ["pyrrha"]
+oneliner = "큰 홍수에서 살아남은 남자. 프로메테우스의 아들이다."
+body = """
+제우스가 사람들에게 화가 나 온 세상에 비를 내렸다.
+프로메테우스가 미리 알려 주어, 데우칼리온은 큰 나무 상자를 만들었다.
+아홉 날을 떠다닌 뒤 파르나소스 산에 닿았다.
+살아남은 사람은 데우칼리온과 아내 피라 둘뿐이었다.
+"""
+fun = "홍수에서 배를 만들어 살아남는 이야기는 그리스뿐 아니라 여러 곳에 있다."
+sources = ["apollodorus.library 1.7.2", "ovid.metamorphoses 1.253-1.415"]
+
+[[figure]]
+id = "pyrrha"
+name_ko = "피라"
+name_grc = "Pyrrha"
+kind = "human"
+era = 3
+parents = ["epimetheus", "pandora"]
+spouses = ["deukalion"]
+oneliner = "홍수에서 살아남은 여자. 판도라의 딸이다."
+body = """
+에피메테우스와 판도라의 딸이다.
+데우칼리온과 함께 상자를 타고 살아남았다.
+둘만 남은 세상에서 어떻게 해야 하는지 신에게 물었다.
+"""
+sources = ["apollodorus.library 1.7.2", "ovid.metamorphoses 1.350-1.415"]

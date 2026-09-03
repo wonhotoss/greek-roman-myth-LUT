@@ -1,0 +1,745 @@
+# era 5 — 큰 영웅들. 헤라클레스의 일생에 나오는 인물들.
+# 계보를 위해 페르세우스의 아들들(era 4)과 괴물의 어머니 에키드나(era 0),
+# 케이론·헤스페리데스·아켈로오스(era 1)도 여기 둔다.
+# 뼈대는 아폴로도로스 2.4.5~2.7.8, 살은 헤시오도스·호메로스·오비디우스·파우사니아스.
+
+# ---------- 페르세우스의 자손 ----------
+
+[[figure]]
+id = "elektryon"
+name_ko = "엘렉트리온"
+name_grc = "Elektryon"
+kind = "human"
+era = 4
+parents = ["perseus", "andromeda"]
+home = "mycenae"
+oneliner = "알크메네의 아버지. 미케네의 왕이었다."
+body = """
+페르세우스의 아들로 미케네를 다스렸다.
+섬에서 온 도둑들이 소를 훔쳐 가고, 아들들이 그들과 싸우다 죽었다.
+왕은 나라와 딸 알크메네를 암피트리온에게 맡겼다.
+소 한 마리가 덤벼들자 암피트리온이 몽둥이를 던졌다.
+몽둥이가 소의 뿔에 튀어 왕을 맞혔고, 왕은 죽었다.
+"""
+sources = ["apollodorus.library 2.4.5-2.4.6"]
+
+[[figure]]
+id = "sthenelos"
+name_ko = "스테넬로스"
+name_grc = "Sthenelos"
+kind = "human"
+era = 4
+parents = ["perseus", "andromeda"]
+home = "mycenae"
+oneliner = "에우리스테우스의 아버지. 미케네와 티린스를 차지했다."
+body = """
+페르세우스의 아들이다.
+형 엘렉트리온이 죽자 그 일을 핑계로 암피트리온을 쫓아냈다.
+그리고 미케네와 티린스의 왕 자리를 스스로 차지했다.
+그의 아들 에우리스테우스가 헤라클레스에게 일을 시키는 왕이 된다.
+"""
+sources = ["apollodorus.library 2.4.5-2.4.6", "homer.iliad 19.95-133"]
+
+[[figure]]
+id = "alkmene"
+name_ko = "알크메네"
+name_grc = "Alkmene"
+aka = ["알크메나"]
+kind = "human"
+era = 5
+parents = ["elektryon"]
+spouses = ["amphitryon"]
+home = "thebes"
+oneliner = "헤라클레스의 어머니. 제우스가 찾아온 미케네의 공주."
+body = """
+아버지가 죽은 뒤 암피트리온을 따라 테베로 갔다.
+오빠들의 원수를 갚아 주면 아내가 되겠다고 했다.
+암피트리온이 싸우러 간 사이 제우스가 그의 모습으로 찾아왔다.
+쌍둥이를 낳았다.
+헤라클레스는 제우스의, 이피클레스는 암피트리온의 아들이다.
+"""
+fun = "헤라는 알크메네를 미워해서 아기가 태어나는 것을 늦추기까지 했다."
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 2권 1장 「영웅 헤라클레스의 어머니」"
+sources = ["apollodorus.library 2.4.5-2.4.8", "homer.iliad 19.95-133", "ovid.metamorphoses 9.273-323"]
+
+[[figure]]
+id = "amphitryon"
+name_ko = "암피트리온"
+name_grc = "Amphitryon"
+kind = "human"
+era = 5
+spouses = ["alkmene"]
+home = "thebes"
+oneliner = "알크메네의 남편. 헤라클레스를 키운 아버지다."
+body = """
+페르세우스의 손자다.
+실수로 알크메네의 아버지를 죽게 하고 미케네에서 쫓겨났다.
+테베로 가서 알크메네의 오빠들의 원수를 갚아 주었다.
+헤라클레스에게 수레 몰기를 가르쳤다.
+뒷날 테베를 지키는 싸움에서 죽었다.
+"""
+note = "아버지 알카이오스는 등록부에 없어 계보를 비웠다."
+sources = ["apollodorus.library 2.4.5-2.4.11"]
+
+[[figure]]
+id = "herakles"
+name_ko = "헤라클레스"
+name_grc = "Herakles"
+name_la = "Hercules"
+aka = ["헤르쿨레스", "허큘리스", "Hercules", "알키데스"]
+kind = "hero"
+era = 5
+parents = ["zeus", "alkmene"]
+spouses = ["megara", "deianeira"]
+symbols = ["몽둥이", "사자 가죽", "활"]
+home = "tiryns"
+oneliner = "열두 가지 일을 해낸 가장 힘센 영웅. 죽은 뒤 신이 되었다."
+body = """
+제우스와 알크메네의 아들이다.
+헤라는 태어나기 전부터 헤라클레스를 미워해 평생 괴롭혔다.
+에우리스테우스 왕이 시킨 열두 가지 일을 모두 해냈다.
+몽둥이와 사자 가죽, 독을 바른 화살이 그의 무기였다.
+로마에서는 헤르쿨레스라고 불렀다.
+"""
+fun = "원래 이름은 알키데스였다. 델포이에서 처음 헤라클레스라는 이름을 받았다."
+note = "참고: 처음 읽는 그리스 로마 신화 8권 「영웅 헤라클레스」 전체. 마지막 아내 헤베는 등록부에 없어 spouses 에 넣지 않았다."
+sources = ["apollodorus.library 2.4.8-2.7.7", "homer.odyssey 11.601-627", "ovid.metamorphoses 9.134-272"]
+
+[[figure]]
+id = "iphikles"
+name_ko = "이피클레스"
+name_grc = "Iphikles"
+kind = "human"
+era = 5
+parents = ["amphitryon", "alkmene"]
+home = "thebes"
+oneliner = "헤라클레스의 쌍둥이 동생. 이올라오스의 아버지다."
+body = """
+헤라클레스보다 하룻밤 늦게 태어났다.
+요람에 뱀이 왔을 때 이피클레스는 달아났다고 한다.
+아들 이올라오스가 헤라클레스의 가장 가까운 동무가 된다.
+뒷날 헤라클레스와 함께 싸우다 죽었다.
+"""
+sources = ["apollodorus.library 2.4.8", "apollodorus.library 2.4.11", "apollodorus.library 2.7.3"]
+
+[[figure]]
+id = "iolaos"
+name_ko = "이올라오스"
+name_grc = "Iolaos"
+kind = "hero"
+era = 5
+parents = ["iphikles"]
+home = "thebes"
+oneliner = "히드라를 이길 때 불을 들고 도운 헤라클레스의 조카."
+body = """
+헤라클레스의 수레를 몰고 함께 다녔다.
+히드라의 머리가 잘린 자리를 불로 지져 다시 나지 못하게 했다.
+에우리스테우스는 도움을 받았다며 그 일을 세어 주지 않았다.
+헤라클레스는 과업을 마친 뒤 메가라를 이올라오스에게 아내로 주었다.
+"""
+fun = "오비디우스는 헤베가 이올라오스를 다시 젊게 만들어 주었다고 한다."
+sources = ["apollodorus.library 2.4.11", "apollodorus.library 2.5.2", "apollodorus.library 2.6.1", "hesiod.theogony 313-318", "ovid.metamorphoses 9.394-401"]
+
+[[figure]]
+id = "eurystheus"
+name_ko = "에우리스테우스"
+name_grc = "Eurystheus"
+kind = "human"
+era = 5
+parents = ["sthenelos"]
+home = "mycenae"
+oneliner = "헤라클레스에게 열두 가지 일을 시킨 미케네의 왕."
+body = """
+헤라가 손을 써서 헤라클레스보다 먼저 태어났다.
+그래서 제우스가 약속한 왕 자리를 대신 차지했다.
+델포이의 말대로 헤라클레스가 그를 섬기게 되었다.
+겁이 많아서 헤라클레스가 오면 땅속 청동 항아리에 숨었다고 한다.
+명령은 늘 심부름꾼 코프레우스를 시켜 전했다.
+"""
+fun = "헤라클레스가 잡아 온 괴물을 성문 안으로 들이지도 못하게 했다."
+sources = ["apollodorus.library 2.4.5", "apollodorus.library 2.4.12-2.5.1", "homer.iliad 19.95-133", "homer.iliad 15.639-640"]
+
+[[figure]]
+id = "admete"
+name_ko = "아드메테"
+name_grc = "Admete"
+kind = "human"
+era = 5
+parents = ["eurystheus"]
+home = "mycenae"
+oneliner = "아마존 여왕의 띠를 갖고 싶어 한 에우리스테우스의 딸."
+body = """
+아마조네스의 여왕이 가진 아레스의 띠를 갖고 싶어 했다.
+그래서 헤라클레스가 아홉째 일로 그 띠를 가져오게 되었다.
+헤라클레스는 띠를 가져와 에우리스테우스에게 주었다.
+"""
+sources = ["apollodorus.library 2.5.9"]
+
+# ---------- 테베와 첫 가족 ----------
+
+[[figure]]
+id = "megara"
+name_ko = "메가라"
+name_grc = "Megara"
+kind = "human"
+era = 5
+parents = ["kreon"]
+spouses = ["herakles"]
+home = "thebes"
+oneliner = "헤라클레스의 첫 아내. 테베의 공주였다."
+body = """
+테베의 왕 크레온의 큰딸이다.
+헤라클레스가 테베를 지켜 준 상으로 아내가 되었다.
+세 아들을 낳았다.
+헤라가 헤라클레스를 미치게 했을 때 아이들을 잃었다.
+뒷날 헤라클레스는 메가라를 이올라오스에게 아내로 주었다.
+"""
+sensitivity = "soften"
+note = "아버지 크레온은 THE 소유 id kreon(테베의 크레온)을 가리킨다. 아폴로도로스 2.4.6·2.4.11 의 크레온과 같은 인물."
+sources = ["apollodorus.library 2.4.11-2.4.12", "apollodorus.library 2.6.1", "homer.odyssey 11.269-270"]
+
+# ---------- 칼리돈과 마지막 가족 ----------
+
+[[figure]]
+id = "oineus"
+name_ko = "오이네우스"
+name_grc = "Oineus"
+kind = "human"
+era = 5
+home = "kalydon"
+oneliner = "데이아네이라의 아버지. 칼리돈의 왕이다."
+body = """
+칼리돈을 다스렸다.
+딸을 두고 헤라클레스와 강의 신 아켈로오스가 씨름을 했다.
+이긴 헤라클레스가 사위가 되었다.
+아들 멜레아그로스는 칼리돈의 멧돼지 사냥으로 이름난 영웅이다.
+"""
+sources = ["apollodorus.library 2.7.5", "apollodorus.library 1.8.1-1.8.2", "ovid.metamorphoses 9.1-10"]
+
+[[figure]]
+id = "deianeira"
+name_ko = "데이아네이라"
+name_grc = "Deianeira"
+aka = ["데이아니라"]
+kind = "human"
+era = 5
+parents = ["oineus"]
+spouses = ["herakles"]
+home = "kalydon"
+oneliner = "헤라클레스의 아내. 사랑을 지키려다 남편을 죽게 했다."
+body = """
+칼리돈의 공주로, 헤라클레스가 씨름에서 이겨 아내로 맞았다.
+네소스가 죽으면서 준 피를 사랑의 약이라 믿고 간직했다.
+남편이 이올레를 데려온다는 말을 듣고 그 피를 옷에 발라 보냈다.
+그 옷이 헤라클레스를 죽게 하자 스스로 목숨을 끊었다.
+"""
+sensitivity = "soften"
+note = "참고: 처음 읽는 그리스 로마 신화 8권 3장 「데이아네이라와의 결혼」, 4장 「네소스의 복수」"
+sources = ["apollodorus.library 2.7.5-2.7.7", "ovid.metamorphoses 9.101-158"]
+
+[[figure]]
+id = "hyllos"
+name_ko = "힐로스"
+name_grc = "Hyllos"
+kind = "human"
+era = 5
+parents = ["herakles", "deianeira"]
+spouses = ["iole"]
+oneliner = "헤라클레스와 데이아네이라의 큰아들."
+body = """
+헤라클레스가 죽기 전에 이올레와 결혼하라는 부탁을 받았다.
+다 자란 뒤 그 말대로 했다.
+아버지가 신이 된 뒤 형제들과 함께 에우리스테우스에게 쫓겼다.
+"""
+sources = ["apollodorus.library 2.7.7-2.8.1", "ovid.metamorphoses 9.279-280"]
+
+[[figure]]
+id = "iole"
+name_ko = "이올레"
+name_grc = "Iole"
+kind = "human"
+era = 5
+parents = ["eurytos"]
+oneliner = "활쏘기 내기의 상이었던 오이칼리아의 공주."
+body = """
+아버지는 활쏘기로 자기를 이기는 사람에게 딸을 주겠다고 했다.
+헤라클레스가 이겼지만 아버지는 약속을 지키지 않았다.
+뒷날 헤라클레스가 오이칼리아를 무너뜨리고 이올레를 데려갔다.
+그 일이 데이아네이라의 걱정을 불렀다.
+헤라클레스의 뜻대로 힐로스의 아내가 되었다.
+"""
+sources = ["apollodorus.library 2.6.1", "apollodorus.library 2.7.7", "ovid.metamorphoses 9.140-141", "ovid.metamorphoses 9.279-280"]
+
+[[figure]]
+id = "eurytos"
+name_ko = "에우리토스"
+name_grc = "Eurytos"
+kind = "human"
+era = 5
+oneliner = "헤라클레스에게 활을 가르친 오이칼리아의 왕."
+body = """
+활쏘기로 이름난 왕으로, 어린 헤라클레스에게 활을 가르쳤다.
+딸 이올레를 활쏘기 내기의 상으로 내걸었다.
+헤라클레스가 이겼는데도 딸을 주지 않았다.
+뒷날 헤라클레스가 군대를 이끌고 와 그를 죽이고 성을 빼앗았다.
+"""
+fun = "그의 활은 아들 이피토스를 거쳐 오디세우스의 손에 들어갔다. 오디세우스가 마지막에 쓴 활이 이것이다."
+note = "오이칼리아는 위치가 다투어져 장소를 만들지 않았다."
+sources = ["apollodorus.library 2.4.9", "apollodorus.library 2.6.1", "apollodorus.library 2.7.7", "homer.odyssey 8.223-228", "homer.odyssey 21.11-41"]
+
+[[figure]]
+id = "iphitos"
+name_ko = "이피토스"
+name_grc = "Iphitos"
+kind = "human"
+era = 5
+parents = ["eurytos"]
+oneliner = "헤라클레스의 친구였다가 그의 손에 죽은 에우리토스의 아들."
+body = """
+아버지와 달리 이올레를 헤라클레스에게 주자고 했다.
+소가 없어졌을 때 헤라클레스를 의심하지 않고 함께 찾자고 했다.
+헤라클레스가 다시 미쳐서 손님인 그를 죽였다.
+그 죄 때문에 헤라클레스는 종으로 팔려 가게 된다.
+"""
+fun = "이피토스는 죽기 전 오디세우스에게 아버지의 활을 선물했다."
+sensitivity = "soften"
+sources = ["apollodorus.library 2.6.1-2.6.2", "homer.odyssey 21.11-41"]
+
+[[figure]]
+id = "lichas"
+name_ko = "리카스"
+name_grc = "Lichas"
+kind = "human"
+era = 5
+oneliner = "데이아네이라의 옷을 헤라클레스에게 가져다 준 심부름꾼."
+body = """
+헤라클레스의 심부름꾼이었다.
+제사에 입을 옷을 가져오라는 말을 듣고 트라키스로 갔다.
+데이아네이라가 준 옷에 독이 있는 줄 모르고 가져다 주었다.
+고통에 미친 헤라클레스가 그를 바다로 던졌다.
+오비디우스는 그가 바다에서 돌이 되었다고 한다.
+"""
+sources = ["apollodorus.library 2.7.7", "ovid.metamorphoses 9.155-158", "ovid.metamorphoses 9.211-229"]
+
+[[figure]]
+id = "akheloos"
+name_ko = "아켈로오스"
+name_grc = "Acheloos"
+aka = ["아켈로우스"]
+kind = "god"
+era = 1
+parents = ["okeanos", "tethys"]
+home = "kalydon"
+oneliner = "데이아네이라를 두고 헤라클레스와 씨름한 강의 신."
+body = """
+칼리돈 땅을 지나 흐르는 강의 신이다.
+데이아네이라를 아내로 얻으려고 헤라클레스와 씨름했다.
+뱀으로, 황소로 모습을 바꾸어 싸웠지만 졌다.
+헤라클레스가 황소의 뿔 하나를 꺾었다.
+님프들이 그 뿔에 과일을 채워 풍요의 뿔로 삼았다.
+"""
+fun = "뿔을 되찾으려고 무엇이든 나오는 아말테이아의 뿔을 대신 주었다고도 한다."
+sources = ["hesiod.theogony 337-345", "apollodorus.library 2.7.5", "ovid.metamorphoses 9.1-100"]
+
+[[figure]]
+id = "nessos"
+name_ko = "네소스"
+name_grc = "Nessos"
+kind = "monster"
+era = 5
+oneliner = "강을 건네주다가 데이아네이라를 붙잡아 간 켄타우로스."
+body = """
+에우에노스 강에서 돈을 받고 사람을 건네주었다.
+헤라클레스의 아내를 건네주다가 억지로 데려가려 했다.
+헤라클레스가 독 화살로 네소스를 쏘았다.
+네소스는 죽으면서 자기 피가 사랑의 약이라고 데이아네이라를 속였다.
+그 거짓말이 뒷날 헤라클레스를 죽게 한다.
+"""
+sensitivity = "soften"
+sources = ["apollodorus.library 2.5.4", "apollodorus.library 2.7.6", "ovid.metamorphoses 9.101-133"]
+
+[[figure.parents_variant]]
+source = "ovid.metamorphoses 9.123-124"
+parents = ["ixion"]
+text = "오비디우스는 네소스를 익시온의 아들이라고 한다."
+
+# ---------- 리디아 ----------
+
+[[figure]]
+id = "omphale"
+name_ko = "옴팔레"
+name_grc = "Omphale"
+kind = "human"
+era = 5
+oneliner = "헤라클레스를 종으로 산 리디아의 여왕."
+body = """
+남편 트몰로스가 죽은 뒤 리디아를 다스렸다.
+헤르메스가 헤라클레스를 팔 때 그를 사서 종으로 삼았다.
+헤라클레스는 세 해 동안 여왕의 종으로 일했다.
+그동안 헤라클레스는 도둑 케르코페스를 붙잡았다.
+"""
+sensitivity = "soften"
+note = "리디아는 등록부에 없어 장소를 비웠다."
+sources = ["apollodorus.library 2.6.2-2.6.3"]
+
+# ---------- 괴물들 ----------
+
+[[figure]]
+id = "echidna"
+name_ko = "에키드나"
+name_grc = "Echidna"
+kind = "monster"
+era = 0
+parents = ["phorkys", "keto"]
+spouses = ["typhon"]
+oneliner = "위는 님프, 아래는 뱀인 괴물. 많은 괴물의 어머니다."
+body = """
+얼굴은 아름다운 님프인데 몸의 아래쪽은 큰 뱀이다.
+땅 밑 깊은 굴에 살면서 늙지도 죽지도 않는다.
+티폰과 짝이 되어 오르트로스, 케르베로스, 히드라를 낳았다.
+키마이라와 스핑크스, 네메아의 사자도 그 자식이라고 한다.
+"""
+fun = "헤라클레스가 이긴 괴물 넷이 에키드나의 자식이다."
+note = "참고: 처음 읽는 그리스 로마 신화 6권 1장 「괴물 부부의 등장」. 헤시오도스 295행의 '그녀'는 케토로 읽는다."
+sources = ["hesiod.theogony 295-332", "apollodorus.library 2.1.2", "apollodorus.library 2.5.10-2.5.11"]
+
+[[figure.parents_variant]]
+source = "apollodorus.library 2.1.2"
+parents = ["tartaros", "gaia"]
+text = "아폴로도로스는 에키드나를 타르타로스와 가이아의 딸이라고 한다."
+
+[[figure]]
+id = "hydra"
+name_ko = "히드라"
+name_grc = "Hydra"
+aka = ["레르나의 히드라"]
+kind = "monster"
+era = 5
+parents = ["typhon", "echidna"]
+home = "lerna"
+oneliner = "머리가 아홉인 레르나 늪의 뱀. 머리를 자르면 둘이 났다."
+body = """
+레르나의 늪에 살면서 들로 나와 소와 사람을 해쳤다.
+머리가 아홉이고, 가운데 하나는 죽지 않는 머리였다.
+머리 하나를 부수면 그 자리에 둘이 새로 났다.
+헤라가 헤라클레스를 미워해서 이 괴물을 키웠다고 한다.
+헤라클레스는 죽지 않는 머리를 잘라 큰 돌 밑에 묻었다.
+"""
+fun = "히드라의 쓸개즙은 독이었다. 헤라클레스는 화살에 그 독을 발랐다. 그 독이 마지막에 헤라클레스 자신을 죽게 한다."
+sources = ["hesiod.theogony 313-318", "apollodorus.library 2.5.2"]
+
+[[figure]]
+id = "nemean-lion"
+name_ko = "네메아의 사자"
+name_grc = "Leon Nemeios"
+aka = ["네메아 사자"]
+kind = "monster"
+era = 5
+parents = ["orthros", "echidna"]
+home = "nemea"
+oneliner = "가죽에 칼도 화살도 들지 않는 네메아의 사자."
+body = """
+헤라가 키워 네메아의 산에 풀어 놓았다고 한다.
+그 땅의 사람들을 해쳐 골칫거리였다.
+화살이 가죽을 뚫지 못했다.
+헤라클레스는 굴의 한쪽 입구를 막고 들어가 두 팔로 목을 졸라 죽였다.
+"""
+fun = "헤라클레스의 사자 가죽 옷은 이 사자의 것이라고들 한다. 아폴로도로스는 그보다 먼저 잡은 키타이론 사자의 가죽이라고 적었다."
+sources = ["hesiod.theogony 326-332", "apollodorus.library 2.4.10", "apollodorus.library 2.5.1"]
+
+[[figure.parents_variant]]
+source = "apollodorus.library 2.5.1"
+parents = ["typhon"]
+text = "아폴로도로스는 이 사자를 티폰이 낳았다고만 한다."
+
+[[figure]]
+id = "kerberos"
+name_ko = "케르베로스"
+name_grc = "Kerberos"
+aka = ["케르베루스", "저승의 개"]
+kind = "monster"
+era = 2
+parents = ["typhon", "echidna"]
+home = "hades-realm"
+oneliner = "머리 셋 달린 저승의 문지기 개."
+body = """
+개의 머리가 셋이고 꼬리는 뱀이다.
+등에도 온갖 뱀의 머리가 나 있다.
+저승 문 앞에서 죽은 사람이 나가지 못하게 지킨다.
+하데스는 무기를 쓰지 않고 이기면 데려가도 좋다고 했다.
+헤라클레스는 두 팔로 머리를 끌어안아 이겼다.
+"""
+fun = "헤시오도스는 머리가 셋이 아니라 쉰 개라고 적었다."
+sources = ["hesiod.theogony 310-312", "apollodorus.library 2.5.12"]
+
+[[figure]]
+id = "orthros"
+name_ko = "오르트로스"
+name_grc = "Orthros"
+aka = ["오르토스"]
+kind = "monster"
+era = 5
+parents = ["typhon", "echidna"]
+home = "erytheia"
+oneliner = "게리온의 소를 지키던 머리 둘 달린 개."
+body = """
+케르베로스의 형제다.
+세상의 서쪽 끝 에리테이아 섬에서 게리온의 붉은 소를 지켰다.
+헤라클레스를 보고 덤볐다가 몽둥이에 맞아 죽었다.
+"""
+sources = ["hesiod.theogony 287-294", "hesiod.theogony 306-309", "apollodorus.library 2.5.10"]
+
+[[figure]]
+id = "geryon"
+name_ko = "게리온"
+name_grc = "Geryon"
+aka = ["게리오네스"]
+kind = "monster"
+era = 5
+home = "erytheia"
+oneliner = "몸 셋이 하나로 붙은 거인. 붉은 소의 주인이다."
+body = """
+허리에서 세 사람의 몸이 하나로 붙어 있었다.
+메두사의 목에서 나온 크리사오르가 아버지다.
+서쪽 끝의 섬 에리테이아에서 붉은 소를 길렀다.
+헤라클레스가 소를 몰고 가자 뒤쫓아 왔다가 화살에 맞아 죽었다.
+"""
+note = "부모 크리사오르·칼리로에는 등록부에 없어 계보를 비웠다."
+sources = ["hesiod.theogony 287-294", "apollodorus.library 2.5.10", "hyginus.fabulae preface"]
+
+[[figure]]
+id = "eurytion"
+name_ko = "에우리티온"
+name_grc = "Eurytion"
+kind = "human"
+era = 5
+home = "erytheia"
+oneliner = "게리온의 소를 치던 목자."
+body = """
+세상 서쪽 끝 에리테이아 섬에서 게리온의 붉은 소를 쳤다.
+개 오르트로스가 헤라클레스에게 맞자 도우러 나왔다.
+헤라클레스가 그도 죽였다.
+"""
+note = "켄타우로스 에우리티온(아폴로도로스 2.5.4-2.5.5)과 다른 인물."
+sources = ["hesiod.theogony 287-294", "apollodorus.library 2.5.10"]
+
+[[figure]]
+id = "ladon"
+name_ko = "라돈"
+name_grc = "Ladon"
+kind = "monster"
+era = 5
+parents = ["typhon", "echidna"]
+home = "hesperides-garden"
+oneliner = "황금 사과 나무를 지키는 머리 백 개의 뱀."
+body = """
+잠들지 않고 황금 사과를 지킨다.
+머리가 백 개이고 온갖 목소리로 말했다.
+헤라클레스는 아틀라스를 시켜 사과를 가져오게 했다.
+헤라클레스가 직접 이 뱀을 죽이고 사과를 땄다는 이야기도 있다.
+"""
+sources = ["apollodorus.library 2.5.11", "hesiod.theogony 333-336", "ovid.metamorphoses 9.190"]
+
+[[figure.parents_variant]]
+source = "hesiod.theogony 333-336"
+parents = ["phorkys", "keto"]
+text = "헤시오도스는 이 뱀을 케토와 포르키스의 막내라고 한다."
+
+[[figure]]
+id = "antaios"
+name_ko = "안타이오스"
+name_grc = "Antaios"
+kind = "monster"
+era = 5
+parents = ["poseidon"]
+oneliner = "땅에 닿으면 힘이 세지는 리비아의 거인."
+body = """
+지나가는 사람마다 억지로 씨름을 시켜 죽였다.
+땅에 몸이 닿을수록 힘이 더 세졌다.
+헤라클레스는 그를 번쩍 들어 올려 땅에서 떼어 놓고 이겼다.
+그래서 사람들은 안타이오스가 땅의 아들이라고 했다.
+"""
+sources = ["apollodorus.library 2.5.11", "ovid.metamorphoses 9.183-184"]
+
+[[figure.parents_variant]]
+source = "apollodorus.library 2.5.11"
+parents = ["gaia"]
+text = "땅에 닿으면 힘이 세져서 땅의 아들이라고도 했다."
+
+# ---------- 켄타우로스 ----------
+
+[[figure]]
+id = "cheiron"
+name_ko = "케이론"
+name_grc = "Cheiron"
+aka = ["키론"]
+kind = "monster"
+era = 1
+parents = ["kronos"]
+home = "mt-pelion"
+oneliner = "영웅들을 가르친 지혜로운 켄타우로스. 헤라클레스의 화살에 다쳤다."
+body = """
+크로노스의 아들로, 다른 켄타우로스와 달리 지혜롭고 점잖았다.
+펠리온 산에 살면서 사냥과 병 고치는 법을 가르쳤다.
+이아손과 아킬레우스가 그의 손에서 자랐다.
+헤라클레스가 켄타우로스들에게 쏜 화살이 무릎에 박혔다.
+죽지 않는 몸이라 아픔이 끝나지 않았고, 프로메테우스 대신 죽기로 했다.
+"""
+note = "참고: 처음 읽는 그리스 로마 신화 10권 2장 「필리라와 케이론」. 어머니 필리라는 등록부에 없다."
+sources = ["apollodorus.library 1.2.4", "apollodorus.library 2.5.4", "apollodorus.library 2.5.11", "apollodorus.library 3.13.6", "hesiod.theogony 1001-1002"]
+
+[[figure]]
+id = "pholos"
+name_ko = "폴로스"
+name_grc = "Pholos"
+kind = "monster"
+era = 5
+home = "mt-erymanthos"
+oneliner = "헤라클레스를 손님으로 맞은 착한 켄타우로스."
+body = """
+폴로에 산의 굴에 살았다.
+헤라클레스에게 고기를 구워 주고, 자기는 날로 먹었다.
+헤라클레스가 술을 달라고 해서 켄타우로스들의 공동 술독을 열었다.
+술 냄새를 맡은 켄타우로스들이 몰려와 싸움이 났다.
+죽은 켄타우로스에서 화살을 뽑아 보다가 발에 떨어뜨려 죽었다.
+"""
+note = "아버지 실레노스는 등록부에 없다."
+sources = ["apollodorus.library 2.5.4"]
+
+[[figure]]
+id = "kentauroi"
+name_ko = "켄타우로스들"
+name_grc = "Kentauroi"
+aka = ["켄타우로스", "켄타우루스"]
+kind = "group"
+era = 5
+oneliner = "위는 사람, 아래는 말인 산속의 거친 무리."
+body = """
+허리 위는 사람이고 아래는 말이다.
+술을 마시면 사납게 굴었다.
+폴로스의 굴에서 술 냄새를 맡고 몰려와 헤라클레스와 싸웠다.
+헤라클레스가 화살로 많이 죽이고 나머지는 흩어졌다.
+케이론과 폴로스만은 점잖고 손님을 잘 맞았다.
+"""
+sources = ["apollodorus.library 2.5.4", "apollodorus.library E.1.21"]
+
+# ---------- 과업에서 만난 사람들 ----------
+
+[[figure]]
+id = "augeias"
+name_ko = "아우게이아스"
+name_grc = "Augeias"
+aka = ["아우게아스"]
+kind = "human"
+era = 5
+home = "elis"
+oneliner = "외양간 치우기를 시키고 약속을 어긴 엘리스의 왕."
+body = """
+소가 아주 많아 외양간의 똥이 산처럼 쌓였다.
+헤라클레스가 하루에 치우겠다며 소의 열에 하나를 달라고 했다.
+헤라클레스는 강 두 줄기를 끌어와 하루에 다 씻어 냈다.
+왕은 약속을 어기고 헤라클레스와 아들 필레우스를 쫓아냈다.
+뒷날 헤라클레스가 군대를 이끌고 와서 왕을 죽였다.
+"""
+note = "아버지가 헬리오스·포세이돈·포르바스로 갈려 parents 를 비우고 parents_variant 로 준다."
+sources = ["apollodorus.library 2.5.5", "apollodorus.library 2.7.2", "pausanias.greece 5.1"]
+
+[[figure.parents_variant]]
+source = "apollodorus.library 2.5.5"
+parents = ["helios"]
+text = "해의 신 헬리오스의 아들이라는 이야기가 있다."
+
+[[figure.parents_variant]]
+source = "apollodorus.library 2.5.5"
+parents = ["poseidon"]
+text = "포세이돈의 아들이라는 이야기도 있다."
+
+[[figure]]
+id = "diomedes-thrakios"
+name_ko = "트라케의 디오메데스"
+name_grc = "Diomedes"
+aka = ["디오메데스"]
+kind = "human"
+era = 5
+parents = ["ares"]
+home = "thrake"
+oneliner = "사람을 잡아먹는 말을 기른 트라케의 왕."
+body = """
+아레스의 아들로, 싸움을 좋아하는 비스토네스 사람들의 왕이었다.
+그의 암말들은 사람을 잡아먹었다.
+헤라클레스가 말을 몰고 바다로 가자 군대를 이끌고 쫓아왔다.
+헤라클레스에게 져서 죽었다.
+"""
+note = "트로이 전쟁의 디오메데스(TRO)와 다른 인물. 어머니 키레네는 등록부에 없다."
+sources = ["apollodorus.library 2.5.8", "ovid.metamorphoses 9.194-196"]
+
+[[figure]]
+id = "hippolyte"
+name_ko = "히폴리테"
+name_grc = "Hippolyte"
+kind = "human"
+era = 5
+home = "themiskyra"
+oneliner = "아레스의 띠를 가진 아마조네스의 여왕."
+body = """
+여왕이라는 표시로 아레스의 띠를 두르고 있었다.
+헤라클레스가 오자 찾아와 띠를 주겠다고 했다.
+헤라가 아마존으로 꾸미고 여왕을 잡아간다는 소문을 퍼뜨렸다.
+아마조네스가 배로 몰려왔고, 헤라클레스는 속았다고 여겨 여왕을 죽였다.
+"""
+sources = ["apollodorus.library 2.5.9"]
+
+[[figure]]
+id = "amazones"
+name_ko = "아마조네스"
+name_grc = "Amazones"
+aka = ["아마존", "아마존 여전사"]
+kind = "group"
+era = 5
+home = "themiskyra"
+oneliner = "테르모돈 강가에 살던 여자 전사들의 나라."
+body = """
+테르모돈 강가의 테미스키라에 살았다.
+여자들만 전사가 되어 말을 타고 싸웠다.
+헤라클레스가 여왕의 띠를 가져가려고 이곳에 왔다.
+뒷날 트로이 전쟁에도 여왕 펜테실레이아가 나온다.
+"""
+sources = ["apollodorus.library 2.5.9", "pausanias.greece 1.2", "pausanias.greece 5.11"]
+
+[[figure]]
+id = "hesperides"
+name_ko = "헤스페리데스"
+name_grc = "Hesperides"
+aka = ["저녁의 딸들"]
+kind = "group"
+era = 1
+parents = ["nyx"]
+home = "hesperides-garden"
+oneliner = "세상 서쪽 끝에서 황금 사과를 지키는 자매들."
+body = """
+밤의 딸들이다.
+오케아노스 건너 해가 지는 곳에 산다.
+제우스가 헤라와 결혼할 때 받은 황금 사과 나무를 지킨다.
+머리 백 개 달린 뱀 라돈이 함께 지킨다.
+이름은 아이글레, 에리테이아, 헤스페리아, 아레투사다.
+"""
+sources = ["hesiod.theogony 215-216", "apollodorus.library 2.5.11", "hyginus.fabulae preface"]
+
+[[figure]]
+id = "hesione"
+name_ko = "헤시오네"
+name_grc = "Hesione"
+kind = "human"
+era = 5
+parents = ["laomedon"]
+home = "troy"
+oneliner = "바다 괴물에게 바쳐질 뻔했다가 헤라클레스에게 구해진 트로이의 공주."
+body = """
+아버지 라오메돈이 신들에게 품삯을 주지 않아 바다 괴물이 왔다.
+공주를 바치면 재앙이 끝난다는 말에 바닷가 바위에 묶였다.
+지나가던 헤라클레스가 괴물을 죽이고 공주를 풀어 주었다.
+뒷날 헤라클레스가 트로이를 무너뜨린 뒤 텔라몬에게 상으로 주었다.
+오빠 포다르케스를 몸값을 내고 풀어 주었는데, 그가 뒷날의 프리아모스다.
+"""
+sources = ["apollodorus.library 2.5.9", "apollodorus.library 2.6.4", "ovid.metamorphoses 11.194-220"]
