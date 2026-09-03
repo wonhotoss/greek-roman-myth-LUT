@@ -587,7 +587,7 @@ body = """
 """
 fun = "코린토스에는 페가수스의 발굽에서 물이 흘러나오는 샘이 있었다. 그 위에 벨레로폰의 조각상이 있었다."
 sensitivity = "soften"
-note = "참고: 처음 읽는 그리스 로마 신화 9권 1장 「벨레로폰」. 페가수스에서 떨어지는 판본(핀다로스·히기누스 57)은 코퍼스에서 확인 불가 — 호메로스 판본만."
+note = "참고: 처음 읽는 그리스 로마 신화 9권 1장 「벨레로폰」. 페가수스에서 떨어진 것은 히기누스 57 에 있다(bellerophon-end 의 variants). 올림포스에 오르려 했다는 것은 핀다로스라 코퍼스에 없어 쓰지 않는다."
 sources = ["apollodorus.library 2.3.1-2.3.2", "homer.iliad 6.152-6.202", "pausanias.greece 2.4.1", "pausanias.greece 2.3.5", "hesiod.theogony 325"]
 
 [[figure]]

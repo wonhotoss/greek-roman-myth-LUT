@@ -33,7 +33,7 @@ SPEC = {
     },
     "event": {
         "keys": COMMON | {"era", "seq", "place", "places", "cast", "caused_by", "variants",
-                          "span", "after", "within", "open"},
+                          "span", "after", "within", "open", "place_unknown"},
         "required": REQUIRED_COMMON | {"era", "seq", "cast"},
     },
     "place": {
@@ -206,7 +206,8 @@ def audit_uncertain(events, eras, places, arcs, out_path):
     두 가지를 본다.
       1. 순서를 원전이 아니라 seq 가 정한 짝. 같은 시대에서 seq 로 이웃한 두 사건 사이에
          caused_by / after 로 이어지는 길이 없으면, 그 순서는 우리가 아는 것이 아니다.
-      2. 장소가 붙지 않은 사건.
+      2. 장소가 붙지 않은 사건. place_unknown 으로 표시한 것(원전이 말하지 않는다)과
+         아직 넣지 않은 것을 가른다. 할 일은 뒤쪽이다.
     시대가 다른 사건끼리는 시작 순서를 안다(시대 경계가 정한다). 그래서 보지 않는다.
     """
     strict = defaultdict(set)          # A -> B : A 가 B 보다 먼저 시작한다고 원전이 말한다
@@ -246,7 +247,12 @@ def audit_uncertain(events, eras, places, arcs, out_path):
             (inner_gaps if same else seam_gaps).append((n, a, b))
     order_gaps = inner_gaps
 
-    no_place = [e for e in events if "place" not in e and not e.get("places")]
+    # 장소가 없는 사건을 둘로 가른다.
+    #   place_unknown — 원전이 장소를 말하지 않거나 특정할 수 없다고 판단해 표시한 것. note 에 이유가 있다.
+    #   그 밖        — 아직 넣지 않은 것. 이쪽이 할 일 목록이다.
+    placeless = [e for e in events if "place" not in e and not e.get("places")]
+    no_place = [e for e in placeless if not e.get("place_unknown")]
+    unknown_place = [e for e in placeless if e.get("place_unknown")]
 
     lines = [
         "# 불확실 점검 — 자동 생성",
@@ -294,9 +300,10 @@ def audit_uncertain(events, eras, places, arcs, out_path):
 
     lines += [
         "",
-        f"## 2. 장소가 붙지 않은 사건 — {len(no_place)}건",
+        f"## 2. 장소를 아직 넣지 않은 사건 — {len(no_place)}건",
         "",
-        "지도에 켤 수 없다. 원전이 장소를 말하지 않는 경우와, 아직 넣지 않은 경우가 섞여 있다.",
+        "지도에 켤 수 없다. 원전이 장소를 말하지 않는 것은 `place_unknown` 으로 표시해 아래 2-2 로 뺐으므로,",
+        "여기 남는 것은 **넣을 수 있는데 아직 넣지 않은 것**이다. 할 일 목록이다.",
         "",
         "| 사건 | 시대 | 한 줄 |",
         "|---|---|---|",
@@ -305,6 +312,21 @@ def audit_uncertain(events, eras, places, arcs, out_path):
         lines.append(f"| {e['name_ko']} `{e['id']}` | {e['era']} {era_name[e['era']]} | "
                      f"{e['oneliner']} |")
     if not no_place:
+        lines.append("| — | — | — |")
+
+    lines += [
+        "",
+        f"### 2-2. 원전이 장소를 말하지 않는 사건 — {len(unknown_place)}건",
+        "",
+        "`place_unknown = true` 로 표시한 것. 고칠 것이 아니다 — 모르는 것을 아는 것처럼 그리지 않기 위해 남긴다.",
+        "화면과 에이전트 팩은 이 사건에 대해 '어디서 일어났는지는 옛 책에 없다' 고 말한다.",
+        "",
+        "| 사건 | 시대 | 왜 없는가 |",
+        "|---|---|---|",
+    ]
+    for e in unknown_place:
+        lines.append(f"| {e['name_ko']} `{e['id']}` | {e['era']} {era_name[e['era']]} | {e['note']} |")
+    if not unknown_place:
         lines.append("| — | — | — |")
 
     myth = [q for q in places if q["kind"] == "mythic"]
@@ -322,7 +344,7 @@ def audit_uncertain(events, eras, places, arcs, out_path):
         lines.append(f"| {q['name_ko']} `{q['id']}` | {q['layer']} | {q.get('note', '') or '—'} |")
 
     out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    return len(order_gaps), len(no_place)
+    return len(order_gaps), len(no_place), len(unknown_place)
 
 
 def main():
@@ -435,6 +457,15 @@ def main():
             ref(where, "within", e["within"], event_ids, "event")
         if "open" in e and not isinstance(e["open"], bool):
             err(where, f"open 은 true/false 여야 한다: {e['open']}")
+        if "place_unknown" in e:
+            # 원전이 장소를 말하지 않거나 특정할 수 없는 사건. 모르는 것을 아는 것처럼 그리지 않기 위한 표시다.
+            if not isinstance(e["place_unknown"], bool):
+                err(where, f"place_unknown 은 true/false 여야 한다: {e['place_unknown']}")
+            elif e["place_unknown"]:
+                if "place" in e or e.get("places"):
+                    err(where, "place_unknown 인데 place/places 도 있다 — 장소를 모르는지 아는지 하나만 말한다")
+                if not e.get("note"):
+                    err(where, "place_unknown 이면 note 에 왜 장소가 없는지 적는다")
         if e.get("span", "moment") not in SPANS:
             err(where, f"span 값이 이상하다: {e['span']} (쓸 수 있는 것: {sorted(SPANS)})")
         for v in e.get("variants", []):
@@ -514,14 +545,14 @@ def main():
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(bundle, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    gaps, noplace = audit_uncertain(events, eras, places, arcs, OUT.parent / "불확실-점검.md")
+    gaps, noplace, unknown = audit_uncertain(events, eras, places, arcs, OUT.parent / "불확실-점검.md")
 
     orphans = [f["id"] for f in figures if not f["events"] and not f["children"]]
     print(f"검증 통과 — {OUT.relative_to(ROOT).as_posix()} ({OUT.stat().st_size:,} bytes)")
     print(f"  시간축 길이 {axis['total']}칸, 여러 시대에 걸친 사건 "
           f"{sum(1 for e in events if e['t1'] > axis['eras'][str(e['era'])][1])}건")
     print(f"  불확실 점검 → build/불확실-점검.md — 순서를 seq 가 정한 짝 {gaps}건, "
-          f"장소 없는 사건 {noplace}건")
+          f"장소를 아직 넣지 않은 사건 {noplace}건 (원전이 말하지 않는 것 {unknown}건은 따로)")
     print(f"  인물 {len(figures)}  사건 {len(events)}  장소 {len(places)}"
           f"  묶음서사 {len(arcs)}  원전 {len(sources)}")
     if orphans:

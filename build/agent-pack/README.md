@@ -22,7 +22,7 @@ claude -p --append-system-prompt "$(cat build/agent-pack/CLAUDE.md)" "제우스�
 
 - `CLAUDE.md` — 에이전트 지침. 어떻게 답할지
 - `집필-지침.md` — 문장·이름·수위·톤 규칙. `data/` 를 쓸 때와 같은 기준
-- `knowledge/` — 지식 299인물 / 263사건 / 83장소 / 33묶음서사
+- `knowledge/` — 지식 299인물 / 263사건 / 85장소 / 33묶음서사
 
 ## 화면용과 다른 점
 

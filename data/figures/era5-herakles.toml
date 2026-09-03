@@ -372,6 +372,7 @@ name_ko = "옴팔레"
 name_grc = "Omphale"
 kind = "human"
 era = 5
+home = "lydia"
 oneliner = "헤라클레스를 종으로 산 리디아의 여왕."
 body = """
 남편 트몰로스가 죽은 뒤 리디아를 다스렸다.
@@ -380,7 +381,6 @@ body = """
 그동안 헤라클레스는 도둑 케르코페스를 붙잡았다.
 """
 sensitivity = "soften"
-note = "리디아는 등록부에 없어 장소를 비웠다."
 sources = ["apollodorus.library 2.6.2-2.6.3"]
 
 # ---------- 괴물들 ----------

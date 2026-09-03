@@ -1,6 +1,6 @@
 # era 6 — 트로이 전쟁. 그 뿌리인 탄탈로스 가문(era 4~5), 트로이 왕가, 레다와 헬레네, 펠레우스와 테티스도 여기 둔다.
 # 다른 에이전트 소유라 참조만 하는 id: laertes, antikleia, penelope, ithake, pylos(ODY) · lemnos, kastor, polydeukes, mt-pelion(THE) · herakles, cheiron(HER) · lykia(ATH)
-# 히기누스 82(탄탈로스)·92(파리스의 심판)·93(카산드라)은 코퍼스의 파일이 55번에서 끊겨 있어 인용하지 않았다.
+# 히기누스 전문은 2026-09-03 에 들어왔다. 92(파리스의 심판)는 에리스 항목에 더했다.
 
 # ---------- 탄탈로스 가문 ----------
 
@@ -1035,5 +1035,5 @@ body = """
 싸움터에서는 사람들 사이를 다니며 싸움을 키웠다.
 """
 fun = "헤시오도스는 에리스가 둘이라고 했다. 하나는 싸움을 일으키고, 하나는 사람이 부지런히 일하게 만든다."
-note = "'펠레우스와 테티스의 결혼 잔치에 초대받지 못했다'는 세부는 히기누스 92 에 있는데 코퍼스에 없어 쓰지 않았다. E.3.2 는 사과를 던진 것만 말한다."
-sources = ["hesiod.theogony 225-232", "hesiod.works 11-26", "apollodorus.library E.3.2", "homer.iliad 4.440-445", "homer.iliad 11.3-14"]
+note = "'펠레우스와 테티스의 결혼 잔치에 초대받지 못했다'는 세부는 히기누스 92 — peleus-thetis-wedding 의 variants 에 넣었다. E.3.2 는 사과를 던진 것만 말한다."
+sources = ["hesiod.theogony 225-232", "hesiod.works 11-26", "apollodorus.library E.3.2", "homer.iliad 4.440-445", "homer.iliad 11.3-14", "hyginus.fabulae 92"]

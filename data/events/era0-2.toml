@@ -20,6 +20,8 @@ body = """
 가장 아름다운 에로스도 이때 나왔다.
 카오스에서는 어둠과 밤도 나왔다.
 """
+note = "장소 없음 — 세상이 생기는 일이다. 그 안의 장소를 말할 수 없다."
+place_unknown = true
 sources = ["hesiod.theogony 116-138"]
 
 [[event]]
@@ -65,7 +67,8 @@ body = """
 """
 caused_by = ["ouranos-imprisons"]
 sensitivity = "soften"
-note = "원전의 거세는 쓰지 않는다. 아프로디테 탄생과의 연결도 여기서 끊고, 아프로디테 항목에서 바다 거품만 남긴다."
+note = "원전의 거세는 쓰지 않는다. 아프로디테 탄생과의 연결도 여기서 끊고, 아프로디테 항목에서 바다 거품만 남긴다. 장소는 원전이 말하지 않는다."
+place_unknown = true
 sources = ["hesiod.theogony 154-182", "apollodorus.library 1.1.4-1.1.5"]
 
 [[event]]
@@ -91,6 +94,8 @@ body = """
 헤스티아, 데메테르, 헤라, 하데스, 포세이돈이 차례로 삼켜졌다.
 """
 caused_by = ["kronos-takes-throne"]
+note = "장소 없음 — 원전이 말하지 않는다."
+place_unknown = true
 sources = ["hesiod.theogony 453-467", "apollodorus.library 1.1.5"]
 
 [[event]]
@@ -136,6 +141,8 @@ body = """
 돌도 함께 나왔고, 그 돌은 델포이에 놓였다.
 """
 caused_by = ["zeus-hidden"]
+note = "장소 없음 — 원전이 말하지 않는다."
+place_unknown = true
 sources = ["hesiod.theogony 492-500", "apollodorus.library 1.2.1"]
 
 [[event]]
@@ -186,6 +193,8 @@ body = """
 """
 fun = "제비뽑기였으니, 제우스가 저승을 맡을 수도 있었다."
 caused_by = ["titanomachy"]
+note = "장소 없음 — 나누는 대상이 세계 전체다."
+place_unknown = true
 sources = ["homer.iliad 15.187-193", "apollodorus.library 1.2.1"]
 
 [[event]]
@@ -315,5 +324,9 @@ sensitivity = "soften"
 sources = ["apollodorus.library 1.5.1-1.5.3"]
 
 [[event.variants]]
+source = "homeric.hymns demeter 59-89"
+text = "호메로스 찬가에서는 데메테르가 헤카테와 함께 헬리오스에게 물어 누가 딸을 데려갔는지 알아낸다. 높은 데서 세상을 다 보는 신이기 때문이다."
+
+[[event.variants]]
 source = "hyginus.fabulae 146"
-text = "히기누스는 데메테르가 딸을 찾을 때 헬리오스에게 물어 알아냈다고 한다. 높은 데서 세상을 다 보는 신이기 때문이다."
+text = "히기누스는 하데스가 먼저 제우스에게 허락을 구했고, 페르세포네가 시켈리아의 에트나 산에서 꽃을 따다 붙잡혔다고 한다. 한 해의 절반씩을 저승과 어머니 곁에서 지낸다."

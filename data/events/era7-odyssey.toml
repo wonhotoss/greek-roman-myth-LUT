@@ -81,7 +81,8 @@ body = """
 다음 날 안쪽 땅의 키코네스가 몰려와 배마다 여섯 사람씩 죽었다.
 남은 사람들은 서둘러 바다로 나갔다.
 """
-note = "참고: 처음 읽는 그리스 로마 신화 13권 1장 「마론의 포도주」. 이스마로스는 장소 항목이 없어 place 를 비웠다."
+note = "참고: 처음 읽는 그리스 로마 신화 13권 1장 「마론의 포도주」. 이스마로스는 트라케 해안이지만 위치가 확인되지 않아 place 를 비웠다."
+place_unknown = true
 sources = ["homer.odyssey 9.39-61", "homer.odyssey 9.196-215", "apollodorus.library E.7.2"]
 
 [[event]]

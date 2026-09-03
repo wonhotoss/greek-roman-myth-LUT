@@ -270,7 +270,9 @@ function detailEvent(e) {
     (e.variants || []).map(v => el('div', { cls: 'variant' },
       el('b', {}, '다른 이야기도 있어'), v.text)),
     el('div', { cls: 'rel' },
-      relRow('일어난 곳', pl),
+      e.place_unknown
+        ? [el('div', { cls: 'sub' }, '일어난 곳'), el('div', { cls: 'hint' }, '어디서 일어났는지는 옛 책에 없다.')]
+        : relRow('일어난 곳', pl),
       relRow('이 일이 있기 전에', e.caused_by),
       ...['주인공', '상대', '도움', '피해', '등장'].map(r => {
         const ids = e.cast.filter(c => c.role === r).map(c => c.figure);
@@ -588,7 +590,7 @@ function viewWhenWhere() {
       el('div', { cls: 'flow' }, live.map(e =>
         el('button', { cls: 'chip' + (sel === e.id ? ' on' : ''), on: () => select(e.id) },
           el('b', {}, e.name_ko),
-          el('span', {}, `${e.span_label} · ${eraById[e.era].name_ko}${e.open ? ' · 끝나지 않는다' : ''}`)))));
+          el('span', {}, `${e.span_label} · ${eraById[e.era].name_ko}${e.open ? ' · 끝나지 않는다' : ''}${e.place_unknown ? ' · 어디인지는 옛 책에 없다' : ''}`)))));
     writeHash();
   };
 

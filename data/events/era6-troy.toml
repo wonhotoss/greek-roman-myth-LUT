@@ -1,7 +1,7 @@
 # era 6 — 트로이 전쟁 전체. 뿌리인 탄탈로스 가문(era 4 seq 300~399)과 전쟁 전의 일(era 5 seq 1100~1199)도 여기 둔다.
 # 묶음: tantalos-house / road-to-troy / wrath-of-achilleus / fall-of-troy (스크래치 arcs/TRO.toml)
 # 다른 에이전트 소유라 참조만 하는 id: lemnos, kastor, polydeukes, mt-pelion(THE) · ithake, penelope(ODY) · cheiron, herakles-sacks-troy(HER)
-# 히기누스 82·92·93·96·98·107·108 은 코퍼스의 파일이 55번에서 끊겨 있어 인용하지 않았다. 102·103·155 는 있다.
+# 히기누스 전문은 2026-09-03 에 들어왔다(sources/hyginus-fabulae-grant.txt). 82·92·93·96·98·107·108 은 그날 대조해 variants·sources 에 넣었다.
 
 # ---------- era 4 : 탄탈로스 가문 ----------
 
@@ -27,6 +27,7 @@ body = """
 """
 sensitivity = "soften"
 note = "참고: 처음 읽는 그리스 로마 신화 4권 3장 「영원한 굶주림의 벌」. 식인 상세는 쓰지 않는다. 장소는 원전에 없다."
+place_unknown = true
 sources = ["apollodorus.library E.2.1", "apollodorus.library E.2.3", "ovid.metamorphoses 6.401-411"]
 
 [[event]]
@@ -51,7 +52,10 @@ body = """
 """
 fun = "오디세우스가 저승에 갔을 때 이 모습을 보았다. 시시포스가 바위를 밀어 올리는 것도 그 옆에서 보았다."
 caused_by = ["tantalos-feast"]
-note = "참고: 처음 읽는 그리스 로마 신화 4권 3장 「영원한 굶주림의 벌」"
+variants = [
+  { source = "hyginus.fabulae 82", text = "히기누스는 탄탈로스가 신들의 잔치에서 들은 비밀을 사람들에게 말해서 벌을 받았다고 한다." },
+]
+note = "참고: 처음 읽는 그리스 로마 신화 4권 3장 「영원한 굶주림의 벌」. 벌의 까닭이 다른 히기누스 82 는 variants 에 넣었다."
 sources = ["apollodorus.library E.2.1", "homer.odyssey 11.582-592"]
 
 [[event]]
@@ -168,8 +172,9 @@ body = """
 fun = "결혼 선물로 케이론은 물푸레나무 창을, 포세이돈은 죽지 않는 말 두 마리를 주었다. 아킬레우스가 트로이에서 그 창과 말을 썼다."
 variants = [
   { source = "apollodorus.library 3.13.5", text = "테티스가 헤라의 손에 자라서 제우스를 거절했고, 화가 난 제우스가 그녀를 사람과 결혼시켰다는 이야기도 있다." },
+  { source = "hyginus.fabulae 92", text = "히기누스는 제우스가 다툼의 여신 에리스만 잔치에 부르지 않았고, 에리스가 문 밖에서 사과를 던져 넣었다고 한다." },
 ]
-note = "참고: 처음 읽는 그리스 로마 신화 11권 1장 「황금 사과의 주인」. '에리스만 초대받지 못했다'(히기누스 92)는 코퍼스에 없어 쓰지 않았다. 사과는 paris-judgment 에서 E.3.2 대로 쓴다."
+note = "참고: 처음 읽는 그리스 로마 신화 11권 1장 「황금 사과의 주인」. '에리스만 초대받지 못했다'는 히기누스 92 로 variants 에 넣었다. 사과는 paris-judgment 에서 E.3.2 대로 쓴다."
 sources = ["apollodorus.library 3.13.5", "homer.iliad 24.59-63", "homer.iliad 18.84-85", "homer.iliad 16.140-144"]
 
 [[event]]
@@ -242,7 +247,10 @@ body = """
 아폴론은 그 힘에서 사람을 설득하는 힘을 빼앗았다.
 그 뒤로 카산드라가 하는 말은 다 맞았지만 아무도 믿지 않았다.
 """
-note = "참고: 처음 읽는 그리스 로마 신화 2권 4장 「예언자 카산드라」. 히기누스 93 은 코퍼스에 없다."
+variants = [
+  { source = "hyginus.fabulae 93", text = "히기누스는 카산드라가 아폴론의 신전에서 잠들었다가 다가온 아폴론을 거절했고, 그래서 아폴론이 사람들이 그 말을 믿지 않게 했다고 한다." },
+]
+note = "참고: 처음 읽는 그리스 로마 신화 2권 4장 「예언자 카산드라」. 히기누스 93 은 까닭이 달라 variants 에 넣었다."
 sources = ["apollodorus.library 3.12.5", "virgil.aeneid 2.246-247"]
 
 [[event]]
@@ -306,8 +314,8 @@ body = """
 """
 fun = "헤라와 아테나는 이 일을 잊지 않았다. 열 해 동안 트로이를 미워한 이유가 이것이다."
 caused_by = ["peleus-thetis-wedding"]
-note = "참고: 처음 읽는 그리스 로마 신화 11권 1장 「황금 사과의 주인」. 히기누스 92 는 코퍼스에 없다."
-sources = ["apollodorus.library E.3.2", "homer.iliad 24.25-30"]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 1장 「황금 사과의 주인」. 히기누스 92 도 같은 이야기라 sources 에 더했다(세 여신의 약속까지 같다)."
+sources = ["apollodorus.library E.3.2", "homer.iliad 24.25-30", "hyginus.fabulae 92"]
 
 [[event]]
 id = "helene-taken"
@@ -396,8 +404,11 @@ body = """
 fun = "아폴로도로스는 아킬레우스가 열다섯 살에 함대를 이끌었다고 적었다."
 caused_by = ["greeks-muster"]
 after = ["achilleus-childhood"]
-note = "참고: 처음 읽는 그리스 로마 신화 11권 2장. 히기누스 96 은 코퍼스에 없다. 리코메데스·데이다메이아는 등록부에 없어 이름만."
-sources = ["apollodorus.library 3.13.8", "apollodorus.library E.3.16", "pausanias.greece 1.22"]
+variants = [
+  { source = "hyginus.fabulae 96", text = "히기누스는 소녀들이 아킬레우스를 피라라고 불렀다고 한다. 머리가 붉은 빛이어서다." },
+]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 2장. 히기누스 96 도 같은 이야기(나팔 소리)라 sources 에 더하고, 피라라는 이름은 variants 에 넣었다. 리코메데스·데이다메이아는 등록부에 없어 이름만."
+sources = ["apollodorus.library 3.13.8", "apollodorus.library E.3.16", "pausanias.greece 1.22", "hyginus.fabulae 96"]
 
 [[event]]
 id = "aulis-omen"
@@ -458,8 +469,8 @@ variants = [
 sensitivity = "soften"
 caused_by = ["aulis-omen"]
 after = ["aulis-omen"]
-note = "참고: 처음 읽는 그리스 로마 신화 11권 2장. E.3.22 의 사슴 판본을 주 서술로. 히기누스 98 은 코퍼스에 없다. 미시아 회항과 8년(E.3.17-3.20)은 책에 없어 생략."
-sources = ["apollodorus.library E.3.21-E.3.22", "ovid.metamorphoses 12.24-38"]
+note = "참고: 처음 읽는 그리스 로마 신화 11권 2장. E.3.22 의 사슴 판본을 주 서술로. 히기누스 98 도 같은 이야기(사슴 판본, 아킬레우스와의 결혼 거짓말)라 sources 에 더했다. 미시아 회항과 8년(E.3.17-3.20)은 책에 없어 생략."
+sources = ["apollodorus.library E.3.21-E.3.22", "ovid.metamorphoses 12.24-38", "hyginus.fabulae 98"]
 
 [[event]]
 id = "tenedos-philoktetes"
@@ -1025,7 +1036,10 @@ body = """
 fun = "헥토르가 죽으면서 이미 파리스와 아폴론이 너를 성문에서 죽인다고 말했었다."
 caused_by = ["penthesileia-memnon"]
 after = ["penthesileia-memnon"]
-note = "참고: 처음 읽는 그리스 로마 신화 12권 4장 「영웅들의 죽음」. 히기누스 107 은 코퍼스에 없다."
+variants = [
+  { source = "hyginus.fabulae 107", text = "히기누스는 아폴론이 파리스의 모습으로 나타나 아킬레우스의 발꿈치를 쏘았다고 한다." },
+]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 4장 「영웅들의 죽음」. 히기누스 107 은 아폴론이 파리스의 모습을 했다고 하여 variants 에 넣었다."
 sources = ["apollodorus.library E.5.3-E.5.5", "homer.iliad 22.358-360", "homer.odyssey 24.36-97", "ovid.metamorphoses 12.580-628"]
 
 [[event]]
@@ -1144,8 +1158,8 @@ body = """
 fun = "안에 들어간 사람 수는 쉰이라고도 하고, 어떤 시인은 삼천이라고도 했다."
 caused_by = ["helenos-conditions"]
 after = ["helenos-conditions"]
-note = "참고: 처음 읽는 그리스 로마 신화 12권 4장 「트로이 목마」. 에페이오스는 등록부에 없어 이름만. 히기누스 108 은 코퍼스에 없다."
-sources = ["apollodorus.library E.5.14-E.5.15", "homer.odyssey 8.492-495", "virgil.aeneid 2.13-39"]
+note = "참고: 처음 읽는 그리스 로마 신화 12권 4장 「트로이 목마」. 에페이오스는 등록부에 없어 이름만. 히기누스 108 도 같은 이야기(에페이오스, 새긴 글, 테네도스)라 sources 에 더했다."
+sources = ["apollodorus.library E.5.14-E.5.15", "homer.odyssey 8.492-495", "virgil.aeneid 2.13-39", "hyginus.fabulae 108"]
 
 [[event]]
 id = "horse-into-troy"

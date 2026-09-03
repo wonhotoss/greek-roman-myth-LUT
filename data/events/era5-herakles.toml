@@ -296,6 +296,7 @@ id = "keryneian-hind"
 name_ko = "황금 뿔 암사슴을 산 채로 잡다"
 era = 5
 seq = 510
+place = "ladon-river"
 span = "years"
 after = ["lernaean-hydra-slain"]
 cast = [
@@ -313,7 +314,7 @@ body = """
 아르테미스가 화를 냈지만, 왕이 시킨 일이라고 하자 놓아주었다.
 """
 caused_by = ["herakles-delphi-oracle"]
-note = "장소는 오이노에·아르테미시온 산·라돈 강(아르카디아)이라 하나 등록부에 없어 비웠다."
+note = "붙잡은 곳인 라돈 강만 place 로 붙였다. 사슴이 처음 있던 오이노에와 아르테미시온 산은 등록부에 없다."
 sources = ["apollodorus.library 2.5.3"]
 
 [[event]]
@@ -568,7 +569,8 @@ body = """
 헤라클레스는 그를 높이 들어 올려 땅에서 떼어 놓고 이겼다.
 """
 caused_by = ["herakles-delphi-oracle"]
-note = "장소는 리비아(북아프리카)라고만 하여 비웠다."
+note = "원전은 리비아라고만 한다. 옛 그리스 사람들의 리비아는 북아프리카 전체를 가리키는 이름이라 한 점으로 찍을 수 없다."
+place_unknown = true
 sources = ["apollodorus.library 2.5.11", "ovid.metamorphoses 9.183-184"]
 
 [[event]]
@@ -685,7 +687,8 @@ body = """
 헤라클레스가 이겼지만 왕은 자식을 또 죽일까 두렵다며 주지 않았다.
 아들 이피토스만이 약속을 지켜야 한다고 말했다.
 """
-note = "참고: 처음 읽는 그리스 로마 신화 8권 3장 「뜻하지 않은 사고」. 오이칼리아는 위치가 다투어져 장소를 비웠다."
+note = "참고: 처음 읽는 그리스 로마 신화 8권 3장 「뜻하지 않은 사고」. 원전은 오이칼리아라고 하나 어디인지 다투어진다 — 파우사니아스 4.2 가 메세니아·테살리아·에우보이아 세 주장을 나열한다."
+place_unknown = true
 sources = ["apollodorus.library 2.6.1"]
 
 [[event]]
@@ -720,6 +723,7 @@ id = "omphale-service"
 name_ko = "옴팔레의 종으로 일하다"
 era = 5
 seq = 1018
+place = "lydia"
 span = "years"
 cast = [
   { figure = "herakles", role = "주인공" },
@@ -736,7 +740,7 @@ body = """
 """
 sensitivity = "soften"
 caused_by = ["iphitos-killed"]
-note = "리디아는 등록부에 없어 장소를 비웠다. 여자 옷을 입었다는 뒷시대 이야기는 원전에 없어 쓰지 않았다."
+note = "여자 옷을 입었다는 뒷시대 이야기는 원전에 없어 쓰지 않았다."
 sources = ["apollodorus.library 2.6.2-2.6.3"]
 
 [[event]]
@@ -866,7 +870,8 @@ body = """
 에우보이아의 케나이온 곶에 제우스의 제단을 쌓고 제사를 준비했다.
 """
 caused_by = ["eurytos-archery-contest"]
-note = "오이칼리아는 위치가 다투어져 장소를 비웠다."
+note = "오이칼리아는 위치가 다투어진다(파우사니아스 4.2 — 메세니아·테살리아·에우보이아). 아폴로도로스 2.7.7 도 트라키스에서 군대를 모아 갔다고만 한다."
+place_unknown = true
 sources = ["apollodorus.library 2.7.7", "ovid.metamorphoses 9.136-137"]
 
 [[event]]

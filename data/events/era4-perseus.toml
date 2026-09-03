@@ -90,6 +90,8 @@ body = """
 """
 fun = "님프들에게서 얻은 것이 세 가지다. 날개 달린 신발, 안 보이게 되는 투구, 목을 담을 자루."
 caused_by = ["polydektes-demands"]
+note = "장소 없음 — 고르곤의 땅으로 가는 길목이다. 아폴로도로스 2.4.2 는 님프들이 있는 곳이라고만 한다."
+place_unknown = true
 sources = ["apollodorus.library 2.4.2"]
 
 [[event]]

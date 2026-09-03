@@ -45,6 +45,8 @@ body = """
 """
 fun = "항아리를 상자로 잘못 옮긴 것은 500년쯤 전 사람이다. 원전에는 큰 항아리, 피토스라고 되어 있다."
 caused_by = ["fire-stolen"]
+note = "장소 없음 — 에피메테우스의 집이라고 볼 수 있지만 원전이 말하지 않는다."
+place_unknown = true
 sources = ["hesiod.works 59-105", "hesiod.theogony 570-593"]
 
 [[event]]

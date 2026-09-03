@@ -93,7 +93,7 @@ author_ko = "히기누스"
 title_ko = "이야기 모음"
 title_orig = "Fabulae"
 written = "기원후 1~2세기"
-file = "sources/hyginus-fabulae-1-grant.txt"
+file = "sources/hyginus-fabulae-grant.txt"
 translator = "Mary Grant (1960)"
 note = "다른 데 없는 이설을 많이 보존하고 있다. variants 의 주 출처."
 
