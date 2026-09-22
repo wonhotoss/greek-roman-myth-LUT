@@ -27,6 +27,8 @@
 - 2026-09-22 **이야기 타래**(`[[thread]]`, `data/threads.toml`)를 넣음 — 묶음을 가로질러 시간순으로 읽는 줄.
   첫 둘은 「가이아와 세 임금」, 「제우스가 만난 이들과 그 아이들」. 그것을 위해 사건 셋(레토의 쌍둥이·헤르메스·세멜레)과
   장소 하나(킬레네 산)를 더했다([데이터-모델.md](데이터-모델.md) §7).
+- 2026-09-22 **질의용 DB** `build/myth.sqlite`(`tools/render_sqlite.py`)와 `tools/query.py`. TOML 은 그대로 원본이고 DB 는 산출물.
+  카드 놀이 재료가 표에서 바로 나오는 것을 확인했다(README 산출물 절).
 
 ## 5분 만에 돌려 보기
 
@@ -35,6 +37,7 @@ py -3.13 tools/build.py          # data/*.toml 검증 → build/myth.json
 py -3.13 tools/render_web.py     # → build/myth.html      브라우저로 열면 끝
 py -3.13 tools/render_print.py   # → build/print-*.html   브라우저에서 인쇄/PDF
 py -3.13 tools/render_agent.py   # → build/agent-pack/
+py -3.13 tools/render_sqlite.py  # → build/myth.sqlite    질의용 DB. py -3.13 tools/query.py 제우스
 ```
 
 의존성 없음. 표준 라이브러리 `tomllib` 만 쓴다.
@@ -44,6 +47,7 @@ py -3.13 tools/render_agent.py   # → build/agent-pack/
 
 `build/` 는 생성물이지만 **커밋한다.** 자료를 받는 사람이 파이썬 없이 `build/myth.html` 하나만
 열어도 되게 하려는 것이다. 데이터를 고치면 렌더러 셋을 다시 돌려 함께 커밋한다.
+예외는 `build/myth.sqlite` 하나다 — 2.4MB 이진 파일이라 `.gitignore` 에 넣었다. `render_sqlite.py` 로 언제든 다시 만든다.
 
 ## 이 프로젝트의 규칙 — 어기면 자료가 못 쓰게 된다
 
@@ -112,7 +116,8 @@ py -3.13 tools/render_agent.py   # → build/agent-pack/
 ## 검사 도구
 
 빌드가 스키마·참조·인과 순환·`seq` 충돌을 전부 본다. 그 밖에 이번 집필에서 쓴 검사는
-저장소에 넣지 않았다(일회성이었다). 다시 필요하면 이런 것들이었다.
+저장소에 넣지 않았다(일회성이었다). 다시 필요하면 이런 것들이었다 — 지금은 `py -3.13 tools/query.py sql "SELECT ..."` 로
+`build/myth.sqlite` 에 물으면 대부분 SQL 한 줄이다.
 
 - 인용 대조 — `sources` 의 아폴로도로스·리비우스 위치가 원문에 실제로 있는지. 737건 전건 확인했다.
 - 문체 — `oneliner` 한 문장, `body` 3~5문장, 문장 40자. 다만 **기존 자료도 이 한계를 느슨하게

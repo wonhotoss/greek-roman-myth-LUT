@@ -10,3 +10,6 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# 질의용 DB — myth.json 에서 언제든 다시 만드는 2.4MB 이진 파일. build/ 를 커밋한다는 규칙의 유일한 예외.
+build/myth.sqlite

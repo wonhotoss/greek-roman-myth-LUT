@@ -18,12 +18,12 @@
 ```
 data/*.toml  --build.py-->  build/myth.json
                                  |
-        +------------------------+------------------------+
-        |                        |                        |
-  render_web.py           render_print.py          render_agent.py
-        |                        |                        |
-  build/myth.html        build/print-*.html      build/agent-pack/
- 단일 파일·오프라인       A3/A4 인쇄용             my-talking-claw 용
+        +------------------------+------------------------+------------------------+
+        |                        |                        |                        |
+  render_web.py           render_print.py          render_agent.py          render_sqlite.py
+        |                        |                        |                        |
+  build/myth.html        build/print-*.html      build/agent-pack/        build/myth.sqlite
+ 단일 파일·오프라인       A3/A4 인쇄용             my-talking-claw 용       질의용 DB (query.py)
 ```
 
 렌더러는 데이터를 읽기만 한다. 항목 하나를 고치면 세 산출물이 같이 바뀐다.
@@ -80,9 +80,10 @@ python tools/build.py          # data/*.toml 검증 → build/myth.json
 python tools/render_web.py     # → build/myth.html      (브라우저로 열면 끝)
 python tools/render_print.py   # → build/print-*.html   (브라우저에서 인쇄/PDF)
 python tools/render_agent.py   # → build/agent-pack/
+python tools/render_sqlite.py  # → build/myth.sqlite    (질의용 DB. python tools/query.py 제우스)
 ```
 
-의존성 없음. 표준 라이브러리 `tomllib` 만 쓴다(파이썬 3.11+).
+의존성 없음. 표준 라이브러리 `tomllib` 과 `sqlite3` 만 쓴다(파이썬 3.11+).
 
 `build.py` 는 **깨지면 즉시 죽는다.** 없는 id 를 가리키거나 스키마에 없는 필드가 있으면
 그 자리에서 파일·항목·이유를 찍고 종료한다. 기본값을 채우거나 참조를 건너뛰지 않는다.
@@ -138,6 +139,32 @@ claude -p --append-system-prompt "$(cat build/agent-pack/CLAUDE.md)" "주피터�
 
 **화면용과 다른 점:** 화면에는 `sensitivity`와 편집 메모를 그리지 않는다. 아이가 보는 것이다.
 에이전트에게는 준다 — 무엇을 말하지 않을지 알아야 하기 때문이다.
+
+### `build/myth.sqlite` — 질의용 DB
+
+2026-09-22 에 더한 다섯째 산출물. **TOML 이 그대로 진실의 원본**이고 이것은 다른 셋과 같은 산출물이다 —
+`tools/render_sqlite.py` 가 `myth.json` 만 읽어 만든다. 표 하나가 항목 종류 하나, 관계는 전부 표다
+(`figure_parent`, `event_cast`, `event_cause`, `event_after`, `arc_event`, `thread_step` …). `entry` 가 다섯 종류를 아우르는
+색인이고, 빌드가 계산한 t0·t1·`event.arc`·타래의 `unsure` 도 들어 있다. 외래 키와 CHECK 가 빌드의 검증을 한 번 더 건다.
+
+```sh
+python tools/query.py 제우스                # 검색 — 이름·다른 표기·한 줄·본문·재밌는 것
+python tools/query.py figure zeus           # 인물 한 장. event / place / arc / thread 도 같다
+python tools/query.py cards god             # 인물 카드 표 (card_figure 뷰)
+python tools/query.py sql "SELECT ..."      # 아무 SQL
+```
+
+- 검색은 FTS5 **trigram** 이다. 한국어는 조사가 붙어 낱말 색인이 맞지 않아, 세 글자 조각으로 본문 어디든 찾는다.
+  두 글자 이름(헤라·레토)은 trigram 으로 못 찾으므로 `query.py` 가 이름 LIKE 로 돈다.
+- `public_*` 뷰에는 `note` 와 `sensitivity` 가 없다. 아이가 보는 쪽은 이 뷰만 읽는다.
+- `card_figure` / `card_event` 뷰는 카드 한 장에 들어갈 것을 한 줄로 모은 것이다 — 표시·맡은 일·부모와 사건 수·주인공 수·상대 수·자식 수.
+  포스터와 다른 쓰임이 여기서 나온다. 짝 맞추기(신–상징물 56, 부모–자식 262), 순서 맞추기(사건 5개 이상인 묶음 22, 타래 2),
+  대결(주인공–상대, 헤라클레스–헤라 5회), 함께 나온 둘(아가멤논–오디세우스 14회) 같은 놀이의 재료가 표 한 번으로 나온다.
+  `soften` 항목은 뷰에 표시가 남아 있어 걸러 낼 수 있다.
+- **이 파일은 커밋하지 않는다**(`.gitignore`). 2.4MB 이진 파일이라 고칠 때마다 이력이 붓고, `myth.json` 에서 언제든 다시 만든다.
+  `build/` 를 커밋한다는 규칙의 유일한 예외다.
+- 첫 목적은 에이전트다 — 지식팩 900KB 를 통째로 읽는 대신 `query.py` 로 필요한 항목만 뽑아 읽게 하는 것.
+  아직 `agent-pack` 에 붙이지는 않았다.
 
 ### `build/poster-*.pdf` — 인포그래픽 포스터 (구상 단계)
 
@@ -208,6 +235,10 @@ ToposText 에서 받았다 — `tools/extract_hyginus.py` 가 지명 링크를 �
 
 ## 진행 기록
 
+- **2026-09-22** **질의용 DB.** `tools/render_sqlite.py` → `build/myth.sqlite`(표 23, 관계 전부 표, `entry` 색인, FTS5 trigram 검색,
+  `public_*`·`card_*` 뷰)와 `tools/query.py`(검색·인물·사건·장소·묶음·타래·카드·SQL). TOML 이 원본, DB 는 산출물 —
+  주석·집필 메모·git 이력이 자료의 절반이라 원본을 DB 로 옮기지 않았다. 이진 파일이라 `.gitignore`. 카드 놀이의 재료가
+  표에서 바로 나온다는 것을 확인했다(위 산출물 절).
 - **2026-09-22** **이야기 타래.** 묶음(arc)을 가로질러 시간순으로 읽는 `[[thread]]` 을 넣었다(`data/threads.toml`,
   [데이터-모델.md](데이터-모델.md) §7). 묶음은 한 사건이 한 곳에만 들지만 타래는 여럿에 들 수 있고, 순서는
   시간축(t0)이 정한다 — 적힌 순서가 다르면 빌드가 맞는 순서를 찍고 죽는다. 같은 시대에서 앞뒤를 원전이 말하지
@@ -256,7 +287,8 @@ ToposText 에서 받았다 — `tools/extract_hyginus.py` 가 지명 링크를 �
 ## 다음
 
 1. **인포그래픽 포스터 첫 장** — 「헤라클레스의 열두 가지 일」. 내용 명세 → 무그림 레이아웃 → A4 타일 시험 인쇄 → 그림 → 전문 출력 1장([포스터-구상.md](포스터-구상.md) 진행 단계). 그림 자료 조사(공개 도메인 도판)는 이 일의 한 단계로 합쳤다
-2. **대화 팩 실측** — `my-talking-claw` 에 얹어 아이의 실제 질문으로 시험. 지식팩이 874KB 라 색인으로 필요한 파일만 열게 하는 것이 함께 필요하다
+2. **대화 팩 실측** — `my-talking-claw` 에 얹어 아이의 실제 질문으로 시험. 지식팩이 900KB 라 색인으로 필요한 파일만 열게 하는 것이 함께 필요하다 — `build/myth.sqlite` 와 `tools/query.py` 를 에이전트가 부르게 하면 된다(2026-09-22)
 3. **히기누스와 대조** — 전문이 들어왔으니 남은 우화(117~125 오레스테스·오디세우스 등)로 뒷받침되는 이설을 항목에 넣는다
 4. **`needs` 스키마(D-2)** — 존재 조건(히폴리토스가 자라야 파이드라 이야기가 된다)을 적어 A-1 의 짝 두 건을 푼다([불확실-목록.md](불확실-목록.md) D-2)
 5. **타래 늘리기** — 후보: 헤라의 미움(레토·세멜레·알크메네·헤라클레스·이오), 델포이의 말이 이끈 이야기들(아크리시오스·라이오스·오이디푸스·아이네이아스), 아르고스 왕가(다나에→페르세우스→알크메네→헤라클레스). 지금 자료로 되는 것부터
+6. **카드 놀이** — `card_figure`·`card_event` 뷰로 인물·사건 카드를 뽑아 A4 에 찍어 보는 것. 짝 맞추기(신–상징물)·순서 맞추기(묶음·타래)·함께 나온 둘부터. 그림이 없다는 문제는 포스터와 같다
