@@ -1,6 +1,6 @@
 """data/*.toml -> build/myth.json
 
-검증하고, 파생 필드(children, 등장 사건, 장소별 사건)를 만들고, 정렬해서 하나로 합친다.
+검증하고, 파생 필드(children, 등장 사건, 장소별 사건, 타래의 순서 표시)를 만들고, 정렬해서 하나로 합친다.
 스키마는 데이터-모델.md 가 원본이다.
 
 깨지면 즉시 죽는다. 기본값을 채워 넣거나 없는 참조를 건너뛰지 않는다.
@@ -43,6 +43,10 @@ SPEC = {
     "arc": {
         "keys": COMMON | {"era", "events"},
         "required": REQUIRED_COMMON | {"era", "events"},
+    },
+    "thread": {
+        "keys": COMMON | {"steps"},
+        "required": REQUIRED_COMMON | {"steps"},
     },
     "source": {
         "keys": {"id", "author_ko", "title_ko", "title_orig", "written", "file", "translator", "note"},
@@ -200,17 +204,13 @@ def solve_axis(events, eras):
     }
 
 
-def audit_uncertain(events, eras, places, arcs, out_path):
-    """무엇을 모르는지 기계로 뽑는다. 손으로 적은 목록은 데이터가 바뀌면 낡는다.
+def order_graph(events):
+    """caused_by / after 로 원전이 말하는 '먼저 시작한다' 관계.
 
-    두 가지를 본다.
-      1. 순서를 원전이 아니라 seq 가 정한 짝. 같은 시대에서 seq 로 이웃한 두 사건 사이에
-         caused_by / after 로 이어지는 길이 없으면, 그 순서는 우리가 아는 것이 아니다.
-      2. 장소가 붙지 않은 사건. place_unknown 으로 표시한 것(원전이 말하지 않는다)과
-         아직 넣지 않은 것을 가른다. 할 일은 뒤쪽이다.
-    시대가 다른 사건끼리는 시작 순서를 안다(시대 경계가 정한다). 그래서 보지 않는다.
+    돌려주는 reaches(a, b) 는 a 에서 b 로 가는 길이 있는가 — 곧 a 가 b 보다 먼저라고
+    원전이 말하는가. 불확실 점검과 타래의 순서 표시가 같은 판단을 써야 하므로 한 곳에 둔다.
     """
-    strict = defaultdict(set)          # A -> B : A 가 B 보다 먼저 시작한다고 원전이 말한다
+    strict = defaultdict(set)
     for e in events:
         for cid in e.get("caused_by", []):
             strict[cid].add(e["id"])
@@ -227,6 +227,51 @@ def audit_uncertain(events, eras, places, arcs, out_path):
                 seen.add(w)
                 stack.append(w)
         return False
+
+    return reaches
+
+
+def solve_threads(threads, events):
+    """타래 — 묶음을 가로질러 시간순으로 읽는 줄. 순서는 데이터가 아니라 시간축(t0)이 정한다.
+
+    데이터에 적힌 steps 순서가 시간축과 다르면 죽는다. 사람이 읽는 파일이 거짓 순서를
+    말하게 두지 않기 위해서다. 같은 시대의 앞뒤 단계 사이에 caused_by/after 로 이어지는
+    길이 없으면 그 순서는 seq 가 정한 것이다 — unsure 로 표시해 화면이 "모른다"고 말하게 한다.
+    시대가 다르면 시대 경계가 순서를 정한다.
+    """
+    by_event = {e["id"]: e for e in events}
+    reaches = order_graph(events)
+    for t in threads:
+        where = f"{t['_file']} thread {t['id']}"
+        written = [s["event"] for s in t["steps"]]
+        want = sorted(written, key=lambda i: by_event[i]["t0"])
+        if written != want:
+            err(where, "steps 가 시간축 순서와 다르다. 시간축이 정한 순서: " + ", ".join(want))
+            continue
+        prev = None
+        for s in t["steps"]:
+            e = by_event[s["event"]]
+            s["unsure"] = (prev is not None and prev["era"] == e["era"]
+                           and not reaches(prev["id"], e["id"]) and not reaches(e["id"], prev["id"]))
+            e.setdefault("threads", []).append(t["id"])
+            prev = e
+        mine = [by_event[i] for i in written]
+        t["t0"] = min(e["t0"] for e in mine)
+        t["t1"] = max(e["t1"] for e in mine)
+        t["eras"] = sorted({e["era"] for e in mine})
+
+
+def audit_uncertain(events, eras, places, arcs, out_path):
+    """무엇을 모르는지 기계로 뽑는다. 손으로 적은 목록은 데이터가 바뀌면 낡는다.
+
+    두 가지를 본다.
+      1. 순서를 원전이 아니라 seq 가 정한 짝. 같은 시대에서 seq 로 이웃한 두 사건 사이에
+         caused_by / after 로 이어지는 길이 없으면, 그 순서는 우리가 아는 것이 아니다.
+      2. 장소가 붙지 않은 사건. place_unknown 으로 표시한 것(원전이 말하지 않는다)과
+         아직 넣지 않은 것을 가른다. 할 일은 뒤쪽이다.
+    시대가 다른 사건끼리는 시작 순서를 안다(시대 경계가 정한다). 그래서 보지 않는다.
+    """
+    reaches = order_graph(events)      # A -> B : A 가 B 보다 먼저 시작한다고 원전이 말한다
 
     by_id = {e["id"]: e for e in events}
     era_name = {x["n"]: x["name_ko"] for x in eras}
@@ -352,6 +397,7 @@ def main():
     events = load("event", DATA.glob("events/*.toml"))
     places = load("place", DATA.glob("places/*.toml"))
     arcs = load("arc", [DATA / "arcs.toml"])
+    threads = load("thread", [DATA / "threads.toml"])
     sources = load("source", [DATA / "sources.toml"])
     eras = load("era", [DATA / "eras.toml"])
 
@@ -360,7 +406,8 @@ def main():
         check_keys("era", e)
 
     ids = {}
-    for kind, items in (("figure", figures), ("event", events), ("place", places), ("arc", arcs)):
+    for kind, items in (("figure", figures), ("event", events), ("place", places), ("arc", arcs),
+                        ("thread", threads)):
         for item in items:
             where = check_keys(kind, item)
             iid = item.get("id")
@@ -485,6 +532,23 @@ def main():
             owner[eid] = a["id"]
         check_sources(where, a)
 
+    for t in threads:
+        where = f"{t['_file']} thread {t['id']}"
+        steps = t["steps"]
+        if not isinstance(steps, list) or len(steps) < 2:
+            err(where, "steps 는 사건 둘 이상의 목록이어야 한다")
+            continue
+        seen_ev = set()
+        for s in steps:
+            if not isinstance(s, dict) or "event" not in s or set(s) - {"event", "label"}:
+                err(where, f"steps 항목은 event(필수)와 label 만 갖는다: {s}")
+                continue
+            ref(where, "steps.event", s["event"], event_ids, "event")
+            if s["event"] in seen_ev:
+                err(where, f"사건 {s['event']} 가 타래 안에 두 번 있다")
+            seen_ev.add(s["event"])
+        check_sources(where, t)
+
     if errors:
         print(f"검증 실패 — {len(errors)}건\n", file=sys.stderr)
         for line in errors:
@@ -528,6 +592,14 @@ def main():
         a["t0"] = min(e["t0"] for e in mine)
         a["t1"] = max(e["t1"] for e in mine)
 
+    # 타래의 순서는 시간축이 정한다. 적힌 순서가 다르면 여기서 죽는다. 사건의 threads 도 여기서 역인덱스로 만든다.
+    solve_threads(threads, events)
+    if errors:
+        print(f"검증 실패 — {len(errors)}건\n", file=sys.stderr)
+        for line in errors:
+            print("  " + line, file=sys.stderr)
+        sys.exit(1)
+
     figures.sort(key=lambda f: (f["era"], f["name_ko"]))
     places.sort(key=lambda p: (p["kind"], p["name_ko"]))
     arcs.sort(key=lambda a: a["era"])
@@ -540,6 +612,7 @@ def main():
         "events": events,
         "places": places,
         "arcs": arcs,
+        "threads": threads,
         "sources": sources,
     }
     OUT.parent.mkdir(exist_ok=True)
@@ -554,7 +627,11 @@ def main():
     print(f"  불확실 점검 → build/불확실-점검.md — 순서를 seq 가 정한 짝 {gaps}건, "
           f"장소를 아직 넣지 않은 사건 {noplace}건 (원전이 말하지 않는 것 {unknown}건은 따로)")
     print(f"  인물 {len(figures)}  사건 {len(events)}  장소 {len(places)}"
-          f"  묶음서사 {len(arcs)}  원전 {len(sources)}")
+          f"  묶음서사 {len(arcs)}  타래 {len(threads)}  원전 {len(sources)}")
+    for t in threads:
+        unsure = sum(1 for s in t["steps"] if s["unsure"])
+        print(f"  타래 {t['name_ko']}: {len(t['steps'])}단계, 시대 {t['eras'][0]}~{t['eras'][-1]}, "
+              f"앞뒤를 원전이 말하지 않는 짝 {unsure}건")
     if orphans:
         print(f"  사건도 자식도 없는 인물 {len(orphans)}: {', '.join(orphans)}")
 

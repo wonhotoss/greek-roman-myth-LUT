@@ -21,8 +21,9 @@ body = """
 찾지 못하면 돌아오지 말라고도 했다.
 카드모스는 어머니와 함께 트라키아에 머물렀다.
 """
+caused_by = ["europa-carried-to-crete"]
 sensitivity = "soften"
-note = "참고: 처음 읽는 그리스 로마 신화 9권 부록. 아게노르·텔레팟사·포이닉스·킬릭스는 등록부에 없어 이름만 부른다. 에우로페는 ATH 소유."
+note = "참고: 처음 읽는 그리스 로마 신화 9권 부록. 아게노르·텔레팟사·포이닉스·킬릭스는 등록부에 없어 이름만 부른다. 에우로페는 ATH 소유. caused_by 는 아폴로도로스 3.1.1 — 누이가 사라져서 떠난다."
 sources = ["apollodorus.library 3.1.1", "ovid.metamorphoses 3.1-10"]
 
 [[event]]
@@ -96,6 +97,38 @@ body = """
 fun = "성 안쪽 언덕을 카드모스의 이름을 따 카드메이아라고 불렀다. 지금도 티바 시내에 그 언덕이 있다."
 caused_by = ["dragon-teeth-sown"]
 sources = ["apollodorus.library 3.4.2", "hesiod.theogony 933-937", "pausanias.greece 9.5", "pausanias.greece 9.12"]
+
+[[event]]
+id = "semele-dionysos-born"
+name_ko = "세멜레가 번개를 보고, 디오니소스가 태어나다"
+era = 4
+seq = 235
+span = "season"
+after = ["thebes-founded"]
+place = "thebes"
+cast = [
+  { figure = "zeus", role = "주인공" },
+  { figure = "semele", role = "피해" },
+  { figure = "hera", role = "상대" },
+  { figure = "dionysos", role = "주인공" },
+  { figure = "hermes", role = "도움" },
+]
+oneliner = "번개를 보고 세멜레는 죽었고, 아기는 제우스의 허벅지에서 자랐다."
+body = """
+제우스는 테베의 공주 세멜레를 헤라 모르게 만났다.
+헤라가 늙은 유모의 모습으로 찾아와 세멜레에게 꾀를 넣었다.
+세멜레는 헤라를 만날 때의 모습으로 와 달라고 제우스에게 청했다.
+약속을 한 제우스는 번개와 함께 왔고, 세멜레는 그 자리에서 죽었다.
+제우스는 아기를 꺼내 허벅지에 넣어 키웠고, 그 아기가 디오니소스다.
+"""
+fun = "아기를 맡은 것은 헤르메스였다. 이노와 아타마스에게 데려가 여자아이처럼 키우게 했다."
+sensitivity = "soften"
+note = "세멜레는 카드모스의 딸이라 테베가 선 뒤의 일이다(헤시오도스 975-978) — after thebes-founded. 세멜레의 era 를 2 에서 4 로 고쳤다(아버지 카드모스가 era 4). 이노·아타마스·베로에는 항목이 없어 이름만 부른다. 아이세움 대응은 확인하지 않았다."
+sources = ["apollodorus.library 3.4.3", "ovid.metamorphoses 3.253-3.315", "hesiod.theogony 940-942"]
+
+[[event.variants]]
+source = "hyginus.fabulae 167"
+text = "히기누스는 디오니소스가 두 번 태어났다고 한다. 처음에는 제우스와 페르세포네의 아들이었고, 제우스가 그 심장을 세멜레에게 마시게 해 다시 태어났다. 그래서 어머니가 둘인 신이라고 불린다."
 
 [[event]]
 id = "phrixos-golden-ram"

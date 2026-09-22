@@ -59,6 +59,7 @@ CLAUDE_MD = """# 그리스 로마 신화 — 아이의 질문에 답하는 에�
 | `knowledge/30-events.md` | 사건 전문. 시대·순서대로 |
 | `knowledge/40-places.md` | 장소. 실제로 있는 곳과 이야기 속의 곳을 구분해서 답한다 |
 | `knowledge/50-arcs.md` | 여러 사건이 이어진 이야기 묶음 |
+| `knowledge/55-threads.md` | 여러 시대를 가로질러 **시간 순서**로 읽는 이야기 타래. "제우스는 누구를 만났어?", "가이아는 왜 자꾸 싸워?" 처럼 긴 줄로 이어지는 질문 |
 | `knowledge/60-sources.md` | 원전. "그거 어디 나와?" 에 답할 때 |
 
 ## 자주 오는 질문에 답하는 법
@@ -73,6 +74,9 @@ CLAUDE_MD = """# 그리스 로마 신화 — 아이의 질문에 답하는 에�
   신화를 사실로도, 거짓으로도 말하지 않는다.
 - **"○○ 이야기 해 줘"** — `50-arcs.md` 에 묶음이 있으면 순서대로 하나씩 준다.
   한 번에 한 사건, 세 문장, 끝에 "다음 이야기 들을래?"
+- **"제우스는 누구랑 결혼했어?", "가이아는 왜 자꾸 싸워?"** — 여러 이야기에 걸친 질문이면 `55-threads.md` 의
+  타래를 시간 순서로 따라간다. "어느 쪽이 먼저인지 옛 책은 말하지 않는다" 로 표시된 곳에서는
+  순서를 지어 말하지 않는다. "둘 다 그 무렵 이야기야" 라고 한다.
 """
 
 
@@ -139,6 +143,8 @@ def event_md(e, by, eras):
         L.append("- 이 일이 있기 전에: " + ", ".join(by[i]["name_ko"] for i in e["caused_by"]))
     if e.get("arc"):
         L.append(f"- 묶음 서사: {by[e['arc']]['name_ko']}")
+    if e.get("threads"):
+        L.append("- 이야기 타래: " + ", ".join(by[t]["name_ko"] for t in e["threads"]))
     L += ["", f"**{e['oneliner']}**", "", e["body"].strip()]
     if e.get("fun"):
         L += ["", f"재밌는 것: {e['fun']}"]
@@ -149,6 +155,28 @@ def event_md(e, by, eras):
     if e.get("note"):
         L += ["", f"> 내부 메모(그대로 읽지 않는다): {e['note']}"]
     L += ["", "적힌 곳: " + " / ".join(e["sources"]), ""]
+    return "\n".join(L)
+
+
+def thread_md(t, by, eras):
+    L = [f"### {t['name_ko']}  `{t['id']}`", ""]
+    if t.get("aka"):
+        L.append("- 다른 표기: " + ", ".join(t["aka"]))
+    L.append("- 시대: " + " → ".join(f"{n} {eras[n]['name_ko']}" for n in t["eras"]))
+    L += ["", f"**{t['oneliner']}**", "", t["body"].strip(), "", "시간 순서:", ""]
+    for i, s in enumerate(t["steps"]):
+        if s["unsure"]:
+            L.append("   (앞의 것과 어느 쪽이 먼저인지 옛 책은 말하지 않는다. 순서를 지어 말하지 않는다)")
+        lab = f"{s['label']} — " if s.get("label") else ""
+        e = by[s["event"]]
+        L.append(f"{i + 1}. {lab}{e['name_ko']} `{e['id']}` — {e['oneliner']}")
+    if t.get("fun"):
+        L += ["", f"재밌는 것: {t['fun']}"]
+    if t.get("sensitivity") == "soften":
+        L += ["", "> 민감도: 완화"]
+    if t.get("note"):
+        L += ["", f"> 내부 메모(그대로 읽지 않는다): {t['note']}"]
+    L += ["", "적힌 곳: " + " / ".join(t["sources"]), ""]
     return "\n".join(L)
 
 
@@ -175,7 +203,7 @@ def place_md(p, by):
 def main():
     D = json.loads(BUNDLE.read_text(encoding="utf-8"))
     by = {}
-    for k in ("figures", "events", "places", "arcs"):
+    for k in ("figures", "events", "places", "arcs", "threads"):
         for it in D[k]:
             by[it["id"]] = it
     eras = {e["n"]: e for e in D["eras"]}
@@ -190,9 +218,10 @@ def main():
     K = OUT / "knowledge"
 
     # 색인 — 이름과 다른 표기로 id 를 찾는 표
-    TYPE = {"figures": "사람·신", "events": "사건", "places": "장소", "arcs": "이야기 묶음"}
+    TYPE = {"figures": "사람·신", "events": "사건", "places": "장소", "arcs": "이야기 묶음",
+            "threads": "이야기 타래"}
     rows = []
-    for k in ("figures", "events", "places", "arcs"):
+    for k in ("figures", "events", "places", "arcs", "threads"):
         for it in D[k]:
             alts = ", ".join([x for x in ([it.get("name_grc"), it.get("name_la")]
                                           + (it.get("aka") or [])) if x])
@@ -224,6 +253,11 @@ def main():
                         for i, e in enumerate(a["events"]))
             + f"\n\n적힌 곳: {' / '.join(a['sources'])}\n"
             for a in D["arcs"]), encoding="utf-8")
+    K.joinpath("55-threads.md").write_text(
+        "# 이야기 타래\n\n여러 묶음을 가로질러 **시간 순서**로 읽는 긴 줄이다. 한 사건이 묶음과 타래 양쪽에 들 수 있다.\n"
+        "순서는 시간축이 정한 것이고, 옛 책이 앞뒤를 말하지 않는 곳은 표시해 두었다 — "
+        "그 자리에서는 순서를 지어 말하지 않는다.\n\n"
+        + "\n".join(thread_md(t, by, eras) for t in D["threads"]), encoding="utf-8")
     K.joinpath("60-sources.md").write_text(
         "# 원전\n\n\"그거 어디 나와?\" 라고 물으면 이 표로 답한다.\n\n"
         "| id | 지은이 | 제목 | 원제 | 쓰인 때 |\n|---|---|---|---|---|\n"
@@ -255,7 +289,7 @@ claude -p --append-system-prompt "$(cat build/agent-pack/CLAUDE.md)" "제우스�
 
 - `CLAUDE.md` — 에이전트 지침. 어떻게 답할지
 - `집필-지침.md` — 문장·이름·수위·톤 규칙. `data/` 를 쓸 때와 같은 기준
-- `knowledge/` — 지식 {len(D['figures'])}인물 / {len(D['events'])}사건 / {len(D['places'])}장소 / {len(D['arcs'])}묶음서사
+- `knowledge/` — 지식 {len(D['figures'])}인물 / {len(D['events'])}사건 / {len(D['places'])}장소 / {len(D['arcs'])}묶음서사 / {len(D['threads'])}타래
 
 ## 화면용과 다른 점
 

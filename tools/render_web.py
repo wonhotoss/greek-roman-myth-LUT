@@ -2,7 +2,7 @@
 
 혼자 탐색하는 단일 파일 페이지. 인터넷 없이 열린다. 데이터는 HTML 안에 박아 넣는다.
 다섯 가지로 찾는다 — 언제 어디서(시간축 커서 + 반응하는 지도), 시간순(연표),
-지리(실제 지도 + 우주 도해), 인물(계보), 이야기 묶음.
+지리(실제 지도 + 우주 도해), 인물(계보), 이야기(묶음과 타래).
 
 내부 필드(note, sensitivity)는 그리지 않는다. 아이가 보는 화면이다.
 
@@ -134,6 +134,16 @@ HTML = """<!DOCTYPE html>
     padding:14px 15px; margin-bottom:14px; }
   .card h3 { margin:0 0 3px; font-size:17px; }
   .card p { margin:0 0 10px; color:var(--dim); font-size:14px; }
+  .card h3 button { border:0; background:none; font:inherit; color:inherit; cursor:pointer;
+    padding:0; text-align:left; }
+  .card h3 button:hover { color:var(--accent); }
+  .card.thread { border-style:dashed; }
+  /* 타래의 단계 — 이름표 한 줄, 사건 이름, 한 줄 설명을 위아래로 쌓는다 */
+  .lbl { display:block; font-size:12px; color:var(--accent); font-weight:600; font-style:normal; }
+  .flow .chip.step { display:block; }
+  .flow .chip.step b, .flow .chip.step span { display:block; }
+  .unsure { font-size:12px; color:var(--dim); margin:0 0 0 14px; padding:1px 0 1px 10px;
+    border-left:2px dashed var(--line); }
 
   /* 언제 어디서 — 커서로 훑는 시간축 */
   #tl { touch-action:none; cursor:ew-resize; user-select:none; }
@@ -184,7 +194,7 @@ HTML = """<!DOCTYPE html>
 const D = JSON.parse(document.getElementById('data').textContent);
 const GEO = JSON.parse(document.getElementById('geo').textContent);
 const byId = {};
-for (const k of ['figures','events','places','arcs']) for (const it of D[k]) { it._t = k; byId[it.id] = it; }
+for (const k of ['figures','events','places','arcs','threads']) for (const it of D[k]) { it._t = k; byId[it.id] = it; }
 const srcById = {}; for (const s of D.sources) srcById[s.id] = s;
 const eraById = {}; for (const e of D.eras) eraById[e.n] = e;
 
@@ -274,6 +284,7 @@ function detailEvent(e) {
         ? [el('div', { cls: 'sub' }, '일어난 곳'), el('div', { cls: 'hint' }, '어디서 일어났는지는 옛 책에 없다.')]
         : relRow('일어난 곳', pl),
       relRow('이 일이 있기 전에', e.caused_by),
+      relRow('이 사건이 지나는 타래', e.threads),
       ...['주인공', '상대', '도움', '피해', '등장'].map(r => {
         const ids = e.cast.filter(c => c.role === r).map(c => c.figure);
         return ids.length ? relRow(r, ids) : null;
@@ -314,6 +325,29 @@ function detailArc(a) {
     sourceList(a),
   ];
 }
+/* 타래의 단계들. unsure 인 단계 앞에는 "순서를 모른다"를 적는다 — 시간축이 seq 로 정한 순서일 뿐이다. */
+function threadSteps(t) {
+  return t.steps.flatMap((s, i) => [
+    s.unsure ? el('div', { cls: 'unsure' }, '이 둘 가운데 어느 것이 먼저인지는 옛 책에 없다.') : null,
+    el('button', { cls: 'chip step' + (sel === s.event ? ' on' : ''), on: () => select(s.event) },
+      s.label ? el('i', { cls: 'lbl' }, s.label) : null,
+      el('b', {}, (i + 1) + '. ' + byId[s.event].name_ko),
+      el('span', {}, byId[s.event].oneliner))]);
+}
+function detailThread(t) {
+  const first = eraById[t.eras[0]].name_ko, last = eraById[t.eras[t.eras.length - 1]].name_ko;
+  return [
+    el('h2', {}, t.name_ko),
+    el('div', { cls: 'badges' }, el('span', { cls: 'badge' }, '이야기 타래'),
+      el('span', { cls: 'badge' }, t.eras.length > 1 ? `${first}부터 ${last}까지` : first)),
+    el('p', { cls: 'one' }, t.oneliner),
+    el('div', { cls: 'body' }, t.body.trim()),
+    t.fun ? el('div', { cls: 'fun' }, t.fun) : null,
+    el('div', { cls: 'rel' }, el('div', { cls: 'sub' }, '시간 순서'),
+      el('div', { cls: 'flow' }, threadSteps(t))),
+    sourceList(t),
+  ];
+}
 function drawDetail() {
   const d = document.getElementById('detail');
   d.replaceChildren();
@@ -324,7 +358,8 @@ function drawDetail() {
     return;
   }
   const it = byId[sel];
-  const fn = { figures: detailFigure, events: detailEvent, places: detailPlace, arcs: detailArc }[it._t];
+  const fn = { figures: detailFigure, events: detailEvent, places: detailPlace, arcs: detailArc,
+    threads: detailThread }[it._t];
   d.append(...fn(it).flat(Infinity).filter(Boolean));
   d.scrollTop = 0;
 }
@@ -653,15 +688,26 @@ function viewTree() {
     '위에서 아래로 부모 → 자식입니다. 맨 처음에는 부모가 없는 신이 여럿입니다. 카오스와 가이아는 서로의 부모가 아니라 각각 생겨났습니다. 부모가 둘인 경우 한쪽 아래에만 놓았습니다.'), tree];
 }
 
-/* ---------- 이야기 묶음 ---------- */
+/* ---------- 이야기 — 타래와 묶음 ---------- */
 function viewArcs() {
-  return [el('p', { cls: 'hint' }, '여러 사건이 하나의 이야기로 이어지는 것들입니다.'),
-    ...D.arcs.map(a => el('div', { cls: 'card' },
-      el('h3', {}, a.name_ko), el('p', {}, a.oneliner),
-      el('div', { cls: 'flow' }, a.events.map((id, i) =>
-        el('button', { cls: 'chip' + (sel === id ? ' on' : ''), on: () => select(id) },
-          el('b', {}, (i + 1) + '. ' + byId[id].name_ko),
-          el('span', {}, byId[id].oneliner))))))];
+  const title = it => el('h3', {}, el('button', { on: () => select(it.id) }, it.name_ko));
+  return [el('p', { cls: 'hint' },
+    '여러 사건이 이어져 하나의 이야기가 되는 것들입니다. 타래는 여러 시대를 가로질러 시간 순서로 읽는 긴 줄이고, 묶음은 한 이야기를 처음부터 끝까지 읽는 것입니다.'),
+    el('section', { cls: 'era', style: '--eracolor:var(--e1)' },
+      el('div', { cls: 'era-head' }, el('span', { cls: 'era-name' }, '이야기 타래'),
+        el('span', { cls: 'era-one' }, '시대를 가로질러, 시간 순서로. 어느 것이 먼저인지 옛 책이 말하지 않는 곳은 그렇다고 적어 두었습니다.')),
+      ...D.threads.map(t => el('div', { cls: 'card thread' },
+        title(t), el('p', {}, t.oneliner),
+        el('div', { cls: 'flow' }, threadSteps(t))))),
+    el('section', { cls: 'era', style: '--eracolor:var(--e4)' },
+      el('div', { cls: 'era-head' }, el('span', { cls: 'era-name' }, '이야기 묶음'),
+        el('span', { cls: 'era-one' }, '한 이야기를 처음부터 끝까지')),
+      ...D.arcs.map(a => el('div', { cls: 'card' },
+        title(a), el('p', {}, a.oneliner),
+        el('div', { cls: 'flow' }, a.events.map((id, i) =>
+          el('button', { cls: 'chip' + (sel === id ? ' on' : ''), on: () => select(id) },
+            el('b', {}, (i + 1) + '. ' + byId[id].name_ko),
+            el('span', {}, byId[id].oneliner)))))))];
 }
 
 /* ---------- 모두 ---------- */
@@ -688,12 +734,12 @@ function viewAll() {
 function viewSearch(q) {
   const t = q.trim().toLowerCase();
   const hit = [];
-  for (const k of ['figures', 'events', 'places', 'arcs']) for (const it of D[k]) {
+  for (const k of ['figures', 'events', 'places', 'arcs', 'threads']) for (const it of D[k]) {
     const hay = [it.name_ko, it.name_grc, it.name_la, ...(it.aka || []), it.oneliner]
       .filter(Boolean).join(' ').toLowerCase();
     if (hay.includes(t)) hit.push(it);
   }
-  const TYPE = { figures: '사람·신', events: '사건', places: '장소', arcs: '이야기 묶음' };
+  const TYPE = { figures: '사람·신', events: '사건', places: '장소', arcs: '이야기 묶음', threads: '이야기 타래' };
   return [el('p', { cls: 'hint' }, `"${q.trim()}" — ${hit.length}개 찾았습니다.`),
     el('div', { cls: 'flow' }, hit.map(it =>
       el('button', { cls: 'chip' + (sel === it.id ? ' on' : ''), on: () => select(it.id) },
@@ -702,7 +748,7 @@ function viewSearch(q) {
 
 /* ---------- 껍데기 ---------- */
 const TABS = [['when', '언제 어디서'], ['time', '시간순'], ['map', '땅과 세계'], ['tree', '계보'],
-  ['arcs', '이야기 묶음'], ['all', '모두']];
+  ['arcs', '이야기'], ['all', '모두']];
 function drawTabs() {
   const t = document.getElementById('tabs');
   t.replaceChildren(...TABS.map(([k, label]) =>

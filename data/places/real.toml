@@ -212,3 +212,21 @@ body = """
 fun = "'플레그라이'는 '불타는 땅'이라는 뜻이다. 옛사람들은 이 땅이 싸움으로 타 버렸다고 생각했다."
 note = "장소에 이설이 있는 첫 사례. 원전이 두 이름을 나란히 주므로 항목 하나로 두고 aka 와 body 에서 둘 다 밝힌다."
 sources = ["apollodorus.library 1.6.1"]
+
+[[place]]
+id = "kyllene"
+name_ko = "킬레네 산"
+name_grc = "Kyllene"
+aka = ["퀼레네", "킬리니 산", "지리아 산"]
+kind = "real"
+lat = 37.9367
+lon = 22.4106
+modern = "그리스 펠로폰네소스 지리아 산(킬리니), 높이 2376m"
+oneliner = "헤르메스가 태어난 굴이 있다는 산. 아르카디아 북쪽에 있다."
+body = """
+펠로폰네소스 북쪽에 있는 높은 산이다.
+마이아가 이 산의 깊은 굴에서 헤르메스를 낳았다.
+파우사니아스는 이 산의 이름이 옛 왕의 아들 킬렌에게서 왔다고 적었다.
+지금은 지리아 산이라고 부르고, 코린토스에서 남서쪽으로 보인다.
+"""
+sources = ["homeric.hymns hermes 1-29", "apollodorus.library 3.10.2", "pausanias.greece 8.4"]
