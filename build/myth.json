@@ -1,6 +1,6 @@
 {
  "axis": {
-  "total": 494,
+  "total": 496,
   "eras": {
    "0": [
     0,
@@ -24,19 +24,19 @@
    ],
    "5": [
     90,
-    252
+    254
    ],
    "6": [
-    252,
-    309
+    254,
+    311
    ],
    "7": [
-    309,
-    426
+    311,
+    428
    ],
    "8": [
-    426,
-    494
+    428,
+    496
    ]
   }
  },
@@ -2083,6 +2083,10 @@
     },
     {
      "event": "kassandra-apollon",
+     "role": "주인공"
+    },
+    {
+     "event": "kassandra-unbelieved",
      "role": "상대"
     },
     {
@@ -8308,6 +8312,10 @@
    "children": [],
    "events": [
     {
+     "event": "paris-returns",
+     "role": "상대"
+    },
+    {
      "event": "hektor-dies",
      "role": "등장"
     },
@@ -9520,19 +9528,29 @@
    "home": "troy",
    "oneliner": "앞일을 다 알았지만 아무도 믿어 주지 않은 트로이의 공주.",
    "body": "아폴론이 카산드라의 마음을 얻으려고 앞일을 보는 힘을 주었다.\n카산드라는 힘만 받고 아폴론을 거절했다.\n아폴론은 그 힘에서 사람을 설득하는 힘을 빼앗았다.\n그래서 목마 안에 군사가 있다고 말했지만 아무도 듣지 않았다.\n트로이가 무너진 뒤 아가멤논이 카산드라를 데려갔다.\n",
+   "fun": "사람들이 믿어 준 말은 하나였다. 낯선 목동을 오빠 파리스라고 알아본 말이다. 그 파리스가 헬레네를 데려왔다.",
    "sensitivity": "soften",
    "note": "참고: 처음 읽는 그리스 로마 신화 2권 4장 「예언자 카산드라」. 오일레우스의 아이아스가 한 일(E.5.22)은 쓰지 않는다.",
    "sources": [
     "apollodorus.library 3.12.5",
     "apollodorus.library E.5.17",
     "apollodorus.library E.5.23",
-    "virgil.aeneid 2.246-247"
+    "virgil.aeneid 2.246-247",
+    "hyginus.fabulae 91"
    ],
    "_file": "data/figures/era6-troy.toml",
    "children": [],
    "events": [
     {
      "event": "kassandra-apollon",
+     "role": "주인공"
+    },
+    {
+     "event": "paris-returns",
+     "role": "도움"
+    },
+    {
+     "event": "kassandra-unbelieved",
      "role": "주인공"
     },
     {
@@ -9794,6 +9812,10 @@
      "role": "피해"
     },
     {
+     "event": "paris-returns",
+     "role": "주인공"
+    },
+    {
      "event": "paris-judgment",
      "role": "주인공"
     },
@@ -10052,6 +10074,10 @@
     {
      "event": "paris-born",
      "role": "주인공"
+    },
+    {
+     "event": "paris-returns",
+     "role": "도움"
     },
     {
      "event": "paris-menelaos-duel",
@@ -19231,9 +19257,93 @@
   },
   {
    "id": "kassandra-apollon",
-   "name_ko": "아폴론이 카산드라에게 앞일을 보는 힘을 주다",
+   "name_ko": "아폴론이 카산드라에게 앞일을 보는 법을 가르치다",
    "era": 5,
    "seq": 1150,
+   "span": "season",
+   "place": "troy",
+   "cast": [
+    {
+     "figure": "kassandra",
+     "role": "주인공"
+    },
+    {
+     "figure": "apollon",
+     "role": "주인공"
+    }
+   ],
+   "oneliner": "아폴론이 카산드라의 마음을 얻으려고 앞일을 보는 법을 가르쳤다.",
+   "body": "아폴론이 프리아모스의 딸 카산드라를 좋아했다.\n마음을 얻으려고 앞일을 보는 법을 가르쳐 주겠다고 약속했다.\n카산드라는 그 약속을 받아 아폴론에게서 배웠다.\n다 배우자 앞일이 다 보였다.\n",
+   "fun": "히기누스는 앞일을 보는 사람들의 이름을 죽 적어 두었다. 카산드라와 오빠 헬레노스가 그 안에 있다.",
+   "note": "참고: 처음 읽는 그리스 로마 신화 2권 4장 「예언자 카산드라」. 2026-09-24 에 둘로 갈랐다 — 가르침(이 사건)과 거절·믿음을 잃음(kassandra-unbelieved). 한 사건에 뭉쳐 있으면 목마 앞에서 믿지 않은 까닭을 인과로 이을 수 없었다.",
+   "sources": [
+    "apollodorus.library 3.12.5",
+    "hyginus.fabulae 128"
+   ],
+   "_file": "data/events/era6-troy.toml",
+   "arc": "road-to-troy",
+   "t0": 244,
+   "t1": 248,
+   "span_label": "한 철",
+   "open": false,
+   "threads": [
+    "apollon-kassandra"
+   ]
+  },
+  {
+   "id": "paris-returns",
+   "name_ko": "파리스가 트로이로 돌아오고, 카산드라가 알아보다",
+   "era": 5,
+   "seq": 1152,
+   "span": "days",
+   "after": [
+    "kassandra-apollon"
+   ],
+   "place": "troy",
+   "cast": [
+    {
+     "figure": "paris",
+     "role": "주인공"
+    },
+    {
+     "figure": "kassandra",
+     "role": "도움"
+    },
+    {
+     "figure": "priamos",
+     "role": "도움"
+    },
+    {
+     "figure": "deiphobos",
+     "role": "상대"
+    }
+   ],
+   "oneliner": "황소를 따라온 목동이 경기에서 형들을 이겼고, 카산드라가 그를 오빠라고 알아보았다.",
+   "body": "프리아모스의 하인들이 경기의 상으로 쓸 황소를 찾아 이데 산으로 왔다.\n목동으로 자란 파리스는 아끼는 황소를 따라 트로이까지 내려갔다.\n경기에 나가 형들까지 다 이기자 데이포보스가 칼을 뽑았다.\n파리스는 제우스의 제단으로 피했고, 카산드라가 그를 오빠라고 알아보았다.\n프리아모스는 그 말을 믿고 아들을 집에 들였다.\n",
+   "fun": "그 경기는 죽은 줄 알았던 아들 파리스를 기리는 경기였다. 파리스가 자기를 기리는 경기에서 이긴 셈이다.",
+   "caused_by": [
+    "paris-born"
+   ],
+   "note": "히기누스 91 이 유일한 서술이고, 아폴로도로스 3.12.5 는 '얼마 뒤 부모를 찾았다'고만 한다(2026-09-24). after = kassandra-apollon — 앞일을 보는 힘으로 알아본다. kassandra-unbelieved(1155)와의 앞뒤는 원전이 말하지 않는다. 믿어 준 말이므로 저주보다 앞에 두었지만(seq) 관계는 적지 않았다 — 두 원전을 합친 추론이라서다. 카산드라의 말을 사람들이 믿어 준 것은 이 한 번이고, 그 말이 들인 파리스가 헬레네를 데려간다(helene-taken caused_by). 파리스의 심판(era 6)은 히기누스가 이 이야기 다음에 적는다(91→92).",
+   "sources": [
+    "hyginus.fabulae 91",
+    "apollodorus.library 3.12.5"
+   ],
+   "_file": "data/events/era6-troy.toml",
+   "arc": "road-to-troy",
+   "t0": 248,
+   "t1": 250,
+   "span_label": "며칠",
+   "open": false,
+   "threads": [
+    "apollon-kassandra"
+   ]
+  },
+  {
+   "id": "kassandra-unbelieved",
+   "name_ko": "카산드라가 아폴론을 거절하고, 믿음을 잃다",
+   "era": 5,
+   "seq": 1155,
    "span": "moment",
    "place": "troy",
    "cast": [
@@ -19246,25 +19356,34 @@
      "role": "상대"
     }
    ],
-   "oneliner": "아폴론이 카산드라에게 앞일을 보는 힘을 주고, 믿음을 빼앗았다.",
-   "body": "아폴론이 프리아모스의 딸 카산드라를 좋아했다.\n마음을 얻으려고 앞일을 보는 법을 가르쳐 주겠다고 했다.\n카산드라는 다 배우고 나서 아폴론을 거절했다.\n아폴론은 그 힘에서 사람을 설득하는 힘을 빼앗았다.\n그 뒤로 카산드라가 하는 말은 다 맞았지만 아무도 믿지 않았다.\n",
+   "oneliner": "카산드라의 말은 다 맞았지만, 아무도 믿지 않게 되었다.",
+   "body": "다 배운 카산드라는 아폴론을 거절했다.\n아폴론은 앞일을 보는 힘은 그대로 두었다.\n대신 그 말에서 사람을 믿게 하는 힘을 빼앗았다.\n그 뒤로 카산드라가 하는 말은 다 맞았지만 아무도 믿지 않았다.\n",
+   "fun": "카산드라를 사랑해 트로이를 도우러 온 코로이보스도 그 말을 듣지 않았다. 베르길리우스가 그렇게 적었다.",
+   "caused_by": [
+    "kassandra-apollon"
+   ],
    "variants": [
     {
      "source": "hyginus.fabulae 93",
      "text": "히기누스는 카산드라가 아폴론의 신전에서 잠들었다가 다가온 아폴론을 거절했고, 그래서 아폴론이 사람들이 그 말을 믿지 않게 했다고 한다."
     }
    ],
-   "note": "참고: 처음 읽는 그리스 로마 신화 2권 4장 「예언자 카산드라」. 히기누스 93 은 까닭이 달라 variants 에 넣었다.",
+   "note": "kassandra-apollon 에서 갈라 낸 사건(2026-09-24). 이 사건이 목마 앞에서 카산드라의 말을 듣지 않은 까닭이다 — horse-into-troy 가 caused_by 로 잇는다(아이네이스 2.246-247 '신의 뜻으로 트로이 사람들이 결코 믿지 않은 입술', 히기누스 108). 코로이보스는 항목이 없어 이름만 부른다.",
    "sources": [
     "apollodorus.library 3.12.5",
-    "virgil.aeneid 2.246-247"
+    "virgil.aeneid 2.246-247",
+    "virgil.aeneid 2.341-346",
+    "hyginus.fabulae 93"
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 244,
-   "t1": 245,
+   "t0": 249,
+   "t1": 250,
    "span_label": "한 순간",
-   "open": false
+   "open": false,
+   "threads": [
+    "apollon-kassandra"
+   ]
   },
   {
    "id": "helene-suitors",
@@ -19335,8 +19454,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 245,
-   "t1": 249,
+   "t0": 250,
+   "t1": 254,
    "span_label": "한 철",
    "open": false
   },
@@ -19375,8 +19494,8 @@
     "livy.rome 1.7"
    ],
    "_file": "data/events/era8-rome.toml",
-   "t0": 246,
-   "t1": 248,
+   "t0": 251,
+   "t1": 253,
    "span_label": "며칠",
    "open": false
   },
@@ -19431,8 +19550,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 252,
-   "t1": 253,
+   "t0": 254,
+   "t1": 255,
    "span_label": "한 순간",
    "open": false
   },
@@ -19478,19 +19597,23 @@
    ],
    "sensitivity": "soften",
    "caused_by": [
-    "paris-judgment"
+    "paris-judgment",
+    "paris-returns"
    ],
-   "note": "참고: 처음 읽는 그리스 로마 신화 11권 1장 「파리스와 헬레네」",
+   "note": "참고: 처음 읽는 그리스 로마 신화 11권 1장 「파리스와 헬레네」. caused_by 에 paris-returns 를 더했다(2026-09-24) — 궁에 들어온 파리스가 트로이에서 지은 배(E.3.2, 페레클로스)로 스파르타에 간다. 카산드라가 믿어 준 유일한 말이 여기로 이어진다.",
    "sources": [
     "apollodorus.library E.3.3-E.3.5",
     "homer.iliad 3.443-446"
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 253,
-   "t1": 255,
+   "t0": 255,
+   "t1": 257,
    "span_label": "며칠",
-   "open": false
+   "open": false,
+   "threads": [
+    "apollon-kassandra"
+   ]
   },
   {
    "id": "greeks-muster",
@@ -19557,8 +19680,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 255,
-   "t1": 259,
+   "t0": 257,
+   "t1": 261,
    "span_label": "한 철",
    "open": false
   },
@@ -19615,8 +19738,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 256,
-   "t1": 258,
+   "t0": 258,
+   "t1": 260,
    "span_label": "며칠",
    "open": false
   },
@@ -19666,8 +19789,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 257,
-   "t1": 259,
+   "t0": 259,
+   "t1": 261,
    "span_label": "며칠",
    "open": false
   },
@@ -19735,8 +19858,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 259,
-   "t1": 260,
+   "t0": 261,
+   "t1": 262,
    "span_label": "한 순간",
    "open": false
   },
@@ -19790,8 +19913,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 260,
-   "t1": 262,
+   "t0": 262,
+   "t1": 264,
    "span_label": "며칠",
    "open": false
   },
@@ -19861,8 +19984,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 262,
-   "t1": 271,
+   "t0": 264,
+   "t1": 273,
    "span_label": "여러 해",
    "open": false
   },
@@ -19916,8 +20039,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 271,
-   "t1": 273,
+   "t0": 273,
+   "t1": 275,
    "span_label": "며칠",
    "open": false
   },
@@ -19980,8 +20103,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 273,
-   "t1": 274,
+   "t0": 275,
+   "t1": 276,
    "span_label": "한 순간",
    "open": false
   },
@@ -20026,8 +20149,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 274,
-   "t1": 276,
+   "t0": 276,
+   "t1": 278,
    "span_label": "며칠",
    "open": false
   },
@@ -20070,8 +20193,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 275,
-   "t1": 276,
+   "t0": 277,
+   "t1": 278,
    "span_label": "한 순간",
    "open": false
   },
@@ -20132,8 +20255,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 276,
-   "t1": 277,
+   "t0": 278,
+   "t1": 279,
    "span_label": "한 순간",
    "open": false
   },
@@ -20191,8 +20314,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 277,
-   "t1": 279,
+   "t0": 279,
+   "t1": 281,
    "span_label": "며칠",
    "open": false
   },
@@ -20242,8 +20365,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 278,
-   "t1": 279,
+   "t0": 280,
+   "t1": 281,
    "span_label": "한 순간",
    "open": false
   },
@@ -20298,8 +20421,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 279,
-   "t1": 280,
+   "t0": 281,
+   "t1": 282,
    "span_label": "한 순간",
    "open": false
   },
@@ -20361,8 +20484,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 280,
-   "t1": 282,
+   "t0": 282,
+   "t1": 284,
    "span_label": "며칠",
    "open": false
   },
@@ -20417,8 +20540,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 281,
-   "t1": 282,
+   "t0": 283,
+   "t1": 284,
    "span_label": "한 순간",
    "open": false
   },
@@ -20495,8 +20618,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 282,
-   "t1": 284,
+   "t0": 284,
+   "t1": 286,
    "span_label": "며칠",
    "open": false
   },
@@ -20551,8 +20674,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 284,
-   "t1": 285,
+   "t0": 286,
+   "t1": 287,
    "span_label": "한 순간",
    "open": false
   },
@@ -20615,8 +20738,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 285,
-   "t1": 287,
+   "t0": 287,
+   "t1": 289,
    "span_label": "며칠",
    "open": false
   },
@@ -20690,8 +20813,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 287,
-   "t1": 288,
+   "t0": 289,
+   "t1": 290,
    "span_label": "한 순간",
    "open": false
   },
@@ -20759,8 +20882,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 288,
-   "t1": 290,
+   "t0": 290,
+   "t1": 292,
    "span_label": "며칠",
    "open": false
   },
@@ -20813,8 +20936,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 290,
-   "t1": 294,
+   "t0": 292,
+   "t1": 296,
    "span_label": "한 철",
    "open": false
   },
@@ -20879,8 +21002,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 294,
-   "t1": 296,
+   "t0": 296,
+   "t1": 298,
    "span_label": "며칠",
    "open": false
   },
@@ -20931,8 +21054,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 296,
-   "t1": 298,
+   "t0": 298,
+   "t1": 300,
    "span_label": "며칠",
    "open": false
   },
@@ -20990,8 +21113,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 298,
-   "t1": 300,
+   "t0": 300,
+   "t1": 302,
    "span_label": "며칠",
    "open": false
   },
@@ -21057,8 +21180,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 300,
-   "t1": 304,
+   "t0": 302,
+   "t1": 306,
    "span_label": "한 철",
    "open": false
   },
@@ -21120,8 +21243,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 304,
-   "t1": 306,
+   "t0": 306,
+   "t1": 308,
    "span_label": "며칠",
    "open": false
   },
@@ -21169,23 +21292,28 @@
    ],
    "sensitivity": "soften",
    "caused_by": [
-    "wooden-horse-built"
+    "wooden-horse-built",
+    "kassandra-unbelieved"
    ],
    "after": [
     "wooden-horse-built"
    ],
-   "note": "참고: 처음 읽는 그리스 로마 신화 12권 4장. 뱀은 아폴로도로스에서는 아폴론이 보냈고, 베르길리우스에서는 아테나 신전으로 갔다.",
+   "note": "참고: 처음 읽는 그리스 로마 신화 12권 4장. 뱀은 아폴로도로스에서는 아폴론이 보냈고, 베르길리우스에서는 아테나 신전으로 갔다. 카산드라의 말을 믿지 않은 까닭은 kassandra-unbelieved — 아이네이스 2.246-247 이 이 장면에서 '신의 뜻으로 결코 믿지 않은' 이라고 말하고, 히기누스 108 도 '믿지 않았다'고 한다(2026-09-24).",
    "sources": [
     "apollodorus.library E.5.16-E.5.18",
     "virgil.aeneid 2.40-249",
-    "homer.odyssey 8.500-513"
+    "homer.odyssey 8.500-513",
+    "hyginus.fabulae 108"
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 306,
-   "t1": 308,
+   "t0": 308,
+   "t1": 310,
    "span_label": "며칠",
-   "open": false
+   "open": false,
+   "threads": [
+    "apollon-kassandra"
+   ]
   },
   {
    "id": "troy-falls",
@@ -21292,10 +21420,13 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 308,
-   "t1": 310,
+   "t0": 310,
+   "t1": 312,
    "span_label": "며칠",
-   "open": false
+   "open": false,
+   "threads": [
+    "apollon-kassandra"
+   ]
   },
   {
    "id": "agamemnon-murdered",
@@ -21339,10 +21470,13 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 310,
-   "t1": 311,
+   "t0": 312,
+   "t1": 313,
    "span_label": "한 순간",
-   "open": false
+   "open": false,
+   "threads": [
+    "apollon-kassandra"
+   ]
   },
   {
    "id": "orestes-sent-away",
@@ -21381,8 +21515,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 311,
-   "t1": 320,
+   "t0": 313,
+   "t1": 322,
    "span_label": "여러 해",
    "open": false
   },
@@ -21416,8 +21550,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 312,
-   "t1": 314,
+   "t0": 314,
+   "t1": 316,
    "span_label": "며칠",
    "open": false
   },
@@ -21450,8 +21584,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 314,
-   "t1": 316,
+   "t0": 316,
+   "t1": 318,
    "span_label": "며칠",
    "open": false
   },
@@ -21485,8 +21619,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 316,
-   "t1": 318,
+   "t0": 318,
+   "t1": 320,
    "span_label": "며칠",
    "open": false
   },
@@ -21525,8 +21659,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 317,
-   "t1": 319,
+   "t0": 319,
+   "t1": 321,
    "span_label": "며칠",
    "open": false
   },
@@ -21559,8 +21693,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 319,
-   "t1": 323,
+   "t0": 321,
+   "t1": 325,
    "span_label": "한 철",
    "open": false
   },
@@ -21594,8 +21728,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 323,
-   "t1": 325,
+   "t0": 325,
+   "t1": 327,
    "span_label": "며칠",
    "open": false
   },
@@ -21632,8 +21766,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 325,
-   "t1": 327,
+   "t0": 327,
+   "t1": 329,
    "span_label": "며칠",
    "open": false
   },
@@ -21671,8 +21805,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 327,
-   "t1": 336,
+   "t0": 329,
+   "t1": 338,
    "span_label": "여러 해",
    "open": false
   },
@@ -21722,8 +21856,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 336,
-   "t1": 338,
+   "t0": 338,
+   "t1": 340,
    "span_label": "며칠",
    "open": false
   },
@@ -21761,8 +21895,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 338,
-   "t1": 339,
+   "t0": 340,
+   "t1": 341,
    "span_label": "한 순간",
    "open": false
   },
@@ -21801,8 +21935,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 339,
-   "t1": 340,
+   "t0": 341,
+   "t1": 342,
    "span_label": "한 순간",
    "open": false
   },
@@ -21840,8 +21974,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 340,
-   "t1": 344,
+   "t0": 342,
+   "t1": 346,
    "span_label": "한 철",
    "open": false
   },
@@ -21885,8 +22019,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 341,
-   "t1": 343,
+   "t0": 343,
+   "t1": 345,
    "span_label": "며칠",
    "open": false
   },
@@ -21929,8 +22063,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 343,
-   "t1": 354,
+   "t0": 345,
+   "t1": 356,
    "span_label": "여러 해",
    "open": false
   },
@@ -21978,8 +22112,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 344,
-   "t1": 353,
+   "t0": 346,
+   "t1": 355,
    "span_label": "여러 해",
    "open": false
   },
@@ -22040,8 +22174,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 345,
-   "t1": 346,
+   "t0": 347,
+   "t1": 348,
    "span_label": "한 순간",
    "open": false
   },
@@ -22087,8 +22221,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 346,
-   "t1": 350,
+   "t0": 348,
+   "t1": 352,
    "span_label": "한 철",
    "open": false
   },
@@ -22134,8 +22268,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 350,
-   "t1": 354,
+   "t0": 352,
+   "t1": 356,
    "span_label": "한 철",
    "open": false
   },
@@ -22188,8 +22322,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 351,
-   "t1": 353,
+   "t0": 353,
+   "t1": 355,
    "span_label": "며칠",
    "open": false
   },
@@ -22247,8 +22381,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 352,
-   "t1": 354,
+   "t0": 354,
+   "t1": 356,
    "span_label": "며칠",
    "open": false
   },
@@ -22286,8 +22420,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 354,
-   "t1": 356,
+   "t0": 356,
+   "t1": 358,
    "span_label": "며칠",
    "open": false
   },
@@ -22328,8 +22462,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 356,
-   "t1": 360,
+   "t0": 358,
+   "t1": 362,
    "span_label": "한 철",
    "open": false
   },
@@ -22377,8 +22511,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 357,
-   "t1": 359,
+   "t0": 359,
+   "t1": 361,
    "span_label": "며칠",
    "open": false
   },
@@ -22415,8 +22549,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 359,
-   "t1": 360,
+   "t0": 361,
+   "t1": 362,
    "span_label": "한 순간",
    "open": false
   },
@@ -22463,8 +22597,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 360,
-   "t1": 362,
+   "t0": 362,
+   "t1": 364,
    "span_label": "며칠",
    "open": false
   },
@@ -22507,8 +22641,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 362,
-   "t1": 364,
+   "t0": 364,
+   "t1": 366,
    "span_label": "며칠",
    "open": false
   },
@@ -22541,8 +22675,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 364,
-   "t1": 368,
+   "t0": 366,
+   "t1": 370,
    "span_label": "며칠",
    "open": false
   },
@@ -22592,8 +22726,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 365,
-   "t1": 367,
+   "t0": 367,
+   "t1": 369,
    "span_label": "며칠",
    "open": false
   },
@@ -22635,8 +22769,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 367,
-   "t1": 368,
+   "t0": 369,
+   "t1": 370,
    "span_label": "한 순간",
    "open": false
   },
@@ -22683,8 +22817,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 368,
-   "t1": 369,
+   "t0": 370,
+   "t1": 371,
    "span_label": "한 순간",
    "open": false
   },
@@ -22729,8 +22863,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 369,
-   "t1": 370,
+   "t0": 371,
+   "t1": 372,
    "span_label": "한 순간",
    "open": false
   },
@@ -22780,8 +22914,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 370,
-   "t1": 371,
+   "t0": 372,
+   "t1": 373,
    "span_label": "한 순간",
    "open": false
   },
@@ -22839,8 +22973,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 371,
-   "t1": 372,
+   "t0": 373,
+   "t1": 374,
    "span_label": "한 순간",
    "open": false
   },
@@ -22885,8 +23019,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 372,
-   "t1": 373,
+   "t0": 374,
+   "t1": 375,
    "span_label": "한 순간",
    "open": false
   },
@@ -22941,8 +23075,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 373,
-   "t1": 375,
+   "t0": 375,
+   "t1": 377,
    "span_label": "며칠",
    "open": false
   },
@@ -22987,8 +23121,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 1장 「하늘에서 떨어진 별」. troy-falls 는 TRO 소유.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 374,
-   "t1": 375,
+   "t0": 376,
+   "t1": 377,
    "span_label": "한 순간",
    "open": false
   },
@@ -23047,8 +23181,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 1장 「트로이를 떠나다」. mt-ida-troad 는 TRO 소유.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 375,
-   "t1": 377,
+   "t0": 377,
+   "t1": 379,
    "span_label": "며칠",
    "open": false
   },
@@ -23081,8 +23215,8 @@
    "note": "thrake 는 THE 소유. 폴리도로스(프리아모스의 아들)는 등록부에 없어 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 377,
-   "t1": 381,
+   "t0": 379,
+   "t1": 383,
    "span_label": "한 철",
    "open": false
   },
@@ -23120,8 +23254,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 1장 「아폴론의 뜻」. 아니오스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 381,
-   "t1": 383,
+   "t0": 383,
+   "t1": 385,
    "span_label": "며칠",
    "open": false
   },
@@ -23161,10 +23295,13 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 1장 「옛 조상의 땅」. kassandra 는 TRO 소유라 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 383,
-   "t1": 387,
+   "t0": 385,
+   "t1": 389,
    "span_label": "한 철",
-   "open": false
+   "open": false,
+   "threads": [
+    "apollon-kassandra"
+   ]
   },
   {
    "id": "strophades-harpies",
@@ -23204,8 +23341,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 2장 「하르피아이의 저주」. harpyiai(group) 는 THE 소유. 켈라이노는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 387,
-   "t1": 389,
+   "t0": 389,
+   "t1": 391,
    "span_label": "며칠",
    "open": false
   },
@@ -23250,8 +23387,8 @@
    "note": "helenos·andromache 는 TRO 소유. 아스티아낙스(TRO 의 astyanax)는 이름만. 스킬라·카리브디스는 ODY 소유라 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 389,
-   "t1": 391,
+   "t0": 391,
+   "t1": 393,
    "span_label": "며칠",
    "open": false
   },
@@ -23297,8 +23434,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 2장 「거인의 섬」. polyphemos 는 ODY 소유. ODY 의 kyklopes-land 는 mythic 이고, 여기서는 베르길리우스가 말한 에트나(real)를 쓴다. odysseus 는 TRO 소유라 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 391,
-   "t1": 393,
+   "t0": 393,
+   "t1": 395,
    "span_label": "며칠",
    "open": false
   },
@@ -23331,8 +23468,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 2장 「불행의 파도」. sikelia 는 ATH 소유. 드레파눔(지금의 트라파니)과 아케스테스 왕은 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 393,
-   "t1": 394,
+   "t0": 395,
+   "t1": 396,
    "span_label": "한 순간",
    "open": false
   },
@@ -23380,8 +23517,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 2장 「불행의 파도」. aiolos-anemon 은 ODY 소유. 포세이돈의 로마명 넵투누스는 여기서 쓰지 않았다(한 사건에 로마명 한 줄만).",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 394,
-   "t1": 396,
+   "t0": 396,
+   "t1": 398,
    "span_label": "며칠",
    "open": false
   },
@@ -23429,8 +23566,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 3장 「여왕의 도시 카르타고」. 에로스(쿠피도)는 아프로디테의 아들로, 기존 eros-primordial 과 다른 존재라 cast 에 넣지 않고 이름만 부른다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 396,
-   "t1": 398,
+   "t0": 398,
+   "t1": 400,
    "span_label": "며칠",
    "open": false
   },
@@ -23475,8 +23612,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 3장 「사랑에 빠진 디도」",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 397,
-   "t1": 401,
+   "t0": 399,
+   "t1": 403,
    "span_label": "한 철",
    "open": false
   },
@@ -23521,8 +23658,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 3장 「운명을 향해」. 이아르바스(디도에게 청혼했다가 거절당하고 제우스에게 기도한 이웃 왕, 4.196-218)는 등록부에 없어 이름만 부른다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 398,
-   "t1": 400,
+   "t0": 400,
+   "t1": 402,
    "span_label": "며칠",
    "open": false
   },
@@ -23562,8 +23699,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 3장 「운명을 향해」. 방법(칼)은 쓰지 않는다. 죽기 전 자손의 복수를 빈 말(4.607-629)은 본문에서 뺐다. 이리스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 399,
-   "t1": 400,
+   "t0": 401,
+   "t1": 402,
    "span_label": "한 순간",
    "open": false
   },
@@ -23608,8 +23745,8 @@
    "note": "잠의 신(솜누스/힙노스)은 등록부에 없어 이름만. 5권의 경기와 배가 불탄 일(5.604-699)은 사건으로 만들지 않고 한 줄로만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 400,
-   "t1": 401,
+   "t0": 402,
+   "t1": 403,
    "span_label": "한 순간",
    "open": false
   },
@@ -23661,8 +23798,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 4장 「시빌레의 신전」. 신전 문의 다이달로스 조각(6.14-33)은 ATH 의 이야기라 뺐다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 401,
-   "t1": 403,
+   "t0": 403,
+   "t1": 405,
    "span_label": "며칠",
    "open": false
   },
@@ -23719,8 +23856,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 4장 「엘리시온으로」. kerberos 는 HER 소유. 카론·데이포보스(TRO 가 만들 수 있음)·로물루스(ROM)·카이사르는 이름만. 상아 문(6.893-898)은 거짓 꿈이 나오는 문이다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 403,
-   "t1": 405,
+   "t0": 405,
+   "t1": 407,
    "span_label": "며칠",
    "open": false
   },
@@ -23775,8 +23912,8 @@
    "note": "faunus 는 ROM 소유. 라티누스의 도시 라우렌툼은 위치가 다투어져 place 로 만들지 않고 강어귀(tiber)를 썼다. 유모 카이에타(7.1-4)는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 405,
-   "t1": 407,
+   "t0": 407,
+   "t1": 409,
    "span_label": "며칠",
    "open": false
   },
@@ -23832,8 +23969,8 @@
    "note": "erinyes(group) 는 ODY 소유. 알렉토는 그 가운데 하나라 이름만 부르고 cast 는 erinyes 로 넣었다. 사슴을 기른 실비아와 티레우스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 406,
-   "t1": 408,
+   "t0": 408,
+   "t1": 410,
    "span_label": "며칠",
    "open": false
   },
@@ -23880,8 +24017,8 @@
    "note": "rome 은 ROM 소유. 헤라클레스와 카쿠스 이야기(8.184-279)는 ROM 이 쓴다. 강의 신 티베리누스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 407,
-   "t1": 409,
+   "t0": 409,
+   "t1": 411,
    "span_label": "며칠",
    "open": false
   },
@@ -23925,8 +24062,8 @@
    "note": "두 사람의 머리를 창에 꽂아 보인 장면(9.465-467)은 뺐다. 적장 볼켄스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 409,
-   "t1": 410,
+   "t0": 411,
+   "t1": 412,
    "span_label": "한 순간",
    "open": false
   },
@@ -23974,8 +24111,8 @@
    "note": "herakles 는 HER 소유(이때는 이미 신). 시신을 짓밟은 장면(10.495)은 뺐다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 410,
-   "t1": 411,
+   "t0": 412,
+   "t1": 413,
    "span_label": "한 순간",
    "open": false
   },
@@ -24018,8 +24155,8 @@
    "note": "아룬스·오피스·클로레우스·메타부스는 등록부에 없어 이름만. 아마존(HER 의 amazones)도 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 411,
-   "t1": 412,
+   "t0": 413,
+   "t1": 414,
    "span_label": "한 순간",
    "open": false
   },
@@ -24086,8 +24223,8 @@
    "note": "처음 읽는 그리스 로마 신화 15권에는 없다(책은 6권 저승에서 끝난다). 아마타의 죽음은 방법 없이 사실만. 유투르나는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 412,
-   "t1": 413,
+   "t0": 414,
+   "t1": 415,
    "span_label": "한 순간",
    "open": false
   },
@@ -24133,8 +24270,8 @@
    "note": "처음 읽는 그리스 로마 신화에는 없다. ROM 의 alba-longa-founded 가 이 사건을 after 로 붙잡는다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 413,
-   "t1": 422,
+   "t0": 415,
+   "t1": 424,
    "span_label": "여러 해",
    "open": false
   },
@@ -24190,8 +24327,8 @@
    "note": "리비우스는 '무덤'이라 쓰고 신 이름으로 불렀다고 한다. 오비디우스는 씻겨 신이 된다. 둘을 함께 적었다. 아스카니오스가 이어 다스리는 것은 ROM 의 era 8. 강의 신 누미키우스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 422,
-   "t1": 423,
+   "t0": 424,
+   "t1": 425,
    "span_label": "한 순간",
    "open": false
   },
@@ -24225,8 +24362,8 @@
     "virgil.aeneid 7.187-191"
    ],
    "_file": "data/events/era8-rome.toml",
-   "t0": 423,
-   "t1": 424,
+   "t0": 425,
+   "t1": 426,
    "span_label": "한 순간",
    "open": false
   },
@@ -24256,8 +24393,8 @@
     "ovid.metamorphoses 14.397-434"
    ],
    "_file": "data/events/era8-rome.toml",
-   "t0": 424,
-   "t1": 426,
+   "t0": 426,
+   "t1": 428,
    "span_label": "며칠",
    "open": false
   },
@@ -24291,8 +24428,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 426,
-   "t1": 435,
+   "t0": 428,
+   "t1": 437,
    "span_label": "여러 해",
    "open": false
   },
@@ -24326,8 +24463,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 435,
-   "t1": 459,
+   "t0": 437,
+   "t1": 461,
    "span_label": "한 세대 넘게",
    "open": false
   },
@@ -24357,8 +24494,8 @@
     "ovid.metamorphoses 14.623-771"
    ],
    "_file": "data/events/era8-rome.toml",
-   "t0": 436,
-   "t1": 438,
+   "t0": 438,
+   "t1": 440,
    "span_label": "며칠",
    "open": false
   },
@@ -24399,8 +24536,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 459,
-   "t1": 468,
+   "t0": 461,
+   "t1": 470,
    "span_label": "여러 해",
    "open": false
   },
@@ -24453,8 +24590,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 460,
-   "t1": 461,
+   "t0": 462,
+   "t1": 463,
    "span_label": "한 순간",
    "open": false
   },
@@ -24509,8 +24646,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 461,
-   "t1": 463,
+   "t0": 463,
+   "t1": 465,
    "span_label": "며칠",
    "open": false
   },
@@ -24557,8 +24694,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 462,
-   "t1": 464,
+   "t0": 464,
+   "t1": 466,
    "span_label": "며칠",
    "open": false
   },
@@ -24598,8 +24735,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 463,
-   "t1": 464,
+   "t0": 465,
+   "t1": 466,
    "span_label": "한 순간",
    "open": false
   },
@@ -24631,8 +24768,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 464,
-   "t1": 465,
+   "t0": 466,
+   "t1": 467,
    "span_label": "한 순간",
    "open": false
   },
@@ -24670,8 +24807,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 465,
-   "t1": 466,
+   "t0": 467,
+   "t1": 468,
    "span_label": "한 순간",
    "open": false
   },
@@ -24704,8 +24841,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 466,
-   "t1": 470,
+   "t0": 468,
+   "t1": 472,
    "span_label": "한 철",
    "open": false
   },
@@ -24734,8 +24871,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 467,
-   "t1": 476,
+   "t0": 469,
+   "t1": 478,
    "span_label": "여러 해",
    "open": false
   },
@@ -24768,8 +24905,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 468,
-   "t1": 469,
+   "t0": 470,
+   "t1": 471,
    "span_label": "한 순간",
    "open": false
   },
@@ -24809,8 +24946,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 469,
-   "t1": 473,
+   "t0": 471,
+   "t1": 475,
    "span_label": "한 철",
    "open": false
   },
@@ -24854,8 +24991,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 473,
-   "t1": 474,
+   "t0": 475,
+   "t1": 476,
    "span_label": "한 순간",
    "open": false
   },
@@ -24899,8 +25036,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 474,
-   "t1": 475,
+   "t0": 476,
+   "t1": 477,
    "span_label": "한 순간",
    "open": false
   },
@@ -24940,8 +25077,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 475,
-   "t1": 477,
+   "t0": 477,
+   "t1": 479,
    "span_label": "며칠",
    "open": false
   },
@@ -24983,8 +25120,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 476,
-   "t1": 477,
+   "t0": 478,
+   "t1": 479,
    "span_label": "한 순간",
    "open": false
   },
@@ -25015,8 +25152,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 477,
-   "t1": 478,
+   "t0": 479,
+   "t1": 480,
    "span_label": "한 순간",
    "open": false
   },
@@ -25065,8 +25202,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 478,
-   "t1": 479,
+   "t0": 480,
+   "t1": 481,
    "span_label": "한 순간",
    "open": false
   },
@@ -25103,8 +25240,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 479,
-   "t1": 480,
+   "t0": 481,
+   "t1": 482,
    "span_label": "한 순간",
    "open": false
   },
@@ -25138,8 +25275,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 480,
-   "t1": 482,
+   "t0": 482,
+   "t1": 484,
    "span_label": "며칠",
    "open": false
   },
@@ -25173,8 +25310,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 481,
-   "t1": 490,
+   "t0": 483,
+   "t1": 492,
    "span_label": "여러 해",
    "open": false
   },
@@ -25215,8 +25352,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 482,
-   "t1": 491,
+   "t0": 484,
+   "t1": 493,
    "span_label": "여러 해",
    "open": false
   },
@@ -25250,8 +25387,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 483,
-   "t1": 492,
+   "t0": 485,
+   "t1": 494,
    "span_label": "여러 해",
    "open": false
   },
@@ -25294,8 +25431,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 492,
-   "t1": 494,
+   "t0": 494,
+   "t1": 496,
    "span_label": "며칠",
    "open": false
   }
@@ -27303,6 +27440,8 @@
     "herakles-sacks-troy",
     "paris-born",
     "kassandra-apollon",
+    "paris-returns",
+    "kassandra-unbelieved",
     "helene-taken",
     "troy-landing-nine-years",
     "chryses-plague",
@@ -28033,6 +28172,8 @@
     "achilleus-childhood",
     "paris-born",
     "kassandra-apollon",
+    "paris-returns",
+    "kassandra-unbelieved",
     "helene-suitors",
     "paris-judgment",
     "helene-taken",
@@ -28052,7 +28193,7 @@
    ],
    "_file": "data/arcs.toml",
    "t0": 239,
-   "t1": 271
+   "t1": 273
   },
   {
    "id": "wrath-of-achilleus",
@@ -28083,8 +28224,8 @@
     "apollodorus.library E.4.1-E.4.7"
    ],
    "_file": "data/arcs.toml",
-   "t0": 271,
-   "t1": 290
+   "t0": 273,
+   "t1": 292
   },
   {
    "id": "fall-of-troy",
@@ -28109,8 +28250,8 @@
     "homer.odyssey 8.492-520"
    ],
    "_file": "data/arcs.toml",
-   "t0": 290,
-   "t1": 310
+   "t0": 292,
+   "t1": 312
   },
   {
    "id": "aineias-voyage",
@@ -28144,8 +28285,8 @@
    ],
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 「트로이의 마지막 불꽃」 1~4장. 이야기 순서는 아이네이아스가 겪은 순서(2·3권 → 1권 → 4~6권)로 두었다.",
    "_file": "data/arcs.toml",
-   "t0": 374,
-   "t1": 405
+   "t0": 376,
+   "t1": 407
   },
   {
    "id": "aineias-latium",
@@ -28171,8 +28312,8 @@
    ],
    "note": "처음 읽는 그리스 로마 신화에는 없는 부분(책은 6권에서 끝난다). era 8 의 alba-longa-founded 로 이어진다.",
    "_file": "data/arcs.toml",
-   "t0": 405,
-   "t1": 423
+   "t0": 407,
+   "t1": 425
   },
   {
    "id": "oresteia",
@@ -28193,8 +28334,8 @@
     "pausanias.greece 1.28"
    ],
    "_file": "data/arcs.toml",
-   "t0": 310,
-   "t1": 354
+   "t0": 312,
+   "t1": 356
   },
   {
    "id": "odysseus-wanderings",
@@ -28227,8 +28368,8 @@
     "apollodorus.library E.7.1-E.7.25"
    ],
    "_file": "data/arcs.toml",
-   "t0": 312,
-   "t1": 362
+   "t0": 314,
+   "t1": 364
   },
   {
    "id": "telemachos-journey",
@@ -28248,8 +28389,8 @@
     "homer.odyssey 15.1-557"
    ],
    "_file": "data/arcs.toml",
-   "t0": 344,
-   "t1": 367
+   "t0": 346,
+   "t1": 369
   },
   {
    "id": "odysseus-homecoming",
@@ -28273,8 +28414,8 @@
     "apollodorus.library E.7.26-E.7.33"
    ],
    "_file": "data/arcs.toml",
-   "t0": 362,
-   "t1": 375
+   "t0": 364,
+   "t1": 377
   },
   {
    "id": "alba-to-rome",
@@ -28301,8 +28442,8 @@
     "virgil.aeneid 1.267-277"
    ],
    "_file": "data/arcs.toml",
-   "t0": 426,
-   "t1": 470
+   "t0": 428,
+   "t1": 472
   },
   {
    "id": "romulus-reign",
@@ -28328,8 +28469,8 @@
     "ovid.metamorphoses 14.775-851"
    ],
    "_file": "data/arcs.toml",
-   "t0": 467,
-   "t1": 480
+   "t0": 469,
+   "t1": 482
   },
   {
    "id": "numa-peace",
@@ -28350,8 +28491,8 @@
     "ovid.metamorphoses 15.479-551"
    ],
    "_file": "data/arcs.toml",
-   "t0": 480,
-   "t1": 494
+   "t0": 482,
+   "t1": 496
   }
  ],
  "threads": [
@@ -28507,6 +28648,81 @@
     2,
     4,
     5
+   ]
+  },
+  {
+   "id": "apollon-kassandra",
+   "name_ko": "아폴론과 카산드라, 아무도 믿지 않은 말",
+   "aka": [
+    "카산드라의 예언",
+    "카산드라"
+   ],
+   "oneliner": "앞일을 다 보았지만 아무도 믿지 않았고, 트로이는 그대로 무너졌다.",
+   "body": "아폴론이 카산드라에게 앞일을 보는 법을 가르쳤다.\n믿어 준 말은 한 번, 낯선 목동을 오빠 파리스라고 알아본 때였다.\n아폴론을 거절한 뒤로는 아무도 그 말을 믿지 않았다.\n목마 안에 군사가 있다고 말했지만 트로이 사람들은 듣지 않았다.\n믿어 준 말은 트로이를 무너뜨릴 사람을 들였고, 믿지 않은 말은 트로이를 구할 수 있었다.\n",
+   "fun": "오빠 헬레노스도 앞일을 보았다. 그 말은 그리스군이 믿었고, 트로이를 무너뜨리는 조건이 되었다.",
+   "steps": [
+    {
+     "event": "kassandra-apollon",
+     "label": "아폴론이 가르치다",
+     "unsure": false
+    },
+    {
+     "event": "paris-returns",
+     "label": "한 번은 믿었다: 파리스를 알아보다",
+     "unsure": false
+    },
+    {
+     "event": "kassandra-unbelieved",
+     "label": "거절하고, 믿음을 잃다",
+     "unsure": true
+    },
+    {
+     "event": "helene-taken",
+     "label": "그 파리스가 헬레네를 데려오다",
+     "unsure": false
+    },
+    {
+     "event": "horse-into-troy",
+     "label": "안에 군사가 있다고 했지만",
+     "unsure": false
+    },
+    {
+     "event": "troy-falls",
+     "label": "그 말이 맞았다",
+     "unsure": false
+    },
+    {
+     "event": "agamemnon-murdered",
+     "label": "카산드라의 마지막",
+     "unsure": false
+    },
+    {
+     "event": "crete-plague",
+     "label": "안키세스가 카산드라의 말을 떠올리다",
+     "unsure": true
+    }
+   ],
+   "note": "2026-09-24. 믿어 준 말과 믿지 않은 말이 둘 다 트로이 함락의 원인이 된다 — paris-returns → helene-taken, kassandra-unbelieved → horse-into-troy 두 인과 사슬이 troy-falls 에서 만난다. 파리스의 귀환과 저주 사이의 앞뒤는 원전이 말하지 않는다(unsure). 아가멤논의 죽음과 크레타 사이도 그렇다(아가멤논의 귀환과 아이네이아스의 항해는 나란하다). 헬레노스의 말은 helenos-conditions(E.5.9-E.5.13).",
+   "sources": [
+    "apollodorus.library 3.12.5",
+    "apollodorus.library E.3.2",
+    "apollodorus.library E.5.9-E.5.13",
+    "apollodorus.library E.5.17",
+    "apollodorus.library E.6.23",
+    "virgil.aeneid 2.246-247",
+    "virgil.aeneid 3.182-187",
+    "hyginus.fabulae 91",
+    "hyginus.fabulae 93",
+    "hyginus.fabulae 108",
+    "homer.odyssey 11.421-423"
+   ],
+   "_file": "data/threads.toml",
+   "t0": 244,
+   "t1": 389,
+   "eras": [
+    5,
+    6,
+    7
    ]
   }
  ],

@@ -61,3 +61,29 @@ steps = [
 ]
 note = "타래의 첫 시안 둘 가운데 하나(2026-09-22). 순서는 시간축이 정한다 — 헤시오도스 886-944 는 목록이지 순서가 아니다. 넣지 않은 것: 아이기나(sisyphos-punished 에 이름만 나온다), 테미스·에우리노메·므네모시네(자식이 항목에 없다), 이오·칼리스토·안티오페·가니메데스·엘렉트라·타이게테(항목이 없다), 헤라와의 결혼(사건이 없다), 탄탈로스·사르페돈(어머니가 항목에 없다). 아폴로도로스 1.3.1 은 페르세포네를 스틱스의 딸이라고도 한다."
 sources = ["hesiod.theogony 886-944", "apollodorus.library 1.3.1", "homer.iliad 14.313-328"]
+
+[[thread]]
+id = "apollon-kassandra"
+name_ko = "아폴론과 카산드라, 아무도 믿지 않은 말"
+aka = ["카산드라의 예언", "카산드라"]
+oneliner = "앞일을 다 보았지만 아무도 믿지 않았고, 트로이는 그대로 무너졌다."
+body = """
+아폴론이 카산드라에게 앞일을 보는 법을 가르쳤다.
+믿어 준 말은 한 번, 낯선 목동을 오빠 파리스라고 알아본 때였다.
+아폴론을 거절한 뒤로는 아무도 그 말을 믿지 않았다.
+목마 안에 군사가 있다고 말했지만 트로이 사람들은 듣지 않았다.
+믿어 준 말은 트로이를 무너뜨릴 사람을 들였고, 믿지 않은 말은 트로이를 구할 수 있었다.
+"""
+fun = "오빠 헬레노스도 앞일을 보았다. 그 말은 그리스군이 믿었고, 트로이를 무너뜨리는 조건이 되었다."
+steps = [
+  { event = "kassandra-apollon", label = "아폴론이 가르치다" },
+  { event = "paris-returns", label = "한 번은 믿었다: 파리스를 알아보다" },
+  { event = "kassandra-unbelieved", label = "거절하고, 믿음을 잃다" },
+  { event = "helene-taken", label = "그 파리스가 헬레네를 데려오다" },
+  { event = "horse-into-troy", label = "안에 군사가 있다고 했지만" },
+  { event = "troy-falls", label = "그 말이 맞았다" },
+  { event = "agamemnon-murdered", label = "카산드라의 마지막" },
+  { event = "crete-plague", label = "안키세스가 카산드라의 말을 떠올리다" },
+]
+note = "2026-09-24. 믿어 준 말과 믿지 않은 말이 둘 다 트로이 함락의 원인이 된다 — paris-returns → helene-taken, kassandra-unbelieved → horse-into-troy 두 인과 사슬이 troy-falls 에서 만난다. 파리스의 귀환과 저주 사이의 앞뒤는 원전이 말하지 않는다(unsure). 아가멤논의 죽음과 크레타 사이도 그렇다(아가멤논의 귀환과 아이네이아스의 항해는 나란하다). 헬레노스의 말은 helenos-conditions(E.5.9-E.5.13)."
+sources = ["apollodorus.library 3.12.5", "apollodorus.library E.3.2", "apollodorus.library E.5.9-E.5.13", "apollodorus.library E.5.17", "apollodorus.library E.6.23", "virgil.aeneid 2.246-247", "virgil.aeneid 3.182-187", "hyginus.fabulae 91", "hyginus.fabulae 93", "hyginus.fabulae 108", "homer.odyssey 11.421-423"]

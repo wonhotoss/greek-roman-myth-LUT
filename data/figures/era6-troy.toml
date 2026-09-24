@@ -414,9 +414,10 @@ body = """
 그래서 목마 안에 군사가 있다고 말했지만 아무도 듣지 않았다.
 트로이가 무너진 뒤 아가멤논이 카산드라를 데려갔다.
 """
+fun = "사람들이 믿어 준 말은 하나였다. 낯선 목동을 오빠 파리스라고 알아본 말이다. 그 파리스가 헬레네를 데려왔다."
 sensitivity = "soften"
 note = "참고: 처음 읽는 그리스 로마 신화 2권 4장 「예언자 카산드라」. 오일레우스의 아이아스가 한 일(E.5.22)은 쓰지 않는다."
-sources = ["apollodorus.library 3.12.5", "apollodorus.library E.5.17", "apollodorus.library E.5.23", "virgil.aeneid 2.246-247"]
+sources = ["apollodorus.library 3.12.5", "apollodorus.library E.5.17", "apollodorus.library E.5.23", "virgil.aeneid 2.246-247", "hyginus.fabulae 91"]
 
 [[figure]]
 id = "helenos"
