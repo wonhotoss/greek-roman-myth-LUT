@@ -103,3 +103,34 @@
 > 내부 메모(그대로 읽지 않는다): 2026-09-24. 믿어 준 말과 믿지 않은 말이 둘 다 트로이 함락의 원인이 된다 — paris-returns → helene-taken, kassandra-unbelieved → horse-into-troy 두 인과 사슬이 troy-falls 에서 만난다. 파리스의 귀환과 저주 사이의 앞뒤는 원전이 말하지 않는다(unsure). 아가멤논의 죽음과 크레타 사이도 그렇다(아가멤논의 귀환과 아이네이아스의 항해는 나란하다). 헬레노스의 말은 helenos-conditions(E.5.9-E.5.13).
 
 적힌 곳: apollodorus.library 3.12.5 / apollodorus.library E.3.2 / apollodorus.library E.5.9-E.5.13 / apollodorus.library E.5.17 / apollodorus.library E.6.23 / virgil.aeneid 2.246-247 / virgil.aeneid 3.182-187 / hyginus.fabulae 91 / hyginus.fabulae 93 / hyginus.fabulae 108 / homer.odyssey 11.421-423
+
+### 다이달로스의 일생  `daidalos-life`
+
+- 다른 표기: 다이달로스 연대기, 미로를 지은 사람
+- 시대: 4 첫 영웅들 → 5 큰 영웅들
+
+**아테네에서 쫓겨난 장인이 크레타, 하늘, 시켈리아를 거쳐 간다.**
+
+다이달로스는 무엇이든 만들 줄 알았다.
+그 솜씨 때문에 조카를 시샘해 아테네에서 쫓겨났다.
+크레타에서는 미로를 짓고, 그 미로를 빠져나오는 법도 알려 주었다.
+갇히자 날개를 만들어 달아났지만 아들을 바다에서 잃었다.
+그의 이야기는 미노스, 테세우스, 헤라클레스의 이야기와 차례로 만난다.
+
+시간 순서:
+
+1. 조카를 시샘해 아테네에서 쫓겨나다 — 다이달로스가 아테네에서 쫓겨나다 `daidalos-exiled` — 제자가 더 솜씨 좋아질까 봐 겁이 난 스승이 큰 죄를 지었다.
+2. 미노스를 위해 미로를 짓다 — 미노타우로스가 태어나고 다이달로스가 미로를 짓다 `minotauros-born-labyrinth` — 머리가 황소인 아이를 가둘 집이 필요했다.
+3. 아리아드네에게 실을 주다 — 아리아드네의 실과 미노타우로스 `minotauros-slain` — 실 한 뭉치가 미로에서 나오는 길이 되었다.
+4. 날개를 만들고 이카로스를 잃다 — 다이달로스와 이카로스가 날개로 날아가다 `daidalos-ikaros-wings` — 미노스는 땅과 바다를 막았지만 하늘은 막지 못했다.
+5. 시켈리아에 숨고 미노스가 죽다 — 시켈리아의 다이달로스와 미노스의 죽음 `daidalos-sikelia` — 고둥에 실을 꿴 개미가 숨은 사람을 드러냈다.
+   (앞의 것과 어느 쪽이 먼저인지 옛 책은 말하지 않는다. 순서를 지어 말하지 않는다)
+6. 헤라클레스가 이카로스를 묻어 주다 — 헤라클레스가 이카로스를 묻어 주다 `ikaros-buried` — 바닷가에 밀려온 아이를 지나가던 영웅이 묻어 주었다.
+
+재밌는 것: 다이달로스가 만든 것: 미로, 날개, 아리아드네의 춤 마당, 헤라클레스의 조각상. 조카가 만든 것: 톱, 컴퍼스.
+
+> 민감도: 완화
+
+> 내부 메모(그대로 읽지 않는다): 묶음 셋(daidalos-ikaros, europa-minos, theseus-journey)을 가로지른다. 마지막 두 단계의 앞뒤는 원전이 말하지 않는다 — 빌드가 unsure 를 붙인다. 디오도로스 4.76-4.79 의 시켈리아·사르디니아 이후 이야기는 원전 코퍼스에 없어 넣지 않았다.
+
+적힌 곳: apollodorus.library 3.15.8 / apollodorus.library 3.1.4 / apollodorus.library E.1.8-E.1.15 / apollodorus.library 2.6.3 / ovid.metamorphoses 8.159-8.259 / hyginus.fabulae 39-40 / hyginus.fabulae 44

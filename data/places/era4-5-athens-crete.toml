@@ -40,6 +40,23 @@ body = """
 sources = ["apollodorus.library E.1.9", "ovid.metamorphoses 8.174-8.182", "homer.odyssey 11.321-11.325"]
 
 [[place]]
+id = "ikaria"
+name_ko = "이카리아 섬"
+name_grc = "Ikaria"
+aka = ["이카리아", "돌리케"]
+kind = "real"
+lat = 37.6000
+lon = 26.1500
+modern = "그리스 이카리아 섬"
+oneliner = "이카로스가 묻힌 섬. 옛 이름은 돌리케였다."
+body = """
+에게해 동쪽, 사모스 섬 가까이에 있다.
+바닷가에 밀려온 이카로스를 헤라클레스가 여기에 묻었다.
+그 뒤로 섬은 이카리아, 둘레의 바다는 이카리아 바다라고 불린다.
+"""
+sources = ["apollodorus.library 2.6.3", "ovid.metamorphoses 8.229-8.235"]
+
+[[place]]
 id = "troizen"
 name_ko = "트로이젠"
 name_grc = "Troizen"
