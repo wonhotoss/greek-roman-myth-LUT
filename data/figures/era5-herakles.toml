@@ -69,6 +69,7 @@ name_ko = "암피트리온"
 name_grc = "Amphitryon"
 kind = "human"
 era = 5
+parents = ["alkaios"]
 spouses = ["alkmene"]
 home = "thebes"
 oneliner = "알크메네의 남편. 헤라클레스를 키운 아버지다."
@@ -79,7 +80,7 @@ body = """
 헤라클레스에게 수레 몰기를 가르쳤다.
 뒷날 테베를 지키는 싸움에서 죽었다.
 """
-note = "아버지 알카이오스는 등록부에 없어 계보를 비웠다."
+note = "어머니(아스티다메이아, 이설 둘 더)는 등록부에 없어 아버지만 적었다."
 sources = ["apollodorus.library 2.4.5-2.4.11"]
 
 [[figure]]
@@ -497,6 +498,7 @@ name_grc = "Geryon"
 aka = ["게리오네스"]
 kind = "monster"
 era = 5
+parents = ["chrysaor"]
 home = "erytheia"
 oneliner = "몸 셋이 하나로 붙은 거인. 붉은 소의 주인이다."
 body = """
@@ -505,7 +507,7 @@ body = """
 서쪽 끝의 섬 에리테이아에서 붉은 소를 길렀다.
 헤라클레스가 소를 몰고 가자 뒤쫓아 왔다가 화살에 맞아 죽었다.
 """
-note = "부모 크리사오르·칼리로에는 등록부에 없어 계보를 비웠다."
+note = "어머니 칼리로에는 등록부에 없어 아버지만 적었다."
 sources = ["hesiod.theogony 287-294", "apollodorus.library 2.5.10", "hyginus.fabulae preface"]
 
 [[figure]]

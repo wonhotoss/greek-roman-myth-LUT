@@ -4,7 +4,7 @@
 다섯 가지로 찾는다 — 언제 어디서(시간축 커서 + 반응하는 지도), 시간순(연표),
 지리(실제 지도 + 우주 도해), 인물(계보), 이야기(묶음과 타래).
 
-내부 필드(note, sensitivity)는 그리지 않는다. 아이가 보는 화면이다.
+내부 필드(note, sensitivity, record)는 그리지 않는다. 아이가 보는 화면이다. 묻힌 JSON 에는 들어 있다 — 뷰 소스로는 보인다.
 
     python tools/build.py && python tools/render_web.py
 """

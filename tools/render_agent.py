@@ -116,6 +116,8 @@ def fig_md(f, by):
         L += ["", f"다른 이야기: {text}"]
     if f.get("sensitivity") == "soften":
         L += ["", "> 민감도: 완화"]
+    if f.get("record"):
+        L += ["", f"> 원전 기록(수위 없음 — 아이에게 그대로 읽지 않는다): {f['record']}"]
     if f.get("note"):
         L += ["", f"> 내부 메모(그대로 읽지 않는다): {f['note']}"]
     L += ["", "적힌 곳: " + " / ".join(f["sources"]), ""]
@@ -152,6 +154,8 @@ def event_md(e, by, eras):
         L += ["", f"다른 이야기: {v['text']}"]
     if e.get("sensitivity") == "soften":
         L += ["", "> 민감도: 완화"]
+    if e.get("record"):
+        L += ["", f"> 원전 기록(수위 없음 — 아이에게 그대로 읽지 않는다): {e['record']}"]
     if e.get("note"):
         L += ["", f"> 내부 메모(그대로 읽지 않는다): {e['note']}"]
     L += ["", "적힌 곳: " + " / ".join(e["sources"]), ""]
@@ -174,6 +178,8 @@ def thread_md(t, by, eras):
         L += ["", f"재밌는 것: {t['fun']}"]
     if t.get("sensitivity") == "soften":
         L += ["", "> 민감도: 완화"]
+    if t.get("record"):
+        L += ["", f"> 원전 기록(수위 없음 — 아이에게 그대로 읽지 않는다): {t['record']}"]
     if t.get("note"):
         L += ["", f"> 내부 메모(그대로 읽지 않는다): {t['note']}"]
     L += ["", "적힌 곳: " + " / ".join(t["sources"]), ""]

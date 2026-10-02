@@ -95,6 +95,7 @@ name_ko = "아트레우스와 티에스테스가 왕자리를 다투다"
 era = 5
 seq = 1100
 span = "season"
+after = ["eurystheus-dies"]
 place = "mycenae"
 cast = [
   { figure = "atreus", role = "주인공" },
@@ -111,7 +112,7 @@ body = """
 해가 동쪽으로 졌고, 아트레우스는 왕이 되어 동생을 쫓아냈다.
 """
 sensitivity = "soften"
-note = "그 뒤의 잔치(E.2.13)와 아이기스토스의 출생(E.2.14)은 쓰지 않는다."
+note = "그 뒤의 잔치(E.2.13)와 아이기스토스의 출생(E.2.14)은 쓰지 않는다. after = eurystheus-dies 는 존재 조건이다 — 미케네의 왕이던 에우리스테우스가 죽은 뒤에야 펠롭스의 아들을 왕으로 삼으라는 말이 올 수 있다(불확실-목록 D-2). E.2.11 은 신의 말만 적고 까닭은 말하지 않는다."
 sources = ["apollodorus.library E.2.10-E.2.12"]
 
 [[event]]

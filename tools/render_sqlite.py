@@ -11,7 +11,7 @@
     HANDOFF 규칙 6 에 어긋나지 않는다. 검사는 빌드가 이미 했고, 여기서는 외래 키로 한 번 더 걸린다.
   - search 는 FTS5 trigram. 한국어는 조사가 붙어 낱말 단위 색인이 맞지 않으므로 세 글자 조각으로 찾는다.
     두 글자 이름(헤라·레토)은 trigram 으로 못 찾는다 — tools/query.py 가 그때 LIKE 로 돈다.
-  - public_* 뷰는 note 와 sensitivity 를 뺀 것이다. 아이가 보는 쪽은 이 뷰만 읽는다.
+  - public_* 뷰는 note·sensitivity·record 를 뺀 것이다. 아이가 보는 쪽은 이 뷰만 읽는다.
   - card_figure / card_event 뷰는 카드 한 장에 들어갈 것을 한 줄로 모은 것이다.
 
     python tools/build.py && python tools/render_sqlite.py
@@ -95,6 +95,7 @@ CREATE TABLE place (
   fun         TEXT,
   sensitivity TEXT NOT NULL DEFAULT 'none' CHECK (sensitivity IN ('none', 'soften')),
   note        TEXT,
+  record      TEXT,                                -- 원전 그대로의 기록. 수위 없음. 화면에 그리지 않는다
   CHECK ((kind = 'real'   AND lat IS NOT NULL AND lon IS NOT NULL AND modern IS NOT NULL)
       OR (kind = 'mythic' AND layer IS NOT NULL AND cx IS NOT NULL AND cy IS NOT NULL))
 );
@@ -111,7 +112,8 @@ CREATE TABLE figure (
   body        TEXT NOT NULL,
   fun         TEXT,
   sensitivity TEXT NOT NULL DEFAULT 'none' CHECK (sensitivity IN ('none', 'soften')),
-  note        TEXT
+  note        TEXT,
+  record      TEXT                                 -- 원전 그대로의 기록. 수위 없음. 화면에 그리지 않는다
 );
 
 CREATE TABLE figure_parent (
@@ -161,6 +163,7 @@ CREATE TABLE arc (
   fun         TEXT,
   sensitivity TEXT NOT NULL DEFAULT 'none' CHECK (sensitivity IN ('none', 'soften')),
   note        TEXT,
+  record      TEXT,                                -- 원전 그대로의 기록. 수위 없음. 화면에 그리지 않는다
   t0          INTEGER NOT NULL,
   t1          INTEGER NOT NULL
 );
@@ -183,6 +186,7 @@ CREATE TABLE event (
   fun           TEXT,
   sensitivity   TEXT NOT NULL DEFAULT 'none' CHECK (sensitivity IN ('none', 'soften')),
   note          TEXT,
+  record        TEXT,                              -- 원전 그대로의 기록. 수위 없음. 화면에 그리지 않는다
   UNIQUE (era, seq)
 );
 
@@ -228,6 +232,7 @@ CREATE TABLE thread (
   fun         TEXT,
   sensitivity TEXT NOT NULL DEFAULT 'none' CHECK (sensitivity IN ('none', 'soften')),
   note        TEXT,
+  record      TEXT,                                -- 원전 그대로의 기록. 수위 없음. 화면에 그리지 않는다
   t0          INTEGER NOT NULL,
   t1          INTEGER NOT NULL
 );
@@ -265,7 +270,7 @@ CREATE VIEW event_thread AS
   SELECT s.event_id, s.thread_id, t.name_ko, s.pos, s.unsure
   FROM thread_step s JOIN thread t ON t.id = s.thread_id;
 
--- ---------- 아이가 보는 쪽 — note 와 sensitivity 가 없다 ----------
+-- ---------- 아이가 보는 쪽 — note·sensitivity·record 가 없다 ----------
 
 CREATE VIEW public_figure AS
   SELECT id, name_ko, name_grc, name_la, kind, era, home, oneliner, body, fun FROM figure;
@@ -350,16 +355,16 @@ def main():
 
     for p in D["places"]:
         common("place", p, [p["name_ko"], p.get("name_grc")])
-        ex("INSERT INTO place VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+        ex("INSERT INTO place VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
            (p["id"], p["name_ko"], p.get("name_grc"), p["kind"], p.get("lat"), p.get("lon"), p.get("modern"),
             p.get("layer"), p.get("cx"), p.get("cy"), p["oneliner"], p["body"].strip(), p.get("fun"),
-            p.get("sensitivity", "none"), p.get("note")))
+            p.get("sensitivity", "none"), p.get("note"), p.get("record")))
 
     for f in D["figures"]:
         common("figure", f, [f["name_ko"], f.get("name_grc"), f.get("name_la")])
-        ex("INSERT INTO figure VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+        ex("INSERT INTO figure VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
            (f["id"], f["name_ko"], f.get("name_grc"), f.get("name_la"), f["kind"], f["era"], f.get("home"),
-            f["oneliner"], f["body"].strip(), f.get("fun"), f.get("sensitivity", "none"), f.get("note")))
+            f["oneliner"], f["body"].strip(), f.get("fun"), f.get("sensitivity", "none"), f.get("note"), f.get("record")))
         many("INSERT INTO figure_parent VALUES (?,?,?)", [(f["id"], i, p) for i, p in enumerate(f.get("parents", []))])
         many("INSERT INTO figure_parent_variant VALUES (?,?,?,?,?,?)",
              [(f["id"], i, *split_cite(v["source"]), json.dumps(v["parents"]), v.get("text"))
@@ -370,18 +375,18 @@ def main():
 
     for a in D["arcs"]:
         common("arc", a, [a["name_ko"]])
-        ex("INSERT INTO arc VALUES (?,?,?,?,?,?,?,?,?,?)",
+        ex("INSERT INTO arc VALUES (?,?,?,?,?,?,?,?,?,?,?)",
            (a["id"], a["name_ko"], a["era"], a["oneliner"], a["body"].strip(), a.get("fun"),
-            a.get("sensitivity", "none"), a.get("note"), a["t0"], a["t1"]))
+            a.get("sensitivity", "none"), a.get("note"), a.get("record"), a["t0"], a["t1"]))
         many("INSERT INTO arc_event VALUES (?,?,?)", [(a["id"], i, e) for i, e in enumerate(a["events"])])
 
     for e in D["events"]:
         common("event", e, [e["name_ko"]])
-        ex("INSERT INTO event VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+        ex("INSERT INTO event VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
            (e["id"], e["name_ko"], e["era"], e["seq"], e.get("span", "moment"), e["span_label"],
             int(bool(e.get("open"))), int(bool(e.get("place_unknown"))), e.get("within"), e.get("arc"),
             e["t0"], e["t1"], e["oneliner"], e["body"].strip(), e.get("fun"),
-            e.get("sensitivity", "none"), e.get("note")))
+            e.get("sensitivity", "none"), e.get("note"), e.get("record")))
         places = ([e["place"]] if "place" in e else []) + e.get("places", [])
         many("INSERT INTO event_place VALUES (?,?,?)", [(e["id"], i, p) for i, p in enumerate(places)])
         many("INSERT INTO event_cast VALUES (?,?,?,?)",
@@ -391,9 +396,9 @@ def main():
 
     for t in D["threads"]:
         common("thread", t, [t["name_ko"]])
-        ex("INSERT INTO thread VALUES (?,?,?,?,?,?,?,?,?)",
+        ex("INSERT INTO thread VALUES (?,?,?,?,?,?,?,?,?,?)",
            (t["id"], t["name_ko"], t["oneliner"], t["body"].strip(), t.get("fun"),
-            t.get("sensitivity", "none"), t.get("note"), t["t0"], t["t1"]))
+            t.get("sensitivity", "none"), t.get("note"), t.get("record"), t["t0"], t["t1"]))
         many("INSERT INTO thread_step VALUES (?,?,?,?,?)",
              [(t["id"], i, s["event"], s.get("label"), int(s["unsure"])) for i, s in enumerate(t["steps"])])
 

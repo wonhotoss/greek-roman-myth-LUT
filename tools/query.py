@@ -9,7 +9,7 @@
     python tools/query.py cards [kind]            # 인물 카드 표(card_figure 뷰). 사건이 많은 순
     python tools/query.py sql "SELECT ..."        # 아무 SQL
 
-note 와 sensitivity 도 보여 준다 — 만드는 사람과 에이전트가 쓰는 도구다.
+note·sensitivity·record 도 보여 준다 — 만드는 사람과 에이전트가 쓰는 도구다.
 아이에게 보일 것은 public_* 뷰에서 뽑는다(render_sqlite.py).
 """
 
@@ -76,6 +76,8 @@ def show_common(con, row, kind_label):
         print(f"  다른 이야기: {v[0]}")
     if row["sensitivity"] != "none":
         print(f"\n  민감도: {row['sensitivity']}")
+    if row["record"]:
+        print(f"  원전 기록(수위 없음): {row['record']}")
     if row["note"]:
         print(f"  내부 메모: {row['note']}")
 

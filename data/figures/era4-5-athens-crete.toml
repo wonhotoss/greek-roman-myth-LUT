@@ -179,8 +179,9 @@ name_grc = "Daidalos"
 name_la = "Daedalus"
 aka = ["다이달루스", "데달로스", "다에달루스"]
 kind = "human"
-era = 5
+era = 4
 home = "athens"
+parents = ["eupalamos"]
 oneliner = "미로와 날개를 만든 아테네의 발명가."
 body = """
 무엇이든 만들 줄 아는 솜씨 좋은 사람이었다.
@@ -191,8 +192,43 @@ body = """
 """
 fun = "다이달로스는 아리아드네를 위해 춤추는 마당도 만들었다. 호메로스가 그렇게 적었다."
 sensitivity = "soften"
-note = "참고: 처음 읽는 그리스 로마 신화 10권 4장 「천재 발명가 다이달로스」. 조카(탈로스/페르딕스)는 THE 의 talos(청동 거인)와 다른 인물이라 이름을 부르지 않는다."
-sources = ["apollodorus.library 3.1.4", "apollodorus.library 3.15.8", "apollodorus.library E.1.8-E.1.9", "apollodorus.library E.1.12-E.1.15", "ovid.metamorphoses 8.159-8.168", "ovid.metamorphoses 8.183-8.235", "pausanias.greece 7.4.5-7.4.6", "homer.iliad 18.590-18.592"]
+note = "참고: 처음 읽는 그리스 로마 신화 10권 4장 「천재 발명가 다이달로스」. 조카는 perdix 로 두었다 — 아폴로도로스는 탈로스라 부르지만 THE 의 talos(청동 거인)와 겹치므로 오비디우스·히기누스의 이름을 쓴다. era 4: 크레타에 온 것이 파시파에의 일보다 앞이다(3.15.8, 히기누스 40)."
+sources = ["apollodorus.library 3.1.4", "apollodorus.library 3.15.8", "hyginus.fabulae 39", "hyginus.fabulae 274", "apollodorus.library E.1.8-E.1.9", "apollodorus.library E.1.12-E.1.15", "ovid.metamorphoses 8.159-8.168", "ovid.metamorphoses 8.183-8.235", "pausanias.greece 7.4.5-7.4.6", "homer.iliad 18.590-18.592"]
+
+[[figure]]
+id = "eupalamos"
+name_ko = "에우팔라모스"
+name_grc = "Eupalamos"
+kind = "human"
+era = 4
+home = "athens"
+oneliner = "다이달로스의 아버지. 이름이 '솜씨 좋은 손'이라는 뜻이다."
+body = """
+아테네 사람으로, 메티온의 아들이다.
+아내 알키페와의 사이에서 다이달로스를 낳았다.
+"""
+fun = "에우팔라모스는 '손재주가 좋다'는 뜻이다. 아들 다이달로스도 '솜씨 좋게 만든다'는 뜻의 이름이다."
+note = "메티온·알키페는 등록부에 없어 이름만 부른다."
+sources = ["apollodorus.library 3.15.8", "hyginus.fabulae 39"]
+
+[[figure]]
+id = "perdix"
+name_ko = "페르딕스"
+name_grc = "Perdix"
+kind = "human"
+era = 4
+home = "athens"
+oneliner = "톱과 컴퍼스를 처음 만든 다이달로스의 조카. 자고새가 되었다."
+body = """
+다이달로스의 누나의 아들이다. 어머니가 다이달로스에게 배우라고 맡겼다.
+물고기 등뼈를 보고 쇠에 이를 새겨 톱을 만들었다.
+쇠막대 둘을 한 끝에 묶어 원을 그리는 컴퍼스도 만들었다.
+삼촌보다 솜씨가 좋아질까 봐 다이달로스가 그를 미워했다.
+"""
+fun = "그리스 말로 '페르딕스'는 자고새라는 뜻이다. 오비디우스는 그가 정말 자고새가 되었다고 적었다."
+sensitivity = "soften"
+note = "아폴로도로스 3.15.8 은 조카를 탈로스, 그 어머니(다이달로스의 누나)를 페르딕스라 부른다. THE 의 talos(청동 거인)와 겹치므로 오비디우스·히기누스의 이름을 id 로 썼다."
+sources = ["ovid.metamorphoses 8.236-8.259", "hyginus.fabulae 39", "hyginus.fabulae 274", "apollodorus.library 3.15.8"]
 
 [[figure]]
 id = "ikaros"

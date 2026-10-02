@@ -250,9 +250,10 @@ body = """
 져서 받은 벌은 세상의 서쪽 끝에 서서 하늘을 떠받치는 것이었다.
 쉬지도 앉지도 못한다.
 헤라클레스가 잠깐 대신 받쳐 준 적이 한 번 있다.
+오비디우스는 그보다 앞서 페르세우스가 메두사의 얼굴을 보여 아틀라스를 돌산으로 만들었다고 적었다.
 """
 fun = "지도책을 '아틀라스'라고 부르는 것이 이 신에서 왔다. 옛 지도책 표지에 이 신이 그려져 있었다."
-sources = ["hesiod.theogony 517-520", "apollodorus.library 2.5.11"]
+sources = ["hesiod.theogony 517-520", "apollodorus.library 2.5.11", "ovid.metamorphoses 4.627-4.662"]
 
 [[figure]]
 id = "helios"

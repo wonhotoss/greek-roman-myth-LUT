@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 OUT = ROOT / "build" / "myth.json"
 
-COMMON = {"id", "name_ko", "aka", "oneliner", "body", "fun", "sources", "sensitivity", "note"}
+COMMON = {"id", "name_ko", "aka", "oneliner", "body", "fun", "sources", "sensitivity", "note", "record"}
 REQUIRED_COMMON = {"id", "name_ko", "oneliner", "body", "sources"}
 
 SPEC = {
