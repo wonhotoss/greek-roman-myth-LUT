@@ -1,5 +1,5 @@
 # era 5 — 큰 영웅들. 헤라클레스의 일생 전체.
-# seq 400~699: 탄생~케르베로스. seq 1000~1099: 에우리토스~신이 되다.
+# seq 400~699: 탄생~케르베로스. seq 1000~1099: 에우리토스~신이 되다~에우리스테우스의 죽음.
 # 묶음은 스크래치 arcs/HER.toml (herakles-early / herakles-labors / herakles-last).
 
 # ========== 탄생과 젊은 날 ==========
@@ -956,3 +956,29 @@ fun = "델포이의 말이 그대로 되었다. 일을 다 하면 죽지 않는 
 caused_by = ["herakles-pyre", "herakles-delphi-oracle"]
 note = "참고: 처음 읽는 그리스 로마 신화 8권 4장 「신이 된 영웅」. 헤베는 등록부에 없어 이름만 불렀다."
 sources = ["apollodorus.library 2.7.7", "ovid.metamorphoses 9.239-272", "homer.odyssey 11.601-604"]
+
+[[event]]
+id = "eurystheus-dies"
+name_ko = "에우리스테우스가 헤라클레스의 아이들을 쫓다 죽다"
+era = 5
+seq = 1095
+span = "season"
+place = "athens"
+cast = [
+  { figure = "hyllos", role = "주인공" },
+  { figure = "eurystheus", role = "피해" },
+  { figure = "alkmene", role = "등장" },
+]
+oneliner = "헤라클레스가 떠나자 왕은 그 아이들을 쫓았고, 그 아이들에게 죽었다."
+body = """
+헤라클레스가 신이 되자 에우리스테우스는 그 아이들을 내놓으라고 했다.
+아이들은 그리스를 떠돌다 아테네에 가서 자비의 제단에 앉아 보호를 빌었다.
+아테네 사람들이 내주지 않자 에우리스테우스가 군대를 이끌고 왔다.
+아테네 군은 그의 아들 다섯을 죽였고, 수레로 달아나던 에우리스테우스는 힐로스에게 죽었다.
+힐로스는 그 목을 할머니 알크메네에게 가져갔다.
+"""
+sensitivity = "soften"
+record = "힐로스가 스키론의 바위 옆에서 에우리스테우스를 죽여 목을 베어 알크메네에게 주었고, 알크메네는 베틀 바늘로 그 눈을 파냈다(아폴로도로스 2.8.1)."
+caused_by = ["herakles-apotheosis"]
+note = "장소는 아테네 — 싸움이 거기서 났다. 죽은 자리 스키론의 바위(메가라 쪽 벼랑)는 장소 항목이 없어 본문에만 둔다. 미케네 왕 자리가 페르세우스 집안에서 펠롭스 집안으로 넘어가는 고리 — atreus-thyestes-feud 가 이 뒤다. 묶음은 herakles-last 의 끝에 붙였다."
+sources = ["apollodorus.library 2.8.1"]

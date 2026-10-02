@@ -189,6 +189,7 @@ name_ko = "틴다레오스"
 name_grc = "Tyndareos"
 kind = "human"
 era = 5
+parents = ["gorgophone"]
 spouses = ["leda"]
 home = "sparta"
 oneliner = "헬레네의 구혼자 모두에게 맹세를 받아 낸 스파르타의 왕."

@@ -1,6 +1,6 @@
 {
  "axis": {
-  "total": 497,
+  "total": 505,
   "eras": {
    "0": [
     0,
@@ -20,23 +20,23 @@
    ],
    "4": [
     51,
-    91
+    95
    ],
    "5": [
-    91,
-    255
+    95,
+    263
    ],
    "6": [
-    255,
-    312
+    263,
+    320
    ],
    "7": [
-    312,
-    429
+    320,
+    437
    ],
    "8": [
-    429,
-    497
+    437,
+    505
    ]
   }
  },
@@ -898,11 +898,12 @@
    ],
    "home": "hesperides-garden",
    "oneliner": "하늘을 어깨로 받치고 서 있는 벌을 받은 티탄.",
-   "body": "티탄 편에 서서 제우스와 싸웠다.\n져서 받은 벌은 세상의 서쪽 끝에 서서 하늘을 떠받치는 것이었다.\n쉬지도 앉지도 못한다.\n헤라클레스가 잠깐 대신 받쳐 준 적이 한 번 있다.\n",
+   "body": "티탄 편에 서서 제우스와 싸웠다.\n져서 받은 벌은 세상의 서쪽 끝에 서서 하늘을 떠받치는 것이었다.\n쉬지도 앉지도 못한다.\n헤라클레스가 잠깐 대신 받쳐 준 적이 한 번 있다.\n오비디우스는 그보다 앞서 페르세우스가 메두사의 얼굴을 보여 아틀라스를 돌산으로 만들었다고 적었다.\n",
    "fun": "지도책을 '아틀라스'라고 부르는 것이 이 신에서 왔다. 옛 지도책 표지에 이 신이 그려져 있었다.",
    "sources": [
     "hesiod.theogony 517-520",
-    "apollodorus.library 2.5.11"
+    "apollodorus.library 2.5.11",
+    "ovid.metamorphoses 4.627-4.662"
    ],
    "_file": "data/figures/titans.toml",
    "children": [
@@ -913,6 +914,10 @@
     {
      "event": "titanomachy",
      "role": "상대"
+    },
+    {
+     "event": "atlas-turned-to-mountain",
+     "role": "피해"
     },
     {
      "event": "hesperides-apples",
@@ -1861,6 +1866,10 @@
      "role": "주인공"
     },
     {
+     "event": "medousa-cursed",
+     "role": "상대"
+    },
+    {
      "event": "graiai-road",
      "role": "도움"
     },
@@ -2355,6 +2364,10 @@
      "role": "주인공"
     },
     {
+     "event": "perseus-born",
+     "role": "주인공"
+    },
+    {
      "event": "danae-set-adrift",
      "role": "등장"
     },
@@ -2713,7 +2726,8 @@
    "children": [
     "antaios",
     "polyphemos",
-    "pegasos"
+    "pegasos",
+    "chrysaor"
    ],
    "events": [
     {
@@ -2726,6 +2740,10 @@
     },
     {
      "event": "athens-contest",
+     "role": "상대"
+    },
+    {
+     "event": "medousa-cursed",
      "role": "상대"
     },
     {
@@ -3308,6 +3326,32 @@
    ]
   },
   {
+   "id": "gorgophone",
+   "name_ko": "고르고포네",
+   "name_grc": "Gorgophone",
+   "kind": "human",
+   "era": 4,
+   "parents": [
+    "perseus",
+    "andromeda"
+   ],
+   "home": "mycenae",
+   "oneliner": "페르세우스의 하나뿐인 딸. 이름이 '고르곤을 죽인 이'라는 뜻이다.",
+   "body": "페르세우스와 안드로메다 사이의 하나뿐인 딸이다.\n이름은 아버지가 한 일에서 왔다. 고르곤을 죽인 이라는 뜻이다.\n페리에레스와 결혼해 틴다레오스, 이카리오스, 아파레우스, 레우키포스를 낳았다.\n틴다레오스는 클리타임네스트라의 아버지이고, 헬레네를 기른 아버지다.\n",
+   "fun": "그래서 아가멤논의 아내 클리타임네스트라는 페르세우스의 증손녀다.",
+   "note": "페리에레스·이카리오스·아파레우스·레우키포스는 등록부에 없다. 3.10.3 은 스테시코로스를 따른 계보라고 밝힌다. 틴다레오스의 parents 에 고르고포네를 넣었다.",
+   "sources": [
+    "apollodorus.library 2.4.5",
+    "apollodorus.library 3.10.3",
+    "apollodorus.library 1.9.5"
+   ],
+   "_file": "data/figures/perseus.toml",
+   "children": [
+    "tyndareos"
+   ],
+   "events": []
+  },
+  {
    "id": "gorgones",
    "name_ko": "고르곤 세 자매",
    "name_grc": "Gorgones",
@@ -3352,10 +3396,13 @@
     "keto"
    ],
    "oneliner": "눈 하나와 이 하나를 셋이 돌려 쓰는 노파 자매.",
-   "body": "고르곤의 언니들이다.\n눈알 하나와 이 하나를 셋이서 번갈아 쓴다.\n님프들이 사는 곳을 아는 것은 이들뿐이었다.\n페르세우스가 돌려 쓰는 눈을 잡아채고서야 길을 알려 주었다.\n",
+   "body": "고르곤의 언니들이다.\n눈알 하나와 이 하나를 셋이서 번갈아 쓴다.\n님프들이 사는 곳을 아는 것은 이들뿐이었다.\n페르세우스가 돌려 쓰는 눈과 이를 잡아채고서야 길을 알려 주었다.\n",
+   "fun": "이름은 에니오, 펨프레도, 데이노다. 태어날 때부터 노파였다고 아폴로도로스는 적었다.",
+   "note": "오비디우스 4.772-4.775 는 자매가 둘이고 아틀라스 산 아래에 산다고 한다 — 사건 graiai-road 의 variants 에.",
    "sources": [
     "hesiod.theogony 270-273",
-    "apollodorus.library 2.4.2"
+    "apollodorus.library 2.4.2",
+    "ovid.metamorphoses 4.772-4.779"
    ],
    "_file": "data/figures/perseus.toml",
    "children": [],
@@ -3403,10 +3450,13 @@
     "akrisios"
    ],
    "oneliner": "청동 방에 갇혔던 아르고스의 공주. 페르세우스의 어머니다.",
-   "body": "아버지가 앞일이 무서워 딸을 땅 아래 청동 방에 갇히게 했다.\n그래도 아기가 태어났고, 아버지는 딸과 아기를 나무 상자에 넣어 바다에 띄웠다.\n상자는 세리포스 섬에 닿았고, 어부 딕티스가 건져 주었다.\n그 섬에서 아들을 키웠다.\n",
+   "body": "아버지가 앞일이 무서워 딸을 땅 아래 청동 방에 갇히게 했다.\n제우스가 황금 비가 되어 지붕 틈으로 들어왔고, 아들 페르세우스가 태어났다.\n아버지는 딸과 아기를 나무 상자에 넣어 바다에 띄웠다.\n상자는 세리포스 섬에 닿았고, 어부 딕티스가 건져 주었다.\n그 섬에서 아들을 키웠다.\n",
    "sensitivity": "soften",
+   "record": "제우스가 황금 비가 되어 지붕을 지나 다나에의 무릎에 쏟아져 내려 동침했다(아폴로도로스 2.4.1). 히기누스 63 은 폴리덱테스가 다나에와 결혼했다고 한다 — 아폴로도로스의 '억지로 아내로 삼으려 했다'와 다르다.",
    "sources": [
-    "apollodorus.library 2.4.1-2.4.2"
+    "apollodorus.library 2.4.1-2.4.2",
+    "hyginus.fabulae 63",
+    "ovid.metamorphoses 4.610-4.611"
    ],
    "_file": "data/figures/perseus.toml",
    "children": [
@@ -3415,6 +3465,10 @@
    "events": [
     {
      "event": "akrisios-oracle",
+     "role": "피해"
+    },
+    {
+     "event": "perseus-born",
      "role": "피해"
     },
     {
@@ -3521,6 +3575,31 @@
    ]
   },
   {
+   "id": "megapenthes",
+   "name_ko": "메가펜테스",
+   "name_grc": "Megapenthes",
+   "kind": "human",
+   "era": 4,
+   "parents": [
+    "proitos"
+   ],
+   "home": "argos",
+   "oneliner": "프로이토스의 아들. 페르세우스와 나라를 바꾸어 아르고스의 왕이 되었다.",
+   "body": "티린스의 왕 프로이토스의 아들이다.\n페르세우스가 찾아와 나라를 바꾸자고 하자 그렇게 했다.\n아르고스를 받아 다스렸고, 티린스는 페르세우스에게 주었다.\n",
+   "sources": [
+    "apollodorus.library 2.4.4",
+    "pausanias.greece 2.16.3"
+   ],
+   "_file": "data/figures/perseus.toml",
+   "children": [],
+   "events": [
+    {
+     "event": "mycenae-founded",
+     "role": "등장"
+    }
+   ]
+  },
+  {
    "id": "medousa",
    "name_ko": "메두사",
    "name_grc": "Medousa",
@@ -3535,22 +3614,54 @@
    ],
    "home": "gorgon-land",
    "oneliner": "눈을 마주친 것을 돌로 만드는 괴물. 고르곤 셋 가운데 죽는 몸이었다.",
-   "body": "머리카락이 뱀이고, 눈을 마주치면 사람이든 짐승이든 돌이 된다.\n세 자매 가운데 유일하게 죽을 수 있는 몸이었다.\n페르세우스는 방패에 비친 모습만 보면서 목을 베었다.\n목이 잘린 뒤에도 그 눈은 힘이 남아 있었다.\n",
-   "fun": "잘린 목에서 날개 달린 말 페가수스가 뛰어나왔다.",
+   "body": "본디 머리카락이 가장 고운 아름다운 처녀였다고 오비디우스는 적었다.\n아테나의 신전에서 포세이돈이 억지로 붙잡았고, 아테나는 메두사의 머리카락을 뱀으로 바꾸었다.\n그 뒤로 눈을 마주치면 사람이든 짐승이든 돌이 된다.\n세 자매 가운데 유일하게 죽을 수 있는 몸이었다.\n페르세우스는 방패에 비친 모습만 보면서 목을 베었다. 목이 잘린 뒤에도 그 눈은 힘이 남아 있었다.\n",
+   "fun": "잘린 목에서 날개 달린 말 페가수스와 황금 칼을 든 크리사오르가 뛰어나왔다. 둘 다 포세이돈의 자식이다.",
+   "sensitivity": "soften",
+   "record": "포세이돈이 아테나의 신전에서 메두사를 겁탈했다. 아테나는 눈을 돌려 방패로 가렸고, 벌을 포세이돈이 아니라 메두사에게 주어 머리카락을 뱀으로 바꾸었다(오비디우스 4.798-4.803). 헤시오도스 278-279 는 '검은 머리의 신이 봄꽃 핀 부드러운 풀밭에서 메두사와 누웠다'고만 한다 — 신전도 벌도 없다. 아폴로도로스 2.4.3 은 메두사가 아테나와 아름다움을 겨루려 해서 아테나 때문에 목이 잘렸다는 이설을 적었다.",
+   "note": "괴물이 된 까닭은 사건 medousa-cursed 에서. 돌로 만드는 눈이 뱀 머리와 함께 생겼다는 말은 오비디우스에 없다 — 헤시오도스·아폴로도로스는 고르곤이 본디 그런 존재다.",
    "sources": [
     "hesiod.theogony 274-286",
-    "apollodorus.library 2.4.2-2.4.3"
+    "apollodorus.library 2.4.2-2.4.3",
+    "ovid.metamorphoses 4.790-4.803"
    ],
    "_file": "data/figures/perseus.toml",
    "children": [
-    "pegasos"
+    "pegasos",
+    "chrysaor"
    ],
    "events": [
+    {
+     "event": "medousa-cursed",
+     "role": "피해"
+    },
     {
      "event": "medusa-slain",
      "role": "상대"
     }
    ]
+  },
+  {
+   "id": "mestor",
+   "name_ko": "메스토르",
+   "name_grc": "Mestor",
+   "kind": "human",
+   "era": 4,
+   "parents": [
+    "perseus",
+    "andromeda"
+   ],
+   "home": "mycenae",
+   "oneliner": "페르세우스의 아들. 그 손자가 알크메네의 오빠들과 싸운 타포스 사람들의 왕이다.",
+   "body": "페르세우스와 안드로메다의 아들로 미케네에서 태어났다.\n딸 히포토에를 포세이돈이 데려가 타피오스를 낳았다.\n타피오스는 타포스 섬에 자리 잡아 텔레보아이 사람들의 조상이 되었다.\n그 자손 프테렐라오스의 아들들이 외할아버지의 나라라며 미케네에 와서 엘렉트리온의 아들들과 서로 죽였다.\n",
+   "sensitivity": "soften",
+   "record": "포세이돈이 히포토에를 에키나데스 섬으로 데려가 동침해 타피오스를 낳았다(아폴로도로스 2.4.5).",
+   "note": "히포토에·타피오스·프테렐라오스는 등록부에 없다. amphitryon-to-thebes 의 '오빠들의 원수'가 이 집안이다(2.4.6).",
+   "sources": [
+    "apollodorus.library 2.4.5-2.4.6"
+   ],
+   "_file": "data/figures/perseus.toml",
+   "children": [],
+   "events": []
   },
   {
    "id": "minos",
@@ -3807,9 +3918,12 @@
    "era": 4,
    "home": "argos",
    "oneliner": "손자에게 죽는다는 말을 듣고 딸을 갇히게 한 아르고스의 왕.",
-   "body": "페르세우스의 외할아버지다.\n아들이 없어 델포이에 물었더니, 아들은 없고 딸의 아들이 너를 죽인다는 대답이 왔다.\n그래서 딸 다나에를 청동 방에 갇히게 했다.\n그래도 손자가 태어나자 딸과 아기를 상자에 넣어 바다에 띄웠다.\n",
+   "body": "페르세우스의 외할아버지다.\n아들이 없어 신에게 물었더니, 아들은 없고 딸의 아들이 너를 죽인다는 대답이 왔다.\n그래서 딸 다나에를 청동 방에 갇히게 했다.\n그래도 손자가 태어나자 딸과 아기를 상자에 넣어 바다에 띄웠다.\n",
+   "note": "어디서 물었는지는 원전에 없다 — 아폴로도로스 2.4.1 은 '신탁에', 히기누스 63 은 '예언이 있었다'고만 한다. 델포이라고 적었던 것을 2026-10-02 에 지웠다.",
    "sources": [
-    "apollodorus.library 2.4.1"
+    "apollodorus.library 2.4.1",
+    "hyginus.fabulae 63",
+    "pausanias.greece 2.16.2"
    ],
    "_file": "data/figures/perseus.toml",
    "children": [
@@ -3819,6 +3933,10 @@
     {
      "event": "akrisios-oracle",
      "role": "주인공"
+    },
+    {
+     "event": "perseus-born",
+     "role": "상대"
     },
     {
      "event": "danae-set-adrift",
@@ -3845,16 +3963,22 @@
    ],
    "home": "aithiopia",
    "oneliner": "바다괴물에게 바쳐질 뻔했다가 페르세우스에게 구해진 공주.",
-   "body": "어머니가 한 자랑 때문에 나라에 바다괴물이 왔다.\n신의 말을 물으니 공주를 바쳐야 한다고 했다.\n안드로메다는 바닷가 바위에 묶였다.\n지나가던 페르세우스가 괴물을 물리치고 안드로메다를 데려갔다.\n",
+   "body": "어머니가 한 자랑 때문에 나라에 바다괴물이 왔다.\n신의 말을 물으니 공주를 바쳐야 한다고 했다.\n안드로메다는 바닷가 바위에 묶였다.\n지나가던 페르세우스가 괴물을 물리치고 안드로메다를 아내로 맞았다.\n결혼 잔치에 본디 약혼자였던 피네우스가 쳐들어왔지만 돌이 되었다.\n",
    "fun": "안드로메다, 페르세우스, 케페우스, 카시오페이아는 모두 별자리 이름이 되어 지금도 가을 하늘에 나란히 있다.",
    "sources": [
-    "apollodorus.library 2.4.3",
-    "ovid.metamorphoses 4.663-4.764"
+    "apollodorus.library 2.4.3-2.4.5",
+    "ovid.metamorphoses 4.663-4.764",
+    "hyginus.fabulae 64"
    ],
    "_file": "data/figures/perseus.toml",
    "children": [
     "elektryon",
-    "sthenelos"
+    "sthenelos",
+    "perses",
+    "alkaios",
+    "heleus",
+    "mestor",
+    "gorgophone"
    ],
    "events": [
     {
@@ -3862,10 +3986,37 @@
      "role": "피해"
     },
     {
+     "event": "phineus-turned-to-stone",
+     "role": "등장"
+    },
+    {
      "event": "mycenae-founded",
      "role": "주인공"
     }
    ]
+  },
+  {
+   "id": "alkaios",
+   "name_ko": "알카이오스",
+   "name_grc": "Alkaios",
+   "kind": "human",
+   "era": 4,
+   "parents": [
+    "perseus",
+    "andromeda"
+   ],
+   "home": "mycenae",
+   "oneliner": "페르세우스의 아들. 암피트리온의 아버지다.",
+   "body": "페르세우스와 안드로메다의 아들로 미케네에서 태어났다.\n펠롭스의 딸 아스티다메이아와 결혼해 암피트리온과 아낙소를 낳았다.\n아낙소는 엘렉트리온의 아내가 되어 알크메네를 낳았다.\n그래서 헤라클레스는 아버지 쪽으로도 어머니 쪽으로도 페르세우스의 증손이다.\n",
+   "note": "아스티다메이아(이설 둘 더 있음)·아낙소는 등록부에 없어 이름만 부른다. 알크메네의 parents 는 엘렉트리온만 적혀 있다.",
+   "sources": [
+    "apollodorus.library 2.4.5"
+   ],
+   "_file": "data/figures/perseus.toml",
+   "children": [
+    "amphitryon"
+   ],
+   "events": []
   },
   {
    "id": "europa",
@@ -4146,9 +4297,10 @@
    ],
    "home": "aithiopia",
    "oneliner": "안드로메다의 아버지. 딸을 바치라는 말을 들은 왕.",
-   "body": "에티오피아라고 불린 나라의 왕이다.\n아내의 자랑 때문에 나라가 벌을 받았다.\n딸을 바치는 것 말고는 방법이 없다는 말을 듣고 그대로 했다.\n",
+   "body": "에티오피아라고 불린 나라의 왕이다.\n아내의 자랑 때문에 나라가 벌을 받았다.\n딸을 바치는 것 말고는 방법이 없다는 말을 듣고 그대로 했다.\n페르세우스가 딸을 구하자 아내로 주었다. 손자 페르세스를 맡아 길렀다.\n",
+   "note": "히기누스 64 는 케페우스도 약혼자와 함께 페르세우스를 죽이려 했다가 돌이 되었다고 한다 — 사건 phineus-turned-to-stone 의 variants 에.",
    "sources": [
-    "apollodorus.library 2.4.3"
+    "apollodorus.library 2.4.3-2.4.5"
    ],
    "_file": "data/figures/perseus.toml",
    "children": [
@@ -4157,6 +4309,10 @@
    "events": [
     {
      "event": "andromeda-rescued",
+     "role": "등장"
+    },
+    {
+     "event": "phineus-turned-to-stone",
      "role": "등장"
     }
    ]
@@ -4203,6 +4359,39 @@
     {
      "event": "medeia-plot-marathon-bull",
      "role": "상대"
+    }
+   ]
+  },
+  {
+   "id": "chrysaor",
+   "name_ko": "크리사오르",
+   "name_grc": "Chrysaor",
+   "aka": [
+    "크뤼사오르"
+   ],
+   "kind": "monster",
+   "era": 4,
+   "parents": [
+    "poseidon",
+    "medousa"
+   ],
+   "oneliner": "메두사의 목에서 페가수스와 함께 나온, 황금 칼을 든 이. 게리온의 아버지다.",
+   "body": "메두사의 목이 잘릴 때 페가수스와 함께 뛰어나왔다.\n태어날 때부터 손에 황금 칼을 들고 있어서 그 이름이 되었다.\n오케아노스의 딸 칼리로에와 만나 몸이 셋인 게리온을 낳았다.\n그 게리온을 뒷날 헤라클레스가 이긴다.\n",
+   "fun": "페가수스는 오케아노스의 샘(페가이) 곁에서 태어나 그 이름이고, 크리사오르는 황금(크리소스) 칼(아오르)을 들고 나와 그 이름이다. 헤시오도스가 그렇게 풀었다.",
+   "note": "칼리로에는 등록부에 없어 이름만 부른다. kind 는 형제 페가수스와 같이 monster 로 두었다. 메두사 → 크리사오르 → 게리온 → 헤라클레스의 열째 일로 이어지는 줄이다.",
+   "sources": [
+    "hesiod.theogony 280-294",
+    "apollodorus.library 2.4.2",
+    "apollodorus.library 2.5.10"
+   ],
+   "_file": "data/figures/perseus.toml",
+   "children": [
+    "geryon"
+   ],
+   "events": [
+    {
+     "event": "medusa-slain",
+     "role": "등장"
     }
    ]
   },
@@ -4387,6 +4576,27 @@
    ]
   },
   {
+   "id": "perses",
+   "name_ko": "페르세스",
+   "name_grc": "Perses",
+   "kind": "human",
+   "era": 4,
+   "parents": [
+    "perseus",
+    "andromeda"
+   ],
+   "home": "aithiopia",
+   "oneliner": "페르세우스가 에티오피아에 두고 온 맏아들. 페르시아 왕들의 조상이라고 한다.",
+   "body": "페르세우스가 그리스로 돌아가기 전에 태어났다.\n페르세우스는 그를 할아버지 케페우스에게 맡기고 떠났다.\n페르시아의 왕들이 그의 자손이라는 말이 있다.\n",
+   "fun": "옛 그리스 사람들은 페르시아의 왕들을 페르세우스의 자손으로 여겼다. 아폴로도로스가 그렇게 적었다.",
+   "sources": [
+    "apollodorus.library 2.4.5"
+   ],
+   "_file": "data/figures/perseus.toml",
+   "children": [],
+   "events": []
+  },
+  {
    "id": "perseus",
    "name_ko": "페르세우스",
    "name_grc": "Perseus",
@@ -4401,17 +4611,29 @@
    ],
    "home": "mycenae",
    "oneliner": "메두사의 목을 베어 온 영웅. 신들에게 도구를 빌려 이겼다.",
-   "body": "제우스와 다나에의 아들이다.\n섬의 왕이 어머니를 괄롭히려고, 페르세우스에게 메두사의 목을 가져오라는 일을 시켰다.\n아테나와 헤르메스가 도구를 빌려 주었고, 페르세우스는 메두사를 이겼다.\n돌아오는 길에 바위에 묶인 안드로메다를 구해 아내로 맞았다.\n",
-   "fun": "페르세우스는 헤라클레스보다 앞 세대다. 헤라클레스의 조상이 페르세우스다.",
+   "body": "제우스와 다나에의 아들이다.\n섬의 왕이 어머니를 괴롭히려고, 페르세우스에게 메두사의 목을 가져오라는 일을 시켰다.\n아테나와 헤르메스가 도구를 빌려 주었고, 페르세우스는 메두사를 이겼다.\n돌아오는 길에 바위에 묶인 안드로메다를 구해 아내로 맞았다.\n할아버지를 원반으로 죽게 한 뒤 아르고스를 내주고 티린스를 받아 미케네에 성을 쌓았다.\n",
+   "fun": "페르세우스는 헤라클레스보다 앞 세대다. 헤라클레스는 아버지 쪽으로도 어머니 쪽으로도 페르세우스의 증손이다.",
    "sources": [
-    "apollodorus.library 2.4.1-2.4.5"
+    "apollodorus.library 2.4.1-2.4.5",
+    "ovid.metamorphoses 4.604-5.249",
+    "hyginus.fabulae 63-64",
+    "pausanias.greece 2.16.2-2.16.3"
    ],
    "_file": "data/figures/perseus.toml",
    "children": [
     "elektryon",
-    "sthenelos"
+    "sthenelos",
+    "perses",
+    "alkaios",
+    "heleus",
+    "mestor",
+    "gorgophone"
    ],
    "events": [
+    {
+     "event": "perseus-born",
+     "role": "등장"
+    },
     {
      "event": "danae-set-adrift",
      "role": "피해"
@@ -4429,7 +4651,15 @@
      "role": "주인공"
     },
     {
+     "event": "atlas-turned-to-mountain",
+     "role": "주인공"
+    },
+    {
      "event": "andromeda-rescued",
+     "role": "주인공"
+    },
+    {
+     "event": "phineus-turned-to-stone",
      "role": "주인공"
     },
     {
@@ -4533,7 +4763,9 @@
     "homer.iliad 6.157-6.170"
    ],
    "_file": "data/figures/era4-5-athens-crete.toml",
-   "children": [],
+   "children": [
+    "megapenthes"
+   ],
    "events": [
     {
      "event": "proitos-sends-bellerophon",
@@ -4567,6 +4799,34 @@
     {
      "event": "phrixos-golden-ram",
      "role": "주인공"
+    }
+   ]
+  },
+  {
+   "id": "phineus-aithiopia",
+   "name_ko": "피네우스",
+   "name_grc": "Phineus",
+   "aka": [
+    "안드로메다의 약혼자",
+    "케페우스의 동생"
+   ],
+   "kind": "human",
+   "era": 4,
+   "home": "aithiopia",
+   "oneliner": "안드로메다와 결혼하기로 했던 케페우스의 동생. 잔치에 쳐들어왔다가 돌이 되었다.",
+   "body": "케페우스의 동생이고, 안드로메다와 결혼하기로 되어 있었다.\n괴물이 왔을 때는 나서지 않았다.\n페르세우스가 안드로메다를 구하자 결혼 잔치에 무리를 이끌고 쳐들어왔다.\n메두사의 얼굴을 보고, 빌던 모습 그대로 돌이 되었다.\n",
+   "note": "아르고호의 눈먼 점쟁이 피네우스(phineus)와 다른 사람이다 — 오비디우스 5권의 주석도 그렇게 적는다. 히기누스 64 는 약혼자를 아게노르라 부른다.",
+   "sources": [
+    "apollodorus.library 2.4.3",
+    "ovid.metamorphoses 5.1-5.235",
+    "hyginus.fabulae 64"
+   ],
+   "_file": "data/figures/perseus.toml",
+   "children": [],
+   "events": [
+    {
+     "event": "phineus-turned-to-stone",
+     "role": "상대"
     }
    ]
   },
@@ -4606,6 +4866,28 @@
    ]
   },
   {
+   "id": "heleus",
+   "name_ko": "헬레우스",
+   "name_grc": "Heleus",
+   "kind": "human",
+   "era": 4,
+   "parents": [
+    "perseus",
+    "andromeda"
+   ],
+   "home": "mycenae",
+   "oneliner": "페르세우스의 아들. 뒷날 암피트리온과 함께 타포스 섬을 쳤다.",
+   "body": "페르세우스와 안드로메다의 아들로 미케네에서 태어났다.\n암피트리온이 알크메네의 오빠들의 원수를 갚으러 갈 때 함께 갔다.\n싸움이 끝난 뒤 그 섬들을 케팔로스와 나누어 받았다.\n",
+   "note": "아르골리스의 헬로스에서 왔다고 2.4.7 이 적는다. 케팔로스는 등록부에 없다.",
+   "sources": [
+    "apollodorus.library 2.4.5",
+    "apollodorus.library 2.4.7"
+   ],
+   "_file": "data/figures/perseus.toml",
+   "children": [],
+   "events": []
+  },
+  {
    "id": "hippodameia",
    "name_ko": "히포다메이아",
    "name_grc": "Hippodameia",
@@ -4642,10 +4924,13 @@
    ],
    "kind": "monster",
    "era": 5,
+   "parents": [
+    "chrysaor"
+   ],
    "home": "erytheia",
    "oneliner": "몸 셋이 하나로 붙은 거인. 붉은 소의 주인이다.",
    "body": "허리에서 세 사람의 몸이 하나로 붙어 있었다.\n메두사의 목에서 나온 크리사오르가 아버지다.\n서쪽 끝의 섬 에리테이아에서 붉은 소를 길렀다.\n헤라클레스가 소를 몰고 가자 뒤쫓아 왔다가 화살에 맞아 죽었다.\n",
-   "note": "부모 크리사오르·칼리로에는 등록부에 없어 계보를 비웠다.",
+   "note": "어머니 칼리로에는 등록부에 없어 아버지만 적었다.",
    "sources": [
     "hesiod.theogony 287-294",
     "apollodorus.library 2.5.10",
@@ -6001,6 +6286,10 @@
     {
      "event": "herakles-cradle-snakes",
      "role": "등장"
+    },
+    {
+     "event": "eurystheus-dies",
+     "role": "등장"
     }
    ]
   },
@@ -6046,13 +6335,16 @@
    "name_grc": "Amphitryon",
    "kind": "human",
    "era": 5,
+   "parents": [
+    "alkaios"
+   ],
    "spouses": [
     "alkmene"
    ],
    "home": "thebes",
    "oneliner": "알크메네의 남편. 헤라클레스를 키운 아버지다.",
    "body": "페르세우스의 손자다.\n실수로 알크메네의 아버지를 죽게 하고 미케네에서 쫓겨났다.\n테베로 가서 알크메네의 오빠들의 원수를 갚아 주었다.\n헤라클레스에게 수레 몰기를 가르쳤다.\n뒷날 테베를 지키는 싸움에서 죽었다.\n",
-   "note": "아버지 알카이오스는 등록부에 없어 계보를 비웠다.",
+   "note": "어머니(아스티다메이아, 이설 둘 더)는 등록부에 없어 아버지만 적었다.",
    "sources": [
     "apollodorus.library 2.4.5-2.4.11"
    ],
@@ -6233,6 +6525,10 @@
     {
      "event": "kerberos-fetched",
      "role": "등장"
+    },
+    {
+     "event": "eurystheus-dies",
+     "role": "피해"
     }
    ]
   },
@@ -7421,6 +7717,9 @@
    "name_grc": "Tyndareos",
    "kind": "human",
    "era": 5,
+   "parents": [
+    "gorgophone"
+   ],
    "spouses": [
     "leda"
    ],
@@ -8252,6 +8551,10 @@
     {
      "event": "herakles-pyre",
      "role": "등장"
+    },
+    {
+     "event": "eurystheus-dies",
+     "role": "주인공"
     }
    ]
   },
@@ -14012,12 +14315,61 @@
    "open": false
   },
   {
+   "id": "medousa-cursed",
+   "name_ko": "메두사의 머리카락이 뱀이 되다",
+   "era": 4,
+   "seq": 5,
+   "span": "moment",
+   "place_unknown": true,
+   "cast": [
+    {
+     "figure": "medousa",
+     "role": "피해"
+    },
+    {
+     "figure": "poseidon",
+     "role": "상대"
+    },
+    {
+     "figure": "athena",
+     "role": "상대"
+    }
+   ],
+   "oneliner": "가장 고운 머리카락이 벌로 뱀이 되었다.",
+   "body": "메두사는 본디 아름다운 처녀였고, 머리카락이 가장 고왔다.\n바다의 신 포세이돈이 아테나의 신전에서 메두사를 억지로 붙잡았다.\n아테나는 눈을 돌리고 방패로 얼굴을 가렸다.\n그리고 벌을 메두사에게 주어, 그 머리카락을 뱀으로 바꾸었다.\n",
+   "fun": "페르세우스는 이 이야기를 안드로메다와의 결혼 잔치에서 손님들에게 들려주었다. 오비디우스가 그렇게 적었다.",
+   "sensitivity": "soften",
+   "record": "포세이돈이 아테나의 신전에서 메두사를 겁탈했다. 아테나는 눈을 돌려 방패로 가렸고, 벌을 포세이돈이 아니라 메두사에게 주어 머리카락을 뱀으로 바꾸었다. 아테나는 그 뱀을 자기 가슴받이에도 달았다(오비디우스 4.794-4.803). 헤시오도스 278-279 는 '검은 머리의 신(포세이돈)이 봄꽃 핀 부드러운 풀밭에서 메두사와 누웠다'고만 한다 — 신전도 벌도 없다.",
+   "note": "장소 없음 — 오비디우스는 '미네르바의 신전'이라고만 한다. seq 5: 페르세우스 이야기 전부보다 앞이지만 언제인지는 원전에 없다. 눈을 마주친 것이 돌이 되는 힘이 이때 생겼다는 말은 오비디우스에 없어 쓰지 않았다 — 헤시오도스·아폴로도로스에서 고르곤은 본디 그런 존재다.",
+   "sources": [
+    "ovid.metamorphoses 4.790-4.803",
+    "hesiod.theogony 278-279",
+    "apollodorus.library 2.4.3"
+   ],
+   "variants": [
+    {
+     "source": "apollodorus.library 2.4.3",
+     "text": "아폴로도로스는 다른 까닭도 적었다. 메두사가 아테나와 아름다움을 겨루려 해서, 아테나 때문에 목이 잘렸다는 것이다."
+    },
+    {
+     "source": "hesiod.theogony 278-279",
+     "text": "헤시오도스에는 벌 이야기가 없다. 포세이돈이 봄꽃 핀 풀밭에서 메두사를 만났다고만 적었다."
+    }
+   ],
+   "_file": "data/events/era4-perseus.toml",
+   "arc": "perseus-journey",
+   "t0": 51,
+   "t1": 52,
+   "span_label": "한 순간",
+   "open": false
+  },
+  {
    "id": "akrisios-oracle",
    "name_ko": "아크리시오스가 신의 말을 듣다",
    "era": 4,
    "seq": 10,
    "span": "moment",
-   "place": "delphi",
+   "place_unknown": true,
    "cast": [
     {
      "figure": "akrisios",
@@ -14029,16 +14381,77 @@
     }
    ],
    "oneliner": "딸의 아들이 너를 죽인다는 대답이 왔다.",
-   "body": "아르고스의 왕 아크리시오스는 아들이 없었다.\n어떻게 아들을 얻는지 델포이에 물었다.\n아들은 얻지 못하고, 딸의 아들이 너를 죽일 것이라는 대답이 왔다.\n왕은 딸 다나에를 땅 아래 청동 방에 갇히게 했다.\n",
+   "body": "아르고스의 왕 아크리시오스는 아들이 없었다.\n어떻게 아들을 얻는지 신에게 물었다.\n아들은 얻지 못하고, 딸의 아들이 너를 죽일 것이라는 대답이 왔다.\n왕은 딸 다나에를 땅 아래 청동 방에 갇히게 했다.\n",
+   "note": "어디서 물었는지는 원전에 없다 — 아폴로도로스 2.4.1 은 '신탁에 물었다', 히기누스 63 은 '예언이 있었다'고만 한다. place = delphi 로 적혀 있던 것을 2026-10-02 에 지웠다. 히기누스는 청동 방이 아니라 돌로 쌓은 감옥이라 한다.",
    "sources": [
-    "apollodorus.library 2.4.1"
+    "apollodorus.library 2.4.1",
+    "hyginus.fabulae 63"
    ],
    "_file": "data/events/era4-perseus.toml",
    "arc": "perseus-journey",
-   "t0": 51,
-   "t1": 52,
+   "t0": 52,
+   "t1": 53,
    "span_label": "한 순간",
-   "open": false
+   "open": false,
+   "threads": [
+    "perseus-house"
+   ]
+  },
+  {
+   "id": "perseus-born",
+   "name_ko": "황금 비와 페르세우스의 탄생",
+   "era": 4,
+   "seq": 15,
+   "span": "moment",
+   "place": "argos",
+   "cast": [
+    {
+     "figure": "zeus",
+     "role": "주인공"
+    },
+    {
+     "figure": "danae",
+     "role": "피해"
+    },
+    {
+     "figure": "perseus",
+     "role": "등장"
+    },
+    {
+     "figure": "akrisios",
+     "role": "상대"
+    }
+   ],
+   "oneliner": "문이 없는 청동 방에 제우스가 황금 비가 되어 들어왔다.",
+   "body": "아크리시오스는 딸을 땅 아래 청동 방에 가두었다.\n그런데 제우스가 황금 비로 모습을 바꾸어 지붕 틈으로 흘러 들어왔다.\n다나에에게 아들이 태어났다. 페르세우스다.\n아크리시오스는 제우스의 아이라는 말을 믿지 않았다.\n",
+   "fun": "제우스가 모습을 바꾼 것 가운데 황소도 백조도 아닌 비는 이때뿐이다.",
+   "sensitivity": "soften",
+   "record": "제우스가 황금 비가 되어 지붕을 지나 다나에의 무릎에 쏟아져 내려 동침했다(아폴로도로스 2.4.1, 히기누스 63, 오비디우스 4.610-4.611). 아폴로도로스는 '어떤 이들은 프로이토스가 다나에를 유혹했다고 하며, 형제의 다툼이 거기서 났다'는 이설도 적었다.",
+   "caused_by": [
+    "akrisios-oracle"
+   ],
+   "note": "제우스 타래(zeus-partners)의 '다나에 → 페르세우스' 단계는 danae-set-adrift 를 가리키고 있었다 — 이 사건으로 바꾸었다.",
+   "sources": [
+    "apollodorus.library 2.4.1",
+    "hyginus.fabulae 63",
+    "ovid.metamorphoses 4.610-4.611"
+   ],
+   "variants": [
+    {
+     "source": "apollodorus.library 2.4.1",
+     "text": "아버지가 제우스가 아니라 아크리시오스의 동생 프로이토스라는 이야기도 있다고 아폴로도로스는 적었다. 두 형제가 싸운 까닭이 그것이라고 한다."
+    }
+   ],
+   "_file": "data/events/era4-perseus.toml",
+   "arc": "perseus-journey",
+   "t0": 53,
+   "t1": 54,
+   "span_label": "한 순간",
+   "open": false,
+   "threads": [
+    "zeus-partners",
+    "perseus-house"
+   ]
   },
   {
    "id": "danae-set-adrift",
@@ -14073,23 +14486,27 @@
     }
    ],
    "oneliner": "왕은 딸과 손자를 상자에 넣어 바다에 띄웠고, 어부가 건졌다.",
-   "body": "갇힌 다나에에게 아기가 태어났다. 제우스의 아들 페르세우스다.\n아크리시오스는 딸과 아기를 나무 상자에 넣어 바다에 띄웠다.\n상자는 세리포스 섬까지 떠갔다.\n어부 딕티스가 그물로 건져 두 사람을 집에 들였고, 페르세우스는 그 섬에서 자랐다.\n",
+   "body": "아크리시오스는 손자가 제우스의 아들이라는 말을 믿지 않았다.\n딸과 아기를 나무 상자에 넣어 바다에 띄웠다.\n상자는 세리포스 섬까지 떠갔다.\n어부 딕티스가 그물로 건져 두 사람을 집에 들였고, 페르세우스는 그 섬에서 자랐다.\n",
    "sensitivity": "soften",
    "caused_by": [
-    "akrisios-oracle"
+    "perseus-born"
    ],
    "sources": [
-    "apollodorus.library 2.4.1"
+    "apollodorus.library 2.4.1",
+    "hyginus.fabulae 63"
+   ],
+   "variants": [
+    {
+     "source": "hyginus.fabulae 63",
+     "text": "히기누스는 딕티스가 두 사람을 왕 폴리덱테스에게 데려갔고, 왕이 다나에와 결혼해 페르세우스를 아테나의 신전에서 길렀다고 적었다."
+    }
    ],
    "_file": "data/events/era4-perseus.toml",
    "arc": "perseus-journey",
-   "t0": 52,
-   "t1": 54,
+   "t0": 54,
+   "t1": 56,
    "span_label": "며칠",
-   "open": false,
-   "threads": [
-    "zeus-partners"
-   ]
+   "open": false
   },
   {
    "id": "polydektes-demands",
@@ -14123,8 +14540,8 @@
    ],
    "_file": "data/events/era4-perseus.toml",
    "arc": "perseus-journey",
-   "t0": 53,
-   "t1": 54,
+   "t0": 55,
+   "t1": 56,
    "span_label": "한 순간",
    "open": false
   },
@@ -14153,20 +14570,27 @@
     }
    ],
    "oneliner": "눈 하나를 돌려 쓰는 세 노파를 찾아가 길을 물었다.",
-   "body": "아테나와 헤르메스가 페르세우스에게 길을 알려 줄 이들을 가르쳐 주었다.\n그라이아이 세 자매는 눈알 하나를 번갈아 쓰고 있었다.\n페르세우스는 눈이 손에서 손으로 넘어가는 사이에 그것을 잡아챘다.\n자매들은 어쩔 수 없이 님프들이 있는 곳을 알려 주었다.\n",
-   "fun": "님프들에게서 얻은 것이 세 가지다. 날개 달린 신발, 안 보이게 되는 투구, 목을 담을 자루.",
+   "body": "아테나와 헤르메스가 페르세우스에게 길을 알려 줄 이들을 가르쳐 주었다.\n그라이아이 세 자매는 눈알 하나와 이 하나를 번갈아 쓰고 있었다.\n페르세우스는 눈이 손에서 손으로 넘어가는 사이에 눈과 이를 잡아챘다.\n자매들은 어쩔 수 없이 님프들이 있는 곳을 알려 주었다.\n페르세우스는 눈과 이를 돌려주고 님프들에게 갔다.\n",
+   "fun": "님프들에게서 얻은 것이 세 가지다. 날개 달린 신발, 안 보이게 되는 하데스의 투구, 목을 담을 자루 키비시스. 헤르메스는 쇠로 된 낫을 주었다.",
    "caused_by": [
     "polydektes-demands"
    ],
-   "note": "장소 없음 — 고르곤의 땅으로 가는 길목이다. 아폴로도로스 2.4.2 는 님프들이 있는 곳이라고만 한다.",
+   "note": "장소 없음 — 고르곤의 땅으로 가는 길목이다. 아폴로도로스 2.4.2 는 님프들이 있는 곳이라고만 한다. 오비디우스는 그라이아이가 아틀라스 산 아래 산다고 하지만 자매가 둘이라 판본이 다르다.",
    "place_unknown": true,
    "sources": [
-    "apollodorus.library 2.4.2"
+    "apollodorus.library 2.4.2",
+    "ovid.metamorphoses 4.772-4.779"
+   ],
+   "variants": [
+    {
+     "source": "ovid.metamorphoses 4.772-4.779",
+     "text": "오비디우스는 자매가 둘이고 눈 하나만 돌려 썼으며, 아틀라스 산 아래 바위 틈에 산다고 적었다. 님프와 세 가지 도구 이야기는 없다."
+    }
    ],
    "_file": "data/events/era4-perseus.toml",
    "arc": "perseus-journey",
-   "t0": 54,
-   "t1": 56,
+   "t0": 56,
+   "t1": 58,
    "span_label": "며칠",
    "open": false
   },
@@ -14204,21 +14628,61 @@
     {
      "figure": "pegasos",
      "role": "등장"
+    },
+    {
+     "figure": "chrysaor",
+     "role": "등장"
     }
    ],
-   "oneliner": "눈을 마주치지 않고 이겼다. 목에서 페가수스가 나왔다.",
-   "body": "페르세우스는 세상의 서쪽 끝에 있는 고르곤의 땅으로 갔다.\n세 자매가 잠든 사이, 눈을 마주치지 않으려고 방패에 비친 모습만 보면서 메두사의 목을 베었다.\n목이 잘리자 그 자리에서 날개 달린 말 페가수스가 뛰어나왔다.\n남은 두 자매가 깨어 쫓아왔지만, 안 보이게 되는 투구를 쓰고 달아났다.\n",
+   "oneliner": "눈을 마주치지 않고 이겼다. 목에서 페가수스와 크리사오르가 나왔다.",
+   "body": "페르세우스는 세상의 서쪽 끝에 있는 고르곤의 땅으로 갔다.\n들판과 길에 메두사를 본 사람과 짐승이 돌이 되어 서 있었다.\n세 자매가 잠든 사이, 아테나가 손을 잡아 주어 방패에 비친 모습만 보면서 메두사의 목을 베었다.\n목이 잘리자 그 자리에서 날개 달린 말 페가수스와 황금 칼을 든 크리사오르가 뛰어나왔다.\n남은 두 자매가 깨어 쫓아왔지만, 안 보이게 되는 투구를 쓰고 달아났다.\n",
    "fun": "페르세우스가 이긴 방법은 힘이 아니라 거울이다. 아테나가 돕는 영웅은 늘 이렇게 이긴다.",
    "caused_by": [
     "graiai-road"
    ],
    "sources": [
-    "apollodorus.library 2.4.2-2.4.3"
+    "apollodorus.library 2.4.2-2.4.3",
+    "hesiod.theogony 280-283",
+    "ovid.metamorphoses 4.772-4.786"
    ],
    "_file": "data/events/era4-perseus.toml",
    "arc": "perseus-journey",
-   "t0": 56,
-   "t1": 57,
+   "t0": 58,
+   "t1": 59,
+   "span_label": "한 순간",
+   "open": false
+  },
+  {
+   "id": "atlas-turned-to-mountain",
+   "name_ko": "아틀라스가 산이 되다",
+   "era": 4,
+   "seq": 55,
+   "span": "moment",
+   "place": "hesperides-garden",
+   "cast": [
+    {
+     "figure": "perseus",
+     "role": "주인공"
+    },
+    {
+     "figure": "atlas",
+     "role": "피해"
+    }
+   ],
+   "oneliner": "하늘을 받치던 거인이 돌산이 되어 하늘을 받친다.",
+   "body": "메두사의 목을 들고 날던 페르세우스는 저녁이 되자 세상 서쪽 끝 아틀라스의 땅에 내렸다.\n아틀라스는 제우스의 아들이 황금 사과를 가져간다는 옛말을 알고 있었다.\n그래서 제우스의 아들이라는 페르세우스를 쫓아내려 했다.\n힘으로 당할 수 없자 페르세우스는 고개를 돌리고 메두사의 얼굴을 내밀었다.\n아틀라스는 산이 되었다. 수염과 머리카락은 숲이, 어깨는 산등성이가 되었다.\n",
+   "fun": "리비아 위를 날 때 메두사의 목에서 떨어진 핏방울이 땅에 닿아 뱀이 되었다. 그래서 그 땅에 뱀이 많다고 오비디우스는 적었다.",
+   "caused_by": [
+    "medusa-slain"
+   ],
+   "note": "오비디우스 4.621-4.662 에만 있다. 뒷날 헤라클레스가 아틀라스를 만나 하늘을 대신 받치는 것(hesperides-apples, 아폴로도로스 2.5.11)과 어긋난다 — 불확실-목록 E-3. 황금 사과의 옛말은 '파르나소스의 테미스'가 한 말이고, 사과를 지키는 용은 주석이 라돈이라 한다. 장소는 아틀라스의 집 hesperides-garden 으로 두었다.",
+   "sources": [
+    "ovid.metamorphoses 4.617-4.662"
+   ],
+   "_file": "data/events/era4-perseus.toml",
+   "arc": "perseus-journey",
+   "t0": 59,
+   "t1": 60,
    "span_label": "한 순간",
    "open": false
   },
@@ -14256,19 +14720,72 @@
     }
    ],
    "oneliner": "바위에 묶인 공주를 보고 바다괴물을 물리쳤다.",
-   "body": "돌아오는 길에 페르세우스는 바닷가 바위에 묶인 안드로메다를 보았다.\n어머니 카시오페이아의 자랑 때문에 포세이돈이 바다괴물을 보낸 것이었다.\n페르세우스는 괴물을 물리치고 안드로메다를 풀어 주었다.\n두 사람은 함께 그리스로 갔다.\n",
+   "after": [
+    "atlas-turned-to-mountain"
+   ],
+   "body": "돌아오는 길에 페르세우스는 바닷가 바위에 묶인 안드로메다를 보았다.\n어머니 카시오페이아의 자랑 때문에 포세이돈이 바다괴물을 보낸 것이었다.\n페르세우스는 괴물을 물리치면 안드로메다를 아내로 달라고 케페우스에게 약속받았다.\n그리고 괴물을 물리치고 안드로메다를 풀어 주었다.\n",
    "fun": "안드로메다, 페르세우스, 카시오페이아, 케페우스는 모두 별자리가 되었다. 가을 밤하늘에 네 별자리가 나란히 있다.",
    "caused_by": [
     "medusa-slain"
    ],
    "sources": [
     "apollodorus.library 2.4.3",
-    "ovid.metamorphoses 4.663-4.764"
+    "ovid.metamorphoses 4.663-4.764",
+    "hyginus.fabulae 64"
    ],
    "_file": "data/events/era4-perseus.toml",
    "arc": "perseus-journey",
-   "t0": 57,
-   "t1": 58,
+   "t0": 60,
+   "t1": 61,
+   "span_label": "한 순간",
+   "open": false
+  },
+  {
+   "id": "phineus-turned-to-stone",
+   "name_ko": "결혼 잔치에 쳐들어온 피네우스",
+   "era": 4,
+   "seq": 65,
+   "span": "moment",
+   "place": "aithiopia",
+   "cast": [
+    {
+     "figure": "perseus",
+     "role": "주인공"
+    },
+    {
+     "figure": "phineus-aithiopia",
+     "role": "상대"
+    },
+    {
+     "figure": "andromeda",
+     "role": "등장"
+    },
+    {
+     "figure": "kepheus",
+     "role": "등장"
+    }
+   ],
+   "oneliner": "약속했던 신랑이 잔치에 창을 들고 왔다.",
+   "body": "안드로메다는 본디 케페우스의 동생 피네우스와 결혼하기로 되어 있었다.\n괴물이 왔을 때 피네우스는 아무것도 하지 않았다.\n그런데 결혼 잔치에 무리를 이끌고 와서 페르세우스를 죽이려 했다.\n수가 너무 많자 페르세우스는 \"내 편은 얼굴을 돌려라\" 하고 메두사의 목을 꺼냈다.\n피네우스와 그 무리는 그 자리에서 돌이 되었다.\n",
+   "fun": "오비디우스는 돌이 된 사람이 이백 명이라고 적었다. 피네우스는 살려 달라고 빌다가 그 모습 그대로 돌이 되었다.",
+   "caused_by": [
+    "andromeda-rescued"
+   ],
+   "sources": [
+    "apollodorus.library 2.4.3",
+    "ovid.metamorphoses 5.1-5.235",
+    "hyginus.fabulae 64"
+   ],
+   "variants": [
+    {
+     "source": "hyginus.fabulae 64",
+     "text": "히기누스는 약혼자의 이름을 아게노르라 하고, 아버지 케페우스도 함께 페르세우스를 죽이려 했다가 돌이 되었다고 적었다."
+    }
+   ],
+   "_file": "data/events/era4-perseus.toml",
+   "arc": "perseus-journey",
+   "t0": 61,
+   "t1": 62,
    "span_label": "한 순간",
    "open": false
   },
@@ -14279,7 +14796,7 @@
    "seq": 70,
    "span": "moment",
    "after": [
-    "andromeda-rescued"
+    "phineus-turned-to-stone"
    ],
    "place": "seriphos",
    "cast": [
@@ -14315,8 +14832,8 @@
    ],
    "_file": "data/events/era4-perseus.toml",
    "arc": "perseus-journey",
-   "t0": 58,
-   "t1": 59,
+   "t0": 62,
+   "t1": 63,
    "span_label": "한 순간",
    "open": false
   },
@@ -14341,21 +14858,40 @@
     }
    ],
    "oneliner": "피하려고 애쓴 일이 우연히 일어났다.",
-   "body": "아크리시오스는 손자가 돌아온다는 말을 듣고 라리사로 피했다.\n페르세우스는 그곳에서 열린 운동 경기에 나가 원반을 던졌다.\n원반이 빗나가 구경하던 아크리시오스에게 맞았고, 아크리시오스는 죽었다.\n아무도 그럴 마음이 없었는데 델포이의 말은 그대로 되었다.\n",
+   "body": "아크리시오스는 손자가 돌아온다는 말을 듣고 라리사로 피했다.\n페르세우스는 그곳에서 열린 운동 경기에 나가 원반을 던졌다.\n원반이 빗나가 구경하던 아크리시오스에게 맞았고, 아크리시오스는 죽었다.\n아무도 그럴 마음이 없었는데 신의 말은 그대로 되었다.\n",
    "fun": "그리스 신화에서 신의 말을 피하려고 한 일은 언제나 그 말이 이루어지는 원인이 된다.",
    "caused_by": [
     "return-to-seriphos",
     "akrisios-oracle"
    ],
    "sources": [
-    "apollodorus.library 2.4.4"
+    "apollodorus.library 2.4.4",
+    "pausanias.greece 2.16.2",
+    "hyginus.fabulae 63"
+   ],
+   "variants": [
+    {
+     "source": "pausanias.greece 2.16.2",
+     "text": "파우사니아스는 페르세우스가 할아버지를 보고 싶어 라리사로 찾아갔고, 새로 생긴 원반 던지기를 자랑하다가 사고가 났다고 적었다."
+    },
+    {
+     "source": "hyginus.fabulae 63",
+     "text": "히기누스는 다르게 적었다. 아크리시오스가 세리포스까지 찾아왔고 페르세우스는 할아버지를 해치지 않겠다고 맹세했다. 그런데 폴리덱테스의 장례 경기에서 바람이 원반을 아크리시오스의 머리로 날렸다."
+    },
+    {
+     "source": "ovid.metamorphoses 5.236-5.241",
+     "text": "오비디우스는 아예 다르다. 프로이토스가 아르고스를 빼앗았고, 페르세우스가 그를 돌로 만들어 할아버지를 다시 왕으로 세웠다."
+    }
    ],
    "_file": "data/events/era4-perseus.toml",
    "arc": "perseus-journey",
-   "t0": 59,
-   "t1": 60,
+   "t0": 63,
+   "t1": 64,
    "span_label": "한 순간",
-   "open": false
+   "open": false,
+   "threads": [
+    "perseus-house"
+   ]
   },
   {
    "id": "mycenae-founded",
@@ -14366,7 +14902,10 @@
    "after": [
     "akrisios-dies"
    ],
-   "place": "mycenae",
+   "places": [
+    "tiryns",
+    "mycenae"
+   ],
    "cast": [
     {
      "figure": "perseus",
@@ -14375,23 +14914,32 @@
     {
      "figure": "andromeda",
      "role": "주인공"
+    },
+    {
+     "figure": "megapenthes",
+     "role": "등장"
     }
    ],
-   "oneliner": "아르고스를 다른 이에게 주고 새 성을 세웠다.",
-   "body": "페르세우스는 자기가 죽게 만든 사람의 나라를 물려받고 싶지 않았다.\n그래서 아르고스를 다른 사람에게 넘기고 미케네에 새 성을 세웠다.\n안드로메다와 함께 여기서 다스렸고, 자식이 여럿이었다.\n그 자손 가운데 뒷날 헤라클레스가 나온다.\n",
+   "oneliner": "아르고스를 티린스와 바꾸고 미케네에 성을 쌓았다.",
+   "body": "페르세우스는 자기가 죽게 만든 사람의 나라를 물려받기가 부끄러웠다.\n그래서 티린스의 왕 메가펜테스를 찾아가 나라를 바꾸자고 했다.\n메가펜테스가 아르고스를, 페르세우스가 티린스를 가졌다.\n페르세우스는 미데아와 미케네에 성벽을 쌓았다.\n안드로메다와의 사이에 아들 다섯과 딸 하나를 두었고, 그 자손에서 헤라클레스가 나온다.\n",
+   "fun": "미케네라는 이름은 칼집 끝(뮈케스)이 떨어진 자리라서 붙었다고 한다. 목이 말라 버섯(뮈케스)을 뽑았더니 물이 나와서라는 이야기도 있다. 파우사니아스가 둘 다 적었다.",
    "caused_by": [
     "akrisios-dies"
    ],
+   "note": "티린스의 성벽은 키클롭스가 프로이토스에게 쌓아 준 것(2.2.1). 미케네에서 난 아들 다섯은 알카이오스·스테넬로스·헬레우스·메스토르·엘렉트리온, 딸은 고르고포네. 페르세스는 그리스에 오기 전 케페우스에게 남겨 두었다(2.4.5). 미데아는 장소 항목이 없다.",
    "sources": [
-    "apollodorus.library 2.4.4",
-    "pausanias.greece 2.15-2.16"
+    "apollodorus.library 2.4.4-2.4.5",
+    "pausanias.greece 2.16.3"
    ],
    "_file": "data/events/era4-perseus.toml",
    "arc": "perseus-journey",
-   "t0": 60,
-   "t1": 69,
+   "t0": 64,
+   "t1": 73,
    "span_label": "여러 해",
-   "open": false
+   "open": false,
+   "threads": [
+    "perseus-house"
+   ]
   },
   {
    "id": "europa-carried-to-crete",
@@ -14421,8 +14969,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "europa-minos",
-   "t0": 61,
-   "t1": 63,
+   "t0": 65,
+   "t1": 67,
    "span_label": "며칠",
    "open": false,
    "threads": [
@@ -14461,8 +15009,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "europa-minos",
-   "t0": 63,
-   "t1": 64,
+   "t0": 67,
+   "t1": 68,
    "span_label": "한 순간",
    "open": false
   },
@@ -14516,8 +15064,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "daidalos-ikaros",
-   "t0": 64,
-   "t1": 68,
+   "t0": 68,
+   "t1": 72,
    "span_label": "한 철",
    "open": false,
    "threads": [
@@ -14561,8 +15109,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "europa-minos",
-   "t0": 65,
-   "t1": 69,
+   "t0": 69,
+   "t1": 73,
    "span_label": "한 철",
    "open": false
   },
@@ -14597,8 +15145,8 @@
     "homer.odyssey 11.593-11.600"
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
-   "t0": 66,
-   "t1": 90,
+   "t0": 70,
+   "t1": 94,
    "span_label": "한 세대 넘게"
   },
   {
@@ -14634,8 +15182,8 @@
     "ovid.metamorphoses 10.41-10.44"
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
-   "t0": 67,
-   "t1": 91,
+   "t0": 71,
+   "t1": 95,
    "span_label": "한 세대 넘게"
   },
   {
@@ -14670,8 +15218,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "bellerophon-flight",
-   "t0": 68,
-   "t1": 69,
+   "t0": 72,
+   "t1": 73,
    "span_label": "한 순간",
    "open": false
   },
@@ -14708,8 +15256,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "bellerophon-flight",
-   "t0": 69,
-   "t1": 71,
+   "t0": 73,
+   "t1": 75,
    "span_label": "며칠",
    "open": false
   },
@@ -14741,8 +15289,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "bellerophon-flight",
-   "t0": 70,
-   "t1": 72,
+   "t0": 74,
+   "t1": 76,
    "span_label": "며칠",
    "open": false
   },
@@ -14785,8 +15333,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "bellerophon-flight",
-   "t0": 71,
-   "t1": 72,
+   "t0": 75,
+   "t1": 76,
    "span_label": "한 순간",
    "open": false
   },
@@ -14825,8 +15373,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "bellerophon-flight",
-   "t0": 72,
-   "t1": 81,
+   "t0": 76,
+   "t1": 85,
    "span_label": "여러 해",
    "open": false
   },
@@ -14856,8 +15404,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "kadmos-thebes",
-   "t0": 73,
-   "t1": 82,
+   "t0": 77,
+   "t1": 86,
    "span_label": "여러 해",
    "open": false
   },
@@ -14894,8 +15442,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "kadmos-thebes",
-   "t0": 74,
-   "t1": 76,
+   "t0": 78,
+   "t1": 80,
    "span_label": "며칠",
    "open": false
   },
@@ -14933,8 +15481,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "kadmos-thebes",
-   "t0": 75,
-   "t1": 76,
+   "t0": 79,
+   "t1": 80,
    "span_label": "한 순간",
    "open": false
   },
@@ -14989,8 +15537,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "kadmos-thebes",
-   "t0": 76,
-   "t1": 85,
+   "t0": 80,
+   "t1": 89,
    "span_label": "여러 해",
    "open": false
   },
@@ -15043,8 +15591,8 @@
     }
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
-   "t0": 85,
-   "t1": 89,
+   "t0": 89,
+   "t1": 93,
    "span_label": "한 철",
    "open": false,
    "threads": [
@@ -15085,8 +15633,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "argo-voyage",
-   "t0": 86,
-   "t1": 88,
+   "t0": 90,
+   "t1": 92,
    "span_label": "며칠",
    "open": false
   },
@@ -15126,8 +15674,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "tantalos-house",
-   "t0": 87,
-   "t1": 88,
+   "t0": 91,
+   "t1": 92,
    "span_label": "한 순간",
    "open": false
   },
@@ -15168,8 +15716,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "tantalos-house",
-   "t0": 88,
-   "t1": 112,
+   "t0": 92,
+   "t1": 116,
    "span_label": "한 세대 넘게"
   },
   {
@@ -15219,8 +15767,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "tantalos-house",
-   "t0": 89,
-   "t1": 91,
+   "t0": 93,
+   "t1": 95,
    "span_label": "며칠",
    "open": false
   },
@@ -15259,8 +15807,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "kadmos-thebes",
-   "t0": 91,
-   "t1": 92,
+   "t0": 95,
+   "t1": 96,
    "span_label": "한 순간",
    "open": false
   },
@@ -15296,8 +15844,8 @@
     "apollodorus.library 3.6.7"
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
-   "t0": 92,
-   "t1": 93,
+   "t0": 96,
+   "t1": 97,
    "span_label": "한 순간",
    "open": false
   },
@@ -15336,8 +15884,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "oidipous-fate",
-   "t0": 93,
-   "t1": 94,
+   "t0": 97,
+   "t1": 98,
    "span_label": "한 순간",
    "open": false
   },
@@ -15365,8 +15913,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "oidipous-fate",
-   "t0": 94,
-   "t1": 95,
+   "t0": 98,
+   "t1": 99,
    "span_label": "한 순간",
    "open": false
   },
@@ -15401,8 +15949,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "oidipous-fate",
-   "t0": 95,
-   "t1": 96,
+   "t0": 99,
+   "t1": 100,
    "span_label": "한 순간",
    "open": false
   },
@@ -15444,8 +15992,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "oidipous-fate",
-   "t0": 96,
-   "t1": 100,
+   "t0": 100,
+   "t1": 104,
    "span_label": "한 철",
    "open": false
   },
@@ -15483,8 +16031,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "oidipous-fate",
-   "t0": 97,
-   "t1": 106,
+   "t0": 101,
+   "t1": 110,
    "span_label": "여러 해",
    "open": false
   },
@@ -15523,8 +16071,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "oidipous-fate",
-   "t0": 98,
-   "t1": 102,
+   "t0": 102,
+   "t1": 106,
    "span_label": "한 철",
    "open": false
   },
@@ -15568,8 +16116,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "oidipous-fate",
-   "t0": 99,
-   "t1": 108,
+   "t0": 103,
+   "t1": 112,
    "span_label": "여러 해",
    "open": false
   },
@@ -15603,8 +16151,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "argo-voyage",
-   "t0": 100,
-   "t1": 101,
+   "t0": 104,
+   "t1": 105,
    "span_label": "한 순간",
    "open": false
   },
@@ -15644,8 +16192,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "argo-voyage",
-   "t0": 101,
-   "t1": 105,
+   "t0": 105,
+   "t1": 109,
    "span_label": "한 철",
    "open": false
   },
@@ -15731,8 +16279,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "argo-voyage",
-   "t0": 105,
-   "t1": 106,
+   "t0": 109,
+   "t1": 110,
    "span_label": "한 순간",
    "open": false
   },
@@ -15765,8 +16313,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "argo-voyage",
-   "t0": 106,
-   "t1": 108,
+   "t0": 110,
+   "t1": 112,
    "span_label": "며칠",
    "open": false
   },
@@ -15810,8 +16358,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "argo-voyage",
-   "t0": 108,
-   "t1": 109,
+   "t0": 112,
+   "t1": 113,
    "span_label": "한 순간",
    "open": false
   },
@@ -15855,8 +16403,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "argo-voyage",
-   "t0": 109,
-   "t1": 110,
+   "t0": 113,
+   "t1": 114,
    "span_label": "한 순간",
    "open": false
   },
@@ -15897,8 +16445,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "argo-voyage",
-   "t0": 110,
-   "t1": 111,
+   "t0": 114,
+   "t1": 115,
    "span_label": "한 순간",
    "open": false
   },
@@ -15939,8 +16487,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "argo-voyage",
-   "t0": 111,
-   "t1": 113,
+   "t0": 115,
+   "t1": 117,
    "span_label": "며칠",
    "open": false
   },
@@ -15977,8 +16525,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "argo-voyage",
-   "t0": 112,
-   "t1": 113,
+   "t0": 116,
+   "t1": 117,
    "span_label": "한 순간",
    "open": false
   },
@@ -16024,8 +16572,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "argo-voyage",
-   "t0": 113,
-   "t1": 114,
+   "t0": 117,
+   "t1": 118,
    "span_label": "한 순간",
    "open": false
   },
@@ -16070,8 +16618,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "argo-voyage",
-   "t0": 114,
-   "t1": 116,
+   "t0": 118,
+   "t1": 120,
    "span_label": "며칠",
    "open": false
   },
@@ -16108,8 +16656,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "argo-voyage",
-   "t0": 116,
-   "t1": 117,
+   "t0": 120,
+   "t1": 121,
    "span_label": "한 순간",
    "open": false
   },
@@ -16146,8 +16694,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "argo-voyage",
-   "t0": 117,
-   "t1": 118,
+   "t0": 121,
+   "t1": 122,
    "span_label": "한 순간",
    "open": false
   },
@@ -16189,8 +16737,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "medeia-revenge",
-   "t0": 118,
-   "t1": 122,
+   "t0": 122,
+   "t1": 126,
    "span_label": "한 철",
    "open": false
   },
@@ -16239,8 +16787,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "medeia-revenge",
-   "t0": 122,
-   "t1": 131,
+   "t0": 126,
+   "t1": 135,
    "span_label": "여러 해",
    "open": false
   },
@@ -16272,8 +16820,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "medeia-revenge",
-   "t0": 123,
-   "t1": 125,
+   "t0": 127,
+   "t1": 129,
    "span_label": "며칠",
    "open": false
   },
@@ -16303,8 +16851,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "orpheus-eurydike",
-   "t0": 124,
-   "t1": 125,
+   "t0": 128,
+   "t1": 129,
    "span_label": "한 순간",
    "open": false
   },
@@ -16347,8 +16895,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "orpheus-eurydike",
-   "t0": 125,
-   "t1": 127,
+   "t0": 129,
+   "t1": 131,
    "span_label": "며칠",
    "open": false
   },
@@ -16420,8 +16968,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "kalydon-hunt",
-   "t0": 126,
-   "t1": 128,
+   "t0": 130,
+   "t1": 132,
    "span_label": "며칠",
    "open": false
   },
@@ -16470,8 +17018,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "kalydon-hunt",
-   "t0": 127,
-   "t1": 128,
+   "t0": 131,
+   "t1": 132,
    "span_label": "한 순간",
    "open": false
   },
@@ -16509,8 +17057,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "dioskouroi",
-   "t0": 128,
-   "t1": 129,
+   "t0": 132,
+   "t1": 133,
    "span_label": "한 순간"
   },
   {
@@ -16552,10 +17100,13 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-early",
-   "t0": 129,
-   "t1": 133,
+   "t0": 133,
+   "t1": 137,
    "span_label": "한 철",
-   "open": false
+   "open": false,
+   "threads": [
+    "perseus-house"
+   ]
   },
   {
    "id": "zeus-visits-alkmene",
@@ -16594,8 +17145,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-early",
-   "t0": 130,
-   "t1": 132,
+   "t0": 134,
+   "t1": 136,
    "span_label": "며칠",
    "open": false,
    "threads": [
@@ -16648,10 +17199,13 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-early",
-   "t0": 131,
-   "t1": 133,
+   "t0": 135,
+   "t1": 137,
    "span_label": "며칠",
-   "open": false
+   "open": false,
+   "threads": [
+    "perseus-house"
+   ]
   },
   {
    "id": "herakles-born",
@@ -16698,12 +17252,13 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-early",
-   "t0": 133,
-   "t1": 134,
+   "t0": 137,
+   "t1": 138,
    "span_label": "한 순간",
    "open": false,
    "threads": [
-    "zeus-partners"
+    "zeus-partners",
+    "perseus-house"
    ]
   },
   {
@@ -16751,8 +17306,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-early",
-   "t0": 134,
-   "t1": 135,
+   "t0": 138,
+   "t1": 139,
    "span_label": "한 순간",
    "open": false
   },
@@ -16797,8 +17352,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-early",
-   "t0": 135,
-   "t1": 144,
+   "t0": 139,
+   "t1": 148,
    "span_label": "여러 해",
    "open": false
   },
@@ -16845,8 +17400,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-early",
-   "t0": 144,
-   "t1": 146,
+   "t0": 148,
+   "t1": 150,
    "span_label": "며칠",
    "open": false
   },
@@ -16887,8 +17442,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-early",
-   "t0": 145,
-   "t1": 146,
+   "t0": 149,
+   "t1": 150,
    "span_label": "한 순간",
    "open": false
   },
@@ -16925,10 +17480,13 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-early",
-   "t0": 146,
-   "t1": 147,
+   "t0": 150,
+   "t1": 151,
    "span_label": "한 순간",
-   "open": false
+   "open": false,
+   "threads": [
+    "perseus-house"
+   ]
   },
   {
    "id": "nemean-lion-slain",
@@ -16964,8 +17522,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 147,
-   "t1": 149,
+   "t0": 151,
+   "t1": 153,
    "span_label": "며칠",
    "open": false
   },
@@ -17013,8 +17571,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 149,
-   "t1": 150,
+   "t0": 153,
+   "t1": 154,
    "span_label": "한 순간",
    "open": false
   },
@@ -17057,8 +17615,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 150,
-   "t1": 159,
+   "t0": 154,
+   "t1": 163,
    "span_label": "여러 해",
    "open": false
   },
@@ -17100,8 +17658,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 159,
-   "t1": 161,
+   "t0": 163,
+   "t1": 165,
    "span_label": "며칠",
    "open": false
   },
@@ -17137,8 +17695,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 161,
-   "t1": 163,
+   "t0": 165,
+   "t1": 167,
    "span_label": "며칠",
    "open": false
   },
@@ -17177,8 +17735,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 163,
-   "t1": 164,
+   "t0": 167,
+   "t1": 168,
    "span_label": "한 순간",
    "open": false
   },
@@ -17216,8 +17774,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 164,
-   "t1": 165,
+   "t0": 168,
+   "t1": 169,
    "span_label": "한 순간",
    "open": false
   },
@@ -17267,8 +17825,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 165,
-   "t1": 167,
+   "t0": 169,
+   "t1": 171,
    "span_label": "며칠",
    "open": false
   },
@@ -17307,8 +17865,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 167,
-   "t1": 169,
+   "t0": 171,
+   "t1": 173,
    "span_label": "며칠",
    "open": false
   },
@@ -17359,8 +17917,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 169,
-   "t1": 171,
+   "t0": 173,
+   "t1": 175,
    "span_label": "며칠",
    "open": false
   },
@@ -17405,8 +17963,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 171,
-   "t1": 172,
+   "t0": 175,
+   "t1": 176,
    "span_label": "한 순간",
    "open": false
   },
@@ -17462,8 +18020,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 172,
-   "t1": 176,
+   "t0": 176,
+   "t1": 180,
    "span_label": "한 철",
    "open": false
   },
@@ -17499,8 +18057,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 176,
-   "t1": 177,
+   "t0": 180,
+   "t1": 181,
    "span_label": "한 순간",
    "open": false
   },
@@ -17546,8 +18104,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 177,
-   "t1": 178,
+   "t0": 181,
+   "t1": 182,
    "span_label": "한 순간",
    "open": false
   },
@@ -17608,8 +18166,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 178,
-   "t1": 180,
+   "t0": 182,
+   "t1": 184,
    "span_label": "며칠",
    "open": false
   },
@@ -17678,8 +18236,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-labors",
-   "t0": 180,
-   "t1": 182,
+   "t0": 184,
+   "t1": 186,
    "span_label": "며칠",
    "open": false
   },
@@ -17726,8 +18284,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "europa-minos",
-   "t0": 181,
-   "t1": 190,
+   "t0": 185,
+   "t1": 194,
    "span_label": "여러 해",
    "open": false,
    "threads": [
@@ -17773,8 +18331,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 182,
-   "t1": 184,
+   "t0": 186,
+   "t1": 188,
    "span_label": "며칠",
    "open": false
   },
@@ -17836,8 +18394,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 190,
-   "t1": 199,
+   "t0": 194,
+   "t1": 203,
    "span_label": "여러 해",
    "open": false
   },
@@ -17871,8 +18429,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 191,
-   "t1": 192,
+   "t0": 195,
+   "t1": 196,
    "span_label": "한 순간",
    "open": false
   },
@@ -17918,8 +18476,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 192,
-   "t1": 194,
+   "t0": 196,
+   "t1": 198,
    "span_label": "며칠",
    "open": false
   },
@@ -17964,8 +18522,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 194,
-   "t1": 196,
+   "t0": 198,
+   "t1": 200,
    "span_label": "며칠",
    "open": false
   },
@@ -18016,8 +18574,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 196,
-   "t1": 198,
+   "t0": 200,
+   "t1": 202,
    "span_label": "며칠",
    "open": false
   },
@@ -18055,8 +18613,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 197,
-   "t1": 198,
+   "t0": 201,
+   "t1": 202,
    "span_label": "한 순간",
    "open": false
   },
@@ -18095,8 +18653,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 198,
-   "t1": 200,
+   "t0": 202,
+   "t1": 204,
    "span_label": "며칠",
    "open": false
   },
@@ -18142,8 +18700,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 199,
-   "t1": 200,
+   "t0": 203,
+   "t1": 204,
    "span_label": "한 순간",
    "open": false,
    "threads": [
@@ -18195,8 +18753,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 200,
-   "t1": 202,
+   "t0": 204,
+   "t1": 206,
    "span_label": "며칠",
    "open": false
   },
@@ -18231,8 +18789,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 201,
-   "t1": 202,
+   "t0": 205,
+   "t1": 206,
    "span_label": "한 순간",
    "open": false
   },
@@ -18261,8 +18819,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 202,
-   "t1": 211,
+   "t0": 206,
+   "t1": 215,
    "span_label": "여러 해",
    "open": false
   },
@@ -18311,8 +18869,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "daidalos-ikaros",
-   "t0": 203,
-   "t1": 205,
+   "t0": 207,
+   "t1": 209,
    "span_label": "며칠",
    "open": false,
    "threads": [
@@ -18354,8 +18912,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "daidalos-ikaros",
-   "t0": 205,
-   "t1": 209,
+   "t0": 209,
+   "t1": 213,
    "span_label": "한 철",
    "open": false,
    "threads": [
@@ -18398,8 +18956,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 211,
-   "t1": 212,
+   "t0": 215,
+   "t1": 216,
    "span_label": "한 순간",
    "open": false
   },
@@ -18442,8 +19000,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 212,
-   "t1": 214,
+   "t0": 216,
+   "t1": 218,
    "span_label": "며칠",
    "open": false
   },
@@ -18490,8 +19048,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 213,
-   "t1": 222,
+   "t0": 217,
+   "t1": 226,
    "span_label": "여러 해",
    "open": false
   },
@@ -18531,8 +19089,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "thebes-war",
-   "t0": 214,
-   "t1": 223,
+   "t0": 218,
+   "t1": 227,
    "span_label": "여러 해",
    "open": false
   },
@@ -18580,8 +19138,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "thebes-war",
-   "t0": 215,
-   "t1": 219,
+   "t0": 219,
+   "t1": 223,
    "span_label": "한 철",
    "open": false
   },
@@ -18616,8 +19174,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "thebes-war",
-   "t0": 216,
-   "t1": 217,
+   "t0": 220,
+   "t1": 221,
    "span_label": "한 순간",
    "open": false
   },
@@ -18660,8 +19218,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "thebes-war",
-   "t0": 217,
-   "t1": 218,
+   "t0": 221,
+   "t1": 222,
    "span_label": "한 순간",
    "open": false
   },
@@ -18705,8 +19263,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 218,
-   "t1": 219,
+   "t0": 222,
+   "t1": 223,
    "span_label": "한 순간",
    "open": false
   },
@@ -18752,8 +19310,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 219,
-   "t1": 220,
+   "t0": 223,
+   "t1": 224,
    "span_label": "한 순간",
    "open": false
   },
@@ -18790,8 +19348,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 220,
-   "t1": 229,
+   "t0": 224,
+   "t1": 233,
    "span_label": "여러 해",
    "open": false
   },
@@ -18840,8 +19398,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "daidalos-ikaros",
-   "t0": 221,
-   "t1": 222,
+   "t0": 225,
+   "t1": 226,
    "span_label": "한 순간",
    "open": false,
    "threads": [
@@ -18895,8 +19453,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 229,
-   "t1": 231,
+   "t0": 233,
+   "t1": 235,
    "span_label": "며칠",
    "open": false
   },
@@ -18936,8 +19494,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 231,
-   "t1": 233,
+   "t0": 235,
+   "t1": 237,
    "span_label": "며칠",
    "open": false
   },
@@ -18979,8 +19537,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 233,
-   "t1": 234,
+   "t0": 237,
+   "t1": 238,
    "span_label": "한 순간",
    "open": false
   },
@@ -19018,8 +19576,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 234,
-   "t1": 235,
+   "t0": 238,
+   "t1": 239,
    "span_label": "한 순간",
    "open": false
   },
@@ -19059,8 +19617,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 235,
-   "t1": 237,
+   "t0": 239,
+   "t1": 241,
    "span_label": "며칠",
    "open": false
   },
@@ -19110,8 +19668,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 236,
-   "t1": 237,
+   "t0": 240,
+   "t1": 241,
    "span_label": "한 순간",
    "open": false
   },
@@ -19158,8 +19716,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 237,
-   "t1": 238,
+   "t0": 241,
+   "t1": 242,
    "span_label": "한 순간",
    "open": false
   },
@@ -19205,10 +19763,52 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 238,
-   "t1": 239,
+   "t0": 242,
+   "t1": 243,
    "span_label": "한 순간",
    "open": false
+  },
+  {
+   "id": "eurystheus-dies",
+   "name_ko": "에우리스테우스가 헤라클레스의 아이들을 쫓다 죽다",
+   "era": 5,
+   "seq": 1095,
+   "span": "season",
+   "place": "athens",
+   "cast": [
+    {
+     "figure": "hyllos",
+     "role": "주인공"
+    },
+    {
+     "figure": "eurystheus",
+     "role": "피해"
+    },
+    {
+     "figure": "alkmene",
+     "role": "등장"
+    }
+   ],
+   "oneliner": "헤라클레스가 떠나자 왕은 그 아이들을 쫓았고, 그 아이들에게 죽었다.",
+   "body": "헤라클레스가 신이 되자 에우리스테우스는 그 아이들을 내놓으라고 했다.\n아이들은 그리스를 떠돌다 아테네에 가서 자비의 제단에 앉아 보호를 빌었다.\n아테네 사람들이 내주지 않자 에우리스테우스가 군대를 이끌고 왔다.\n아테네 군은 그의 아들 다섯을 죽였고, 수레로 달아나던 에우리스테우스는 힐로스에게 죽었다.\n힐로스는 그 목을 할머니 알크메네에게 가져갔다.\n",
+   "sensitivity": "soften",
+   "record": "힐로스가 스키론의 바위 옆에서 에우리스테우스를 죽여 목을 베어 알크메네에게 주었고, 알크메네는 베틀 바늘로 그 눈을 파냈다(아폴로도로스 2.8.1).",
+   "caused_by": [
+    "herakles-apotheosis"
+   ],
+   "note": "장소는 아테네 — 싸움이 거기서 났다. 죽은 자리 스키론의 바위(메가라 쪽 벼랑)는 장소 항목이 없어 본문에만 둔다. 미케네 왕 자리가 페르세우스 집안에서 펠롭스 집안으로 넘어가는 고리 — atreus-thyestes-feud 가 이 뒤다. 묶음은 herakles-last 의 끝에 붙였다.",
+   "sources": [
+    "apollodorus.library 2.8.1"
+   ],
+   "_file": "data/events/era5-herakles.toml",
+   "arc": "herakles-last",
+   "t0": 243,
+   "t1": 247,
+   "span_label": "한 철",
+   "open": false,
+   "threads": [
+    "perseus-house"
+   ]
   },
   {
    "id": "atreus-thyestes-feud",
@@ -19216,6 +19816,9 @@
    "era": 5,
    "seq": 1100,
    "span": "season",
+   "after": [
+    "eurystheus-dies"
+   ],
    "place": "mycenae",
    "cast": [
     {
@@ -19238,16 +19841,19 @@
    "oneliner": "형제가 미케네의 왕자리를 다투었고, 해가 거꾸로 졌다.",
    "body": "미케네 사람들이 펠롭스의 아들을 왕으로 삼으라는 신의 말을 들었다.\n불려 온 티에스테스는 황금 양을 가진 쪽이 왕이 되자고 했다.\n아트레우스가 좋다고 했는데, 양은 몰래 티에스테스의 손에 가 있었다.\n제우스는 해가 거꾸로 지면 아트레우스가 왕이 되자고 하라고 했다.\n해가 동쪽으로 졌고, 아트레우스는 왕이 되어 동생을 쫓아냈다.\n",
    "sensitivity": "soften",
-   "note": "그 뒤의 잔치(E.2.13)와 아이기스토스의 출생(E.2.14)은 쓰지 않는다.",
+   "note": "그 뒤의 잔치(E.2.13)와 아이기스토스의 출생(E.2.14)은 쓰지 않는다. after = eurystheus-dies 는 존재 조건이다 — 미케네의 왕이던 에우리스테우스가 죽은 뒤에야 펠롭스의 아들을 왕으로 삼으라는 말이 올 수 있다(불확실-목록 D-2). E.2.11 은 신의 말만 적고 까닭은 말하지 않는다.",
    "sources": [
     "apollodorus.library E.2.10-E.2.12"
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "tantalos-house",
-   "t0": 239,
-   "t1": 243,
+   "t0": 247,
+   "t1": 251,
    "span_label": "한 철",
-   "open": false
+   "open": false,
+   "threads": [
+    "perseus-house"
+   ]
   },
   {
    "id": "leda-swan",
@@ -19300,8 +19906,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 240,
-   "t1": 241,
+   "t0": 248,
+   "t1": 249,
    "span_label": "한 순간",
    "open": false,
    "threads": [
@@ -19371,8 +19977,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 241,
-   "t1": 243,
+   "t0": 249,
+   "t1": 251,
    "span_label": "며칠",
    "open": false
   },
@@ -19418,8 +20024,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 243,
-   "t1": 252,
+   "t0": 251,
+   "t1": 260,
    "span_label": "여러 해",
    "open": false
   },
@@ -19459,8 +20065,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 244,
-   "t1": 253,
+   "t0": 252,
+   "t1": 261,
    "span_label": "여러 해",
    "open": false
   },
@@ -19491,8 +20097,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 245,
-   "t1": 249,
+   "t0": 253,
+   "t1": 257,
    "span_label": "한 철",
    "open": false,
    "threads": [
@@ -19540,8 +20146,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 249,
-   "t1": 251,
+   "t0": 257,
+   "t1": 259,
    "span_label": "며칠",
    "open": false,
    "threads": [
@@ -19586,8 +20192,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 250,
-   "t1": 251,
+   "t0": 258,
+   "t1": 259,
    "span_label": "한 순간",
    "open": false,
    "threads": [
@@ -19663,8 +20269,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 251,
-   "t1": 255,
+   "t0": 259,
+   "t1": 263,
    "span_label": "한 철",
    "open": false
   },
@@ -19703,8 +20309,8 @@
     "livy.rome 1.7"
    ],
    "_file": "data/events/era8-rome.toml",
-   "t0": 252,
-   "t1": 254,
+   "t0": 260,
+   "t1": 262,
    "span_label": "며칠",
    "open": false
   },
@@ -19759,8 +20365,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 255,
-   "t1": 256,
+   "t0": 263,
+   "t1": 264,
    "span_label": "한 순간",
    "open": false
   },
@@ -19816,8 +20422,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 256,
-   "t1": 258,
+   "t0": 264,
+   "t1": 266,
    "span_label": "며칠",
    "open": false,
    "threads": [
@@ -19889,8 +20495,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 258,
-   "t1": 262,
+   "t0": 266,
+   "t1": 270,
    "span_label": "한 철",
    "open": false
   },
@@ -19947,8 +20553,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 259,
-   "t1": 261,
+   "t0": 267,
+   "t1": 269,
    "span_label": "며칠",
    "open": false
   },
@@ -19998,8 +20604,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 260,
-   "t1": 262,
+   "t0": 268,
+   "t1": 270,
    "span_label": "며칠",
    "open": false
   },
@@ -20067,8 +20673,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 262,
-   "t1": 263,
+   "t0": 270,
+   "t1": 271,
    "span_label": "한 순간",
    "open": false
   },
@@ -20122,8 +20728,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 263,
-   "t1": 265,
+   "t0": 271,
+   "t1": 273,
    "span_label": "며칠",
    "open": false
   },
@@ -20193,8 +20799,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 265,
-   "t1": 274,
+   "t0": 273,
+   "t1": 282,
    "span_label": "여러 해",
    "open": false
   },
@@ -20248,8 +20854,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 274,
-   "t1": 276,
+   "t0": 282,
+   "t1": 284,
    "span_label": "며칠",
    "open": false
   },
@@ -20312,8 +20918,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 276,
-   "t1": 277,
+   "t0": 284,
+   "t1": 285,
    "span_label": "한 순간",
    "open": false
   },
@@ -20358,8 +20964,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 277,
-   "t1": 279,
+   "t0": 285,
+   "t1": 287,
    "span_label": "며칠",
    "open": false
   },
@@ -20402,8 +21008,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 278,
-   "t1": 279,
+   "t0": 286,
+   "t1": 287,
    "span_label": "한 순간",
    "open": false
   },
@@ -20464,8 +21070,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 279,
-   "t1": 280,
+   "t0": 287,
+   "t1": 288,
    "span_label": "한 순간",
    "open": false
   },
@@ -20523,8 +21129,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 280,
-   "t1": 282,
+   "t0": 288,
+   "t1": 290,
    "span_label": "며칠",
    "open": false
   },
@@ -20574,8 +21180,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 281,
-   "t1": 282,
+   "t0": 289,
+   "t1": 290,
    "span_label": "한 순간",
    "open": false
   },
@@ -20630,8 +21236,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 282,
-   "t1": 283,
+   "t0": 290,
+   "t1": 291,
    "span_label": "한 순간",
    "open": false
   },
@@ -20693,8 +21299,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 283,
-   "t1": 285,
+   "t0": 291,
+   "t1": 293,
    "span_label": "며칠",
    "open": false
   },
@@ -20749,8 +21355,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 284,
-   "t1": 285,
+   "t0": 292,
+   "t1": 293,
    "span_label": "한 순간",
    "open": false
   },
@@ -20827,8 +21433,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 285,
-   "t1": 287,
+   "t0": 293,
+   "t1": 295,
    "span_label": "며칠",
    "open": false
   },
@@ -20883,8 +21489,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 287,
-   "t1": 288,
+   "t0": 295,
+   "t1": 296,
    "span_label": "한 순간",
    "open": false
   },
@@ -20947,8 +21553,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 288,
-   "t1": 290,
+   "t0": 296,
+   "t1": 298,
    "span_label": "며칠",
    "open": false
   },
@@ -21022,8 +21628,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 290,
-   "t1": 291,
+   "t0": 298,
+   "t1": 299,
    "span_label": "한 순간",
    "open": false
   },
@@ -21091,8 +21697,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 291,
-   "t1": 293,
+   "t0": 299,
+   "t1": 301,
    "span_label": "며칠",
    "open": false
   },
@@ -21145,8 +21751,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 293,
-   "t1": 297,
+   "t0": 301,
+   "t1": 305,
    "span_label": "한 철",
    "open": false
   },
@@ -21211,8 +21817,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 297,
-   "t1": 299,
+   "t0": 305,
+   "t1": 307,
    "span_label": "며칠",
    "open": false
   },
@@ -21263,8 +21869,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 299,
-   "t1": 301,
+   "t0": 307,
+   "t1": 309,
    "span_label": "며칠",
    "open": false
   },
@@ -21322,8 +21928,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 301,
-   "t1": 303,
+   "t0": 309,
+   "t1": 311,
    "span_label": "며칠",
    "open": false
   },
@@ -21389,8 +21995,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 303,
-   "t1": 307,
+   "t0": 311,
+   "t1": 315,
    "span_label": "한 철",
    "open": false
   },
@@ -21452,8 +22058,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 307,
-   "t1": 309,
+   "t0": 315,
+   "t1": 317,
    "span_label": "며칠",
    "open": false
   },
@@ -21516,8 +22122,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 309,
-   "t1": 311,
+   "t0": 317,
+   "t1": 319,
    "span_label": "며칠",
    "open": false,
    "threads": [
@@ -21629,8 +22235,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 311,
-   "t1": 313,
+   "t0": 319,
+   "t1": 321,
    "span_label": "며칠",
    "open": false,
    "threads": [
@@ -21679,8 +22285,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 313,
-   "t1": 314,
+   "t0": 321,
+   "t1": 322,
    "span_label": "한 순간",
    "open": false,
    "threads": [
@@ -21724,8 +22330,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 314,
-   "t1": 323,
+   "t0": 322,
+   "t1": 331,
    "span_label": "여러 해",
    "open": false
   },
@@ -21759,8 +22365,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 315,
-   "t1": 317,
+   "t0": 323,
+   "t1": 325,
    "span_label": "며칠",
    "open": false
   },
@@ -21793,8 +22399,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 317,
-   "t1": 319,
+   "t0": 325,
+   "t1": 327,
    "span_label": "며칠",
    "open": false
   },
@@ -21828,8 +22434,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 319,
-   "t1": 321,
+   "t0": 327,
+   "t1": 329,
    "span_label": "며칠",
    "open": false
   },
@@ -21868,8 +22474,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 320,
-   "t1": 322,
+   "t0": 328,
+   "t1": 330,
    "span_label": "며칠",
    "open": false
   },
@@ -21902,8 +22508,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 322,
-   "t1": 326,
+   "t0": 330,
+   "t1": 334,
    "span_label": "한 철",
    "open": false
   },
@@ -21937,8 +22543,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 326,
-   "t1": 328,
+   "t0": 334,
+   "t1": 336,
    "span_label": "며칠",
    "open": false
   },
@@ -21975,8 +22581,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 328,
-   "t1": 330,
+   "t0": 336,
+   "t1": 338,
    "span_label": "며칠",
    "open": false
   },
@@ -22014,8 +22620,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 330,
-   "t1": 339,
+   "t0": 338,
+   "t1": 347,
    "span_label": "여러 해",
    "open": false
   },
@@ -22065,8 +22671,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 339,
-   "t1": 341,
+   "t0": 347,
+   "t1": 349,
    "span_label": "며칠",
    "open": false
   },
@@ -22104,8 +22710,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 341,
-   "t1": 342,
+   "t0": 349,
+   "t1": 350,
    "span_label": "한 순간",
    "open": false
   },
@@ -22144,8 +22750,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 342,
-   "t1": 343,
+   "t0": 350,
+   "t1": 351,
    "span_label": "한 순간",
    "open": false
   },
@@ -22183,8 +22789,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 343,
-   "t1": 347,
+   "t0": 351,
+   "t1": 355,
    "span_label": "한 철",
    "open": false
   },
@@ -22228,8 +22834,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 344,
-   "t1": 346,
+   "t0": 352,
+   "t1": 354,
    "span_label": "며칠",
    "open": false
   },
@@ -22272,8 +22878,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 346,
-   "t1": 357,
+   "t0": 354,
+   "t1": 365,
    "span_label": "여러 해",
    "open": false
   },
@@ -22321,8 +22927,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 347,
-   "t1": 356,
+   "t0": 355,
+   "t1": 364,
    "span_label": "여러 해",
    "open": false
   },
@@ -22383,8 +22989,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 348,
-   "t1": 349,
+   "t0": 356,
+   "t1": 357,
    "span_label": "한 순간",
    "open": false
   },
@@ -22430,8 +23036,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 349,
-   "t1": 353,
+   "t0": 357,
+   "t1": 361,
    "span_label": "한 철",
    "open": false
   },
@@ -22477,8 +23083,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 353,
-   "t1": 357,
+   "t0": 361,
+   "t1": 365,
    "span_label": "한 철",
    "open": false
   },
@@ -22531,8 +23137,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 354,
-   "t1": 356,
+   "t0": 362,
+   "t1": 364,
    "span_label": "며칠",
    "open": false
   },
@@ -22590,8 +23196,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 355,
-   "t1": 357,
+   "t0": 363,
+   "t1": 365,
    "span_label": "며칠",
    "open": false
   },
@@ -22629,8 +23235,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 357,
-   "t1": 359,
+   "t0": 365,
+   "t1": 367,
    "span_label": "며칠",
    "open": false
   },
@@ -22671,8 +23277,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 359,
-   "t1": 363,
+   "t0": 367,
+   "t1": 371,
    "span_label": "한 철",
    "open": false
   },
@@ -22720,8 +23326,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 360,
-   "t1": 362,
+   "t0": 368,
+   "t1": 370,
    "span_label": "며칠",
    "open": false
   },
@@ -22758,8 +23364,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 362,
-   "t1": 363,
+   "t0": 370,
+   "t1": 371,
    "span_label": "한 순간",
    "open": false
   },
@@ -22806,8 +23412,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 363,
-   "t1": 365,
+   "t0": 371,
+   "t1": 373,
    "span_label": "며칠",
    "open": false
   },
@@ -22850,8 +23456,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 365,
-   "t1": 367,
+   "t0": 373,
+   "t1": 375,
    "span_label": "며칠",
    "open": false
   },
@@ -22884,8 +23490,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 367,
-   "t1": 371,
+   "t0": 375,
+   "t1": 379,
    "span_label": "며칠",
    "open": false
   },
@@ -22935,8 +23541,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 368,
-   "t1": 370,
+   "t0": 376,
+   "t1": 378,
    "span_label": "며칠",
    "open": false
   },
@@ -22978,8 +23584,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 370,
-   "t1": 371,
+   "t0": 378,
+   "t1": 379,
    "span_label": "한 순간",
    "open": false
   },
@@ -23026,8 +23632,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 371,
-   "t1": 372,
+   "t0": 379,
+   "t1": 380,
    "span_label": "한 순간",
    "open": false
   },
@@ -23072,8 +23678,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 372,
-   "t1": 373,
+   "t0": 380,
+   "t1": 381,
    "span_label": "한 순간",
    "open": false
   },
@@ -23123,8 +23729,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 373,
-   "t1": 374,
+   "t0": 381,
+   "t1": 382,
    "span_label": "한 순간",
    "open": false
   },
@@ -23182,8 +23788,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 374,
-   "t1": 375,
+   "t0": 382,
+   "t1": 383,
    "span_label": "한 순간",
    "open": false
   },
@@ -23228,8 +23834,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 375,
-   "t1": 376,
+   "t0": 383,
+   "t1": 384,
    "span_label": "한 순간",
    "open": false
   },
@@ -23284,8 +23890,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 376,
-   "t1": 378,
+   "t0": 384,
+   "t1": 386,
    "span_label": "며칠",
    "open": false
   },
@@ -23330,8 +23936,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 1장 「하늘에서 떨어진 별」. troy-falls 는 TRO 소유.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 377,
-   "t1": 378,
+   "t0": 385,
+   "t1": 386,
    "span_label": "한 순간",
    "open": false
   },
@@ -23390,8 +23996,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 1장 「트로이를 떠나다」. mt-ida-troad 는 TRO 소유.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 378,
-   "t1": 380,
+   "t0": 386,
+   "t1": 388,
    "span_label": "며칠",
    "open": false
   },
@@ -23424,8 +24030,8 @@
    "note": "thrake 는 THE 소유. 폴리도로스(프리아모스의 아들)는 등록부에 없어 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 380,
-   "t1": 384,
+   "t0": 388,
+   "t1": 392,
    "span_label": "한 철",
    "open": false
   },
@@ -23463,8 +24069,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 1장 「아폴론의 뜻」. 아니오스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 384,
-   "t1": 386,
+   "t0": 392,
+   "t1": 394,
    "span_label": "며칠",
    "open": false
   },
@@ -23504,8 +24110,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 1장 「옛 조상의 땅」. kassandra 는 TRO 소유라 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 386,
-   "t1": 390,
+   "t0": 394,
+   "t1": 398,
    "span_label": "한 철",
    "open": false,
    "threads": [
@@ -23550,8 +24156,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 2장 「하르피아이의 저주」. harpyiai(group) 는 THE 소유. 켈라이노는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 390,
-   "t1": 392,
+   "t0": 398,
+   "t1": 400,
    "span_label": "며칠",
    "open": false
   },
@@ -23596,8 +24202,8 @@
    "note": "helenos·andromache 는 TRO 소유. 아스티아낙스(TRO 의 astyanax)는 이름만. 스킬라·카리브디스는 ODY 소유라 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 392,
-   "t1": 394,
+   "t0": 400,
+   "t1": 402,
    "span_label": "며칠",
    "open": false
   },
@@ -23643,8 +24249,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 2장 「거인의 섬」. polyphemos 는 ODY 소유. ODY 의 kyklopes-land 는 mythic 이고, 여기서는 베르길리우스가 말한 에트나(real)를 쓴다. odysseus 는 TRO 소유라 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 394,
-   "t1": 396,
+   "t0": 402,
+   "t1": 404,
    "span_label": "며칠",
    "open": false
   },
@@ -23677,8 +24283,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 2장 「불행의 파도」. sikelia 는 ATH 소유. 드레파눔(지금의 트라파니)과 아케스테스 왕은 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 396,
-   "t1": 397,
+   "t0": 404,
+   "t1": 405,
    "span_label": "한 순간",
    "open": false
   },
@@ -23726,8 +24332,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 2장 「불행의 파도」. aiolos-anemon 은 ODY 소유. 포세이돈의 로마명 넵투누스는 여기서 쓰지 않았다(한 사건에 로마명 한 줄만).",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 397,
-   "t1": 399,
+   "t0": 405,
+   "t1": 407,
    "span_label": "며칠",
    "open": false
   },
@@ -23775,8 +24381,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 3장 「여왕의 도시 카르타고」. 에로스(쿠피도)는 아프로디테의 아들로, 기존 eros-primordial 과 다른 존재라 cast 에 넣지 않고 이름만 부른다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 399,
-   "t1": 401,
+   "t0": 407,
+   "t1": 409,
    "span_label": "며칠",
    "open": false
   },
@@ -23821,8 +24427,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 3장 「사랑에 빠진 디도」",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 400,
-   "t1": 404,
+   "t0": 408,
+   "t1": 412,
    "span_label": "한 철",
    "open": false
   },
@@ -23867,8 +24473,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 3장 「운명을 향해」. 이아르바스(디도에게 청혼했다가 거절당하고 제우스에게 기도한 이웃 왕, 4.196-218)는 등록부에 없어 이름만 부른다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 401,
-   "t1": 403,
+   "t0": 409,
+   "t1": 411,
    "span_label": "며칠",
    "open": false
   },
@@ -23908,8 +24514,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 3장 「운명을 향해」. 방법(칼)은 쓰지 않는다. 죽기 전 자손의 복수를 빈 말(4.607-629)은 본문에서 뺐다. 이리스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 402,
-   "t1": 403,
+   "t0": 410,
+   "t1": 411,
    "span_label": "한 순간",
    "open": false
   },
@@ -23954,8 +24560,8 @@
    "note": "잠의 신(솜누스/힙노스)은 등록부에 없어 이름만. 5권의 경기와 배가 불탄 일(5.604-699)은 사건으로 만들지 않고 한 줄로만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 403,
-   "t1": 404,
+   "t0": 411,
+   "t1": 412,
    "span_label": "한 순간",
    "open": false
   },
@@ -24007,8 +24613,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 4장 「시빌레의 신전」. 신전 문의 다이달로스 조각(6.14-33)은 ATH 의 이야기라 뺐다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 404,
-   "t1": 406,
+   "t0": 412,
+   "t1": 414,
    "span_label": "며칠",
    "open": false
   },
@@ -24065,8 +24671,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 4장 「엘리시온으로」. kerberos 는 HER 소유. 카론·데이포보스(TRO 가 만들 수 있음)·로물루스(ROM)·카이사르는 이름만. 상아 문(6.893-898)은 거짓 꿈이 나오는 문이다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 406,
-   "t1": 408,
+   "t0": 414,
+   "t1": 416,
    "span_label": "며칠",
    "open": false
   },
@@ -24121,8 +24727,8 @@
    "note": "faunus 는 ROM 소유. 라티누스의 도시 라우렌툼은 위치가 다투어져 place 로 만들지 않고 강어귀(tiber)를 썼다. 유모 카이에타(7.1-4)는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 408,
-   "t1": 410,
+   "t0": 416,
+   "t1": 418,
    "span_label": "며칠",
    "open": false
   },
@@ -24178,8 +24784,8 @@
    "note": "erinyes(group) 는 ODY 소유. 알렉토는 그 가운데 하나라 이름만 부르고 cast 는 erinyes 로 넣었다. 사슴을 기른 실비아와 티레우스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 409,
-   "t1": 411,
+   "t0": 417,
+   "t1": 419,
    "span_label": "며칠",
    "open": false
   },
@@ -24226,8 +24832,8 @@
    "note": "rome 은 ROM 소유. 헤라클레스와 카쿠스 이야기(8.184-279)는 ROM 이 쓴다. 강의 신 티베리누스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 410,
-   "t1": 412,
+   "t0": 418,
+   "t1": 420,
    "span_label": "며칠",
    "open": false
   },
@@ -24271,8 +24877,8 @@
    "note": "두 사람의 머리를 창에 꽂아 보인 장면(9.465-467)은 뺐다. 적장 볼켄스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 412,
-   "t1": 413,
+   "t0": 420,
+   "t1": 421,
    "span_label": "한 순간",
    "open": false
   },
@@ -24320,8 +24926,8 @@
    "note": "herakles 는 HER 소유(이때는 이미 신). 시신을 짓밟은 장면(10.495)은 뺐다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 413,
-   "t1": 414,
+   "t0": 421,
+   "t1": 422,
    "span_label": "한 순간",
    "open": false
   },
@@ -24364,8 +24970,8 @@
    "note": "아룬스·오피스·클로레우스·메타부스는 등록부에 없어 이름만. 아마존(HER 의 amazones)도 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 414,
-   "t1": 415,
+   "t0": 422,
+   "t1": 423,
    "span_label": "한 순간",
    "open": false
   },
@@ -24432,8 +25038,8 @@
    "note": "처음 읽는 그리스 로마 신화 15권에는 없다(책은 6권 저승에서 끝난다). 아마타의 죽음은 방법 없이 사실만. 유투르나는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 415,
-   "t1": 416,
+   "t0": 423,
+   "t1": 424,
    "span_label": "한 순간",
    "open": false
   },
@@ -24479,8 +25085,8 @@
    "note": "처음 읽는 그리스 로마 신화에는 없다. ROM 의 alba-longa-founded 가 이 사건을 after 로 붙잡는다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 416,
-   "t1": 425,
+   "t0": 424,
+   "t1": 433,
    "span_label": "여러 해",
    "open": false
   },
@@ -24536,8 +25142,8 @@
    "note": "리비우스는 '무덤'이라 쓰고 신 이름으로 불렀다고 한다. 오비디우스는 씻겨 신이 된다. 둘을 함께 적었다. 아스카니오스가 이어 다스리는 것은 ROM 의 era 8. 강의 신 누미키우스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 425,
-   "t1": 426,
+   "t0": 433,
+   "t1": 434,
    "span_label": "한 순간",
    "open": false
   },
@@ -24571,8 +25177,8 @@
     "virgil.aeneid 7.187-191"
    ],
    "_file": "data/events/era8-rome.toml",
-   "t0": 426,
-   "t1": 427,
+   "t0": 434,
+   "t1": 435,
    "span_label": "한 순간",
    "open": false
   },
@@ -24602,8 +25208,8 @@
     "ovid.metamorphoses 14.397-434"
    ],
    "_file": "data/events/era8-rome.toml",
-   "t0": 427,
-   "t1": 429,
+   "t0": 435,
+   "t1": 437,
    "span_label": "며칠",
    "open": false
   },
@@ -24637,8 +25243,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 429,
-   "t1": 438,
+   "t0": 437,
+   "t1": 446,
    "span_label": "여러 해",
    "open": false
   },
@@ -24672,8 +25278,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 438,
-   "t1": 462,
+   "t0": 446,
+   "t1": 470,
    "span_label": "한 세대 넘게",
    "open": false
   },
@@ -24703,8 +25309,8 @@
     "ovid.metamorphoses 14.623-771"
    ],
    "_file": "data/events/era8-rome.toml",
-   "t0": 439,
-   "t1": 441,
+   "t0": 447,
+   "t1": 449,
    "span_label": "며칠",
    "open": false
   },
@@ -24745,8 +25351,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 462,
-   "t1": 471,
+   "t0": 470,
+   "t1": 479,
    "span_label": "여러 해",
    "open": false
   },
@@ -24799,8 +25405,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 463,
-   "t1": 464,
+   "t0": 471,
+   "t1": 472,
    "span_label": "한 순간",
    "open": false
   },
@@ -24855,8 +25461,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 464,
-   "t1": 466,
+   "t0": 472,
+   "t1": 474,
    "span_label": "며칠",
    "open": false
   },
@@ -24903,8 +25509,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 465,
-   "t1": 467,
+   "t0": 473,
+   "t1": 475,
    "span_label": "며칠",
    "open": false
   },
@@ -24944,8 +25550,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 466,
-   "t1": 467,
+   "t0": 474,
+   "t1": 475,
    "span_label": "한 순간",
    "open": false
   },
@@ -24977,8 +25583,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 467,
-   "t1": 468,
+   "t0": 475,
+   "t1": 476,
    "span_label": "한 순간",
    "open": false
   },
@@ -25016,8 +25622,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 468,
-   "t1": 469,
+   "t0": 476,
+   "t1": 477,
    "span_label": "한 순간",
    "open": false
   },
@@ -25050,8 +25656,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 469,
-   "t1": 473,
+   "t0": 477,
+   "t1": 481,
    "span_label": "한 철",
    "open": false
   },
@@ -25080,8 +25686,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 470,
-   "t1": 479,
+   "t0": 478,
+   "t1": 487,
    "span_label": "여러 해",
    "open": false
   },
@@ -25114,8 +25720,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 471,
-   "t1": 472,
+   "t0": 479,
+   "t1": 480,
    "span_label": "한 순간",
    "open": false
   },
@@ -25155,8 +25761,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 472,
-   "t1": 476,
+   "t0": 480,
+   "t1": 484,
    "span_label": "한 철",
    "open": false
   },
@@ -25200,8 +25806,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 476,
-   "t1": 477,
+   "t0": 484,
+   "t1": 485,
    "span_label": "한 순간",
    "open": false
   },
@@ -25245,8 +25851,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 477,
-   "t1": 478,
+   "t0": 485,
+   "t1": 486,
    "span_label": "한 순간",
    "open": false
   },
@@ -25286,8 +25892,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 478,
-   "t1": 480,
+   "t0": 486,
+   "t1": 488,
    "span_label": "며칠",
    "open": false
   },
@@ -25329,8 +25935,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 479,
-   "t1": 480,
+   "t0": 487,
+   "t1": 488,
    "span_label": "한 순간",
    "open": false
   },
@@ -25361,8 +25967,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 480,
-   "t1": 481,
+   "t0": 488,
+   "t1": 489,
    "span_label": "한 순간",
    "open": false
   },
@@ -25411,8 +26017,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 481,
-   "t1": 482,
+   "t0": 489,
+   "t1": 490,
    "span_label": "한 순간",
    "open": false
   },
@@ -25449,8 +26055,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 482,
-   "t1": 483,
+   "t0": 490,
+   "t1": 491,
    "span_label": "한 순간",
    "open": false
   },
@@ -25484,8 +26090,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 483,
-   "t1": 485,
+   "t0": 491,
+   "t1": 493,
    "span_label": "며칠",
    "open": false
   },
@@ -25519,8 +26125,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 484,
-   "t1": 493,
+   "t0": 492,
+   "t1": 501,
    "span_label": "여러 해",
    "open": false
   },
@@ -25561,8 +26167,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 485,
-   "t1": 494,
+   "t0": 493,
+   "t1": 502,
    "span_label": "여러 해",
    "open": false
   },
@@ -25596,8 +26202,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 486,
-   "t1": 495,
+   "t0": 494,
+   "t1": 503,
    "span_label": "여러 해",
    "open": false
   },
@@ -25640,8 +26246,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 495,
-   "t1": 497,
+   "t0": 503,
+   "t1": 505,
    "span_label": "며칠",
    "open": false
   }
@@ -25956,7 +26562,8 @@
    ],
    "_file": "data/places/cosmos.toml",
    "events": [
-    "andromeda-rescued"
+    "andromeda-rescued",
+    "phineus-turned-to-stone"
    ]
   },
   {
@@ -26149,6 +26756,7 @@
    ],
    "_file": "data/places/cosmos.toml",
    "events": [
+    "atlas-turned-to-mountain",
     "hesperides-apples"
    ]
   },
@@ -26243,7 +26851,6 @@
    "_file": "data/places/real.toml",
    "events": [
     "stones-to-people",
-    "akrisios-oracle",
     "kadmos-follows-cow",
     "laios-warned",
     "oidipous-asks-delphi",
@@ -26755,6 +27362,7 @@
    ],
    "_file": "data/places/real.toml",
    "events": [
+    "perseus-born",
     "danae-set-adrift",
     "brothers-quarrel"
    ]
@@ -26886,6 +27494,7 @@
     "black-sail-departure",
     "aigeus-dies",
     "theseus-becomes-king",
+    "eurystheus-dies",
     "orestes-trial",
     "orestes-tauris"
    ]
@@ -27756,6 +28365,7 @@
    ],
    "_file": "data/places/era5-herakles.toml",
    "events": [
+    "mycenae-founded",
     "proitos-sends-bellerophon",
     "iphitos-killed"
    ]
@@ -27987,24 +28597,29 @@
    "name_ko": "페르세우스의 여행",
    "era": 4,
    "oneliner": "피하려 한 말이 그대로 이루어지는 이야기.",
-   "body": "아크리시오스가 델포이에서 들은 말 하나로 시작한다.\n그 말을 피하려고 한 모든 일이 오히려 그 말을 이루는 쪽으로 이어진다.\n페르세우스는 힘이 아니라 빌린 도구와 거울로 이긴다.\n마지막에 원반 하나가 빗나가면서 처음의 말이 이루어진다.\n",
+   "body": "아크리시오스가 신에게서 들은 말 하나로 시작한다.\n그 말을 피하려고 한 모든 일이 오히려 그 말을 이루는 쪽으로 이어진다.\n페르세우스는 힘이 아니라 빌린 도구와 거울로 이긴다.\n마지막에 원반 하나가 빗나가면서 처음의 말이 이루어진다.\n",
    "events": [
     "akrisios-oracle",
+    "perseus-born",
     "danae-set-adrift",
     "polydektes-demands",
     "graiai-road",
     "medusa-slain",
+    "atlas-turned-to-mountain",
     "andromeda-rescued",
+    "medousa-cursed",
+    "phineus-turned-to-stone",
     "return-to-seriphos",
     "akrisios-dies",
     "mycenae-founded"
    ],
+   "note": "medousa-cursed 는 시간축으로는 맨 앞(seq 5)이지만 이야기 순서로는 안드로메다 뒤의 잔치에서 페르세우스가 들려주는 회상이다(오비디우스 4.790-4.803). 묶음은 이야기 순서라 회상 자리에 둔다(데이터-모델 §7).",
    "sources": [
     "apollodorus.library 2.4.1-2.4.5"
    ],
    "_file": "data/arcs.toml",
    "t0": 51,
-   "t1": 69
+   "t1": 73
   },
   {
    "id": "europa-minos",
@@ -28027,8 +28642,8 @@
     "ovid.metamorphoses 8.152-8.168"
    ],
    "_file": "data/arcs.toml",
-   "t0": 61,
-   "t1": 190
+   "t0": 65,
+   "t1": 194
   },
   {
    "id": "bellerophon-flight",
@@ -28052,8 +28667,8 @@
     "hesiod.theogony 319-325"
    ],
    "_file": "data/arcs.toml",
-   "t0": 68,
-   "t1": 81
+   "t0": 72,
+   "t1": 85
   },
   {
    "id": "kadmos-thebes",
@@ -28074,8 +28689,8 @@
     "ovid.metamorphoses 3.1-252"
    ],
    "_file": "data/arcs.toml",
-   "t0": 73,
-   "t1": 92
+   "t0": 77,
+   "t1": 96
   },
   {
    "id": "tantalos-house",
@@ -28095,8 +28710,8 @@
     "homer.odyssey 11.582-592"
    ],
    "_file": "data/arcs.toml",
-   "t0": 87,
-   "t1": 243
+   "t0": 91,
+   "t1": 251
   },
   {
    "id": "theseus-journey",
@@ -28132,8 +28747,8 @@
     "pausanias.greece 1.27.7-1.27.10"
    ],
    "_file": "data/arcs.toml",
-   "t0": 182,
-   "t1": 222
+   "t0": 186,
+   "t1": 226
   },
   {
    "id": "daidalos-ikaros",
@@ -28158,8 +28773,8 @@
     "pausanias.greece 7.4.6"
    ],
    "_file": "data/arcs.toml",
-   "t0": 64,
-   "t1": 222
+   "t0": 68,
+   "t1": 226
   },
   {
    "id": "herakles-early",
@@ -28184,8 +28799,8 @@
     "homer.iliad 19.95-133"
    ],
    "_file": "data/arcs.toml",
-   "t0": 129,
-   "t1": 147
+   "t0": 133,
+   "t1": 151
   },
   {
    "id": "herakles-labors",
@@ -28218,8 +28833,8 @@
     "hesiod.theogony 521-534"
    ],
    "_file": "data/arcs.toml",
-   "t0": 147,
-   "t1": 182
+   "t0": 151,
+   "t1": 186
   },
   {
    "id": "herakles-last",
@@ -28238,7 +28853,8 @@
     "oichalia-taken",
     "poisoned-robe",
     "herakles-pyre",
-    "herakles-apotheosis"
+    "herakles-apotheosis",
+    "eurystheus-dies"
    ],
    "note": "참고: 처음 읽는 그리스 로마 신화 8권 3장·4장",
    "sources": [
@@ -28246,8 +28862,8 @@
     "ovid.metamorphoses 9.1-272"
    ],
    "_file": "data/arcs.toml",
-   "t0": 218,
-   "t1": 239
+   "t0": 222,
+   "t1": 247
   },
   {
    "id": "oidipous-fate",
@@ -28269,8 +28885,8 @@
     "homer.odyssey 11.271-280"
    ],
    "_file": "data/arcs.toml",
-   "t0": 93,
-   "t1": 108
+   "t0": 97,
+   "t1": 112
   },
   {
    "id": "thebes-war",
@@ -28289,8 +28905,8 @@
     "pausanias.greece 9.25"
    ],
    "_file": "data/arcs.toml",
-   "t0": 214,
-   "t1": 223
+   "t0": 218,
+   "t1": 227
   },
   {
    "id": "argo-voyage",
@@ -28320,8 +28936,8 @@
     "ovid.metamorphoses 7.1-158"
    ],
    "_file": "data/arcs.toml",
-   "t0": 86,
-   "t1": 118
+   "t0": 90,
+   "t1": 122
   },
   {
    "id": "medeia-revenge",
@@ -28340,8 +28956,8 @@
     "pausanias.greece 2.3"
    ],
    "_file": "data/arcs.toml",
-   "t0": 118,
-   "t1": 131
+   "t0": 122,
+   "t1": 135
   },
   {
    "id": "orpheus-eurydike",
@@ -28359,8 +28975,8 @@
     "pausanias.greece 9.30"
    ],
    "_file": "data/arcs.toml",
-   "t0": 124,
-   "t1": 127
+   "t0": 128,
+   "t1": 131
   },
   {
    "id": "kalydon-hunt",
@@ -28378,8 +28994,8 @@
     "homer.iliad 9.529-599"
    ],
    "_file": "data/arcs.toml",
-   "t0": 126,
-   "t1": 128
+   "t0": 130,
+   "t1": 132
   },
   {
    "id": "dioskouroi",
@@ -28396,8 +29012,8 @@
     "homeric.hymns dioscuri 1-19"
    ],
    "_file": "data/arcs.toml",
-   "t0": 128,
-   "t1": 129
+   "t0": 132,
+   "t1": 133
   },
   {
    "id": "road-to-troy",
@@ -28431,8 +29047,8 @@
     "apollodorus.library E.3.1-E.3.35"
    ],
    "_file": "data/arcs.toml",
-   "t0": 240,
-   "t1": 274
+   "t0": 248,
+   "t1": 282
   },
   {
    "id": "wrath-of-achilleus",
@@ -28463,8 +29079,8 @@
     "apollodorus.library E.4.1-E.4.7"
    ],
    "_file": "data/arcs.toml",
-   "t0": 274,
-   "t1": 293
+   "t0": 282,
+   "t1": 301
   },
   {
    "id": "fall-of-troy",
@@ -28489,8 +29105,8 @@
     "homer.odyssey 8.492-520"
    ],
    "_file": "data/arcs.toml",
-   "t0": 293,
-   "t1": 313
+   "t0": 301,
+   "t1": 321
   },
   {
    "id": "aineias-voyage",
@@ -28524,8 +29140,8 @@
    ],
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 「트로이의 마지막 불꽃」 1~4장. 이야기 순서는 아이네이아스가 겪은 순서(2·3권 → 1권 → 4~6권)로 두었다.",
    "_file": "data/arcs.toml",
-   "t0": 377,
-   "t1": 408
+   "t0": 385,
+   "t1": 416
   },
   {
    "id": "aineias-latium",
@@ -28551,8 +29167,8 @@
    ],
    "note": "처음 읽는 그리스 로마 신화에는 없는 부분(책은 6권에서 끝난다). era 8 의 alba-longa-founded 로 이어진다.",
    "_file": "data/arcs.toml",
-   "t0": 408,
-   "t1": 426
+   "t0": 416,
+   "t1": 434
   },
   {
    "id": "oresteia",
@@ -28573,8 +29189,8 @@
     "pausanias.greece 1.28"
    ],
    "_file": "data/arcs.toml",
-   "t0": 313,
-   "t1": 357
+   "t0": 321,
+   "t1": 365
   },
   {
    "id": "odysseus-wanderings",
@@ -28607,8 +29223,8 @@
     "apollodorus.library E.7.1-E.7.25"
    ],
    "_file": "data/arcs.toml",
-   "t0": 315,
-   "t1": 365
+   "t0": 323,
+   "t1": 373
   },
   {
    "id": "telemachos-journey",
@@ -28628,8 +29244,8 @@
     "homer.odyssey 15.1-557"
    ],
    "_file": "data/arcs.toml",
-   "t0": 347,
-   "t1": 370
+   "t0": 355,
+   "t1": 378
   },
   {
    "id": "odysseus-homecoming",
@@ -28653,8 +29269,8 @@
     "apollodorus.library E.7.26-E.7.33"
    ],
    "_file": "data/arcs.toml",
-   "t0": 365,
-   "t1": 378
+   "t0": 373,
+   "t1": 386
   },
   {
    "id": "alba-to-rome",
@@ -28681,8 +29297,8 @@
     "virgil.aeneid 1.267-277"
    ],
    "_file": "data/arcs.toml",
-   "t0": 429,
-   "t1": 473
+   "t0": 437,
+   "t1": 481
   },
   {
    "id": "romulus-reign",
@@ -28708,8 +29324,8 @@
     "ovid.metamorphoses 14.775-851"
    ],
    "_file": "data/arcs.toml",
-   "t0": 470,
-   "t1": 483
+   "t0": 478,
+   "t1": 491
   },
   {
    "id": "numa-peace",
@@ -28730,8 +29346,8 @@
     "ovid.metamorphoses 15.479-551"
    ],
    "_file": "data/arcs.toml",
-   "t0": 483,
-   "t1": 497
+   "t0": 491,
+   "t1": 505
   }
  ],
  "threads": [
@@ -28844,7 +29460,7 @@
      "unsure": true
     },
     {
-     "event": "danae-set-adrift",
+     "event": "perseus-born",
      "label": "다나에 → 페르세우스",
      "unsure": false
     },
@@ -28882,7 +29498,7 @@
    ],
    "_file": "data/threads.toml",
    "t0": 35,
-   "t1": 241,
+   "t1": 249,
    "eras": [
     2,
     4,
@@ -28956,8 +29572,8 @@
     "homer.odyssey 11.421-423"
    ],
    "_file": "data/threads.toml",
-   "t0": 245,
-   "t1": 390,
+   "t0": 253,
+   "t1": 398,
    "eras": [
     5,
     6,
@@ -29018,8 +29634,88 @@
     "hyginus.fabulae 44"
    ],
    "_file": "data/threads.toml",
-   "t0": 64,
-   "t1": 222,
+   "t0": 68,
+   "t1": 226,
+   "eras": [
+    4,
+    5
+   ]
+  },
+  {
+   "id": "perseus-house",
+   "name_ko": "페르세우스의 집안, 미케네의 왕들",
+   "aka": [
+    "페르세우스 가문",
+    "미케네 왕가",
+    "페르세이다이"
+   ],
+   "oneliner": "황금 비에서 태어난 영웅의 집안이 미케네를 세우고, 헤라클레스를 낳고, 왕 자리를 잃는다.",
+   "body": "페르세우스는 미케네에 성을 쌓고 아들 다섯과 딸 하나를 두었다.\n손자 암피트리온은 쫓겨나 테베로 갔고, 그 집에서 헤라클레스가 태어났다.\n다른 손자 에우리스테우스가 헤라의 손으로 먼저 태어나 미케네의 왕이 되었다.\n그 왕이 헤라클레스에게 열두 가지 일을 시켰다.\n헤라클레스가 신이 된 뒤 에우리스테우스가 죽자, 미케네는 펠롭스의 집안으로 넘어갔다.\n",
+   "fun": "헤라클레스는 아버지 쪽(알카이오스)으로도 어머니 쪽(엘렉트리온)으로도 페르세우스의 증손이다. 페르세우스의 딸 고르고포네 쪽으로는 클리타임네스트라가 나온다.",
+   "sensitivity": "soften",
+   "steps": [
+    {
+     "event": "akrisios-oracle",
+     "label": "딸의 아들이 너를 죽인다",
+     "unsure": false
+    },
+    {
+     "event": "perseus-born",
+     "label": "황금 비 → 페르세우스",
+     "unsure": false
+    },
+    {
+     "event": "akrisios-dies",
+     "label": "원반이 할아버지를 맞히다",
+     "unsure": false
+    },
+    {
+     "event": "mycenae-founded",
+     "label": "티린스를 받고 미케네에 성을 쌓다",
+     "unsure": false
+    },
+    {
+     "event": "amphitryon-to-thebes",
+     "label": "손자 암피트리온이 미케네에서 쫓겨나다",
+     "unsure": false
+    },
+    {
+     "event": "hera-delays-birth",
+     "label": "증손 에우리스테우스가 먼저 태어나 왕이 되다",
+     "unsure": false
+    },
+    {
+     "event": "herakles-born",
+     "label": "증손 헤라클레스가 테베에서 태어나다",
+     "unsure": false
+    },
+    {
+     "event": "herakles-delphi-oracle",
+     "label": "헤라클레스가 에우리스테우스를 섬기게 되다",
+     "unsure": false
+    },
+    {
+     "event": "eurystheus-dies",
+     "label": "에우리스테우스가 헤라클레스의 아이들에게 죽다",
+     "unsure": false
+    },
+    {
+     "event": "atreus-thyestes-feud",
+     "label": "미케네가 펠롭스의 집안으로 넘어가다",
+     "unsure": false
+    }
+   ],
+   "note": "묶음 다섯(perseus-journey, herakles-early, herakles-labors, herakles-last, tantalos-house)을 가로지른다. 안드로메다 사건에 after = atlas 를 둔 것은 오비디우스 4.663-4.665(아틀라스의 땅에서 아침을 맞고 에티오피아로 날아간다)에 따른 것이다. 아르고스의 왕 자리(메가펜테스 → 뒷날 아드라스토스·디오메데스)는 따로 잇지 않았다.",
+   "sources": [
+    "apollodorus.library 2.4.1-2.4.8",
+    "apollodorus.library 2.4.12",
+    "apollodorus.library 2.8.1",
+    "apollodorus.library E.2.11",
+    "homer.iliad 19.95-133"
+   ],
+   "_file": "data/threads.toml",
+   "t0": 52,
+   "t1": 251,
    "eras": [
     4,
     5

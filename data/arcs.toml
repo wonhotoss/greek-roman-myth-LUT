@@ -72,22 +72,27 @@ name_ko = "페르세우스의 여행"
 era = 4
 oneliner = "피하려 한 말이 그대로 이루어지는 이야기."
 body = """
-아크리시오스가 델포이에서 들은 말 하나로 시작한다.
+아크리시오스가 신에게서 들은 말 하나로 시작한다.
 그 말을 피하려고 한 모든 일이 오히려 그 말을 이루는 쪽으로 이어진다.
 페르세우스는 힘이 아니라 빌린 도구와 거울로 이긴다.
 마지막에 원반 하나가 빗나가면서 처음의 말이 이루어진다.
 """
 events = [
   "akrisios-oracle",
+  "perseus-born",
   "danae-set-adrift",
   "polydektes-demands",
   "graiai-road",
   "medusa-slain",
+  "atlas-turned-to-mountain",
   "andromeda-rescued",
+  "medousa-cursed",
+  "phineus-turned-to-stone",
   "return-to-seriphos",
   "akrisios-dies",
   "mycenae-founded",
 ]
+note = "medousa-cursed 는 시간축으로는 맨 앞(seq 5)이지만 이야기 순서로는 안드로메다 뒤의 잔치에서 페르세우스가 들려주는 회상이다(오비디우스 4.790-4.803). 묶음은 이야기 순서라 회상 자리에 둔다(데이터-모델 §7)."
 sources = ["apollodorus.library 2.4.1-2.4.5"]
 
 # ---- AEN ----
@@ -340,6 +345,7 @@ events = [
   "poisoned-robe",
   "herakles-pyre",
   "herakles-apotheosis",
+  "eurystheus-dies",
 ]
 note = "참고: 처음 읽는 그리스 로마 신화 8권 3장·4장"
 sources = ["apollodorus.library 2.6.1-2.7.7", "ovid.metamorphoses 9.1-272"]

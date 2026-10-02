@@ -52,7 +52,7 @@ steps = [
   { event = "leto-twins-born", label = "레토 → 아르테미스와 아폴론" },
   { event = "hermes-born", label = "마이아 → 헤르메스" },
   { event = "persephone-taken", label = "데메테르 → 페르세포네" },
-  { event = "danae-set-adrift", label = "다나에 → 페르세우스" },
+  { event = "perseus-born", label = "다나에 → 페르세우스" },
   { event = "europa-carried-to-crete", label = "에우로페 → 미노스" },
   { event = "semele-dionysos-born", label = "세멜레 → 디오니소스" },
   { event = "zeus-visits-alkmene", label = "알크메네를 찾아가다" },
@@ -112,3 +112,32 @@ steps = [
 ]
 note = "묶음 셋(daidalos-ikaros, europa-minos, theseus-journey)을 가로지른다. 마지막 두 단계의 앞뒤는 원전이 말하지 않는다 — 빌드가 unsure 를 붙인다. 디오도로스 4.76-4.79 의 시켈리아·사르디니아 이후 이야기는 원전 코퍼스에 없어 넣지 않았다."
 sources = ["apollodorus.library 3.15.8", "apollodorus.library 3.1.4", "apollodorus.library E.1.8-E.1.15", "apollodorus.library 2.6.3", "ovid.metamorphoses 8.159-8.259", "hyginus.fabulae 39-40", "hyginus.fabulae 44"]
+
+[[thread]]
+id = "perseus-house"
+name_ko = "페르세우스의 집안, 미케네의 왕들"
+aka = ["페르세우스 가문", "미케네 왕가", "페르세이다이"]
+oneliner = "황금 비에서 태어난 영웅의 집안이 미케네를 세우고, 헤라클레스를 낳고, 왕 자리를 잃는다."
+body = """
+페르세우스는 미케네에 성을 쌓고 아들 다섯과 딸 하나를 두었다.
+손자 암피트리온은 쫓겨나 테베로 갔고, 그 집에서 헤라클레스가 태어났다.
+다른 손자 에우리스테우스가 헤라의 손으로 먼저 태어나 미케네의 왕이 되었다.
+그 왕이 헤라클레스에게 열두 가지 일을 시켰다.
+헤라클레스가 신이 된 뒤 에우리스테우스가 죽자, 미케네는 펠롭스의 집안으로 넘어갔다.
+"""
+fun = "헤라클레스는 아버지 쪽(알카이오스)으로도 어머니 쪽(엘렉트리온)으로도 페르세우스의 증손이다. 페르세우스의 딸 고르고포네 쪽으로는 클리타임네스트라가 나온다."
+sensitivity = "soften"
+steps = [
+  { event = "akrisios-oracle", label = "딸의 아들이 너를 죽인다" },
+  { event = "perseus-born", label = "황금 비 → 페르세우스" },
+  { event = "akrisios-dies", label = "원반이 할아버지를 맞히다" },
+  { event = "mycenae-founded", label = "티린스를 받고 미케네에 성을 쌓다" },
+  { event = "amphitryon-to-thebes", label = "손자 암피트리온이 미케네에서 쫓겨나다" },
+  { event = "hera-delays-birth", label = "증손 에우리스테우스가 먼저 태어나 왕이 되다" },
+  { event = "herakles-born", label = "증손 헤라클레스가 테베에서 태어나다" },
+  { event = "herakles-delphi-oracle", label = "헤라클레스가 에우리스테우스를 섬기게 되다" },
+  { event = "eurystheus-dies", label = "에우리스테우스가 헤라클레스의 아이들에게 죽다" },
+  { event = "atreus-thyestes-feud", label = "미케네가 펠롭스의 집안으로 넘어가다" },
+]
+note = "묶음 다섯(perseus-journey, herakles-early, herakles-labors, herakles-last, tantalos-house)을 가로지른다. 안드로메다 사건에 after = atlas 를 둔 것은 오비디우스 4.663-4.665(아틀라스의 땅에서 아침을 맞고 에티오피아로 날아간다)에 따른 것이다. 아르고스의 왕 자리(메가펜테스 → 뒷날 아드라스토스·디오메데스)는 따로 잇지 않았다."
+sources = ["apollodorus.library 2.4.1-2.4.8", "apollodorus.library 2.4.12", "apollodorus.library 2.8.1", "apollodorus.library E.2.11", "homer.iliad 19.95-133"]
