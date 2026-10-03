@@ -352,7 +352,7 @@ name_ko = "안드로게오스가 죽고 아테네가 조공을 바치다"
 era = 5
 seq = 720
 span = "years"
-after = ["minotauros-born-labyrinth", "aigeus-troizen"]
+after = ["minotauros-born-labyrinth", "aigeus-troizen", "cretan-bull-captured"]
 places = ["athens", "marathon", "knossos"]
 cast = [
   { figure = "minos", role = "주인공" },
@@ -365,6 +365,7 @@ oneliner = "미노스의 아들이 죽자 아테네는 해마다 열네 명을 �
 body = """
 미노스의 아들 안드로게오스가 아테네의 경기에 나가 모두 이겼다.
 아이게우스는 그를 마라톤의 황소와 싸우게 보냈고, 그는 죽었다.
+헤라클레스가 크레타에서 끌고 왔다가 놓아준 그 황소였다.
 미노스는 배를 이끌고 와 아테네와 싸우며 제우스에게 벌을 빌었다.
 아테네에 굶주림과 병이 돌았다.
 아테네는 신의 말대로 해마다 소년 일곱과 소녀 일곱을 크레타로 보냈다.
@@ -461,7 +462,7 @@ name_ko = "메데이아의 계략과 마라톤의 황소"
 era = 5
 seq = 760
 span = "days"
-after = ["theseus-road-attica"]
+after = ["theseus-road-attica", "cretan-bull-captured", "androgeos-dies-tribute"]
 places = ["athens", "marathon"]
 cast = [
   { figure = "theseus", role = "주인공" },
@@ -474,9 +475,10 @@ body = """
 그때 아이게우스의 아내는 콜키스에서 온 메데이아였다.
 메데이아는 테세우스가 누구인지 알아채고 왕에게 위험한 자라고 속였다.
 아이게우스는 자기 아들인 줄 모르고 그를 마라톤의 황소에게 보냈다.
+헤라클레스가 크레타에서 끌고 온 뒤로 그 들판을 휩쓸던 황소였다.
 테세우스는 황소를 잡았다.
 """
-note = "참고: 처음 읽는 그리스 로마 신화 9권 4장 「메데이아의 계략」. medeia 는 THE 소유."
+note = "참고: 처음 읽는 그리스 로마 신화 9권 4장 「메데이아의 계략」. medeia 는 THE 소유. after 에 androgeos-dies-tribute 를 둔 것은 E.1.7 — 테세우스가 아테네에 왔을 때 조공은 이미 세 번째였다. 인과가 아니라 존재 조건(불확실-목록 D-2)."
 sources = ["apollodorus.library E.1.5-E.1.6", "ovid.metamorphoses 7.404-7.406", "pausanias.greece 1.27.10"]
 
 [[event.variants]]

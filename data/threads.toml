@@ -141,3 +141,25 @@ steps = [
 ]
 note = "묶음 다섯(perseus-journey, herakles-early, herakles-labors, herakles-last, tantalos-house)을 가로지른다. 안드로메다 사건에 after = atlas 를 둔 것은 오비디우스 4.663-4.665(아틀라스의 땅에서 아침을 맞고 에티오피아로 날아간다)에 따른 것이다. 아르고스의 왕 자리(메가펜테스 → 뒷날 아드라스토스·디오메데스)는 따로 잇지 않았다."
 sources = ["apollodorus.library 2.4.1-2.4.8", "apollodorus.library 2.4.12", "apollodorus.library 2.8.1", "apollodorus.library E.2.11", "homer.iliad 19.95-133"]
+
+[[thread]]
+id = "cretan-bull-thread"
+name_ko = "크레타의 황소"
+aka = ["포세이돈의 황소", "마라톤의 황소", "황소 한 마리"]
+oneliner = "바다에서 온 황소 한 마리가 미노스, 헤라클레스, 안드로게오스, 테세우스를 차례로 만난다."
+body = """
+포세이돈이 미노스에게 바다에서 황소를 보냈는데, 미노스가 바치지 않아 사나워졌다.
+헤라클레스가 일곱째 일로 그 황소를 잡아 그리스로 끌고 왔다가 놓아주었다.
+황소는 마라톤 들판으로 가서 사람들을 해쳤고, 미노스의 아들 안드로게오스를 죽였다.
+그 일로 아테네는 크레타에 아이들을 바치게 되었다.
+마지막으로 테세우스가 그 황소를 잡았다.
+"""
+fun = "황소 한 마리가 크레타의 미로, 헤라클레스의 열두 가지 일, 테세우스의 길 세 이야기를 꿰고 있다. 아쿠실라오스는 에우로페를 태운 황소도 이 황소라고 했다."
+steps = [
+  { event = "poseidon-bull-pasiphae", label = "포세이돈이 황소를 보내다" },
+  { event = "cretan-bull-captured", label = "헤라클레스가 잡아 그리스로 끌고 오다" },
+  { event = "androgeos-dies-tribute", label = "마라톤에서 안드로게오스를 죽이다" },
+  { event = "medeia-plot-marathon-bull", label = "테세우스가 잡다" },
+]
+note = "묶음 셋(europa-minos, herakles-labors, theseus-journey)을 가로지른다. 네 단계가 모두 after 로 이어져 unsure 0 — 마지막 둘은 E.1.7(세 번째 조공)이 잇는다. 같은 황소라는 것은 아폴로도로스 2.5.7(마라톤에 이르렀다)·3.15.7·E.1.5 가 말한다. 에우로페의 황소 이설(아쿠실라오스, 2.5.7)은 cretan-bull-captured 의 variants 에 있다."
+sources = ["apollodorus.library 3.1.3-3.1.4", "apollodorus.library 2.5.7", "apollodorus.library 3.15.7", "apollodorus.library E.1.5-E.1.6", "pausanias.greece 1.27.9-1.27.10"]

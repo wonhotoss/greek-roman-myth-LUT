@@ -1,6 +1,6 @@
 {
  "axis": {
-  "total": 505,
+  "total": 508,
   "eras": {
    "0": [
     0,
@@ -24,19 +24,19 @@
    ],
    "5": [
     95,
-    263
+    266
    ],
    "6": [
-    263,
-    320
+    266,
+    323
    ],
    "7": [
-    320,
-    437
+    323,
+    440
    ],
    "8": [
-    437,
-    505
+    440,
+    508
    ]
   }
  },
@@ -15187,7 +15187,10 @@
    "t0": 69,
    "t1": 73,
    "span_label": "한 철",
-   "open": false
+   "open": false,
+   "threads": [
+    "cretan-bull-thread"
+   ]
   },
   {
    "id": "sisyphos-punished",
@@ -17881,7 +17884,8 @@
    "seq": 560,
    "span": "days",
    "after": [
-    "stymphalian-birds"
+    "stymphalian-birds",
+    "poseidon-bull-pasiphae"
    ],
    "place": "crete",
    "cast": [
@@ -17903,11 +17907,12 @@
     }
    ],
    "oneliner": "미노스가 돕지 않아 혼자 황소를 잡아 미케네까지 끌고 왔다.",
-   "body": "일곱째 일은 크레타의 황소를 데려오는 것이었다.\n포세이돈이 바다에서 보낸 황소인데, 미노스가 바치지 않아 사나워졌다.\n미노스 왕은 도와주지 않고 혼자 잡으라고 했다.\n헤라클레스는 황소를 잡아 에우리스테우스에게 보인 뒤 놓아주었다.\n황소는 아티카의 마라톤까지 가서 사람들을 괴롭혔다.\n",
+   "body": "일곱째 일은 크레타의 황소를 데려오는 것이었다.\n포세이돈이 바다에서 보낸 황소인데, 미노스가 바치지 않아 사나워졌다.\n미노스 왕은 도와주지 않고 혼자 잡으라고 했다.\n헤라클레스는 황소를 잡아 에우리스테우스에게 보인 뒤 놓아주었다.\n황소는 아티카의 마라톤까지 가서 사람들을 괴롭혔다.\n뒷날 그 황소가 미노스의 아들 안드로게오스를 죽이고, 테세우스에게 잡힌다.\n",
    "fun": "마라톤의 이 황소를 뒷날 테세우스가 잡는다.",
    "caused_by": [
     "herakles-delphi-oracle"
    ],
+   "note": "after 에 poseidon-bull-pasiphae(era 4)를 둔 것은 같은 황소라서다 — 2.5.7 이 포세이돈이 보낸 그 황소라고 한다. 황소가 마라톤에 이른 뒤의 일은 테세우스의 길(androgeos-dies-tribute, medeia-plot-marathon-bull)에 있고 타래 cretan-bull-thread 가 잇는다.",
    "sources": [
     "apollodorus.library 2.5.7",
     "apollodorus.library E.1.5"
@@ -17923,7 +17928,10 @@
    "t0": 169,
    "t1": 171,
    "span_label": "며칠",
-   "open": false
+   "open": false,
+   "threads": [
+    "cretan-bull-thread"
+   ]
   },
   {
    "id": "diomedes-mares",
@@ -18441,7 +18449,8 @@
    "span": "years",
    "after": [
     "minotauros-born-labyrinth",
-    "aigeus-troizen"
+    "aigeus-troizen",
+    "cretan-bull-captured"
    ],
    "places": [
     "athens",
@@ -18471,7 +18480,7 @@
     }
    ],
    "oneliner": "미노스의 아들이 죽자 아테네는 해마다 열네 명을 크레타로 보냈다.",
-   "body": "미노스의 아들 안드로게오스가 아테네의 경기에 나가 모두 이겼다.\n아이게우스는 그를 마라톤의 황소와 싸우게 보냈고, 그는 죽었다.\n미노스는 배를 이끌고 와 아테네와 싸우며 제우스에게 벌을 빌었다.\n아테네에 굶주림과 병이 돌았다.\n아테네는 신의 말대로 해마다 소년 일곱과 소녀 일곱을 크레타로 보냈다.\n",
+   "body": "미노스의 아들 안드로게오스가 아테네의 경기에 나가 모두 이겼다.\n아이게우스는 그를 마라톤의 황소와 싸우게 보냈고, 그는 죽었다.\n헤라클레스가 크레타에서 끌고 왔다가 놓아준 그 황소였다.\n미노스는 배를 이끌고 와 아테네와 싸우며 제우스에게 벌을 빌었다.\n아테네에 굶주림과 병이 돌았다.\n아테네는 신의 말대로 해마다 소년 일곱과 소녀 일곱을 크레타로 보냈다.\n",
    "note": "참고: 처음 읽는 그리스 로마 신화 6권 4장 「미로 속 미노타우로스」. 히아킨토스의 딸들을 바친 일(3.15.8)은 쓰지 않는다.",
    "sources": [
     "apollodorus.library 3.15.7-3.15.8",
@@ -18494,7 +18503,10 @@
    "t0": 194,
    "t1": 203,
    "span_label": "여러 해",
-   "open": false
+   "open": false,
+   "threads": [
+    "cretan-bull-thread"
+   ]
   },
   {
    "id": "theseus-lifts-rock",
@@ -18632,7 +18644,9 @@
    "seq": 760,
    "span": "days",
    "after": [
-    "theseus-road-attica"
+    "theseus-road-attica",
+    "cretan-bull-captured",
+    "androgeos-dies-tribute"
    ],
    "places": [
     "athens",
@@ -18657,8 +18671,8 @@
     }
    ],
    "oneliner": "새 왕비는 낯선 젊은이가 누구인지 알았고, 왕은 몰랐다.",
-   "body": "그때 아이게우스의 아내는 콜키스에서 온 메데이아였다.\n메데이아는 테세우스가 누구인지 알아채고 왕에게 위험한 자라고 속였다.\n아이게우스는 자기 아들인 줄 모르고 그를 마라톤의 황소에게 보냈다.\n테세우스는 황소를 잡았다.\n",
-   "note": "참고: 처음 읽는 그리스 로마 신화 9권 4장 「메데이아의 계략」. medeia 는 THE 소유.",
+   "body": "그때 아이게우스의 아내는 콜키스에서 온 메데이아였다.\n메데이아는 테세우스가 누구인지 알아채고 왕에게 위험한 자라고 속였다.\n아이게우스는 자기 아들인 줄 모르고 그를 마라톤의 황소에게 보냈다.\n헤라클레스가 크레타에서 끌고 온 뒤로 그 들판을 휩쓸던 황소였다.\n테세우스는 황소를 잡았다.\n",
+   "note": "참고: 처음 읽는 그리스 로마 신화 9권 4장 「메데이아의 계략」. medeia 는 THE 소유. after 에 androgeos-dies-tribute 를 둔 것은 E.1.7 — 테세우스가 아테네에 왔을 때 조공은 이미 세 번째였다. 인과가 아니라 존재 조건(불확실-목록 D-2).",
    "sources": [
     "apollodorus.library E.1.5-E.1.6",
     "ovid.metamorphoses 7.404-7.406",
@@ -18672,10 +18686,13 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 200,
-   "t1": 202,
+   "t0": 203,
+   "t1": 205,
    "span_label": "며칠",
-   "open": false
+   "open": false,
+   "threads": [
+    "cretan-bull-thread"
+   ]
   },
   {
    "id": "aigeus-recognizes-theseus",
@@ -18711,8 +18728,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 201,
-   "t1": 202,
+   "t0": 204,
+   "t1": 205,
    "span_label": "한 순간",
    "open": false
   },
@@ -18751,8 +18768,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 202,
-   "t1": 204,
+   "t0": 205,
+   "t1": 207,
    "span_label": "며칠",
    "open": false
   },
@@ -18798,8 +18815,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 203,
-   "t1": 204,
+   "t0": 206,
+   "t1": 207,
    "span_label": "한 순간",
    "open": false,
    "threads": [
@@ -18851,8 +18868,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 204,
-   "t1": 206,
+   "t0": 207,
+   "t1": 209,
    "span_label": "며칠",
    "open": false
   },
@@ -18888,8 +18905,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 205,
-   "t1": 206,
+   "t0": 208,
+   "t1": 209,
    "span_label": "한 순간",
    "open": false
   },
@@ -18918,8 +18935,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 206,
-   "t1": 215,
+   "t0": 209,
+   "t1": 218,
    "span_label": "여러 해",
    "open": false
   },
@@ -18968,8 +18985,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "daidalos-ikaros",
-   "t0": 207,
-   "t1": 209,
+   "t0": 210,
+   "t1": 212,
    "span_label": "며칠",
    "open": false,
    "threads": [
@@ -19012,8 +19029,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "daidalos-ikaros",
-   "t0": 209,
-   "t1": 213,
+   "t0": 212,
+   "t1": 216,
    "span_label": "한 철",
    "open": false,
    "threads": [
@@ -19057,8 +19074,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 215,
-   "t1": 216,
+   "t0": 218,
+   "t1": 219,
    "span_label": "한 순간",
    "open": false
   },
@@ -19102,8 +19119,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 216,
-   "t1": 218,
+   "t0": 219,
+   "t1": 221,
    "span_label": "며칠",
    "open": false
   },
@@ -19150,8 +19167,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "theseus-journey",
-   "t0": 217,
-   "t1": 226,
+   "t0": 220,
+   "t1": 229,
    "span_label": "여러 해",
    "open": false
   },
@@ -19191,8 +19208,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "thebes-war",
-   "t0": 218,
-   "t1": 227,
+   "t0": 221,
+   "t1": 230,
    "span_label": "여러 해",
    "open": false
   },
@@ -19241,8 +19258,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "thebes-war",
-   "t0": 219,
-   "t1": 223,
+   "t0": 222,
+   "t1": 226,
    "span_label": "한 철",
    "open": false
   },
@@ -19277,8 +19294,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "thebes-war",
-   "t0": 220,
-   "t1": 221,
+   "t0": 223,
+   "t1": 224,
    "span_label": "한 순간",
    "open": false
   },
@@ -19322,8 +19339,8 @@
    ],
    "_file": "data/events/era4-5-thebes-argo.toml",
    "arc": "thebes-war",
-   "t0": 221,
-   "t1": 222,
+   "t0": 224,
+   "t1": 225,
    "span_label": "한 순간",
    "open": false
   },
@@ -19367,8 +19384,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 222,
-   "t1": 223,
+   "t0": 225,
+   "t1": 226,
    "span_label": "한 순간",
    "open": false
   },
@@ -19415,8 +19432,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 223,
-   "t1": 224,
+   "t0": 226,
+   "t1": 227,
    "span_label": "한 순간",
    "open": false
   },
@@ -19454,8 +19471,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 224,
-   "t1": 233,
+   "t0": 227,
+   "t1": 236,
    "span_label": "여러 해",
    "open": false
   },
@@ -19504,8 +19521,8 @@
    ],
    "_file": "data/events/era4-5-athens-crete.toml",
    "arc": "daidalos-ikaros",
-   "t0": 225,
-   "t1": 226,
+   "t0": 228,
+   "t1": 229,
    "span_label": "한 순간",
    "open": false,
    "threads": [
@@ -19559,8 +19576,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 233,
-   "t1": 235,
+   "t0": 236,
+   "t1": 238,
    "span_label": "며칠",
    "open": false
   },
@@ -19600,8 +19617,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 235,
-   "t1": 237,
+   "t0": 238,
+   "t1": 240,
    "span_label": "며칠",
    "open": false
   },
@@ -19643,8 +19660,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 237,
-   "t1": 238,
+   "t0": 240,
+   "t1": 241,
    "span_label": "한 순간",
    "open": false
   },
@@ -19683,8 +19700,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 238,
-   "t1": 239,
+   "t0": 241,
+   "t1": 242,
    "span_label": "한 순간",
    "open": false
   },
@@ -19724,8 +19741,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 239,
-   "t1": 241,
+   "t0": 242,
+   "t1": 244,
    "span_label": "며칠",
    "open": false
   },
@@ -19776,8 +19793,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 240,
-   "t1": 241,
+   "t0": 243,
+   "t1": 244,
    "span_label": "한 순간",
    "open": false
   },
@@ -19824,8 +19841,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 241,
-   "t1": 242,
+   "t0": 244,
+   "t1": 245,
    "span_label": "한 순간",
    "open": false
   },
@@ -19871,8 +19888,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 242,
-   "t1": 243,
+   "t0": 245,
+   "t1": 246,
    "span_label": "한 순간",
    "open": false
   },
@@ -19910,8 +19927,8 @@
    ],
    "_file": "data/events/era5-herakles.toml",
    "arc": "herakles-last",
-   "t0": 243,
-   "t1": 247,
+   "t0": 246,
+   "t1": 250,
    "span_label": "한 철",
    "open": false,
    "threads": [
@@ -19956,8 +19973,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "tantalos-house",
-   "t0": 247,
-   "t1": 251,
+   "t0": 250,
+   "t1": 254,
    "span_label": "한 철",
    "open": false,
    "threads": [
@@ -20016,8 +20033,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 248,
-   "t1": 249,
+   "t0": 251,
+   "t1": 252,
    "span_label": "한 순간",
    "open": false,
    "threads": [
@@ -20087,8 +20104,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 249,
-   "t1": 251,
+   "t0": 252,
+   "t1": 254,
    "span_label": "며칠",
    "open": false
   },
@@ -20134,8 +20151,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 251,
-   "t1": 260,
+   "t0": 254,
+   "t1": 263,
    "span_label": "여러 해",
    "open": false
   },
@@ -20175,8 +20192,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 252,
-   "t1": 261,
+   "t0": 255,
+   "t1": 264,
    "span_label": "여러 해",
    "open": false
   },
@@ -20207,8 +20224,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 253,
-   "t1": 257,
+   "t0": 256,
+   "t1": 260,
    "span_label": "한 철",
    "open": false,
    "threads": [
@@ -20256,8 +20273,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 257,
-   "t1": 259,
+   "t0": 260,
+   "t1": 262,
    "span_label": "며칠",
    "open": false,
    "threads": [
@@ -20302,8 +20319,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 258,
-   "t1": 259,
+   "t0": 261,
+   "t1": 262,
    "span_label": "한 순간",
    "open": false,
    "threads": [
@@ -20379,8 +20396,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 259,
-   "t1": 263,
+   "t0": 262,
+   "t1": 266,
    "span_label": "한 철",
    "open": false
   },
@@ -20419,8 +20436,8 @@
     "livy.rome 1.7"
    ],
    "_file": "data/events/era8-rome.toml",
-   "t0": 260,
-   "t1": 262,
+   "t0": 263,
+   "t1": 265,
    "span_label": "며칠",
    "open": false
   },
@@ -20475,8 +20492,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 263,
-   "t1": 264,
+   "t0": 266,
+   "t1": 267,
    "span_label": "한 순간",
    "open": false
   },
@@ -20533,8 +20550,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 264,
-   "t1": 266,
+   "t0": 267,
+   "t1": 269,
    "span_label": "며칠",
    "open": false,
    "threads": [
@@ -20606,8 +20623,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 266,
-   "t1": 270,
+   "t0": 269,
+   "t1": 273,
    "span_label": "한 철",
    "open": false
   },
@@ -20664,8 +20681,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 267,
-   "t1": 269,
+   "t0": 270,
+   "t1": 272,
    "span_label": "며칠",
    "open": false
   },
@@ -20715,8 +20732,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 268,
-   "t1": 270,
+   "t0": 271,
+   "t1": 273,
    "span_label": "며칠",
    "open": false
   },
@@ -20785,8 +20802,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 270,
-   "t1": 271,
+   "t0": 273,
+   "t1": 274,
    "span_label": "한 순간",
    "open": false
   },
@@ -20840,8 +20857,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 271,
-   "t1": 273,
+   "t0": 274,
+   "t1": 276,
    "span_label": "며칠",
    "open": false
   },
@@ -20911,8 +20928,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "road-to-troy",
-   "t0": 273,
-   "t1": 282,
+   "t0": 276,
+   "t1": 285,
    "span_label": "여러 해",
    "open": false
   },
@@ -20966,8 +20983,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 282,
-   "t1": 284,
+   "t0": 285,
+   "t1": 287,
    "span_label": "며칠",
    "open": false
   },
@@ -21030,8 +21047,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 284,
-   "t1": 285,
+   "t0": 287,
+   "t1": 288,
    "span_label": "한 순간",
    "open": false
   },
@@ -21076,8 +21093,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 285,
-   "t1": 287,
+   "t0": 288,
+   "t1": 290,
    "span_label": "며칠",
    "open": false
   },
@@ -21120,8 +21137,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 286,
-   "t1": 287,
+   "t0": 289,
+   "t1": 290,
    "span_label": "한 순간",
    "open": false
   },
@@ -21182,8 +21199,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 287,
-   "t1": 288,
+   "t0": 290,
+   "t1": 291,
    "span_label": "한 순간",
    "open": false
   },
@@ -21241,8 +21258,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 288,
-   "t1": 290,
+   "t0": 291,
+   "t1": 293,
    "span_label": "며칠",
    "open": false
   },
@@ -21292,8 +21309,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 289,
-   "t1": 290,
+   "t0": 292,
+   "t1": 293,
    "span_label": "한 순간",
    "open": false
   },
@@ -21348,8 +21365,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 290,
-   "t1": 291,
+   "t0": 293,
+   "t1": 294,
    "span_label": "한 순간",
    "open": false
   },
@@ -21411,8 +21428,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 291,
-   "t1": 293,
+   "t0": 294,
+   "t1": 296,
    "span_label": "며칠",
    "open": false
   },
@@ -21467,8 +21484,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 292,
-   "t1": 293,
+   "t0": 295,
+   "t1": 296,
    "span_label": "한 순간",
    "open": false
   },
@@ -21545,8 +21562,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 293,
-   "t1": 295,
+   "t0": 296,
+   "t1": 298,
    "span_label": "며칠",
    "open": false
   },
@@ -21601,8 +21618,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 295,
-   "t1": 296,
+   "t0": 298,
+   "t1": 299,
    "span_label": "한 순간",
    "open": false
   },
@@ -21665,8 +21682,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 296,
-   "t1": 298,
+   "t0": 299,
+   "t1": 301,
    "span_label": "며칠",
    "open": false
   },
@@ -21741,8 +21758,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 298,
-   "t1": 299,
+   "t0": 301,
+   "t1": 302,
    "span_label": "한 순간",
    "open": false
   },
@@ -21810,8 +21827,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "wrath-of-achilleus",
-   "t0": 299,
-   "t1": 301,
+   "t0": 302,
+   "t1": 304,
    "span_label": "며칠",
    "open": false
   },
@@ -21864,8 +21881,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 301,
-   "t1": 305,
+   "t0": 304,
+   "t1": 308,
    "span_label": "한 철",
    "open": false
   },
@@ -21930,8 +21947,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 305,
-   "t1": 307,
+   "t0": 308,
+   "t1": 310,
    "span_label": "며칠",
    "open": false
   },
@@ -21983,8 +22000,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 307,
-   "t1": 309,
+   "t0": 310,
+   "t1": 312,
    "span_label": "며칠",
    "open": false
   },
@@ -22042,8 +22059,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 309,
-   "t1": 311,
+   "t0": 312,
+   "t1": 314,
    "span_label": "며칠",
    "open": false
   },
@@ -22109,8 +22126,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 311,
-   "t1": 315,
+   "t0": 314,
+   "t1": 318,
    "span_label": "한 철",
    "open": false
   },
@@ -22172,8 +22189,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 315,
-   "t1": 317,
+   "t0": 318,
+   "t1": 320,
    "span_label": "며칠",
    "open": false
   },
@@ -22237,8 +22254,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 317,
-   "t1": 319,
+   "t0": 320,
+   "t1": 322,
    "span_label": "며칠",
    "open": false,
    "threads": [
@@ -22351,8 +22368,8 @@
    ],
    "_file": "data/events/era6-troy.toml",
    "arc": "fall-of-troy",
-   "t0": 319,
-   "t1": 321,
+   "t0": 322,
+   "t1": 324,
    "span_label": "며칠",
    "open": false,
    "threads": [
@@ -22402,8 +22419,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 321,
-   "t1": 322,
+   "t0": 324,
+   "t1": 325,
    "span_label": "한 순간",
    "open": false,
    "threads": [
@@ -22447,8 +22464,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 322,
-   "t1": 331,
+   "t0": 325,
+   "t1": 334,
    "span_label": "여러 해",
    "open": false
   },
@@ -22482,8 +22499,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 323,
-   "t1": 325,
+   "t0": 326,
+   "t1": 328,
    "span_label": "며칠",
    "open": false
   },
@@ -22516,8 +22533,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 325,
-   "t1": 327,
+   "t0": 328,
+   "t1": 330,
    "span_label": "며칠",
    "open": false
   },
@@ -22552,8 +22569,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 327,
-   "t1": 329,
+   "t0": 330,
+   "t1": 332,
    "span_label": "며칠",
    "open": false
   },
@@ -22593,8 +22610,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 328,
-   "t1": 330,
+   "t0": 331,
+   "t1": 333,
    "span_label": "며칠",
    "open": false
   },
@@ -22627,8 +22644,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 330,
-   "t1": 334,
+   "t0": 333,
+   "t1": 337,
    "span_label": "한 철",
    "open": false
   },
@@ -22663,8 +22680,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 334,
-   "t1": 336,
+   "t0": 337,
+   "t1": 339,
    "span_label": "며칠",
    "open": false
   },
@@ -22701,8 +22718,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 336,
-   "t1": 338,
+   "t0": 339,
+   "t1": 341,
    "span_label": "며칠",
    "open": false
   },
@@ -22741,8 +22758,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 338,
-   "t1": 347,
+   "t0": 341,
+   "t1": 350,
    "span_label": "여러 해",
    "open": false
   },
@@ -22792,8 +22809,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 347,
-   "t1": 349,
+   "t0": 350,
+   "t1": 352,
    "span_label": "며칠",
    "open": false
   },
@@ -22831,8 +22848,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 349,
-   "t1": 350,
+   "t0": 352,
+   "t1": 353,
    "span_label": "한 순간",
    "open": false
   },
@@ -22872,8 +22889,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 350,
-   "t1": 351,
+   "t0": 353,
+   "t1": 354,
    "span_label": "한 순간",
    "open": false
   },
@@ -22911,8 +22928,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 351,
-   "t1": 355,
+   "t0": 354,
+   "t1": 358,
    "span_label": "한 철",
    "open": false
   },
@@ -22956,8 +22973,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 352,
-   "t1": 354,
+   "t0": 355,
+   "t1": 357,
    "span_label": "며칠",
    "open": false
   },
@@ -23001,8 +23018,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 354,
-   "t1": 365,
+   "t0": 357,
+   "t1": 368,
    "span_label": "여러 해",
    "open": false
   },
@@ -23050,8 +23067,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 355,
-   "t1": 364,
+   "t0": 358,
+   "t1": 367,
    "span_label": "여러 해",
    "open": false
   },
@@ -23112,8 +23129,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 356,
-   "t1": 357,
+   "t0": 359,
+   "t1": 360,
    "span_label": "한 순간",
    "open": false
   },
@@ -23159,8 +23176,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 357,
-   "t1": 361,
+   "t0": 360,
+   "t1": 364,
    "span_label": "한 철",
    "open": false
   },
@@ -23207,8 +23224,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "oresteia",
-   "t0": 361,
-   "t1": 365,
+   "t0": 364,
+   "t1": 368,
    "span_label": "한 철",
    "open": false
   },
@@ -23261,8 +23278,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 362,
-   "t1": 364,
+   "t0": 365,
+   "t1": 367,
    "span_label": "며칠",
    "open": false
   },
@@ -23320,8 +23337,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 363,
-   "t1": 365,
+   "t0": 366,
+   "t1": 368,
    "span_label": "며칠",
    "open": false
   },
@@ -23359,8 +23376,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 365,
-   "t1": 367,
+   "t0": 368,
+   "t1": 370,
    "span_label": "며칠",
    "open": false
   },
@@ -23401,8 +23418,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 367,
-   "t1": 371,
+   "t0": 370,
+   "t1": 374,
    "span_label": "한 철",
    "open": false
   },
@@ -23450,8 +23467,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 368,
-   "t1": 370,
+   "t0": 371,
+   "t1": 373,
    "span_label": "며칠",
    "open": false
   },
@@ -23488,8 +23505,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 370,
-   "t1": 371,
+   "t0": 373,
+   "t1": 374,
    "span_label": "한 순간",
    "open": false
   },
@@ -23536,8 +23553,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-wanderings",
-   "t0": 371,
-   "t1": 373,
+   "t0": 374,
+   "t1": 376,
    "span_label": "며칠",
    "open": false
   },
@@ -23580,8 +23597,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 373,
-   "t1": 375,
+   "t0": 376,
+   "t1": 378,
    "span_label": "며칠",
    "open": false
   },
@@ -23614,8 +23631,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 375,
-   "t1": 379,
+   "t0": 378,
+   "t1": 382,
    "span_label": "며칠",
    "open": false
   },
@@ -23665,8 +23682,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "telemachos-journey",
-   "t0": 376,
-   "t1": 378,
+   "t0": 379,
+   "t1": 381,
    "span_label": "며칠",
    "open": false
   },
@@ -23708,8 +23725,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 378,
-   "t1": 379,
+   "t0": 381,
+   "t1": 382,
    "span_label": "한 순간",
    "open": false
   },
@@ -23756,8 +23773,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 379,
-   "t1": 380,
+   "t0": 382,
+   "t1": 383,
    "span_label": "한 순간",
    "open": false
   },
@@ -23802,8 +23819,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 380,
-   "t1": 381,
+   "t0": 383,
+   "t1": 384,
    "span_label": "한 순간",
    "open": false
   },
@@ -23853,8 +23870,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 381,
-   "t1": 382,
+   "t0": 384,
+   "t1": 385,
    "span_label": "한 순간",
    "open": false
   },
@@ -23913,8 +23930,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 382,
-   "t1": 383,
+   "t0": 385,
+   "t1": 386,
    "span_label": "한 순간",
    "open": false
   },
@@ -23959,8 +23976,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 383,
-   "t1": 384,
+   "t0": 386,
+   "t1": 387,
    "span_label": "한 순간",
    "open": false
   },
@@ -24015,8 +24032,8 @@
    ],
    "_file": "data/events/era7-odyssey.toml",
    "arc": "odysseus-homecoming",
-   "t0": 384,
-   "t1": 386,
+   "t0": 387,
+   "t1": 389,
    "span_label": "며칠",
    "open": false
   },
@@ -24061,8 +24078,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 1장 「하늘에서 떨어진 별」. troy-falls 는 TRO 소유.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 385,
-   "t1": 386,
+   "t0": 388,
+   "t1": 389,
    "span_label": "한 순간",
    "open": false
   },
@@ -24121,8 +24138,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 1장 「트로이를 떠나다」. mt-ida-troad 는 TRO 소유.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 386,
-   "t1": 388,
+   "t0": 389,
+   "t1": 391,
    "span_label": "며칠",
    "open": false
   },
@@ -24155,8 +24172,8 @@
    "note": "thrake 는 THE 소유. 폴리도로스(프리아모스의 아들)는 등록부에 없어 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 388,
-   "t1": 392,
+   "t0": 391,
+   "t1": 395,
    "span_label": "한 철",
    "open": false
   },
@@ -24194,8 +24211,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 1장 「아폴론의 뜻」. 아니오스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 392,
-   "t1": 394,
+   "t0": 395,
+   "t1": 397,
    "span_label": "며칠",
    "open": false
   },
@@ -24235,8 +24252,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 1장 「옛 조상의 땅」. kassandra 는 TRO 소유라 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 394,
-   "t1": 398,
+   "t0": 397,
+   "t1": 401,
    "span_label": "한 철",
    "open": false,
    "threads": [
@@ -24281,8 +24298,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 2장 「하르피아이의 저주」. harpyiai(group) 는 THE 소유. 켈라이노는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 398,
-   "t1": 400,
+   "t0": 401,
+   "t1": 403,
    "span_label": "며칠",
    "open": false
   },
@@ -24327,8 +24344,8 @@
    "note": "helenos·andromache 는 TRO 소유. 아스티아낙스(TRO 의 astyanax)는 이름만. 스킬라·카리브디스는 ODY 소유라 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 400,
-   "t1": 402,
+   "t0": 403,
+   "t1": 405,
    "span_label": "며칠",
    "open": false
   },
@@ -24374,8 +24391,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 2장 「거인의 섬」. polyphemos 는 ODY 소유. ODY 의 kyklopes-land 는 mythic 이고, 여기서는 베르길리우스가 말한 에트나(real)를 쓴다. odysseus 는 TRO 소유라 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 402,
-   "t1": 404,
+   "t0": 405,
+   "t1": 407,
    "span_label": "며칠",
    "open": false
   },
@@ -24408,8 +24425,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 2장 「불행의 파도」. sikelia 는 ATH 소유. 드레파눔(지금의 트라파니)과 아케스테스 왕은 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 404,
-   "t1": 405,
+   "t0": 407,
+   "t1": 408,
    "span_label": "한 순간",
    "open": false
   },
@@ -24457,8 +24474,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 2장 「불행의 파도」. aiolos-anemon 은 ODY 소유. 포세이돈의 로마명 넵투누스는 여기서 쓰지 않았다(한 사건에 로마명 한 줄만).",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 405,
-   "t1": 407,
+   "t0": 408,
+   "t1": 410,
    "span_label": "며칠",
    "open": false
   },
@@ -24506,8 +24523,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 3장 「여왕의 도시 카르타고」. 에로스(쿠피도)는 아프로디테의 아들로, 기존 eros-primordial 과 다른 존재라 cast 에 넣지 않고 이름만 부른다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 407,
-   "t1": 409,
+   "t0": 410,
+   "t1": 412,
    "span_label": "며칠",
    "open": false
   },
@@ -24552,8 +24569,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 3장 「사랑에 빠진 디도」",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 408,
-   "t1": 412,
+   "t0": 411,
+   "t1": 415,
    "span_label": "한 철",
    "open": false
   },
@@ -24598,8 +24615,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 3장 「운명을 향해」. 이아르바스(디도에게 청혼했다가 거절당하고 제우스에게 기도한 이웃 왕, 4.196-218)는 등록부에 없어 이름만 부른다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 409,
-   "t1": 411,
+   "t0": 412,
+   "t1": 414,
    "span_label": "며칠",
    "open": false
   },
@@ -24640,8 +24657,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 3장 「운명을 향해」. 방법(칼)은 쓰지 않는다. 죽기 전 자손의 복수를 빈 말(4.607-629)은 본문에서 뺐다. 이리스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 410,
-   "t1": 411,
+   "t0": 413,
+   "t1": 414,
    "span_label": "한 순간",
    "open": false
   },
@@ -24686,8 +24703,8 @@
    "note": "잠의 신(솜누스/힙노스)은 등록부에 없어 이름만. 5권의 경기와 배가 불탄 일(5.604-699)은 사건으로 만들지 않고 한 줄로만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 411,
-   "t1": 412,
+   "t0": 414,
+   "t1": 415,
    "span_label": "한 순간",
    "open": false
   },
@@ -24739,8 +24756,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 4장 「시빌레의 신전」. 신전 문의 다이달로스 조각(6.14-33)은 ATH 의 이야기라 뺐다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 412,
-   "t1": 414,
+   "t0": 415,
+   "t1": 417,
    "span_label": "며칠",
    "open": false
   },
@@ -24797,8 +24814,8 @@
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 4장 「엘리시온으로」. kerberos 는 HER 소유. 카론·데이포보스(TRO 가 만들 수 있음)·로물루스(ROM)·카이사르는 이름만. 상아 문(6.893-898)은 거짓 꿈이 나오는 문이다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-voyage",
-   "t0": 414,
-   "t1": 416,
+   "t0": 417,
+   "t1": 419,
    "span_label": "며칠",
    "open": false
   },
@@ -24853,8 +24870,8 @@
    "note": "faunus 는 ROM 소유. 라티누스의 도시 라우렌툼은 위치가 다투어져 place 로 만들지 않고 강어귀(tiber)를 썼다. 유모 카이에타(7.1-4)는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 416,
-   "t1": 418,
+   "t0": 419,
+   "t1": 421,
    "span_label": "며칠",
    "open": false
   },
@@ -24910,8 +24927,8 @@
    "note": "erinyes(group) 는 ODY 소유. 알렉토는 그 가운데 하나라 이름만 부르고 cast 는 erinyes 로 넣었다. 사슴을 기른 실비아와 티레우스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 417,
-   "t1": 419,
+   "t0": 420,
+   "t1": 422,
    "span_label": "며칠",
    "open": false
   },
@@ -24958,8 +24975,8 @@
    "note": "rome 은 ROM 소유. 헤라클레스와 카쿠스 이야기(8.184-279)는 ROM 이 쓴다. 강의 신 티베리누스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 418,
-   "t1": 420,
+   "t0": 421,
+   "t1": 423,
    "span_label": "며칠",
    "open": false
   },
@@ -25003,8 +25020,8 @@
    "note": "두 사람의 머리를 창에 꽂아 보인 장면(9.465-467)은 뺐다. 적장 볼켄스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 420,
-   "t1": 421,
+   "t0": 423,
+   "t1": 424,
    "span_label": "한 순간",
    "open": false
   },
@@ -25052,8 +25069,8 @@
    "note": "herakles 는 HER 소유(이때는 이미 신). 시신을 짓밟은 장면(10.495)은 뺐다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 421,
-   "t1": 422,
+   "t0": 424,
+   "t1": 425,
    "span_label": "한 순간",
    "open": false
   },
@@ -25096,8 +25113,8 @@
    "note": "아룬스·오피스·클로레우스·메타부스는 등록부에 없어 이름만. 아마존(HER 의 amazones)도 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 422,
-   "t1": 423,
+   "t0": 425,
+   "t1": 426,
    "span_label": "한 순간",
    "open": false
   },
@@ -25165,8 +25182,8 @@
    "note": "처음 읽는 그리스 로마 신화 15권에는 없다(책은 6권 저승에서 끝난다). 아마타의 죽음은 방법 없이 사실만. 유투르나는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 423,
-   "t1": 424,
+   "t0": 426,
+   "t1": 427,
    "span_label": "한 순간",
    "open": false
   },
@@ -25212,8 +25229,8 @@
    "note": "처음 읽는 그리스 로마 신화에는 없다. ROM 의 alba-longa-founded 가 이 사건을 after 로 붙잡는다.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 424,
-   "t1": 433,
+   "t0": 427,
+   "t1": 436,
    "span_label": "여러 해",
    "open": false
   },
@@ -25269,8 +25286,8 @@
    "note": "리비우스는 '무덤'이라 쓰고 신 이름으로 불렀다고 한다. 오비디우스는 씻겨 신이 된다. 둘을 함께 적었다. 아스카니오스가 이어 다스리는 것은 ROM 의 era 8. 강의 신 누미키우스는 이름만.",
    "_file": "data/events/era7-aeneid.toml",
    "arc": "aineias-latium",
-   "t0": 433,
-   "t1": 434,
+   "t0": 436,
+   "t1": 437,
    "span_label": "한 순간",
    "open": false
   },
@@ -25304,8 +25321,8 @@
     "virgil.aeneid 7.187-191"
    ],
    "_file": "data/events/era8-rome.toml",
-   "t0": 434,
-   "t1": 435,
+   "t0": 437,
+   "t1": 438,
    "span_label": "한 순간",
    "open": false
   },
@@ -25335,8 +25352,8 @@
     "ovid.metamorphoses 14.397-434"
    ],
    "_file": "data/events/era8-rome.toml",
-   "t0": 435,
-   "t1": 437,
+   "t0": 438,
+   "t1": 440,
    "span_label": "며칠",
    "open": false
   },
@@ -25370,8 +25387,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 437,
-   "t1": 446,
+   "t0": 440,
+   "t1": 449,
    "span_label": "여러 해",
    "open": false
   },
@@ -25405,8 +25422,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 446,
-   "t1": 470,
+   "t0": 449,
+   "t1": 473,
    "span_label": "한 세대 넘게",
    "open": false
   },
@@ -25436,8 +25453,8 @@
     "ovid.metamorphoses 14.623-771"
    ],
    "_file": "data/events/era8-rome.toml",
-   "t0": 447,
-   "t1": 449,
+   "t0": 450,
+   "t1": 452,
    "span_label": "며칠",
    "open": false
   },
@@ -25478,8 +25495,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 470,
-   "t1": 479,
+   "t0": 473,
+   "t1": 482,
    "span_label": "여러 해",
    "open": false
   },
@@ -25533,8 +25550,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 471,
-   "t1": 472,
+   "t0": 474,
+   "t1": 475,
    "span_label": "한 순간",
    "open": false
   },
@@ -25589,8 +25606,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 472,
-   "t1": 474,
+   "t0": 475,
+   "t1": 477,
    "span_label": "며칠",
    "open": false
   },
@@ -25637,8 +25654,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 473,
-   "t1": 475,
+   "t0": 476,
+   "t1": 478,
    "span_label": "며칠",
    "open": false
   },
@@ -25678,8 +25695,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 474,
-   "t1": 475,
+   "t0": 477,
+   "t1": 478,
    "span_label": "한 순간",
    "open": false
   },
@@ -25711,8 +25728,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 475,
-   "t1": 476,
+   "t0": 478,
+   "t1": 479,
    "span_label": "한 순간",
    "open": false
   },
@@ -25750,8 +25767,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 476,
-   "t1": 477,
+   "t0": 479,
+   "t1": 480,
    "span_label": "한 순간",
    "open": false
   },
@@ -25784,8 +25801,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "alba-to-rome",
-   "t0": 477,
-   "t1": 481,
+   "t0": 480,
+   "t1": 484,
    "span_label": "한 철",
    "open": false
   },
@@ -25814,8 +25831,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 478,
-   "t1": 487,
+   "t0": 481,
+   "t1": 490,
    "span_label": "여러 해",
    "open": false
   },
@@ -25849,8 +25866,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 479,
-   "t1": 480,
+   "t0": 482,
+   "t1": 483,
    "span_label": "한 순간",
    "open": false
   },
@@ -25890,8 +25907,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 480,
-   "t1": 484,
+   "t0": 483,
+   "t1": 487,
    "span_label": "한 철",
    "open": false
   },
@@ -25935,8 +25952,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 484,
-   "t1": 485,
+   "t0": 487,
+   "t1": 488,
    "span_label": "한 순간",
    "open": false
   },
@@ -25980,8 +25997,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 485,
-   "t1": 486,
+   "t0": 488,
+   "t1": 489,
    "span_label": "한 순간",
    "open": false
   },
@@ -26021,8 +26038,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 486,
-   "t1": 488,
+   "t0": 489,
+   "t1": 491,
    "span_label": "며칠",
    "open": false
   },
@@ -26064,8 +26081,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 487,
-   "t1": 488,
+   "t0": 490,
+   "t1": 491,
    "span_label": "한 순간",
    "open": false
   },
@@ -26096,8 +26113,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 488,
-   "t1": 489,
+   "t0": 491,
+   "t1": 492,
    "span_label": "한 순간",
    "open": false
   },
@@ -26147,8 +26164,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 489,
-   "t1": 490,
+   "t0": 492,
+   "t1": 493,
    "span_label": "한 순간",
    "open": false
   },
@@ -26185,8 +26202,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "romulus-reign",
-   "t0": 490,
-   "t1": 491,
+   "t0": 493,
+   "t1": 494,
    "span_label": "한 순간",
    "open": false
   },
@@ -26220,8 +26237,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 491,
-   "t1": 493,
+   "t0": 494,
+   "t1": 496,
    "span_label": "며칠",
    "open": false
   },
@@ -26255,8 +26272,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 492,
-   "t1": 501,
+   "t0": 495,
+   "t1": 504,
    "span_label": "여러 해",
    "open": false
   },
@@ -26297,8 +26314,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 493,
-   "t1": 502,
+   "t0": 496,
+   "t1": 505,
    "span_label": "여러 해",
    "open": false
   },
@@ -26332,8 +26349,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 494,
-   "t1": 503,
+   "t0": 497,
+   "t1": 506,
    "span_label": "여러 해",
    "open": false
   },
@@ -26376,8 +26393,8 @@
    ],
    "_file": "data/events/era8-rome.toml",
    "arc": "numa-peace",
-   "t0": 503,
-   "t1": 505,
+   "t0": 506,
+   "t1": 508,
    "span_label": "며칠",
    "open": false
   }
@@ -28841,7 +28858,7 @@
    ],
    "_file": "data/arcs.toml",
    "t0": 91,
-   "t1": 251
+   "t1": 254
   },
   {
    "id": "theseus-journey",
@@ -28878,7 +28895,7 @@
    ],
    "_file": "data/arcs.toml",
    "t0": 186,
-   "t1": 226
+   "t1": 229
   },
   {
    "id": "daidalos-ikaros",
@@ -28904,7 +28921,7 @@
    ],
    "_file": "data/arcs.toml",
    "t0": 68,
-   "t1": 226
+   "t1": 229
   },
   {
    "id": "herakles-early",
@@ -28992,8 +29009,8 @@
     "ovid.metamorphoses 9.1-272"
    ],
    "_file": "data/arcs.toml",
-   "t0": 222,
-   "t1": 247
+   "t0": 225,
+   "t1": 250
   },
   {
    "id": "oidipous-fate",
@@ -29035,8 +29052,8 @@
     "pausanias.greece 9.25"
    ],
    "_file": "data/arcs.toml",
-   "t0": 218,
-   "t1": 227
+   "t0": 221,
+   "t1": 230
   },
   {
    "id": "argo-voyage",
@@ -29177,8 +29194,8 @@
     "apollodorus.library E.3.1-E.3.35"
    ],
    "_file": "data/arcs.toml",
-   "t0": 248,
-   "t1": 282
+   "t0": 251,
+   "t1": 285
   },
   {
    "id": "wrath-of-achilleus",
@@ -29209,8 +29226,8 @@
     "apollodorus.library E.4.1-E.4.7"
    ],
    "_file": "data/arcs.toml",
-   "t0": 282,
-   "t1": 301
+   "t0": 285,
+   "t1": 304
   },
   {
    "id": "fall-of-troy",
@@ -29235,8 +29252,8 @@
     "homer.odyssey 8.492-520"
    ],
    "_file": "data/arcs.toml",
-   "t0": 301,
-   "t1": 321
+   "t0": 304,
+   "t1": 324
   },
   {
    "id": "aineias-voyage",
@@ -29270,8 +29287,8 @@
    ],
    "note": "참고: 처음 읽는 그리스 로마 신화 15권 「트로이의 마지막 불꽃」 1~4장. 이야기 순서는 아이네이아스가 겪은 순서(2·3권 → 1권 → 4~6권)로 두었다.",
    "_file": "data/arcs.toml",
-   "t0": 385,
-   "t1": 416
+   "t0": 388,
+   "t1": 419
   },
   {
    "id": "aineias-latium",
@@ -29297,8 +29314,8 @@
    ],
    "note": "처음 읽는 그리스 로마 신화에는 없는 부분(책은 6권에서 끝난다). era 8 의 alba-longa-founded 로 이어진다.",
    "_file": "data/arcs.toml",
-   "t0": 416,
-   "t1": 434
+   "t0": 419,
+   "t1": 437
   },
   {
    "id": "oresteia",
@@ -29319,8 +29336,8 @@
     "pausanias.greece 1.28"
    ],
    "_file": "data/arcs.toml",
-   "t0": 321,
-   "t1": 365
+   "t0": 324,
+   "t1": 368
   },
   {
    "id": "odysseus-wanderings",
@@ -29353,8 +29370,8 @@
     "apollodorus.library E.7.1-E.7.25"
    ],
    "_file": "data/arcs.toml",
-   "t0": 323,
-   "t1": 373
+   "t0": 326,
+   "t1": 376
   },
   {
    "id": "telemachos-journey",
@@ -29374,8 +29391,8 @@
     "homer.odyssey 15.1-557"
    ],
    "_file": "data/arcs.toml",
-   "t0": 355,
-   "t1": 378
+   "t0": 358,
+   "t1": 381
   },
   {
    "id": "odysseus-homecoming",
@@ -29399,8 +29416,8 @@
     "apollodorus.library E.7.26-E.7.33"
    ],
    "_file": "data/arcs.toml",
-   "t0": 373,
-   "t1": 386
+   "t0": 376,
+   "t1": 389
   },
   {
    "id": "alba-to-rome",
@@ -29427,8 +29444,8 @@
     "virgil.aeneid 1.267-277"
    ],
    "_file": "data/arcs.toml",
-   "t0": 437,
-   "t1": 481
+   "t0": 440,
+   "t1": 484
   },
   {
    "id": "romulus-reign",
@@ -29454,8 +29471,8 @@
     "ovid.metamorphoses 14.775-851"
    ],
    "_file": "data/arcs.toml",
-   "t0": 478,
-   "t1": 491
+   "t0": 481,
+   "t1": 494
   },
   {
    "id": "numa-peace",
@@ -29476,8 +29493,8 @@
     "ovid.metamorphoses 15.479-551"
    ],
    "_file": "data/arcs.toml",
-   "t0": 491,
-   "t1": 505
+   "t0": 494,
+   "t1": 508
   }
  ],
  "threads": [
@@ -29628,7 +29645,7 @@
    ],
    "_file": "data/threads.toml",
    "t0": 35,
-   "t1": 249,
+   "t1": 252,
    "eras": [
     2,
     4,
@@ -29702,8 +29719,8 @@
     "homer.odyssey 11.421-423"
    ],
    "_file": "data/threads.toml",
-   "t0": 253,
-   "t1": 398,
+   "t0": 256,
+   "t1": 401,
    "eras": [
     5,
     6,
@@ -29765,7 +29782,7 @@
    ],
    "_file": "data/threads.toml",
    "t0": 68,
-   "t1": 226,
+   "t1": 229,
    "eras": [
     4,
     5
@@ -29845,7 +29862,56 @@
    ],
    "_file": "data/threads.toml",
    "t0": 52,
-   "t1": 251,
+   "t1": 254,
+   "eras": [
+    4,
+    5
+   ]
+  },
+  {
+   "id": "cretan-bull-thread",
+   "name_ko": "크레타의 황소",
+   "aka": [
+    "포세이돈의 황소",
+    "마라톤의 황소",
+    "황소 한 마리"
+   ],
+   "oneliner": "바다에서 온 황소 한 마리가 미노스, 헤라클레스, 안드로게오스, 테세우스를 차례로 만난다.",
+   "body": "포세이돈이 미노스에게 바다에서 황소를 보냈는데, 미노스가 바치지 않아 사나워졌다.\n헤라클레스가 일곱째 일로 그 황소를 잡아 그리스로 끌고 왔다가 놓아주었다.\n황소는 마라톤 들판으로 가서 사람들을 해쳤고, 미노스의 아들 안드로게오스를 죽였다.\n그 일로 아테네는 크레타에 아이들을 바치게 되었다.\n마지막으로 테세우스가 그 황소를 잡았다.\n",
+   "fun": "황소 한 마리가 크레타의 미로, 헤라클레스의 열두 가지 일, 테세우스의 길 세 이야기를 꿰고 있다. 아쿠실라오스는 에우로페를 태운 황소도 이 황소라고 했다.",
+   "steps": [
+    {
+     "event": "poseidon-bull-pasiphae",
+     "label": "포세이돈이 황소를 보내다",
+     "unsure": false
+    },
+    {
+     "event": "cretan-bull-captured",
+     "label": "헤라클레스가 잡아 그리스로 끌고 오다",
+     "unsure": false
+    },
+    {
+     "event": "androgeos-dies-tribute",
+     "label": "마라톤에서 안드로게오스를 죽이다",
+     "unsure": false
+    },
+    {
+     "event": "medeia-plot-marathon-bull",
+     "label": "테세우스가 잡다",
+     "unsure": false
+    }
+   ],
+   "note": "묶음 셋(europa-minos, herakles-labors, theseus-journey)을 가로지른다. 네 단계가 모두 after 로 이어져 unsure 0 — 마지막 둘은 E.1.7(세 번째 조공)이 잇는다. 같은 황소라는 것은 아폴로도로스 2.5.7(마라톤에 이르렀다)·3.15.7·E.1.5 가 말한다. 에우로페의 황소 이설(아쿠실라오스, 2.5.7)은 cretan-bull-captured 의 variants 에 있다.",
+   "sources": [
+    "apollodorus.library 3.1.3-3.1.4",
+    "apollodorus.library 2.5.7",
+    "apollodorus.library 3.15.7",
+    "apollodorus.library E.1.5-E.1.6",
+    "pausanias.greece 1.27.9-1.27.10"
+   ],
+   "_file": "data/threads.toml",
+   "t0": 69,
+   "t1": 205,
    "eras": [
     4,
     5
