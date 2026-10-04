@@ -2483,7 +2483,7 @@
 
 > 내부 메모(그대로 읽지 않는다): 브리프 §6 — 자식을 죽인 것은 '죽였다' 사실만. 아테네에서의 일(아이게우스와의 결혼, 테세우스를 노림)은 ATH 가 쓴다. 참고: 처음 읽는 그리스 로마 신화 9권 3장·4장.
 
-적힌 곳: apollodorus.library 1.9.23-1.9.28 / apollodorus.library E.1.5-E.1.6 / ovid.metamorphoses 7.1-424 / hyginus.fabulae 25-27 / hesiod.theogony 956-962 / pausanias.greece 2.3
+적힌 곳: apollodorus.library 1.9.23-1.9.28 / apollodorus.library E.1.5-E.1.6 / euripides.medea 1-1419 / ovid.metamorphoses 7.1-424 / hyginus.fabulae 25-27 / hesiod.theogony 956-962 / pausanias.greece 2.3
 
 ### 메도스  `medos`
 
@@ -2762,7 +2762,8 @@
 **테세우스의 아버지. 검은 돛을 보고 죽은 아테네의 왕.**
 
 아들이 없어 델포이에 가서 물었다.
-돌아오는 길에 트로이젠에서 아이트라를 만났다.
+돌아오는 길에 코린토스에서 메데이아를 만나, 자식을 얻게 해 주면 아테네에 받아 주겠다고 맹세했다.
+트로이젠에서 아이트라를 만났다.
 바위 밑에 검과 신발을 숨겨 두고 아테네로 돌아갔다.
 자란 아들이 찾아왔을 때 검을 보고서야 알아보았다.
 크레타에서 돌아오는 배의 검은 돛을 보고 아들이 죽은 줄 알았다.
@@ -2773,7 +2774,7 @@
 
 > 내부 메모(그대로 읽지 않는다): 아버지 판디온은 등록부에 없어 parents 비움. spouses 의 medeia 는 THE 소유(E.1.5). 참고: 9권 4장 「메데이아의 계략」
 
-적힌 곳: apollodorus.library 3.15.6-3.15.7 / apollodorus.library E.1.5-E.1.10 / pausanias.greece 1.22.5
+적힌 곳: apollodorus.library 3.15.6-3.15.7 / apollodorus.library E.1.5-E.1.10 / pausanias.greece 1.22.5 / euripides.medea 663-758
 
 ### 아이손  `aison`
 

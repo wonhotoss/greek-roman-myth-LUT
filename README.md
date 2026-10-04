@@ -48,7 +48,7 @@ era 0~4 슬라이스로 세 산출물이 나오는 것을 확인한 뒤, era 5~8
 범위와 순서는 미래엔아이세움 『처음 읽는 그리스 로마 신화』(최설희 글, 전 15권)의 구성을 기준으로 삼았다.
 그 책의 본문은 쓰지 않는다 — 근거는 전부 `sources/` 의 공개 도메인 원전이고, 책과의 대응은 항목의 `note` 에만 남겼다.
 
-인물 313 · 사건 279 · 장소 88(실제 67, 이야기 속 21) · 묶음서사 33 · 타래 8 · 원전 13
+인물 313 · 사건 279 · 장소 88(실제 67, 이야기 속 21) · 묶음서사 33 · 타래 8 · 원전 14
 
 | 시대 | 사건 | 인물 | 들어간 것 |
 |---|---|---|---|
@@ -199,6 +199,7 @@ sources/
   livy-rome-1-8-roberts.txt              Gutenberg #19725  1권이 로마 건국 신화 (era 8)
   pausanias-greece-v{1,2}-frazer.txt     Gutenberg #68946, #68680  장소 데이터의 주 출처
   hyginus-fabulae-grant.txt              topostext.org/work/206  이야기 모음 **전문**(Mary Grant 1960 — ToposText 가 공개 도메인이라 밝힘). 우화 번호가 `[57]` 로 남아 있다
+  euripides-medea-coleridge.txt          github.com/PerseusDL/canonical-greekLit (tlg0006.tlg003.perseus-eng2)  에우리피데스 『메데이아』(Coleridge 1891/1906, 공개 도메인; Perseus 의 TEI 판은 CC BY-SA 4.0). 행 번호가 `[670]` 로 남아 있다
   bulfinch-mythology.txt                 Gutenberg #4928   19세기 재화. 원전 근거로 쓰지 않는다
   geo/ne_50m_land.geojson                Natural Earth 50m 육지 (public domain)
 ```
@@ -210,6 +211,9 @@ curl -sSL -O "https://www.gutenberg.org/cache/epub/<번호>/pg<번호>.txt"
 curl -sSL -A "Mozilla/5.0" -O "https://www.theoi.com/Text/Apollodorus1.html"
 curl -sSL -A "Mozilla/5.0" -o hyginus.html "https://topostext.org/work/206"
 python tools/extract_hyginus.py hyginus.html sources/hyginus-fabulae-grant.txt   # 우화 번호를 [57] 로 남긴다
+git clone --depth 1 --filter=blob:none --sparse https://github.com/PerseusDL/canonical-greekLit perseus
+git -C perseus sparse-checkout set data/tlg0006/tlg003                        # tlg003 = 메데이아
+python tools/extract_euripides.py perseus/data/tlg0006/tlg003/tlg0006.tlg003.perseus-eng2.xml sources/euripides-medea-coleridge.txt
 curl -sSL -o sources/geo/ne_50m_land.geojson \
   "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_land.geojson"
 python tools/clip_geo.py    # geojson → data/geo/mediterranean.json (지중해 동부로 잘라 좌표 축소)

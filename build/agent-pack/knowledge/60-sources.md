@@ -16,4 +16,5 @@
 | `hyginus.fabulae` | 히기누스 | 『이야기 모음』 | Fabulae | 기원후 1~2세기 |
 | `bulfinch` | 토머스 불핀치 | 『그리스 로마 신화』 | The Age of Fable | 1855년 |
 | `homeric.hymns` | 호메로스 찬가 | 『호메로스 찬가』 | Homeric Hymns | 기원전 7~6세기쯤 |
+| `euripides.medea` | 에우리피데스 | 『메데이아』 | Medeia | 기원전 431년 |
 | `aiseum.first-myth` | 최설희 | 『처음 읽는 그리스 로마 신화 (전 15권)』 | 처음 읽는 그리스 로마 신화 | 2020~2025년, 미래엔아이세움 |

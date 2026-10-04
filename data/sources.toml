@@ -118,6 +118,16 @@ translator = "H. G. Evelyn-White (1914)"
 note = "헤시오도스와 같은 파일 뒤쪽. 위치 표기는 <찬가 이름> <행> — demeter 1-50, apollo, hermes, dionysus 식."
 
 [[source]]
+id = "euripides.medea"
+author_ko = "에우리피데스"
+title_ko = "메데이아"
+title_orig = "Medeia"
+written = "기원전 431년"
+file = "sources/euripides-medea-coleridge.txt"
+translator = "Edward P. Coleridge (1891/1906)"
+note = "비극. 코린토스에서의 하루 — 크레온의 추방 명령, 아이게우스의 약속, 신부와 크레온의 죽음, 아이들을 죽임, 헬리오스의 수레. 위치 표기는 원문 행 번호. 파일 안 [670] 표시와 일치한다. Perseus Digital Library 의 TEI 판(CC BY-SA 4.0)에서 tools/extract_euripides.py 로 뽑았다. 번역 자체는 공개 도메인."
+
+[[source]]
 id = "aiseum.first-myth"
 author_ko = "최설희"
 title_ko = "처음 읽는 그리스 로마 신화 (전 15권)"

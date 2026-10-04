@@ -523,7 +523,7 @@ sensitivity = "soften"
 record = "메데이아는 쫓아오는 아버지를 따돌리려고 동생 압시르토스를 죽여 사지를 찢어 바다에 던졌다 (아폴로도로스 1.9.24). 이올코스에서는 펠리아스의 딸들을 속여 아버지를 토막 내 삶게 했다 (아폴로도로스 1.9.27). 코린토스에서는 글라우케에게 독 묻은 옷을 보내 글라우케와 그 아버지를 불에 타 죽게 했고, 이아손에게서 낳은 아들 메르메로스와 페레스를 죽였다 (아폴로도로스 1.9.28). 오비디우스는 메데이아가 칼로 아들들을 죽이고 달아났다고 한다 (오비디우스 7.394-397). 다른 전승에서는 메데이아가 두고 간 아이들을 코린토스 사람들이 죽였다고 하며 (아폴로도로스 1.9.28), 파우사니아스는 코린토스 사람들이 돌로 쳐 죽였다고 한다 (파우사니아스 2.3)."
 fun = "메데이아가 하늘을 나는 수레를 얻은 곳은 할아버지 헬리오스다. 해의 수레를 끄는 것이 날개 달린 용이다."
 note = "브리프 §6 — 자식을 죽인 것은 '죽였다' 사실만. 아테네에서의 일(아이게우스와의 결혼, 테세우스를 노림)은 ATH 가 쓴다. 참고: 처음 읽는 그리스 로마 신화 9권 3장·4장."
-sources = ["apollodorus.library 1.9.23-1.9.28", "apollodorus.library E.1.5-E.1.6", "ovid.metamorphoses 7.1-424", "hyginus.fabulae 25-27", "hesiod.theogony 956-962", "pausanias.greece 2.3"]
+sources = ["apollodorus.library 1.9.23-1.9.28", "apollodorus.library E.1.5-E.1.6", "euripides.medea 1-1419", "ovid.metamorphoses 7.1-424", "hyginus.fabulae 25-27", "hesiod.theogony 956-962", "pausanias.greece 2.3"]
 
 [[figure]]
 id = "apsyrtos"
