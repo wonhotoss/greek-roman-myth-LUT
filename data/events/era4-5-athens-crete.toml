@@ -166,12 +166,36 @@ note = "참고: 처음 읽는 그리스 로마 신화 4권 3장 「불타는 수
 place_unknown = true
 sources = ["apollodorus.library E.1.20", "ovid.metamorphoses 4.461-4.463", "ovid.metamorphoses 10.41-10.44"]
 
+
+[[event]]
+id = "hippokrene-spring"
+name_ko = "페가수스의 발굽에서 샘이 솟다"
+era = 4
+seq = 58
+span = "moment"
+place = "helikon"
+cast = [
+  { figure = "pegasos", role = "주인공" },
+  { figure = "athena", role = "등장" },
+]
+oneliner = "날개 달린 말이 산을 발굽으로 치자 무사이의 샘이 솟았다."
+body = """
+갓 태어난 페가수스가 헬리콘 산에 내려 발굽으로 땅을 쳤다.
+그 자리에서 샘이 솟았다. 사람들은 '말의 샘', 히포크레네라고 불렀다.
+노래의 여신 무사이가 그 산에 살았고, 샘은 무사이의 것이 되었다.
+소문을 들은 아테나가 보러 왔고, 무사 우라니아가 샘으로 안내했다.
+"""
+fun = "히포크레네는 '말의 샘'이라는 뜻이다. 아테나는 페가수스가 어머니의 피에서 태어나는 것을 자기가 보았다고 무사이에게 말했다."
+caused_by = ["medusa-slain"]
+note = "오비디우스 5.254-5.268 은 아테나가 페르세우스를 떠나 바로 헬리콘으로 가므로 탄생 직후다. 길들임(pegasos-tamed)과의 앞뒤는 원전이 말하지 않는다 — 타래 pegasos-thread 에 unsure 로 나온다. 무사이는 등록부에 없어 이름만 부른다."
+sources = ["ovid.metamorphoses 5.254-5.268", "pausanias.greece 9.31.3"]
 [[event]]
 id = "pegasos-tamed"
 name_ko = "아테나가 페가수스를 길들여 벨레로폰에게 주다"
 era = 4
 seq = 150
 span = "moment"
+after = ["medusa-slain"]
 place = "corinth"
 cast = [
   { figure = "bellerophon", role = "주인공" },
@@ -279,6 +303,7 @@ body = """
 그러다 모든 신들의 미움을 받게 되었다.
 호메로스는 그 까닭을 말하지 않는다.
 벨레로폰은 사람을 피해 알레이온 들판을 혼자 떠돌았다.
+아들 이산드로스는 싸움터에서 죽고, 딸 라오다메이아는 제우스에게서 사르페돈을 낳았다.
 페가수스는 땅을 떠나 제우스의 집에서 천둥과 번개를 나른다.
 """
 variants = [
@@ -286,7 +311,7 @@ variants = [
 ]
 note = "참고: 처음 읽는 그리스 로마 신화 9권 1장 「추락한 영웅」. 히기누스 57 은 페가수스를 타고 가다 알레이온 들판에 떨어져 엉덩이를 다쳤다고만 한다 — variants 에 넣었다. 올림포스로 오르려 했다는 것은 핀다로스라 코퍼스에 없어 쓰지 않는다. 알레이온 들판은 위치 불명이라 장소 없음."
 place_unknown = true
-sources = ["homer.iliad 6.196-6.202", "hesiod.theogony 284-286"]
+sources = ["homer.iliad 6.196-6.205", "hesiod.theogony 284-286", "hyginus.fabulae 57"]
 
 # ===================== era 5 =====================
 
@@ -372,6 +397,10 @@ body = """
 """
 note = "참고: 처음 읽는 그리스 로마 신화 6권 4장 「미로 속 미노타우로스」. 히아킨토스의 딸들을 바친 일(3.15.8)은 쓰지 않는다."
 sources = ["apollodorus.library 3.15.7-3.15.8", "pausanias.greece 1.27.10", "ovid.metamorphoses 7.456-7.460", "ovid.metamorphoses 8.169-8.171"]
+
+[[event.variants]]
+source = "hyginus.fabulae 57"
+text = "히기누스는 벨레로폰이 왕의 다른 딸과 결혼했다는 소식을 듣고 스테네보이아가 스스로 목숨을 끊었다고 적었다."
 
 [[event.variants]]
 source = "apollodorus.library 3.15.7"

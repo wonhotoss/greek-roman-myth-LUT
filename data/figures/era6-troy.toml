@@ -581,7 +581,7 @@ name_ko = "사르페돈"
 name_grc = "Sarpedon"
 kind = "hero"
 era = 6
-parents = ["zeus"]
+parents = ["zeus", "laodameia"]
 home = "lykia"
 oneliner = "제우스의 아들인데도 트로이 편에서 싸우다 죽은 리키아의 왕."
 body = """
@@ -592,7 +592,12 @@ body = """
 대신 잠과 죽음 형제를 보내 시신을 리키아로 옮기게 했다.
 """
 fun = "제우스는 아들이 죽기 전에 피 같은 비를 땅에 내렸다."
-sources = ["apollodorus.library E.3.35", "homer.iliad 12.290-399", "homer.iliad 16.419-507", "homer.iliad 16.666-683", "apollodorus.library E.4.6"]
+sources = ["apollodorus.library E.3.35", "homer.iliad 12.290-399", "homer.iliad 16.419-507", "homer.iliad 16.666-683", "apollodorus.library E.4.6", "homer.iliad 6.198-6.199", "apollodorus.library 3.1.1-3.1.2"]
+
+[[figure.parents_variant]]
+source = "apollodorus.library 3.1.1-3.1.2"
+parents = ["zeus", "europa"]
+text = "아폴로도로스는 사르페돈을 에우로페의 아들, 미노스의 형제라고 한다. 그러면서 호메로스는 벨레로폰의 딸 라오다메이아의 아들이라 한다고 적어 두었다. 둘이면 사르페돈은 트로이 전쟁까지 세 세대를 산 셈이다."
 
 [[figure]]
 id = "memnon"

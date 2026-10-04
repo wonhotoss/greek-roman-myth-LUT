@@ -76,6 +76,24 @@ body = """
 sources = ["apollodorus.library 3.15.7", "apollodorus.library 3.16.1", "pausanias.greece 2.30.8-2.30.9", "pausanias.greece 2.32.1-2.32.7"]
 
 [[place]]
+id = "helikon"
+name_ko = "헬리콘 산"
+name_grc = "Helikon"
+aka = ["헬리콘", "엘리콘"]
+kind = "real"
+lat = 38.3500
+lon = 22.8500
+modern = "그리스 보이오티아 엘리코나스 산"
+oneliner = "무사이가 사는 산. 페가수스의 발굽에서 히포크레네 샘이 솟았다."
+body = """
+보이오티아에 있는 높은 산이다.
+노래의 여신 무사이가 여기 살며 춤추고 노래한다고 헤시오도스가 적었다.
+페가수스가 발굽으로 쳐서 솟은 샘 히포크레네가 산 위에 있다.
+"""
+fun = "헤시오도스는 이 산 아래에서 양을 치다가 무사이에게 노래를 배웠다고 자기 시의 첫머리에 적었다."
+sources = ["hesiod.theogony 1-25", "ovid.metamorphoses 5.254-5.268", "pausanias.greece 9.31.3"]
+
+[[place]]
 id = "corinth"
 name_ko = "코린토스"
 name_grc = "Korinthos"
