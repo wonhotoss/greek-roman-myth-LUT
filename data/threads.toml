@@ -186,3 +186,32 @@ steps = [
 ]
 note = "묶음 둘(perseus-journey, bellerophon-flight)을 가로지른다. 샘과 길들임의 앞뒤는 원전이 말하지 않아 unsure 하나. 올림포스에 오르려다 떨어졌다는 것은 핀다로스라 코퍼스에 없다."
 sources = ["hesiod.theogony 280-286", "apollodorus.library 2.4.2", "ovid.metamorphoses 5.254-5.268", "pausanias.greece 2.4.1", "apollodorus.library 2.3.2", "homer.iliad 6.196-6.202"]
+
+[[thread]]
+id = "medeia-thread"
+name_ko = "메데이아의 길"
+aka = ["메데이아 일대기", "콜키스에서 콜키스로"]
+oneliner = "콜키스를 떠난 공주가 이올코스, 코린토스, 아테네를 거쳐 콜키스로 돌아온다."
+body = """
+메데이아는 이아손을 위해 아버지와 나라를 버렸다.
+이올코스에서 펠리아스를 죽게 하고 쫓겨났다.
+코린토스에서 이아손이 배신하자 신부와 자기 아들들을 죽이고 하늘로 떠났다.
+아테네에서 왕비가 되었지만 테세우스를 노리다 다시 쫓겨났다.
+마지막에는 콜키스로 돌아가 아버지의 나라를 되찾아 주었다.
+"""
+fun = "메데이아는 네 나라에서 쫓겨나거나 떠났다 — 콜키스, 이올코스, 코린토스, 아테네. 그리고 처음 떠난 콜키스로 돌아갔다."
+sensitivity = "soften"
+steps = [
+  { event = "medeia-helps", label = "콜키스: 이아손을 돕다" },
+  { event = "apsyrtos-and-flight", label = "동생을 죽이고 아버지를 따돌리다" },
+  { event = "argo-returns", label = "이올코스: 펠리아스를 죽게 하다" },
+  { event = "medeia-flight-to-corinth", label = "용의 수레로 코린토스에" },
+  { event = "medeia-in-corinth", label = "코린토스: 글라우케와 아들들" },
+  { event = "medeia-leaves-for-athens", label = "하늘로 떠나 아테네에" },
+  { event = "medeia-weds-aigeus", label = "아테네의 왕비가 되다" },
+  { event = "medeia-plot-marathon-bull", label = "테세우스를 노리다" },
+  { event = "aigeus-recognizes-theseus", label = "들켜서 쫓겨나다" },
+  { event = "medeia-returns-kolchis", label = "콜키스로 돌아가 아버지를 되찾아 주다" },
+]
+note = "묶음 셋(argo-voyage, medeia-revenge, theseus-journey)을 가로지른다. 열 단계가 모두 caused_by/after 로 이어져 unsure 0. 코린토스 → 아테네의 까닭(벌을 피해)은 원전에 있지만, 아이게우스가 왜 받아 주고 결혼했는지는 코퍼스의 원전이 말하지 않는다(에우리피데스·플루타르코스는 코퍼스 밖)."
+sources = ["apollodorus.library 1.9.23-1.9.28", "apollodorus.library E.1.5-E.1.6", "ovid.metamorphoses 7.1-7.424", "hyginus.fabulae 24-27", "pausanias.greece 2.3"]

@@ -491,7 +491,7 @@ name_ko = "메데이아의 계략과 마라톤의 황소"
 era = 5
 seq = 760
 span = "days"
-after = ["theseus-road-attica", "cretan-bull-captured", "androgeos-dies-tribute"]
+after = ["theseus-road-attica", "cretan-bull-captured", "androgeos-dies-tribute", "medeia-weds-aigeus"]
 places = ["athens", "marathon"]
 cast = [
   { figure = "theseus", role = "주인공" },
@@ -539,6 +539,41 @@ fun = "오비디우스는 그 독을 케르베로스의 거품에서 자란 풀�
 note = "참고: 처음 읽는 그리스 로마 신화 9권 4장 「메데이아의 계략」"
 sources = ["apollodorus.library E.1.6", "ovid.metamorphoses 7.404-7.424"]
 
+
+[[event]]
+id = "medeia-returns-kolchis"
+name_ko = "메데이아가 콜키스로 돌아가 아버지를 되찾아 주다"
+era = 5
+seq = 775
+span = "season"
+places = ["athens", "kolchis"]
+cast = [
+  { figure = "medeia", role = "주인공" },
+  { figure = "medos", role = "도움" },
+  { figure = "perses-kolchis", role = "상대" },
+  { figure = "aietes", role = "도움" },
+]
+oneliner = "두 번 쫓겨난 메데이아가 처음 떠난 곳으로 돌아갔다."
+body = """
+아테네에서 쫓겨난 메데이아는 아들 메도스를 데리고 콜키스로 갔다.
+가 보니 아버지 아이에테스는 동생 페르세스에게 왕 자리를 빼앗긴 뒤였다.
+메데이아는 페르세스를 죽이고 아버지에게 나라를 돌려주었다.
+메도스는 뒷날 많은 땅을 차지해 그 땅을 자기 이름대로 메디아라 불렀다.
+"""
+fun = "히기누스의 이야기에서는 페르세스를 죽인 것이 메도스다. 메데이아는 붙잡힌 아들을 모르고 죽이려다 알아보고, 칼을 쥐여 주어 할아버지의 원수를 갚게 했다."
+sensitivity = "soften"
+record = "메데이아는 페르세스를 죽이고 아버지에게 왕국을 돌려주었다. 메도스는 많은 야만족을 정복해 그 땅을 메디아라 부르고 인도를 치다가 죽었다(아폴로도로스 1.9.28). 히기누스 27: 폭풍에 밀려 먼저 콜키스에 닿은 메도스는 크레온의 아들 히포테스라고 거짓말했다가 갇혔고, 뒤에 온 메데이아는 아르테미스의 사제라 속이고 그 '히포테스'를 자기 손으로 죽이겠다고 청했다. 끌려 나온 것이 아들임을 알자 칼을 주었고, 메도스가 페르세스를 죽여 할아버지의 나라를 얻고 메디아라 이름 지었다. 히기누스 26: 돌아가는 길에 동생 압시르토스가 묻힌 압소로스 섬에서 뱀 떼를 거두어 무덤에 가두었다."
+caused_by = ["aigeus-recognizes-theseus"]
+note = "주 서술은 아폴로도로스 1.9.28. 메도스가 죽였다는 히기누스 27, 메디아인의 이름이 메데이아에게서 왔다는 파우사니아스 2.3.8 은 variants. 페르세스는 헬리오스의 아들, 아이에테스의 동생(히기누스 27) — 페르세우스의 아들 페르세스(perses)와 다른 사람이라 perses-kolchis."
+sources = ["apollodorus.library 1.9.28", "hyginus.fabulae 26-27", "pausanias.greece 2.3.8"]
+
+[[event.variants]]
+source = "hyginus.fabulae 27"
+text = "히기누스는 페르세스를 죽인 것이 아들 메도스라고 한다. 메도스는 할아버지의 나라를 얻어 자기 이름을 따 메디아라 불렀다."
+
+[[event.variants]]
+source = "pausanias.greece 2.3.8"
+text = "파우사니아스는 메데이아가 아리아라는 땅으로 가서 그곳 사람들이 메데이아의 이름을 따 메디아인이 되었다고 적었다. 헬라니코스는 아들 이름이 폴릭세노스이고 아버지가 이아손이라 한다고도 덧붙였다."
 [[event]]
 id = "black-sail-departure"
 name_ko = "검은 돛을 달고 크레타로 떠나다"

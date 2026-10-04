@@ -508,7 +508,7 @@ aka = ["메데아", "메디아"]
 kind = "human"
 era = 5
 parents = ["aietes"]
-spouses = ["iason"]
+spouses = ["iason", "aigeus"]
 home = "kolchis"
 oneliner = "약초를 다루는 콜키스의 공주. 이아손을 돕고 모든 것을 걸었다."
 body = """
@@ -517,12 +517,13 @@ body = """
 용을 잠들게 해 황금 양털을 건네주었다.
 아버지를 떠나 이아손과 함께 배를 탔다.
 이올코스에서도 코린토스에서도, 자기를 배신한 사람에게 그대로 갚았다.
+아테네의 왕비가 되었다가 다시 쫓겨나, 마지막에는 콜키스로 돌아가 아버지의 나라를 되찾아 주었다.
 """
 sensitivity = "soften"
 record = "메데이아는 쫓아오는 아버지를 따돌리려고 동생 압시르토스를 죽여 사지를 찢어 바다에 던졌다 (아폴로도로스 1.9.24). 이올코스에서는 펠리아스의 딸들을 속여 아버지를 토막 내 삶게 했다 (아폴로도로스 1.9.27). 코린토스에서는 글라우케에게 독 묻은 옷을 보내 글라우케와 그 아버지를 불에 타 죽게 했고, 이아손에게서 낳은 아들 메르메로스와 페레스를 죽였다 (아폴로도로스 1.9.28). 오비디우스는 메데이아가 칼로 아들들을 죽이고 달아났다고 한다 (오비디우스 7.394-397). 다른 전승에서는 메데이아가 두고 간 아이들을 코린토스 사람들이 죽였다고 하며 (아폴로도로스 1.9.28), 파우사니아스는 코린토스 사람들이 돌로 쳐 죽였다고 한다 (파우사니아스 2.3)."
 fun = "메데이아가 하늘을 나는 수레를 얻은 곳은 할아버지 헬리오스다. 해의 수레를 끄는 것이 날개 달린 용이다."
 note = "브리프 §6 — 자식을 죽인 것은 '죽였다' 사실만. 아테네에서의 일(아이게우스와의 결혼, 테세우스를 노림)은 ATH 가 쓴다. 참고: 처음 읽는 그리스 로마 신화 9권 3장·4장."
-sources = ["apollodorus.library 1.9.23-1.9.28", "ovid.metamorphoses 7.1-401", "hesiod.theogony 956-962", "pausanias.greece 2.3"]
+sources = ["apollodorus.library 1.9.23-1.9.28", "apollodorus.library E.1.5-E.1.6", "ovid.metamorphoses 7.1-424", "hyginus.fabulae 25-27", "hesiod.theogony 956-962", "pausanias.greece 2.3"]
 
 [[figure]]
 id = "apsyrtos"
@@ -744,3 +745,41 @@ body = """
 fun = "잡은 뒤에도 그 가죽 하나를 두고 사람들이 다투다 여럿이 죽었다. 멧돼지보다 가죽이 더 많은 사람을 데려갔다."
 note = "oineus 는 HER 소유 — 참조만."
 sources = ["apollodorus.library 1.8.2", "ovid.metamorphoses 8.260-328", "homer.iliad 9.533-546"]
+
+[[figure]]
+id = "medos"
+name_ko = "메도스"
+name_grc = "Medos"
+kind = "human"
+era = 5
+parents = ["aigeus", "medeia"]
+home = "athens"
+oneliner = "메데이아와 아이게우스의 아들. 메디아라는 땅 이름이 그에게서 왔다고 한다."
+body = """
+아테네에서 태어났다.
+어머니가 테세우스를 노리다 쫓겨날 때 함께 떠났다.
+콜키스에서 할아버지 아이에테스의 나라를 되찾는 일을 도왔다.
+뒷날 많은 땅을 차지해 자기 이름대로 메디아라 불렀다.
+"""
+fun = "파우사니아스는 메디아인이라는 이름이 아들이 아니라 메데이아에게서 왔다고 하고, 헬라니코스는 아들 이름이 폴릭세노스였다고 한다. 이름 하나를 두고 이야기가 셋이다."
+note = "히기누스 27 에서는 페르세스를 죽인 것이 메도스 자신이다(사건 medeia-returns-kolchis 의 variants). 아폴로도로스는 인도 원정에서 죽었다고 한다."
+sources = ["apollodorus.library 1.9.28", "hyginus.fabulae 26-27", "pausanias.greece 2.3.8"]
+
+[[figure]]
+id = "perses-kolchis"
+name_ko = "페르세스"
+name_grc = "Perses"
+aka = ["콜키스의 페르세스", "아이에테스의 동생"]
+kind = "human"
+era = 5
+parents = ["helios"]
+home = "kolchis"
+oneliner = "아이에테스의 동생. 형의 나라를 빼앗았다가 메데이아에게 죽었다."
+body = """
+헬리오스의 아들이고 아이에테스의 동생이다.
+형을 몰아내고 콜키스의 왕이 되었다.
+아이에테스의 자손에게 죽는다는 신의 말을 들어 두려워했다.
+돌아온 메데이아에게 죽었다. 히기누스는 메도스가 죽였다고 한다.
+"""
+note = "페르세우스의 아들 페르세스(perses, 에티오피아)와 다른 사람. 1.9.28 은 '그의 형제 페르세스', 히기누스 27 은 '헬리오스의 아들, 아이에테스의 형제'."
+sources = ["apollodorus.library 1.9.28", "hyginus.fabulae 27"]

@@ -641,12 +641,17 @@ body = """
 메데이아는 이아손을 돕기 위해 아버지와 나라를 버렸다.
 이올코스에서는 이아손의 원수를 갚아 주고, 그 때문에 둘 다 쫓겨난다.
 코린토스에서 이아손이 다른 사람과 결혼하려 하자 그대로 갚는다.
-그리고 아무 벌도 받지 않고 하늘로 떠난다. 신화에서 드문 결말이다.
+아무 벌도 받지 않고 하늘로 떠나 아테네의 왕비가 된다.
+거기서도 쫓겨나지만, 마지막에는 콜키스로 돌아가 아버지의 나라를 되찾아 준다.
 """
+note = "테세우스를 노리다 쫓겨나는 일(medeia-plot-marathon-bull, aigeus-recognizes-theseus)은 theseus-journey 에 든다 — 한 사건은 한 묶음. 타래 medeia-thread 가 전부를 잇는다."
 events = [
   "argo-returns",
+  "medeia-flight-to-corinth",
   "medeia-in-corinth",
   "medeia-leaves-for-athens",
+  "medeia-weds-aigeus",
+  "medeia-returns-kolchis",
 ]
 sources = ["apollodorus.library 1.9.27-1.9.28", "ovid.metamorphoses 7.159-401", "pausanias.greece 2.3"]
 
