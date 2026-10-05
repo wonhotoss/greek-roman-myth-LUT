@@ -943,14 +943,14 @@ oneliner = "큰 아이아스와 이름이 같아 작은 아이아스라 불린 �
 body = """
 로크리스에서 배 마흔 척을 이끌고 왔다.
 발이 빨랐고, 큰 아이아스와 자주 나란히 싸웠다.
-트로이가 무너진 밤에 아테나 신전에서 카산드라를 끌어냈다.
-아테나가 그 일로 크게 화가 났다.
-돌아가는 길에 바다에서 죽었다.
+트로이가 무너진 밤에 아테나 신상을 붙든 카산드라를 끌어내다 신상을 받침대에서 뜯어지게 했다.
+오디세우스가 돌로 쳐 죽이자고 했고, 아이아스는 제단 앞에서 맹세해 벗어났다.
+아테나가 그 일로 돌아가는 배들에 폭풍을 보냈고, 아이아스는 벼락을 맞고 바다에 빠져 죽었다.
 """
 sensitivity = "soften"
-record = "로크리스의 아이아스는 아테나의 목상에 매달린 카산드라를 겁탈했고, 그래서 그 신상은 하늘을 본다고 한다(아폴로도로스 E.5.22). 돌아가는 길에 포세이돈이 그를 기라이 바위에 던졌으나 살려 주었는데, 신들도 자기를 빠뜨리지 못한다고 떠벌리자 포세이돈이 삼지창으로 바위를 쪼개 그가 앉은 쪽을 바다에 빠뜨려 익사시켰다(오디세이아 4.499-511)."
-note = "카산드라에게 한 일(E.5.22)은 '끌어냈다'까지. 죽음은 오디세이아 4.499-511(ODY 범위)이라 한 줄."
-sources = ["apollodorus.library 3.10.8", "apollodorus.library E.3.11", "homer.iliad 2.527-535", "homer.iliad 13.701-722", "apollodorus.library E.5.22-E.5.23", "homer.odyssey 4.499-511"]
+record = "로크리스의 아이아스는 아테나 목상에 매달린 카산드라를 겁탈했다(아폴로도로스 E.5.22; 파우사니아스 1.15, 5.19, 10.26, 10.31 도 '겁탈'이라 한다). 오디세우스가 그 일로 돌로 쳐 죽이자고 했다(파우사니아스 10.31). 바위에 올라 신들도 못 죽인다고 뽐내다 포세이돈이 바위를 쪼개 빠져 죽었고, 테티스가 미코노스에 묻었다(E.6.6; 오디세이아 4.499-4.511)."
+note = "사건: kassandra-athena-image, athena-storm-aias-drowned, lokrian-maidens. 큰 아이아스(aias)와 다른 사람."
+sources = ["apollodorus.library 3.10.8", "apollodorus.library E.3.11", "homer.iliad 2.527-535", "homer.iliad 13.701-722", "apollodorus.library E.5.22-E.5.23", "homer.odyssey 4.499-511", "apollodorus.library E.6.5-E.6.6", "apollodorus.library E.6.20-E.6.22", "pausanias.greece 10.26.3", "pausanias.greece 10.31.2", "hyginus.fabulae 116"]
 
 [[figure]]
 id = "telamon"

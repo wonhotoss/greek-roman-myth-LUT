@@ -82,6 +82,7 @@ steps = [
   { event = "helene-taken", label = "그 파리스가 헬레네를 데려오다" },
   { event = "horse-into-troy", label = "안에 군사가 있다고 했지만" },
   { event = "troy-falls", label = "그 말이 맞았다" },
+  { event = "kassandra-athena-image", label = "아테나 신상을 붙들고 끌려 나오다" },
   { event = "agamemnon-murdered", label = "카산드라의 마지막" },
   { event = "crete-plague", label = "안키세스가 카산드라의 말을 떠올리다" },
 ]
