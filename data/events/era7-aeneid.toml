@@ -456,12 +456,35 @@ sources = ["virgil.aeneid 6.236-6.901", "ovid.metamorphoses 14.116-14.121"]
 note = "참고: 처음 읽는 그리스 로마 신화 15권 4장 「엘리시온으로」. kerberos 는 HER 소유. 카론·데이포보스(TRO 가 만들 수 있음)·로물루스(ROM)·카이사르는 이름만. 상아 문(6.893-898)은 거짓 꿈이 나오는 문이다."
 
 [[event]]
+id = "aineias-passes-aiaia"
+name_ko = "밤에 키르케의 해안을 지나다"
+era = 7
+seq = 865
+span = "moment"
+places = ["cumae", "aiaia"]
+cast = [
+  { figure = "aineias", role = "주인공" },
+  { figure = "kirke", role = "상대" },
+  { figure = "poseidon", role = "도움" },
+]
+oneliner = "짐승이 된 사람들의 울음이 바다까지 들렸다."
+body = """
+저승에서 돌아온 아이네이아스의 배들은 밤에 키르케의 해안 곁을 지났다.
+키르케는 밤새 베를 짜며 노래했고, 바위가 그 노래를 되울렸다.
+해안에서는 사슬을 거부하는 사자, 멧돼지, 곰, 늑대의 울음이 들려왔다. 키르케의 약으로 짐승이 된 사람들이었다.
+포세이돈은 트로이 사람들이 그 땅에 닿지 않도록 순풍을 보내 밤새 배를 밀었다.
+"""
+caused_by = ["aineias-underworld"]
+note = "아이네이스 7.10-7.24. 베르길리우스의 키르케 해안은 쿠마이와 테베레 강 사이 이탈리아 서해안(뒷시대의 몬테 치르체오) — 장소 aiaia 의 note 참조. 포세이돈의 로마명 넵투누스는 쓰지 않았다."
+sources = ["virgil.aeneid 7.10-7.24"]
+
+[[event]]
 id = "latium-arrival"
 name_ko = "테베레 강에 닿아 라티누스를 만나다"
 era = 7
 seq = 870
 span = "days"
-after = ["aineias-underworld"]
+after = ["aineias-underworld", "aineias-passes-aiaia"]
 place = "tiber"
 cast = [
   { figure = "aineias", role = "주인공" },

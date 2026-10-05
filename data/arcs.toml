@@ -127,6 +127,7 @@ events = [
   "palinouros-falls",
   "sibylla-golden-bough",
   "aineias-underworld",
+  "aineias-passes-aiaia",
 ]
 sources = ["virgil.aeneid 1.1-6.901", "apollodorus.library E.5.21", "ovid.metamorphoses 13.623-14.153"]
 note = "참고: 처음 읽는 그리스 로마 신화 15권 「트로이의 마지막 불꽃」 1~4장. 이야기 순서는 아이네이아스가 겪은 순서(2·3권 → 1권 → 4~6권)로 두었다."
@@ -454,6 +455,7 @@ events = [
   "suitors-slain",
   "penelope-tests-bed",
   "odysseus-returns-home",
+  "telegonos-kills-odysseus",
 ]
 sources = ["homer.odyssey 13.93-24.548", "apollodorus.library E.7.26-E.7.33"]
 
@@ -627,6 +629,7 @@ events = [
   "medeia-helps",
   "golden-fleece-taken",
   "apsyrtos-and-flight",
+  "argo-purified-by-kirke",
   "orpheus-outsings-seirenes",
   "talos-of-crete",
 ]

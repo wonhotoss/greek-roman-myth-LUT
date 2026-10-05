@@ -215,3 +215,29 @@ steps = [
 ]
 note = "묶음 셋(argo-voyage, medeia-revenge, theseus-journey)을 가로지른다. 열 단계가 모두 caused_by/after 로 이어져 unsure 0. 코린토스 → 아테네의 까닭(벌을 피해)은 원전에 있지만, 아이게우스가 왜 받아 주고 결혼했는지는 코퍼스의 원전이 말하지 않는다(에우리피데스·플루타르코스는 코퍼스 밖)."
 sources = ["apollodorus.library 1.9.23-1.9.28", "apollodorus.library E.1.5-E.1.6", "ovid.metamorphoses 7.1-7.424", "hyginus.fabulae 24-27", "pausanias.greece 2.3"]
+
+[[thread]]
+id = "kirke-thread"
+name_ko = "키르케"
+aka = ["키르케 일대기", "헬리오스의 딸 키르케"]
+oneliner = "약을 아는 헬리오스의 딸이 아르고호, 오디세우스, 아이네이아스를 차례로 만난다."
+body = """
+키르케는 헬리오스의 딸이고 아이에테스의 누이, 메데이아의 고모다.
+스킬라를 질투해 괴물로 만들었고, 조카 메데이아가 탄 아르고호를 정화해 주었다.
+오디세우스의 동료들을 돼지로 바꾸었다가 되돌리고, 한 해를 함께 살았다.
+피쿠스를 딱따구리로 바꾸었고, 아이네이아스의 배는 그 해안을 밤에 지나갔다.
+오디세우스에게서 낳은 아들 텔레고노스가 모르고 아버지를 죽였다.
+"""
+fun = "키르케를 지나는 영웅이 셋이다 — 이아손, 오디세우스, 아이네이아스. 그리스에서 로마로 가는 이야기의 길목에 늘 키르케가 있다."
+sensitivity = "soften"
+steps = [
+  { event = "glaukos-skylla-cursed", label = "스킬라를 괴물로 만들다" },
+  { event = "argo-purified-by-kirke", label = "아르고호와 메데이아를 정화하다" },
+  { event = "picus-woodpecker", label = "피쿠스를 딱따구리로 바꾸다" },
+  { event = "kirke-pigs", label = "오디세우스의 동료들을 돼지로 바꾸다" },
+  { event = "kirke-year", label = "오디세우스와 한 해를 살다" },
+  { event = "telegonos-kills-odysseus", label = "아들 텔레고노스가 오디세우스를 죽이다" },
+  { event = "aineias-passes-aiaia", label = "아이네이아스의 배가 해안을 지나다" },
+]
+note = "묶음 넷(argo-voyage, odysseus-wanderings, odysseus-homecoming, aineias-voyage)과 낱 사건 둘을 가로지른다. 스킬라 ↔ 정화, 피쿠스 ↔ 돼지의 앞뒤는 원전이 말하지 않는다. 텔레고노스(590) ↔ 아이네이아스(865)는 시간축이 정하지만 원전은 둘을 잇지 않는다."
+sources = ["hesiod.theogony 956-962", "hesiod.theogony 1011-1016", "apollodorus.library 1.9.24", "homer.odyssey 10.133-10.574", "apollodorus.library E.7.14-E.7.19", "apollodorus.library E.7.36-E.7.37", "ovid.metamorphoses 14.1-14.74", "ovid.metamorphoses 14.320-14.440", "virgil.aeneid 7.10-7.24", "hyginus.fabulae 127", "hyginus.fabulae 199"]

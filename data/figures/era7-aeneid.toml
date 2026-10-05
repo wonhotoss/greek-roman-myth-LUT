@@ -105,6 +105,17 @@ fun = "라티움 사람들을 '라틴 사람'이라 부른다. 라틴어라는 �
 sources = ["virgil.aeneid 7.45-7.106", "virgil.aeneid 7.192-7.285", "virgil.aeneid 7.572-7.600", "livy.rome 1.1-1.2"]
 note = "faunus 는 ROM 소유. 어머니 마리카(님프)는 이름만. 라티누스의 도시 라우렌툼은 정확한 위치를 몰라 place 로 만들지 않았다."
 
+[[figure.parents_variant]]
+source = "hesiod.theogony 1011-1016"
+parents = ["kirke", "odysseus"]
+text = "헤시오도스는 라티노스를 키르케와 오디세우스의 아들이라 한다. 그렇게 보면 라틴 사람들의 임금은 오디세우스의 자손이다."
+
+[[figure.parents_variant]]
+source = "hyginus.fabulae 127"
+parents = ["kirke", "telemachos"]
+text = "히기누스는 키르케와 텔레마코스의 아들이라 하고, 라틴어라는 이름이 그에게서 왔다고 적었다."
+
+
 [[figure]]
 id = "lavinia"
 name_ko = "라비니아"

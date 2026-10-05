@@ -103,7 +103,7 @@ body = """
 돌아와서는 거지 모습의 아버지와 만나 함께 계획을 세웠다.
 구혼자들과 싸울 때 아버지 곁에서 창을 들고 싸웠다.
 """
-note = "참고: 처음 읽는 그리스 로마 신화 14권 2장 「텔레마코스의 여정」."
+note = "참고: 처음 읽는 그리스 로마 신화 14권 2장 「텔레마코스의 여정」. 히기누스 127 은 텔레마코스가 뒤에 키르케와 결혼해 라티누스를 낳았다고 한다(telegonos-kills-odysseus 의 variants, latinus 의 parents_variant)."
 sources = ["homer.odyssey 1.96-324", "homer.odyssey 3.1-497", "homer.odyssey 4.1-624", "homer.odyssey 16.154-320", "homer.odyssey 22.91-125", "apollodorus.library E.7.32-E.7.33"]
 
 [[figure]]
@@ -371,10 +371,11 @@ body = """
 오디세우스는 헤르메스가 준 약초 덕분에 바뀌지 않았다.
 키르케는 동료들을 되돌려 주었고, 오디세우스는 그 섬에서 한 해를 머물렀다.
 떠날 때는 죽은 사람들의 땅으로 가는 길과 괴물을 피하는 법을 가르쳐 주었다.
+그보다 앞서 아르고호의 메데이아를 정화해 주었고, 스킬라를 괴물로 만들었다. 오디세우스에게서 아들 텔레고노스를 낳았다.
 """
 fun = "오비디우스는 괴물 스킬라가 원래 예쁜 님프였는데, 키르케가 질투해서 괴물로 바꾸었다고 썼다."
 note = "참고: 처음 읽는 그리스 로마 신화 13권 3장 「신비한 물약」「키르케와 오디세우스」. 어머니 페르세(오케아노스의 딸)는 등록부에 없어 계보에 넣지 않았다. 헤시오도스 1011-1016 은 키르케와 오디세우스의 아들로 아그리오스·라티노스를 든다(AEN 의 latinus 와 이설 관계)."
-sources = ["homer.odyssey 10.133-574", "homer.odyssey 12.16-141", "apollodorus.library E.7.14-E.7.19", "ovid.metamorphoses 14.1-74", "hesiod.theogony 1011-1016"]
+sources = ["homer.odyssey 10.133-574", "homer.odyssey 12.16-141", "apollodorus.library E.7.14-E.7.19", "ovid.metamorphoses 14.1-74", "hesiod.theogony 1011-1016", "apollodorus.library 1.9.24", "apollodorus.library E.7.36-E.7.37", "ovid.metamorphoses 14.1-14.74", "virgil.aeneid 7.10-7.24", "hyginus.fabulae 127"]
 
 [[figure]]
 id = "seirenes"
@@ -670,3 +671,40 @@ body = """
 fun = "머리에 뱀을 감은 무서운 모습으로 처음 그린 사람은 아이스킬로스라는 극작가다. 그 전 조각들은 무섭지 않았다고 파우사니아스가 적었다."
 note = "parents: 헤시오도스 183-187 — 우라노스의 피를 가이아가 받아 낳았다. 두 부모로 적되 '피에서 났다'는 사정은 body 에 두었다."
 sources = ["hesiod.theogony 183-187", "homer.odyssey 2.135-136", "apollodorus.library E.6.25", "pausanias.greece 1.28"]
+
+[[figure]]
+id = "glaukos-pontios"
+name_ko = "글라우코스"
+name_grc = "Glaukos"
+aka = ["바다의 글라우코스", "안테돈의 글라우코스"]
+kind = "god"
+era = 5
+domains = ["바다"]
+oneliner = "풀을 먹고 바다의 신이 된 어부. 스킬라를 사랑했다가 키르케의 질투를 샀다."
+body = """
+본디 안테돈의 어부였다.
+풀밭에 놓아둔 물고기들이 되살아나 바다로 뛰어드는 것을 보고 그 풀을 먹었다.
+미친 듯 바다로 뛰어들었고, 바다의 신들이 그를 신으로 받아 주었다.
+스킬라를 사랑해 키르케에게 약을 청했다가, 키르케가 스킬라를 괴물로 만들었다.
+"""
+note = "코린토스의 글라우코스(glaukos-korinthios, 벨레로폰의 아버지)·리키아의 글라우코스(일리아스 6)와 다른 사람. 오비디우스 13.898-13.968 이 변신, 14.1-14.74 가 키르케."
+sources = ["ovid.metamorphoses 13.898-13.968", "ovid.metamorphoses 14.1-14.74", "hyginus.fabulae 199"]
+
+[[figure]]
+id = "telegonos"
+name_ko = "텔레고노스"
+name_grc = "Telegonos"
+kind = "human"
+era = 7
+parents = ["odysseus", "kirke"]
+home = "aiaia"
+oneliner = "키르케와 오디세우스의 아들. 모르고 아버지를 죽였다."
+body = """
+오디세우스가 키르케의 섬을 떠난 뒤에 태어났다.
+자라서 아버지가 누구인지 듣고 찾아 나섰다.
+이타케에서 소 떼를 두고 싸우다 모르고 오디세우스를 창으로 찔렀다.
+아버지의 몸과 페넬로페를 어머니에게 데려갔다.
+"""
+fun = "이름은 '멀리서 태어난 이'라는 뜻이다. 히기누스는 그와 페넬로페의 아들 이탈로스에게서 이탈리아라는 이름이 왔다고 적었다."
+note = "아폴로도로스 E.7.16(오디세우스가 키르케에게서 텔레고노스를 낳음)·E.7.36-E.7.37, 헤시오도스 1014. 형제 아그리오스·라티노스(헤시오도스 1013)는 라티누스의 parents_variant 로."
+sources = ["apollodorus.library E.7.16", "apollodorus.library E.7.36-E.7.37", "hesiod.theogony 1011-1016", "hyginus.fabulae 127"]

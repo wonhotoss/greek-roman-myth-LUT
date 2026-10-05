@@ -39,7 +39,7 @@ sources = ["virgil.aeneid 8.185-275", "livy.rome 1.7"]
 id = "picus-woodpecker"
 name_ko = "키르케가 피쿠스를 딱따구리로 바꾸다"
 era = 7
-seq = 1000
+seq = 5
 span = "moment"
 cast = [
   { figure = "picus", role = "피해" },
@@ -55,7 +55,7 @@ body = """
 뒤따라온 신하들도 여러 짐승으로 바뀌었다.
 """
 fun = "자주색 옷은 깃털 빛이 되고 금 브로치는 목의 금빛 털이 되었다. 딱따구리가 나무를 쪼는 것은 화가 나서라고 오비디우스는 적었다."
-note = "오비디우스는 라우렌툼의 들과 라티움의 숲이라고만 하고 어느 곳인지 특정하지 않아 장소를 비웠다."
+note = "오비디우스는 라우렌툼의 들과 라티움의 숲이라고만 하고 어느 곳인지 특정하지 않아 장소를 비웠다. seq 를 1000 에서 5 로 옮겼다(2026-10-05) — 피쿠스는 파우누스의 아버지, 라티누스의 할아버지라 아이네이아스가 닿기(latium-arrival, 870) 두 세대 전이어야 한다. 정확한 때는 원전에 없다(불확실-목록 E-5)."
 place_unknown = true
 sources = ["ovid.metamorphoses 14.320-396", "virgil.aeneid 7.187-191"]
 
@@ -63,7 +63,7 @@ sources = ["ovid.metamorphoses 14.320-396", "virgil.aeneid 7.187-191"]
 id = "kanens-fades"
 name_ko = "카넨스가 울다가 사라지다"
 era = 7
-seq = 1010
+seq = 6
 span = "days"
 place = "tiber"
 cast = [
@@ -79,6 +79,7 @@ body = """
 그 자리는 지금도 카넨스라고 불린다고 오비디우스는 적었다.
 """
 caused_by = ["picus-woodpecker"]
+note = "seq 를 1010 에서 6 으로 옮겼다(2026-10-05) — 피쿠스 사건과 함께 라티누스보다 두 세대 앞으로."
 sources = ["ovid.metamorphoses 14.397-434"]
 
 # ---------- era 8: 알바 롱가 ----------
