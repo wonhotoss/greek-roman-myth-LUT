@@ -42,6 +42,7 @@ outputs/                층 4. 산출물. 하나가 폴더 하나 — 렌더러�
   print/                render_print.py → print-{timeline,family,map,cards}.html
   agent/                render_agent.py → pack/
   poster/               포스터-구상.md (렌더러는 아직 없다)
+  quiz/                 render_quiz.py → quiz.html (4지선다 퀴즈)
 ```
 
 ## 돌리는 법
@@ -51,6 +52,7 @@ python db/tools/build.py             # db/data/*.toml 검증 → db/build/myth.j
 python outputs/web/render_web.py     # → outputs/web/myth.html      브라우저로 열면 끝
 python outputs/print/render_print.py # → outputs/print/print-*.html  브라우저에서 인쇄/PDF
 python outputs/agent/render_agent.py # → outputs/agent/pack/
+python outputs/quiz/render_quiz.py   # → outputs/quiz/quiz.html      4지선다 퀴즈 813문제
 python db/tools/render_sqlite.py     # → db/build/myth.sqlite        python db/tools/query.py 제우스
 ```
 
@@ -125,6 +127,10 @@ era 3 의 벌(`open` 이었던 것)의 끝을 `after` 로 붙잡고, 트로이 �
 
 ## 진행 기록
 
+- **2026-10-05** **퀴즈 게임** — 다섯째 산출물 `outputs/quiz/`. 인물·장소·사물을 맞추는 4지선다. 문제는 렌더러가 DB 에서
+  미리 뽑는다(인물 설명→이름, 사건→주인공, 부모, 상징물↔신, 맡은 일→신, 장소 설명→이름, 사건→장소. 답의 이름이 설명에
+  들어 있으면 버린다). 813문제, 한 판 열 문제, 한 번 나온 문제는 브라우저에 기록해 다 돌 때까지 다시 내지 않는다.
+  재편 뒤 첫 산출물이라 '폴더 하나 더, 렌더러는 myth.json 만' 규칙이 그대로 통하는지 확인한 셈이다.
 - **2026-10-05** **저장소의 의도를 네 층으로 적고 구조를 그에 맞췄다.** 원전 수집(`sources/`) → 파악·정리(`notes/`) →
   DB화(`db/`) → 산출물(`outputs/`). 그 전에는 `data/`·`tools/`·`build/` 가 역할이 아니라 종류로 나뉘어 있어 TOML 과
   렌더러와 결과물이 어느 층의 것인지 경로가 말해 주지 않았다. 이제 각 층이 폴더 하나이고 README 가 하나씩 있다.
