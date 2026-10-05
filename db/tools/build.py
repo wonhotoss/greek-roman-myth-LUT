@@ -1,4 +1,4 @@
-"""data/*.toml -> build/myth.json
+"""db/data/*.toml -> db/build/myth.json
 
 검증하고, 파생 필드(children, 등장 사건, 장소별 사건, 타래의 순서 표시)를 만들고, 정렬해서 하나로 합친다.
 스키마는 데이터-모델.md 가 원본이다.
@@ -6,7 +6,7 @@
 깨지면 즉시 죽는다. 기본값을 채워 넣거나 없는 참조를 건너뛰지 않는다.
 데이터가 틀린 채로 산출물이 나오는 것이 최악이다.
 
-    python tools/build.py
+    python db/tools/build.py
 """
 
 import json
@@ -18,9 +18,9 @@ from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
-ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
-OUT = ROOT / "build" / "myth.json"
+ROOT = Path(__file__).resolve().parents[2]   # 저장소 루트
+DATA = ROOT / "db" / "data"
+OUT = ROOT / "db" / "build" / "myth.json"
 
 COMMON = {"id", "name_ko", "aka", "oneliner", "body", "fun", "sources", "sensitivity", "note", "record"}
 REQUIRED_COMMON = {"id", "name_ko", "oneliner", "body", "sources"}
@@ -302,7 +302,7 @@ def audit_uncertain(events, eras, places, arcs, out_path):
     lines = [
         "# 불확실 점검 — 자동 생성",
         "",
-        "`tools/build.py` 가 만든다. 직접 고치지 말고 `data/` 를 고쳐 다시 만든다.",
+        "`db/tools/build.py` 가 만든다. 직접 고치지 말고 `db/data/` 를 고쳐 다시 만든다.",
         "판단과 처리 방침은 [../불확실-목록.md](../불확실-목록.md) 에 있다.",
         "",
         f"## 1. 같은 묶음 안에서 순서를 모르는 짝 — {len(order_gaps)}건",
@@ -624,7 +624,7 @@ def main():
     print(f"검증 통과 — {OUT.relative_to(ROOT).as_posix()} ({OUT.stat().st_size:,} bytes)")
     print(f"  시간축 길이 {axis['total']}칸, 여러 시대에 걸친 사건 "
           f"{sum(1 for e in events if e['t1'] > axis['eras'][str(e['era'])][1])}건")
-    print(f"  불확실 점검 → build/불확실-점검.md — 순서를 seq 가 정한 짝 {gaps}건, "
+    print(f"  불확실 점검 → db/build/불확실-점검.md — 순서를 seq 가 정한 짝 {gaps}건, "
           f"장소를 아직 넣지 않은 사건 {noplace}건 (원전이 말하지 않는 것 {unknown}건은 따로)")
     print(f"  인물 {len(figures)}  사건 {len(events)}  장소 {len(places)}"
           f"  묶음서사 {len(arcs)}  타래 {len(threads)}  원전 {len(sources)}")

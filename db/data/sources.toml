@@ -1,5 +1,6 @@
 # 원전 목록. 항목의 sources = ["<id> <위치>"] 형태로 이 id를 참조한다.
-# file 이 있는 것은 sources/ 에 원문(공개 도메인 번역)이 함께 커밋되어 있다.
+# file 이 있는 것은 sources/ 에 원문(공개 도메인 번역)이 함께 커밋되어 있다. 경로는 저장소 루트 기준.
+# 원전별 구성·위치 표기·대조 상태는 notes/원전별-파악.md 에 있다.
 
 [[source]]
 id = "hesiod.theogony"
@@ -55,8 +56,8 @@ title_ko = "변신 이야기"
 title_orig = "Metamorphoses"
 written = "기원후 8년"
 file = "sources/ovid-metamorphoses-1-7-more.txt"
-translator = "Brookes More (1922)"
-note = "8~15권은 sources/ovid-metamorphoses-8-15-more.txt"
+translator = "Henry T. Riley (산문역, Gutenberg 판은 1893년 Bell 판)"
+note = "8~15권은 sources/ovid-metamorphoses-8-15-more.txt. 파일 이름의 more 는 틀린 것 — Gutenberg #21765·#26073 은 Riley 역이다(2026-10-05 확인)."
 
 [[source]]
 id = "virgil.aeneid"
@@ -74,8 +75,8 @@ title_ko = "로마사"
 title_orig = "Ab Urbe Condita"
 written = "기원전 27년쯤"
 file = "sources/livy-rome-1-8-roberts.txt"
-translator = "Canon Roberts (1912)"
-note = "1권이 로마 건국 신화. era 8의 주 출처."
+translator = "D. Spillan"
+note = "1권이 로마 건국 신화. era 8의 주 출처. 파일 이름의 roberts 는 틀린 것 — Gutenberg #19725 는 Spillan 역이다(2026-10-05 확인)."
 
 [[source]]
 id = "pausanias.greece"
@@ -84,8 +85,8 @@ title_ko = "그리스 안내기"
 title_orig = "Hellados Periegesis"
 written = "기원후 2세기"
 file = "sources/pausanias-greece-v1-frazer.txt"
-translator = "J. G. Frazer (1898)"
-note = "실제로 그리스를 걸어다니며 '이 이야기는 여기서 일어났다'를 기록했다. 장소 데이터의 주 출처."
+translator = "A. R. Shilleto (1886)"
+note = "파일 이름의 frazer 는 틀린 것 — Gutenberg #68946·#68680 은 Shilleto 역이다(2026-10-05 확인). 실제로 그리스를 걸어다니며 '이 이야기는 여기서 일어났다'를 기록했다. 장소 데이터의 주 출처."
 
 [[source]]
 id = "hyginus.fabulae"
@@ -101,11 +102,11 @@ note = "다른 데 없는 이설을 많이 보존하고 있다. variants 의 주
 id = "bulfinch"
 author_ko = "토머스 불핀치"
 title_ko = "그리스 로마 신화"
-title_orig = "The Age of Fable"
+title_orig = "Bulfinch's Mythology (The Age of Fable)"
 written = "1855년"
 file = "sources/bulfinch-mythology.txt"
 translator = "원문 영어"
-note = "원전이 아니라 19세기 재화. 원전 근거로 쓰지 않는다. '아이 수준으로 어떻게 줄이는가'의 참고용."
+note = "19세기 재화. 수집 방침상 원전으로 두되(원전/재창작의 기준 미정, sources/README.md) 항목 근거로는 아직 인용하지 않았다. '아이 수준으로 어떻게 줄이는가'의 참고용. 파일은 Age of Fable 뿐 아니라 Bulfinch's Mythology 전체다."
 
 [[source]]
 id = "homeric.hymns"

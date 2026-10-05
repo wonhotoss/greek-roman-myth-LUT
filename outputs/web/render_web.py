@@ -1,4 +1,4 @@
-"""build/myth.json -> build/myth.html
+"""db/build/myth.json -> outputs/web/myth.html
 
 혼자 탐색하는 단일 파일 페이지. 인터넷 없이 열린다. 데이터는 HTML 안에 박아 넣는다.
 다섯 가지로 찾는다 — 언제 어디서(시간축 커서 + 반응하는 지도), 시간순(연표),
@@ -6,7 +6,7 @@
 
 내부 필드(note, sensitivity, record)는 그리지 않는다. 아이가 보는 화면이다. 묻힌 JSON 에는 들어 있다 — 뷰 소스로는 보인다.
 
-    python tools/build.py && python tools/render_web.py
+    python db/tools/build.py && python outputs/web/render_web.py
 """
 
 import json
@@ -15,10 +15,10 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT = Path(__file__).resolve().parent.parent
-BUNDLE = ROOT / "build" / "myth.json"
-GEO = ROOT / "data" / "geo" / "mediterranean.json"
-OUT = ROOT / "build" / "myth.html"
+ROOT = Path(__file__).resolve().parents[2]   # 저장소 루트
+BUNDLE = ROOT / "db" / "build" / "myth.json"
+GEO = ROOT / "db" / "data" / "geo" / "mediterranean.json"
+OUT = ROOT / "outputs" / "web" / "myth.html"
 
 HTML = """<!DOCTYPE html>
 <html lang="ko">

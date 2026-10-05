@@ -1,4 +1,4 @@
-"""build/myth.json -> build/myth.sqlite
+"""db/build/myth.json -> db/build/myth.sqlite
 
 질의용 DB. TOML 이 진실의 원본이고 이것은 다른 셋과 같은 **산출물**이다 — 데이터를 고치면 다시 만든다.
 지식팩 900KB 를 통째로 읽는 대신 필요한 항목만 뽑아 읽게 하는 것이 첫 목적이고,
@@ -10,12 +10,12 @@
   - 빌드가 계산한 값(t0·t1, event.arc, 타래의 unsure)도 넣는다. 산출물이므로 파생 값을 담아도
     HANDOFF 규칙 6 에 어긋나지 않는다. 검사는 빌드가 이미 했고, 여기서는 외래 키로 한 번 더 걸린다.
   - search 는 FTS5 trigram. 한국어는 조사가 붙어 낱말 단위 색인이 맞지 않으므로 세 글자 조각으로 찾는다.
-    두 글자 이름(헤라·레토)은 trigram 으로 못 찾는다 — tools/query.py 가 그때 LIKE 로 돈다.
+    두 글자 이름(헤라·레토)은 trigram 으로 못 찾는다 — db/tools/query.py 가 그때 LIKE 로 돈다.
   - public_* 뷰는 note·sensitivity·record 를 뺀 것이다. 아이가 보는 쪽은 이 뷰만 읽는다.
   - card_figure / card_event 뷰는 카드 한 장에 들어갈 것을 한 줄로 모은 것이다.
 
-    python tools/build.py && python tools/render_sqlite.py
-    python tools/query.py 제우스
+    python db/tools/build.py && python db/tools/render_sqlite.py
+    python db/tools/query.py 제우스
 """
 
 import json
@@ -25,9 +25,9 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT = Path(__file__).resolve().parent.parent
-BUNDLE = ROOT / "build" / "myth.json"
-OUT = ROOT / "build" / "myth.sqlite"
+ROOT = Path(__file__).resolve().parents[2]   # 저장소 루트
+BUNDLE = ROOT / "db" / "build" / "myth.json"
+OUT = ROOT / "db" / "build" / "myth.sqlite"
 
 SCHEMA = """
 CREATE TABLE era (
@@ -417,7 +417,7 @@ def main():
         "AND name NOT LIKE 'search_%' ORDER BY name")]
     counts = {t: con.execute(f"SELECT count(*) FROM {t}").fetchone()[0] for t in tables}
     con.close()
-    print(f"build/myth.sqlite — {OUT.stat().st_size:,} bytes, SQLite {sqlite3.sqlite_version}")
+    print(f"db/build/myth.sqlite — {OUT.stat().st_size:,} bytes, SQLite {sqlite3.sqlite_version}")
     print("  " + "  ".join(f"{t} {n}" for t, n in counts.items()))
 
 

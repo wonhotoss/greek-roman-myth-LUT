@@ -1,4 +1,4 @@
-"""build/myth.json -> build/agent-pack/
+"""db/build/myth.json -> outputs/agent/pack/
 
 아이의 질문에 에이전트가 답하기 위한 지침 + 지식 팩.
 음성 앞단(my-talking-claw, github.com/wonhotoss/my-talking-claw)이 `claude -p` 로 부르는
@@ -8,7 +8,7 @@
   1. sensitivity 와 내부 메모를 **에이전트에게는 보여준다.** 무엇을 말하지 않을지 알아야 한다.
   2. 본문을 그대로 읽어 주는 것이 아니라, 세 문장으로 줄여 말하게 한다.
 
-    python tools/build.py && python tools/render_agent.py
+    python db/tools/build.py && python outputs/agent/render_agent.py
 """
 
 import json
@@ -18,10 +18,10 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT = Path(__file__).resolve().parent.parent
-BUNDLE = ROOT / "build" / "myth.json"
-GUIDE = ROOT / "집필-지침.md"
-OUT = ROOT / "build" / "agent-pack"
+ROOT = Path(__file__).resolve().parents[2]   # 저장소 루트
+BUNDLE = ROOT / "db" / "build" / "myth.json"
+GUIDE = ROOT / "db" / "집필-지침.md"
+OUT = ROOT / "outputs" / "agent" / "pack"
 
 KIND = {"primordial": "첫 신", "titan": "티탄", "god": "올림포스 신", "hero": "영웅",
         "human": "사람", "monster": "괴물", "nymph": "님프", "group": "무리"}
@@ -271,9 +271,9 @@ def main():
                     f"{s['title_orig']} | {s['written']} |" for s in D["sources"])
         + "\n", encoding="utf-8")
 
-    (OUT / "README.md").write_text(f"""# agent-pack — 음성 에이전트에 얹는 방법
+    (OUT / "README.md").write_text(f"""# pack — 음성 에이전트에 얹는 방법
 
-이 폴더는 `tools/render_agent.py` 가 만든 산출물이다. 직접 고치지 말고 `data/` 를 고쳐 다시 만든다.
+이 폴더는 `outputs/agent/render_agent.py` 가 만든 산출물이다. 직접 고치지 말고 `db/data/` 를 고쳐 다시 만든다.
 
 ## my-talking-claw 에 붙이기
 
@@ -281,31 +281,31 @@ def main():
 이 폴더를 그 프로세스의 작업 디렉터리로 주면 `CLAUDE.md` 가 자동으로 읽힌다.
 
 ```sh
-cd build/agent-pack
+cd outputs/agent/pack
 claude -p "제우스는 누구야?"
 ```
 
 작업 디렉터리를 바꿀 수 없으면 지침을 직접 얹는다.
 
 ```sh
-claude -p --append-system-prompt "$(cat build/agent-pack/CLAUDE.md)" "제우스는 누구야?"
+claude -p --append-system-prompt "$(cat outputs/agent/pack/CLAUDE.md)" "제우스는 누구야?"
 ```
 
 ## 들어 있는 것
 
 - `CLAUDE.md` — 에이전트 지침. 어떻게 답할지
-- `집필-지침.md` — 문장·이름·수위·톤 규칙. `data/` 를 쓸 때와 같은 기준
+- `집필-지침.md` — 문장·이름·수위·톤 규칙. `db/data/` 를 쓸 때와 같은 기준
 - `knowledge/` — 지식 {len(D['figures'])}인물 / {len(D['events'])}사건 / {len(D['places'])}장소 / {len(D['arcs'])}묶음서사 / {len(D['threads'])}타래
 
 ## 화면용과 다른 점
 
-화면(`build/myth.html`)에는 `민감도`와 `내부 메모`를 그리지 않는다. 아이가 보는 것이다.
+화면(`outputs/web/myth.html`)에는 `민감도`와 `내부 메모`를 그리지 않는다. 아이가 보는 것이다.
 에이전트에게는 준다. **무엇을 말하지 않을지 알아야 하기 때문이다.**
 """, encoding="utf-8")
 
     files = sorted(OUT.rglob("*"))
     total = sum(f.stat().st_size for f in files if f.is_file())
-    print(f"build/agent-pack/ — 파일 {sum(1 for f in files if f.is_file())}개, {total:,} bytes")
+    print(f"outputs/agent/pack/ — 파일 {sum(1 for f in files if f.is_file())}개, {total:,} bytes")
     for f in files:
         if f.is_file():
             print(f"  {f.relative_to(OUT).as_posix()}  {f.stat().st_size:,}")

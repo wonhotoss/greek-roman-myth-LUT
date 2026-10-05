@@ -1,46 +1,76 @@
-# 그리스 로마 신화 — 아이가 시간·땅·사람으로 찾아보는 것
+# 그리스 로마 신화 — 원전에서 아이의 손까지
 
-신화에 빠진 **혼자 읽는 8~10세 아이**를 위해, 그리스 로마 신화를
-**시간순·지리·인물·사건**으로 찾아볼 수 있게 만든다. 2026-09-02 착수,
-2026-09-03 에 `wonhotoss/scratch` 인큐베이터에서 이 저장소로 분리했다.
+그리스 로마 신화의 원전을 모으고, 읽어 정리하고, 구조화한 DB 로 만들고, 그 DB 에서 산출물을 뽑는 저장소다.
+첫 산출물의 독자는 **혼자 읽는 8~10세 아이**다 — 신화를 시간순·지리·인물·사건으로 찾아보게 하는 것.
+2026-09-02 착수, 2026-09-03 `wonhotoss/scratch` 인큐베이터에서 분리, 2026-10-05 네 층으로 재편.
 
-## 핵심 판단 — 무엇을 만들지 먼저 고르지 않는다
+## 이 저장소가 하는 일 — 네 층
 
-만들 후보가 셋이었다. 기기에서 아이가 혼자 탐색하는 인터랙티브,
-질문에 에이전트가 답하는 지침 집합, 벽에 붙이는 인쇄물.
-셋 다 하기로 했고, 그래서 **어느 것도 먼저 만들지 않는다.**
+| 층 | 폴더 | 하는 일 | 형태 |
+|---|---|---|---|
+| 1 | [sources/](sources/README.md) | **원전을 수집한다.** 원전과 복각·재창작을 가르는 기준이 아직 없으므로, 수집한 문서는 **일단 모두 원전으로 둔다** | 공개 도메인 원문 전문 |
+| 2 | [notes/](notes/README.md) | **수집한 내용을 파악하고 정리한다.** 각 원전이 무엇이고 어떻게 구성되어 있는지, 같은 이야기를 원전들이 어떻게 다르게 하는지, 무엇을 아직 안 읽었는지 | 자연어 문서 |
+| 3 | [db/](db/README.md) | **DB 로 만든다.** 수집·정리한 지식을 명확하고 구조화된 형태로 — 인물·사건·장소·시대와 그 관계를 id 로 잇는다 | TOML(원본) → JSON·SQLite(빌드) |
+| 4 | [outputs/](outputs/README.md) | **산출물을 만든다.** 탐색 웹페이지, 인쇄물, 음성 에이전트 팩, 인포그래픽 포스터(구상). 계속 더해진다 | 렌더러 + 결과물 |
 
-셋이 공통으로 요구하는 것은 하나다 — **인물·사건·장소·시대와 그 관계가
-기계가 읽을 수 있는 형태로 정리된 것.** 웹앱을 먼저 만들면 데이터가 코드와
-뷰에 갇혀 인쇄물로 못 나오고, 문서를 먼저 쓰면 관계(계보·인과·이동)가
-문장 안에 녹아 검색·연결이 안 된다.
+층은 앞에서 뒤로만 흐른다. 산출물은 DB 만 읽고, DB 는 원전에 있는 것만 적고, 읽으며 안 것 가운데
+DB 에 들어가지 않는 것은 정리 층에 남는다. 거꾸로 — 산출물에 필요한 값을 렌더러 안에서 만들거나,
+원전에 없는 것을 DB 에 쓰는 일 — 은 하지 않는다.
 
 ```
-data/*.toml  --build.py-->  build/myth.json
-                                 |
-        +------------------------+------------------------+------------------------+
-        |                        |                        |                        |
-  render_web.py           render_print.py          render_agent.py          render_sqlite.py
-        |                        |                        |                        |
-  build/myth.html        build/print-*.html      build/agent-pack/        build/myth.sqlite
- 단일 파일·오프라인       A3/A4 인쇄용             my-talking-claw 용       질의용 DB (query.py)
+sources/              notes/                 db/                              outputs/
+원전 (.txt)   ──읽기──▶ 파악·정리 (.md)  ──쓰기──▶ data/*.toml ──build.py──▶ build/myth.json ──render_*.py──▶ web/   print/   agent/   poster/
+                                                                   └──▶ build/myth.sqlite (질의)
 ```
 
-렌더러는 데이터를 읽기만 한다. 항목 하나를 고치면 세 산출물이 같이 바뀐다.
+## 구조
 
-2026-09-03 에 넷째 축으로 **인포그래픽 포스터**(벽에 붙이는 한 장, 스트리트H 식)를 더했다.
-조사와 구상안은 [포스터-구상.md](포스터-구상.md) 에 있다. 데이터가 먼저라는 판단은 그대로다 —
-포스터도 `build/myth.json` 을 읽는 렌더러 하나로 나오게 한다.
+```
+README.md               이 문서 — 의도와 구조
+HANDOFF.md              처음 여는 사람이 읽을 것 — 이력, 규칙 여덟, 다음에 할 일
+sources/                층 1. 원전. README 에 목록·출처·재현 절차·수집 방침
+  tools/                수집에만 쓰는 스크립트 (extract_hyginus.py)
+notes/                  층 2. 파악·정리. README 에 무엇을 어떻게 적는지
+  원전별-파악.md         원전 열넷의 구성·위치 표기·대조 상태
+db/                     층 3. DB화
+  data/                 TOML 원본 (figures/ events/ places/ arcs threads sources eras geo)
+  tools/                build.py (검증·파생·불확실 점검) render_sqlite.py query.py clip_geo.py
+  build/                myth.json (커밋) myth.sqlite (커밋 안 함) 불확실-점검.md
+  데이터-모델.md 집필-지침.md 불확실-목록.md
+outputs/                층 4. 산출물. 하나가 폴더 하나 — 렌더러와 결과물을 같이 둔다
+  web/                  render_web.py → myth.html
+  print/                render_print.py → print-{timeline,family,map,cards}.html
+  agent/                render_agent.py → pack/
+  poster/               포스터-구상.md (렌더러는 아직 없다)
+```
+
+## 돌리는 법
+
+```sh
+python db/tools/build.py             # db/data/*.toml 검증 → db/build/myth.json
+python outputs/web/render_web.py     # → outputs/web/myth.html      브라우저로 열면 끝
+python outputs/print/render_print.py # → outputs/print/print-*.html  브라우저에서 인쇄/PDF
+python outputs/agent/render_agent.py # → outputs/agent/pack/
+python db/tools/render_sqlite.py     # → db/build/myth.sqlite        python db/tools/query.py 제우스
+```
+
+의존성 없음. 표준 라이브러리 `tomllib` 과 `sqlite3` 만 쓴다(파이썬 3.11+).
+`build.py` 는 **깨지면 즉시 죽는다** — 없는 id, 스키마에 없는 필드, 순환, `seq` 충돌, 타래 순서 어긋남.
+기본값을 채우거나 참조를 건너뛰지 않는다. 틀린 데이터로 아이에게 갈 산출물이 나오는 것이 최악이다.
 
 ## 문서
 
 | 파일 | 내용 |
 |---|---|
-| [HANDOFF.md](HANDOFF.md) | **이 저장소를 처음 여는 사람이 먼저 읽을 것.** 이력, 돌리는 법, 어기면 안 되는 규칙 여덟, 항목을 하나 더 쓰는 절차, 다음에 할 일 |
-| [데이터-모델.md](데이터-모델.md) | 스키마와 그 근거. **시간축에 연대가 없는 문제**, 실제 땅과 신화 속 세계를 섞지 않는 문제, 이름이 셋인 문제, 이설, 수위, **사건이 점이 아니라 구간인 문제** — 여섯 가지 모델링 난제와 해법 |
-| [집필-지침.md](집필-지침.md) | 8~10세 문장 규칙, 이름 표기, **무엇을 그대로 주고 무엇을 완화하는가**, 톤, 대화 에이전트 추가 규칙 |
-| [불확실-목록.md](불확실-목록.md) | **순서와 위치를 모르는 것들.** 추후에 정리한다. 기계로 뽑는 부분은 빌드가 [`build/불확실-점검.md`](build/불확실-점검.md) 로 만들고, 이 문서는 그에 대한 판단이다 |
-| [포스터-구상.md](포스터-구상.md) | **넷째 축, 인포그래픽 포스터.** 스트리트H 조사, 아이용 내용 구성 원칙, 구상안 여섯, 그림·인쇄 파이프라인(Anthropic 도구로 되는 것과 안 되는 것), A4 프린터로 시험하는 법, 진행 단계 |
+| [HANDOFF.md](HANDOFF.md) | **처음 여는 사람이 먼저 읽을 것.** 이력, 어기면 안 되는 규칙 여덟, 항목을 하나 더 쓰는 절차, 다음에 할 일 |
+| [sources/README.md](sources/README.md) | 원전 목록, 출처, 본문 안의 위치 표시, 다시 받는 법, 수집 방침 |
+| [notes/README.md](notes/README.md) · [notes/원전별-파악.md](notes/원전별-파악.md) | 정리 층의 규칙과 첫 문서 |
+| [db/README.md](db/README.md) | DB 층 — 무엇이 원본이고 무엇이 빌드인지, 항목 하나 더 쓰는 절차 |
+| [db/데이터-모델.md](db/데이터-모델.md) | 스키마와 그 근거. 연대 없는 시간축, 실제 땅과 신화 속 세계, 이름 셋, 이설, 수위, 구간, 타래 |
+| [db/집필-지침.md](db/집필-지침.md) | 8~10세 문장 규칙, 이름 표기, 무엇을 그대로 주고 무엇을 완화하는가, `record` |
+| [db/불확실-목록.md](db/불확실-목록.md) | DB 가 모르는 것에 대한 판단. 기계로 뽑는 부분은 [db/build/불확실-점검.md](db/build/불확실-점검.md) |
+| [outputs/README.md](outputs/README.md) | 산출물 목록과 공통 규칙 |
+| [outputs/poster/포스터-구상.md](outputs/poster/포스터-구상.md) | 인포그래픽 포스터 조사와 구상안 |
 
 ## 지금 있는 것 — 아홉 시대 전부
 
@@ -74,150 +104,7 @@ era 3 의 벌(`open` 이었던 것)의 끝을 `after` 로 붙잡고, 트로이 �
 「다이달로스의 일생」(아테네에서 쫓겨남부터 헤라클레스가 이카로스를 묻기까지 여섯 단계, era 4~5),
 「페르세우스의 집안, 미케네의 왕들」(황금 비에서 에우리스테우스의 죽음과 아트레우스까지 열 단계, era 4~5). 같은 시대 안에서 앞뒤를 원전이 말하지 않는
 짝은 화면이 "어느 것이 먼저인지는 옛 책에 없다"고 적는다 — **순서를 모른다는 표시가 화면에 처음 나온 곳이다**
-([데이터-모델.md](데이터-모델.md) §7).
-
-## 돌리는 법
-
-```sh
-python tools/build.py          # data/*.toml 검증 → build/myth.json
-python tools/render_web.py     # → build/myth.html      (브라우저로 열면 끝)
-python tools/render_print.py   # → build/print-*.html   (브라우저에서 인쇄/PDF)
-python tools/render_agent.py   # → build/agent-pack/
-python tools/render_sqlite.py  # → build/myth.sqlite    (질의용 DB. python tools/query.py 제우스)
-```
-
-의존성 없음. 표준 라이브러리 `tomllib` 과 `sqlite3` 만 쓴다(파이썬 3.11+).
-
-`build.py` 는 **깨지면 즉시 죽는다.** 없는 id 를 가리키거나 스키마에 없는 필드가 있으면
-그 자리에서 파일·항목·이유를 찍고 종료한다. 기본값을 채우거나 참조를 건너뛰지 않는다.
-데이터가 틀린 채로 아이에게 갈 산출물이 나오는 것이 최악이다.
-
-## 산출물
-
-### `build/myth.html` — 기기에서 혼자 탐색
-
-단일 파일, 오프라인. 여섯 탭 — 언제 어디서 / 시간순 / 땅과 세계 / 계보 / 이야기 / 모두.
-왼쪽에서 무엇을 눌러도 오른쪽 상세가 바뀌고, 상세 안의 인물·사건·장소가 다시 링크다.
-
-- **언제 어디서** — 첫 화면. 눈금 없는 하나의 시간축에 모든 사건이 **구간**으로 누워 있고,
-  커서를 끌거나 굴리면 그 자리에서 벌어지고 있는 이야기가 **오른쪽 위 목록**에 뜨고
-  아래 두 지도에 켜진다. 목록에서 하나를 누르면 그 아래에 내용이 나온다.
-  줄은 이야기 묶음별로 나뉘고, 겹치는 사건은 하위 줄로 내려간다.
-  구간 좌표는 데이터에 없다 — 인과·포함·시대 제약을 빌드가 풀어 낸다([데이터-모델.md](데이터-모델.md) §6)
-- **시간순** — 아홉 시대 띠. 각 시대의 사건과 그때 나오는 인물
-- **땅과 세계** — 실제 지도(에게해 해안선, 좌표대로 찍힌 장소)와 우주 도해(하늘–땅–땅속 + 오케아노스)를 **분리**. 이야기 속의 곳을 고르면 도해로 자동 전환
-- **계보** — 부모→자식 들여쓰기 나무. 뿌리가 여럿이라는 사실을 그대로 보여준다
-- **이야기** — 위에 타래 셋, 아래에 묶음 서른셋. 타래의 단계 사이에 순서를 모르는 곳은 "옛 책에 없다"고 적혀 있다.
-  사건 상세에는 그 사건이 지나는 타래가 함께 나온다
-- **검색** — 주피터, 헤르쿨레스, Zeus 로도 찾힌다(`aka`/`name_grc`/`name_la` 전부 걸림)
-- 주소에 상태가 남는다(`#지도:medousa`, `#언제어디서@53:medusa-slain` — 커서 위치까지).
-  다시 열거나 보내 줄 수 있다
-
-지도는 지금 데이터에 있는 장소들에 맞춰 자동으로 잘린다. 해안선 원본은 카르타고(동경 10.3)와
-카우카소스(동경 44.5)에서 2도쯤 여유가 남도록 다시 잘라 두었다(`tools/clip_geo.py`).
-
-### `build/print-*.html` — 인쇄물
-
-| 파일 | 판형 | 내용 |
-|---|---|---|
-| `print-timeline.html` | A3 가로 | 시대별 연표. 시대마다 한 구획이고 사건은 여러 단으로 흐른다(A3 5쪽) |
-| `print-family.html` | A3 세로 | 계보도, 3단 |
-| `print-map.html` | A3 가로 | 실제 지도 + 우주 도해 + 장소 표(지금의 지명 포함) |
-| `print-cards.html` | A4 세로 | 인물 카드 72장, 한 줄에 둘. 잘라서 쓰는 것 |
-
-브라우저에서 열고 인쇄하면 `@page` 대로 나온다. 화면용 페이지를 인쇄한 것이 아니라 종이용으로 따로 짰다.
-
-### `build/agent-pack/` — 질문에 답하는 대화
-
-[`my-talking-claw`](https://github.com/wonhotoss/my-talking-claw)(브라우저 STT → `claude -p` → TTS)가
-부르는 에이전트에 그대로 얹는다. 별도 앱이 필요 없다.
-
-```sh
-cd build/agent-pack && claude -p "제우스는 누구야?"
-# 또는
-claude -p --append-system-prompt "$(cat build/agent-pack/CLAUDE.md)" "주피터가 누구야?"
-```
-
-`CLAUDE.md`(지침) + `집필-지침.md`(문장·수위 규칙) + `knowledge/`(색인·시대·인물·사건·장소·묶음·타래·원전). 다 합쳐 900KB.
-
-**화면용과 다른 점:** 화면에는 `sensitivity`와 편집 메모를 그리지 않는다. 아이가 보는 것이다.
-에이전트에게는 준다 — 무엇을 말하지 않을지 알아야 하기 때문이다.
-
-### `build/myth.sqlite` — 질의용 DB
-
-2026-09-22 에 더한 다섯째 산출물. **TOML 이 그대로 진실의 원본**이고 이것은 다른 셋과 같은 산출물이다 —
-`tools/render_sqlite.py` 가 `myth.json` 만 읽어 만든다. 표 하나가 항목 종류 하나, 관계는 전부 표다
-(`figure_parent`, `event_cast`, `event_cause`, `event_after`, `arc_event`, `thread_step` …). `entry` 가 다섯 종류를 아우르는
-색인이고, 빌드가 계산한 t0·t1·`event.arc`·타래의 `unsure` 도 들어 있다. 외래 키와 CHECK 가 빌드의 검증을 한 번 더 건다.
-
-```sh
-python tools/query.py 제우스                # 검색 — 이름·다른 표기·한 줄·본문·재밌는 것
-python tools/query.py figure zeus           # 인물 한 장. event / place / arc / thread 도 같다
-python tools/query.py cards god             # 인물 카드 표 (card_figure 뷰)
-python tools/query.py sql "SELECT ..."      # 아무 SQL
-```
-
-- 검색은 FTS5 **trigram** 이다. 한국어는 조사가 붙어 낱말 색인이 맞지 않아, 세 글자 조각으로 본문 어디든 찾는다.
-  두 글자 이름(헤라·레토)은 trigram 으로 못 찾으므로 `query.py` 가 이름 LIKE 로 돈다.
-- `public_*` 뷰에는 `note` 와 `sensitivity` 가 없다. 아이가 보는 쪽은 이 뷰만 읽는다.
-- `card_figure` / `card_event` 뷰는 카드 한 장에 들어갈 것을 한 줄로 모은 것이다 — 표시·맡은 일·부모와 사건 수·주인공 수·상대 수·자식 수.
-  포스터와 다른 쓰임이 여기서 나온다. 짝 맞추기(신–상징물 56, 부모–자식 262), 순서 맞추기(사건 5개 이상인 묶음 22, 타래 2),
-  대결(주인공–상대, 헤라클레스–헤라 5회), 함께 나온 둘(아가멤논–오디세우스 14회) 같은 놀이의 재료가 표 한 번으로 나온다.
-  `soften` 항목은 뷰에 표시가 남아 있어 걸러 낼 수 있다.
-- **이 파일은 커밋하지 않는다**(`.gitignore`). 2.4MB 이진 파일이라 고칠 때마다 이력이 붓고, `myth.json` 에서 언제든 다시 만든다.
-  `build/` 를 커밋한다는 규칙의 유일한 예외다.
-- 첫 목적은 에이전트다 — 지식팩 900KB 를 통째로 읽는 대신 `query.py` 로 필요한 항목만 뽑아 읽게 하는 것.
-  아직 `agent-pack` 에 붙이지는 않았다.
-
-### `build/poster-*.pdf` — 인포그래픽 포스터 (구상 단계)
-
-아직 렌더러가 없다. 무엇을 어떻게 만들지는 [포스터-구상.md](포스터-구상.md) 에 있다 — 한 장에 묶음서사 하나,
-가운데 다이어그램 하나, 그림은 공개 도메인 도기 도판 또는 외부 생성기, 판형은 A2(A4 넷) 또는 50×70cm,
-집의 A4 프린터로 타일 인쇄해 시안을 보고 확정본만 전문 출력한다. 첫 장은 「헤라클레스의 열두 가지 일」.
-
-## 자료 목록 및 재현 절차
-
-집필 근거는 전부 공개 도메인 원전 번역이다. `sources/` 에 원문을 함께 커밋했다.
-**범위와 순서**의 참고는 미래엔아이세움 『처음 읽는 그리스 로마 신화』(최설희 글, 전 15권)이다.
-이 책은 어린이용 현대 재화이므로 `sources` 에 인용하지 않고, `data/sources.toml` 에 `aiseum.first-myth`
-로 적어 두기만 했다. 대응은 항목의 `note` 에 "참고: N권 M장 「소제목」" 으로 남긴다.
-원전별 인용 수 — 아폴로도로스 670 · 오디세이아 225 · 일리아스 193 · 변신 이야기 190 · 아이네이스 172 ·
-신들의 계보 130 · 파우사니아스 126 · 리비우스 67 · 히기누스 23 · 일과 날 8 · 호메로스 찬가 5.
-
-```
-sources/
-  hesiod-homerichymns-evelyn-white.txt   Gutenberg #348   신들의 계보·일과 날 + **호메로스 찬가** (Evelyn-White 1914)
-  apollodorus-library-{1,2,3,E}-frazer.{html,txt}         신화집 (Frazer 1921) — theoi.com
-  homer-iliad-butler.txt                 Gutenberg #2199
-  homer-odyssey-butler.txt               Gutenberg #1727
-  ovid-metamorphoses-1-7-more.txt        Gutenberg #21765
-  ovid-metamorphoses-8-15-more.txt       Gutenberg #26073
-  virgil-aeneid-dryden.txt               Gutenberg #228
-  livy-rome-1-8-roberts.txt              Gutenberg #19725  1권이 로마 건국 신화 (era 8)
-  pausanias-greece-v{1,2}-frazer.txt     Gutenberg #68946, #68680  장소 데이터의 주 출처
-  hyginus-fabulae-grant.txt              topostext.org/work/206  이야기 모음 **전문**(Mary Grant 1960 — ToposText 가 공개 도메인이라 밝힘). 우화 번호가 `[57]` 로 남아 있다
-  bulfinch-mythology.txt                 Gutenberg #4928   19세기 재화. 원전 근거로 쓰지 않는다
-  geo/ne_50m_land.geojson                Natural Earth 50m 육지 (public domain)
-```
-
-갱신:
-
-```sh
-curl -sSL -O "https://www.gutenberg.org/cache/epub/<번호>/pg<번호>.txt"
-curl -sSL -A "Mozilla/5.0" -O "https://www.theoi.com/Text/Apollodorus1.html"
-curl -sSL -A "Mozilla/5.0" -o hyginus.html "https://topostext.org/work/206"
-python tools/extract_hyginus.py hyginus.html sources/hyginus-fabulae-grant.txt   # 우화 번호를 [57] 로 남긴다
-curl -sSL -o sources/geo/ne_50m_land.geojson \
-  "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_land.geojson"
-python tools/clip_geo.py    # geojson → data/geo/mediterranean.json (지중해 동부로 잘라 좌표 축소)
-```
-
-theoi.com 의 HTML 은 `tools/render_*.py` 와 무관한 일회성 추출로 `.txt` 를 함께 두었다.
-히기누스는 theoi.com 이 지금 페이지마다 우화 넷씩만 내주어(2026-09-03 확인) 같은 Grant 번역 전문을 싣는
-ToposText 에서 받았다 — `tools/extract_hyginus.py` 가 지명 링크를 벗기고 우화 번호를 `[57]` 로 남긴다.
-아폴로도로스의 절 번호(`[2.4.2]`)와 헤시오도스의 행 번호(`(ll. 116-138)`)가 원문에 그대로 있어,
-`sources = ["apollodorus.library 2.4.2"]` 로 적은 위치를 원문에서 바로 찾을 수 있다.
-슬라이스에 쓴 인용 위치는 전건 원문에서 확인했다.
+([db/데이터-모델.md](db/데이터-모델.md) §7).
 
 ## 알려진 한계
 
@@ -225,7 +112,7 @@ ToposText 에서 받았다 — `tools/extract_hyginus.py` 가 지명 링크를 �
 - 대화 팩은 만들어 구조를 확인했을 뿐, **실제 음성 세션에 얹어 돌려 보지 않았다.** 지식팩이 874KB 로 커져 한 번에 다 읽히지 않을 수 있다 — 색인으로 필요한 파일만 열게 하는 것이 다음 판의 일이다.
 - 계보 나무에서 부모가 둘인 인물은 한쪽 아래에만 나온다. 화면에 그렇게 적어 두었다.
 - **시간축에 "순서를 모른다"를 표시할 방법이 아직 없다.** 같은 이야기 안에서 순서를 모르는 짝 12건을
-  [불확실-목록.md](불확실-목록.md) 에 모았다. 타래에서는 풀었다 — 같은 시대의 앞뒤 단계가 `caused_by`/`after` 로
+  [db/불확실-목록.md](db/불확실-목록.md) 에 모았다. 타래에서는 풀었다 — 같은 시대의 앞뒤 단계가 `caused_by`/`after` 로
   이어지지 않으면 "어느 것이 먼저인지는 옛 책에 없다"고 적는다(제우스 타래에 네 곳). 시간축 자체는 아직이다. 지도 쪽은 풀었다 — 원전이 장소를 말하지 않는 사건 17건은
   `place_unknown = true` 로 표시하고, 화면과 에이전트 팩이 "어디서 일어났는지는 옛 책에 없다"고 말한다.
   장소를 아직 넣지 않은 사건은 0건이다.
@@ -238,6 +125,14 @@ ToposText 에서 받았다 — `tools/extract_hyginus.py` 가 지명 링크를 �
 
 ## 진행 기록
 
+- **2026-10-05** **저장소의 의도를 네 층으로 적고 구조를 그에 맞췄다.** 원전 수집(`sources/`) → 파악·정리(`notes/`) →
+  DB화(`db/`) → 산출물(`outputs/`). 그 전에는 `data/`·`tools/`·`build/` 가 역할이 아니라 종류로 나뉘어 있어 TOML 과
+  렌더러와 결과물이 어느 층의 것인지 경로가 말해 주지 않았다. 이제 각 층이 폴더 하나이고 README 가 하나씩 있다.
+  수집 방침을 적었다 — 원전/복각/재창작의 기준이 아직 없으니 **수집한 것은 일단 모두 원전으로 둔다.** 둘째 층은
+  그동안 README·TOML 주석·`note` 에 흩어져 있던 것을 [notes/원전별-파악.md](notes/원전별-파악.md) 로 모아 시작했다.
+  그 과정에서 원전 파일 머리말을 다시 읽어 `sources.toml` 의 번역자 셋이 틀린 것을 잡았다(오비디우스 Riley,
+  리비우스 Spillan, 파우사니아스 Shilleto — 파일 이름은 그대로 두었다). 스크립트는 경로 상수만 바꿨고 산출물은
+  `_file` 경로 외에 그대로다.
 - **2026-09-24** **카산드라 서사를 구조로.** "카산드라가 어떻게 아폴론을 만나고, 앞일을 보게 되고, 믿음을 잃었나"가 사건 하나에
   뭉쳐 있어 DB 에서 목마 사건과 인과로 이어지지 않았다(같이 나오는 인물과 본문 검색으로만 만났다). 사건을 둘로 갈랐다 —
   `kassandra-apollon`(가르침, 아폴로도로스 3.12.5)과 `kassandra-unbelieved`(거절과 믿음을 잃음, 아이네이스 2.246-247·2.341-346,
@@ -250,12 +145,12 @@ ToposText 에서 받았다 — `tools/extract_hyginus.py` 가 지명 링크를 �
   (`helene-taken caused_by paris-returns`, E.3.2 의 트로이 배). 그래서 카산드라의 두 말이 모두 함락의 원인이 된다 —
   믿어 준 말은 트로이를 무너뜨릴 사람을 들였고, 믿지 않은 말은 트로이를 구할 수 있었다. 타래는 여덟 단계가 되었고,
   파리스의 귀환과 저주의 앞뒤는 원전이 말하지 않아 `unsure` 로 남겼다(같은 묶음 안 짝 12→13건, 불확실-목록 A-1).
-- **2026-09-22** **질의용 DB.** `tools/render_sqlite.py` → `build/myth.sqlite`(표 23, 관계 전부 표, `entry` 색인, FTS5 trigram 검색,
-  `public_*`·`card_*` 뷰)와 `tools/query.py`(검색·인물·사건·장소·묶음·타래·카드·SQL). TOML 이 원본, DB 는 산출물 —
+- **2026-09-22** **질의용 DB.** `db/tools/render_sqlite.py` → `db/build/myth.sqlite`(표 23, 관계 전부 표, `entry` 색인, FTS5 trigram 검색,
+  `public_*`·`card_*` 뷰)와 `db/tools/query.py`(검색·인물·사건·장소·묶음·타래·카드·SQL). TOML 이 원본, DB 는 산출물 —
   주석·집필 메모·git 이력이 자료의 절반이라 원본을 DB 로 옮기지 않았다. 이진 파일이라 `.gitignore`. 카드 놀이의 재료가
   표에서 바로 나온다는 것을 확인했다(위 산출물 절).
-- **2026-09-22** **이야기 타래.** 묶음(arc)을 가로질러 시간순으로 읽는 `[[thread]]` 을 넣었다(`data/threads.toml`,
-  [데이터-모델.md](데이터-모델.md) §7). 묶음은 한 사건이 한 곳에만 들지만 타래는 여럿에 들 수 있고, 순서는
+- **2026-09-22** **이야기 타래.** 묶음(arc)을 가로질러 시간순으로 읽는 `[[thread]]` 을 넣었다(`db/data/threads.toml`,
+  [db/데이터-모델.md](db/데이터-모델.md) §7). 묶음은 한 사건이 한 곳에만 들지만 타래는 여럿에 들 수 있고, 순서는
   시간축(t0)이 정한다 — 적힌 순서가 다르면 빌드가 맞는 순서를 찍고 죽는다. 같은 시대에서 앞뒤를 원전이 말하지
   않는 짝은 `unsure` 로 표시해 화면과 에이전트 팩이 "옛 책에 없다"고 말한다. 첫 둘은 「가이아와 세 임금」(9단계)과
   「제우스가 만난 이들과 그 아이들」(10단계, 그중 넷이 `unsure` — 헤시오도스 886-944 는 목록이지 순서가 아니다).
@@ -267,13 +162,13 @@ ToposText 에서 받았다 — `tools/extract_hyginus.py` 가 지명 링크를 �
 - **2026-09-03** **인포그래픽 포스터를 넷째 축으로.** 스트리트H 포스터(50×70cm, 스튜디오 203, 마인드맵→다이어그램→
   가운데 핵심·둘레 보조)를 조사하고, Anthropic 도구를 확인했다 — 이미지 생성은 없고, Claude Design 은 시안·손질용,
   레이아웃은 지금 HTML/SVG→PDF 파이프라인이 낫다. A4 프린터 타일 인쇄(A4 넷 = A2)와 1장 전문 출력 조건까지
-  [포스터-구상.md](포스터-구상.md) 에 정리했다. 구상안 여섯 가운데 「헤라클레스의 열두 가지 일」을 첫 장으로 골랐다.
+  [outputs/poster/포스터-구상.md](outputs/poster/포스터-구상.md) 에 정리했다. 구상안 여섯 가운데 「헤라클레스의 열두 가지 일」을 첫 장으로 골랐다.
 - **2026-09-03** **`place_unknown` 과 히기누스 전문.** 원전이 장소를 말하지 않는 사건 17건에
   `place_unknown = true` 를 붙였다(빌드가 `note` 를 요구한다). 자동 점검의 장소 목록은 '아직 안 넣은 것'만
   남겨 0건이 되었고, 화면·에이전트 팩은 그 사건에 대해 "어디서 일어났는지는 옛 책에 없다"고 말한다.
   남아 있던 다섯 건은 리디아(`lydia`)·라돈 강(`ladon-river`) 항목을 만들어 둘을 붙이고, 리비아·오이칼리아 셋은
   특정할 수 없는 곳이라 `place_unknown` 으로 정리했다. 히기누스는 theoi.com 이 우화 넷씩만 내주어 ToposText 에서
-  Grant 번역 전문을 받았다(`tools/extract_hyginus.py`). 그 덕에 잘못 붙인 인용 하나를 잡았다 — 페르세포네
+  Grant 번역 전문을 받았다(`sources/tools/extract_hyginus.py`). 그 덕에 잘못 붙인 인용 하나를 잡았다 — 페르세포네
   이야기에서 데메테르가 헬리오스에게 물었다는 것은 히기누스 146 이 아니라 호메로스 찬가다. note 가 '코퍼스에
   없다'고 적었던 우화 여덟 편은 대조해 variants·sources 에 넣었다.
 - **2026-09-03** **era 5~8 집필.** 아홉 시대를 모두 덮었다(인물 68→299, 사건 27→263, 장소 20→83,
@@ -285,7 +180,7 @@ ToposText 에서 받았다 — `tools/extract_hyginus.py` 가 지명 링크를 �
   테튀스·테티스로 갈랐다. 아테네 경합의 판정자는 원전대로 열두 신으로 바로잡았다(널리 퍼진
   "사람들이 골랐다"는 원전에 없다). 불확실 점검은 **같은 묶음 안(12건)과 묶음 사이의 이음매(36건)로
   갈랐다** — 성질이 다른 두 불확실을 한 표에 섞으면 판단할 수 없다.
-- **2026-09-02** 불확실 목록 착수([불확실-목록.md](불확실-목록.md)). 빌드에 자동 점검
+- **2026-09-02** 불확실 목록 착수([db/불확실-목록.md](db/불확실-목록.md)). 빌드에 자동 점검
   (`audit_uncertain()`)을 붙여 순서를 `seq` 가 정한 짝·장소 없는 사건·실제 지도에 놓지 않은 곳을
   뽑는다. 화면에서 "여기서 벌어지고 있는 이야기"를 오른쪽 패널 위로 옮기고, 누르면 그 아래에
   내용이 나오게 했다.
@@ -301,9 +196,9 @@ ToposText 에서 받았다 — `tools/extract_hyginus.py` 가 지명 링크를 �
 
 ## 다음
 
-1. **인포그래픽 포스터 첫 장** — 「헤라클레스의 열두 가지 일」. 내용 명세 → 무그림 레이아웃 → A4 타일 시험 인쇄 → 그림 → 전문 출력 1장([포스터-구상.md](포스터-구상.md) 진행 단계). 그림 자료 조사(공개 도메인 도판)는 이 일의 한 단계로 합쳤다
-2. **대화 팩 실측** — `my-talking-claw` 에 얹어 아이의 실제 질문으로 시험. 지식팩이 900KB 라 색인으로 필요한 파일만 열게 하는 것이 함께 필요하다 — `build/myth.sqlite` 와 `tools/query.py` 를 에이전트가 부르게 하면 된다(2026-09-22)
+1. **인포그래픽 포스터 첫 장** — 「헤라클레스의 열두 가지 일」. 내용 명세 → 무그림 레이아웃 → A4 타일 시험 인쇄 → 그림 → 전문 출력 1장([outputs/poster/포스터-구상.md](outputs/poster/포스터-구상.md) 진행 단계). 그림 자료 조사(공개 도메인 도판)는 이 일의 한 단계로 합쳤다
+2. **대화 팩 실측** — `my-talking-claw` 에 얹어 아이의 실제 질문으로 시험. 지식팩이 900KB 라 색인으로 필요한 파일만 열게 하는 것이 함께 필요하다 — `db/build/myth.sqlite` 와 `db/tools/query.py` 를 에이전트가 부르게 하면 된다(2026-09-22)
 3. **히기누스와 대조** — 전문이 들어왔으니 남은 우화(117~125 오레스테스·오디세우스 등)로 뒷받침되는 이설을 항목에 넣는다
-4. **`needs` 스키마(D-2)** — 존재 조건(히폴리토스가 자라야 파이드라 이야기가 된다)을 적어 A-1 의 짝 두 건을 푼다([불확실-목록.md](불확실-목록.md) D-2)
+4. **`needs` 스키마(D-2)** — 존재 조건(히폴리토스가 자라야 파이드라 이야기가 된다)을 적어 A-1 의 짝 두 건을 푼다([db/불확실-목록.md](db/불확실-목록.md) D-2)
 5. **타래 늘리기** — 후보: 헤라의 미움(레토·세멜레·알크메네·헤라클레스·이오), 델포이의 말이 이끈 이야기들(아크리시오스·라이오스·오이디푸스·아이네이아스), 아르고스 왕가(다나에→페르세우스→알크메네→헤라클레스). 지금 자료로 되는 것부터
 6. **카드 놀이** — `card_figure`·`card_event` 뷰로 인물·사건 카드를 뽑아 A4 에 찍어 보는 것. 짝 맞추기(신–상징물)·순서 맞추기(묶음·타래)·함께 나온 둘부터. 그림이 없다는 문제는 포스터와 같다

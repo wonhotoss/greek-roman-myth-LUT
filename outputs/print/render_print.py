@@ -1,4 +1,4 @@
-"""build/myth.json -> build/print-*.html
+"""db/build/myth.json -> outputs/print/print-*.html
 
 인쇄용. 브라우저에서 열고 인쇄(또는 PDF로 저장)하면 그대로 나온다.
 화면용 페이지를 인쇄한 것이 아니라, 종이에 맞게 따로 짠 판이다.
@@ -11,7 +11,7 @@
 지도 좌표 변환은 render_web.py 와 같은 계산을 파이썬으로 다시 한다.
 인쇄판은 상호작용이 없으므로 SVG 를 여기서 완성해 박아 넣는다.
 
-    python tools/build.py && python tools/render_print.py
+    python db/tools/build.py && python outputs/print/render_print.py
 """
 
 import json
@@ -22,10 +22,10 @@ from xml.sax.saxutils import escape
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT = Path(__file__).resolve().parent.parent
-BUNDLE = ROOT / "build" / "myth.json"
-GEO = ROOT / "data" / "geo" / "mediterranean.json"
-OUTDIR = ROOT / "build"
+ROOT = Path(__file__).resolve().parents[2]   # 저장소 루트
+BUNDLE = ROOT / "db" / "build" / "myth.json"
+GEO = ROOT / "db" / "data" / "geo" / "mediterranean.json"
+OUTDIR = ROOT / "outputs" / "print"
 
 ANCHOR_END = ' text-anchor="end"'
 
@@ -330,7 +330,7 @@ def main():
     ]
     for name, html in made:
         (OUTDIR / name).write_text(html, encoding="utf-8")
-        print(f"build/{name} — {(OUTDIR / name).stat().st_size:,} bytes")
+        print(f"outputs/print/{name} — {(OUTDIR / name).stat().st_size:,} bytes")
 
 
 if __name__ == "__main__":

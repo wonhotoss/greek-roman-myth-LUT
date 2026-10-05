@@ -1,7 +1,7 @@
 """topostext.org/work/206 (히기누스 『이야기 모음』, Mary Grant 역) HTML -> sources/hyginus-fabulae-grant.txt
 
     curl -sSL -A "Mozilla/5.0" -o hyginus.html "https://topostext.org/work/206"
-    python tools/extract_hyginus.py hyginus.html sources/hyginus-fabulae-grant.txt
+    python sources/tools/extract_hyginus.py hyginus.html sources/hyginus-fabulae-grant.txt
 
 우화 번호가 <p id='urn:cts:latinLit:phi1263.phi001:N'> 에 있다. 그 번호를 [N] 으로 단락 앞에 남긴다.
 아폴로도로스의 [2.5.1] 표시와 같은 방식이어서 `sources = ["hyginus.fabulae 57"]` 를 grep 으로 바로 찾는다.

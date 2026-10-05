@@ -1,4 +1,4 @@
-"""sources/geo/ne_50m_land.geojson -> data/geo/mediterranean.json
+"""sources/geo/ne_50m_land.geojson -> db/data/geo/mediterranean.json
 
 Natural Earth 50m 육지 폴리곤을 지중해 동부(신화의 무대)로 잘라내고 좌표를 줄인다.
 결과는 지도 렌더러가 그대로 SVG path 로 그린다. 한 번 만들면 다시 돌릴 일은 거의 없다.
@@ -14,9 +14,9 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]   # 저장소 루트
 SRC = ROOT / "sources" / "geo" / "ne_50m_land.geojson"
-OUT = ROOT / "data" / "geo" / "mediterranean.json"
+OUT = ROOT / "db" / "data" / "geo" / "mediterranean.json"
 
 # 카르타고(동경 10.3)부터 카우카소스(동경 44.5)까지 담고, 가장 바깥 장소에서 2도쯤 여유를 둔다.
 # 여유가 없으면 지도가 그 장소 바로 옆에서 땅이 끝난 것처럼 보인다(카르타고에서 실제로 그랬다).

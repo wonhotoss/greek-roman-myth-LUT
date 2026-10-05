@@ -1,13 +1,13 @@
-"""build/myth.sqlite 에 묻는다.
+"""db/build/myth.sqlite 에 묻는다.
 
-    python tools/query.py 제우스                  # 검색 — 이름·다른 표기·한 줄·본문. 두 글자면 이름만 LIKE 로
-    python tools/query.py figure zeus             # 인물 한 장: 부모·자식·짝·맡은 일·표시·나오는 사건(시간순)·원전
-    python tools/query.py event medusa-slain      # 사건: 시대·자리·곳·등장·앞뒤·묶음·타래·이설·원전
-    python tools/query.py place delphi            # 장소와 거기서 일어난 일
-    python tools/query.py arc herakles-labors     # 묶음의 이야기 순서
-    python tools/query.py thread zeus-partners    # 타래의 시간 순서와 "모른다" 표시
-    python tools/query.py cards [kind]            # 인물 카드 표(card_figure 뷰). 사건이 많은 순
-    python tools/query.py sql "SELECT ..."        # 아무 SQL
+    python db/tools/query.py 제우스                  # 검색 — 이름·다른 표기·한 줄·본문. 두 글자면 이름만 LIKE 로
+    python db/tools/query.py figure zeus             # 인물 한 장: 부모·자식·짝·맡은 일·표시·나오는 사건(시간순)·원전
+    python db/tools/query.py event medusa-slain      # 사건: 시대·자리·곳·등장·앞뒤·묶음·타래·이설·원전
+    python db/tools/query.py place delphi            # 장소와 거기서 일어난 일
+    python db/tools/query.py arc herakles-labors     # 묶음의 이야기 순서
+    python db/tools/query.py thread zeus-partners    # 타래의 시간 순서와 "모른다" 표시
+    python db/tools/query.py cards [kind]            # 인물 카드 표(card_figure 뷰). 사건이 많은 순
+    python db/tools/query.py sql "SELECT ..."        # 아무 SQL
 
 note·sensitivity·record 도 보여 준다 — 만드는 사람과 에이전트가 쓰는 도구다.
 아이에게 보일 것은 public_* 뷰에서 뽑는다(render_sqlite.py).
@@ -20,8 +20,8 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT = Path(__file__).resolve().parent.parent
-DB = ROOT / "build" / "myth.sqlite"
+ROOT = Path(__file__).resolve().parents[2]   # 저장소 루트
+DB = ROOT / "db" / "build" / "myth.sqlite"
 
 
 def width(s):
@@ -46,7 +46,7 @@ def table(rows, cols):
 
 def connect():
     if not DB.exists():
-        raise SystemExit("build/myth.sqlite 가 없다. 먼저: python tools/build.py && python tools/render_sqlite.py")
+        raise SystemExit("db/build/myth.sqlite 가 없다. 먼저: python db/tools/build.py && python db/tools/render_sqlite.py")
     con = sqlite3.connect(f"file:{DB.as_posix()}?mode=ro", uri=True)
     con.row_factory = sqlite3.Row
     return con
