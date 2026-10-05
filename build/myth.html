@@ -2899,6 +2899,8 @@
    ],
    "_file": "data/figures/olympians.toml",
    "children": [
+    "pelias",
+    "neleus",
     "antaios",
     "polyphemos",
     "pegasos",
@@ -3151,6 +3153,10 @@
     {
      "event": "herakles-apotheosis",
      "role": "등장"
+    },
+    {
+     "event": "keyx-alkyone-halcyons",
+     "role": "도움"
     },
     {
      "event": "peleus-thetis-wedding",
@@ -3429,7 +3435,9 @@
     "ovid.metamorphoses 1.253-1.415"
    ],
    "_file": "data/figures/humans-early.toml",
-   "children": [],
+   "children": [
+    "hellen"
+   ],
    "events": [
     {
      "event": "great-flood",
@@ -3440,6 +3448,36 @@
      "role": "주인공"
     }
    ]
+  },
+  {
+   "id": "aiolos-hellenides",
+   "name_ko": "아이올로스",
+   "name_grc": "Aiolos",
+   "aka": [
+    "헬렌의 아들 아이올로스",
+    "아이올리스인의 조상"
+   ],
+   "kind": "human",
+   "era": 3,
+   "parents": [
+    "hellen"
+   ],
+   "oneliner": "헬렌의 아들. 테살리아를 다스렸고, 시시포스·아타마스·크레테우스·살모네우스의 아버지다.",
+   "body": "아버지 헬렌에게서 테살리아 둘레의 땅을 받아 다스렸다.\n그 땅 사람들을 자기 이름을 따 아이올리스인이라고 불렀다.\n아들 일곱과 딸 다섯을 두었다.\n시시포스, 아타마스, 크레테우스, 살모네우스가 그 아들이라, 벨레로폰·프릭소스·이아손·펠리아스·네스토르가 모두 이 집안에서 나온다.\n",
+   "fun": "오디세우스가 만난 바람의 아이올로스와 이름이 같지만 다른 사람이다. 포세이돈의 아들인 셋째 아이올로스도 있다.",
+   "note": "바람의 아이올로스(aiolos-anemon, 호메로스·베르길리우스)와 다른 사람. 히기누스 186·157 의 포세이돈의 아들 아이올로스(멜라니페/안티오페의 아들)는 셋째인데 데이터의 어느 이야기와도 닿지 않아 넣지 않았다. 딸 카나케와 아들 마카레우스의 이야기(에우리피데스의 잃어버린 『아이올로스』)는 오비디우스 9.507 의 한 줄뿐이라 쓰지 않는다. 아내 에나레테와 아들 데이온·마그네스·페리에레스, 딸 다섯은 등록부에 없다.",
+   "sources": [
+    "apollodorus.library 1.7.3",
+    "hyginus.fabulae 60-61"
+   ],
+   "_file": "data/figures/humans-early.toml",
+   "children": [
+    "sisyphos",
+    "athamas",
+    "kretheus",
+    "salmoneus"
+   ],
+   "events": []
   },
   {
    "id": "pandora",
@@ -3488,7 +3526,9 @@
     "ovid.metamorphoses 1.350-1.415"
    ],
    "_file": "data/figures/humans-early.toml",
-   "children": [],
+   "children": [
+    "hellen"
+   ],
    "events": [
     {
      "event": "great-flood",
@@ -3499,6 +3539,29 @@
      "role": "주인공"
     }
    ]
+  },
+  {
+   "id": "hellen",
+   "name_ko": "헬렌",
+   "name_grc": "Hellen",
+   "kind": "human",
+   "era": 3,
+   "parents": [
+    "deukalion",
+    "pyrrha"
+   ],
+   "oneliner": "데우칼리온의 아들. 그리스 사람들을 '헬레네스'라고 부르게 한 이름의 주인이다.",
+   "body": "큰 홍수 뒤에 데우칼리온과 피라에게서 태어났다.\n그리스 사람들을 자기 이름을 따 헬레네스라고 불렀다.\n아들 셋 — 도로스, 크수토스, 아이올로스 — 에게 땅을 나누어 주었다.\n도리스인, 이오니아인, 아이올리스인이라는 이름이 그 아들들에게서 나왔다.\n",
+   "fun": "지금도 그리스 사람들은 자기 나라를 '헬라스', 자기들을 '헬레네스'라고 부른다.",
+   "note": "트로이의 헬레네(helene)와 다른 사람. 어머니 피라는 아폴로도로스 1.7.2. 아내 오르세이스(님프)는 등록부에 없다.",
+   "sources": [
+    "apollodorus.library 1.7.2-1.7.3"
+   ],
+   "_file": "data/figures/humans-early.toml",
+   "children": [
+    "aiolos-hellenides"
+   ],
+   "events": []
   },
   {
    "id": "gorgophone",
@@ -3612,6 +3675,52 @@
    "_file": "data/figures/era4-5-athens-crete.toml",
    "children": [
     "bellerophon"
+   ],
+   "events": []
+  },
+  {
+   "id": "nephele",
+   "name_ko": "네펠레",
+   "name_grc": "Nephele",
+   "kind": "nymph",
+   "era": 4,
+   "spouses": [
+    "athamas"
+   ],
+   "oneliner": "구름으로 된 여인. 프릭소스와 헬레의 어머니다.",
+   "body": "이름이 구름이라는 뜻이다.\n아타마스의 첫 아내로 프릭소스와 헬레를 낳았다.\n아이들이 제물로 바쳐지려 하자 헤르메스에게서 받은 황금 양을 보내 태워 갔다.\n",
+   "note": "아폴로도로스 1.9.1 은 네펠레가 황금 양을 주었다고 하고, 히기누스 3 은 헤르메스에게서 받은 것이라 한다. 익시온이 안은 구름 네펠레와 같은 이름이지만 아폴로도로스는 둘을 잇지 않는다. kind 는 구름이라 nymph 로 두었다.",
+   "sources": [
+    "apollodorus.library 1.9.1",
+    "hyginus.fabulae 1-3"
+   ],
+   "_file": "data/figures/era4-5-thebes-argo.toml",
+   "children": [
+    "phrixos"
+   ],
+   "events": []
+  },
+  {
+   "id": "neleus",
+   "name_ko": "넬레우스",
+   "name_grc": "Neleus",
+   "kind": "human",
+   "era": 4,
+   "parents": [
+    "poseidon",
+    "tyro"
+   ],
+   "home": "pylos",
+   "oneliner": "펠리아스의 쌍둥이 동생. 메세네에 필로스를 세웠고, 네스토르의 아버지다.",
+   "body": "티로와 포세이돈의 아들로 펠리아스와 쌍둥이다.\n형과 다투어 쫓겨나 메세네로 가서 필로스를 세웠다.\n아들 열둘을 두었는데, 뒷날 헤라클레스가 필로스를 치면서 네스토르 말고는 모두 죽였다.\n그 네스토르가 트로이 전쟁의 가장 나이 많은 장수가 된다.\n",
+   "note": "아내 클로리스와 아들 열한 명은 등록부에 없다. 헤라클레스의 필로스 공격은 2.7.3.",
+   "sources": [
+    "apollodorus.library 1.9.8-1.9.9",
+    "apollodorus.library 2.7.3"
+   ],
+   "_file": "data/figures/era4-5-thebes-argo.toml",
+   "children": [
+    "nestor"
    ],
    "events": []
   },
@@ -4021,6 +4130,29 @@
    ]
   },
   {
+   "id": "salmoneus",
+   "name_ko": "살모네우스",
+   "name_grc": "Salmoneus",
+   "kind": "human",
+   "era": 4,
+   "parents": [
+    "aiolos-hellenides"
+   ],
+   "home": "elis",
+   "oneliner": "제우스 흉내를 내다 벼락을 맞은 왕. 티로의 아버지다.",
+   "body": "아이올로스의 아들로 테살리아에서 엘리스로 와 도시를 세웠다.\n자기가 제우스라며 사람들에게 제사를 받았다.\n청동 솥을 수레에 매달아 끌며 천둥소리를 내고, 횃불을 던져 번개라고 했다.\n제우스가 진짜 벼락을 던져 그와 그 도시를 없앴다.\n",
+   "fun": "시시포스의 동생이다. 히기누스는 두 형제가 서로 미워했다고 적었다.",
+   "sources": [
+    "apollodorus.library 1.9.7",
+    "hyginus.fabulae 60-61"
+   ],
+   "_file": "data/figures/era4-5-thebes-argo.toml",
+   "children": [
+    "tyro"
+   ],
+   "events": []
+  },
+  {
    "id": "semele",
    "name_ko": "세멜레",
    "name_grc": "Semele",
@@ -4094,6 +4226,9 @@
    ],
    "kind": "human",
    "era": 4,
+   "parents": [
+    "aiolos-hellenides"
+   ],
    "home": "corinth",
    "oneliner": "꾀 많은 코린토스의 왕. 저승에서 바위를 굴린다.",
    "body": "코린토스를 세운 왕으로, 사람 가운데 가장 꾀가 많았다.\n제우스가 강의 신 아소포스의 딸 아이기나를 몰래 데려갔다.\n시시포스는 그것을 보았고, 아소포스에게 알려 주었다.\n그 값으로 코린토스 언덕에 샘을 얻었다.\n제우스는 그 벌로 저승에서 끝없이 바위를 밀어 올리게 했다.\n",
@@ -4153,6 +4288,34 @@
      "role": "피해"
     }
    ]
+  },
+  {
+   "id": "athamas",
+   "name_ko": "아타마스",
+   "name_grc": "Athamas",
+   "kind": "human",
+   "era": 4,
+   "parents": [
+    "aiolos-hellenides"
+   ],
+   "spouses": [
+    "nephele"
+   ],
+   "oneliner": "프릭소스와 헬레의 아버지. 두 번째 아내 이노가 그 아이들을 없애려 했다.",
+   "body": "아이올로스의 아들로 보이오티아를 다스렸다.\n구름의 여신 네펠레에게서 프릭소스와 헬레를 얻었다.\n두 번째 아내 이노가 그 아이들을 제물로 바치게 꾀하자, 황금 양이 아이들을 태우고 날아갔다.\n뒷날 헤라가 보낸 광기로 이노에게서 얻은 아들을 죽였다.\n",
+   "sensitivity": "soften",
+   "record": "아타마스는 헤라의 노여움으로 미쳐 아들 레아르코스를 사슴으로 알고 화살로 쏘아 죽였고, 이노는 멜리케르테스를 안고 끓는 솥에 던진 뒤 바다에 몸을 던졌다(아폴로도로스 1.9.2, 3.4.3; 히기누스 5). 이노와 멜리케르테스는 바다의 신 레우코테아와 팔라이몬이 되었다.",
+   "note": "이노·레아르코스·멜리케르테스는 등록부에 없어 이름만 부른다. 세멜레 사건(semele-dionysos-born)의 '이노와 아타마스에게 아기를 맡겼다'가 이 집이다.",
+   "sources": [
+    "apollodorus.library 1.9.1-1.9.2",
+    "apollodorus.library 3.4.3",
+    "hyginus.fabulae 1-5"
+   ],
+   "_file": "data/figures/era4-5-thebes-argo.toml",
+   "children": [
+    "phrixos"
+   ],
+   "events": []
   },
   {
    "id": "andromeda",
@@ -4571,6 +4734,32 @@
    ]
   },
   {
+   "id": "kretheus",
+   "name_ko": "크레테우스",
+   "name_grc": "Kretheus",
+   "kind": "human",
+   "era": 4,
+   "parents": [
+    "aiolos-hellenides"
+   ],
+   "spouses": [
+    "tyro"
+   ],
+   "home": "iolkos",
+   "oneliner": "이올코스를 세운 사람. 아이손의 아버지이고 이아손의 할아버지다.",
+   "body": "아이올로스의 아들로 이올코스를 세웠다.\n형 살모네우스의 딸 티로를 길러 아내로 맞았다.\n티로에게서 아이손, 아미타온, 페레스를 얻었다.\n그 손자가 황금 양털을 가지러 간 이아손이다.\n",
+   "note": "아미타온·페레스(멜람푸스·아드메토스의 아버지들)는 등록부에 없다.",
+   "sources": [
+    "apollodorus.library 1.9.11",
+    "homer.odyssey 11.235-11.259"
+   ],
+   "_file": "data/figures/era4-5-thebes-argo.toml",
+   "children": [
+    "aison"
+   ],
+   "events": []
+  },
+  {
    "id": "chrysaor",
    "name_ko": "크리사오르",
    "name_grc": "Chrysaor",
@@ -4675,6 +4864,37 @@
      "role": "피해"
     }
    ]
+  },
+  {
+   "id": "tyro",
+   "name_ko": "티로",
+   "name_grc": "Tyro",
+   "kind": "human",
+   "era": 4,
+   "parents": [
+    "salmoneus"
+   ],
+   "spouses": [
+    "kretheus"
+   ],
+   "home": "iolkos",
+   "oneliner": "강을 사랑한 공주. 포세이돈에게서 펠리아스와 넬레우스를, 크레테우스에게서 아이손을 낳았다.",
+   "body": "살모네우스의 딸로 삼촌 크레테우스의 집에서 자랐다.\n에니페우스 강을 사랑해 늘 강가에 갔다.\n포세이돈이 강의 모습으로 다가왔고, 쌍둥이 펠리아스와 넬레우스가 태어났다.\n티로는 아기들을 내다 버렸는데, 말 치는 사람이 거두어 길렀다.\n뒤에 크레테우스와 결혼해 아이손을 낳았다.\n",
+   "sensitivity": "soften",
+   "record": "포세이돈이 에니페우스 강의 모습으로 티로와 동침했다(아폴로도로스 1.9.8; 오디세이아 11.235-11.252 — 푸른 파도가 산처럼 솟아 둘을 가렸고, 신이 처녀의 띠를 풀었다). 티로는 쌍둥이를 몰래 낳아 버렸고, 계모 시데로가 티로를 학대하자 자란 아들들이 시데로를 쫓았고 펠리아스가 헤라의 제단에서 시데로를 베어 죽였다(1.9.8).",
+   "note": "펠리아스의 이름은 말에 차여 생긴 검푸른 자국(펠리온)에서 왔다(1.9.8).",
+   "sources": [
+    "apollodorus.library 1.9.8",
+    "apollodorus.library 1.9.11",
+    "homer.odyssey 11.235-11.259"
+   ],
+   "_file": "data/figures/era4-5-thebes-argo.toml",
+   "children": [
+    "aison",
+    "pelias",
+    "neleus"
+   ],
+   "events": []
   },
   {
    "id": "pasiphae",
@@ -5001,12 +5221,16 @@
    ],
    "kind": "human",
    "era": 4,
+   "parents": [
+    "athamas",
+    "nephele"
+   ],
    "oneliner": "황금 양을 타고 콜키스까지 날아간 소년.",
    "body": "새어머니 이노가 꾸민 일로 제단에 오르게 되었다.\n어머니 네펠레가 황금 털을 가진 양을 보내 남매를 태워 하늘로 데려갔다.\n누이 헬레는 바다에 떨어졌다. 그 바다를 헬레스폰토스라고 부른다.\n콜키스에 닿아 양을 바치고, 털은 왕 아이에테스에게 주었다.\n",
    "sensitivity": "soften",
    "record": "이노는 사자들을 꾀어 프릭소스를 제우스에게 제물로 바쳐야 흉년이 그친다는 거짓 신탁을 전하게 했고, 아타마스는 백성들에게 떠밀려 프릭소스를 제단으로 데려갔다(아폴로도로스 1.9.1). 헬레는 바다에 빠져 익사했다(아폴로도로스 1.9.1). 히기누스는 뒷날 아이에테스가 이방인에게 죽는다는 전조를 두려워해 프릭소스를 죽였다고 한다(히기누스 3).",
    "fun": "황금 양털은 그때부터 아레스의 숲 참나무에 걸려 잠들지 않는 용이 지킨다. 아르고호가 찾으러 가는 것이 이 털이다.",
-   "note": "이노·네펠레·헬레는 등록부에 없어 이름만 부른다. 참고: 처음 읽는 그리스 로마 신화 9권 3장.",
+   "note": "이노·헬레는 등록부에 없어 이름만 부른다(네펠레·아타마스는 2026-10-05 에 만들었다). 참고: 처음 읽는 그리스 로마 신화 9권 3장.",
    "sources": [
     "apollodorus.library 1.9.1",
     "hyginus.fabulae 3"
@@ -6212,6 +6436,10 @@
    ],
    "kind": "human",
    "era": 5,
+   "parents": [
+    "kretheus",
+    "tyro"
+   ],
    "home": "iolkos",
    "oneliner": "왕자리를 아우에게 빼앗긴 이아손의 아버지.",
    "body": "이올코스를 세운 크레테우스의 아들이다.\n왕자리는 아우 펠리아스가 차지했다.\n아들 이아손은 시골에서 자랐다.\n아들이 배를 타고 떠난 뒤 늙어 죽었다.\n",
@@ -6604,6 +6832,41 @@
     {
      "event": "eurystheus-dies",
      "role": "등장"
+    }
+   ]
+  },
+  {
+   "id": "alkyone",
+   "name_ko": "알키오네",
+   "name_grc": "Alkyone",
+   "name_la": "Alcyone",
+   "aka": [
+    "할키오네",
+    "알퀴오네"
+   ],
+   "kind": "human",
+   "era": 5,
+   "parents": [
+    "aiolos-anemon"
+   ],
+   "spouses": [
+    "keyx"
+   ],
+   "home": "trachis",
+   "oneliner": "바람의 아이올로스의 딸. 남편을 따라 바다에 몸을 던져 물총새가 되었다.",
+   "body": "바람을 맡은 아이올로스의 딸이고 케익스의 아내다.\n남편이 배로 떠나려 하자 아버지의 바람이 얼마나 무서운지 안다며 말렸다.\n꿈에 나타난 남편이 죽었다고 알렸고, 바닷가에서 떠밀려 온 남편의 몸을 찾았다.\n바다로 몸을 던지자 신들이 둘을 물총새로 바꾸었다.\n",
+   "fun": "물총새가 알을 품는 한겨울 이레 동안 아이올로스가 바람을 가두어 바다가 잔잔하다. 뱃사람들은 그 날들을 '할키온의 날'이라고 부른다.",
+   "note": "오비디우스 11.431 '히포테스의 손자가 네 시아버지'로 바람의 아이올로스의 딸이다(히기누스 65 '아이올로스와 아이기알레의 딸'). 플레이아데스의 알키오네와 다른 사람. 헬렌의 아들 아이올로스의 딸 알키오네(1.7.3)와도 다르다고 보았다 — 오비디우스가 분명히 바람의 아이올로스라 한다.",
+   "sources": [
+    "ovid.metamorphoses 11.410-11.748",
+    "hyginus.fabulae 65"
+   ],
+   "_file": "data/figures/era4-5-thebes-argo.toml",
+   "children": [],
+   "events": [
+    {
+     "event": "keyx-alkyone-halcyons",
+     "role": "주인공"
     }
    ]
   },
@@ -7656,6 +7919,39 @@
    ]
   },
   {
+   "id": "keyx",
+   "name_ko": "케익스",
+   "name_grc": "Keyx",
+   "name_la": "Ceyx",
+   "aka": [
+    "케윅스",
+    "케이크스"
+   ],
+   "kind": "human",
+   "era": 5,
+   "spouses": [
+    "alkyone"
+   ],
+   "home": "trachis",
+   "oneliner": "트라키스의 왕. 바다에서 죽어 아내와 함께 물총새가 되었다.",
+   "body": "샛별의 아들로 트라키스를 다스렸다.\n헤라클레스가 마지막에 몸을 의지한 왕이고, 헤라클레스의 아이들도 처음 그에게 피했다.\n형의 죽음을 묻자 신에게 묻는 길을 떠났다가 폭풍에 배가 가라앉았다.\n신들이 그와 아내 알키오네를 물총새로 바꾸었다.\n",
+   "note": "아버지 헤스페로스/루키페르(샛별)는 등록부에 없다. 헤라클레스가 트라키스로 간 것은 2.7.6-2.7.7, 아이들이 피한 것은 2.8.1.",
+   "sources": [
+    "ovid.metamorphoses 11.410-11.748",
+    "hyginus.fabulae 65",
+    "apollodorus.library 2.7.6-2.7.7",
+    "apollodorus.library 2.8.1"
+   ],
+   "_file": "data/figures/era4-5-thebes-argo.toml",
+   "children": [],
+   "events": [
+    {
+     "event": "keyx-alkyone-halcyons",
+     "role": "피해"
+    }
+   ]
+  },
+  {
    "id": "kentauroi",
    "name_ko": "켄타우로스들",
    "name_grc": "Kentauroi",
@@ -8307,6 +8603,10 @@
    "name_grc": "Pelias",
    "kind": "human",
    "era": 5,
+   "parents": [
+    "poseidon",
+    "tyro"
+   ],
    "home": "iolkos",
    "oneliner": "신발 한 짝만 신은 사람을 조심하라는 말을 들은 왕.",
    "body": "형에게서 이올코스의 왕자리를 빼앗아 다스렸다.\n신발 한 짝만 신은 사람을 조심하라는 말을 델포이에서 들었다.\n어느 날 신발 한 짝을 잃은 젊은이가 제사에 나타났다.\n그 젊은이에게 황금 양털을 가져오라고 시켰다. 돌아오지 못할 일이라고 생각한 것이다.\n",
@@ -8927,6 +9227,9 @@
    "name_grc": "Nestor",
    "kind": "human",
    "era": 6,
+   "parents": [
+    "neleus"
+   ],
    "home": "pylos",
    "oneliner": "말로 사람들을 다스린 그리스군의 가장 나이 많은 왕.",
    "body": "필로스의 왕으로 배 마흔 척을 이끌고 왔다.\n사람의 두 세대가 지나는 동안 왕이었고 셋째 세대를 다스리고 있었다.\n아킬레우스와 아가멤논이 다툴 때 둘 사이에 서서 말렸다.\n싸움에는 늙어 못 나갔지만 회의마다 먼저 말했다.\n아들 안틸로코스가 멤논의 손에 죽었다.\n",
@@ -11870,14 +12173,22 @@
    "home": "aiolia",
    "oneliner": "바람을 맡은 이. 오디세우스에게 바람을 담은 주머니를 주었다.",
    "body": "제우스가 바람을 잠재우고 풀어 놓는 일을 맡겼다.\n청동 벽으로 둘러싸인 떠다니는 섬에서 아들 여섯, 딸 여섯과 살았다.\n오디세우스를 한 달 동안 대접하고, 궂은 바람을 모두 가죽 주머니에 담아 주었다.\n동료들이 그 주머니를 열어 오디세우스가 다시 떠밀려 오자, 신들이 미워하는 사람이라며 쫓아냈다.\n",
-   "note": "참고: 처음 읽는 그리스 로마 신화 13권 2장 「바람의 신 아이올로스」. 헬렌의 아들 아이올로스와 구별하려고 id 를 aiolos-anemon(바람의 아이올로스)으로 했다. 호메로스는 신들이 아끼는 왕으로, 아폴로도로스는 제우스가 바람을 맡긴 이로 쓴다. 아버지 히포테스는 등록부에 없어 계보에 넣지 않았다.",
+   "note": "참고: 처음 읽는 그리스 로마 신화 13권 2장 「바람의 신 아이올로스」. 아이올로스는 셋이다 — 이 바람의 아이올로스, 헬렌의 아들(aiolos-hellenides, 시시포스·아타마스의 아버지), 포세이돈과 멜라니페의 아들(히기누스 186, 등록부에 없음). 딸 알키오네(alkyone)가 케익스와 물총새가 된다(오비디우스 11). 헬렌의 아들 아이올로스와 구별하려고 id 를 aiolos-anemon(바람의 아이올로스)으로 했다. 호메로스는 신들이 아끼는 왕으로, 아폴로도로스는 제우스가 바람을 맡긴 이로 쓴다. 아버지 히포테스는 등록부에 없어 계보에 넣지 않았다.",
    "sources": [
     "homer.odyssey 10.1-79",
-    "apollodorus.library E.7.10-E.7.11"
+    "apollodorus.library E.7.10-E.7.11",
+    "virgil.aeneid 1.50-1.80",
+    "ovid.metamorphoses 11.431"
    ],
    "_file": "data/figures/era7-odyssey.toml",
-   "children": [],
+   "children": [
+    "alkyone"
+   ],
    "events": [
+    {
+     "event": "keyx-alkyone-halcyons",
+     "role": "등장"
+    },
     {
      "event": "aiolos-winds",
      "role": "도움"
@@ -20519,6 +20830,51 @@
    ]
   },
   {
+   "id": "keyx-alkyone-halcyons",
+   "name_ko": "케익스와 알키오네가 물총새가 되다",
+   "era": 5,
+   "seq": 1098,
+   "span": "season",
+   "place": "trachis",
+   "cast": [
+    {
+     "figure": "alkyone",
+     "role": "주인공"
+    },
+    {
+     "figure": "keyx",
+     "role": "피해"
+    },
+    {
+     "figure": "aiolos-anemon",
+     "role": "등장"
+    },
+    {
+     "figure": "hera",
+     "role": "도움"
+    }
+   ],
+   "oneliner": "바람의 딸이 바람에 남편을 잃고, 둘이 새가 되었다.",
+   "body": "트라키스의 왕 케익스는 형의 이상한 죽음을 신에게 물으려고 배를 띄우려 했다.\n아내 알키오네는 아버지 아이올로스의 바람이 얼마나 무서운지 안다며 말렸지만 소용없었다.\n바다 한가운데서 폭풍이 배를 삼켰다.\n헤라가 잠의 신에게 부탁해, 꿈에 케익스의 모습이 나타나 아내에게 죽음을 알렸다.\n알키오네는 바닷가에서 떠밀려 온 남편을 보고 바다로 몸을 던졌고, 신들이 둘을 물총새로 바꾸었다.\n",
+   "fun": "물총새가 알을 품는 한겨울 이레 동안 아이올로스가 바람을 가두어 바다가 잔잔하다. 그 날들이 '할키온의 날'이다.",
+   "note": "오비디우스 11.410-11.748. 헤라클레스가 트라키스의 케익스에게 간 뒤(herakles-last)의 일이라 seq 를 뒤에 두었지만 앞뒤를 원전이 말하지 않아 관계는 없다. 케익스가 묻던 형의 죽음은 다이달리온 이야기(11.291-11.345, 히기누스 200) — 사건으로 쓰지 않았다. 묶음 없음(낱 사건).",
+   "sources": [
+    "ovid.metamorphoses 11.410-11.748",
+    "hyginus.fabulae 65"
+   ],
+   "variants": [
+    {
+     "source": "hyginus.fabulae 65",
+     "text": "히기누스는 짧게 적었다. 케익스가 난파로 죽자 알키오네가 사랑 때문에 바다에 몸을 던졌고, 신들이 가엾게 여겨 둘을 물총새로 바꾸었다."
+    }
+   ],
+   "_file": "data/events/era5-herakles.toml",
+   "t0": 249,
+   "t1": 253,
+   "span_label": "한 철",
+   "open": false
+  },
+  {
    "id": "atreus-thyestes-feud",
    "name_ko": "아트레우스와 티에스테스가 왕자리를 다투다",
    "era": 5,
@@ -28963,7 +29319,8 @@
    ],
    "_file": "data/places/era5-herakles.toml",
    "events": [
-    "poisoned-robe"
+    "poisoned-robe",
+    "keyx-alkyone-halcyons"
    ]
   },
   {

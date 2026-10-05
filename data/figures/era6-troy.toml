@@ -878,6 +878,7 @@ name_ko = "네스토르"
 name_grc = "Nestor"
 kind = "human"
 era = 6
+parents = ["neleus"]
 home = "pylos"
 oneliner = "말로 사람들을 다스린 그리스군의 가장 나이 많은 왕."
 body = """

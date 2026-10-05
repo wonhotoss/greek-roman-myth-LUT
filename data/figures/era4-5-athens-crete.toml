@@ -583,6 +583,7 @@ name_la = "Sisyphus"
 aka = ["시지프스", "시지푸스", "시시푸스"]
 kind = "human"
 era = 4
+parents = ["aiolos-hellenides"]
 home = "corinth"
 oneliner = "꾀 많은 코린토스의 왕. 저승에서 바위를 굴린다."
 body = """

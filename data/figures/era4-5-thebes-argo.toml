@@ -327,6 +327,7 @@ name_la = "Phrixus"
 aka = ["프리크소스", "프릭수스"]
 kind = "human"
 era = 4
+parents = ["athamas", "nephele"]
 oneliner = "황금 양을 타고 콜키스까지 날아간 소년."
 body = """
 새어머니 이노가 꾸민 일로 제단에 오르게 되었다.
@@ -337,7 +338,7 @@ body = """
 sensitivity = "soften"
 record = "이노는 사자들을 꾀어 프릭소스를 제우스에게 제물로 바쳐야 흉년이 그친다는 거짓 신탁을 전하게 했고, 아타마스는 백성들에게 떠밀려 프릭소스를 제단으로 데려갔다(아폴로도로스 1.9.1). 헬레는 바다에 빠져 익사했다(아폴로도로스 1.9.1). 히기누스는 뒷날 아이에테스가 이방인에게 죽는다는 전조를 두려워해 프릭소스를 죽였다고 한다(히기누스 3)."
 fun = "황금 양털은 그때부터 아레스의 숲 참나무에 걸려 잠들지 않는 용이 지킨다. 아르고호가 찾으러 가는 것이 이 털이다."
-note = "이노·네펠레·헬레는 등록부에 없어 이름만 부른다. 참고: 처음 읽는 그리스 로마 신화 9권 3장."
+note = "이노·헬레는 등록부에 없어 이름만 부른다(네펠레·아타마스는 2026-10-05 에 만들었다). 참고: 처음 읽는 그리스 로마 신화 9권 3장."
 sources = ["apollodorus.library 1.9.1", "hyginus.fabulae 3"]
 
 [[figure]]
@@ -348,6 +349,7 @@ name_la = "Aeson"
 aka = ["에손"]
 kind = "human"
 era = 5
+parents = ["kretheus", "tyro"]
 home = "iolkos"
 oneliner = "왕자리를 아우에게 빼앗긴 이아손의 아버지."
 body = """
@@ -367,6 +369,7 @@ name_ko = "펠리아스"
 name_grc = "Pelias"
 kind = "human"
 era = 5
+parents = ["poseidon", "tyro"]
 home = "iolkos"
 oneliner = "신발 한 짝만 신은 사람을 조심하라는 말을 들은 왕."
 body = """
@@ -783,3 +786,158 @@ body = """
 """
 note = "페르세우스의 아들 페르세스(perses, 에티오피아)와 다른 사람. 1.9.28 은 '그의 형제 페르세스', 히기누스 27 은 '헬리오스의 아들, 아이에테스의 형제'."
 sources = ["apollodorus.library 1.9.28", "hyginus.fabulae 27"]
+
+[[figure]]
+id = "athamas"
+name_ko = "아타마스"
+name_grc = "Athamas"
+kind = "human"
+era = 4
+parents = ["aiolos-hellenides"]
+spouses = ["nephele"]
+oneliner = "프릭소스와 헬레의 아버지. 두 번째 아내 이노가 그 아이들을 없애려 했다."
+body = """
+아이올로스의 아들로 보이오티아를 다스렸다.
+구름의 여신 네펠레에게서 프릭소스와 헬레를 얻었다.
+두 번째 아내 이노가 그 아이들을 제물로 바치게 꾀하자, 황금 양이 아이들을 태우고 날아갔다.
+뒷날 헤라가 보낸 광기로 이노에게서 얻은 아들을 죽였다.
+"""
+sensitivity = "soften"
+record = "아타마스는 헤라의 노여움으로 미쳐 아들 레아르코스를 사슴으로 알고 화살로 쏘아 죽였고, 이노는 멜리케르테스를 안고 끓는 솥에 던진 뒤 바다에 몸을 던졌다(아폴로도로스 1.9.2, 3.4.3; 히기누스 5). 이노와 멜리케르테스는 바다의 신 레우코테아와 팔라이몬이 되었다."
+note = "이노·레아르코스·멜리케르테스는 등록부에 없어 이름만 부른다. 세멜레 사건(semele-dionysos-born)의 '이노와 아타마스에게 아기를 맡겼다'가 이 집이다."
+sources = ["apollodorus.library 1.9.1-1.9.2", "apollodorus.library 3.4.3", "hyginus.fabulae 1-5"]
+
+[[figure]]
+id = "nephele"
+name_ko = "네펠레"
+name_grc = "Nephele"
+kind = "nymph"
+era = 4
+spouses = ["athamas"]
+oneliner = "구름으로 된 여인. 프릭소스와 헬레의 어머니다."
+body = """
+이름이 구름이라는 뜻이다.
+아타마스의 첫 아내로 프릭소스와 헬레를 낳았다.
+아이들이 제물로 바쳐지려 하자 헤르메스에게서 받은 황금 양을 보내 태워 갔다.
+"""
+note = "아폴로도로스 1.9.1 은 네펠레가 황금 양을 주었다고 하고, 히기누스 3 은 헤르메스에게서 받은 것이라 한다. 익시온이 안은 구름 네펠레와 같은 이름이지만 아폴로도로스는 둘을 잇지 않는다. kind 는 구름이라 nymph 로 두었다."
+sources = ["apollodorus.library 1.9.1", "hyginus.fabulae 1-3"]
+
+[[figure]]
+id = "kretheus"
+name_ko = "크레테우스"
+name_grc = "Kretheus"
+kind = "human"
+era = 4
+parents = ["aiolos-hellenides"]
+spouses = ["tyro"]
+home = "iolkos"
+oneliner = "이올코스를 세운 사람. 아이손의 아버지이고 이아손의 할아버지다."
+body = """
+아이올로스의 아들로 이올코스를 세웠다.
+형 살모네우스의 딸 티로를 길러 아내로 맞았다.
+티로에게서 아이손, 아미타온, 페레스를 얻었다.
+그 손자가 황금 양털을 가지러 간 이아손이다.
+"""
+note = "아미타온·페레스(멜람푸스·아드메토스의 아버지들)는 등록부에 없다."
+sources = ["apollodorus.library 1.9.11", "homer.odyssey 11.235-11.259"]
+
+[[figure]]
+id = "salmoneus"
+name_ko = "살모네우스"
+name_grc = "Salmoneus"
+kind = "human"
+era = 4
+parents = ["aiolos-hellenides"]
+home = "elis"
+oneliner = "제우스 흉내를 내다 벼락을 맞은 왕. 티로의 아버지다."
+body = """
+아이올로스의 아들로 테살리아에서 엘리스로 와 도시를 세웠다.
+자기가 제우스라며 사람들에게 제사를 받았다.
+청동 솥을 수레에 매달아 끌며 천둥소리를 내고, 횃불을 던져 번개라고 했다.
+제우스가 진짜 벼락을 던져 그와 그 도시를 없앴다.
+"""
+fun = "시시포스의 동생이다. 히기누스는 두 형제가 서로 미워했다고 적었다."
+sources = ["apollodorus.library 1.9.7", "hyginus.fabulae 60-61"]
+
+[[figure]]
+id = "tyro"
+name_ko = "티로"
+name_grc = "Tyro"
+kind = "human"
+era = 4
+parents = ["salmoneus"]
+spouses = ["kretheus"]
+home = "iolkos"
+oneliner = "강을 사랑한 공주. 포세이돈에게서 펠리아스와 넬레우스를, 크레테우스에게서 아이손을 낳았다."
+body = """
+살모네우스의 딸로 삼촌 크레테우스의 집에서 자랐다.
+에니페우스 강을 사랑해 늘 강가에 갔다.
+포세이돈이 강의 모습으로 다가왔고, 쌍둥이 펠리아스와 넬레우스가 태어났다.
+티로는 아기들을 내다 버렸는데, 말 치는 사람이 거두어 길렀다.
+뒤에 크레테우스와 결혼해 아이손을 낳았다.
+"""
+sensitivity = "soften"
+record = "포세이돈이 에니페우스 강의 모습으로 티로와 동침했다(아폴로도로스 1.9.8; 오디세이아 11.235-11.252 — 푸른 파도가 산처럼 솟아 둘을 가렸고, 신이 처녀의 띠를 풀었다). 티로는 쌍둥이를 몰래 낳아 버렸고, 계모 시데로가 티로를 학대하자 자란 아들들이 시데로를 쫓았고 펠리아스가 헤라의 제단에서 시데로를 베어 죽였다(1.9.8)."
+note = "펠리아스의 이름은 말에 차여 생긴 검푸른 자국(펠리온)에서 왔다(1.9.8)."
+sources = ["apollodorus.library 1.9.8", "apollodorus.library 1.9.11", "homer.odyssey 11.235-11.259"]
+
+[[figure]]
+id = "neleus"
+name_ko = "넬레우스"
+name_grc = "Neleus"
+kind = "human"
+era = 4
+parents = ["poseidon", "tyro"]
+home = "pylos"
+oneliner = "펠리아스의 쌍둥이 동생. 메세네에 필로스를 세웠고, 네스토르의 아버지다."
+body = """
+티로와 포세이돈의 아들로 펠리아스와 쌍둥이다.
+형과 다투어 쫓겨나 메세네로 가서 필로스를 세웠다.
+아들 열둘을 두었는데, 뒷날 헤라클레스가 필로스를 치면서 네스토르 말고는 모두 죽였다.
+그 네스토르가 트로이 전쟁의 가장 나이 많은 장수가 된다.
+"""
+note = "아내 클로리스와 아들 열한 명은 등록부에 없다. 헤라클레스의 필로스 공격은 2.7.3."
+sources = ["apollodorus.library 1.9.8-1.9.9", "apollodorus.library 2.7.3"]
+
+[[figure]]
+id = "keyx"
+name_ko = "케익스"
+name_grc = "Keyx"
+name_la = "Ceyx"
+aka = ["케윅스", "케이크스"]
+kind = "human"
+era = 5
+spouses = ["alkyone"]
+home = "trachis"
+oneliner = "트라키스의 왕. 바다에서 죽어 아내와 함께 물총새가 되었다."
+body = """
+샛별의 아들로 트라키스를 다스렸다.
+헤라클레스가 마지막에 몸을 의지한 왕이고, 헤라클레스의 아이들도 처음 그에게 피했다.
+형의 죽음을 묻자 신에게 묻는 길을 떠났다가 폭풍에 배가 가라앉았다.
+신들이 그와 아내 알키오네를 물총새로 바꾸었다.
+"""
+note = "아버지 헤스페로스/루키페르(샛별)는 등록부에 없다. 헤라클레스가 트라키스로 간 것은 2.7.6-2.7.7, 아이들이 피한 것은 2.8.1."
+sources = ["ovid.metamorphoses 11.410-11.748", "hyginus.fabulae 65", "apollodorus.library 2.7.6-2.7.7", "apollodorus.library 2.8.1"]
+
+[[figure]]
+id = "alkyone"
+name_ko = "알키오네"
+name_grc = "Alkyone"
+name_la = "Alcyone"
+aka = ["할키오네", "알퀴오네"]
+kind = "human"
+era = 5
+parents = ["aiolos-anemon"]
+spouses = ["keyx"]
+home = "trachis"
+oneliner = "바람의 아이올로스의 딸. 남편을 따라 바다에 몸을 던져 물총새가 되었다."
+body = """
+바람을 맡은 아이올로스의 딸이고 케익스의 아내다.
+남편이 배로 떠나려 하자 아버지의 바람이 얼마나 무서운지 안다며 말렸다.
+꿈에 나타난 남편이 죽었다고 알렸고, 바닷가에서 떠밀려 온 남편의 몸을 찾았다.
+바다로 몸을 던지자 신들이 둘을 물총새로 바꾸었다.
+"""
+fun = "물총새가 알을 품는 한겨울 이레 동안 아이올로스가 바람을 가두어 바다가 잔잔하다. 뱃사람들은 그 날들을 '할키온의 날'이라고 부른다."
+note = "오비디우스 11.431 '히포테스의 손자가 네 시아버지'로 바람의 아이올로스의 딸이다(히기누스 65 '아이올로스와 아이기알레의 딸'). 플레이아데스의 알키오네와 다른 사람. 헬렌의 아들 아이올로스의 딸 알키오네(1.7.3)와도 다르다고 보았다 — 오비디우스가 분명히 바람의 아이올로스라 한다."
+sources = ["ovid.metamorphoses 11.410-11.748", "hyginus.fabulae 65"]
