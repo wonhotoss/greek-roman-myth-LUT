@@ -5,8 +5,12 @@
 읽는 필드는 아이가 보는 것(name_ko·aka·kind·oneliner·fun·symbols·domains·parents·cast·place·modern)뿐이다.
 note·record·sensitivity 는 읽지 않는다.
 
-    python db/tools/build.py && python outputs/quiz/render_quiz.py
-    python outputs/quiz/render_quiz.py --fragment <경로>   # 문서 뼈대 없이 본문만 (claude.ai 아티팩트용)
+    python db/tools/build.py && python outputs/quiz/render_quiz.py   # quiz.html 과 quiz-greek.html 둘 다
+    python outputs/quiz/render_quiz.py --fragment <경로>              # 문서 뼈대 없이 본문만 (claude.ai 아티팩트용)
+    python outputs/quiz/render_quiz.py --greek --fragment <경로>      # 그리스 판의 본문만
+
+두 판 — quiz.html 은 아홉 시대 전부, quiz-greek.html 은 로마 건국 신화(시대 8)를 뺀 것.
+그리스 판은 시대 8 의 인물·사건과 시대 8 에만 나오는 장소를 문제에서도 보기에서도 뺀다.
 
 의존성 없음.
 """
@@ -18,6 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]   # 저장소 루트
 BUNDLE = ROOT / "db" / "build" / "myth.json"
 OUT = ROOT / "outputs" / "quiz" / "quiz.html"
+OUT_GREEK = ROOT / "outputs" / "quiz" / "quiz-greek.html"
 
 SEED = 20261005          # 같은 DB 면 같은 문제 셋
 N_CHOICES = 4
@@ -27,6 +32,14 @@ KIND_KO = {"god": "신", "titan": "티탄", "primordial": "태초의 신", "hero
 KIND_Q = {"god": "이 신은 누구?", "titan": "이 티탄은 누구?", "primordial": "이 태초의 신은 누구?",
           "hero": "이 영웅은 누구?", "human": "이 사람은 누구?", "monster": "이 괴물은 무엇?",
           "nymph": "이 님프는 누구?", "group": "이들은 누구?"}
+
+
+def ga(name):
+    """이름 뒤의 주격 조사 — 받침이 있으면 '이', 없으면 '가'."""
+    ch = name[-1]
+    if "가" <= ch <= "힣" and (ord(ch) - 0xAC00) % 28:
+        return name + "이"
+    return name + "가"
 
 
 def names_of(x):
@@ -53,6 +66,21 @@ def make(rng, cat, prompt, answer, distractors, explain, label=None):
             "label": label or ""}
 
 
+def without_eras(D, eras):
+    """시대 eras 의 인물·사건과, 그 시대에만 나오는 장소를 뺀 DB."""
+    E = {e["id"]: e for e in D["events"]}
+    figures = [f for f in D["figures"] if f["era"] not in eras]
+    events = [e for e in D["events"] if e["era"] not in eras]
+    places = [p for p in D["places"] if not (p["events"] and all(E[x]["era"] in eras for x in p["events"]))]
+    gone_f = {f["id"] for f in D["figures"]} - {f["id"] for f in figures}
+    gone_e = {e["id"] for e in D["events"]} - {e["id"] for e in events}
+    # 남은 인물의 부모·짝·사건 목록에서도 뺀 것을 지운다
+    figures = [dict(f, parents=[x for x in f.get("parents", []) if x not in gone_f],
+                    spouses=[x for x in f.get("spouses", []) if x not in gone_f],
+                    events=[x for x in f["events"] if x["event"] not in gone_e]) for f in figures]
+    return dict(D, figures=figures, events=events, places=places)
+
+
 def generate(D):
     rng = random.Random(SEED)
     F = {f["id"]: f for f in D["figures"]}
@@ -63,35 +91,47 @@ def generate(D):
         by_kind.setdefault(f["kind"], []).append(f)
     qs = []
 
-    # A. 인물 설명 → 이름
+    # A. 인물 설명 → 이름, 재밌는 것 → 이름
     for f in known:
-        if mentions(f["oneliner"], f):
-            continue
         pool = by_kind.get(f["kind"], [])
         if len(pool) < 3:
             pool = known
-        ds = pick(rng, pool, N_CHOICES - 1, {f["id"]})
-        q = make(rng, "figure", f["oneliner"], f["name_ko"], [d["name_ko"] for d in ds],
-                 f.get("fun", ""), KIND_Q[f["kind"]])
-        if q:
-            qs.append(q)
+        for text, explain, label in ((f["oneliner"], f.get("fun", ""), KIND_Q[f["kind"]]),
+                                     (f.get("fun", ""), f["oneliner"], "재밌는 것 — " + KIND_Q[f["kind"]])):
+            if not text or mentions(text, f):
+                continue
+            ds = pick(rng, pool, N_CHOICES - 1, {f["id"]})
+            q = make(rng, "figure", text, f["name_ko"], [d["name_ko"] for d in ds], explain, label)
+            if q:
+                qs.append(q)
 
     # B. 사건 → 주인공
     for e in D["events"]:
         heroes = [c["figure"] for c in e["cast"] if c["role"] == "주인공"]
         if len(heroes) != 1:
             continue
-        f = F[heroes[0]]
-        text = e["oneliner"]
-        cast_ids = {c["figure"] for c in e["cast"]}
-        if mentions(text, f) or mentions(e["name_ko"], f):
+        if heroes[0] not in F:
             continue
+        f = F[heroes[0]]
+        cast_ids = {c["figure"] for c in e["cast"]}
         pool = by_kind.get(f["kind"], known)
-        ds = pick(rng, pool, N_CHOICES - 1, cast_ids)
-        q = make(rng, "figure", text, f["name_ko"], [d["name_ko"] for d in ds],
-                 f"{f['name_ko']} — {f['oneliner']}", "이 이야기의 주인공은 누구?")
-        if q:
-            qs.append(q)
+        for text, label in ((e["oneliner"], "이 이야기의 주인공은 누구?"), (e.get("fun", ""), "재밌는 것 — 이 이야기의 주인공은?")):
+            if not text or mentions(text, f) or mentions(e["name_ko"], f):
+                continue
+            ds = pick(rng, pool, N_CHOICES - 1, cast_ids)
+            q = make(rng, "figure", text, f["name_ko"], [d["name_ko"] for d in ds],
+                     f"{f['name_ko']} — {f['oneliner']}", label)
+            if q:
+                qs.append(q)
+        # 맞선 이
+        foes = [c["figure"] for c in e["cast"] if c["role"] == "상대"]
+        if len(foes) == 1 and foes[0] in F and not mentions(e["oneliner"], F[foes[0]]) and not mentions(e["name_ko"], F[foes[0]]):
+            g = F[foes[0]]
+            ds = pick(rng, by_kind.get(g["kind"], known), N_CHOICES - 1, cast_ids)
+            q = make(rng, "figure", e["oneliner"], g["name_ko"], [d["name_ko"] for d in ds],
+                     f"{g['name_ko']} — {g['oneliner']}", f"{ga(f['name_ko'])} 여기서 맞선 이는?")
+            if q:
+                qs.append(q)
 
     # C. 상징물 → 신, 신 → 상징물
     with_sym = [f for f in D["figures"] if f.get("symbols")]
@@ -134,6 +174,19 @@ def generate(D):
         if q:
             qs.append(q)
 
+    # E2. 짝
+    for f in known:
+        spouses = [F[x] for x in f.get("spouses", []) if x in F]
+        if not spouses:
+            continue
+        sp = rng.choice(spouses)
+        pool = by_kind.get(sp["kind"], known)
+        ds = pick(rng, pool, N_CHOICES - 1, {f["id"], *f["spouses"], *f.get("parents", []), *f["children"]})
+        q = make(rng, "figure", f"{f['name_ko']}의 짝은 누구?", sp["name_ko"],
+                 [d["name_ko"] for d in ds], f"{sp['name_ko']} — {sp['oneliner']}", "계보")
+        if q:
+            qs.append(q)
+
     # F. 장소 설명 → 장소
     real = [p for p in D["places"] if p["kind"] == "real"]
     mythic = [p for p in D["places"] if p["kind"] == "mythic"]
@@ -150,7 +203,7 @@ def generate(D):
 
     # G. 사건 → 장소
     for e in D["events"]:
-        if e.get("place_unknown") or not e.get("place"):
+        if e.get("place_unknown") or not e.get("place") or e["place"] not in P:
             continue
         p = P[e["place"]]
         if mentions(e["name_ko"], p) or mentions(e["oneliner"], p):
@@ -166,7 +219,7 @@ def generate(D):
     return qs
 
 
-FRAGMENT = r"""<title>신화 퀴즈</title>
+FRAGMENT = r"""<title>__TITLE__</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap">
 <style>
 /* 한 화면에 카드 하나. 질문은 크게, 보기는 엄지로 누르는 넓은 단추, 결과는 카드 아래 한 줄. */
@@ -244,7 +297,7 @@ footer a { color: inherit; }
 
 <div class="wrap">
   <header>
-    <h1>신화 퀴즈 <small>그리스 로마 신화</small></h1>
+    <h1>__TITLE__ <small>__SUB__</small></h1>
     <div class="score" id="score" hidden><b id="s-ok">0</b> 맞힘 · <span id="s-pos">1</span>/<span id="s-len">10</span></div>
   </header>
   <div class="bar" id="bar" hidden><i id="bar-i"></i></div>
@@ -398,22 +451,38 @@ DOC = """<!doctype html>
 """
 
 
+EDITIONS = {
+    # 이름: (제목, 부제, 뺄 시대, 결과 파일)
+    "all": ("신화 퀴즈", "그리스 로마 신화", set(), OUT),
+    "greek": ("그리스 신화 퀴즈", "로마 건국 신화는 빼고", {8}, OUT_GREEK),
+}
+
+
+def render(D, edition):
+    title, sub, eras, out = EDITIONS[edition]
+    qs = generate(without_eras(D, eras) if eras else D)
+    data = json.dumps(qs, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    fragment = FRAGMENT.replace("__DATA__", data).replace("__TITLE__", title).replace("__SUB__", sub)
+    return qs, fragment, out
+
+
 def main(argv):
     D = json.loads(BUNDLE.read_text(encoding="utf-8"))
-    qs = generate(D)
-    data = json.dumps(qs, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-    fragment = FRAGMENT.replace("__DATA__", data)
-    if len(argv) >= 2 and argv[0] == "--fragment":
-        Path(argv[1]).write_text(fragment, encoding="utf-8")
-        print(f"{argv[1]} — 본문만, {len(fragment):,} bytes")
+    edition = "greek" if "--greek" in argv else "all"
+    if "--fragment" in argv:
+        path = Path(argv[argv.index("--fragment") + 1])
+        qs, fragment, _ = render(D, edition)
+        path.write_text(fragment, encoding="utf-8")
+        print(f"{path} — {edition} 본문만, 문제 {len(qs)}개, {len(fragment):,} bytes")
         return
-    # <title>·<style>·<link> 은 head 로, 나머지는 body 로
-    head_end = fragment.index("</style>") + len("</style>")
-    html = DOC.format(fragment=fragment[:head_end] + "\n</head>\n<body>" + fragment[head_end:])
-    OUT.write_text(html, encoding="utf-8")
     from collections import Counter
-    c = Counter(q["cat"] for q in qs)
-    print(f"outputs/quiz/quiz.html — 문제 {len(qs)}개 (인물 {c['figure']}, 장소 {c['place']}, 사물 {c['thing']}), {OUT.stat().st_size:,} bytes")
+    for ed in EDITIONS:
+        qs, fragment, out = render(D, ed)
+        # <title>·<style>·<link> 은 head 로, 나머지는 body 로
+        head_end = fragment.index("</style>") + len("</style>")
+        out.write_text(DOC.format(fragment=fragment[:head_end] + "\n</head>\n<body>" + fragment[head_end:]), encoding="utf-8")
+        c = Counter(q["cat"] for q in qs)
+        print(f"{out.relative_to(ROOT).as_posix()} — 문제 {len(qs)}개 (인물 {c['figure']}, 장소 {c['place']}, 사물 {c['thing']}), {out.stat().st_size:,} bytes")
 
 
 if __name__ == "__main__":
