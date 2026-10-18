@@ -57,13 +57,18 @@ def pick(rng, pool, n, exclude):
     return cand[:n]
 
 
-def make(rng, cat, prompt, answer, distractors, explain, label=None):
+def make(rng, cat, prompt, answer, distractors, explain, label=None, ent=None):
+    """ent 는 답인 항목(인물·장소). 있으면 설명 말풍선에서 그 이름을 가리고, 맞힌 뒤 이름을 누를 수 있게 한다."""
     if len(distractors) < 2:
         return None
     opts = [answer] + distractors[:N_CHOICES - 1]
     rng.shuffle(opts)
-    return {"cat": cat, "q": prompt, "choices": opts, "a": opts.index(answer), "x": explain or "",
-            "label": label or ""}
+    q = {"cat": cat, "q": prompt, "choices": opts, "a": opts.index(answer), "x": explain or "",
+         "label": label or ""}
+    if ent:
+        q["aid"] = ent["id"]
+        q["an"] = [n for n in names_of(ent) if len(n) >= 2]
+    return q
 
 
 def without_eras(D, eras):
@@ -101,7 +106,7 @@ def generate(D):
             if not text or mentions(text, f):
                 continue
             ds = pick(rng, pool, N_CHOICES - 1, {f["id"]})
-            q = make(rng, "figure", text, f["name_ko"], [d["name_ko"] for d in ds], explain, label)
+            q = make(rng, "figure", text, f["name_ko"], [d["name_ko"] for d in ds], explain, label, ent=f)
             if q:
                 qs.append(q)
 
@@ -120,7 +125,7 @@ def generate(D):
                 continue
             ds = pick(rng, pool, N_CHOICES - 1, cast_ids)
             q = make(rng, "figure", text, f["name_ko"], [d["name_ko"] for d in ds],
-                     f"{f['name_ko']} — {f['oneliner']}", label)
+                     f"{f['name_ko']} — {f['oneliner']}", label, ent=f)
             if q:
                 qs.append(q)
         # 맞선 이
@@ -129,7 +134,7 @@ def generate(D):
             g = F[foes[0]]
             ds = pick(rng, by_kind.get(g["kind"], known), N_CHOICES - 1, cast_ids)
             q = make(rng, "figure", e["oneliner"], g["name_ko"], [d["name_ko"] for d in ds],
-                     f"{g['name_ko']} — {g['oneliner']}", f"{ga(f['name_ko'])} 여기서 맞선 이는?")
+                     f"{g['name_ko']} — {g['oneliner']}", f"{ga(f['name_ko'])} 여기서 맞선 이는?", ent=g)
             if q:
                 qs.append(q)
 
@@ -139,7 +144,7 @@ def generate(D):
         syms = f["symbols"]
         ds = pick(rng, with_sym, N_CHOICES - 1, {f["id"]})
         q = make(rng, "thing", "·".join(syms) + " — 이것이 상징인 신은?", f["name_ko"],
-                 [d["name_ko"] for d in ds], f["oneliner"], "상징물")
+                 [d["name_ko"] for d in ds], f["oneliner"], "상징물", ent=f)
         if q:
             qs.append(q)
         others = [s for d in with_sym if d["id"] != f["id"] for s in d["symbols"] if s not in syms]
@@ -157,7 +162,7 @@ def generate(D):
         pool = [d for d in with_dom if not set(d["domains"]) & set(dom)]
         ds = pick(rng, pool, N_CHOICES - 1, {f["id"]})
         q = make(rng, "thing", "·".join(dom) + " — 이것을 맡은 신은?", f["name_ko"],
-                 [d["name_ko"] for d in ds], f["oneliner"], "맡은 일")
+                 [d["name_ko"] for d in ds], f["oneliner"], "맡은 일", ent=f)
         if q:
             qs.append(q)
 
@@ -170,7 +175,7 @@ def generate(D):
         pool = by_kind.get(par["kind"], known)
         ds = pick(rng, pool, N_CHOICES - 1, {f["id"], *f["parents"]})
         q = make(rng, "figure", f"{f['name_ko']}의 부모는 누구?", par["name_ko"],
-                 [d["name_ko"] for d in ds], f"{par['name_ko']} — {par['oneliner']}", "계보")
+                 [d["name_ko"] for d in ds], f"{par['name_ko']} — {par['oneliner']}", "계보", ent=par)
         if q:
             qs.append(q)
 
@@ -183,7 +188,7 @@ def generate(D):
         pool = by_kind.get(sp["kind"], known)
         ds = pick(rng, pool, N_CHOICES - 1, {f["id"], *f["spouses"], *f.get("parents", []), *f["children"]})
         q = make(rng, "figure", f"{f['name_ko']}의 짝은 누구?", sp["name_ko"],
-                 [d["name_ko"] for d in ds], f"{sp['name_ko']} — {sp['oneliner']}", "계보")
+                 [d["name_ko"] for d in ds], f"{sp['name_ko']} — {sp['oneliner']}", "계보", ent=sp)
         if q:
             qs.append(q)
 
@@ -197,7 +202,7 @@ def generate(D):
         ds = pick(rng, pool, N_CHOICES - 1, {p["id"]})
         x = p.get("fun") or (f"지금의 {p['modern']}." if p.get("modern") else "")
         q = make(rng, "place", p["oneliner"], p["name_ko"], [d["name_ko"] for d in ds], x,
-                 "이곳은 어디?" if p["kind"] == "real" else "이야기 속의 이곳은 어디?")
+                 "이곳은 어디?" if p["kind"] == "real" else "이야기 속의 이곳은 어디?", ent=p)
         if q:
             qs.append(q)
 
@@ -211,12 +216,66 @@ def generate(D):
         pool = real if p["kind"] == "real" else mythic
         ds = pick(rng, pool, N_CHOICES - 1, {p["id"], *e.get("places", [])})
         q = make(rng, "place", e["name_ko"] + " — " + e["oneliner"], p["name_ko"],
-                 [d["name_ko"] for d in ds], f"{p['name_ko']} — {p['oneliner']}", "어디서 일어난 일?")
+                 [d["name_ko"] for d in ds], f"{p['name_ko']} — {p['oneliner']}", "어디서 일어난 일?", ent=p)
         if q:
             qs.append(q)
 
     rng.shuffle(qs)
-    return qs
+    G, mark = glossary(D)
+    for q in qs:
+        hide = {q["aid"]} if "aid" in q else set()
+        qp = mark(q["q"], hide)
+        if qp:
+            q["qp"] = qp
+        xp = mark(q["x"]) if q["x"] else None
+        if xp:
+            q["xp"] = xp
+    return qs, G
+
+
+PARTICLE = set("가는은이를을의와과에도로만께서부처한보조마랑")
+
+
+def glossary(D):
+    """이름 → 항목 색인과, 글 속의 이름에 표시를 다는 함수.
+
+    표시는 name_ko(두 글자 이상)와 aka(세 글자 이상)에 단다 — '바다'·'저승' 같은 두 글자 다른 이름은 보통 낱말과 겹친다.
+    두 글자 이름은 바로 뒤가 한글이면 조사일 때만 친다(헤라클레스 안의 '헤라' 를 걸러 낸다. 긴 이름이 먼저 잡히기도 한다).
+    같은 이름이 둘 이상(아르고스 — 개와 도시)이면 둘 다 보여 준다."""
+    G, names = {}, {}
+    for f in D["figures"]:
+        G[f["id"]] = [f["name_ko"], KIND_KO[f["kind"]], f["oneliner"], ""]
+        for n in names_of(f):
+            if len(n) >= (2 if n == f["name_ko"] else 3):
+                names.setdefault(n, []).append(f["id"])
+    for p in D["places"]:
+        G[p["id"]] = [p["name_ko"], "곳" if p["kind"] == "real" else "이야기 속의 곳", p["oneliner"], p.get("modern", "")]
+        for n in names_of(p):
+            if len(n) >= (2 if n == p["name_ko"] else 3):
+                names.setdefault(n, []).append(p["id"])
+    import re
+    pat = re.compile("|".join(re.escape(n) for n in sorted(names, key=len, reverse=True)))
+
+    def mark(text, hide=()):
+        parts, pos, found = [], 0, False
+        for m in pat.finditer(text):
+            n = m.group(0)
+            nxt = text[m.end():m.end() + 1]
+            if len(n) == 2 and nxt and "가" <= nxt <= "힣" and nxt not in PARTICLE:
+                continue
+            ids = [i for i in names[n] if i not in hide]
+            if not ids:
+                continue
+            if m.start() > pos:
+                parts.append(text[pos:m.start()])
+            parts.append([n, ids])
+            pos = m.end(); found = True
+        if not found:
+            return None
+        if pos < len(text):
+            parts.append(text[pos:])
+        return parts
+    return G, mark
 
 
 FRAGMENT = r"""<title>__TITLE__</title>
@@ -292,6 +351,18 @@ h1 small { font-family: var(--body); font-size: .8rem; color: var(--muted); marg
 .big { font-family: var(--display); font-size: 3rem; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
 footer { color: var(--muted); font-size: .8rem; }
 footer a { color: inherit; }
+.term { color: var(--accent); text-decoration: underline dotted; text-decoration-thickness: 2px; text-underline-offset: 3px; cursor: pointer; border-radius: 3px; }
+.term:hover, .term:focus-visible { background: var(--ok-bg); outline: none; }
+.fb .term { color: inherit; }
+.pop { position: fixed; z-index: 10; background: var(--card); color: var(--fg); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 28px rgba(0,0,0,.18); padding: 12px 14px; font-size: .95rem; display: flex; flex-direction: column; gap: 10px; max-height: 60vh; overflow-y: auto; }
+.pop.anchored { width: min(360px, calc(100vw - 16px)); }
+.pop.sheet { left: 8px; right: 8px; bottom: calc(8px + env(safe-area-inset-bottom, 0px)); border-radius: 14px; }
+.pop-h { display: flex; align-items: baseline; gap: 8px; }
+.pop-h b { font-family: var(--display); font-weight: 400; font-size: 1.15rem; }
+.pop-h span { font-size: .8rem; color: var(--gold); letter-spacing: .06em; }
+.pop p { margin: 4px 0 0; line-height: 1.45; }
+.pop-m { color: var(--muted); font-size: .85rem; }
+.pop-item + .pop-item { border-top: 1px solid var(--line); padding-top: 10px; }
 @media (prefers-reduced-motion: reduce) { .bar i { transition: none; } }
 </style>
 
@@ -330,13 +401,15 @@ footer a { color: inherit; }
     <div class="actions"><button class="btn ghost" type="button" id="again-cats">종류 바꾸기</button><button class="btn" type="button" id="again">한 판 더</button></div>
   </section>
 
-  <footer>문제 <span id="n-all"></span>개. 모두 공개 도메인 원전(아폴로도로스·호메로스·헤시오도스·오비디우스·베르길리우스 등)에서 쓴 자료다. 한 번 나온 문제는 다 돌 때까지 다시 나오지 않는다.</footer>
+  <div class="pop" id="pop" hidden></div>
+  <footer>문제 <span id="n-all"></span>개. 글 속의 <span class="term" tabindex="-1">이름</span>을 누르면 설명이 뜬다. 모두 공개 도메인 원전(아폴로도로스·호메로스·헤시오도스·오비디우스·베르길리우스 등)에서 쓴 자료다. 한 번 나온 문제는 다 돌 때까지 다시 나오지 않는다.</footer>
 </div>
 
 <script id="data" type="application/json">__DATA__</script>
 <script>
 (function () {
-  var ALL = JSON.parse(document.getElementById('data').textContent);
+  var DATA = JSON.parse(document.getElementById('data').textContent);
+  var ALL = DATA.qs, G = DATA.g;
   var ROUND = 10;
   var $ = function (id) { return document.getElementById(id); };
   var cats = { figure: true, place: true, thing: true };
@@ -366,7 +439,7 @@ footer a { color: inherit; }
   function render() {
     cur = ALL[queue[pos]]; answered = false;
     $('label').textContent = cur.label || '';
-    $('q').textContent = cur.q;
+    fill($('q'), cur.qp, cur.q);
     var box = $('choices'); box.innerHTML = '';
     var short = cur.choices.every(function (c) { return c.length <= 12; });
     box.className = 'choices' + (short ? ' short' : '');
@@ -379,6 +452,7 @@ footer a { color: inherit; }
     });
     $('fb').hidden = true; $('fb').className = 'fb'; $('fb').innerHTML = '';
     $('next').disabled = true;
+    closePop();
     $('s-pos').textContent = pos + 1; $('s-len').textContent = queue.length; $('s-ok').textContent = ok;
     $('bar-i').style.width = (pos / queue.length * 100) + '%';
     box.firstChild && box.firstChild.focus();
@@ -392,7 +466,11 @@ footer a { color: inherit; }
       btn.classList.add('ok');
       Array.prototype.forEach.call($('choices').children, function (b) { b.disabled = true; });
       fb.className = 'fb ok';
-      fb.innerHTML = '<b>맞았다! ' + esc(cur.choices[cur.a]) + '</b>' + (cur.x ? '<span class="x">' + esc(cur.x) + '</span>' : '');
+      fb.innerHTML = '';
+      var b = document.createElement('b'); b.textContent = '맞았다! ';
+      if (cur.aid) { b.appendChild(term(cur.choices[cur.a], [cur.aid])); } else { b.appendChild(document.createTextNode(cur.choices[cur.a])); }
+      fb.appendChild(b);
+      if (cur.x) { var x = document.createElement('span'); x.className = 'x'; fill(x, cur.xp, cur.x); fb.appendChild(x); }
       $('next').disabled = false; $('next').focus();
       $('s-ok').textContent = ok;
     } else {
@@ -404,6 +482,7 @@ footer a { color: inherit; }
 
   function next() {
     if (!answered) return;
+    closePop();
     pos++;
     if (pos >= queue.length) { finish(); return; }
     render();
@@ -418,6 +497,46 @@ footer a { color: inherit; }
   }
 
   function start() { pos = 0; ok = 0; buildQueue(); show('play'); render(); }
+
+  // 글 속의 이름 — 누르면 설명 말풍선
+  function fill(el, parts, text) {
+    el.innerHTML = '';
+    if (!parts) { el.textContent = text; return; }
+    parts.forEach(function (p) { el.appendChild(typeof p === 'string' ? document.createTextNode(p) : term(p[0], p[1])); });
+  }
+  function term(text, ids) {
+    var t = document.createElement('span'); t.className = 'term'; t.textContent = text; t.tabIndex = 0; t.setAttribute('role', 'button');
+    t.addEventListener('click', function (e) { e.stopPropagation(); openPop(t, ids); });
+    t.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPop(t, ids); } });
+    return t;
+  }
+  var pop = $('pop'), popFor = null;
+  function mask(s) {   // 아직 못 맞혔으면 답의 이름을 가린다
+    if (answered || !cur || !cur.an) return s;
+    cur.an.forEach(function (n) { s = s.split(n).join('○○'); });
+    return s;
+  }
+  function openPop(anchor, ids) {
+    if (popFor === anchor && !pop.hidden) { closePop(); return; }
+    pop.innerHTML = '';
+    ids.forEach(function (id) {
+      var g = G[id]; if (!g) return;
+      var d = document.createElement('div'); d.className = 'pop-item';
+      d.innerHTML = '<div class="pop-h"><b>' + esc(g[0]) + '</b><span>' + esc(g[1]) + '</span></div><p>' + esc(mask(g[2])) + '</p>' + (g[3] ? '<p class="pop-m">지금의 ' + esc(g[3]) + '</p>' : '');
+      pop.appendChild(d);
+    });
+    pop.hidden = false; popFor = anchor;
+    if (window.innerWidth >= 560) {
+      var r = anchor.getBoundingClientRect(), w = pop.offsetWidth;
+      var left = Math.max(8, Math.min(r.left, window.innerWidth - w - 8));
+      pop.style.left = left + 'px'; pop.style.top = (r.bottom + 6) + 'px';
+      pop.className = 'pop anchored';
+    } else { pop.className = 'pop sheet'; pop.style.left = pop.style.top = ''; }
+  }
+  function closePop() { pop.hidden = true; popFor = null; }
+  document.addEventListener('click', function (e) { if (!pop.hidden && !pop.contains(e.target)) closePop(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePop(); });
+  window.addEventListener('scroll', function () { if (!pop.hidden && pop.classList.contains('anchored')) closePop(); }, { passive: true });
 
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
@@ -460,8 +579,8 @@ EDITIONS = {
 
 def render(D, edition):
     title, sub, eras, out = EDITIONS[edition]
-    qs = generate(without_eras(D, eras) if eras else D)
-    data = json.dumps(qs, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    qs, G = generate(without_eras(D, eras) if eras else D)
+    data = json.dumps({"qs": qs, "g": G}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     fragment = FRAGMENT.replace("__DATA__", data).replace("__TITLE__", title).replace("__SUB__", sub)
     return qs, fragment, out
 
